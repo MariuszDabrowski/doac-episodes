@@ -1,0 +1,7 @@
+node_modules/
+.env
+.DS_Store
+
+# Raw/working data files (regeneratable). Curated JSON has no underscore prefix.
+data/_*.json
+data/_*/
