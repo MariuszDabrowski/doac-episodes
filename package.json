@@ -4,11 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "fetch:channel": "node scripts/fetch-channel-videos.mjs",
     "fetch:transcripts": "node scripts/fetch-transcripts.mjs",
     "extract:transcripts": "node scripts/extract-transcripts.mjs"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "nuxt": "^3.14.0",
+    "vue": "^3.5.0"
   }
 }

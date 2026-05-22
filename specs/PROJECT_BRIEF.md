@@ -52,20 +52,24 @@ All signals must be visible on the episode card itself — users decide whether 
 
 ### Credibility (guest-level)
 
-The card answers one question: *is this person credible on the topic they're discussing?* It does **not** try to communicate their full résumé.
+The card answers one question: *is this person credible on the topic they're discussing?*
 
-A row of icons indicating what credentials the guest has. Multiple can apply.
+Instead of abstract role indicators (Academic + Researcher + Practitioner...), the card shows a **curated one-line credibility summary** (`guest.credibilityLine`) that states the relevant facts in plain English. Example: *"Harvard professor of genetics; author of Lifespan; founded multiple longevity biotech companies."*
 
-- 🎓 Academic — terminal degree (PhD, MD, etc.) from a recognized institution, relevant field
-- 🔬 Researcher — currently publishes peer-reviewed work
-- 🩺 Clinician — actively practicing in a regulated profession
-- 📚 Author — has written books on the topic (neutral signal)
-- 🏢 Practitioner — works in industry/business in the field
-- 🎤 Public figure — known primarily for media/commentary
+This shifts the work from the user (decoding role taxonomy) to the editor (writing one good line of facts). Neutral, fact-based — just what they've done.
 
-Role indicators appear directly on the episode card. Whether they render as icons, text labels, or a combination is a design decision — six icons may be hard to distinguish at a glance, and text may read more clearly. Hover may surface a one-line summary (e.g., "PhD Neuroscience, Stanford") but **not** the full credential list — full credentials with source links live on the guest page.
+**Role taxonomy is preserved in the data** (`guest.roles[]`):
 
-The absence of credentials is itself the signal. Don't say "fake doctor" — let the empty badge row speak for itself.
+- `academic` — terminal degree (PhD, MD, etc.) from a recognized institution in a relevant field
+- `researcher` — currently publishes peer-reviewed work
+- `clinician` — actively practicing in a regulated profession
+- `author` — has written books on the topic (neutral signal)
+- `practitioner` — works in industry/business in the field
+- `public-figure` — known primarily for media/commentary
+
+Roles power filtering on the Browse page (e.g., "show only academic guests") and feed the guest page header where full credentials with source links live. They're scaffolding, not card surface.
+
+The absence of strong credibility is itself the signal — the line just states what they're actually known for ("Businesswoman; former senior advisor at the White House.").
 
 ### Promotion (episode-level)
 
@@ -79,7 +83,7 @@ Three states, visually distinct:
 
 Distinguishing three things that are easy to conflate:
 
-- **Featuring** — *guest* is actively promoting something (book, product, company). In `episodes.promotions[]` with `by: 'guest'`.
+- **Featuring** (internal taxonomy term; UI label is **"Promoting"**) — *guest* is actively promoting something. In `episodes.promotions[]` with `by: 'guest'`. The card surfaces a *type-level summary* with hover detail — e.g., "Promoting a book and a company", where "a book" and "a company" carry dotted underlines and reveal the specific titles on hover. Keeps the surface terse; specifics on demand.
 - **Sponsors** — *host* has paid advertisers (read-out ads). In `episodes.sponsors[]` with a `topical: true/false` flag. Each sponsor is factual; the flag indicates whether the sponsor's product is directly related to what the episode discusses (e.g., Ketone-IQ sponsoring an episode about ketones).
 - **Disclosure** — see below.
 
@@ -134,17 +138,28 @@ Fuzzy search (Fuse.js) sits alongside the cloud for direct guest/episode lookup,
 
 ### Card anatomy
 
-Each card displays, at minimum:
+The card layout (as of the first prototype):
 
-- Portrait (one per guest, reused across appearances)
-- Episode title
-- Guest name(s)
-- Role indicators (binary credibility signal — icons, text, or both, TBD in design; detail lives on guest page)
-- Promotion badge (Featuring / Disclosure / none)
-- Appearance count (1st, 2nd, ...) — color-coded
-- Topic tags (up to 3)
-- Date
-- Duration
+**Top row** — two columns side by side:
+- Left: 16:9 thumbnail (the YouTube click target)
+- Right: metadata list — date, appearance order, topic tags. Plain label/value pairs, no chips overlaid on the image.
+
+Overlays-on-image were tried first but moved out — putting metadata in a sibling column reads cleaner, doesn't fight the eventual portrait photo, and gives the topic tags room to breathe.
+
+Duration was dropped from the card surface — if the user is interested they'll watch either way. Value stays in `episode.duration` for downstream features.
+
+**Middle block** — title + description (no padding break from top row, just inset on bottom):
+
+**Content block** — title + description, each doing a distinct job:
+- **Title** — short topical headline, 3-7 words. Says what the episode is *about*. (E.g., "Reversing biological aging.")
+- **Description** — 15-25 words. Says what specifically gets *covered*. (E.g., "Sinclair on his lab's gene-therapy trials, his daily supplement stack, and why fasting and 'good stress' extend life.")
+
+The YouTube original title (`originalTitle`) stays in the data for SEO / record but isn't shown — it's typically too clickbait to surface.
+
+**Guest block** — visually separated from the episode content above (light gray background + top border). This signals "now we're talking about the person, not the episode."
+- **Guest name**
+- **`credibilityLine`** — concrete facts about the guest, plain English.
+- **"Promoting …" line** — type-level summary with hover detail. E.g., "Promoting a book and a company" where *a book* and *a company* have dotted underlines; hovering reveals the specific titles as clickable links. Keeps the surface tidy; specifics (and outbound links) on demand.
 
 Card links directly to YouTube/Spotify. No episode detail page.
 
