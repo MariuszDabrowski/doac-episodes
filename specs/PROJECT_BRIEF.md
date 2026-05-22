@@ -32,6 +32,8 @@ A filterable catalog of DOAC episodes with structured information about each gue
 - Don't call episodes "infomercials" — just list what's being promoted and by whom
 - Don't write op-eds — write clean one-line descriptions that respect the reader
 - Link to sources for credentials so users can verify
+- **Rewrite episode titles to be topic-explanatory, not clickbait.** YouTube titles often hide the actual subject behind a curiosity gap ("You've Been Lied To About...!"). Our title says what the episode is actually about. The original YouTube title is preserved as `originalTitle` for record/SEO.
+- **Resolve affiliate redirects to canonical destinations.** DOAC routes external links through `linkly.link` tracking redirects; we show the actual destination URL.
 
 ## Scope
 
@@ -75,11 +77,19 @@ Three states, visually distinct:
 - ⚠️ **Disclosure** — host has a financial relationship with what's being discussed
 - (none) — non-promotional episode
 
-**Featuring** is the more common signal — extractable from the YouTube video description (sponsors block) and the transcript (guest plugging their book, etc.).
+Distinguishing three things that are easy to conflate:
+
+- **Featuring** — *guest* is actively promoting something (book, product, company). In `episodes.promotions[]` with `by: 'guest'`.
+- **Sponsors** — *host* has paid advertisers (read-out ads). In `episodes.sponsors[]` with a `topical: true/false` flag. Each sponsor is factual; the flag indicates whether the sponsor's product is directly related to what the episode discusses (e.g., Ketone-IQ sponsoring an episode about ketones).
+- **Disclosure** — see below.
+
+**Featuring** is extractable from the YouTube video description and the transcript (guest plugging their book, etc.).
+
+**Sponsors** are typically declared in the description footer ("Sponsors:" block). The `topical` flag is judgment — usually obvious from comparing the sponsor's product to the episode topic.
 
 **Disclosure** splits in two:
 
-- *Stated* — host explicitly mentions a financial relationship on-air. Extractable from the transcript via the same pipeline.
+- *Stated* — host explicitly mentions a financial relationship on-air, **or** a topical sponsor overlaps with the episode subject (the `sponsors[].topical: true` case). Extractable from the transcript and the description's sponsor block.
 - *Unstated* — host has investments in the guest's company or product but doesn't say so. Sourcing it requires a hand-maintained list of the host's known business interests (Flight Fund holdings, Companies House, press) cross-referenced against each episode. **Deferred to v2** — high editorial value, but also high maintenance burden and the highest legal/reputational stakes (publicly asserting a specific person has a specific financial interest). v1 ships with stated disclosures only.
 
 ### Appearance count (episode-level, derived from guest data)
@@ -154,13 +164,15 @@ Deferred from the initial MVP — added as a pre-launch feature (see Build Seque
 
 A user assembles a small set of episodes ("here are the three you should start with") and gets a URL that loads exactly those episodes for the recipient. This is the project's core insight extended into user-land: human curation is what's missing from algorithmic discovery. The site provides the mechanism; the user provides the opinion.
 
-**Mechanism.** URL encodes episode IDs directly, e.g., `/?list=doac-342,doac-289,doac-156`. When the page loads with a list parameter, the catalog is filtered to exactly those episodes. Fully static — no backend, no auth, no persistence required.
+**Mechanism.** URL encodes episode IDs directly, optionally with a chapter index, e.g., `/?list=doac-342,doac-289:7,doac-156`. When the page loads with a list parameter, the catalog is filtered to exactly those entries. Fully static — no backend, no auth, no persistence required.
+
+**Chapter-level entries.** Because episodes carry `chapters[]`, a list entry can target a specific chapter rather than the whole episode (`doac-289:7` = chapter index 7 of `doac-289`). Recipients land on a card that deep-links into the YouTube video at the chapter's start timestamp. This turns curation from "watch these 3 episodes" into "watch these 5 specific moments" — a tighter recommendation.
 
 **User flow (rough — design open):**
-- Add/remove episodes to a working list from any card on Browse
+- Add/remove episodes (or specific chapters) to a working list from any card on Browse
 - A persistent panel or button surfaces the current list as it's built
 - "Copy link" generates the shareable URL
-- Recipient opens the link → sees those episodes in card form, can click through to watch
+- Recipient opens the link → sees those entries in card form, can click through to watch (with chapter deep-link when applicable)
 
 **Distinguishing from share buttons.** Share buttons (still excluded) attach to a single page and post to a social platform — attention-trap territory. Shareable lists are a curation mechanism that produces a personal recommendation. Different intent, different UX, different fit with the north star.
 
@@ -204,38 +216,43 @@ Guests and episodes are separate entities joined by ID. Keep all guest data in o
 
 // episodes.json
 {
-  "id": "doac-342",
-  "title": "...",
-  "slug": "andrew-huberman-dopamine",
-  "date": "2024-03-15",
-  "duration": 9240,
-  "guestIds": ["andrew-huberman"],
-  "topics": ["focus", "sleep"],
+  "id": "doac-DnvWAP99r3Y",
+  "title": "Rewritten topic-explanatory title.",
+  "originalTitle": "Exact YouTube title, preserved for record/SEO.",
+  "slug": "david-sinclair-aging-reversal",
+  "date": "2026-03-23",
+  "duration": 8947,
+  "guestIds": ["david-sinclair"],
+  "topics": ["longevity", "nutrition"],
   "description": "Rewritten one-line description, honest and useful.",
   "links": {
     "youtube": "...",
     "spotify": "...",
     "apple": "..."
   },
-  "thumbnail": "/portraits/andrew-huberman.webp",
+  "thumbnail": "/portraits/david-sinclair.webp",
   "promotions": [
-    {
-      "type": "book",
-      "title": "...",
-      "by": "guest",
-      "link": "..."
-    }
+    { "type": "book", "title": "...", "by": "guest", "link": "canonical URL, not affiliate redirect" }
+  ],
+  "sponsors": [
+    { "name": "Ketone-IQ", "url": "...", "topical": true }
+  ],
+  "chapters": [
+    { "start": 0, "title": "Intro" },
+    { "start": 214, "title": "..." }
   ]
 }
 ```
 
 ### Schema rules
 
-- **Namespaced IDs** (`doac-342`, not `342`) — preserves the option to add other shows later without rewriting
+- **Namespaced IDs** (`doac-{youtubeVideoId}`) — preserves the option to add other shows later without rewriting; YouTube IDs are globally unique on YouTube so collisions are impossible
 - **Guest IDs are kebab-case names** — readable URLs (`/guests/andrew-huberman`)
 - **One portrait per guest**, reused across all their episodes (visual consistency, makes the grid feel coherent)
 - **Controlled vocabularies for fields, roles, topics, promotion types** — defined in `taxonomies.json` so the LLM can't invent variants
-- **`sourceUrl` on credentials** — keeps the site honest, gives users a way to verify
+- **`sourceUrl` on credentials** — keeps the site honest, gives users a way to verify. Typically Wikipedia or the institutional source-of-truth page, whichever is more authoritative for that specific credential.
+- **`year: null` allowed on credentials** for ongoing positions where the start year isn't a strong signal (e.g., current professorship).
+- **Sponsors are separate from promotions.** `promotions[]` carries guest-side activity (Featuring); `sponsors[]` carries host-side paid ads, with `topical` indicating whether the sponsor's product overlaps with episode subject matter.
 
 ## Build Sequence
 

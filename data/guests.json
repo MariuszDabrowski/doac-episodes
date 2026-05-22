@@ -1,0 +1,29 @@
+[
+  {
+    "id": "david-sinclair",
+    "name": "David Sinclair",
+    "fields": ["genetics", "longevity"],
+    "roles": ["academic", "researcher", "author", "practitioner"],
+    "credentials": [
+      {
+        "type": "PhD",
+        "field": "Molecular Genetics",
+        "institution": "University of New South Wales",
+        "year": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/David_A._Sinclair"
+      },
+      {
+        "type": "Professorship",
+        "field": "Genetics",
+        "institution": "Harvard Medical School",
+        "year": null,
+        "sourceUrl": "https://sinclair.hms.harvard.edu/people/david-sinclair"
+      }
+    ],
+    "currentRole": "Professor of Genetics, Harvard Medical School",
+    "links": {
+      "website": "https://sinclair.hms.harvard.edu/people/david-sinclair",
+      "wikipedia": "https://en.wikipedia.org/wiki/David_A._Sinclair"
+    }
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "doac-DnvWAP99r3Y",
+    "title": "David Sinclair on biological age reversal, gene therapy, and longevity supplements",
+    "originalTitle": "Dr David Sinclair: Can Aging Be Reversed? After 8 Weeks, Cells Appeared 75% Younger In Tests!",
+    "slug": "david-sinclair-aging-reversal",
+    "date": "2026-03-23",
+    "duration": 8947,
+    "guestIds": ["david-sinclair"],
+    "topics": ["longevity", "nutrition"],
+    "description": "Harvard geneticist David Sinclair on his research into reversing biological aging, his lab's gene therapy trials, and the supplement stack he personally takes.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=DnvWAP99r3Y"
+    },
+    "thumbnail": "/portraits/david-sinclair.webp",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Lifespan: Why We Age—and Why We Don't Have To",
+        "by": "guest",
+        "link": "https://www.amazon.co.uk/Lifespan-Why-Age-Dont-Have/dp/1501191977"
+      },
+      {
+        "type": "company",
+        "title": "Lifespan.com",
+        "by": "guest",
+        "link": "https://lifespan.com/"
+      }
+    ],
+    "sponsors": [
+      { "name": "Bon Charge", "url": "https://boncharge.com/DOAC", "topical": true },
+      { "name": "Shopify", "url": "https://shopify.com/bartlett", "topical": false },
+      { "name": "Ketone-IQ", "url": "https://ketone.com/STEVEN", "topical": true }
+    ],
+    "chapters": [
+      { "start": 0, "title": "Intro" },
+      { "start": 214, "title": "The children's book that shaped everything" },
+      { "start": 552, "title": "Inside the first human age-reversal trials" },
+      { "start": 4258, "title": "Fasting methods for extending life" },
+      { "start": 5113, "title": "The 5 foods with the biggest lifespan impact" },
+      { "start": 6645, "title": "What a 'perfect' supplement stack looks like" }
+    ]
+  }
+]

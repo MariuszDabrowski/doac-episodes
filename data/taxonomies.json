@@ -1,0 +1,69 @@
+{
+  "roles": [
+    { "id": "academic", "label": "Academic", "definition": "Terminal degree (PhD, MD, etc.) from a recognized institution in a relevant field." },
+    { "id": "researcher", "label": "Researcher", "definition": "Currently publishes peer-reviewed work." },
+    { "id": "clinician", "label": "Clinician", "definition": "Actively practicing in a regulated profession." },
+    { "id": "author", "label": "Author", "definition": "Has written books on the topic. Neutral signal." },
+    { "id": "practitioner", "label": "Practitioner", "definition": "Works in industry/business in the field." },
+    { "id": "public-figure", "label": "Public figure", "definition": "Known primarily for media/commentary." }
+  ],
+
+  "topics": [
+    { "id": "sleep", "label": "Sleep", "cluster": "health-body" },
+    { "id": "nutrition", "label": "Nutrition", "cluster": "health-body" },
+    { "id": "longevity", "label": "Longevity", "cluster": "health-body" },
+    { "id": "mental-health", "label": "Mental Health", "cluster": "health-body" },
+    { "id": "fitness", "label": "Fitness", "cluster": "health-body" },
+    { "id": "hormones", "label": "Hormones", "cluster": "health-body" },
+
+    { "id": "psychology", "label": "Psychology", "cluster": "mind" },
+    { "id": "productivity", "label": "Productivity", "cluster": "mind" },
+    { "id": "focus", "label": "Focus", "cluster": "mind" },
+    { "id": "addiction", "label": "Addiction", "cluster": "mind" },
+    { "id": "trauma", "label": "Trauma", "cluster": "mind" },
+
+    { "id": "founders", "label": "Founders", "cluster": "business" },
+    { "id": "leadership", "label": "Leadership", "cluster": "business" },
+    { "id": "marketing", "label": "Marketing", "cluster": "business" },
+    { "id": "investing", "label": "Investing", "cluster": "business" },
+
+    { "id": "dating", "label": "Dating", "cluster": "relationships" },
+    { "id": "marriage", "label": "Marriage", "cluster": "relationships" },
+    { "id": "parenting", "label": "Parenting", "cluster": "relationships" },
+
+    { "id": "politics", "label": "Politics", "cluster": "society" },
+    { "id": "media", "label": "Media", "cluster": "society" },
+    { "id": "culture", "label": "Culture", "cluster": "society" }
+  ],
+
+  "clusters": [
+    { "id": "health-body", "label": "Health & Body" },
+    { "id": "mind", "label": "Mind" },
+    { "id": "business", "label": "Business" },
+    { "id": "relationships", "label": "Relationships" },
+    { "id": "society", "label": "Society" }
+  ],
+
+  "fields": [
+    "genetics",
+    "longevity",
+    "neuroscience",
+    "psychology",
+    "nutrition",
+    "business",
+    "technology",
+    "ai",
+    "politics",
+    "history",
+    "media",
+    "philosophy"
+  ],
+
+  "promotionTypes": [
+    { "id": "book", "label": "Book" },
+    { "id": "product", "label": "Product" },
+    { "id": "company", "label": "Company" },
+    { "id": "course", "label": "Course or program" },
+    { "id": "service", "label": "Service" }
+  ]
+}
