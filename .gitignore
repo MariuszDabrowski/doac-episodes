@@ -7,6 +7,9 @@ node_modules/
 .output/
 dist/
 
+# Python venv for the face-detection script
+.venv/
+
 # Raw/working data files (regeneratable). Curated JSON has no underscore prefix.
 data/_*.json
 data/_*/

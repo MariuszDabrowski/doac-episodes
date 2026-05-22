@@ -10,7 +10,8 @@
     "preview": "nuxt preview",
     "fetch:channel": "node scripts/fetch-channel-videos.mjs",
     "fetch:transcripts": "node scripts/fetch-transcripts.mjs",
-    "extract:transcripts": "node scripts/extract-transcripts.mjs"
+    "extract:transcripts": "node scripts/extract-transcripts.mjs",
+    "extract:frames": "node scripts/extract-portrait-frames.mjs"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

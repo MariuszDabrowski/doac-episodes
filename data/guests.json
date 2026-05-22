@@ -2,6 +2,7 @@
   {
     "id": "david-sinclair",
     "name": "David Sinclair",
+    "portrait": "/portraits/david-sinclair.jpg",
     "credibilityLine": "Harvard professor of genetics; author of Lifespan; founded multiple longevity biotech companies.",
     "fields": ["genetics", "longevity"],
     "roles": ["academic", "researcher", "author", "practitioner"],
