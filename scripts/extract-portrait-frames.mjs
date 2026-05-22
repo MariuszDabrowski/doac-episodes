@@ -30,10 +30,10 @@ function run(cmd, args, opts = {}) {
 }
 
 if (!existsSync(videoPath)) {
-  console.log(`Downloading ${videoId} at 720p…`);
+  console.log(`Downloading ${videoId} at 1080p…`);
   await run('yt-dlp', [
     '-f',
-    'best[height<=720]/best',
+    'best[height<=1080]/best',
     '-o',
     videoPath,
     '--no-warnings',

@@ -3,6 +3,7 @@
     "id": "david-sinclair",
     "name": "David Sinclair",
     "portrait": "/portraits/david-sinclair.jpg",
+    "portrait2x": "/portraits/david-sinclair@2x.jpg",
     "credibilityLine": "Harvard professor of genetics; author of Lifespan; founded multiple longevity biotech companies.",
     "fields": ["genetics", "longevity"],
     "roles": ["academic", "researcher", "author", "practitioner"],
@@ -26,6 +27,21 @@
     "links": {
       "website": "https://sinclair.hms.harvard.edu/people/david-sinclair",
       "wikipedia": "https://en.wikipedia.org/wiki/David_A._Sinclair"
+    }
+  },
+  {
+    "id": "whitney-wolfe-herd",
+    "name": "Whitney Wolfe Herd",
+    "portrait": "/portraits/whitney-wolfe-herd.jpg",
+    "portrait2x": "/portraits/whitney-wolfe-herd@2x.jpg",
+    "credibilityLine": "Founder and CEO of Bumble; co-founded Tinder; first self-made female billionaire.",
+    "fields": ["business"],
+    "roles": ["practitioner"],
+    "credentials": [],
+    "currentRole": "Founder and Executive Chair, Bumble",
+    "links": {
+      "website": "https://bumble.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Whitney_Wolfe_Herd"
     }
   }
 ]

@@ -23,13 +23,13 @@ top_n = int(sys.argv[3]) if len(sys.argv) > 3 else 3
 cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 
-def crop_16_9(img, bbox):
+def crop_16_9(img, bbox, target_w, target_h):
     h, w = img.shape[:2]
     x, y, fw, fh = bbox
     face_cx = x + fw // 2
     face_cy = y + fh // 2
 
-    target_ratio = 16 / 9  # width / height
+    target_ratio = 16 / 9
     crop_h = min(int(fh * 2.6), h)
     crop_w = min(int(crop_h * target_ratio), w)
     crop_h = int(crop_w / target_ratio)
@@ -43,7 +43,7 @@ def crop_16_9(img, bbox):
     crop_y1 = max(0, min(crop_y1, h - crop_h))
 
     out = img[crop_y1 : crop_y1 + crop_h, crop_x1 : crop_x1 + crop_w]
-    return cv2.resize(out, (800, 450), interpolation=cv2.INTER_AREA)
+    return cv2.resize(out, (target_w, target_h), interpolation=cv2.INTER_AREA)
 
 
 candidates = []
@@ -88,11 +88,12 @@ os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
 base, ext = os.path.splitext(output_path)
 
 for i, c in enumerate(top):
-    out_path = output_path if i == 0 else f"{base}-{i + 1}{ext}"
-    cropped = crop_16_9(c["img"], c["bbox"])
-    cv2.imwrite(out_path, cropped, [cv2.IMWRITE_JPEG_QUALITY, 88])
+    out_1x = output_path if i == 0 else f"{base}-{i + 1}{ext}"
+    out_2x = out_1x.replace(ext, f"@2x{ext}")
+    cv2.imwrite(out_1x, crop_16_9(c["img"], c["bbox"], 800, 450), [cv2.IMWRITE_JPEG_QUALITY, 88])
+    cv2.imwrite(out_2x, crop_16_9(c["img"], c["bbox"], 1600, 900), [cv2.IMWRITE_JPEG_QUALITY, 88])
     rank = "default" if i == 0 else f"alt {i + 1}"
     print(
         f"[{rank}] {os.path.basename(c['path'])} "
-        f"(score {c['score']:.3f}, face {c['area_pct'] * 100:.1f}%) → {out_path}"
+        f"(score {c['score']:.3f}, face {c['area_pct'] * 100:.1f}%) → {out_1x} + @2x"
     )

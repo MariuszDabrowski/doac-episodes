@@ -57,6 +57,7 @@ const guestPromotionGroups = computed(() => {
         <img
           v-if="guests[0]?.portrait"
           :src="guests[0].portrait"
+          :srcset="guests[0].portrait2x ? `${guests[0].portrait} 1x, ${guests[0].portrait2x} 2x` : undefined"
           :alt="guests[0].name"
           class="portrait-img"
         />
@@ -143,6 +144,7 @@ const guestPromotionGroups = computed(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .portrait-placeholder {

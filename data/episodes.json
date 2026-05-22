@@ -12,7 +12,7 @@
     "links": {
       "youtube": "https://www.youtube.com/watch?v=DnvWAP99r3Y"
     },
-    "thumbnail": "/portraits/david-sinclair.webp",
+    "thumbnail": "/portraits/david-sinclair.jpg",
     "promotions": [
       {
         "type": "book",
@@ -39,6 +39,43 @@
       { "start": 4258, "title": "Fasting methods for extending life" },
       { "start": 5113, "title": "The 5 foods with the biggest lifespan impact" },
       { "start": 6645, "title": "What a 'perfect' supplement stack looks like" }
+    ]
+  },
+  {
+    "id": "doac-ca5h47tJsdE",
+    "title": "Building Bumble after Tinder",
+    "originalTitle": "Fighting Sexism & Winning: The Founder Behind The $1Billion Dollar Tech Company Bumble",
+    "slug": "whitney-wolfe-bumble",
+    "date": "2022-11-14",
+    "duration": 5569,
+    "guestIds": ["whitney-wolfe-herd"],
+    "topics": ["founders", "leadership"],
+    "description": "Wolfe Herd on her departure from Tinder, building Bumble in its wake, dark days along the way, and what vulnerability looks like in leadership.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=ca5h47tJsdE"
+    },
+    "thumbnail": "/portraits/whitney-wolfe-herd.jpg",
+    "promotions": [
+      {
+        "type": "company",
+        "title": "Bumble",
+        "by": "guest",
+        "link": "https://bumble.com/"
+      }
+    ],
+    "sponsors": [
+      { "name": "Intel", "url": "https://intel.com/", "topical": false },
+      { "name": "Mercedes-Benz", "url": "https://mercedes-benz.com/", "topical": false },
+      { "name": "Huel", "url": "https://huel.com/", "topical": false },
+      { "name": "American Express", "url": "https://americanexpress.com/", "topical": false }
+    ],
+    "chapters": [
+      { "start": 0, "title": "Intro" },
+      { "start": 140, "title": "Early context" },
+      { "start": 1199, "title": "Early Tinder marketing tactics" },
+      { "start": 2974, "title": "Departure from Tinder" },
+      { "start": 3972, "title": "Bumble's current success" },
+      { "start": 4429, "title": "Why did Bumble win?" }
     ]
   }
 ]
