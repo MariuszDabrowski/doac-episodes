@@ -8,6 +8,7 @@ Usage:  .venv/bin/python scripts/auto-portrait.py <frames-dir> <output-jpg> [top
 """
 
 import cv2
+import numpy as np
 import sys
 import os
 import glob
@@ -90,10 +91,16 @@ base, ext = os.path.splitext(output_path)
 for i, c in enumerate(top):
     out_1x = output_path if i == 0 else f"{base}-{i + 1}{ext}"
     out_2x = out_1x.replace(ext, f"@2x{ext}")
-    cv2.imwrite(out_1x, crop_16_9(c["img"], c["bbox"], 800, 450), [cv2.IMWRITE_JPEG_QUALITY, 88])
-    cv2.imwrite(out_2x, crop_16_9(c["img"], c["bbox"], 1600, 900), [cv2.IMWRITE_JPEG_QUALITY, 88])
+    crop_1x = crop_16_9(c["img"], c["bbox"], 800, 450)
+    crop_2x = crop_16_9(c["img"], c["bbox"], 1600, 900)
+    cv2.imwrite(out_1x, crop_1x, [cv2.IMWRITE_JPEG_QUALITY, 88])
+    cv2.imwrite(out_2x, crop_2x, [cv2.IMWRITE_JPEG_QUALITY, 88])
+    # Mean grayscale brightness (0-1) — used to compute uniform scrim
+    gray = cv2.cvtColor(crop_1x, cv2.COLOR_BGR2GRAY)
+    brightness = float(np.mean(gray)) / 255.0
     rank = "default" if i == 0 else f"alt {i + 1}"
     print(
         f"[{rank}] {os.path.basename(c['path'])} "
-        f"(score {c['score']:.3f}, face {c['area_pct'] * 100:.1f}%) → {out_1x} + @2x"
+        f"(score {c['score']:.3f}, face {c['area_pct'] * 100:.1f}%, brightness {brightness:.3f}) "
+        f"→ {out_1x} + @2x"
     )

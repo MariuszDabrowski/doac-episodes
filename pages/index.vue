@@ -19,10 +19,6 @@ function appearanceCountFor(guestId, episodeId) {
 
 <template>
   <main>
-    <header>
-      <h1>DOAC episodes</h1>
-      <p>A discovery tool for The Diary of a CEO podcast.</p>
-    </header>
     <section class="grid">
       <EpisodeCard
         v-for="ep in episodes"
@@ -40,42 +36,44 @@ function appearanceCountFor(guestId, episodeId) {
 <style scoped>
 main {
   min-height: 100vh;
-  padding: 3rem 1.5rem;
+  padding: 3rem 3rem;
 }
 
 header {
-  max-width: 72rem;
+  max-width: 110rem;
   margin: 0 auto 2.5rem;
 }
 
 header h1 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 0;
+  color: #fafafa;
 }
 
 header p {
   margin: 0.5rem 0 0;
   font-size: 0.875rem;
-  color: #52525b;
+  color: #a1a1aa;
 }
 
 .grid {
-  max-width: 72rem;
+  max-width: 110rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1920px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }

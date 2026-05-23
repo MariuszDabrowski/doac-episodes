@@ -14,6 +14,7 @@
     "extract:frames": "node scripts/extract-portrait-frames.mjs"
   },
   "dependencies": {
+    "@nuxt/fonts": "^0.14.0",
     "dotenv": "^16.4.5",
     "nuxt": "^3.14.0",
     "vue": "^3.5.0"
