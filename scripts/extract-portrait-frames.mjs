@@ -30,10 +30,16 @@ function run(cmd, args, opts = {}) {
 }
 
 if (!existsSync(videoPath)) {
-  console.log(`Downloading ${videoId} at 1080p…`);
+  // Download only a 40-minute window from the middle of the episode. Skips
+  // intro chatter (first 5 min) and tail content. We delete the file after
+  // frame extraction; it's not used for anything else. Cuts download size
+  // roughly 4x on a 2-hour episode.
+  console.log(`Downloading ${videoId} at 1080p (00:05:00-00:45:00 section)…`);
   await run('yt-dlp', [
     '-f',
     'best[height<=1080]/best',
+    '--download-sections',
+    '*00:05:00-00:45:00',
     '-o',
     videoPath,
     '--no-warnings',

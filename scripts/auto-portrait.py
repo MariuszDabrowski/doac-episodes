@@ -22,6 +22,12 @@ output_path = sys.argv[2]
 top_n = int(sys.argv[3]) if len(sys.argv) > 3 else 3
 
 cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_eye.xml")
+
+# Scoring weights (kept here so they're easy to tune).
+EYE_OPEN_BONUS = 0.06  # both eyes visible → looking-at-camera, eyes open
+EYE_PARTIAL_BONUS = 0.02  # one eye visible
+EYE_CLOSED_PENALTY = -0.04  # no eyes detected within the face — likely blinking
 
 
 def crop_16_9(img, bbox, target_w, target_h):
@@ -66,7 +72,24 @@ for path in sorted(glob.glob(f"{frames_dir}/*.jpg")):
     cx_norm = (x + fw / 2) / w
     cy_norm = (y + fh / 2) / h
     center_offset = abs(cx_norm - 0.5) + abs(cy_norm - 0.5)
-    score = area_pct - center_offset * 0.5
+
+    # Look for eyes inside the face region. Crop to the upper 60% of the face
+    # bbox to skip nose/mouth false-positives (Haar eye cascade sometimes
+    # mis-detects on mouths/nostrils).
+    face_upper = gray[y : y + int(fh * 0.6), x : x + fw]
+    eye_min = max(15, fw // 8)
+    eyes = eye_cascade.detectMultiScale(
+        face_upper, scaleFactor=1.1, minNeighbors=6, minSize=(eye_min, eye_min)
+    )
+    eye_count = min(len(eyes), 2)
+    if eye_count >= 2:
+        eye_score = EYE_OPEN_BONUS
+    elif eye_count == 1:
+        eye_score = EYE_PARTIAL_BONUS
+    else:
+        eye_score = EYE_CLOSED_PENALTY
+
+    score = area_pct - center_offset * 0.5 + eye_score
 
     candidates.append(
         {
@@ -75,6 +98,7 @@ for path in sorted(glob.glob(f"{frames_dir}/*.jpg")):
             "bbox": (x, y, fw, fh),
             "score": score,
             "area_pct": area_pct,
+            "eyes": eye_count,
         }
     )
 
@@ -101,6 +125,7 @@ for i, c in enumerate(top):
     rank = "default" if i == 0 else f"alt {i + 1}"
     print(
         f"[{rank}] {os.path.basename(c['path'])} "
-        f"(score {c['score']:.3f}, face {c['area_pct'] * 100:.1f}%, brightness {brightness:.3f}) "
+        f"(score {c['score']:.3f}, face {c['area_pct'] * 100:.1f}%, "
+        f"eyes {c['eyes']}, brightness {brightness:.3f}) "
         f"→ {out_1x} + @2x"
     )

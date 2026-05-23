@@ -45,5 +45,180 @@
       "website": "https://bumble.com/",
       "wikipedia": "https://en.wikipedia.org/wiki/Whitney_Wolfe_Herd"
     }
+  },
+  {
+    "id": "andrew-huberman",
+    "name": "Andrew Huberman",
+    "portrait": "/portraits/andrew-huberman.jpg",
+    "portrait2x": "/portraits/andrew-huberman@2x.jpg",
+    "portraitBrightness": 0.393,
+    "credibilityLine": "Stanford neuroscientist; runs the Huberman Lab podcast; researcher in neural circuits and visual neuroscience.",
+    "fields": ["neuroscience"],
+    "roles": ["academic", "researcher", "public-figure"],
+    "credentials": [
+      {
+        "type": "PhD",
+        "field": "Neuroscience",
+        "institution": "University of California, Davis",
+        "year": 2004,
+        "sourceUrl": "https://en.wikipedia.org/wiki/Andrew_D._Huberman"
+      },
+      {
+        "type": "Professorship",
+        "field": "Neurobiology and Ophthalmology",
+        "institution": "Stanford University School of Medicine",
+        "year": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/Andrew_D._Huberman"
+      }
+    ],
+    "currentRole": "Associate Professor of Neurobiology and Ophthalmology, Stanford",
+    "links": {
+      "website": "https://www.hubermanlab.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Andrew_D._Huberman"
+    }
+  },
+  {
+    "id": "mo-gawdat",
+    "name": "Mo Gawdat",
+    "portrait": "/portraits/mo-gawdat.jpg",
+    "portrait2x": "/portraits/mo-gawdat@2x.jpg",
+    "portraitBrightness": 0.253,
+    "credibilityLine": "Former Chief Business Officer at Google X; author of Solve for Happy, Scary Smart, and Unstressable.",
+    "fields": ["business", "psychology"],
+    "roles": ["practitioner", "author", "public-figure"],
+    "credentials": [],
+    "currentRole": "Founder, One Billion Happy",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Mo_Gawdat"
+    }
+  },
+  {
+    "id": "jordan-peterson",
+    "name": "Jordan Peterson",
+    "portrait": "/portraits/jordan-peterson.jpg",
+    "portrait2x": "/portraits/jordan-peterson@2x.jpg",
+    "portraitBrightness": 0.442,
+    "credibilityLine": "Clinical psychologist; former Professor of Psychology at University of Toronto; author of 12 Rules for Life.",
+    "fields": ["psychology"],
+    "roles": ["academic", "clinician", "author", "public-figure"],
+    "credentials": [
+      {
+        "type": "PhD",
+        "field": "Clinical Psychology",
+        "institution": "McGill University",
+        "year": 1991,
+        "sourceUrl": "https://en.wikipedia.org/wiki/Jordan_Peterson"
+      },
+      {
+        "type": "Professorship",
+        "field": "Psychology",
+        "institution": "University of Toronto",
+        "year": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/Jordan_Peterson"
+      }
+    ],
+    "currentRole": "Professor Emeritus, University of Toronto; co-founder, Peterson Academy",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jordan_Peterson"
+    }
+  },
+  {
+    "id": "esther-perel",
+    "name": "Esther Perel",
+    "portrait": "/portraits/esther-perel.jpg",
+    "portrait2x": "/portraits/esther-perel@2x.jpg",
+    "portraitBrightness": 0.38,
+    "credibilityLine": "Practicing psychotherapist; author of Mating in Captivity and The State of Affairs; host of Where Should We Begin.",
+    "fields": ["psychology"],
+    "roles": ["clinician", "author", "public-figure"],
+    "credentials": [
+      {
+        "type": "Masters",
+        "field": "Educational Psychology",
+        "institution": "Lesley University",
+        "year": null,
+        "sourceUrl": "https://en.wikipedia.org/wiki/Esther_Perel"
+      }
+    ],
+    "currentRole": "Practicing psychotherapist; podcast host",
+    "links": {
+      "website": "https://www.estherperel.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Esther_Perel"
+    }
+  },
+  {
+    "id": "ivanka-trump",
+    "name": "Ivanka Trump",
+    "portrait": "/portraits/ivanka-trump.jpg",
+    "portrait2x": "/portraits/ivanka-trump@2x.jpg",
+    "portraitBrightness": 0.212,
+    "credibilityLine": "Former Executive Vice President at Trump Organization; former Senior Advisor in the Trump White House; bestselling author.",
+    "fields": ["business", "politics"],
+    "roles": ["practitioner", "author", "public-figure"],
+    "credentials": [
+      {
+        "type": "BS",
+        "field": "Economics",
+        "institution": "University of Pennsylvania (Wharton)",
+        "year": 2004,
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ivanka_Trump"
+      }
+    ],
+    "currentRole": "Businesswoman and investor",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ivanka_Trump"
+    }
+  },
+  {
+    "id": "tony-robbins",
+    "name": "Tony Robbins",
+    "portrait": "/portraits/tony-robbins.jpg",
+    "portrait2x": "/portraits/tony-robbins@2x.jpg",
+    "portraitBrightness": 0.229,
+    "credibilityLine": "Performance coach to heads of state and Fortune 100 CEOs; bestselling author of Awaken the Giant Within and Unlimited Power.",
+    "fields": ["business", "psychology"],
+    "roles": ["practitioner", "author", "public-figure"],
+    "credentials": [],
+    "currentRole": "Author, coach, and entrepreneur",
+    "links": {
+      "website": "https://www.tonyrobbins.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tony_Robbins"
+    }
+  },
+  {
+    "id": "hal-puthoff",
+    "name": "Hal Puthoff",
+    "portrait": "/portraits/hal-puthoff.jpg",
+    "portrait2x": "/portraits/hal-puthoff@2x.jpg",
+    "portraitBrightness": 0.231,
+    "credibilityLine": "Quantum physicist; advised the NSA and CIA on UAP science; former chief science advisor to Bigelow Aerospace.",
+    "fields": ["physics"],
+    "roles": ["academic", "researcher", "practitioner"],
+    "credentials": [
+      {
+        "type": "PhD",
+        "field": "Electrical Engineering",
+        "institution": "Stanford University",
+        "year": 1967,
+        "sourceUrl": "https://en.wikipedia.org/wiki/Harold_E._Puthoff"
+      }
+    ],
+    "currentRole": "President, EarthTech International; co-founder, To The Stars Academy",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Harold_E._Puthoff"
+    }
+  },
+  {
+    "id": "dan-farah",
+    "name": "Dan Farah",
+    "portrait": "/portraits/dan-farah.jpg",
+    "portrait2x": "/portraits/dan-farah@2x.jpg",
+    "portraitBrightness": 0.208,
+    "credibilityLine": "Filmmaker; director and producer of The Age of Disclosure, a documentary on classified UAP programs.",
+    "fields": ["media"],
+    "roles": ["practitioner", "public-figure"],
+    "credentials": [],
+    "currentRole": "Filmmaker; Founder, Farah Films & Management",
+    "links": {}
   }
 ]

@@ -30,6 +30,19 @@ function ordinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
+// Portrait sources: episode-level thumbnail wins (per-episode shot, different
+// for each appearance of a recurring guest). Falls back to the guest's
+// canonical portrait when the episode doesn't have its own yet.
+const portraitSrc = computed(() => {
+  return props.episode.thumbnail || props.guests[0]?.portrait || null;
+});
+
+const portrait2xSrc = computed(() => {
+  return props.episode.thumbnail2x || props.guests[0]?.portrait2x || null;
+});
+
+const portraitAlt = computed(() => props.guests[0]?.name || '');
+
 const guestPromotionGroups = computed(() => {
   const byType = {};
   for (const p of props.episode.promotions || []) {
@@ -62,10 +75,10 @@ const guestPromotionGroups = computed(() => {
       >
         <div class="portrait">
           <img
-            v-if="guests[0]?.portrait"
-            :src="guests[0].portrait"
-            :srcset="guests[0].portrait2x ? `${guests[0].portrait} 1x, ${guests[0].portrait2x} 2x` : undefined"
-            :alt="guests[0].name"
+            v-if="portraitSrc"
+            :src="portraitSrc"
+            :srcset="portrait2xSrc ? `${portraitSrc} 1x, ${portrait2xSrc} 2x` : undefined"
+            :alt="portraitAlt"
             class="portrait-img"
           />
           <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>

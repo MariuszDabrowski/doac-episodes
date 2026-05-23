@@ -263,7 +263,7 @@ Guests and episodes are separate entities joined by ID. Keep all guest data in o
 
 - **Namespaced IDs** (`doac-{youtubeVideoId}`) — preserves the option to add other shows later without rewriting; YouTube IDs are globally unique on YouTube so collisions are impossible
 - **Guest IDs are kebab-case names** — readable URLs (`/guests/andrew-huberman`)
-- **One portrait per guest**, reused across all their episodes (visual consistency, makes the grid feel coherent)
+- **Per-episode portrait when available**, with the guest's canonical portrait as a fallback. Episode-specific shots prevent repetition for recurring guests — Mo Gawdat's 2021 and 2024 appearances show different frames from different studios. The card reads `episode.thumbnail` if set; otherwise falls back to `guest.portrait`
 - **Controlled vocabularies for fields, roles, topics, promotion types** — defined in `taxonomies.json` so the LLM can't invent variants
 - **`sourceUrl` on credentials** — keeps the site honest, gives users a way to verify. Typically Wikipedia or the institutional source-of-truth page, whichever is more authoritative for that specific credential.
 - **`year: null` allowed on credentials** for ongoing positions where the start year isn't a strong signal (e.g., current professorship).
@@ -293,7 +293,7 @@ Resist building automation before the manual version exists. Order:
 3. Match against existing `guests.json`; if new guest, generate profile (LLM + web search)
 4. Assign topic tags from controlled vocabulary
 5. Detect promotions: extract sponsors from description, guest plugs from transcript, flag stated host disclosures from transcript (unstated disclosures = v2)
-6. Extract candidate portrait frames (ffmpeg → face detection → top 10 candidates)
+6. Extract candidate portrait frames: download only a middle slice of the video (`yt-dlp --download-sections "*00:05:00-00:45:00"`) → sample 20 frames with `ffmpeg` → OpenCV face detection + eye detection (bonus for eyes-open frames, penalty for blinks) → top 3 candidates per-episode for manual identity verification. See `specs/EPISODE_INGESTION.md` for the full workflow.
 
 **Review:** Action opens a PR with draft additions. Human reviews diff, picks portrait from candidates, merges. Merge triggers redeploy.
 

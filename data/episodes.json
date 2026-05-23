@@ -79,5 +79,225 @@
       { "start": 3972, "title": "Bumble's current success" },
       { "start": 4429, "title": "Why did Bumble win?" }
     ]
+  },
+  {
+    "id": "doac-jSqCL7Npln0",
+    "episodeNumber": 340,
+    "title": "Dopamine, focus, and the neuroscience of motivation",
+    "originalTitle": "Andrew Huberman: You Must Control Your Dopamine! The Shocking Truth Behind Cold Showers!",
+    "slug": "andrew-huberman-dopamine",
+    "date": "2024-08-29",
+    "duration": 14517,
+    "guestIds": ["andrew-huberman"],
+    "topics": ["focus", "psychology"],
+    "description": "Stanford neuroscientist Huberman on dopamine baseline, neuroplasticity at any age, why pursuit beats reward, and what cold exposure actually does.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=jSqCL7Npln0"
+    },
+    "thumbnail": "/portraits/andrew-huberman.jpg",
+    "promotions": [
+      {
+        "type": "product",
+        "title": "Huberman Lab podcast",
+        "by": "guest",
+        "link": "https://www.hubermanlab.com/"
+      }
+    ],
+    "sponsors": []
+  },
+  {
+    "id": "doac-csA9YhzYvmk",
+    "episodeNumber": 101,
+    "title": "The math of happiness, after a profound loss",
+    "originalTitle": "The Happiness Expert That Made 51 Million People Happier: Mo Gawdat | E101",
+    "slug": "mo-gawdat-solve-for-happy",
+    "date": "2021-10-11",
+    "duration": 7054,
+    "guestIds": ["mo-gawdat"],
+    "topics": ["psychology", "mental-health"],
+    "description": "Ex-Google X exec Gawdat on losing his son, the equation he built to understand happiness, and why gratitude is the only durable input.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=csA9YhzYvmk"
+    },
+    "thumbnail": "/portraits/doac-csA9YhzYvmk.jpg",
+    "thumbnail2x": "/portraits/doac-csA9YhzYvmk@2x.jpg",
+    "thumbnailBrightness": 0.213,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Solve for Happy",
+        "by": "guest",
+        "link": "https://www.mogawdat.com/solve-for-happy"
+      }
+    ],
+    "sponsors": []
+  },
+  {
+    "id": "doac-IxVNR0Om-lA",
+    "episodeNumber": 375,
+    "title": "Stress as the new addiction",
+    "originalTitle": "Mo Gawdat: A WARNING about Stress & Anxiety! This Is Causing 70% Of Heart Attacks In Young People!",
+    "slug": "mo-gawdat-unstressable",
+    "date": "2024-04-25",
+    "duration": 10426,
+    "guestIds": ["mo-gawdat"],
+    "topics": ["mental-health", "productivity"],
+    "description": "Gawdat on his new book Unstressable, the cardiovascular toll of always-on living, and why most productivity rhetoric is making things worse.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=IxVNR0Om-lA"
+    },
+    "thumbnail": "/portraits/mo-gawdat.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Unstressable",
+        "by": "guest",
+        "link": "https://www.mogawdat.com/"
+      },
+      {
+        "type": "company",
+        "title": "One Billion Happy",
+        "by": "guest",
+        "link": "https://www.onebillionhappy.org/"
+      }
+    ],
+    "sponsors": []
+  },
+  {
+    "id": "doac-Hik6OY-nk4c",
+    "episodeNumber": 432,
+    "title": "Loneliness, marriage, and individualism",
+    "originalTitle": "Jordan B Peterson: You Need To Listen To Your Wife! We've Built A Lonely & Sexless Society!",
+    "slug": "jordan-peterson-loneliness",
+    "date": "2025-01-13",
+    "duration": 8870,
+    "guestIds": ["jordan-peterson"],
+    "topics": ["psychology", "marriage"],
+    "description": "Peterson on the fracture of community, the modern relationship crisis, his book on wrestling with God, and Peterson Academy.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=Hik6OY-nk4c"
+    },
+    "thumbnail": "/portraits/jordan-peterson.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "We Who Wrestle With God",
+        "by": "guest",
+        "link": "https://www.jordanbpeterson.com/we-who-wrestle-with-god/"
+      },
+      {
+        "type": "course",
+        "title": "Peterson Academy",
+        "by": "guest",
+        "link": "https://petersonacademy.com/"
+      }
+    ],
+    "sponsors": []
+  },
+  {
+    "id": "doac-nTWXfo7narw",
+    "episodeNumber": 268,
+    "title": "Attachment styles and the patterns that shape relationships",
+    "originalTitle": "Esther Perel: The 3 Attachment Styles & Why You're Struggling With Love!",
+    "slug": "esther-perel-attachment",
+    "date": "2023-12-07",
+    "duration": 7362,
+    "guestIds": ["esther-perel"],
+    "topics": ["dating", "marriage"],
+    "description": "Couples therapist Perel on the three attachment styles, the childhood roots of relationship patterns, and how to revive a stalled partnership.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=nTWXfo7narw"
+    },
+    "thumbnail": "/portraits/esther-perel.jpg",
+    "promotions": [
+      {
+        "type": "product",
+        "title": "Where Should We Begin (podcast)",
+        "by": "guest",
+        "link": "https://whereshouldwebegin.estherperel.com/"
+      }
+    ],
+    "sponsors": []
+  },
+  {
+    "id": "doac-7VxeyTfhBM8",
+    "episodeNumber": 547,
+    "title": "From Trump Organization to the White House to walking away",
+    "originalTitle": "Ivanka Trump: Most People Can't Tell Signal From Noise",
+    "slug": "ivanka-trump-business-politics",
+    "date": "2026-04-09",
+    "duration": 5772,
+    "guestIds": ["ivanka-trump"],
+    "topics": ["founders", "politics"],
+    "description": "Ivanka Trump on building an $800M business, negotiating real estate young, four years inside the White House, and what made her step back.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=7VxeyTfhBM8"
+    },
+    "thumbnail": "/portraits/ivanka-trump.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Women Who Work",
+        "by": "guest",
+        "link": "https://www.amazon.com/Women-Who-Work-Rewriting-Success/dp/0735211329"
+      }
+    ],
+    "sponsors": []
+  },
+  {
+    "id": "doac-I_w81rptxkc",
+    "episodeNumber": 520,
+    "title": "Identity, trauma, and the question that defines decisions",
+    "originalTitle": "Tony Robbins: No One Is Ready For What's Coming (The truth about AI).",
+    "slug": "tony-robbins-ai-identity",
+    "date": "2026-01-15",
+    "duration": 7240,
+    "guestIds": ["tony-robbins"],
+    "topics": ["productivity", "psychology"],
+    "description": "Robbins on the role of trauma in identity, the framework he uses with world leaders, and his read on AI's coming disruption to work.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=I_w81rptxkc"
+    },
+    "thumbnail": "/portraits/tony-robbins.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Awaken the Giant Within",
+        "by": "guest",
+        "link": "https://www.tonyrobbins.com/products/awaken-the-giant-within/"
+      },
+      {
+        "type": "course",
+        "title": "Tony Robbins events",
+        "by": "guest",
+        "link": "https://www.tonyrobbins.com/events/"
+      }
+    ],
+    "sponsors": []
+  },
+  {
+    "id": "doac-V-z0k5xu1hM",
+    "episodeNumber": 554,
+    "title": "Classified UAP research, from the inside",
+    "originalTitle": "UFO Roundtable: CIA Physicist Proves Aliens Exist!",
+    "slug": "ufo-roundtable-puthoff-farah",
+    "date": "2026-05-14",
+    "duration": 5227,
+    "guestIds": ["hal-puthoff", "dan-farah"],
+    "topics": ["culture", "media"],
+    "description": "Quantum physicist Hal Puthoff and filmmaker Dan Farah on decades of classified UAP intelligence programs and the documentary built around them.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=V-z0k5xu1hM"
+    },
+    "thumbnail": "/portraits/hal-puthoff.jpg",
+    "promotions": [
+      {
+        "type": "product",
+        "title": "The Age of Disclosure (documentary)",
+        "by": "guest",
+        "link": "https://www.ageofdisclosure.com/"
+      }
+    ],
+    "sponsors": []
   }
 ]
