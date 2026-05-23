@@ -15,16 +15,6 @@ const PLURAL_OF = {
   service: 'services',
 };
 
-const TARGET_BRIGHTNESS = 0.06;
-const FALLBACK_SCRIM = 0.65;
-
-const scrimOpacity = computed(() => {
-  const b = props.guests[0]?.portraitBrightness;
-  if (!b) return FALLBACK_SCRIM;
-  const calculated = 1 - TARGET_BRIGHTNESS / b;
-  return Math.max(0, Math.min(0.88, calculated));
-});
-
 function fmtDate(d) {
   return new Date(d).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -62,43 +52,42 @@ const guestPromotionGroups = computed(() => {
 
 <template>
   <article class="card">
-    <a
-      class="card-bg-link"
-      :href="episode.links.youtube"
-      target="_blank"
-      rel="noopener"
-      :aria-label="`Watch ${episode.title} on YouTube`"
-    >
-      <img
-        v-if="guests[0]?.portrait"
-        :src="guests[0].portrait"
-        :srcset="guests[0].portrait2x ? `${guests[0].portrait} 1x, ${guests[0].portrait2x} 2x` : undefined"
-        :alt="guests[0].name"
-        class="card-bg-img"
-      />
-      <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>
-    </a>
+    <div class="left-col">
+      <a
+        class="portrait-link"
+        :href="episode.links.youtube"
+        target="_blank"
+        rel="noopener"
+        :aria-label="`Watch ${episode.title} on YouTube`"
+      >
+        <div class="portrait">
+          <img
+            v-if="guests[0]?.portrait"
+            :src="guests[0].portrait"
+            :srcset="guests[0].portrait2x ? `${guests[0].portrait} 1x, ${guests[0].portrait2x} 2x` : undefined"
+            :alt="guests[0].name"
+            class="portrait-img"
+          />
+          <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>
+        </div>
+      </a>
 
-    <div class="card-grid">
-      <div class="left-col">
-        <div class="guest-block">
-          <div v-for="(guest, gi) in guests" :key="guest.id" class="guest">
-            <div class="guest-name-row">
-              <span class="guest-name">{{ guest.name }}</span>
-              <span v-if="gi === 0" class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
-            </div>
-            <div v-if="guest.credibilityLine" class="credibility">{{ guest.credibilityLine }}</div>
+      <div class="guest-block">
+        <div v-for="(guest, gi) in guests" :key="guest.id" class="guest">
+          <div class="guest-name-row">
+            <span class="guest-name">{{ guest.name }}</span>
+            <span v-if="gi === 0" class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
           </div>
+          <div v-if="guest.credibilityLine" class="credibility">{{ guest.credibilityLine }}</div>
         </div>
       </div>
+    </div>
 
     <div class="right-col">
-      <div class="content-block">
-        <span class="episode-date">{{ fmtDate(episode.date) }}</span>
-        <div class="episode-block">
-          <div v-if="episode.episodeNumber" class="episode-meta">
-            <span class="episode-number">Ep {{ episode.episodeNumber }}</span>
-          </div>
+      <span v-if="episode.episodeNumber" class="episode-badge">Ep {{ episode.episodeNumber }}</span>
+      <div class="content-shape">
+        <div class="content-block">
+          <div class="episode-block">
           <h3 class="title">{{ episode.title }}</h3>
           <p class="description">{{ episode.description }}</p>
         </div>
@@ -123,71 +112,56 @@ const guestPromotionGroups = computed(() => {
             Watch
           </a>
         </div>
+        </div>
       </div>
 
-      <div v-if="guestPromotionGroups.length" class="promotes-block">
-        <div class="promoting">
-          Promotes <template v-for="(g, i) in guestPromotionGroups" :key="g.type"><span
-            v-if="i > 0 && i === guestPromotionGroups.length - 1"
-          >{{ guestPromotionGroups.length > 2 ? ', and ' : ' and ' }}</span><span
-            v-else-if="i > 0"
-          >, </span>{{ g.prefix }}<span class="hint">{{ g.typeWord }}<span class="tooltip" role="tooltip">
-            <a
-              v-for="item in g.items"
-              :key="item.title"
-              :href="item.link"
-              target="_blank"
-              rel="noopener"
-              class="tooltip-link"
-            >{{ item.title }}</a>
-          </span></span></template> in this episode.
-        </div>
-        </div>
-      </div>
     </div>
   </article>
 </template>
 
 <style scoped>
 .card {
-  position: relative;
-  background: linear-gradient(90deg, #0d0d10 0%, #2c2c2f 100%);
+  background: rgba(245, 236, 214, 0.03);
+  display: grid;
+  grid-template-columns: 45% 1fr;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
-.card-bg-link {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.left-col,
+.right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-col {
+  position: relative;
+}
+
+.portrait-link {
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
-.card-bg-img {
-  width: auto;
+.portrait {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: linear-gradient(135deg, #d4d4d8, #71717a);
+  overflow: hidden;
+  flex-shrink: 0;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), 0 100%);
+  box-shadow: inset 0 -55px 40px -18px rgba(0, 0, 0, 0.9);
+}
+
+.portrait-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
-  mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
-}
-
-.card-grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 45% 1fr;
-  min-height: 320px;
-}
-
-.left-col {
-  position: relative;
-}
-
-.right-col {
-  display: flex;
-  flex-direction: column;
 }
 
 .portrait-placeholder {
@@ -204,16 +178,8 @@ const guestPromotionGroups = computed(() => {
 }
 
 .guest-block {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background: rgba(9, 9, 11, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: calc(0.875rem + 28px) 1rem 0.875rem;
-  clip-path: polygon(0 28px, 100% 0, 100% 100%, 0 100%);
+  background: transparent;
+  padding: 0.875rem 1rem;
 }
 
 .guest-name-row {
@@ -227,12 +193,12 @@ const guestPromotionGroups = computed(() => {
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #fafafa;
+  color: #f5ecd6;
 }
 
 .appearance-pill {
-  background: rgba(255, 255, 255, 0.12);
-  color: #e4e4e7;
+  background: rgba(245, 236, 214, 0.06);
+  color: #a89e8c;
   padding: 0.125rem 0.5rem;
   border-radius: 9999px;
   font-size: 0.6875rem;
@@ -244,18 +210,53 @@ const guestPromotionGroups = computed(() => {
   margin-top: 0.25rem;
   font-size: 0.8125rem;
   line-height: 1.5;
-  color: #d4d4d8;
+  color: #a89e8c;
+}
+
+.content-shape {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
 }
 
 .content-block {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #1d1d20 0%, #0d0d10 100%);
-  border-bottom-left-radius: 8px;
-  box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.2);
-  position: relative;
+  background: #1c1916;
+  clip-path: polygon(0 0, calc(100% - 159px) 0, 100% 32px, 100% 100%, 0 100%);
+}
+
+.episode-badge {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  padding: 0;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #a89e8c;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   z-index: 2;
+}
+
+.episode-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #131316;
+  color: #52525b;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 1;
+  border-bottom-left-radius: 2px;
 }
 
 .episode-block {
@@ -285,33 +286,20 @@ const guestPromotionGroups = computed(() => {
   text-decoration-thickness: 1px;
 }
 
-.episode-date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #131316;
-  color: #52525b;
-  padding: 0.25rem 0.625rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  z-index: 1;
-  border-bottom-left-radius: 2px;
-}
-
 .title {
   margin: 0;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 1.3125rem;
   font-weight: 600;
   line-height: 1.25;
-  color: #fde68a;
+  color: #f5ecd6;
 }
 
 .description {
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.5;
-  color: #a1a1aa;
+  color: #a89e8c;
 }
 
 .actions-row {
@@ -329,50 +317,46 @@ const guestPromotionGroups = computed(() => {
 }
 
 .topic-pill {
-  background: rgba(96, 165, 250, 0.12);
-  color: #93c5fd;
-  padding: 0.25rem 0.625rem;
+  background: transparent;
+  border: 1px solid rgba(245, 236, 214, 0.22);
+  color: #c4b89f;
+  padding: 0.2rem 0.625rem;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
   text-decoration: none;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .topic-pill:hover {
-  background: rgba(96, 165, 250, 0.22);
-  color: #bfdbfe;
+  border-color: #c89968;
+  color: #f5ecd6;
 }
 
 .watch-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem 0.875rem;
-  background: #1e3a5f;
-  color: #f5f7fb;
+  padding: 0.4rem 1rem;
+  background: #c89968;
+  color: #100e0c;
   border: none;
-  border-radius: 4px;
+  border-radius: 9999px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
   flex-shrink: 0;
-  transition: background-color 0.15s ease;
+  transition: background 0.2s ease;
 }
 
 .watch-button:hover {
-  background: #2b507f;
+  background: #d8a978;
 }
 
 .promotes-block {
-  position: relative;
-  z-index: 1;
-  margin-top: -8px;
-  background: rgba(9, 9, 11, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: calc(0.875rem + 8px) 1rem 0.875rem;
+  background: transparent;
+  padding: 0.75rem 1rem;
 }
 
 .promoting {
