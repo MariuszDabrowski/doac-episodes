@@ -24,6 +24,17 @@ episode entry with portrait, structured transcript, and verified guest data.
 Open `data/_youtube-raw.json`, find the target video. Note its `id` (YouTube
 video ID, 11 chars). All subsequent steps key off this ID.
 
+For a quick "what's next?" suggestion:
+
+```
+node scripts/next-candidates.mjs [count=6] [min-minutes=30]
+```
+
+Prints the N most recent un-ingested episodes that are at least `min-minutes`
+long. The duration filter exists because the DOAC catalog contains both
+long-form interviews and YouTube Shorts (~30s clips), and we only care
+about the interviews.
+
 For repeatable batches, add the entry (or the bare `{ id, ... }` reference) to
 `data/_curated-candidates.json` so the rest of the pipeline can find it.
 
