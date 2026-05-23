@@ -62,34 +62,35 @@ const guestPromotionGroups = computed(() => {
 
 <template>
   <article class="card">
-    <div class="left-col">
-      <a
-        class="portrait-link"
-        :href="episode.links.youtube"
-        target="_blank"
-        rel="noopener"
-        :aria-label="`Watch ${episode.title} on YouTube`"
-      >
-        <img
-          v-if="guests[0]?.portrait"
-          :src="guests[0].portrait"
-          :srcset="guests[0].portrait2x ? `${guests[0].portrait} 1x, ${guests[0].portrait2x} 2x` : undefined"
-          :alt="guests[0].name"
-          class="portrait-img"
-        />
-        <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>
-      </a>
+    <a
+      class="card-bg-link"
+      :href="episode.links.youtube"
+      target="_blank"
+      rel="noopener"
+      :aria-label="`Watch ${episode.title} on YouTube`"
+    >
+      <img
+        v-if="guests[0]?.portrait"
+        :src="guests[0].portrait"
+        :srcset="guests[0].portrait2x ? `${guests[0].portrait} 1x, ${guests[0].portrait2x} 2x` : undefined"
+        :alt="guests[0].name"
+        class="card-bg-img"
+      />
+      <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>
+    </a>
 
-      <div class="guest-block">
-        <div v-for="(guest, gi) in guests" :key="guest.id" class="guest">
-          <div class="guest-name-row">
-            <span class="guest-name">{{ guest.name }}</span>
-            <span v-if="gi === 0" class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
+    <div class="card-grid">
+      <div class="left-col">
+        <div class="guest-block">
+          <div v-for="(guest, gi) in guests" :key="guest.id" class="guest">
+            <div class="guest-name-row">
+              <span class="guest-name">{{ guest.name }}</span>
+              <span v-if="gi === 0" class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
+            </div>
+            <div v-if="guest.credibilityLine" class="credibility">{{ guest.credibilityLine }}</div>
           </div>
-          <div v-if="guest.credibilityLine" class="credibility">{{ guest.credibilityLine }}</div>
         </div>
       </div>
-    </div>
 
     <div class="right-col">
       <div class="content-block">
@@ -141,6 +142,7 @@ const guestPromotionGroups = computed(() => {
             >{{ item.title }}</a>
           </span></span></template> in this episode.
         </div>
+        </div>
       </div>
     </div>
   </article>
@@ -148,39 +150,44 @@ const guestPromotionGroups = computed(() => {
 
 <style scoped>
 .card {
+  position: relative;
   background: linear-gradient(90deg, #0d0d10 0%, #2c2c2f 100%);
-  display: grid;
-  grid-template-columns: 45% 1fr;
   overflow: hidden;
   border-radius: 5px;
 }
 
+.card-bg-link {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-bg-img {
+  width: auto;
+  height: 100%;
+  display: block;
+  mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
+}
+
+.card-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  min-height: 320px;
+}
+
 .left-col {
   position: relative;
-  min-height: 360px;
-  background: linear-gradient(135deg, #d4d4d8, #71717a);
-  overflow: hidden;
 }
 
 .right-col {
   display: flex;
   flex-direction: column;
-}
-
-.portrait-link {
-  position: absolute;
-  inset: 0;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  z-index: 0;
-}
-
-.portrait-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .portrait-placeholder {
@@ -205,7 +212,8 @@ const guestPromotionGroups = computed(() => {
   background: rgba(9, 9, 11, 0.55);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 0.875rem 1rem;
+  padding: calc(0.875rem + 28px) 1rem 0.875rem;
+  clip-path: polygon(0 28px, 100% 0, 100% 100%, 0 100%);
 }
 
 .guest-name-row {
@@ -247,7 +255,7 @@ const guestPromotionGroups = computed(() => {
   border-bottom-left-radius: 8px;
   box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.2);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .episode-block {
@@ -358,8 +366,13 @@ const guestPromotionGroups = computed(() => {
 }
 
 .promotes-block {
-  background: transparent;
-  padding: 0.75rem 1rem;
+  position: relative;
+  z-index: 1;
+  margin-top: -8px;
+  background: rgba(9, 9, 11, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: calc(0.875rem + 8px) 1rem 0.875rem;
 }
 
 .promoting {
