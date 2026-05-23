@@ -10,7 +10,11 @@ episode entry with portrait, structured transcript, and verified guest data.
 ## Prerequisites
 
 - Node LTS (`.nvmrc` pins it; `nvm use` picks it up)
-- Python 3 with `.venv` set up: `python3 -m venv .venv && .venv/bin/pip install opencv-python`
+- Python 3 with `.venv` set up:
+  `python3 -m venv .venv && .venv/bin/pip install opencv-python mediapipe==0.10.18 face_recognition "setuptools<81"`.
+  Notes on pins: mediapipe 0.10.20+ removed the legacy `mp.solutions` API the
+  script uses; setuptools 81+ removed `pkg_resources`, which
+  `face_recognition_models` still imports.
 - `yt-dlp` and `ffmpeg` installed (brew on macOS)
 - `YOUTUBE_API_KEY` in `.env` (Google Cloud Console → YouTube Data API v3)
 - The full channel metadata in `data/_youtube-raw.json` (regenerate via `npm run fetch:channel`)
@@ -142,14 +146,29 @@ The script outputs:
 - `public/portraits/{guestId}.jpg` + `@2x.jpg` — default (highest-scoring frame)
 - `public/portraits/{guestId}-2.jpg` + `@2x` — second candidate
 - `public/portraits/{guestId}-3.jpg` + `@2x` — third candidate
-- Each line prints a brightness value (mean grayscale luminance) used for
-  scrim opacity computation
+- Each line prints `score`, `face` area %, `ear` (eye aspect ratio),
+  `host` distance (face_recognition distance to Bartlett reference), and
+  `brightness` (mean grayscale luminance, used for scrim opacity)
 
-### Manual verification (REQUIRED)
+### Scoring inputs
 
-Face detection finds A face — not necessarily the guest. With single-guest
-episodes the failure mode is the host (Steven Bartlett) winning the highest
-score. **Open the saved `.jpg` and confirm it's the right person.**
+- **Face area + centering** — bigger and more centered faces score higher
+- **EAR (Eye Aspect Ratio)** via MediaPipe FaceMesh — bonus when eyes are
+  open (≥ 0.25), small bonus partial (0.18–0.25), penalty closed (< 0.18).
+  Replaces the older Haar eye cascade, which missed partial blinks
+- **Host blacklist** — face_recognition encodes each candidate face and
+  compares against `data/host-bartlett.jpg`. Distance < 0.50 → -0.30 penalty
+  (heavy enough to override any face-size advantage). 0.50–0.60 → -0.10
+  penalty. Above 0.60 → no penalty. This eliminates the "host wins" failure
+  mode automatically
+
+### Manual verification (still required)
+
+The detector picks the correct *identity* now (host is blacklisted), but
+face-size still dominates *among same-identity candidates*. The remaining
+failure mode is an unflattering shot of the guest winning — looking down,
+mouth open mid-speech, intense glare. **Open the saved `.jpg` and confirm
+the expression reads well editorially.**
 
 If the default is wrong:
 
@@ -216,16 +235,25 @@ in case you need to re-pick a frame later. Delete only if disk space matters.
 | Curated guests | `data/guests.json` | **yes** |
 | Curated episodes | `data/episodes.json` | **yes** |
 | Taxonomies | `data/taxonomies.json` | **yes** |
+| Host reference photo | `data/host-bartlett.jpg` | **yes** |
 | Portraits (chosen) | `public/portraits/{guestId}.jpg`, `@2x.jpg` | **yes** |
 | Portrait alternates | `public/portraits/{guestId}-N.jpg`, `@2x.jpg` | **yes** |
 
 ## Known limitations
 
-- **Face identity is not verified.** The OpenCV Haar cascade detects faces; it
-  doesn't know whose face. Manual verification per portrait is required for
-  v1. Identity recognition via face embeddings (e.g., `face_recognition`
-  matching against a Wikipedia reference photo) is the path to full automation.
-- **Blinking, off-camera moments, side profiles** can win on score and look
-  bad. Top-3 output mitigates this.
+- **Host is filtered automatically, guest identity is not verified
+  positively.** We blacklist Bartlett via a face_recognition embedding of
+  `data/host-bartlett.jpg`. By elimination, "not host" = "guest". This works
+  because each frame has exactly one face (filtered upstream), and Bartlett
+  is the only consistent identity across episodes. For multi-guest panels
+  the script can't distinguish guest A from guest B — manual identification
+  is still required there.
+- **Face-size still dominates expression quality.** Even with EAR and host
+  blacklist, the highest face-area frame wins — which is often an
+  unflattering shot (looking down, mid-speech, glare). Top-3 output gives
+  fallback options without re-extracting.
+- **EAR can be fooled by head pose.** A face looking down has spread-apart
+  eye corners (high horizontal distance) even when the eyelids are nearly
+  closed, inflating the ratio. Future: incorporate head-pose estimation.
 - **Affiliate URL resolution requires HTML parsing** for `linkly.link`-style
   JS-redirect services. Easy with curl + regex; brittle to changes.

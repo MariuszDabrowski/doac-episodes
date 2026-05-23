@@ -30,7 +30,9 @@ not current, future sessions lose context.
 
 - Use `nvm use` (`.nvmrc` pins Node LTS) before running any `npm` script
 - Python tooling lives in `.venv` (`./.venv/bin/python ...`); install with
-  `python3 -m venv .venv && .venv/bin/pip install opencv-python`
+  `python3 -m venv .venv && .venv/bin/pip install opencv-python mediapipe==0.10.18 face_recognition "setuptools<81"`.
+  The mediapipe pin keeps the legacy `mp.solutions.face_mesh` API; the
+  setuptools pin keeps `pkg_resources` available for `face_recognition_models`.
 - All raw/regeneratable data goes under `data/_*` (gitignored). Curated data
   at the top level of `data/` is committed
 - Portraits at `public/portraits/{guestId}.{jpg,@2x.jpg}` are committed; the
@@ -71,4 +73,5 @@ person opening a file cold.
 - Hardcoding "the latest" anything (font, model, color) — link to the
   taxonomies/config files instead
 - Skipping the manual portrait verification step in the ingestion workflow.
-  Face detection finds a face, not the right person
+  Identity is filtered (host blacklist), but face-size still picks
+  unflattering shots — confirm the expression reads well editorially
