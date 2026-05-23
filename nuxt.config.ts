@@ -15,6 +15,9 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'A discovery tool for The Diary of a CEO podcast.' },
       ],
+      script: [
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.7/lottie.min.js', defer: true },
+      ],
     },
   },
   compatibilityDate: '2025-01-01',

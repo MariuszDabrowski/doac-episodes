@@ -64,6 +64,7 @@ const clusterButtons = ref([]);
 const activeCluster = ref('all');
 const activeSubtopic = ref(null);
 const indicatorStyle = ref({ transform: 'translateX(0)', width: '0px' });
+const indicatorReady = ref(false); // skip transition until first measurement lands
 
 const subtopics = computed(() => {
   if (activeCluster.value === 'all') return [];
@@ -91,6 +92,22 @@ function selectCluster(id) {
 function selectSubtopic(id) {
   activeSubtopic.value = activeSubtopic.value === id ? null : id;
 }
+
+// Track the previous cluster's subtopic count so we can skip the leave
+// wait entirely when the outgoing bar is empty (e.g., switching from "All").
+// Captured synchronously before the watcher chain triggers the Transition.
+const previousSubtopicCount = ref(0);
+
+watch(activeCluster, (newVal, oldVal) => {
+  previousSubtopicCount.value = oldVal === 'all'
+    ? 0
+    : taxonomiesData.topics.filter((t) => t.cluster === oldVal).length;
+}, { flush: 'sync' });
+
+const subtopicBarDuration = computed(() => ({
+  enter: 800,
+  leave: previousSubtopicCount.value > 0 ? 450 : 0,
+}));
 
 const searchQuery = ref('');
 
@@ -125,28 +142,52 @@ const filteredEpisodes = computed(() => {
   return [...list].sort((a, b) => b.date.localeCompare(a.date));
 });
 
+// Key for the whole grid: changes whenever the filter changes, so Vue's
+// Transition (mode="out-in") fades the old grid out and the new one in.
+const filterStateKey = computed(() =>
+  `${activeCluster.value}|${activeSubtopic.value ?? ''}|${searchQuery.value.trim()}`
+);
+
 const resultSummary = computed(() => {
   const n = filteredEpisodes.value.length;
   const word = n === 1 ? 'episode' : 'episodes';
-  const parts = [`${n} ${word}`];
+  const parts = [
+    { text: String(n), bold: true },
+    { text: ` ${word}`, bold: false },
+  ];
   if (activeCluster.value !== 'all') {
     const c = clusters.find((c) => c.id === activeCluster.value);
-    if (c) parts.push(`in ${c.label}`);
+    if (c) {
+      parts.push({ text: ' in ', bold: false });
+      parts.push({ text: c.label, bold: true });
+    }
   }
   if (activeSubtopic.value) {
     const t = taxonomiesData.topics.find((t) => t.id === activeSubtopic.value);
-    if (t) parts.push(`tagged ${t.label}`);
+    if (t) {
+      parts.push({ text: ' tagged ', bold: false });
+      parts.push({ text: t.label, bold: true });
+    }
   }
-  if (searchQuery.value.trim()) {
-    parts.push(`matching "${searchQuery.value.trim()}"`);
+  const q = searchQuery.value.trim();
+  if (q) {
+    parts.push({ text: ' matching ', bold: false });
+    parts.push({ text: `"${q}"`, bold: true });
   }
-  return parts.join(' ');
+  return parts;
 });
 
 watch(activeCluster, () => nextTick(updateIndicator));
 
 onMounted(() => {
-  nextTick(updateIndicator);
+  nextTick(() => {
+    updateIndicator();
+    // Re-enable the transition only after the indicator's correct position
+    // has actually painted, so the first appearance isn't an animation.
+    requestAnimationFrame(() => {
+      indicatorReady.value = true;
+    });
+  });
   window.addEventListener('resize', updateIndicator);
 });
 
@@ -185,7 +226,11 @@ onUnmounted(() => {
     <div class="category-section">
       <div class="cluster-bar-wrapper">
         <div class="cluster-bar" ref="clusterBar">
-          <div class="cluster-indicator" :style="indicatorStyle"></div>
+          <div
+            class="cluster-indicator"
+            :class="{ 'no-transition': !indicatorReady }"
+            :style="indicatorStyle"
+          ></div>
           <button
             v-for="c in clusters"
             :key="c.id"
@@ -199,21 +244,36 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <div class="subtopic-bar">
-        <button
-          v-for="t in subtopics"
-          :key="t.id"
-          class="subtopic-pill"
-          :class="{ active: activeSubtopic === t.id }"
-          @click="selectSubtopic(t.id)"
-        >
-          {{ t.label }}
-        </button>
-      </div>
+      <Transition
+        name="subtopic-bar"
+        mode="out-in"
+        :duration="subtopicBarDuration"
+      >
+        <div :key="activeCluster" class="subtopic-bar">
+          <button
+            v-for="(t, i) in subtopics"
+            :key="t.id"
+            class="subtopic-pill"
+            :class="{ active: activeSubtopic === t.id }"
+            :style="{ '--pill-index': i }"
+            @click="selectSubtopic(t.id)"
+          >
+            {{ t.label }}
+          </button>
+        </div>
+      </Transition>
     </div>
 
     <div class="results-bar">
-      <div class="result-summary">{{ resultSummary }}</div>
+      <Transition name="summary-fade" mode="out-in">
+        <div :key="filterStateKey" class="result-summary">
+          <span
+            v-for="(part, i) in resultSummary"
+            :key="i"
+            :class="{ 'summary-bold': part.bold }"
+          >{{ part.text }}</span>
+        </div>
+      </Transition>
       <div class="search-wrapper">
         <input
           v-model="searchQuery"
@@ -225,17 +285,24 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <section class="grid">
-      <EpisodeCard
-        v-for="ep in filteredEpisodes"
-        :key="ep.id"
-        :episode="ep"
-        :guests="ep.guestIds.map((id) => guestsById[id])"
-        :appearance-counts="ep.guestIds.map((id) => appearanceCountFor(id, ep.id))"
-        :roles-by-id="rolesById"
-        :topics-by-id="topicsById"
-      />
-    </section>
+    <Transition name="grid-fade" mode="out-in">
+      <section :key="filterStateKey" class="grid">
+        <div
+          v-for="(ep, i) in filteredEpisodes"
+          :key="ep.id"
+          class="card-slot"
+          :style="{ '--slot-index': i }"
+        >
+          <EpisodeCard
+            :episode="ep"
+            :guests="ep.guestIds.map((id) => guestsById[id])"
+            :appearance-counts="ep.guestIds.map((id) => appearanceCountFor(id, ep.id))"
+            :roles-by-id="rolesById"
+            :topics-by-id="topicsById"
+          />
+        </div>
+      </section>
+    </Transition>
   </main>
 </template>
 
@@ -247,6 +314,9 @@ main {
   background:
     radial-gradient(ellipse 90% 60% at 50% 0%, rgba(200, 153, 104, 0.07) 0%, transparent 55%),
     linear-gradient(180deg, #100e0c 0%, #0a0807 100%);
+  /* Anchor the gradient to the viewport so it doesn't stretch/compress as
+     filters change the page height. */
+  background-attachment: fixed;
 }
 
 .atmosphere {
@@ -358,6 +428,9 @@ main > :not(.atmosphere) {
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
+  /* Pivot rotation from the left edge — same hinged-on-a-nail feel as the
+     result summary text */
+  transform-origin: left center;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
@@ -371,6 +444,39 @@ main > :not(.atmosphere) {
   background: #c89968;
   border-color: #c89968;
   color: #100e0c;
+}
+
+/* Atomic bar swap on cluster change. mode="out-in" guarantees old bar
+   finishes leaving before new bar mounts, so there's no layout overlap.
+   Stagger animations on pills run via parent enter/leave-active class.  */
+@keyframes pill-stagger-enter {
+  from { opacity: 0; transform: translateY(-28px) rotate(10deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes pill-stagger-leave {
+  to { opacity: 0; transform: translateY(14px) rotate(-10deg); }
+}
+
+.subtopic-bar-enter-active .subtopic-pill {
+  /* Strong deceleration — the pill flies in then settles, inertia-like */
+  animation: pill-stagger-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--pill-index, 0) * 0.05s);
+}
+
+.subtopic-bar-leave-active .subtopic-pill {
+  /* Fast start, gentle decel — pill is pushed out rather than dropping slowly */
+  animation: pill-stagger-leave 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--pill-index, 0) * 0.05s);
+  /* Override the default left-edge pivot — leaving pills hinge on the right */
+  transform-origin: right center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subtopic-bar-enter-active .subtopic-pill,
+  .subtopic-bar-leave-active .subtopic-pill {
+    animation: none;
+  }
 }
 
 .cluster-bar {
@@ -389,9 +495,14 @@ main > :not(.atmosphere) {
   left: 0;
   background: #c89968;
   border-radius: 9999px;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Apple "default" curve — smoother glide than Material's standard. */
+  transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1), width 0.5s cubic-bezier(0.32, 0.72, 0, 1);
   z-index: 0;
   will-change: transform, width;
+}
+
+.cluster-indicator.no-transition {
+  transition: none;
 }
 
 .cluster-item {
@@ -432,6 +543,37 @@ main > :not(.atmosphere) {
   font-size: 0.9375rem;
   color: #a89e8c;
   letter-spacing: 0.01em;
+  /* Pivot rotations from the left edge, like the text is nailed on the left */
+  transform-origin: left center;
+}
+
+.summary-bold {
+  font-weight: 600;
+  color: #f5ecd6;
+}
+
+/* Summary line shares timing with the grid: leaves alongside the grid's
+   300ms fade-out, then enters with the same 500ms duration as card 0's
+   stagger animation. No delay needed because both leaves complete at the
+   same moment, so both entries begin simultaneously. */
+.summary-fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.summary-fade-enter-active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.summary-fade-enter-from {
+  opacity: 0;
+  /* Starts below + tilted down on the right, then slides up + rotates back to level */
+  transform: translateY(18px) rotate(3deg);
+}
+
+.summary-fade-leave-to {
+  opacity: 0;
+  /* Slides down + tilts down on the right, as if hinged on the left edge */
+  transform: translateY(18px) rotate(3deg);
 }
 
 .search-wrapper {
@@ -465,18 +607,92 @@ main > :not(.atmosphere) {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 4rem;
+  position: relative; /* anchor for absolutely-positioned leaving cards */
+}
+
+.card-slot {
+  position: relative;
+  display: grid; /* makes the inner .card stretch to the grid row height */
+}
+
+/* Fade the whole grid as a unit when filters change — out-in mode means
+   the old result set finishes leaving before the new one enters, so cards
+   never visually overlap. */
+/* Whole-grid leave: slides down + fades out as a unit */
+.grid-fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.grid-fade-leave-to {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* No enter animation on the grid itself — cards stagger in individually
+   via the card-stagger-in keyframe below */
+
+@keyframes card-stagger-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-slot {
+  animation: card-stagger-in 0.5s ease both;
+  animation-delay: calc(var(--slot-index, 0) * 0.07s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-slot {
+    animation: none;
+  }
+  .grid-fade-leave-active {
+    transition: opacity 0.15s ease;
+  }
+  .grid-fade-leave-to {
+    transform: none;
+  }
+}
+
+/* Row divider: subtle 1px line sits in the gap above every slot after
+   row 1. Pseudo lives on the slot (no overflow:hidden) rather than the
+   inner .card (which clips). Per-card line breaks at column gaps —
+   reads as a row separator that respects columns. */
+.card-slot:nth-child(n+2)::before {
+  content: '';
+  position: absolute;
+  top: -2rem; /* halfway into the 4rem gap */
+  left: 0;
+  right: 0;
+  border-top: 1px dotted rgba(245, 236, 214, 0.12);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s ease 0.2s; /* small delay so it appears after the card settles */
 }
 
 @media (min-width: 900px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
+  /* 2-column layout: row 1 is children 1-2, suppress divider above child 2 */
+  .card-slot:nth-child(2)::before {
+    display: none;
+  }
 }
 
 @media (min-width: 1920px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* 3-column layout: row 1 is children 1-3, also suppress above child 3 */
+  .card-slot:nth-child(3)::before {
+    display: none;
   }
 }
 </style>

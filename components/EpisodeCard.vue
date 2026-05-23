@@ -43,6 +43,78 @@ const portrait2xSrc = computed(() => {
 
 const portraitAlt = computed(() => props.guests[0]?.name || '');
 
+const expanded = ref(false);
+
+const visibleGuests = computed(() =>
+  expanded.value ? props.guests : props.guests.slice(0, 1)
+);
+
+const hiddenGuestCount = computed(() => props.guests.length - 1);
+
+// Stick-man Lottie animation that pops out of the watch button on hover.
+// Lottie is loaded globally via CDN (see nuxt.config.ts).
+const bodymovinRef = ref(null);
+let lottieAnim = null;
+let isAnimationRunning = false;
+
+function startLoop() {
+  if (!lottieAnim) return;
+  lottieAnim.loop = true;
+  lottieAnim.removeEventListener('complete', startLoop);
+  lottieAnim.playSegments([9, 13], true);
+}
+
+function onContentEnter() {
+  if (!lottieAnim || isAnimationRunning) return;
+  isAnimationRunning = true;
+  bodymovinRef.value?.classList.remove('bodymovin--hidden');
+  lottieAnim.loop = false;
+  lottieAnim.setDirection(1);
+  lottieAnim.playSegments([0, 8], true);
+  lottieAnim.addEventListener('complete', startLoop);
+}
+
+function onContentLeave() {
+  if (!lottieAnim) return;
+  bodymovinRef.value?.classList.add('bodymovin--hidden');
+  isAnimationRunning = false;
+  lottieAnim.removeEventListener('complete', startLoop);
+}
+
+onMounted(() => {
+  // Wait for the CDN-loaded lottie global to be available before init.
+  function init() {
+    if (!window.lottie || !bodymovinRef.value) return;
+    lottieAnim = window.lottie.loadAnimation({
+      container: bodymovinRef.value,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: '/animations/stick-man.json',
+    });
+    lottieAnim.setSpeed(2.6);
+  }
+  if (window.lottie) {
+    init();
+  } else {
+    const interval = setInterval(() => {
+      if (window.lottie) {
+        clearInterval(interval);
+        init();
+      }
+    }, 50);
+    // Stop polling if the component unmounts before lottie loads
+    onUnmounted(() => clearInterval(interval));
+  }
+});
+
+onUnmounted(() => {
+  if (lottieAnim) {
+    lottieAnim.destroy();
+    lottieAnim = null;
+  }
+});
+
 const guestPromotionGroups = computed(() => {
   const byType = {};
   for (const p of props.episode.promotions || []) {
@@ -86,20 +158,28 @@ const guestPromotionGroups = computed(() => {
       </a>
 
       <div class="guest-block">
-        <div v-for="(guest, gi) in guests" :key="guest.id" class="guest">
+        <div v-for="(guest, gi) in visibleGuests" :key="guest.id" class="guest">
           <div class="guest-name-row">
             <span class="guest-name">{{ guest.name }}</span>
-            <span v-if="gi === 0" class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
+            <span class="appearance-pill">{{ ordinal(appearanceCounts[gi]) }} appearance</span>
           </div>
           <div v-if="guest.credibilityLine" class="credibility">{{ guest.credibilityLine }}</div>
         </div>
+        <button
+          v-if="guests.length > 1"
+          type="button"
+          class="more-guests-pill"
+          @click="expanded = !expanded"
+        >
+          {{ expanded ? 'Show less' : `+${hiddenGuestCount} more guest${hiddenGuestCount === 1 ? '' : 's'}` }}
+        </button>
       </div>
     </div>
 
     <div class="right-col">
       <span v-if="episode.episodeNumber" class="episode-badge">Ep {{ episode.episodeNumber }}</span>
       <div class="content-shape">
-        <div class="content-block">
+        <div class="content-block" @mouseenter="onContentEnter" @mouseleave="onContentLeave">
           <div class="episode-block">
           <h3 class="title">{{ episode.title }}</h3>
           <p class="description">{{ episode.description }}</p>
@@ -116,14 +196,17 @@ const guestPromotionGroups = computed(() => {
               {{ topicsById[t]?.label || t }}
             </NuxtLink>
           </div>
-          <a
-            class="watch-button"
-            :href="episode.links.youtube"
-            target="_blank"
-            rel="noopener"
-          >
-            Watch
-          </a>
+          <div class="watch-wrapper">
+            <span ref="bodymovinRef" class="bodymovin bodymovin--hidden" aria-hidden="true"></span>
+            <a
+              class="watch-button"
+              :href="episode.links.youtube"
+              target="_blank"
+              rel="noopener"
+            >
+              Watch
+            </a>
+          </div>
         </div>
         </div>
       </div>
@@ -161,7 +244,9 @@ const guestPromotionGroups = computed(() => {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
-  background: linear-gradient(135deg, #d4d4d8, #71717a);
+  /* Dark placeholder so any sub-pixel gap at the card's rounded corner is
+     invisible against the page background, not a bright silver halo. */
+  background: #100e0c;
   overflow: hidden;
   flex-shrink: 0;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), 0 100%);
@@ -193,6 +278,9 @@ const guestPromotionGroups = computed(() => {
 .guest-block {
   background: transparent;
   padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .guest-name-row {
@@ -217,6 +305,30 @@ const guestPromotionGroups = computed(() => {
   font-size: 0.6875rem;
   font-weight: 500;
   white-space: nowrap;
+}
+
+.more-guests-pill {
+  align-self: flex-start;
+  background: rgba(245, 236, 214, 0.06);
+  border: none;
+  color: #c4b89f;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.more-guests-pill:hover {
+  background: rgba(245, 236, 214, 0.12);
+  color: #f5ecd6;
+}
+
+.more-guests-pill:focus-visible {
+  outline: 2px solid #c89968;
+  outline-offset: 2px;
 }
 
 .credibility {
@@ -301,6 +413,7 @@ const guestPromotionGroups = computed(() => {
 
 .title {
   margin: 0;
+  padding-right: 30px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 1.3125rem;
   font-weight: 600;
@@ -346,7 +459,15 @@ const guestPromotionGroups = computed(() => {
   color: #f5ecd6;
 }
 
+.watch-wrapper {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
 .watch-button {
+  position: relative;
+  z-index: 2; /* sits above the bodymovin so it can hide behind */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -359,12 +480,28 @@ const guestPromotionGroups = computed(() => {
   font-weight: 600;
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
-  flex-shrink: 0;
   transition: background 0.2s ease;
 }
 
+.bodymovin {
+  width: 42px;
+  height: 23px;
+  position: absolute;
+  top: -21px; /* head peeks above the button */
+  right: 6px;
+  z-index: 1; /* behind the button so it disappears behind when descending */
+  pointer-events: none;
+  transition: transform 0s;
+}
+
+.bodymovin--hidden {
+  transform: translateY(24px);
+  /* Quick drop so rapid hover-jumping reads as one stick man, not many */
+  transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+
 .watch-button:hover {
-  background: #d8a978;
+  background: #f0c890;
 }
 
 .promotes-block {

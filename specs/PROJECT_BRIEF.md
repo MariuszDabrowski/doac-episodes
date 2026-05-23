@@ -161,7 +161,21 @@ The YouTube original title (`originalTitle`) stays in the data for SEO / record 
 - **`credibilityLine`** — concrete facts about the guest, plain English.
 - **"Promoting …" line** — type-level summary with hover detail. E.g., "Promoting a book and a company" where *a book* and *a company* have dotted underlines; hovering reveals the specific titles as clickable links. Keeps the surface tidy; specifics (and outbound links) on demand.
 
+**Multi-guest collapse.** Roundtables/panels show only the first guest by default with a "+N more guests" pill that expands the rest in place. Keeps card heights uniform for the common single-guest case; the extra guests are one click away when needed. Appearance count renders per-guest (each guest gets their own ordinal pill once expanded).
+
+**Watch affordance.** Hovering the right-side content block triggers a small Lottie stick-man that peeks up from behind the Watch button, then settles into an idle loop. Sits behind the button so it tucks away on mouse-leave. The animation is the whole call-to-action signal — no other hover state needed on the card.
+
+**Row dividers.** Between rows in the grid: a faint 1px dotted line (~12% ivory) sits in the gap. Per-card, so it visually respects the column gap. Marks rhythm without adding ink.
+
 Card links directly to YouTube/Spotify. No episode detail page.
+
+### Motion stance
+
+- **Filter/category changes**: the grid and result-summary swap atomically via `<Transition mode="out-in">` keyed by the filter state. Cards inside fade + slide-up with a staggered enter (CSS animation triggered on mount). No FLIP-style "diagonal move" between filter states — that read as physical motion of the same card, which isn't true.
+- **Subtopic pills**: same atomic-swap pattern, with each pill pivoting from its left edge on enter (left-hinged drop-in from above) and from its right edge on leave (right-hinged drop-out below). Staggered by index.
+- **Result summary**: bolded keywords (count, cluster, subtopic, query) shift to the bright ivory; connecting words stay muted. Pivots from its left edge on enter/leave, mirrors the pill rhythm.
+- **No scroll-tied animation.** We tried edge-fade and FLIP-style entry — both caused motion-sickness reports for sensitive users. Static once placed, animated only on user input.
+- **Background gradient** is anchored to the viewport via `background-attachment: fixed` so it stays consistent regardless of how many cards the current filter renders.
 
 ## Guest page
 
