@@ -45,75 +45,8 @@ const portraitAlt = computed(() => props.guests[0]?.name || '');
 
 const expanded = ref(false);
 
-const visibleGuests = computed(() =>
-  expanded.value ? props.guests : props.guests.slice(0, 1)
-);
-
+const extraGuests = computed(() => props.guests.slice(1));
 const hiddenGuestCount = computed(() => props.guests.length - 1);
-
-// Stick-man Lottie animation that pops out of the watch button on hover.
-// Lottie is loaded globally via CDN (see nuxt.config.ts).
-const bodymovinRef = ref(null);
-let lottieAnim = null;
-let isAnimationRunning = false;
-
-function startLoop() {
-  if (!lottieAnim) return;
-  lottieAnim.loop = true;
-  lottieAnim.removeEventListener('complete', startLoop);
-  lottieAnim.playSegments([9, 13], true);
-}
-
-function onContentEnter() {
-  if (!lottieAnim || isAnimationRunning) return;
-  isAnimationRunning = true;
-  bodymovinRef.value?.classList.remove('bodymovin--hidden');
-  lottieAnim.loop = false;
-  lottieAnim.setDirection(1);
-  lottieAnim.playSegments([0, 8], true);
-  lottieAnim.addEventListener('complete', startLoop);
-}
-
-function onContentLeave() {
-  if (!lottieAnim) return;
-  bodymovinRef.value?.classList.add('bodymovin--hidden');
-  isAnimationRunning = false;
-  lottieAnim.removeEventListener('complete', startLoop);
-}
-
-onMounted(() => {
-  // Wait for the CDN-loaded lottie global to be available before init.
-  function init() {
-    if (!window.lottie || !bodymovinRef.value) return;
-    lottieAnim = window.lottie.loadAnimation({
-      container: bodymovinRef.value,
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      path: '/animations/stick-man.json',
-    });
-    lottieAnim.setSpeed(2.6);
-  }
-  if (window.lottie) {
-    init();
-  } else {
-    const interval = setInterval(() => {
-      if (window.lottie) {
-        clearInterval(interval);
-        init();
-      }
-    }, 50);
-    // Stop polling if the component unmounts before lottie loads
-    onUnmounted(() => clearInterval(interval));
-  }
-});
-
-onUnmounted(() => {
-  if (lottieAnim) {
-    lottieAnim.destroy();
-    lottieAnim = null;
-  }
-});
 
 const guestPromotionGroups = computed(() => {
   const byType = {};
@@ -158,13 +91,30 @@ const guestPromotionGroups = computed(() => {
       </a>
 
       <div class="guest-block">
-        <div v-for="(guest, gi) in visibleGuests" :key="guest.id" class="guest">
+        <div v-if="guests[0]" :key="guests[0].id" class="guest">
           <div class="guest-name-row">
-            <span class="guest-name">{{ guest.name }}</span>
-            <span class="appearance-pill">{{ ordinal(appearanceCounts[gi]) }} appearance</span>
+            <span class="guest-name">{{ guests[0].name }}</span>
+            <span class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
           </div>
-          <div v-if="guest.credibilityLine" class="credibility">{{ guest.credibilityLine }}</div>
+          <div v-if="guests[0].credibilityLine" class="credibility">{{ guests[0].credibilityLine }}</div>
         </div>
+
+        <div
+          v-if="extraGuests.length"
+          class="extra-guests"
+          :class="{ expanded }"
+        >
+          <div class="extra-inner">
+            <div v-for="(guest, i) in extraGuests" :key="guest.id" class="guest">
+              <div class="guest-name-row">
+                <span class="guest-name">{{ guest.name }}</span>
+                <span class="appearance-pill">{{ ordinal(appearanceCounts[i + 1]) }} appearance</span>
+              </div>
+              <div v-if="guest.credibilityLine" class="credibility">{{ guest.credibilityLine }}</div>
+            </div>
+          </div>
+        </div>
+
         <button
           v-if="guests.length > 1"
           type="button"
@@ -179,7 +129,7 @@ const guestPromotionGroups = computed(() => {
     <div class="right-col">
       <span v-if="episode.episodeNumber" class="episode-badge">Ep {{ episode.episodeNumber }}</span>
       <div class="content-shape">
-        <div class="content-block" @mouseenter="onContentEnter" @mouseleave="onContentLeave">
+        <div class="content-block">
           <div class="episode-block">
           <h3 class="title">{{ episode.title }}</h3>
           <p class="description">{{ episode.description }}</p>
@@ -196,17 +146,14 @@ const guestPromotionGroups = computed(() => {
               {{ topicsById[t]?.label || t }}
             </NuxtLink>
           </div>
-          <div class="watch-wrapper">
-            <span ref="bodymovinRef" class="bodymovin bodymovin--hidden" aria-hidden="true"></span>
-            <a
-              class="watch-button"
-              :href="episode.links.youtube"
-              target="_blank"
-              rel="noopener"
-            >
-              Watch
-            </a>
-          </div>
+          <a
+            class="watch-button"
+            :href="episode.links.youtube"
+            target="_blank"
+            rel="noopener"
+          >
+            Watch
+          </a>
         </div>
         </div>
       </div>
@@ -280,7 +227,33 @@ const guestPromotionGroups = computed(() => {
   padding: 0.875rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+}
+
+/* Animate the open/close via grid-template-rows 0fr -> 1fr. The grid row
+   itself collapses to 0 height when closed (content clipped by overflow);
+   the card and the row in the parent grid auto-follow. */
+.extra-guests {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.extra-guests.expanded {
+  grid-template-rows: 1fr;
+}
+
+.extra-inner {
+  overflow: hidden;
+}
+
+/* Explicit margins (instead of the old flex gap) so the collapsed
+   .extra-guests at 0 height doesn't leave a phantom gap above the pill. */
+.extra-inner > .guest {
+  margin-top: 1rem;
+}
+
+.more-guests-pill {
+  margin-top: 1rem;
 }
 
 .guest-name-row {
@@ -356,6 +329,7 @@ const guestPromotionGroups = computed(() => {
   background: #1c1916;
   clip-path: polygon(0 0, calc(100% - 159px) 0, 100% 32px, 100% 100%, 0 100%);
 }
+
 
 .episode-badge {
   position: absolute;
@@ -459,15 +433,7 @@ const guestPromotionGroups = computed(() => {
   color: #f5ecd6;
 }
 
-.watch-wrapper {
-  position: relative;
-  display: inline-flex;
-  flex-shrink: 0;
-}
-
 .watch-button {
-  position: relative;
-  z-index: 2; /* sits above the bodymovin so it can hide behind */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -480,94 +446,12 @@ const guestPromotionGroups = computed(() => {
   font-weight: 600;
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
+  flex-shrink: 0;
   transition: background 0.2s ease;
-}
-
-.bodymovin {
-  width: 42px;
-  height: 23px;
-  position: absolute;
-  top: -21px; /* head peeks above the button */
-  right: 6px;
-  z-index: 1; /* behind the button so it disappears behind when descending */
-  pointer-events: none;
-  transition: transform 0s;
-}
-
-.bodymovin--hidden {
-  transform: translateY(24px);
-  /* Quick drop so rapid hover-jumping reads as one stick man, not many */
-  transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .watch-button:hover {
   background: #f0c890;
 }
 
-.promotes-block {
-  background: transparent;
-  padding: 0.75rem 1rem;
-}
-
-.promoting {
-  font-size: 0.8125rem;
-  color: #6b6b73;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.hint {
-  position: relative;
-  border-bottom: 1px solid #71717a;
-  cursor: help;
-}
-
-.tooltip {
-  position: absolute;
-  bottom: calc(100% + 6px);
-  left: 0;
-  background: #fafafa;
-  color: #18181b;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.8125rem;
-  white-space: nowrap;
-  border-radius: 2px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.15s ease, visibility 0.15s ease;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  min-width: max-content;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 8px;
-}
-
-.hint:hover .tooltip,
-.hint:focus-within .tooltip,
-.hint .tooltip:hover {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.tooltip-link {
-  color: #18181b;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.tooltip-link:hover {
-  text-decoration: none;
-}
 </style>

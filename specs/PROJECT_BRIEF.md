@@ -161,9 +161,7 @@ The YouTube original title (`originalTitle`) stays in the data for SEO / record 
 - **`credibilityLine`** — concrete facts about the guest, plain English.
 - **"Promoting …" line** — type-level summary with hover detail. E.g., "Promoting a book and a company" where *a book* and *a company* have dotted underlines; hovering reveals the specific titles as clickable links. Keeps the surface tidy; specifics (and outbound links) on demand.
 
-**Multi-guest collapse.** Roundtables/panels show only the first guest by default with a "+N more guests" pill that expands the rest in place. Keeps card heights uniform for the common single-guest case; the extra guests are one click away when needed. Appearance count renders per-guest (each guest gets their own ordinal pill once expanded).
-
-**Watch affordance.** Hovering the right-side content block triggers a small Lottie stick-man that peeks up from behind the Watch button, then settles into an idle loop. Sits behind the button so it tucks away on mouse-leave. The animation is the whole call-to-action signal — no other hover state needed on the card.
+**Multi-guest collapse.** Roundtables/panels show only the first guest by default with a "+N more guests" pill that expands the rest in place via a grid-template-rows slide (no `height` animation — the sibling card in the row follows along naturally). Keeps card heights uniform for the common single-guest case; the extra guests are one click away when needed. Appearance count renders per-guest (each guest gets their own ordinal pill once expanded).
 
 **Row dividers.** Between rows in the grid: a faint 1px dotted line (~12% ivory) sits in the gap. Per-card, so it visually respects the column gap. Marks rhythm without adding ink.
 
