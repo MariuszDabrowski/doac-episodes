@@ -136,10 +136,18 @@ Write the episode entry in `data/episodes.json`:
 ## Stage 5 — Portrait
 
 ```
-npm run extract:frames -- {videoId}                          # downloads 1080p, samples 20 frames
+npm run extract:frames -- {videoId}                          # HTTP-range frame fetch (no video on disk), samples 20 frames
 .venv/bin/python scripts/auto-portrait.py \
   data/_frames/{videoId} public/portraits/{guestId}.jpg     # face-detect + 16:9 crop, saves 1x + @2x and top-3 alts
 ```
+
+The frame-extraction script uses `yt-dlp -g` to resolve the direct 1080p
+video stream URL, then runs `ffmpeg -ss <time> -i <stream-url>` for each
+sample point. Because `-ss` precedes `-i`, ffmpeg seeks via HTTP byte-range
+requests and only pulls the keyframe chunk around each requested time
+(~5–10 MB total per episode) rather than the full video (~1–2 GB). No file
+ever lands in `data/_videos/`. Re-extraction is cheap — just run the
+script again.
 
 The script outputs:
 
@@ -196,15 +204,10 @@ The UI uses it to compute a target-brightness-uniform scrim opacity per card.
 
 ### Clean up
 
-The downloaded 1080p video (~1–2 GB) is only needed for frame extraction.
-After verifying the portrait, delete it:
-
-```
-rm data/_videos/{videoId}.mp4
-```
-
-Frames in `data/_frames/{videoId}/` are gitignored but useful to keep around
-in case you need to re-pick a frame later. Delete only if disk space matters.
+Nothing to clean up — the new extraction pipeline never writes a video
+file. Frames in `data/_frames/{videoId}/` (~2–5 MB per episode) are
+gitignored but useful to keep around in case you need to re-pick a frame
+later. Delete only if disk space matters.
 
 ## Stage 6 — Verify and commit
 
@@ -218,8 +221,7 @@ in case you need to re-pick a frame later. Delete only if disk space matters.
    - `public/portraits/{guestId}-2.jpg` etc. if you want alts in version control;
      otherwise they're gitignored alongside `_*.jpg` patterns
 3. Don't commit:
-   - `data/_videos/`, `data/_frames/`, `data/_transcripts/` (all under the
-     `data/_*` gitignore)
+   - `data/_frames/`, `data/_transcripts/` (all under the `data/_*` gitignore)
    - `.env`
 
 ## Where things live
@@ -230,7 +232,6 @@ in case you need to re-pick a frame later. Delete only if disk space matters.
 | Curated candidates list | `data/_curated-candidates.json` | no |
 | Raw VTT transcripts | `data/_transcripts/*.vtt` | no |
 | Structured transcripts | `data/_transcripts/*.json` | no |
-| Downloaded videos | `data/_videos/*.mp4` | no |
 | Frame samples | `data/_frames/{videoId}/` | no |
 | Curated guests | `data/guests.json` | **yes** |
 | Curated episodes | `data/episodes.json` | **yes** |
