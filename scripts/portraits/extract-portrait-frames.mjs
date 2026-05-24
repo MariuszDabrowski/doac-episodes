@@ -14,18 +14,20 @@ const framesDir = `data/_frames/${videoId}`;
 await mkdir(framesDir, { recursive: true });
 
 // YouTube blocks unauthenticated yt-dlp on datacenter IPs (GitHub runners)
-// with a "confirm you're not a bot" challenge. Two layered defenses:
-//   1. If YT_COOKIES_FILE points to a Netscape-format cookies file, pass
-//      it through so the requests look like a signed-in browser session.
-//   2. Force the iOS InnerTube client. Web/Android clients get the bot
-//      challenge aggressively on datacenter IPs; the iOS client is
-//      currently far more lenient (see yt-dlp #11868). Stays effective
-//      whether or not we also have cookies.
+// with a "confirm you're not a bot" challenge. Two mutually-exclusive
+// defenses:
+//   - If YT_COOKIES_FILE is set, pass cookies through so requests look
+//     like a signed-in browser session. The default web client returns
+//     the MP4 progressive streams our format selector targets, so leave
+//     the client alone.
+//   - Otherwise fall back to the iOS InnerTube client. It dodges the bot
+//     challenge more readily than web/android on datacenter IPs, at the
+//     cost of HLS-only streams (which is why we don't use it when
+//     cookies are around: the format selector below wants MP4).
 // Locally on a residential IP neither is strictly required.
-const cookieArgs = process.env.YT_COOKIES_FILE
+const ytArgs = process.env.YT_COOKIES_FILE
   ? ['--cookies', process.env.YT_COOKIES_FILE]
-  : [];
-const ytArgs = [...cookieArgs, '--extractor-args', 'youtube:player_client=ios'];
+  : ['--extractor-args', 'youtube:player_client=ios'];
 
 function run(cmd, args, opts = {}) {
   return new Promise((resolve, reject) => {
