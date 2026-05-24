@@ -275,6 +275,23 @@ if valid_count >= 3:
         )
         candidates = [c for i, c in enumerate(candidates) if i in dominant or c["encoding"] is None]
 
+# Strict tiered preference on eye state: never pick a closed-eye frame if any
+# open-eye candidate exists, never pick partial-eye if any open. Within the
+# winning tier, sort by score. EAR bonuses/penalties were too small relative
+# to face-area dominance — a big-face blink kept winning over a smaller open-
+# eyed alternative. This hard filter eliminates that failure mode.
+open_eyes = [c for c in candidates if c["ear"] is not None and c["ear"] >= EAR_OPEN]
+partial_eyes = [c for c in candidates if c["ear"] is not None and EAR_PARTIAL <= c["ear"] < EAR_OPEN]
+if open_eyes:
+    pool, tier = open_eyes, "open"
+elif partial_eyes:
+    pool, tier = partial_eyes, "partial"
+else:
+    pool, tier = candidates, "fallback (no open-eye candidates)"
+if len(pool) < len(candidates):
+    print(f"eye-state filter: kept {len(pool)}/{len(candidates)} ({tier})")
+candidates = pool
+
 candidates.sort(key=lambda c: c["score"], reverse=True)
 top = candidates[:top_n]
 

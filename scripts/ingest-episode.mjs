@@ -832,8 +832,12 @@ for (const g of draft.guests) {
 console.log(`[5/6] saving portrait files…`);
 const primaryGuestId = guestIdMap[draft.guests[0].name];
 mkdirSync('public/portraits', { recursive: true });
-copyFileSync(portrait.portraitPath, `public/portraits/${primaryGuestId}.jpg`);
-copyFileSync(portrait.portrait2xPath, `public/portraits/${primaryGuestId}@2x.jpg`);
+// auto-portrait.py emits jpg, webp, and avif alongside each other in staging.
+// Copy all three so the <picture> element's modern-format sources resolve.
+for (const ext of ['.jpg', '.webp', '.avif']) {
+  copyFileSync(portrait.portraitPath.replace('.jpg', ext), `public/portraits/${primaryGuestId}${ext}`);
+  copyFileSync(portrait.portrait2xPath.replace('.jpg', ext), `public/portraits/${primaryGuestId}@2x${ext}`);
+}
 
 // --- assemble episode entry -----------------------------------------
 

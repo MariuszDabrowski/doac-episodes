@@ -80,13 +80,16 @@ function watchCredibility(el) {
     credibilityObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
         const target = entry.target;
-        // Skip during hover — the element is mid-expansion and would
-        // momentarily report "no overflow" (since clientHeight grew to
-        // match scrollHeight), which would remove .has-overflow, which
-        // kills the hover rule, which collapses, which re-overflows —
-        // a yo-yo loop. Only re-evaluate when the element is in its
-        // resting clamped state.
-        if (target.matches(':hover')) continue;
+        // Skip while any part of the card is hovered. The hover trigger
+        // for credibility expansion is the whole left "person" zone
+        // (portrait + .guest blocks), so checking just the credibility's
+        // own :hover would still let the yo-yo loop fire — element grows
+        // → resize observer fires → measures expanded → removes
+        // .has-overflow → CSS rule drops → collapses → grows again.
+        // Card-wide check is broad but safe: there's no reason to
+        // recalc overflow mid-interaction.
+        const card = target.closest('.card');
+        if (card?.matches(':hover')) continue;
         const overflowing = target.scrollHeight > target.clientHeight + 1;
         target.classList.toggle('has-overflow', overflowing);
       }
@@ -395,7 +398,16 @@ const guestPromotionGroups = computed(() => {
               mask-image 0.25s ease;
 }
 
-.credibility.has-overflow:hover {
+/* Trigger expansion from the entire left side of the card:
+   - the whole .left-col expands the primary guest's bio, including all the
+     padding/gap areas between the portrait, name, and bio (otherwise the
+     mouse would drop hover whenever it crossed a gap)
+   - secondary guests in the +N more expansion still expand on hover of
+     their own .guest block
+   - direct hover on the credibility itself remains supported */
+.credibility.has-overflow:hover,
+.guest:hover .credibility.has-overflow,
+.left-col:hover .guest-block > .guest:first-child .credibility.has-overflow {
   max-height: max-content;
   -webkit-mask-image: linear-gradient(to bottom, #000 100%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 100%, transparent 100%);

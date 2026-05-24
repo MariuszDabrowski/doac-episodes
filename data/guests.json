@@ -546,7 +546,7 @@
     "portrait": "/portraits/steve-keen.jpg",
     "portrait2x": "/portraits/steve-keen@2x.jpg",
     "portraitBrightness": 0.276,
-    "credibilityLine": "Australian economist and author; predicted the 2008 financial crisis; developed proprietary financial modeling software Ravel\u00a9; author of The New Economics: A Manifesto; formerly professor at University of Western Sydney and Kingston University; currently visiting scholar at University of Amsterdam and Honorary Professor at UCL.",
+    "credibilityLine": "Australian economist and author; predicted the 2008 financial crisis; developed proprietary financial modeling software Ravel©; author of The New Economics: A Manifesto; formerly professor at University of Western Sydney and Kingston University; currently visiting scholar at University of Amsterdam and Honorary Professor at UCL.",
     "fields": [
       "economics",
       "finance",
@@ -569,7 +569,7 @@
     "portrait": "/portraits/pierre-poilievre.jpg",
     "portrait2x": "/portraits/pierre-poilievre@2x.jpg",
     "portraitBrightness": 0.15,
-    "credibilityLine": "Leader of the Conservative Party of Canada and Leader of the Official Opposition; Member of Parliament for Battle River\u2014Crowfoot since 2025; previously served as Minister of Democratic Reform and Minister of Employment and Social Development under PM Stephen Harper; first elected to Parliament in 2004 at age 25.",
+    "credibilityLine": "Leader of the Conservative Party of Canada and Leader of the Official Opposition; Member of Parliament for Battle River—Crowfoot since 2025; previously served as Minister of Democratic Reform and Minister of Employment and Social Development under PM Stephen Harper; first elected to Parliament in 2004 at age 25.",
     "fields": [
       "politics",
       "economics",
@@ -769,6 +769,2728 @@
     "currentRole": "Senior Fellow, UCLA Burkle Center for International Relations; Lecturer in Law, UCLA School of Law and USC Gould School of Law",
     "links": {
       "bio": "https://benjaminradd.com/"
+    }
+  },
+  {
+    "id": "gavin-de-becker",
+    "name": "Gavin de Becker",
+    "portrait": "/portraits/gavin-de-becker.jpg",
+    "portrait2x": "/portraits/gavin-de-becker@2x.jpg",
+    "portraitBrightness": 0.125,
+    "credibilityLine": "Founded Gavin de Becker & Associates in 1978; author of The Gift of Fear (1997), published in 30 languages; widely considered leading expert on anti-assassination strategies and violence prevention with over 50 years of experience",
+    "fields": [
+      "security",
+      "threat assessment",
+      "violence prevention"
+    ],
+    "roles": [
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and security specialist, Gavin de Becker & Associates",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Gavin_de_Becker"
+    }
+  },
+  {
+    "id": "jessie-inchauspé",
+    "name": "Jessie Inchauspé",
+    "portrait": "/portraits/jessie-inchauspé.jpg",
+    "portrait2x": "/portraits/jessie-inchauspé@2x.jpg",
+    "portraitBrightness": 0.203,
+    "credibilityLine": "New York Times bestselling author of Glucose Revolution and The Glucose Goddess Method; founder of Glucose Goddess movement; biochemist with research background in statistics and health optimization",
+    "fields": [
+      "nutrition",
+      "metabolic health",
+      "longevity"
+    ],
+    "roles": [
+      "author",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Glucose Goddess; author and health influencer",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jessie_Inchausp%C3%A9"
+    }
+  },
+  {
+    "id": "dara-khosrowshahi",
+    "name": "Dara Khosrowshahi",
+    "portrait": "/portraits/dara-khosrowshahi.jpg",
+    "portrait2x": "/portraits/dara-khosrowshahi@2x.jpg",
+    "portraitBrightness": 0.384,
+    "credibilityLine": "CEO of Uber; previously CEO of Expedia Group for over a decade; transformed Uber from losing $3 billion annually to generating over $9 billion in free cash flow; board member at BET.com and Hotels.com; previously on New York Times Company board.",
+    "fields": [
+      "leadership",
+      "AI",
+      "business"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Chief Executive Officer, Uber",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Dara_Khosrowshahi"
+    }
+  },
+  {
+    "id": "alex-honnold",
+    "name": "Alex Honnold",
+    "portrait": "/portraits/alex-honnold.jpg",
+    "portrait2x": "/portraits/alex-honnold@2x.jpg",
+    "portraitBrightness": 0.191,
+    "credibilityLine": "First person to free solo El Capitan; first to free solo Taipei 101; Piolet d'Or winner in alpine climbing; author of Alone on the Wall; subject of Academy Award-winning documentary Free Solo; founder of the Honnold Foundation.",
+    "fields": [
+      "climbing",
+      "psychology",
+      "risk management"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Professional rock climber",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Alex_Honnold"
+    }
+  },
+  {
+    "id": "jonathan-haidt",
+    "name": "Jonathan Haidt",
+    "portrait": "/portraits/jonathan-haidt.jpg",
+    "portrait2x": "/portraits/jonathan-haidt@2x.jpg",
+    "portraitBrightness": 0.216,
+    "credibilityLine": "Thomas Cooley Professor of Ethical Leadership at NYU Stern; author of The Anxious Generation (#1 New York Times bestseller) and The Righteous Mind; founded moral foundations theory in social psychology.",
+    "fields": [
+      "psychology",
+      "morality",
+      "mental health"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Thomas Cooley Professor of Ethical Leadership, NYU Stern School of Business",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jonathan_Haidt"
+    }
+  },
+  {
+    "id": "aditi-nerurkar",
+    "name": "Aditi Nerurkar",
+    "portrait": "/portraits/aditi-nerurkar.jpg",
+    "portrait2x": "/portraits/aditi-nerurkar@2x.jpg",
+    "portraitBrightness": 0.216,
+    "credibilityLine": "Harvard physician and public health expert; lecturer on global health and social medicine; expertise in stress, resilience, burnout, and mental health",
+    "fields": [
+      "mental health",
+      "stress",
+      "resilience",
+      "burnout",
+      "public health"
+    ],
+    "roles": [
+      "clinician",
+      "academic",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Lecturer on Global Health and Social Medicine, Harvard Medical School",
+    "links": {
+      "bio": "https://ghsm.hms.harvard.edu/faculty-staff/aditi-nerurkar"
+    }
+  },
+  {
+    "id": "james-sexton",
+    "name": "James Sexton",
+    "portrait": "/portraits/james-sexton.jpg",
+    "portrait2x": "/portraits/james-sexton@2x.jpg",
+    "portraitBrightness": 0.217,
+    "credibilityLine": "Divorce lawyer with 25 years in New York family law; founder of Law Offices of James J. Sexton, PC; author of How to Stay in Love and If You're in My Office, It's Already Too Late",
+    "fields": [
+      "family law",
+      "divorce law"
+    ],
+    "roles": [
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Managing Partner, Law Offices of James J. Sexton, PC",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/James_Sexton_(attorney)"
+    }
+  },
+  {
+    "id": "michael-breus",
+    "name": "Dr. Michael Breus",
+    "portrait": "/portraits/michael-breus.jpg",
+    "portrait2x": "/portraits/michael-breus@2x.jpg",
+    "portraitBrightness": 0.147,
+    "credibilityLine": "Clinical Psychologist; Diplomate of the American Board of Sleep Medicine and Fellow of The American Academy of Sleep Medicine; one of only 168 psychologists in the world with these credentials; former WebMD Sleep Expert for 14+ years",
+    "fields": [
+      "sleep medicine",
+      "sleep disorders",
+      "clinical psychology"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "High-Performance Sleep Coach and Sleep Medicine Expert",
+    "links": {
+      "bio": "https://www.gdaspeakers.com/speaker/dr-michael-breus/"
+    }
+  },
+  {
+    "id": "louisa-nicola",
+    "name": "Louisa Nicola",
+    "portrait": "/portraits/louisa-nicola.jpg",
+    "portrait2x": "/portraits/louisa-nicola@2x.jpg",
+    "portraitBrightness": 0.139,
+    "credibilityLine": "Neurophysiologist and human performance coach; Master of Medicine in Neurophysiology from University of Sydney; doctoral candidate at University of Washington studying resistance exercise and brain health",
+    "fields": [
+      "neuroscience",
+      "exercise physiology",
+      "cognitive performance",
+      "longevity"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Neurophysiologist and human performance coach; Director at Neuro Athletics; doctoral candidate at University of Washington",
+    "links": {
+      "bio": "https://zebrainsights.com/speakers/louisa-nicola/"
+    }
+  },
+  {
+    "id": "paul-rosolie",
+    "name": "Paul Rosolie",
+    "portrait": "/portraits/paul-rosolie.jpg",
+    "portrait2x": "/portraits/paul-rosolie@2x.jpg",
+    "portraitBrightness": 0.208,
+    "credibilityLine": "Conservationist; founder and director of Junglekeepers, a nonprofit protecting Peruvian rainforest; bestselling author of Mother of God and Junglekeeper; 20+ years living and conducting research in the Amazon.",
+    "fields": [
+      "conservation",
+      "anthropology",
+      "ecology"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Director, Junglekeepers",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Paul_Rosolie"
+    }
+  },
+  {
+    "id": "david-bach",
+    "name": "David Bach",
+    "portrait": "/portraits/david-bach.jpg",
+    "portrait2x": "/portraits/david-bach@2x.jpg",
+    "portraitBrightness": 0.16,
+    "credibilityLine": "New York Times bestselling author of The Automatic Millionaire and 12+ other books; co-founder of AE Wealth Management; former Senior Vice President at Morgan Stanley.",
+    "fields": [
+      "finance",
+      "investing",
+      "personal finance"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder, AE Wealth Management",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/David_Bach_(author)"
+    }
+  },
+  {
+    "id": "tim-spector",
+    "name": "Tim Spector",
+    "portrait": "/portraits/tim-spector.jpg",
+    "portrait2x": "/portraits/tim-spector@2x.jpg",
+    "portraitBrightness": 0.29,
+    "credibilityLine": "Medical doctor; Professor of Genetic Epidemiology, King's College London; co-founder of ZOE; one of top 1% most-cited scientists worldwide; author of Ferment and other bestselling books; OBE for services to Covid-19 response.",
+    "fields": [
+      "genetics",
+      "nutrition",
+      "microbiome"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "clinician",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Genetic Epidemiology, King's College London",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tim_Spector"
+    }
+  },
+  {
+    "id": "konstantin-kisin",
+    "name": "Konstantin Kisin",
+    "portrait": "/portraits/konstantin-kisin.jpg",
+    "portrait2x": "/portraits/konstantin-kisin@2x.jpg",
+    "portraitBrightness": 0.295,
+    "credibilityLine": "Co-host of Triggernometry podcast; author of An Immigrant's Love Letter to the West; columnist for Quillette, The Spectator, The Daily Telegraph, and Standpoint; regular contributor to BBC Question Time and Sky News.",
+    "fields": [
+      "geopolitics",
+      "politics",
+      "cultural commentary"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "commentator"
+    ],
+    "credentials": [],
+    "currentRole": "Political commentator and co-host of Triggernometry podcast",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Konstantin_Kisin"
+    }
+  },
+  {
+    "id": "john-kiriakou",
+    "name": "John Kiriakou",
+    "portrait": "/portraits/john-kiriakou.jpg",
+    "portrait2x": "/portraits/john-kiriakou@2x.jpg",
+    "portraitBrightness": 0.298,
+    "credibilityLine": "Former CIA counterterrorism officer and intelligence analyst, 15 years of service including chief of counterterrorism operations in Pakistan; first US official to publicly confirm CIA waterboarding use; convicted and imprisoned 23 months for exposing enhanced interrogation program; PEN First Amendment Award recipient; author of Surveillance and Surveillance Detection: A CIA Insider's Guide.",
+    "fields": [
+      "intelligence",
+      "geopolitics",
+      "whistleblowing"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Whistleblower, journalist, and author; public commentator on intelligence and national security",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/John_Kiriakou"
+    }
+  },
+  {
+    "id": "jl-collins",
+    "name": "JL Collins",
+    "portrait": "/portraits/jl-collins.jpg",
+    "portrait2x": "/portraits/jl-collins@2x.jpg",
+    "portraitBrightness": 0.15,
+    "credibilityLine": "International best-selling author of The Simple Path to Wealth; founder of jlcollinsnh.com blog and Chautauqua financial independence retreats.",
+    "fields": [
+      "investing",
+      "financial independence",
+      "personal finance"
+    ],
+    "roles": [
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Author and financial blogger",
+    "links": {
+      "bio": "https://www.harriman-house.com/authors/profile/jl_collins/17672"
+    }
+  },
+  {
+    "id": "benjamin-bikman",
+    "name": "Benjamin Bikman",
+    "portrait": "/portraits/benjamin-bikman.jpg",
+    "portrait2x": "/portraits/benjamin-bikman@2x.jpg",
+    "portraitBrightness": 0.259,
+    "credibilityLine": "Professor of Cell Biology and Physiology at Brigham Young University; metabolic scientist specializing in insulin resistance, mitochondrial function, and metabolic disorders; Ph.D. in Bioenergetics; postdoctoral fellow at Duke-National University of Singapore",
+    "fields": [
+      "metabolic biology",
+      "insulin resistance",
+      "obesity",
+      "diabetes",
+      "mitochondrial physiology"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Cell Biology and Physiology, Brigham Young University",
+    "links": {
+      "bio": "https://cell.byu.edu/directory/benjamin-bikman"
+    }
+  },
+  {
+    "id": "anna-lembke",
+    "name": "Dr Anna Lembke",
+    "portrait": "/portraits/anna-lembke.jpg",
+    "portrait2x": "/portraits/anna-lembke@2x.jpg",
+    "portraitBrightness": 0.168,
+    "credibilityLine": "Professor of Psychiatry and Medical Director of Addiction Medicine at Stanford University School of Medicine; author of Dopamine Nation; specialist in substance and behavioral addictions",
+    "fields": [
+      "addiction",
+      "psychiatry",
+      "neuroscience"
+    ],
+    "roles": [
+      "academic",
+      "clinician",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Psychiatry and Medical Director of Addiction Medicine, Stanford University School of Medicine",
+    "links": {}
+  },
+  {
+    "id": "will-bulsiewicz",
+    "name": "Dr Will Bulsiewicz",
+    "portrait": "/portraits/will-bulsiewicz.jpg",
+    "portrait2x": "/portraits/will-bulsiewicz@2x.jpg",
+    "portraitBrightness": 0.184,
+    "credibilityLine": "Board-certified gastroenterologist, New York Times bestselling author, U.S. Medical Director at ZOE, gut health expert with 20+ peer-reviewed publications and NIH epidemiology fellowship",
+    "fields": [
+      "gastroenterology",
+      "nutrition",
+      "gut microbiome",
+      "lifestyle medicine"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "U.S. Medical Director, ZOE",
+    "links": {
+      "bio": "https://www.doctorsfornutrition.org/speaker/dr-will-b/"
+    }
+  },
+  {
+    "id": "chris-williamson",
+    "name": "Chris Williamson",
+    "portrait": "/portraits/chris-williamson.jpg",
+    "portrait2x": "/portraits/chris-williamson@2x.jpg",
+    "portraitBrightness": 0.227,
+    "credibilityLine": "Host of Modern Wisdom podcast (400+ million downloads); podcaster and YouTuber; co-founder of Neutonic.",
+    "fields": [
+      "productivity",
+      "psychology",
+      "personal development"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Host, Modern Wisdom podcast",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Chris_Williamson_(TV_personality)"
+    }
+  },
+  {
+    "id": "wendy-suzuki",
+    "name": "Dr Wendy Suzuki",
+    "portrait": "/portraits/wendy-suzuki.jpg",
+    "portrait2x": "/portraits/wendy-suzuki@2x.jpg",
+    "portraitBrightness": 0.302,
+    "credibilityLine": "Neuroscientist and psychologist at NYU; research focuses on exercise, brain health, and cognition",
+    "fields": [
+      "neuroscience",
+      "exercise science",
+      "brain health",
+      "psychology"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Neural Science and Psychology, New York University",
+    "links": {
+      "bio": "https://www.facebook.com/surreylivenews/posts/dr-wendy-suzuki-is-a-professor-of-neural-science-and-psychology-at-new-york-univ/1182667580570541/"
+    }
+  },
+  {
+    "id": "nathan-bryan",
+    "name": "Dr Nathan Bryan",
+    "portrait": "/portraits/nathan-bryan.jpg",
+    "portrait2x": "/portraits/nathan-bryan@2x.jpg",
+    "portraitBrightness": 0.302,
+    "credibilityLine": "PhD in Biochemistry from Louisiana State University School of Medicine; postdoctoral Kirschstein Fellow at Boston University; recruited by Nobel Laureate Ferid Murad to join University of Texas Health Science Center at Houston faculty; author of The Secret of Nitric Oxide and multiple peer-reviewed books on nitric oxide biochemistry; holds dozens of US and international patents in nitric oxide research.",
+    "fields": [
+      "biochemistry",
+      "cardiovascular health",
+      "nutrition science"
+    ],
+    "roles": [
+      "researcher",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Biochemist and entrepreneur specializing in nitric oxide research and applications",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Nathan_Bryan_(scientist)"
+    }
+  },
+  {
+    "id": "daniel-amen",
+    "name": "Dr Daniel Amen",
+    "portrait": "/portraits/daniel-amen.jpg",
+    "portrait2x": "/portraits/daniel-amen@2x.jpg",
+    "portraitBrightness": 0.302,
+    "credibilityLine": "Psychiatrist; founder and CEO of Amen Clinics; twelve-time New York Times best-selling author; founder of Change Your Brain Foundation and BrainMD",
+    "fields": [
+      "psychiatry",
+      "neuroscience",
+      "brain health"
+    ],
+    "roles": [
+      "academic",
+      "clinician",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Psychiatrist and CEO, Amen Clinics",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Daniel_Amen"
+    }
+  },
+  {
+    "id": "simon-mills",
+    "name": "Simon Mills",
+    "portrait": "/portraits/simon-mills.jpg",
+    "portrait2x": "/portraits/simon-mills@2x.jpg",
+    "portraitBrightness": 0.302,
+    "credibilityLine": "Ethnomusicologist specializing in Korean music, ritual, and healing contexts.",
+    "fields": [
+      "ethnomusicology",
+      "Korean music",
+      "music and healing"
+    ],
+    "roles": [
+      "researcher",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Ethnomusicologist",
+    "links": {
+      "bio": "https://www.durham.ac.uk/staff/s-r-s-mills/"
+    }
+  },
+  {
+    "id": "jefferson-fisher",
+    "name": "Jefferson Fisher",
+    "portrait": "/portraits/jefferson-fisher.jpg",
+    "portrait2x": "/portraits/jefferson-fisher@2x.jpg",
+    "portraitBrightness": 0.262,
+    "credibilityLine": "Texas trial lawyer; founder of Fisher Firm and The Jefferson Fisher School of Communication; author of The Next Conversation: Argue Less, Talk More (New York Times bestseller); JD from Texas Tech University School of Law",
+    "fields": [
+      "psychology",
+      "communication",
+      "leadership"
+    ],
+    "roles": [
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Trial Lawyer and Communication Expert, Fisher Firm",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jefferson_Fisher"
+    }
+  },
+  {
+    "id": "yoshua-bengio",
+    "name": "Yoshua Bengio",
+    "portrait": "/portraits/yoshua-bengio.jpg",
+    "portrait2x": "/portraits/yoshua-bengio@2x.jpg",
+    "portraitBrightness": 0.163,
+    "credibilityLine": "Turing Award winner (2018) for foundational work on deep learning; professor at Université de Montréal; co-founder and scientific director of Mila (Quebec AI Institute); co-president and scientific director of LawZero; author of Deep Learning (Adaptive Computation and Machine Learning series); most-cited scientist globally by Google Scholar citations.",
+    "fields": [
+      "artificial intelligence",
+      "deep learning",
+      "AI safety"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Computer Science Professor, Université de Montréal; co-president and scientific director, LawZero",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Yoshua_Bengio"
+    }
+  },
+  {
+    "id": "alison-wood-brooks",
+    "name": "Alison Wood Brooks",
+    "portrait": "/portraits/alison-wood-brooks.jpg",
+    "portrait2x": "/portraits/alison-wood-brooks@2x.jpg",
+    "portraitBrightness": 0.308,
+    "credibilityLine": "O'Brien Associate Professor of Business Administration at Harvard Business School; behavioral research scientist studying the psychology of conversation",
+    "fields": [
+      "psychology",
+      "behavioral science",
+      "conversation science",
+      "negotiation"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "O'Brien Associate Professor of Business Administration, Harvard Business School",
+    "links": {
+      "bio": "https://www.hbs.edu/faculty/Pages/profile.aspx?facId=684820"
+    }
+  },
+  {
+    "id": "james-clear",
+    "name": "James Clear",
+    "portrait": "/portraits/james-clear.jpg",
+    "portrait2x": "/portraits/james-clear@2x.jpg",
+    "portraitBrightness": 0.296,
+    "credibilityLine": "Author of Atomic Habits (25+ million copies sold); publishes 3-2-1 Newsletter read by millions weekly; author of The Atomic Habits Workbook",
+    "fields": [
+      "productivity",
+      "psychology",
+      "habit formation"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Bestselling author and habit formation expert",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/James_Clear"
+    }
+  },
+  {
+    "id": "chris-koerner",
+    "name": "Chris Koerner",
+    "portrait": "/portraits/chris-koerner.jpg",
+    "portrait2x": "/portraits/chris-koerner@2x.jpg",
+    "portraitBrightness": 0.284,
+    "credibilityLine": "Serial entrepreneur who has launched 20+ companies across multiple industries; founder of cofounders.com and current operator of several 7-8 figure businesses; prolific writer producing 40,000+ words monthly on business and real estate.",
+    "fields": [
+      "entrepreneurship",
+      "business",
+      "real estate investing",
+      "content creation"
+    ],
+    "roles": [
+      "entrepreneur",
+      "investor",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Entrepreneur and investor",
+    "links": {
+      "bio": "https://www.chrisjkoerner.com/"
+    }
+  },
+  {
+    "id": "stuart-russell",
+    "name": "Stuart Russell",
+    "portrait": "/portraits/stuart-russell.jpg",
+    "portrait2x": "/portraits/stuart-russell@2x.jpg",
+    "portraitBrightness": 0.278,
+    "credibilityLine": "UC Berkeley Professor of Computer Science, Smith-Zadeh Chair in Engineering; director of the Center for Human-Compatible AI; OBE (2021); Fellow of the Royal Society; co-author of the standard AI textbook; expert in AI safety and autonomous weapons.",
+    "fields": [
+      "artificial intelligence",
+      "AI safety",
+      "machine learning",
+      "autonomous weapons"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Computer Science, UC Berkeley",
+    "links": {
+      "bio": "https://www2.eecs.berkeley.edu/Faculty/Homepages/russell.html"
+    }
+  },
+  {
+    "id": "desmond-oneill",
+    "name": "Desmond O'Neill",
+    "portrait": "/portraits/desmond-oneill.jpg",
+    "portrait2x": "/portraits/desmond-oneill@2x.jpg",
+    "portraitBrightness": 0.289,
+    "credibilityLine": "Unable to verify identity—candidate sources describe a British photographer (1923–2003) and an actor, neither matching the episode context of a former US Secret Service interrogator.",
+    "fields": [
+      "<UNKNOWN>"
+    ],
+    "roles": [
+      "<UNKNOWN>"
+    ],
+    "credentials": [],
+    "currentRole": "<UNKNOWN>",
+    "links": {}
+  },
+  {
+    "id": "tristan-harris",
+    "name": "Tristan Harris",
+    "portrait": "/portraits/tristan-harris.jpg",
+    "portrait2x": "/portraits/tristan-harris@2x.jpg",
+    "portraitBrightness": 0.339,
+    "credibilityLine": "Former Google design ethicist; co-founder of the Center for Humane Technology; featured in Netflix's The Social Dilemma; advises policymakers and tech leaders on AI risks and algorithmic manipulation",
+    "fields": [
+      "artificial intelligence",
+      "technology ethics",
+      "policy"
+    ],
+    "roles": [
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder, Center for Humane Technology",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tristan_Harris"
+    }
+  },
+  {
+    "id": "annette-bosworth",
+    "name": "Dr. Annette Bosworth",
+    "portrait": "/portraits/annette-bosworth.jpg",
+    "portrait2x": "/portraits/annette-bosworth@2x.jpg",
+    "portraitBrightness": 0.284,
+    "credibilityLine": "Internal medicine physician with over 20 years of experience; author of *Anyway You Can* and *ketoCONTINUUM*; founded Dr. Boz educational platform and clinic focused on ketogenic nutrition and metabolic health.",
+    "fields": [
+      "nutrition",
+      "metabolic health",
+      "ketogenic medicine",
+      "chronic disease",
+      "dementia prevention"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Owner and Physician, Meaningful Medicine, LLC; Founder, Dr. Boz Educational Platform",
+    "links": {
+      "bio": "https://coalitionformetabolichealth.org/experts/annette-bosworth/"
+    }
+  },
+  {
+    "id": "kevin-hart",
+    "name": "Kevin Hart",
+    "portrait": "/portraits/kevin-hart.jpg",
+    "portrait2x": "/portraits/kevin-hart@2x.jpg",
+    "portraitBrightness": 0.243,
+    "credibilityLine": "Comedian and actor; Mark Twain Prize for American Humor (2024); founder of Hartbeat, a global entertainment company; author of It Will All Work Out; featured in Netflix special Kevin Hart: Acting My Age; named to Time 100 most influential people (2015).",
+    "fields": [
+      "comedy",
+      "entertainment",
+      "business"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Hartbeat; comedian and actor",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Kevin_Hart"
+    }
+  },
+  {
+    "id": "matthew-walker",
+    "name": "Matthew Walker",
+    "portrait": "/portraits/matthew-walker.jpg",
+    "portrait2x": "/portraits/matthew-walker@2x.jpg",
+    "portraitBrightness": 0.172,
+    "credibilityLine": "Professor of Neuroscience and Psychology at UC Berkeley; Founder and Director of the Center for Human Sleep Science; author of Why We Sleep (2017); over 20 years of sleep research focusing on sleep's impact on human health and disease",
+    "fields": [
+      "sleep science",
+      "neuroscience",
+      "psychology",
+      "human health"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Neuroscience and Psychology, University of California, Berkeley",
+    "links": {
+      "bio": "https://psychology.berkeley.edu/people/matthew-p-walker"
+    }
+  },
+  {
+    "id": "tim-ferriss",
+    "name": "Tim Ferriss",
+    "portrait": "/portraits/tim-ferriss.jpg",
+    "portrait2x": "/portraits/tim-ferriss@2x.jpg",
+    "portraitBrightness": 0.399,
+    "credibilityLine": "Entrepreneur and author of five #1 New York Times and Wall Street Journal bestselling books including The 4-Hour Work Week; host of The Tim Ferriss Show; supports scientific research into psychedelic treatments for mental health.",
+    "fields": [
+      "psychology",
+      "neuroscience",
+      "wellness"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Entrepreneur, investor, and host of The Tim Ferriss Show",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tim_Ferriss"
+    }
+  },
+  {
+    "id": "natalie-dawson",
+    "name": "Natalie Dawson",
+    "portrait": "/portraits/natalie-dawson.jpg",
+    "portrait2x": "/portraits/natalie-dawson@2x.jpg",
+    "portraitBrightness": 0.211,
+    "credibilityLine": "Author of TeamWork and Start The Work; co-founded Cardone Ventures in 2019; scaled businesses to nine figures; growth operator and small business entrepreneur.",
+    "fields": [
+      "business scaling",
+      "entrepreneurship",
+      "leadership",
+      "business systems"
+    ],
+    "roles": [
+      "entrepreneur",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Entrepreneur, growth operator, and author",
+    "links": {
+      "bio": "https://nataliedawson.com/"
+    }
+  },
+  {
+    "id": "jill-bolte-taylor",
+    "name": "Dr. Jill Bolte Taylor",
+    "portrait": "/portraits/jill-bolte-taylor.jpg",
+    "portrait2x": "/portraits/jill-bolte-taylor@2x.jpg",
+    "portraitBrightness": 0.354,
+    "credibilityLine": "Harvard-trained neuroanatomist; survived a massive stroke in left hemisphere at age 37 and recovered over 8 years; author of My Stroke of Insight (63 weeks on NY Times bestseller list); gave the first viral TED Talk",
+    "fields": [
+      "neuroscience",
+      "neuroanatomy",
+      "brain research",
+      "stroke recovery",
+      "mental health"
+    ],
+    "roles": [
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Neuroanatomist, author, and speaker",
+    "links": {
+      "bio": "https://drjilltaylor.com/about/"
+    }
+  },
+  {
+    "id": "brene-brown",
+    "name": "Brené Brown",
+    "portrait": "/portraits/brene-brown.jpg",
+    "portrait2x": "/portraits/brene-brown@2x.jpg",
+    "portraitBrightness": 0.281,
+    "credibilityLine": "Research professor, University of Houston's Graduate College of Social Work; author of 6 #1 New York Times bestsellers including Daring Greatly, Dare to Lead, and Atlas of the Heart; widely viewed 2010 TEDx talk on vulnerability; hosts two award-winning podcasts on Spotify.",
+    "fields": [
+      "psychology",
+      "leadership",
+      "vulnerability"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Brené Brown Endowed Chair, University of Houston Graduate College of Social Work; visiting professor of management, University of Texas at Austin McCombs School of Business",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bren%C3%A9_Brown"
+    }
+  },
+  {
+    "id": "kamala-harris",
+    "name": "Kamala Harris",
+    "portrait": "/portraits/kamala-harris.jpg",
+    "portrait2x": "/portraits/kamala-harris@2x.jpg",
+    "portraitBrightness": 0.245,
+    "credibilityLine": "49th Vice President of the United States (2021–2025); U.S. Senator from California (2017–2021); Attorney General of California (2011–2017); author of 107 Days: A Memoir of a Campaign That Made History",
+    "fields": [
+      "politics",
+      "law",
+      "public policy"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Former Vice President of the United States",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Kamala_Harris"
+    }
+  },
+  {
+    "id": "mary-claire-haver",
+    "name": "Dr Mary Claire Haver",
+    "portrait": "/portraits/mary-claire-haver.jpg",
+    "portrait2x": "/portraits/mary-claire-haver@2x.jpg",
+    "portraitBrightness": 0.146,
+    "credibilityLine": "MD; author specializing in menopause, hormonal health, and weight loss",
+    "fields": [
+      "menopause",
+      "hormonal health",
+      "nutrition",
+      "weight loss"
+    ],
+    "roles": [
+      "clinician",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Physician; Author",
+    "links": {
+      "bio": "https://www.amazon.com/dr-mary-claire-haver/s?k=dr.+mary+claire+haver"
+    }
+  },
+  {
+    "id": "vonda-wright",
+    "name": "Dr Vonda Wright",
+    "portrait": "/portraits/vonda-wright.jpg",
+    "portrait2x": "/portraits/vonda-wright@2x.jpg",
+    "portraitBrightness": 0.146,
+    "credibilityLine": "Board-certified orthopedic surgeon and sports physician; 20+ years researching optimized aging; NYT bestselling author",
+    "fields": [
+      "orthopedic surgery",
+      "sports medicine",
+      "women's health",
+      "longevity",
+      "aging"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Orthopedic Surgeon and Sports Physician",
+    "links": {
+      "bio": "https://www.innovateandelevatepodcast.com/episodes/bones-and-estrogen-dr-vonda-wright"
+    }
+  },
+  {
+    "id": "natalie-crawford",
+    "name": "Dr Natalie Crawford",
+    "portrait": "/portraits/natalie-crawford.jpg",
+    "portrait2x": "/portraits/natalie-crawford@2x.jpg",
+    "portraitBrightness": 0.146,
+    "credibilityLine": "Board certified in Obstetrics & Gynecology and Reproductive Endocrinology & Infertility; co-founder of Fora Fertility; Clinical Assistant Professor at UT Dell Medical School",
+    "fields": [
+      "fertility",
+      "reproductive endocrinology",
+      "women's health",
+      "hormones",
+      "metabolic health"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Reproductive Endocrinologist and Fertility Specialist",
+    "links": {
+      "bio": "https://iopbm.com/pages/dr-natalie-crawford-personal-page"
+    }
+  },
+  {
+    "id": "stacy-sims",
+    "name": "Dr Stacy Sims",
+    "portrait": "/portraits/stacy-sims.jpg",
+    "portrait2x": "/portraits/stacy-sims@2x.jpg",
+    "portraitBrightness": 0.146,
+    "credibilityLine": "Exercise physiologist and nutrition scientist; expert in sex differences in training, nutrition, and health; published 100+ peer-reviewed papers; holds MSc and PhD; Senior Research Associate at SPRINZ-AUT University; adjunct at Stanford Lifestyle Medicine Group",
+    "fields": [
+      "exercise physiology",
+      "nutrition science",
+      "female athlete health",
+      "sex differences in training and nutrition"
+    ],
+    "roles": [
+      "researcher",
+      "academic",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Senior Research Associate (SPRINZ-AUT University) & Exercise Physiologist",
+    "links": {
+      "bio": "https://www.drstacysims.com/about-stacy"
+    }
+  },
+  {
+    "id": "oz-pearlman",
+    "name": "Oz Pearlman",
+    "portrait": "/portraits/oz-pearlman.jpg",
+    "portrait2x": "/portraits/oz-pearlman@2x.jpg",
+    "portraitBrightness": 0.38,
+    "credibilityLine": "Emmy Award winner (NBC's Oz Knows); world's most televised mentalist; author of Read Your Mind: Proven Habits for Success From The World's Greatest Mentalist; delivered 2025 TED Talk on reading minds.",
+    "fields": [
+      "psychology",
+      "mentalism",
+      "communication"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Mentalist and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Oz_Pearlman"
+    }
+  },
+  {
+    "id": "jurgen-klopp",
+    "name": "Jürgen Klopp",
+    "portrait": "/portraits/jurgen-klopp.jpg",
+    "portrait2x": "/portraits/jurgen-klopp@2x.jpg",
+    "portraitBrightness": 0.147,
+    "credibilityLine": "Former manager of Borussia Dortmund and Liverpool FC; won 13 major trophies including 2019 UEFA Champions League; led Liverpool to first Premier League title in 30 years; now Head of Global Soccer for Red Bull",
+    "fields": [
+      "sports management",
+      "leadership",
+      "football"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Head of Global Soccer, Red Bull",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/J%C3%BCrgen_Klopp"
+    }
+  },
+  {
+    "id": "neil-degrasse-tyson",
+    "name": "Neil deGrasse Tyson",
+    "portrait": "/portraits/neil-degrasse-tyson.jpg",
+    "portrait2x": "/portraits/neil-degrasse-tyson@2x.jpg",
+    "portraitBrightness": 0.36,
+    "credibilityLine": "Director of the Hayden Planetarium at the American Museum of Natural History since 1996; author of Astrophysics for People in a Hurry and Death by Black Hole; host of StarTalk podcast.",
+    "fields": [
+      "astrophysics",
+      "science communication"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Director, Hayden Planetarium; Research Associate in Astrophysics, American Museum of Natural History",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Neil_deGrasse_Tyson"
+    }
+  },
+  {
+    "id": "louis-tomlinson",
+    "name": "Louis Tomlinson",
+    "portrait": "/portraits/louis-tomlinson.jpg",
+    "portrait2x": "/portraits/louis-tomlinson@2x.jpg",
+    "portraitBrightness": 0.325,
+    "credibilityLine": "Former member of One Direction; released three chart-topping solo albums including Walls and Faith in the Future; amassed over 4.5 billion streams; founder of Away From Home Festival and 28 Clothing streetwear label.",
+    "fields": [
+      "music",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Singer-songwriter and solo artist",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Louis_Tomlinson"
+    }
+  },
+  {
+    "id": "morgan-housel",
+    "name": "Morgan Housel",
+    "portrait": "/portraits/morgan-housel.jpg",
+    "portrait2x": "/portraits/morgan-housel@2x.jpg",
+    "portraitBrightness": 0.339,
+    "credibilityLine": "New York Times bestselling author of The Psychology of Money, The Art of Spending Money, and Same As Ever; partner at Collaborative Fund; two-time Best in Business Award winner; New York Times Sidney Award winner",
+    "fields": [
+      "investing",
+      "psychology",
+      "personal finance"
+    ],
+    "roles": [
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Partner, Collaborative Fund",
+    "links": {
+      "bio": "https://www.morganhousel.com/"
+    }
+  },
+  {
+    "id": "robert-lustig",
+    "name": "Dr. Robert Lustig",
+    "portrait": "/portraits/robert-lustig.jpg",
+    "portrait2x": "/portraits/robert-lustig@2x.jpg",
+    "portraitBrightness": 0.348,
+    "credibilityLine": "Professor Emeritus of Pediatric Endocrinology at UCSF; neuroendocrinologist specializing in energy balance, childhood obesity, and metabolic disease; MD from Cornell, MSL from UC Hastings.",
+    "fields": [
+      "endocrinology",
+      "neuroendocrinology",
+      "nutrition",
+      "metabolic health",
+      "obesity"
+    ],
+    "roles": [
+      "researcher",
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Professor Emeritus of Pediatrics, Division of Endocrinology, UCSF",
+    "links": {
+      "bio": "https://www.levels.com/levels-advisors/robert-lustig-md-msl"
+    }
+  },
+  {
+    "id": "greg-koukl",
+    "name": "Greg Koukl",
+    "portrait": "/portraits/greg-koukl.jpg",
+    "portrait2x": "/portraits/greg-koukl@2x.jpg",
+    "portraitBrightness": 0.118,
+    "credibilityLine": "Founder of Stand to Reason; author of Tactics and The Story of Reality; M.A. in Philosophy of Religion and Ethics from Talbot School of Theology; M.A. in Christian apologetics from Simon Greenleaf School of Law.",
+    "fields": [
+      "apologetics",
+      "philosophy",
+      "theology"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Christian apologist and founder of Stand to Reason",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Greg_Koukl"
+    }
+  },
+  {
+    "id": "alex-oconnor",
+    "name": "Alex O'Connor",
+    "portrait": "/portraits/alex-oconnor.jpg",
+    "portrait2x": "/portraits/alex-oconnor@2x.jpg",
+    "portraitBrightness": 0.118,
+    "credibilityLine": "Philosophy graduate, University of Oxford; host of Cosmic Skeptic YouTube channel and Within Reason podcast; writer and commentator on philosophy, ethics, religion, and atheism.",
+    "fields": [
+      "philosophy",
+      "ethics",
+      "atheism"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Podcaster and YouTuber, Cosmic Skeptic / Within Reason",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Alex_O'Connor"
+    }
+  },
+  {
+    "id": "dr-k",
+    "name": "Dr K",
+    "portrait": "/portraits/dr-k.jpg",
+    "portrait2x": "/portraits/dr-k@2x.jpg",
+    "portraitBrightness": 0.118,
+    "credibilityLine": "Psychiatrist specializing in mental health and gaming addiction; co-founder of Healthy Gamer; streams on Twitch and YouTube",
+    "fields": [
+      "psychiatry",
+      "mental health",
+      "addiction",
+      "behavioral health"
+    ],
+    "roles": [
+      "clinician",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Psychiatrist and mental health streamer; co-founder of Healthy Gamer",
+    "links": {
+      "bio": "https://grokipedia.com/page/dr_k"
+    }
+  },
+  {
+    "id": "evy-poumpouras",
+    "name": "Evy Poumpouras",
+    "portrait": "/portraits/evy-poumpouras.jpg",
+    "portrait2x": "/portraits/evy-poumpouras@2x.jpg",
+    "portraitBrightness": 0.296,
+    "credibilityLine": "Former U.S. Secret Service Special Agent (2000–2012); interrogator and polygraph examiner; author of Becoming Bulletproof; NBC Crime & Law Enforcement Analyst; adjunct professor of criminal justice, CUNY.",
+    "fields": [
+      "leadership",
+      "psychology",
+      "law enforcement"
+    ],
+    "roles": [
+      "researcher",
+      "author",
+      "clinician",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "NBC Crime & Law Enforcement Analyst; adjunct professor of criminal justice and criminology, City University of New York",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Evy_Poumpouras"
+    }
+  },
+  {
+    "id": "pradip-jamnadas",
+    "name": "Dr. Pradip Jamnadas",
+    "portrait": "/portraits/pradip-jamnadas.jpg",
+    "portrait2x": "/portraits/pradip-jamnadas@2x.jpg",
+    "portraitBrightness": 0.496,
+    "credibilityLine": "Interventional cardiologist with 31+ years of clinical experience in Central Florida; founder and medical director of Cardiovascular Interventions and Aristotle Education; board-certified in cardiovascular disease, interventional cardiology, and nuclear cardiology; multiple-time Orlando Top Doctor.",
+    "fields": [
+      "cardiology",
+      "interventional cardiology",
+      "preventive cardiology",
+      "nutrition",
+      "metabolic health"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and medical director of Cardiovascular Interventions and Aristotle Education",
+    "links": {
+      "bio": "https://orlandocvi.com/medical-providers/dr-jamnadas/"
+    }
+  },
+  {
+    "id": "matthew-mcconaughey",
+    "name": "Matthew McConaughey",
+    "portrait": "/portraits/matthew-mcconaughey.jpg",
+    "portrait2x": "/portraits/matthew-mcconaughey@2x.jpg",
+    "portraitBrightness": 0.379,
+    "credibilityLine": "Academy Award winner for Best Actor (Dallas Buyers Club); author of memoir Greenlights and Poems & Prayers; starred in Interstellar, True Detective, The Gentlemen, and 54 films total",
+    "fields": [
+      "acting",
+      "psychology",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Actor and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Matthew_McConaughey"
+    }
+  },
+  {
+    "id": "raoul-pal",
+    "name": "Raoul Pal",
+    "portrait": "/portraits/raoul-pal.jpg",
+    "portrait2x": "/portraits/raoul-pal@2x.jpg",
+    "portraitBrightness": 0.171,
+    "credibilityLine": "Former hedge fund manager (GLG Partners, Goldman Sachs); co-founder and CEO of Real Vision; founder of Global Macro Investor research publication (since 2005).",
+    "fields": [
+      "investing",
+      "macro economics",
+      "cryptocurrency",
+      "financial strategy"
+    ],
+    "roles": [
+      "practitioner",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder & CEO of Real Vision Group",
+    "links": {
+      "bio": "https://www.realvision.com/contributor/raoul-pal"
+    }
+  },
+  {
+    "id": "jaspreet-singh",
+    "name": "Jaspreet Singh",
+    "portrait": "/portraits/jaspreet-singh.jpg",
+    "portrait2x": "/portraits/jaspreet-singh@2x.jpg",
+    "portraitBrightness": 0.171,
+    "credibilityLine": "Unable to verify identity—multiple different people named Jaspreet Singh appear in search results (novelist/chemist, filmmaker, and others). Episode guest's background and credentials do not match any of these profiles.",
+    "fields": [
+      "investing",
+      "personal finance",
+      "wealth building"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "<UNKNOWN>",
+    "links": {}
+  },
+  {
+    "id": "humphrey-yang",
+    "name": "Humphrey Yang",
+    "portrait": "/portraits/humphrey-yang.jpg",
+    "portrait2x": "/portraits/humphrey-yang@2x.jpg",
+    "portraitBrightness": 0.171,
+    "credibilityLine": "Creator and entrepreneur making personal finance content since 2019; former financial advisor",
+    "fields": [
+      "personal finance",
+      "investing"
+    ],
+    "roles": [
+      "creator",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Creator & Entrepreneur",
+    "links": {
+      "bio": "https://www.humphreytalks.com/about"
+    }
+  },
+  {
+    "id": "ray-dalio",
+    "name": "Ray Dalio",
+    "portrait": "/portraits/ray-dalio.jpg",
+    "portrait2x": "/portraits/ray-dalio@2x.jpg",
+    "portraitBrightness": 0.449,
+    "credibilityLine": "Founder of Bridgewater Associates, world's largest hedge fund with $160 billion AUM; author of Principles: Life & Work and The Changing World Order; net worth $20 billion",
+    "fields": [
+      "investing",
+      "geopolitics",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Chief Investment Officer, Dalio Family Office",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ray_Dalio"
+    }
+  },
+  {
+    "id": "andrew-koutnik",
+    "name": "Dr. Andrew Koutnik",
+    "portrait": "/portraits/andrew-koutnik.jpg",
+    "portrait2x": "/portraits/andrew-koutnik@2x.jpg",
+    "portraitBrightness": 0.338,
+    "credibilityLine": "Research scientist specializing in metabolic health and nutrition; Ph.D. in Medical Sciences (Molecular Pharmacology and Physiology); over 100 scientific publications backed by $70M+ in NIH, DoD, NASA, and DARPA funding; living with Type 1 diabetes for nearly 17 years",
+    "fields": [
+      "nutrition",
+      "metabolic health",
+      "diabetes management",
+      "exercise physiology",
+      "human performance"
+    ],
+    "roles": [
+      "researcher",
+      "academic",
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Research Faculty, Florida State University Institute for Sports Science and Medicine",
+    "links": {
+      "bio": "https://annescollege.fsu.edu/faculty-staff/dr-andrew-koutnik"
+    }
+  },
+  {
+    "id": "roman-yampolskiy",
+    "name": "Dr. Roman Yampolskiy",
+    "portrait": "/portraits/roman-yampolskiy.jpg",
+    "portrait2x": "/portraits/roman-yampolskiy@2x.jpg",
+    "portraitBrightness": 0.327,
+    "credibilityLine": "Tenured Professor of Computer Science and Engineering at University of Louisville; founding director of the Cyber Security Lab; AI safety and cybersecurity expert.",
+    "fields": [
+      "AI safety",
+      "cybersecurity",
+      "computer science"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Tenured Professor of Computer Science and Engineering at University of Louisville",
+    "links": {
+      "bio": "https://www.aaespeakers.com/keynote-speakers/dr-roman-v-yampolskiy"
+    }
+  },
+  {
+    "id": "alan-goldhamer",
+    "name": "Dr Alan Goldhamer",
+    "portrait": "/portraits/alan-goldhamer.jpg",
+    "portrait2x": "/portraits/alan-goldhamer@2x.jpg",
+    "portraitBrightness": 0.222,
+    "credibilityLine": "Founder and Director of TrueNorth Health Center in Santa Rosa, California; trained as chiropractor and licensed osteopathic physician; supervised therapeutic fasting interventions for thousands of patients and directs training for doctors in fasting supervision.",
+    "fields": [
+      "nutrition",
+      "fasting",
+      "chronic disease management"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Director, TrueNorth Health Center",
+    "links": {
+      "bio": "https://pharmaceutical.alliedacademies.com/ocm/dr-alan-goldhamer-truenorth-health-center-usa-2017"
+    }
+  },
+  {
+    "id": "jihi-bustamante",
+    "name": "Jihi Bustamante",
+    "portrait": "/portraits/jihi-bustamante.jpg",
+    "portrait2x": "/portraits/jihi-bustamante@2x.jpg",
+    "portraitBrightness": 0.121,
+    "credibilityLine": "Former CIA covert targeting officer; co-founder of EverydaySpy; co-author of Shadow Cell: An Insider Account of America's New Spy War (2025)",
+    "fields": [
+      "geopolitics",
+      "intelligence tradecraft",
+      "security"
+    ],
+    "roles": [
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder, EverydaySpy",
+    "links": {
+      "bio": "https://everydayspy.com/sme/jihi-bustamante"
+    }
+  },
+  {
+    "id": "alan-aragon",
+    "name": "Alan Aragon",
+    "portrait": "/portraits/alan-aragon.jpg",
+    "portrait2x": "/portraits/alan-aragon@2x.jpg",
+    "portraitBrightness": 0.305,
+    "credibilityLine": "M.S. in Nutrition; contributing editor and weight loss coach for Men's Health magazine; nutrition consultant for professional athletes including Lakers, Kings, and Mighty Ducks; author of Flexible Dieting; published research in Journal of the International Society of Sports Nutrition.",
+    "fields": [
+      "nutrition",
+      "sports nutrition",
+      "weight loss",
+      "fitness"
+    ],
+    "roles": [
+      "researcher",
+      "consultant",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Nutrition consultant and researcher; contributing editor for Men's Health magazine",
+    "links": {
+      "bio": "https://www.alanaragonblog.com/about/"
+    }
+  },
+  {
+    "id": "mohnish-pabrai",
+    "name": "Mohnish Pabrai",
+    "portrait": "/portraits/mohnish-pabrai.jpg",
+    "portrait2x": "/portraits/mohnish-pabrai@2x.jpg",
+    "portraitBrightness": 0.269,
+    "credibilityLine": "Founder and managing partner of Pabrai Investment Funds (manages over $1 billion in assets); bestselling author of The Dhandho Investor: The Low-Risk Value Method to High Returns; value investor specializing in Warren Buffett's investment principles.",
+    "fields": [
+      "investing",
+      "value investing",
+      "business"
+    ],
+    "roles": [
+      "investor",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Managing Partner, Pabrai Investment Funds",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Mohnish_Pabrai"
+    }
+  },
+  {
+    "id": "terry-sejnowski",
+    "name": "Terry Sejnowski",
+    "portrait": "/portraits/terry-sejnowski.jpg",
+    "portrait2x": "/portraits/terry-sejnowski@2x.jpg",
+    "portraitBrightness": 0.134,
+    "credibilityLine": "Francis Crick Professor at Salk Institute for Biological Studies; co-creator of the Boltzmann machine with Geoffrey Hinton; elected to American Philosophical Society (2025); co-created Learning How To Learn, the world's most popular online course on Coursera; author of ChatGPT and the Future of AI: The Deep Language Revolution",
+    "fields": [
+      "computational neuroscience",
+      "neural networks",
+      "artificial intelligence"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Francis Crick Professor, Salk Institute for Biological Studies; Director, Computational Neurobiology Laboratory",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Terry_Sejnowski"
+    }
+  },
+  {
+    "id": "tara-swart",
+    "name": "Dr Tara Swart",
+    "portrait": "/portraits/tara-swart.jpg",
+    "portrait2x": "/portraits/tara-swart@2x.jpg",
+    "portraitBrightness": 0.249,
+    "credibilityLine": "PhD in neuroscience, Oxford-trained medical doctor, former psychiatrist; Senior Advisor in Neuroscience and Leadership at MIT Sloan; bestselling author",
+    "fields": [
+      "neuroscience",
+      "leadership",
+      "psychiatry"
+    ],
+    "roles": [
+      "researcher",
+      "clinician",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Senior Advisor in Neuroscience and Leadership at MIT Sloan School of Management",
+    "links": {
+      "bio": "https://www.taraswart.com/about-dr-tara-swart/"
+    }
+  },
+  {
+    "id": "alex-hormozi",
+    "name": "Alex Hormozi",
+    "portrait": "/portraits/alex-hormozi.jpg",
+    "portrait2x": "/portraits/alex-hormozi@2x.jpg",
+    "portraitBrightness": 0.259,
+    "credibilityLine": "Serial entrepreneur who scaled 7 companies to exits; sold majority stake in licensing company for $46.2M in 2021; author of $100M Offer and $100M Money Models; founded Acquisition.com to invest in and scale portfolio companies.",
+    "fields": [
+      "entrepreneurship",
+      "business scaling",
+      "customer acquisition",
+      "monetization"
+    ],
+    "roles": [
+      "entrepreneur",
+      "author",
+      "investor"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Managing Partner, Acquisition.com",
+    "links": {
+      "bio": "https://www.acquisition.com/bio-alex"
+    }
+  },
+  {
+    "id": "codie-sanchez",
+    "name": "Codie Sanchez",
+    "portrait": "/portraits/codie-sanchez.jpg",
+    "portrait2x": "/portraits/codie-sanchez@2x.jpg",
+    "portraitBrightness": 0.259,
+    "credibilityLine": "Journalist-turned-Wall Street investor; Robert F. Kennedy Award winner for print journalism; founder of Contrarian Thinking; buys and scales Main Street businesses",
+    "fields": [
+      "investing",
+      "business ownership",
+      "finance",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "entrepreneur",
+      "investor",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder of Contrarian Thinking; investor and business owner",
+    "links": {
+      "bio": "https://codiesanchez.com/about/"
+    }
+  },
+  {
+    "id": "donald-hoffman",
+    "name": "Donald Hoffman",
+    "portrait": "/portraits/donald-hoffman.jpg",
+    "portrait2x": "/portraits/donald-hoffman@2x.jpg",
+    "portraitBrightness": 0.269,
+    "credibilityLine": "Professor of Cognitive Science at UC Irvine; Ph.D. from MIT; author of The Case Against Reality and over 120 scientific papers on consciousness, visual perception, and evolutionary psychology.",
+    "fields": [
+      "cognitive science",
+      "consciousness",
+      "visual perception",
+      "evolutionary psychology"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Cognitive Science, University of California, Irvine",
+    "links": {
+      "bio": "https://www.newswise.com/users/expert/Donald-Hoffman-10049254"
+    }
+  },
+  {
+    "id": "gavin-newsom",
+    "name": "Gavin Newsom",
+    "portrait": "/portraits/gavin-newsom.jpg",
+    "portrait2x": "/portraits/gavin-newsom@2x.jpg",
+    "portraitBrightness": 0.22,
+    "credibilityLine": "40th Governor of California since 2019; former Mayor of San Francisco and Lieutenant Governor of California; co-founder of PlumpJack Group hospitality and business empire; author of Citizenville and Young Man in a Hurry: A Memoir of Discovery; hosts This Is Gavin Newsom podcast.",
+    "fields": [
+      "politics",
+      "entrepreneurship",
+      "leadership"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Governor of California",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Gavin_Newsom"
+    }
+  },
+  {
+    "id": "nischa-shah",
+    "name": "Nischa Shah",
+    "portrait": "/portraits/nischa-shah.jpg",
+    "portrait2x": "/portraits/nischa-shah@2x.jpg",
+    "portraitBrightness": 0.205,
+    "credibilityLine": "ICAEW Qualified Chartered Accountant and former investment banker (Deutsche Bank, Sumitomo Mitsui); YouTuber with 2.1M+ subscribers sharing personal finance and passive income strategies.",
+    "fields": [
+      "personal finance",
+      "investing",
+      "passive income",
+      "financial education"
+    ],
+    "roles": [
+      "content-creator",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Content Creator and Entrepreneur, Nischa YouTube channel",
+    "links": {
+      "bio": "https://youthmotivator4life.com/nischa-shah-biography/"
+    }
+  },
+  {
+    "id": "roger-seheult",
+    "name": "Dr. Roger Seheult",
+    "portrait": "/portraits/roger-seheult.jpg",
+    "portrait2x": "/portraits/roger-seheult@2x.jpg",
+    "portraitBrightness": 0.165,
+    "credibilityLine": "Quadruple board-certified (Internal Medicine, Pulmonary Diseases, Critical Care Medicine, Sleep Medicine); Associate Clinical Professor at UC Riverside School of Medicine; co-founder of MedCram, an online medical education platform with over 1 million YouTube subscribers; 2021 San Bernardino County Medical Society William L. Cover MD Award recipient.",
+    "fields": [
+      "Internal Medicine",
+      "Pulmonology",
+      "Critical Care Medicine",
+      "Sleep Medicine",
+      "Medical Education"
+    ],
+    "roles": [
+      "clinician",
+      "academic",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Associate Clinical Professor, UC Riverside School of Medicine; Critical Care Physician, Pulmonologist, Sleep Physician; Co-founder, MedCram",
+    "links": {
+      "bio": "https://www.medcram.com/pages/instructors"
+    }
+  },
+  {
+    "id": "eric-weinstein",
+    "name": "Eric Weinstein",
+    "portrait": "/portraits/eric-weinstein.jpg",
+    "portrait2x": "/portraits/eric-weinstein@2x.jpg",
+    "portraitBrightness": 0.277,
+    "credibilityLine": "Ph.D. in mathematics from Harvard; former Managing Director of Thiel Capital; host of podcast The Portal; coined term \"intellectual dark web\"",
+    "fields": [
+      "mathematics",
+      "physics",
+      "geopolitics"
+    ],
+    "roles": [
+      "researcher",
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Podcast host and investor; former Managing Director, Thiel Capital",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Eric_Weinstein"
+    }
+  },
+  {
+    "id": "alok-kanojia",
+    "name": "Dr. Alok Kanojia",
+    "portrait": "/portraits/alok-kanojia.jpg",
+    "portrait2x": "/portraits/alok-kanojia@2x.jpg",
+    "portraitBrightness": 0.251,
+    "credibilityLine": "Harvard-trained psychiatrist, addiction psychiatrist at McLean Hospital, instructor in psychiatry at Harvard Medical School; founder and president of Healthy Gamer, a mental health platform for young people.",
+    "fields": [
+      "psychiatry",
+      "addiction medicine",
+      "mental health",
+      "youth health"
+    ],
+    "roles": [
+      "clinician",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "President and Co-founder of Healthy Gamer; Addiction Psychiatrist at McLean Hospital; Instructor in Psychiatry at Harvard Medical School",
+    "links": {
+      "bio": "https://aibm.org/who-we-are/alok-kanojia/"
+    }
+  },
+  {
+    "id": "anna-machin",
+    "name": "Dr Anna Machin",
+    "portrait": "/portraits/anna-machin.jpg",
+    "portrait2x": "/portraits/anna-machin@2x.jpg",
+    "portraitBrightness": 0.319,
+    "credibilityLine": "Evolutionary anthropologist researching the neurobiology and psychology of human relationships, particularly romantic love and parent-child dynamics.",
+    "fields": [
+      "evolutionary anthropology",
+      "psychology",
+      "human relationships",
+      "parenting",
+      "romantic love"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "writer"
+    ],
+    "credentials": [],
+    "currentRole": "Evolutionary Anthropologist, Department of Experimental Psychology",
+    "links": {
+      "bio": "https://www.ox.ac.uk/research/research-in-conversation/love/dr-anna-machin"
+    }
+  },
+  {
+    "id": "kevin-oleary",
+    "name": "Kevin O'Leary",
+    "portrait": "/portraits/kevin-oleary.jpg",
+    "portrait2x": "/portraits/kevin-oleary@2x.jpg",
+    "portraitBrightness": 0.246,
+    "credibilityLine": "Co-founded SoftKey Software Products (later The Learning Company), acquired by Mattel for ~$6M; Shark Tank investor since 2009; author of Cold Hard Truth: On Family, Kids and Money; television personality on Dragons' Den and The Lang and O'Leary Exchange.",
+    "fields": [
+      "business",
+      "investing",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Shark Tank investor and television personality",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Kevin_O'Leary"
+    }
+  },
+  {
+    "id": "tom-aspinall",
+    "name": "Tom Aspinall",
+    "portrait": "/portraits/tom-aspinall.jpg",
+    "portrait2x": "/portraits/tom-aspinall@2x.jpg",
+    "portraitBrightness": 0.312,
+    "credibilityLine": "UFC Heavyweight Champion; English professional mixed martial artist with finishing ability record in the UFC; won British Open in Brazilian jiu-jitsu across multiple belt classes.",
+    "fields": [
+      "combat sports",
+      "psychology",
+      "leadership"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "UFC Heavyweight Champion",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tom_Aspinall"
+    }
+  },
+  {
+    "id": "gelong-thubten",
+    "name": "Gelong Thubten",
+    "portrait": "/portraits/gelong-thubten.jpg",
+    "portrait2x": "/portraits/gelong-thubten@2x.jpg",
+    "portraitBrightness": 0.212,
+    "credibilityLine": "Buddhist monk and meditation teacher; ordained 1993; spent six years in intensive meditation retreats, including a four-year retreat; UK's most influential meditation teachers; keynote speaker for the United Nations; meditation consultant on Marvel's Doctor Strange.",
+    "fields": [
+      "mental-health",
+      "psychology",
+      "meditation",
+      "mindfulness"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Buddhist monk and meditation teacher, UK",
+    "links": {
+      "bio": "https://www.gelongthubten.com/about"
+    }
+  },
+  {
+    "id": "deborah-frances-white",
+    "name": "Deborah Frances-White",
+    "portrait": "/portraits/deborah-frances-white.jpg",
+    "portrait2x": "/portraits/deborah-frances-white@2x.jpg",
+    "portraitBrightness": 0.115,
+    "credibilityLine": "Bestselling author; host of The Guilty Feminist podcast; author of Six Conversations We're Too Scared To Have; wrote and directed the 2018 comedy film Say My Name.",
+    "fields": [
+      "culture",
+      "feminism",
+      "media"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Podcast host and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Deborah_Frances-White"
+    }
+  },
+  {
+    "id": "louise-perry",
+    "name": "Louise Perry",
+    "portrait": "/portraits/louise-perry.jpg",
+    "portrait2x": "/portraits/louise-perry@2x.jpg",
+    "portraitBrightness": 0.115,
+    "credibilityLine": "British journalist and author of The Case Against the Sexual Revolution; columnist at the New Statesman; featured writer for the Daily Mail; co-founder and research director of The Other Half feminist think tank; co-runs the charity We Can't Consent To This.",
+    "fields": [
+      "feminism",
+      "culture",
+      "sexuality"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Journalist and author; columnist at the New Statesman",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Louise_Perry"
+    }
+  },
+  {
+    "id": "erica-komisar",
+    "name": "Erica Komisar",
+    "portrait": "/portraits/erica-komisar.jpg",
+    "portrait2x": "/portraits/erica-komisar@2x.jpg",
+    "portraitBrightness": 0.115,
+    "credibilityLine": "Clinical social worker, psychoanalyst, and parent coach with over 30 years of experience in private practice; author of Being There: Why Prioritizing Motherhood in the First Three Years Matters and Chicken Little the Sky Isn't Falling: Raising Resilient Adolescents in the New Age of Anxiety. Graduate of Georgetown and Columbia Universities and The New York Freudian Society.",
+    "fields": [
+      "parenting",
+      "psychology",
+      "mental health",
+      "family dynamics"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Clinical Social Worker and Psychoanalyst",
+    "links": {
+      "bio": "https://www.ericakomisar.com/about"
+    }
+  },
+  {
+    "id": "geoffrey-hinton",
+    "name": "Geoffrey Hinton",
+    "portrait": "/portraits/geoffrey-hinton.jpg",
+    "portrait2x": "/portraits/geoffrey-hinton@2x.jpg",
+    "portraitBrightness": 0.164,
+    "credibilityLine": "British-Canadian computer scientist and cognitive psychologist; 2018 Turing Award (with Bengio and LeCun); 2024 Nobel Prize in Physics; pioneered backpropagation algorithm and deep learning; University Professor Emeritus at University of Toronto; co-founded Vector Institute for Artificial Intelligence.",
+    "fields": [
+      "artificial intelligence",
+      "neural networks",
+      "cognitive science"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "University Professor Emeritus, University of Toronto",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Geoffrey_Hinton"
+    }
+  },
+  {
+    "id": "scooter-braun",
+    "name": "Scooter Braun",
+    "portrait": "/portraits/scooter-braun.jpg",
+    "portrait2x": "/portraits/scooter-braun@2x.jpg",
+    "portraitBrightness": 0.257,
+    "credibilityLine": "Discovered and managed Justin Bieber (2008); signed Ariana Grande (2012); CEO of HYBE America; founder of SB Projects; Grammy Award nominee; executive producer, Dave (FX comedy series).",
+    "fields": [
+      "music management",
+      "entrepreneurship",
+      "business"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of HYBE America; founder of SB Projects",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Scooter_Braun"
+    }
+  },
+  {
+    "id": "cathie-wood",
+    "name": "Cathie Wood",
+    "portrait": "/portraits/cathie-wood.jpg",
+    "portrait2x": "/portraits/cathie-wood@2x.jpg",
+    "portraitBrightness": 0.22,
+    "credibilityLine": "CEO and cofounder of Ark Invest; oversees ARK Innovation ETF, which generated accolades for performance in 2017, 2020, and 2023; mentored by economist Arthur Laffer; former managing director and chief economist at Jennison Associates",
+    "fields": [
+      "investing",
+      "AI",
+      "innovation"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO and cofounder of Ark Invest",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Cathie_Wood"
+    }
+  },
+  {
+    "id": "jimmy-fallon",
+    "name": "Jimmy Fallon",
+    "portrait": "/portraits/jimmy-fallon.jpg",
+    "portrait2x": "/portraits/jimmy-fallon@2x.jpg",
+    "portraitBrightness": 0.206,
+    "credibilityLine": "Host of The Tonight Show; former SNL cast member; four-time Primetime Emmy Award winner; Grammy Award winner; author of children's and comedy books including Papa Doesn't Do Anything!",
+    "fields": [
+      "comedy",
+      "television",
+      "entertainment"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Host of The Tonight Show Starring Jimmy Fallon",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jimmy_Fallon"
+    }
+  },
+  {
+    "id": "courtney-conley",
+    "name": "Dr. Courtney Conley",
+    "portrait": "/portraits/courtney-conley.jpg",
+    "portrait2x": "/portraits/courtney-conley@2x.jpg",
+    "portraitBrightness": 0.251,
+    "credibilityLine": "Chiropractic physician specializing in foot and gait mechanics; founder of Gait Happens and owner of Total Health Solutions; certified in functional dry needling",
+    "fields": [
+      "foot health",
+      "gait mechanics",
+      "longevity",
+      "movement"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Chiropractic physician and founder, Gait Happens",
+    "links": {
+      "bio": "https://www.thsclinic.com/team/courtney-conley"
+    }
+  },
+  {
+    "id": "simon-sinek",
+    "name": "Simon Sinek",
+    "portrait": "/portraits/simon-sinek.jpg",
+    "portrait2x": "/portraits/simon-sinek@2x.jpg",
+    "portraitBrightness": 0.191,
+    "credibilityLine": "Author of Start with Why and Leaders Eat Last; founder of The Optimism Company; speaker at UN Global Compact Leaders Summit and multiple TEDx conferences; one of the most-viewed TED talks with \"How Great Leaders Inspire Action\"",
+    "fields": [
+      "leadership",
+      "business",
+      "organizational psychology"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, The Optimism Company",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Simon_Sinek"
+    }
+  },
+  {
+    "id": "sarah-wakeman",
+    "name": "Dr. Sarah Wakeman",
+    "portrait": "/portraits/sarah-wakeman.jpg",
+    "portrait2x": "/portraits/sarah-wakeman@2x.jpg",
+    "portraitBrightness": 0.233,
+    "credibilityLine": "Medical Director for Mass General Hospital Substance Use Disorder Initiative; Assistant Professor of Medicine at Harvard Medical School; board-certified in Addiction Medicine; Chief Medical Resident at Mass General Hospital",
+    "fields": [
+      "addiction medicine",
+      "substance use disorder",
+      "opioid policy"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Medical Director for Mass General Hospital Substance Use Disorder Initiative",
+    "links": {
+      "bio": "https://fxb.harvard.edu/dr-sarah-wakeman/"
+    }
+  },
+  {
+    "id": "william-li",
+    "name": "Dr. William Li",
+    "portrait": "/portraits/william-li.jpg",
+    "portrait2x": "/portraits/william-li@2x.jpg",
+    "portraitBrightness": 0.185,
+    "credibilityLine": "President, Medical Director, and Co-founder of the Angiogenesis Foundation; physician whose work contributed to over 40 FDA-approved treatments across more than 70 disorders; author of Eat To Beat Your Diet.",
+    "fields": [
+      "nutrition",
+      "angiogenesis",
+      "cancer prevention",
+      "chronic disease"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "President, Medical Director, and Co-founder, Angiogenesis Foundation",
+    "links": {
+      "bio": "https://www.visionacademy.org/meet-members/dr-william-li"
+    }
+  },
+  {
+    "id": "jeff-cavaliere",
+    "name": "Jeff Cavaliere",
+    "portrait": "/portraits/jeff-cavaliere.jpg",
+    "portrait2x": "/portraits/jeff-cavaliere@2x.jpg",
+    "portraitBrightness": 0.256,
+    "credibilityLine": "Certified strength and conditioning specialist (NSCA); Master's in Physical Therapy (University of Connecticut, 2000); former head physical therapist and assistant strength coach for the New York Mets (2006–2009); founder of ATHLEAN-X.",
+    "fields": [
+      "strength training",
+      "physical therapy",
+      "fitness",
+      "conditioning"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and trainer, ATHLEAN-X; strength coach and physical therapist",
+    "links": {
+      "bio": "https://www.thefamouspeople.com/profiles/jeff-cavaliere-38017.php"
+    }
+  },
+  {
+    "id": "amjad-masad",
+    "name": "Amjad Masad",
+    "portrait": "/portraits/amjad-masad.jpg",
+    "portrait2x": "/portraits/amjad-masad@2x.jpg",
+    "portraitBrightness": 0.053,
+    "credibilityLine": "Founder and CEO of Replit; founding engineer at Codecademy; software engineer at Facebook, overseeing JavaScript infrastructure; computer science graduate from Princess Sumaya University for Technology.",
+    "fields": [
+      "AI",
+      "software engineering",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "entrepreneur",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and CEO, Replit",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Amjad_Masad"
+    }
+  },
+  {
+    "id": "bret-weinstein",
+    "name": "Bret Weinstein",
+    "portrait": "/portraits/bret-weinstein.jpg",
+    "portrait2x": "/portraits/bret-weinstein@2x.jpg",
+    "portraitBrightness": 0.053,
+    "credibilityLine": "PhD in evolutionary biology, University of Michigan; former professor of biology, Evergreen State College; author of A Hunter-Gatherer's Guide to the 21st Century.",
+    "fields": [
+      "AI",
+      "psychology",
+      "evolutionary biology"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Podcaster and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bret_Weinstein"
+    }
+  },
+  {
+    "id": "chris-eubank-jr",
+    "name": "Chris Eubank Jr.",
+    "portrait": "/portraits/chris-eubank-jr.jpg",
+    "portrait2x": "/portraits/chris-eubank-jr@2x.jpg",
+    "portraitBrightness": 0.231,
+    "credibilityLine": "Professional boxer; held IBO middleweight title since 2024; held WBA interim middleweight title twice 2015–2021; son of legendary two-division world champion Chris Eubank Sr.",
+    "fields": [
+      "boxing",
+      "sport"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Professional Middleweight Boxer",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Chris_Eubank_Jr"
+    }
+  },
+  {
+    "id": "emma-grede",
+    "name": "Emma Grede",
+    "portrait": "/portraits/emma-grede.jpg",
+    "portrait2x": "/portraits/emma-grede@2x.jpg",
+    "portraitBrightness": 0.258,
+    "credibilityLine": "British entrepreneur and fashion business leader; co-founder Good American; founding partner SKIMS and Safely; named Forbes Richest Self-Made Women in America",
+    "fields": [
+      "business",
+      "entrepreneurship",
+      "brand strategy"
+    ],
+    "roles": [
+      "entrepreneur",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO and co-founder, Good American; founding partner, SKIMS",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Emma_Grede"
+    }
+  },
+  {
+    "id": "michelle-obama",
+    "name": "Michelle Obama",
+    "portrait": "/portraits/michelle-obama.jpg",
+    "portrait2x": "/portraits/michelle-obama@2x.jpg",
+    "portraitBrightness": 0.189,
+    "credibilityLine": "Former First Lady of the United States (2009–2017); attorney and graduate of Princeton University and Harvard Law School; author of New York Times bestselling memoir Becoming and The Light We Carry; advocate for education, nutrition, and poverty awareness.",
+    "fields": [
+      "leadership",
+      "psychology",
+      "culture"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and advocate",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Michelle_Obama"
+    }
+  },
+  {
+    "id": "craig-robinson",
+    "name": "Craig Robinson",
+    "portrait": "/portraits/craig-robinson.jpg",
+    "portrait2x": "/portraits/craig-robinson@2x.jpg",
+    "portraitBrightness": 0.189,
+    "credibilityLine": "College basketball coach and executive; former head coach at Brown and Oregon State; Princeton alumnus and former bond trader; brother of Michelle Obama",
+    "fields": [
+      "basketball",
+      "business",
+      "sports leadership"
+    ],
+    "roles": [
+      "academic",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Executive Director of the National Association of Basketball Coaches",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Craig_Robinson_(basketball)"
+    }
+  },
+  {
+    "id": "shi-heng-yi",
+    "name": "Master Shi Heng Yi",
+    "portrait": "/portraits/shi-heng-yi.jpg",
+    "portrait2x": "/portraits/shi-heng-yi@2x.jpg",
+    "portraitBrightness": 0.243,
+    "credibilityLine": "35th generation Shaolin master; headmaster of Shaolin Temple Europe (Germany) with 30+ years studying mind-body interaction",
+    "fields": [
+      "Buddhism",
+      "martial arts",
+      "Kung Fu",
+      "Qi Gong",
+      "meditation",
+      "philosophy"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Headmaster, Shaolin Temple Europe",
+    "links": {
+      "bio": "https://www.creativeprocess.info/heroes/master-shi-heng-yi-shaolin-temple-europe-mia-funk-5bbe3"
+    }
+  },
+  {
+    "id": "joe-navarro",
+    "name": "Joe Navarro",
+    "portrait": "/portraits/joe-navarro.jpg",
+    "portrait2x": "/portraits/joe-navarro@2x.jpg",
+    "portraitBrightness": 0.258,
+    "credibilityLine": "Former FBI special agent and supervisor, 25 years in counterintelligence; founding member of FBI's Behavioral Analysis Program; author of What Every Body Is Saying, Dangerous Personalities, Louder Than Words, Three Minutes to Doomsday, and The Dictionary of Body Language; adjunct faculty at Saint Leo University; lecturer at Harvard Business School.",
+    "fields": [
+      "body language",
+      "psychology",
+      "negotiation"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and public speaker specializing in nonverbal communication",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Joe_Navarro"
+    }
+  },
+  {
+    "id": "lisa-feldman-barrett",
+    "name": "Dr. Lisa Feldman Barrett",
+    "portrait": "/portraits/lisa-feldman-barrett.jpg",
+    "portrait2x": "/portraits/lisa-feldman-barrett@2x.jpg",
+    "portraitBrightness": 0.245,
+    "credibilityLine": "University Distinguished Professor of Psychology at Northeastern University; fellow of AAAS, APA, and Royal Society of Canada; over 27,000 citations; NIH Director's Pioneer Award recipient",
+    "fields": [
+      "psychology",
+      "neuroscience",
+      "affective science",
+      "emotion research"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "University Distinguished Professor of Psychology, Northeastern University; Chief Science Officer, Center for Law, Brain & Behavior at Massachusetts General Hospital",
+    "links": {
+      "bio": "https://spsp.org/membership/awards/heritage-wall/feldman"
+    }
+  },
+  {
+    "id": "vanessa-van-edwards",
+    "name": "Vanessa Van Edwards",
+    "portrait": "/portraits/vanessa-van-edwards.jpg",
+    "portrait2x": "/portraits/vanessa-van-edwards@2x.jpg",
+    "portraitBrightness": 0.246,
+    "credibilityLine": "Founder and lead investigator, Science of People research lab; author of Captivate and The Like Switch; specializes in behavioral science research on communication, body language, and social skills.",
+    "fields": [
+      "psychology",
+      "communication",
+      "body language"
+    ],
+    "roles": [
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Lead Investigator, Science of People",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Vanessa_Van_Edwards"
+    }
+  },
+  {
+    "id": "peter-attia",
+    "name": "Peter Attia",
+    "portrait": "/portraits/peter-attia.jpg",
+    "portrait2x": "/portraits/peter-attia@2x.jpg",
+    "portraitBrightness": 0.279,
+    "credibilityLine": "Physician and author of Outlive: The Science and Art of Longevity; founder of Early Medical, a longevity medicine practice; co-founder of 10 Squared, a longevity testing lab and training center",
+    "fields": [
+      "longevity",
+      "fitness",
+      "medicine"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Physician, Early Medical",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Peter_Attia"
+    }
+  },
+  {
+    "id": "mike-dowd",
+    "name": "Mike Dowd",
+    "portrait": "/portraits/mike-dowd.jpg",
+    "portrait2x": "/portraits/mike-dowd@2x.jpg",
+    "portraitBrightness": 0.345,
+    "credibilityLine": "Former NYPD officer arrested in 1992 for drug distribution and crimes as enforcer for Dominican-American Diaz criminal organization; served 12 years in federal prison; subject of 2014 documentary film The Seven Five; hosts Good Cop Bad Cop Podcast.",
+    "fields": [
+      "criminal justice",
+      "psychology",
+      "law enforcement corruption"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Podcast host and speaker; formerly NYPD officer (1982–1992)",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Michael_Dowd_(police_officer)"
+    }
+  },
+  {
+    "id": "logan-ury",
+    "name": "Logan Ury",
+    "portrait": "/portraits/logan-ury.jpg",
+    "portrait2x": "/portraits/logan-ury@2x.jpg",
+    "portraitBrightness": 0.259,
+    "credibilityLine": "Harvard degree in psychology; co-head of behavioral economics lab at Google; 2018 TED resident; author of How to Not Die Alone; Director of Relationship Science at Hinge.",
+    "fields": [
+      "behavioral science",
+      "dating",
+      "relationships"
+    ],
+    "roles": [
+      "researcher",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Director of Relationship Science, Hinge",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Logan_Ury"
+    }
+  },
+  {
+    "id": "sara-szal",
+    "name": "Dr. Sara Szal",
+    "portrait": "/portraits/sara-szal.jpg",
+    "portrait2x": "/portraits/sara-szal@2x.jpg",
+    "portraitBrightness": 0.281,
+    "credibilityLine": "Harvard-trained medical doctor and researcher with 30 years of experience; author of four New York Times bestselling books; Clinical Assistant Professor of Integrative Medicine at Thomas Jefferson University; Director of Precision Medicine and Longevity at the Marcus Institute of Integrative Medicine",
+    "fields": [
+      "hormones",
+      "functional medicine",
+      "precision medicine",
+      "nutrition",
+      "stress and cortisol"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "author",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Medical doctor and researcher specializing in precision medicine and hormone health",
+    "links": {
+      "bio": "https://saraszalmd.com/about/"
+    }
+  },
+  {
+    "id": "evan-spiegel",
+    "name": "Evan Spiegel",
+    "portrait": "/portraits/evan-spiegel.jpg",
+    "portrait2x": "/portraits/evan-spiegel@2x.jpg",
+    "portraitBrightness": 0.299,
+    "credibilityLine": "Co-founder and CEO of Snap Inc. (Snapchat); youngest billionaire in the world at age 25; founded Snapchat while a Stanford University student.",
+    "fields": [
+      "entrepreneurship",
+      "product design",
+      "leadership"
+    ],
+    "roles": [
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder and CEO, Snap Inc.",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Evan_Spiegel"
+    }
+  },
+  {
+    "id": "gary-stevenson",
+    "name": "Gary Stevenson",
+    "portrait": "/portraits/gary-stevenson.jpg",
+    "portrait2x": "/portraits/gary-stevenson@2x.jpg",
+    "portraitBrightness": 0.338,
+    "credibilityLine": "British economist, YouTuber, and former interest rate trader at Citibank; author of The Trading Game (2024); known for commentary on economic inequality",
+    "fields": [
+      "economics",
+      "finance",
+      "wealth inequality"
+    ],
+    "roles": [
+      "economist",
+      "financial commentator",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Economist and financial commentator",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Gary_Stevenson_(economist)"
+    }
+  },
+  {
+    "id": "joe-dispenza",
+    "name": "Joe Dispenza",
+    "portrait": "/portraits/joe-dispenza.jpg",
+    "portrait2x": "/portraits/joe-dispenza@2x.jpg",
+    "portraitBrightness": 0.265,
+    "credibilityLine": "New York Times best-selling author of You Are the Placebo; researcher, lecturer, corporate consultant, and chiropractor with postgraduate training in neuroscience and brain function",
+    "fields": [
+      "neuroscience",
+      "brain function",
+      "meditation",
+      "personal transformation",
+      "spontaneous remission"
+    ],
+    "roles": [
+      "researcher",
+      "lecturer",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Researcher, lecturer, corporate consultant, and chiropractor",
+    "links": {
+      "bio": "https://drjoedispenza.com/"
+    }
+  },
+  {
+    "id": "vinh-giang",
+    "name": "Vinh Giang",
+    "portrait": "/portraits/vinh-giang.jpg",
+    "portrait2x": "/portraits/vinh-giang@2x.jpg",
+    "portraitBrightness": 0.29,
+    "credibilityLine": "Award-winning entrepreneur, keynote speaker, and communication coach. Co-founder of 52kards (online magic platform with 800K+ students) and Luminary Productions; founder and CEO of Stage Academy. Named South Australia Young Entrepreneur of the Year (2013); performed for Google, Coca-Cola, Mercedes-Benz; speaks internationally to Fortune 500 audiences.",
+    "fields": [
+      "communication",
+      "public speaking",
+      "leadership",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner",
+      "entrepreneur"
+    ],
+    "credentials": [],
+    "currentRole": "Keynote Speaker and Communication Coach",
+    "links": {
+      "bio": "https://www.vinhgiang.com/about/"
+    }
+  },
+  {
+    "id": "robert-greene",
+    "name": "Robert Greene",
+    "portrait": "/portraits/robert-greene.jpg",
+    "portrait2x": "/portraits/robert-greene@2x.jpg",
+    "portraitBrightness": 0.375,
+    "credibilityLine": "American author of seven international bestsellers including The 48 Laws of Power, The Art of Seduction, The 33 Strategies of War, and Mastery; expert on strategy, power, and human psychology",
+    "fields": [
+      "strategy",
+      "power",
+      "psychology",
+      "leadership"
+    ],
+    "roles": [
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Author",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Robert_Greene_(American_author)"
+    }
+  },
+  {
+    "id": "mrbeast",
+    "name": "MrBeast",
+    "portrait": "/portraits/mrbeast.jpg",
+    "portrait2x": "/portraits/mrbeast@2x.jpg",
+    "portraitBrightness": 0.301,
+    "credibilityLine": "Most-subscribed YouTuber with 488+ million subscribers; founder of Beast Industries (MrBeast Burger, Feastables, Lunchly); host of Beast Games; co-founded Team Trees fundraiser raising $24+ million for Arbor Day Foundation.",
+    "fields": [
+      "content creation",
+      "business",
+      "media"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "YouTuber, Media Personality, and Founder of Beast Industries",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/MrBeast"
+    }
+  },
+  {
+    "id": "bill-von-hippel",
+    "name": "Dr Bill von Hippel",
+    "portrait": "/portraits/bill-von-hippel.jpg",
+    "portrait2x": "/portraits/bill-von-hippel@2x.jpg",
+    "portraitBrightness": 0.255,
+    "credibilityLine": "Professor of Psychology at the University of Queensland; renowned social psychologist and evolutionary specialist",
+    "fields": [
+      "psychology",
+      "evolutionary psychology",
+      "social psychology"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Psychology",
+    "links": {
+      "bio": "https://podcasts.apple.com/us/podcast/behavioural-psychologist-were-not-having-enough-sex/id1291423644?i=1000692952602"
+    }
+  },
+  {
+    "id": "charlie-houpert",
+    "name": "Charlie Houpert",
+    "portrait": "/portraits/charlie-houpert.jpg",
+    "portrait2x": "/portraits/charlie-houpert@2x.jpg",
+    "portraitBrightness": 0.407,
+    "credibilityLine": "Founder/co-founder of Charisma on Command, self-help brand and YouTube channel with millions of subscribers; author of Captivate, The Anti Pick Up Line, and Charisma On Command",
+    "fields": [
+      "psychology",
+      "leadership",
+      "communication",
+      "self-help"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Charisma on Command",
+    "links": {
+      "bio": "https://www.famousbirthdays.com/people/charlie-houpert.html"
+    }
+  },
+  {
+    "id": "paul-brunson",
+    "name": "Paul Brunson",
+    "portrait": "/portraits/paul-brunson.jpg",
+    "portrait2x": "/portraits/paul-brunson@2x.jpg",
+    "portraitBrightness": 0.287,
+    "credibilityLine": "Entrepreneur and television host; founder of award-winning matchmaking company PCB Agency; expert on Married at First Sight UK and Celebs Go Dating; author of It's Complicated (But It Doesn't Have to Be): A Modern Guide to Finding and Keeping Love, which earned an NAACP Image Award nomination.",
+    "fields": [
+      "dating",
+      "relationships",
+      "matchmaking"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Television host and matchmaker",
+    "links": {
+      "bio": "https://www.newsunzip.com/wiki/paul-brunson/"
+    }
+  },
+  {
+    "id": "sarah-berry",
+    "name": "Dr Sarah Berry",
+    "portrait": "/portraits/sarah-berry.jpg",
+    "portrait2x": "/portraits/sarah-berry@2x.jpg",
+    "portraitBrightness": 0.354,
+    "credibilityLine": "Professor of Nutritional Sciences at King's College London; Chief Scientist at ZOE; co-leads the PREDICT programme studying metabolic responses to food in over 200,000 individuals across the UK and US",
+    "fields": [
+      "nutrition",
+      "cardiovascular health",
+      "personalised nutrition",
+      "postprandial metabolism",
+      "food structure"
+    ],
+    "roles": [
+      "researcher",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Nutritional Sciences, King's College London; Chief Scientist, ZOE",
+    "links": {
+      "bio": "https://www.kcl.ac.uk/people/sarah-berry"
+    }
+  },
+  {
+    "id": "daniel-priestly",
+    "name": "Daniel Priestly",
+    "portrait": "/portraits/daniel-priestly.jpg",
+    "portrait2x": "/portraits/daniel-priestly@2x.jpg",
+    "portraitBrightness": 0.357,
+    "credibilityLine": "Entrepreneur and business strategist; founder of Entrevo, a global business growth accelerator working with 500+ entrepreneurs annually across the UK, USA, Singapore, and Australia.",
+    "fields": [
+      "business strategy",
+      "entrepreneurship",
+      "business growth acceleration"
+    ],
+    "roles": [
+      "entrepreneur",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and CEO of Entrevo",
+    "links": {
+      "bio": "https://savvydentist.com/daniel-priestley/"
+    }
+  },
+  {
+    "id": "georgia-ede",
+    "name": "Dr Georgia Ede",
+    "portrait": "/portraits/georgia-ede.jpg",
+    "portrait2x": "/portraits/georgia-ede@2x.jpg",
+    "portraitBrightness": 0.338,
+    "credibilityLine": "Harvard-trained psychiatrist; specialist in nutritional and metabolic psychiatry; expert in ketogenic and pre-agricultural diets and food's effects on brain chemistry",
+    "fields": [
+      "psychiatry",
+      "nutrition",
+      "metabolic psychiatry",
+      "neuroscience"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Psychiatrist specializing in nutritional and metabolic psychiatry",
+    "links": {
+      "bio": "https://jgerbermd.com/dr-georgia-ede-our-descent-into-madness-modern-diets-and-the-global-mental-health-crisis/"
+    }
+  },
+  {
+    "id": "mohit-khera",
+    "name": "Dr Mohit Khera",
+    "portrait": "/portraits/mohit-khera.jpg",
+    "portrait2x": "/portraits/mohit-khera@2x.jpg",
+    "portraitBrightness": 0.466,
+    "credibilityLine": "US-based urology specialist treating male and female sexual dysfunction, male infertility, and urinary tract disorders",
+    "fields": [
+      "urology",
+      "sexual dysfunction",
+      "male infertility"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Urology specialist",
+    "links": {
+      "bio": "https://creators.spotify.com/pod/profile/dr-louise-newson-podcast/episodes/275---Testosterone-and-the-hormone-triangle--with-Dr-Mohit-Khera-e34b6fn"
     }
   }
 ]
