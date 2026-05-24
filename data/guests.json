@@ -5044,5 +5044,28 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Alain_de_Botton"
     }
+  },
+  {
+    "id": "giles-yeo",
+    "name": "Giles Yeo",
+    "portrait": "/portraits/giles-yeo.jpg",
+    "portrait2x": "/portraits/giles-yeo@2x.jpg",
+    "portraitBrightness": 0.227,
+    "credibilityLine": "Professor of Molecular Neuroendocrinology, University of Cambridge; MRC Metabolic Diseases Unit director; presenter of BBC Horizon documentaries on obesity and nutrition",
+    "fields": [
+      "nutrition",
+      "obesity",
+      "genetics"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Molecular Neuroendocrinology, University of Cambridge",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Giles_Yeo"
+    }
   }
 ]

@@ -44878,6 +44878,82 @@
     ]
   },
   {
+    "id": "doac-WJcIfLUR6gg",
+    "episodeNumber": 310,
+    "episodeNumberSource": "estimate",
+    "title": "Belly fat burning hacks backed by research",
+    "originalTitle": "The Top 7 Belly Fat Burning Hacks For 2026 That Are PROVEN To Work!",
+    "slug": "multi-guest-belly-fat-hacks",
+    "date": "2023-12-26",
+    "duration": 4711,
+    "guestIds": [
+      "giles-yeo",
+      "mindy-pelz",
+      "matthew-walker",
+      "daniel-amen",
+      "gary-brecka",
+      "tim-spector",
+      "tara-swart",
+      "mo-gawdat"
+    ],
+    "topics": [
+      "nutrition",
+      "sleep",
+      "fitness"
+    ],
+    "description": "Yeo, Pelz, Walker, Amen, Brecka, Spector, and Swart on weight loss diets, sleep, stress, exercise myths, and brain health.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=WJcIfLUR6gg"
+    },
+    "thumbnail": "/portraits/giles-yeo.jpg",
+    "promotions": [],
+    "sponsors": [
+      {
+        "name": "Huel",
+        "url": "https://my.huel.com/daily-greens-uk",
+        "topical": true
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 68,
+        "title": "Gaining more weight when we age & how to keep it off"
+      },
+      {
+        "start": 442,
+        "title": "The best weight loss diets"
+      },
+      {
+        "start": 1148,
+        "title": "The relationship between sleep & weight gain"
+      },
+      {
+        "start": 1884,
+        "title": "How to have & maintain a healthy brain"
+      },
+      {
+        "start": 2252,
+        "title": "Free tools to become super human & strip fat off your body"
+      },
+      {
+        "start": 2824,
+        "title": "The myths about exercise and weight loss"
+      },
+      {
+        "start": 3413,
+        "title": "The contagion of stress & how its causing us to put on more weight"
+      },
+      {
+        "start": 3979,
+        "title": "Bonus moment, favourite moment from The Diary Of A CEO of all time"
+      }
+    ]
+  },
+  {
     "id": "doac-nTWXfo7narw",
     "episodeNumber": 268,
     "title": "Attachment styles and the patterns that shape relationships",
