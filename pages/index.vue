@@ -658,7 +658,11 @@ main > :not(.atmosphere) {
   }
 }
 
-.card-slot {
+/* Only stagger the first ~2 rows above the fold. Beyond that the user can't
+   see the animation, but `animation-fill-mode: both` would still hide the
+   card until its delay elapses — so e.g. the 500th card would be invisible
+   for ~35s. Cards past the cap render immediately at full opacity. */
+.card-slot:nth-child(-n+8) {
   animation: card-stagger-in 0.5s ease both;
   animation-delay: calc(var(--slot-index, 0) * 0.07s);
 }
@@ -685,7 +689,7 @@ main > :not(.atmosphere) {
   top: -2rem; /* halfway into the 4rem gap */
   left: 0;
   right: 0;
-  border-top: 1px dotted rgba(245, 236, 214, 0.12);
+  border-top: 1px solid rgba(245, 236, 214, 0.1);
   pointer-events: none;
   opacity: 1;
   transition: opacity 0.4s ease 0.2s; /* small delay so it appears after the card settles */

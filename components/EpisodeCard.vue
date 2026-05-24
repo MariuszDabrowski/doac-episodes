@@ -41,6 +41,25 @@ const portrait2xSrc = computed(() => {
   return props.episode.thumbnail2x || props.guests[0]?.portrait2x || null;
 });
 
+// Data stores the JPG path as canonical; the WebP/AVIF siblings are emitted
+// alongside it by scripts/auto-portrait.py. Derive them by extension swap.
+function asFormat(path, ext) {
+  return path ? path.replace(/\.jpg$/, ext) : null;
+}
+
+function srcset(oneX, twoX) {
+  if (!oneX) return undefined;
+  return twoX ? `${oneX} 1x, ${twoX} 2x` : oneX;
+}
+
+const portraitSrcsetAvif = computed(() =>
+  srcset(asFormat(portraitSrc.value, '.avif'), asFormat(portrait2xSrc.value, '.avif'))
+);
+const portraitSrcsetWebp = computed(() =>
+  srcset(asFormat(portraitSrc.value, '.webp'), asFormat(portrait2xSrc.value, '.webp'))
+);
+const portraitSrcsetJpg = computed(() => srcset(portraitSrc.value, portrait2xSrc.value));
+
 const portraitAlt = computed(() => props.guests[0]?.name || '');
 
 const expanded = ref(false);
@@ -111,13 +130,18 @@ const guestPromotionGroups = computed(() => {
         :aria-label="`Watch ${episode.title} on YouTube`"
       >
         <div class="portrait">
-          <img
-            v-if="portraitSrc"
-            :src="portraitSrc"
-            :srcset="portrait2xSrc ? `${portraitSrc} 1x, ${portrait2xSrc} 2x` : undefined"
-            :alt="portraitAlt"
-            class="portrait-img"
-          />
+          <picture v-if="portraitSrc">
+            <source type="image/avif" :srcset="portraitSrcsetAvif" />
+            <source type="image/webp" :srcset="portraitSrcsetWebp" />
+            <img
+              :src="portraitSrc"
+              :srcset="portraitSrcsetJpg"
+              :alt="portraitAlt"
+              class="portrait-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>
         </div>
       </a>

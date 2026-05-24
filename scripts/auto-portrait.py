@@ -14,6 +14,12 @@ import numpy as np
 import sys
 import os
 import glob
+from PIL import Image
+
+# Quality tunings matched against perceived JPEG-88 quality. AVIF is much
+# more efficient per byte; WebP sits between AVIF and JPEG.
+WEBP_QUALITY = 80
+AVIF_QUALITY = 55
 
 if len(sys.argv) < 3:
     print("Usage: auto-portrait.py <frames-dir> <output-jpg> [top-n=3]", file=sys.stderr)
@@ -282,6 +288,12 @@ for i, c in enumerate(top):
     crop_2x = crop_16_9(c["img"], c["bbox"], 1600, 900)
     cv2.imwrite(out_1x, crop_1x, [cv2.IMWRITE_JPEG_QUALITY, 88])
     cv2.imwrite(out_2x, crop_2x, [cv2.IMWRITE_JPEG_QUALITY, 88])
+    # Also write WebP + AVIF for the <picture> element to serve modern
+    # browsers. PIL needs RGB; cv2 hands us BGR.
+    for crop, out_jpg in ((crop_1x, out_1x), (crop_2x, out_2x)):
+        pil = Image.fromarray(cv2.cvtColor(crop, cv2.COLOR_BGR2RGB))
+        pil.save(out_jpg.replace(ext, ".webp"), "WEBP", quality=WEBP_QUALITY, method=6)
+        pil.save(out_jpg.replace(ext, ".avif"), "AVIF", quality=AVIF_QUALITY, speed=4)
     # Mean grayscale brightness (0-1) — used to compute uniform scrim
     gray = cv2.cvtColor(crop_1x, cv2.COLOR_BGR2GRAY)
     brightness = float(np.mean(gray)) / 255.0
