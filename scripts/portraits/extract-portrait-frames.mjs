@@ -14,13 +14,18 @@ const framesDir = `data/_frames/${videoId}`;
 await mkdir(framesDir, { recursive: true });
 
 // YouTube blocks unauthenticated yt-dlp on datacenter IPs (GitHub runners)
-// with a "confirm you're not a bot" challenge. When YT_COOKIES_FILE points
-// to a Netscape-format cookies file, pass it through so the requests look
-// like a signed-in browser session. Locally on a residential IP it's
-// usually unnecessary so the env var stays unset.
+// with a "confirm you're not a bot" challenge. Two layered defenses:
+//   1. If YT_COOKIES_FILE points to a Netscape-format cookies file, pass
+//      it through so the requests look like a signed-in browser session.
+//   2. Force the iOS InnerTube client. Web/Android clients get the bot
+//      challenge aggressively on datacenter IPs; the iOS client is
+//      currently far more lenient (see yt-dlp #11868). Stays effective
+//      whether or not we also have cookies.
+// Locally on a residential IP neither is strictly required.
 const cookieArgs = process.env.YT_COOKIES_FILE
   ? ['--cookies', process.env.YT_COOKIES_FILE]
   : [];
+const ytArgs = [...cookieArgs, '--extractor-args', 'youtube:player_client=ios'];
 
 function run(cmd, args, opts = {}) {
   return new Promise((resolve, reject) => {
@@ -44,12 +49,12 @@ console.log(`Resolving stream URL for ${videoId}…`);
 const formatSelector =
   'bestvideo[ext=mp4][height<=1080]/bestvideo[height<=1080]/best[height<=1080]/best';
 const streamUrl = (
-  await run('yt-dlp', [...cookieArgs, '-g', '-f', formatSelector, '--no-warnings', videoUrl], { capture: true })
+  await run('yt-dlp', [...ytArgs, '-g', '-f', formatSelector, '--no-warnings', videoUrl], { capture: true })
 )
   .trim()
   .split('\n')[0]; // some formats return video + audio URLs on separate lines, we only need video
 
-const durationStr = await run('yt-dlp', [...cookieArgs, '--print', 'duration', '--no-warnings', videoUrl], {
+const durationStr = await run('yt-dlp', [...ytArgs, '--print', 'duration', '--no-warnings', videoUrl], {
   capture: true,
 });
 const duration = parseFloat(durationStr.trim());

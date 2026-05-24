@@ -90,10 +90,21 @@ jobs:
           YT_COOKIES: ${{ secrets.YT_COOKIES }}
         run: |
           if [ -n "$YT_COOKIES" ]; then
-            printf '%s' "$YT_COOKIES" > "$RUNNER_TEMP/yt-cookies.txt"
+            # Use `printf %s\n` (with trailing newline) so the final line is
+            # terminated. yt-dlp's Netscape parser silently skips an
+            # unterminated last cookie, which has bitten people before.
+            printf '%s\n' "$YT_COOKIES" > "$RUNNER_TEMP/yt-cookies.txt"
             chmod 600 "$RUNNER_TEMP/yt-cookies.txt"
             echo "YT_COOKIES_FILE=$RUNNER_TEMP/yt-cookies.txt" >> "$GITHUB_ENV"
+            # Sanity-print non-sensitive shape so we can debug without
+            # leaking the secret: line count, first line (should be
+            # "# Netscape HTTP Cookie File"), and whether the file
+            # mentions youtube.com at all.
             echo "Using YT_COOKIES secret for yt-dlp"
+            echo "  bytes: $(wc -c < "$RUNNER_TEMP/yt-cookies.txt")"
+            echo "  lines: $(wc -l < "$RUNNER_TEMP/yt-cookies.txt")"
+            echo "  first line: $(head -1 "$RUNNER_TEMP/yt-cookies.txt")"
+            echo "  youtube cookies: $(grep -c '\.youtube\.com' "$RUNNER_TEMP/yt-cookies.txt" || true)"
           else
             echo "YT_COOKIES secret not set; proceeding without cookies"
           fi
