@@ -4344,5 +4344,705 @@
     "links": {
       "bio": "https://wikibio.in/dr-mindy-pelz/"
     }
+  },
+  {
+    "id": "wim-hof",
+    "name": "Wim Hof",
+    "portrait": "/portraits/wim-hof.jpg",
+    "portrait2x": "/portraits/wim-hof@2x.jpg",
+    "portraitBrightness": 0.29,
+    "credibilityLine": "Dutch extreme athlete and motivational speaker; multiple Guinness World Record holder for cold exposure feats; author of The Wim Hof Method; subject of scientific studies on cold exposure and breathing techniques.",
+    "fields": [
+      "cold exposure",
+      "resilience",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and creator of the Wim Hof Method",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Wim_Hof"
+    }
+  },
+  {
+    "id": "lisa-mosconi",
+    "name": "Dr Lisa Mosconi",
+    "portrait": "/portraits/lisa-mosconi.jpg",
+    "portrait2x": "/portraits/lisa-mosconi@2x.jpg",
+    "portraitBrightness": 0.324,
+    "credibilityLine": "Associate Professor of Neuroscience in Neurology and Radiology at Weill Cornell Medicine; director of Alzheimer's Prevention Program; PhD in Neuroscience and Nuclear Medicine from University of Florence; ranks in top 1% of scientists by official metrics; TED talk on menopause and brain health viewed over 4 million times",
+    "fields": [
+      "neuroscience",
+      "neurology",
+      "radiology",
+      "Alzheimer's prevention",
+      "menopause neurobiology"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "clinician"
+    ],
+    "credentials": [],
+    "currentRole": "Associate Professor of Neuroscience in Neurology and Radiology, Weill Cornell Medicine",
+    "links": {
+      "bio": "https://podcasts.apple.com/us/podcast/the-menopause-brain-insights-from-dr-lisa-mosconi-on/id1514866495?i=1000659890963"
+    }
+  },
+  {
+    "id": "simon-cowell",
+    "name": "Simon Cowell",
+    "portrait": "/portraits/simon-cowell.jpg",
+    "portrait2x": "/portraits/simon-cowell@2x.jpg",
+    "portraitBrightness": 0.188,
+    "credibilityLine": "Founded Syco Entertainment and Syco Music; created The X Factor (2004) and Got Talent (2007) franchises; judge on Pop Idol, American Idol, Britain's Got Talent, America's Got Talent; Time's 100 most influential people (2004, 2010); produced hits for Westlife, One Direction, Leona Lewis, Susan Boyle; author of The 33 Laws Of Business & Life.",
+    "fields": [
+      "music production",
+      "entertainment",
+      "talent"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Television personality, record executive, and founder of Syco Entertainment",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Simon_Cowell"
+    }
+  },
+  {
+    "id": "doctor-mike-varshavski",
+    "name": "Doctor Mike Varshavski",
+    "portrait": "/portraits/doctor-mike-varshavski.jpg",
+    "portrait2x": "/portraits/doctor-mike-varshavski@2x.jpg",
+    "portraitBrightness": 0.342,
+    "credibilityLine": "Board-certified family medicine doctor; primary care physician at Chatham Family Medicine; over 25 million social media followers; UNICEF USA Ambassador",
+    "fields": [
+      "medicine",
+      "public health",
+      "health communication"
+    ],
+    "roles": [
+      "clinician",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Primary Care Physician",
+    "links": {
+      "bio": "https://www.pri-med.com/globals/faculty/v/doctor-mike"
+    }
+  },
+  {
+    "id": "charlamagne-tha-god",
+    "name": "Charlamagne tha God",
+    "portrait": "/portraits/charlamagne-tha-god.jpg",
+    "portrait2x": "/portraits/charlamagne-tha-god@2x.jpg",
+    "portraitBrightness": 0.329,
+    "credibilityLine": "Co-host of The Breakfast Club (8 million monthly listeners); inducted into Radio Hall of Fame (2020); New York Times best-selling author; CEO of Black Effect Podcast Network; hosted Hell of a Week with Charlamagne tha God on Comedy Central",
+    "fields": [
+      "radio",
+      "media",
+      "mental health"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Co-host of The Breakfast Club, Power 105.1; CEO of Black Effect Podcast Network",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Charlamagne_tha_God"
+    }
+  },
+  {
+    "id": "michael-eisenberg",
+    "name": "Michael Eisenberg",
+    "portrait": "/portraits/michael-eisenberg.jpg",
+    "portrait2x": "/portraits/michael-eisenberg@2x.jpg",
+    "portraitBrightness": 0.443,
+    "credibilityLine": "MD, Professor of Urology at Stanford; board-certified urologist; male infertility and reproductive medicine specialist",
+    "fields": [
+      "urology",
+      "male infertility",
+      "reproductive medicine",
+      "men's health"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Urology, Stanford University",
+    "links": {
+      "bio": "https://med.stanford.edu/profiles/michael-eisenberg"
+    }
+  },
+  {
+    "id": "rebel-wilson",
+    "name": "Rebel Wilson",
+    "portrait": "/portraits/rebel-wilson.jpg",
+    "portrait2x": "/portraits/rebel-wilson@2x.jpg",
+    "portraitBrightness": 0.243,
+    "credibilityLine": "Australian actress, comedian and producer; starred in Bridesmaids, Pitch Perfect series, and Jojo Rabbit; author of Rebel Rising memoir.",
+    "fields": [
+      "acting",
+      "comedy",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Actress and Producer",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Rebel_Wilson"
+    }
+  },
+  {
+    "id": "russ-cook",
+    "name": "Russ Cook",
+    "portrait": "/portraits/russ-cook.jpg",
+    "portrait2x": "/portraits/russ-cook@2x.jpg",
+    "portraitBrightness": 0.263,
+    "credibilityLine": "Ultra-endurance athlete; first person to run the entire length of Africa (2024); first person to run from Asia to London; raised over £1 million for charity",
+    "fields": [
+      "fitness",
+      "endurance athletics",
+      "mental health"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Ultra-endurance athlete and content creator (Hardest Geezer)",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Russ_Cook"
+    }
+  },
+  {
+    "id": "johann-hari",
+    "name": "Johann Hari",
+    "portrait": "/portraits/johann-hari.jpg",
+    "portrait2x": "/portraits/johann-hari@2x.jpg",
+    "portraitBrightness": 0.27,
+    "credibilityLine": "New York Times best-selling author; wrote Chasing the Scream, Lost Connections, Stolen Focus, and Magic Pill; twice named National Newspaper Journalist of the Year by Amnesty International.",
+    "fields": [
+      "nutrition",
+      "science",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and journalist",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Johann_Hari"
+    }
+  },
+  {
+    "id": "gary-brecka",
+    "name": "Gary Brecka",
+    "portrait": "/portraits/gary-brecka.jpg",
+    "portrait2x": "/portraits/gary-brecka@2x.jpg",
+    "portraitBrightness": 0.358,
+    "credibilityLine": "Human Biologist and co-founder of 10X Health System; former mortality-modeling expert in insurance; works with CEOs and professional athletes (UFC, NFL, boxing) on biomarker analysis and health optimization",
+    "fields": [
+      "human biology",
+      "biohacking",
+      "functional medicine",
+      "longevity",
+      "biomarkers"
+    ],
+    "roles": [
+      "researcher",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder, 10X Health System; CEO, Streamline Wellness Anti-Aging & Rejuvenation Clinic",
+    "links": {
+      "bio": "https://agemed.org/cme-conferences/florida-april-2020/faculty/gary-brecka-human-biologist/"
+    }
+  },
+  {
+    "id": "jocko-willink",
+    "name": "Jocko Willink",
+    "portrait": "/portraits/jocko-willink.jpg",
+    "portrait2x": "/portraits/jocko-willink@2x.jpg",
+    "portraitBrightness": 0.36,
+    "credibilityLine": "Retired Navy SEAL lieutenant commander; commanded SEAL Team 3's Task Unit Bruiser in Iraq; Silver Star and Bronze Star recipient; co-authored Extreme Ownership and The Dichotomy of Leadership; co-founder of Echelon Front; host of Jocko Podcast",
+    "fields": [
+      "leadership",
+      "military strategy",
+      "psychology"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Retired Navy SEAL officer; co-founder and leadership consultant at Echelon Front; host of Jocko Podcast",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jocko_Willink"
+    }
+  },
+  {
+    "id": "jimmy-carr",
+    "name": "Jimmy Carr",
+    "portrait": "/portraits/jimmy-carr.jpg",
+    "portrait2x": "/portraits/jimmy-carr@2x.jpg",
+    "portraitBrightness": 0.208,
+    "credibilityLine": "Award-winning stand-up comedian; host of Channel 4 panel shows including The Big Fat Quiz of the Year, 8 Out of 10 Cats, and 8 Out of 10 Cats Does Countdown; released Netflix special Natural Born Killer (2024)",
+    "fields": [
+      "comedy",
+      "culture",
+      "psychology"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Stand-up Comedian and TV Host",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jimmy_Carr"
+    }
+  },
+  {
+    "id": "mark-hyman",
+    "name": "Dr Mark Hyman",
+    "portrait": "/portraits/mark-hyman.jpg",
+    "portrait2x": "/portraits/mark-hyman@2x.jpg",
+    "portraitBrightness": 0.421,
+    "credibilityLine": "Functional medicine practitioner; founder of The UltraWellness Center",
+    "fields": [
+      "functional medicine",
+      "longevity",
+      "wellness"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Functional medicine practitioner and founder",
+    "links": {}
+  },
+  {
+    "id": "ronda-rousey",
+    "name": "Ronda Rousey",
+    "portrait": "/portraits/ronda-rousey.jpg",
+    "portrait2x": "/portraits/ronda-rousey@2x.jpg",
+    "portraitBrightness": 0.398,
+    "credibilityLine": "First American woman to win an Olympic medal in judo (bronze, 2008 Olympics); UFC Women's Bantamweight Champion 2012–2015; first female fighter inducted into UFC Hall of Fame (2018); WWE Raw Women's Champion; author of Our Fight memoir.",
+    "fields": [
+      "martial arts",
+      "psychology",
+      "resilience"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Semi-retired professional wrestler and actress",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ronda_Rousey"
+    }
+  },
+  {
+    "id": "tim-dillon",
+    "name": "Tim Dillon",
+    "portrait": "/portraits/tim-dillon.jpg",
+    "portrait2x": "/portraits/tim-dillon@2x.jpg",
+    "portraitBrightness": 0.366,
+    "credibilityLine": "Stand-up comedian and podcaster; host of The Tim Dillon Show; named one of \"10 Comedians You Need to Know\" by Rolling Stone (2017); released Netflix special Tim Dillon: A Real Hero (2022)",
+    "fields": [
+      "comedy",
+      "mental health",
+      "culture"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Stand-up comedian and host of The Tim Dillon Show podcast",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Tim_Dillon_(comedian)"
+    }
+  },
+  {
+    "id": "george-heaton",
+    "name": "George Heaton",
+    "portrait": "/portraits/george-heaton.jpg",
+    "portrait2x": "/portraits/george-heaton@2x.jpg",
+    "portraitBrightness": 0.337,
+    "credibilityLine": "Co-founder of Represent, a British luxury streetwear brand; entrepreneur and social media personality",
+    "fields": [
+      "fashion",
+      "streetwear",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "entrepreneur",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder and Creative Director, Represent",
+    "links": {
+      "bio": "https://www.famousbirthdays.com/people/george-heaton.html"
+    }
+  },
+  {
+    "id": "paul-conti",
+    "name": "Paul Conti",
+    "portrait": "/portraits/paul-conti.jpg",
+    "portrait2x": "/portraits/paul-conti@2x.jpg",
+    "portraitBrightness": 0.444,
+    "credibilityLine": "Board-certified psychiatrist; founder and CEO of Pacific Premier Group, P.C.; author of Trauma: The Invisible Epidemic and What's Going Right",
+    "fields": [
+      "psychiatry",
+      "trauma",
+      "mental health"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Board-Certified Psychiatrist and Founder/CEO, Pacific Premier Group, P.C.",
+    "links": {
+      "bio": "https://drpaulconti.com/"
+    }
+  },
+  {
+    "id": "layne-norton",
+    "name": "Dr. Layne Norton",
+    "portrait": "/portraits/layne-norton.jpg",
+    "portrait2x": "/portraits/layne-norton@2x.jpg",
+    "portraitBrightness": 0.347,
+    "credibilityLine": "PhD in Nutritional Science; founder of BioLayne LLC; co-founder of Carbon Diet Coach; USAPL two-time National Champion in natural bodybuilding; IPF World Record holder (squat, 93 kg class).",
+    "fields": [
+      "nutrition",
+      "nutritional sciences",
+      "fitness",
+      "bodybuilding",
+      "strength training"
+    ],
+    "roles": [
+      "researcher",
+      "practitioner",
+      "educator",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, BioLayne LLC; PhD scientist and fitness educator",
+    "links": {
+      "bio": "https://www.famousbirthdays.com/people/dr--layne-norton.html"
+    }
+  },
+  {
+    "id": "lori-gottlieb",
+    "name": "Lori Gottlieb",
+    "portrait": "/portraits/lori-gottlieb.jpg",
+    "portrait2x": "/portraits/lori-gottlieb@2x.jpg",
+    "portraitBrightness": 0.448,
+    "credibilityLine": "Licensed Marriage and Family Therapist; author of New York Times bestsellers Maybe You Should Talk to Someone and Marry Him; co-host of Dear Therapists podcast; TED Talk one of most-watched in 2019",
+    "fields": [
+      "psychology",
+      "marriage/relationships",
+      "mental health"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Psychotherapist and bestselling author; co-host of Dear Therapists podcast",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Lori_Gottlieb"
+    }
+  },
+  {
+    "id": "ramani-durvasula",
+    "name": "Dr Ramani Durvasula",
+    "portrait": "/portraits/ramani-durvasula.jpg",
+    "portrait2x": "/portraits/ramani-durvasula@2x.jpg",
+    "portraitBrightness": 0.385,
+    "credibilityLine": "Psychologist and expert on narcissistic personality disorder",
+    "fields": [
+      "psychology",
+      "mental health",
+      "narcissistic personality disorder"
+    ],
+    "roles": [
+      "clinician",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Clinical Psychologist",
+    "links": {
+      "bio": "https://www.reddit.com/r/NPD/comments/mzuomz/dr_ramani_where_does_she_get_it_right_and_where/"
+    }
+  },
+  {
+    "id": "andy-galpin",
+    "name": "Andy Galpin",
+    "portrait": "/portraits/andy-galpin.jpg",
+    "portrait2x": "/portraits/andy-galpin@2x.jpg",
+    "portraitBrightness": 0.33,
+    "credibilityLine": "PhD in Human Bioenergetics; spent 13 years directing the Biochemistry & Molecular Exercise Physiology Lab and Center for Sport Performance at Cal State Fullerton; now Executive Director of the Human Performance Center at Parker University",
+    "fields": [
+      "exercise physiology",
+      "muscle physiology",
+      "strength and conditioning",
+      "human performance"
+    ],
+    "roles": [
+      "researcher",
+      "practitioner",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Executive Director, Human Performance Center at Parker University",
+    "links": {
+      "bio": "https://www.andygalpin.com/"
+    }
+  },
+  {
+    "id": "karen-gurney",
+    "name": "Dr Karen Gurney",
+    "portrait": "/portraits/karen-gurney.jpg",
+    "portrait2x": "/portraits/karen-gurney@2x.jpg",
+    "portraitBrightness": 0.372,
+    "credibilityLine": "Consultant clinical psychologist and certified psychosexologist; recognised national expert in sexual wellbeing and therapy; Head of Wellbeing Services at 56 Dean Street sexual health clinic; Director of The Havelock Clinic",
+    "fields": [
+      "sexuality",
+      "psychology",
+      "psychosexology",
+      "sexual health"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Consultant Clinical Psychologist and Certified Psychosexologist",
+    "links": {
+      "bio": "https://www.amazon.co.uk/stores/author/B0834TYN78"
+    }
+  },
+  {
+    "id": "justin-mcleod",
+    "name": "Justin McLeod",
+    "portrait": "/portraits/justin-mcleod.jpg",
+    "portrait2x": "/portraits/justin-mcleod@2x.jpg",
+    "portraitBrightness": 0.34,
+    "credibilityLine": "Founder and CEO of Hinge, a dating app; Harvard Business School graduate; previously worked in management consulting",
+    "fields": [
+      "dating",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "founder",
+      "entrepreneur"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and CEO, Hinge",
+    "links": {
+      "bio": "https://www.aspenideas.org/speakers/justin-mcleod"
+    }
+  },
+  {
+    "id": "adam-grant",
+    "name": "Adam Grant",
+    "portrait": "/portraits/adam-grant.jpg",
+    "portrait2x": "/portraits/adam-grant@2x.jpg",
+    "portraitBrightness": 0.303,
+    "credibilityLine": "Organizational psychology professor, Wharton School of the University of Pennsylvania; author of Give and Take, Originals, and Hidden Potential; ranked Wharton's best professor by students 2011–2017.",
+    "fields": [
+      "organizational psychology",
+      "leadership",
+      "productivity"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Organizational Psychology, Wharton School of the University of Pennsylvania",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Adam_Grant"
+    }
+  },
+  {
+    "id": "daniel-lieberman",
+    "name": "Dr Daniel E. Lieberman",
+    "portrait": "/portraits/daniel-lieberman.jpg",
+    "portrait2x": "/portraits/daniel-lieberman@2x.jpg",
+    "portraitBrightness": 0.352,
+    "credibilityLine": "Edwin M Lerner II Professor of Biological Sciences, Harvard University; paleoanthropologist specializing in human evolution and exercise physiology; elected to American Academy of Arts and Sciences; author of Exercised and The Story of the Human Body",
+    "fields": [
+      "evolutionary biology",
+      "neuroscience",
+      "exercise physiology"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Biological Sciences and Human Evolutionary Biology, Harvard University",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Daniel_Lieberman"
+    }
+  },
+  {
+    "id": "chris-palmer",
+    "name": "Chris Palmer",
+    "portrait": "/portraits/chris-palmer.jpg",
+    "portrait2x": "/portraits/chris-palmer@2x.jpg",
+    "portraitBrightness": 0.355,
+    "credibilityLine": "Unable to verify identity—the guest appears to be Chris Palmer (psychiatrist, metabolic psychiatry), but all search results returned different Chris Palmers (film producer, actor). No authoritative bio for the psychiatrist was found in available sources.",
+    "fields": [
+      "psychiatry",
+      "metabolic psychiatry",
+      "mental health"
+    ],
+    "roles": [
+      "clinician",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Psychiatrist",
+    "links": {}
+  },
+  {
+    "id": "jason-fung",
+    "name": "Jason Fung",
+    "portrait": "/portraits/jason-fung.jpg",
+    "portrait2x": "/portraits/jason-fung@2x.jpg",
+    "portraitBrightness": 0.372,
+    "credibilityLine": "Canadian nephrologist; MD from University of Toronto; author of The Obesity Code, The Diabetes Code, The Cancer Code, and The Complete Guide to Fasting.",
+    "fields": [
+      "nutrition",
+      "endocrinology",
+      "diabetes"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Nephrologist and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jason_Fung"
+    }
+  },
+  {
+    "id": "arthur",
+    "name": "Arthur",
+    "portrait": "/portraits/arthur.jpg",
+    "portrait2x": "/portraits/arthur@2x.jpg",
+    "portraitBrightness": 0.356,
+    "credibilityLine": "Unable to verify identity - search results returned King Arthur (legendary figure) and Arthur Conan Doyle (1859–1930, Scottish writer), neither matching a happiness researcher",
+    "fields": [
+      "psychology",
+      "mental-health"
+    ],
+    "roles": [
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "<UNKNOWN>",
+    "links": {}
+  },
+  {
+    "id": "thierry-henry",
+    "name": "Thierry Henry",
+    "portrait": "/portraits/thierry-henry.jpg",
+    "portrait2x": "/portraits/thierry-henry@2x.jpg",
+    "portraitBrightness": 0.365,
+    "credibilityLine": "French professional footballer and coach; Arsenal's all-time leading scorer with 228 goals; back-to-back European Golden Shoe winner; FWA Footballer of the Year three times; named in FIFA 100 list by Pelé; now sports broadcaster and pundit.",
+    "fields": [
+      "football",
+      "mental health",
+      "sports psychology"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Professional football coach, pundit, and sports broadcaster",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Thierry_Henry"
+    }
+  },
+  {
+    "id": "kristen-holmes",
+    "name": "Kristen Holmes",
+    "portrait": "/portraits/kristen-holmes.jpg",
+    "portrait2x": "/portraits/kristen-holmes@2x.jpg",
+    "portraitBrightness": 0.304,
+    "credibilityLine": "Global Head of Human Performance and Principal Scientist at WHOOP; specializes in biometric optimization for sleep, recovery, and athletic performance.",
+    "fields": [
+      "sleep science",
+      "human performance",
+      "sports science",
+      "recovery optimization"
+    ],
+    "roles": [
+      "researcher",
+      "practitioner",
+      "scientist"
+    ],
+    "credentials": [],
+    "currentRole": "Global Head of Human Performance and Principal Scientist at WHOOP",
+    "links": {
+      "bio": "https://www.allamericanspeakers.com/celebritytalentbios/Dr.+Kristen+Holmes/463111"
+    }
+  },
+  {
+    "id": "alain-de-botton",
+    "name": "Alain De Botton",
+    "portrait": "/portraits/alain-de-botton.jpg",
+    "portrait2x": "/portraits/alain-de-botton@2x.jpg",
+    "portraitBrightness": 0.366,
+    "credibilityLine": "Swiss-born British author; founded The School of Life; published Essays in Love (sold 2 million copies), How Proust Can Change Your Life, Status Anxiety, The Architecture of Happiness, and A Therapeutic Journey; Fellow of the Royal Society of Literature.",
+    "fields": [
+      "philosophy",
+      "psychology",
+      "relationships"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Director, The School of Life",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Alain_de_Botton"
+    }
   }
 ]
