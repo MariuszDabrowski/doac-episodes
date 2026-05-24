@@ -24,6 +24,8 @@ direction it describes.** Concretely:
   `EPISODE_INGESTION.md`
 - Changing the review page (new editable field, new API route, different
   persistence) → update `REVIEW_PAGE.md`
+- Changing what someone needs to know to clone and run the project (stack
+  shift, new script, new env var, new top-level folder) → update `README.md`
 - Resolving an open question → move it out of the Open Questions list with the
   decision recorded in the relevant section
 

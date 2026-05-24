@@ -131,54 +131,6 @@ watch(filterStateKey, () => {
 
 // Modal state. Focus trap + Escape close live inside BaseModal.
 const aboutOpen = ref(false);
-const funFactsOpen = ref(false);
-
-// Pre-compute catalog stats once, surfaced in the Fun facts modal.
-const funFactsStats = computed(() => {
-  const appearancesByGuest = {};
-  const topicCounts = {};
-  const clusterEpisodes = {};
-  let totalSeconds = 0;
-
-  for (const ep of episodesData) {
-    totalSeconds += ep.duration || 0;
-    for (const id of ep.guestIds) {
-      appearancesByGuest[id] = (appearancesByGuest[id] || 0) + 1;
-    }
-    const seenClusters = new Set();
-    for (const tid of ep.topics) {
-      topicCounts[tid] = (topicCounts[tid] || 0) + 1;
-      const cluster = topicsById[tid]?.cluster;
-      if (cluster && !seenClusters.has(cluster)) {
-        clusterEpisodes[cluster] = (clusterEpisodes[cluster] || 0) + 1;
-        seenClusters.add(cluster);
-      }
-    }
-  }
-
-  const topGuest = Object.entries(appearancesByGuest)
-    .sort((a, b) => b[1] - a[1])[0];
-  const topTopics = Object.entries(topicCounts)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 3)
-    .map(([id, count]) => ({ label: topicsById[id]?.label || id, count }));
-  const topCluster = Object.entries(clusterEpisodes)
-    .sort((a, b) => b[1] - a[1])[0];
-  const topClusterLabel = topCluster
-    ? clusters.find((c) => c.id === topCluster[0])?.label
-    : null;
-
-  return {
-    totalEpisodes: episodesData.length,
-    totalGuests: Object.keys(appearancesByGuest).length,
-    totalHours: Math.round(totalSeconds / 3600),
-    topGuest: topGuest
-      ? { name: guestsById[topGuest[0]]?.name || topGuest[0], count: topGuest[1] }
-      : null,
-    topTopics,
-    topCluster: topCluster ? { label: topClusterLabel, count: topCluster[1] } : null,
-  };
-});
 
 // Sticky mini-header appears once the results bar has scrolled past.
 const resultsBarEl = ref(null);
@@ -211,11 +163,6 @@ onUnmounted(() => {
     <SiteHeader :visible="showHeader" />
 
     <div class="page-corner-actions">
-      <button
-        type="button"
-        class="page-corner-button"
-        @click="funFactsOpen = true"
-      >Fun facts</button>
       <button
         type="button"
         class="page-corner-button"
@@ -318,44 +265,6 @@ onUnmounted(() => {
       </p>
     </BaseModal>
 
-    <BaseModal
-      :open="funFactsOpen"
-      title="Fun facts"
-      @close="funFactsOpen = false"
-    >
-      <dl class="fun-facts">
-        <dt>Catalog</dt>
-        <dd>
-          {{ funFactsStats.totalEpisodes }} episodes,
-          {{ funFactsStats.totalGuests }} unique guests, roughly
-          {{ funFactsStats.totalHours }} hours of total audio.
-        </dd>
-        <template v-if="funFactsStats.topGuest">
-          <dt>Most frequent guest</dt>
-          <dd>
-            <strong>{{ funFactsStats.topGuest.name }}</strong>
-            ({{ funFactsStats.topGuest.count }}
-            appearance{{ funFactsStats.topGuest.count === 1 ? '' : 's' }}).
-          </dd>
-        </template>
-        <template v-if="funFactsStats.topTopics.length">
-          <dt>Most-tagged topics</dt>
-          <dd>
-            <span v-for="(t, i) in funFactsStats.topTopics" :key="t.label">
-              <strong>{{ t.label }}</strong> ({{ t.count }}){{ i < funFactsStats.topTopics.length - 1 ? ', ' : '.' }}
-            </span>
-          </dd>
-        </template>
-        <template v-if="funFactsStats.topCluster">
-          <dt>Most-discussed area</dt>
-          <dd>
-            <strong>{{ funFactsStats.topCluster.label }}</strong>,
-            on {{ funFactsStats.topCluster.count }} episodes.
-          </dd>
-        </template>
-      </dl>
-    </BaseModal>
-
   </main>
 </template>
 
@@ -418,31 +327,6 @@ main {
 .page-corner-button:focus-visible {
   outline: 2px solid #c89968;
   outline-offset: 2px;
-}
-
-/* Fun facts <dl> styling — BaseModal handles backdrop/panel/typography. */
-.fun-facts {
-  margin: 0;
-  padding: 0;
-}
-
-.fun-facts dt {
-  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #c89968;
-  margin-bottom: 0.25rem;
-}
-
-.fun-facts dd {
-  margin: 0 0 1.25rem;
-  color: #c4b89f;
-}
-
-.fun-facts dd:last-of-type {
-  margin-bottom: 0;
 }
 
 .results-bar {
