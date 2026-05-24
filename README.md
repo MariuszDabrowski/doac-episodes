@@ -94,10 +94,34 @@ specs/                    PROJECT_BRIEF, EPISODE_INGESTION, REVIEW_PAGE
 
 ## Automation
 
-A scheduled GitHub Action (every 6 hours) polls the channel for new
-long-form uploads, runs the full pipeline on each, and opens a draft PR
-with the data + portrait changes. A merge triggers the deploy workflow,
-which publishes the new build to GitHub Pages. Setup (secrets, Pages source, PR permissions) is documented at
+`scripts/ingest/auto-ingest.sh` is the periodic-poll runner: refresh the
+YouTube catalog, ingest any new long-form episodes, commit + push,
+notify on macOS with the count. Pushing fires `deploy.yml`, which builds
+the site and publishes to GitHub Pages.
+
+Workflow for "leave it running for a while":
+
+```sh
+cd ~/Sites/doac-episodes
+while true; do
+  ./scripts/ingest/auto-ingest.sh
+  echo "--- next check at $(date -v+6H '+%H:%M') ---"
+  sleep 21600   # 6h
+done
+```
+
+Paste into a terminal tab (optionally inside `tmux new -s doac` so a
+closed window doesn't kill it). Closing the tab/laptop stops the loop;
+restart with the same paste when you come back. Notifications fire on
+every cycle. Tail `/tmp/doac-auto-ingest.log` if you wired cron instead
+(see the script header for the cron line).
+
+The companion GitHub Action at
+[.github/workflows/ingest-new-episodes.yml](.github/workflows/ingest-new-episodes.yml)
+is disabled: YouTube downgrades CI runner IPs to a stripped player that
+returns only storyboards, even with valid cookies. The workflow file
+stays in place (manual dispatch only) in case YouTube ever relaxes.
+Setup notes for the deploy workflow + Pages source are at
 [.github/workflows/README.md](.github/workflows/README.md).
 
 ## Specs

@@ -1,16 +1,17 @@
 # Workflows
 
-Two GitHub Actions workflows automate the site:
-
-- **`ingest-new-episodes.yml`** runs on a 6-hour schedule (and on manual
-  dispatch). It refreshes the YouTube catalog, ingests any new long-form
-  episodes (≥30 min) through the full pipeline, and opens a draft PR
-  with the resulting `data/*.json` + portrait file changes.
-- **`deploy.yml`** runs on pushes to `main`. It builds the Vite app and
+- **`deploy.yml`** runs on pushes to `main`. Builds the Vite app and
   publishes `dist/` to GitHub Pages.
+- **`ingest-new-episodes.yml`** is **disabled**: schedule trigger
+  removed because YouTube downgrades the runner IP to a stripped player
+  that returns only storyboard images, even with valid signed-in
+  cookies. The file stays in place (manual dispatch only) so it's easy
+  to re-enable if YouTube ever relaxes. Day-to-day ingestion runs
+  locally via `scripts/ingest/auto-ingest.sh`, see the top-level
+  README's Automation section.
 
-The flow: schedule fires, ingest opens a draft PR, reviewer (you) checks
-the new portraits + titles + descriptions, merges. Merge fires deploy.
+Flow: local `auto-ingest.sh` ingests + commits + pushes; push fires
+`deploy.yml`, which builds and publishes.
 
 ## One-time setup
 
