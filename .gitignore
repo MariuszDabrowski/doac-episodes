@@ -11,5 +11,4 @@ dist/
 .venv/
 
 # Raw/working data files (regeneratable). Curated JSON has no underscore prefix.
-data/_*.json
-data/_*/
+data/_*

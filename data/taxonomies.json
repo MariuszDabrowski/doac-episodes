@@ -21,6 +21,7 @@
     { "id": "focus", "label": "Focus", "cluster": "mind" },
     { "id": "addiction", "label": "Addiction", "cluster": "mind" },
     { "id": "trauma", "label": "Trauma", "cluster": "mind" },
+    { "id": "science", "label": "Science", "cluster": "mind" },
 
     { "id": "founders", "label": "Founders", "cluster": "business" },
     { "id": "leadership", "label": "Leadership", "cluster": "business" },
@@ -30,10 +31,13 @@
     { "id": "dating", "label": "Dating", "cluster": "relationships" },
     { "id": "marriage", "label": "Marriage", "cluster": "relationships" },
     { "id": "parenting", "label": "Parenting", "cluster": "relationships" },
+    { "id": "sexuality", "label": "Sexuality", "cluster": "relationships" },
 
     { "id": "politics", "label": "Politics", "cluster": "society" },
     { "id": "media", "label": "Media", "cluster": "society" },
-    { "id": "culture", "label": "Culture", "cluster": "society" }
+    { "id": "culture", "label": "Culture", "cluster": "society" },
+    { "id": "geopolitics", "label": "Geopolitics", "cluster": "society" },
+    { "id": "ai", "label": "AI", "cluster": "society" }
   ],
 
   "clusters": [

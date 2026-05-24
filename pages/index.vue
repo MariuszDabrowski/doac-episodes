@@ -179,6 +179,18 @@ const resultSummary = computed(() => {
 
 watch(activeCluster, () => nextTick(updateIndicator));
 
+// Tag <body> with .is-scrolling for a short window after each scroll.
+// CSS uses this to suppress hover-triggered effects (e.g. credibility
+// expand) while the cursor is passing over cards involuntarily.
+let scrollSuppressTimer = null;
+function onScrollSuppress() {
+  document.body.classList.add('is-scrolling');
+  clearTimeout(scrollSuppressTimer);
+  scrollSuppressTimer = setTimeout(() => {
+    document.body.classList.remove('is-scrolling');
+  }, 150);
+}
+
 onMounted(() => {
   nextTick(() => {
     updateIndicator();
@@ -189,10 +201,13 @@ onMounted(() => {
     });
   });
   window.addEventListener('resize', updateIndicator);
+  window.addEventListener('scroll', onScrollSuppress, { passive: true });
 });
 
 onUnmounted(() => {
   window.removeEventListener('resize', updateIndicator);
+  window.removeEventListener('scroll', onScrollSuppress);
+  clearTimeout(scrollSuppressTimer);
 });
 </script>
 

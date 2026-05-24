@@ -15,7 +15,8 @@
     "ingest": "node scripts/ingest-episode.mjs",
     "ingest:batch": "node scripts/ingest-batch.mjs",
     "topic-candidates": "node scripts/topic-candidates.mjs",
-    "renumber": "node scripts/renumber-episodes.mjs"
+    "renumber": "node scripts/renumber-episodes.mjs",
+    "retag": "node scripts/retag-episodes.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.98.0",

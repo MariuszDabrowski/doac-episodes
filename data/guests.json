@@ -63,7 +63,7 @@
     "name": "Andrew Huberman",
     "portrait": "/portraits/andrew-huberman.jpg",
     "portrait2x": "/portraits/andrew-huberman@2x.jpg",
-    "portraitBrightness": 0.391,
+    "portraitBrightness": 0.396,
     "credibilityLine": "Stanford neuroscientist; runs the Huberman Lab podcast; researcher in neural circuits and visual neuroscience.",
     "fields": [
       "neuroscience"
@@ -189,7 +189,7 @@
     "name": "Ivanka Trump",
     "portrait": "/portraits/ivanka-trump.jpg",
     "portrait2x": "/portraits/ivanka-trump@2x.jpg",
-    "portraitBrightness": 0.212,
+    "portraitBrightness": 0.221,
     "credibilityLine": "Former Executive Vice President at Trump Organization; former Senior Advisor in the Trump White House; bestselling author.",
     "fields": [
       "business",
@@ -290,11 +290,11 @@
     "portrait": "/portraits/michio-kaku.jpg",
     "portrait2x": "/portraits/michio-kaku@2x.jpg",
     "portraitBrightness": 0.319,
-    "credibilityLine": "Theoretical physicist; co-founder of String Field Theory; Professor at City College of New York; author of Quantum Supremacy and multiple bestselling popular science books",
+    "credibilityLine": "Theoretical physicist at City College of New York and CUNY Graduate Center; co-founder of String Field Theory; author of Physics of the Impossible, Physics of the Future, The Future of the Mind, and The God Equation: The Quest for a Theory of Everything (all New York Times bestsellers); 2021 Sir Arthur Clarke Lifetime Achievement Awardee.",
     "fields": [
-      "physics",
-      "quantum computing",
-      "cosmology"
+      "theoretical physics",
+      "cosmology",
+      "quantum computing"
     ],
     "roles": [
       "academic",
@@ -303,31 +303,33 @@
       "public-figure"
     ],
     "credentials": [],
-    "currentRole": "Professor of Theoretical Physics, City College of New York",
+    "currentRole": "Professor of Theoretical Physics, City College of New York and CUNY Graduate Center",
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Michio_Kaku"
     }
   },
   {
     "id": "david-unwin",
-    "name": "Dr. David Unwin",
+    "name": "David Unwin",
     "portrait": "/portraits/david-unwin.jpg",
     "portrait2x": "/portraits/david-unwin@2x.jpg",
     "portraitBrightness": 0.299,
-    "credibilityLine": "NHS GP with 40+ years in general practice; NHS Innovator of the Year (2016); co-author of most-read paper in BMJ Open on reversing Type 2 diabetes through low-carbohydrate diet; put 157 patients into drug-free diabetes remission using diet alone.",
+    "credibilityLine": "NHS GP since 1986; Royal College of General Practitioners Fellow (elected 2008) and national champion for collaborative care in obesity and diabetes; NHS Innovator of the Year 2016 for low-carbohydrate diabetes management; published peer-reviewed research on Type 2 diabetes reversal through dietary intervention",
     "fields": [
       "nutrition",
-      "diabetes",
-      "longevity"
+      "Type 2 diabetes management",
+      "low-carbohydrate diet",
+      "primary care"
     ],
     "roles": [
       "clinician",
-      "researcher",
-      "author"
+      "researcher"
     ],
     "credentials": [],
-    "currentRole": "NHS GP (General Practitioner)",
-    "links": {}
+    "currentRole": "NHS General Practitioner",
+    "links": {
+      "bio": "https://www.dietdoctor.com/authors/dr-david-unwin"
+    }
   },
   {
     "id": "anne-applebaum",
@@ -335,19 +337,19 @@
     "portrait": "/portraits/anne-applebaum.jpg",
     "portrait2x": "/portraits/anne-applebaum@2x.jpg",
     "portraitBrightness": 0.42,
-    "credibilityLine": "Staff writer at The Atlantic; senior fellow at SNF Agora Institute at Johns Hopkins University and School of Advanced International Studies; author of Autocracy, Inc. and other books on authoritarianism and democratic collapse",
+    "credibilityLine": "Pulitzer Prize winner (General Nonfiction, 2004, for Gulag: A History); staff writer at The Atlantic; senior fellow at SNF Agora Institute and School of Advanced International Studies, Johns Hopkins University; author of Autocracy, Inc.",
     "fields": [
+      "history",
       "politics",
-      "authoritarianism",
-      "history"
+      "journalism"
     ],
     "roles": [
       "author",
-      "researcher",
-      "public-figure"
+      "journalist",
+      "academic"
     ],
     "credentials": [],
-    "currentRole": "Staff writer, The Atlantic; Senior Fellow, SNF Agora Institute at Johns Hopkins University",
+    "currentRole": "Staff Writer, The Atlantic; Senior Fellow, SNF Agora Institute and SAIS, Johns Hopkins University",
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Anne_Applebaum"
     }
@@ -358,20 +360,21 @@
     "portrait": "/portraits/professor-jiang.jpg",
     "portrait2x": "/portraits/professor-jiang@2x.jpg",
     "portraitBrightness": 0.299,
-    "credibilityLine": "Host of YouTube channel Predictive History; geopolitical analyst using history, geography, economics, and game theory; writes geopolitical analysis on Substack",
+    "credibilityLine": "High school educator and host of YouTube channel Predictive History; uses historical analysis and game theory to analyze geopolitical developments",
     "fields": [
       "geopolitics",
-      "international relations",
+      "education",
       "history"
     ],
     "roles": [
-      "analyst",
-      "author",
+      "educator",
       "public-figure"
     ],
     "credentials": [],
-    "currentRole": "Geopolitical analyst, writer, and YouTube content creator",
-    "links": {}
+    "currentRole": "High school teacher and content creator",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Jiang_Xueqin"
+    }
   },
   {
     "id": "scott-galloway",
@@ -379,18 +382,22 @@
     "portrait": "/portraits/scott-galloway.jpg",
     "portrait2x": "/portraits/scott-galloway@2x.jpg",
     "portraitBrightness": 0.271,
-    "credibilityLine": "Professor of Marketing at NYU Stern; author of The Four, The Algebra of Happiness, Post Corona, and Notes on Being a Man",
+    "credibilityLine": "Clinical Professor of Marketing at NYU Stern; entrepreneur who founded Prophet, L2, RedEnvelope, and Section4; podcast host and author; named one of the world's 50 best business professors by Poets & Quants.",
     "fields": [
       "marketing",
-      "brand strategy",
-      "digital marketing"
+      "digital strategy",
+      "technology criticism",
+      "brand strategy"
     ],
     "roles": [
       "academic",
-      "author"
+      "researcher",
+      "entrepreneur",
+      "author",
+      "public-figure"
     ],
     "credentials": [],
-    "currentRole": "Professor of Marketing, NYU Stern School of Business",
+    "currentRole": "Clinical Professor of Marketing, NYU Stern School of Business",
     "links": {
       "bio": "https://www.stern.nyu.edu/faculty/bio/scott-galloway"
     }
@@ -401,36 +408,43 @@
     "portrait": "/portraits/ben-felix.jpg",
     "portrait2x": "/portraits/ben-felix@2x.jpg",
     "portraitBrightness": 0.304,
-    "credibilityLine": "Portfolio manager at PWL Capital; evidence-based investing and behavioral finance",
+    "credibilityLine": "Portfolio Manager and Head of Research at PWL Capital; CFA charterholder and CFP professional; mechanical engineering degree and MBA",
     "fields": [
       "investing",
-      "behavioral finance"
+      "behavioral finance",
+      "portfolio management"
     ],
     "roles": [
-      "practitioner"
+      "practitioner",
+      "researcher"
     ],
     "credentials": [],
-    "currentRole": "Portfolio Manager, PWL Capital",
-    "links": {}
+    "currentRole": "Portfolio Manager and Head of Research, PWL Capital",
+    "links": {
+      "bio": "https://www.youtube.com/@BenFelixCSI"
+    }
   },
   {
     "id": "rena-malik",
-    "name": "Dr Rena Malik",
+    "name": "Dr. Rena Malik",
     "portrait": "/portraits/rena-malik.jpg",
     "portrait2x": "/portraits/rena-malik@2x.jpg",
     "portraitBrightness": 0.184,
-    "credibilityLine": "Urologist and sexual health expert",
+    "credibilityLine": "Board-certified, fellowship-trained urologist and pelvic surgeon; specializes in sexual medicine and female pelvic medicine; 3 million followers across social platforms",
     "fields": [
-      "sexual health",
-      "urology"
+      "urology",
+      "sexual medicine",
+      "pelvic health"
     ],
     "roles": [
       "clinician",
-      "practitioner"
+      "public-figure"
     ],
     "credentials": [],
-    "currentRole": "Urologist",
-    "links": {}
+    "currentRole": "Urologist and Pelvic Surgeon; Sexual Health Specialist",
+    "links": {
+      "bio": "https://renamalikmd.com/about/"
+    }
   },
   {
     "id": "david-eagleman",
@@ -438,20 +452,20 @@
     "portrait": "/portraits/david-eagleman.jpg",
     "portrait2x": "/portraits/david-eagleman@2x.jpg",
     "portraitBrightness": 0.195,
-    "credibilityLine": "Stanford neuroscientist and technologist; author of Livewired: The Inside Story of the Ever-Changing Brain; cofounder of Neosensory and BrainCheck; director of the Center for Science and Law.",
+    "credibilityLine": "Stanford neuroscientist; Guggenheim Fellow; New York Times-bestselling author published in 32 languages; author of Livewired: The Inside Story of the Ever-Changing Brain; director of Center for Science and Law; cofounder of Neosensory and BrainCheck.",
     "fields": [
       "neuroscience",
-      "psychology",
-      "brain plasticity"
+      "brain plasticity",
+      "psychology"
     ],
     "roles": [
       "academic",
       "researcher",
       "author",
-      "practitioner"
+      "public-figure"
     ],
     "credentials": [],
-    "currentRole": "Neuroscientist and Technologist, Stanford University",
+    "currentRole": "Neuroscientist, Stanford University",
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/David_Eagleman"
     }
@@ -462,20 +476,21 @@
     "portrait": "/portraits/alex-tatem.jpg",
     "portrait2x": "/portraits/alex-tatem@2x.jpg",
     "portraitBrightness": 0.21,
-    "credibilityLine": "Urologist with 12 years of peptide research; runs men's health clinic; hosts YouTube channel on peptides and men's health",
+    "credibilityLine": "Internationally recognized urologist and men's health specialist who has studied peptides for 12 years and runs a men's health clinic",
     "fields": [
       "urology",
-      "peptides",
-      "men's health"
+      "men's health",
+      "peptides"
     ],
     "roles": [
       "clinician",
-      "researcher",
-      "public-figure"
+      "practitioner"
     ],
     "credentials": [],
-    "currentRole": "Urologist and Men's Health Clinician",
-    "links": {}
+    "currentRole": "Urologist and men's health specialist",
+    "links": {
+      "bio": "https://podcasts.apple.com/us/podcast/the-peptide-expert-big-pharma-are-hiding-this/id1291423644?i=1000762339877"
+    }
   },
   {
     "id": "ian-bremmer",
@@ -483,22 +498,277 @@
     "portrait": "/portraits/ian-bremmer.jpg",
     "portrait2x": "/portraits/ian-bremmer@2x.jpg",
     "portraitBrightness": 0.227,
-    "credibilityLine": "Founder of Eurasia Group and GZERO Media; Professor at Columbia University School of International and Public Affairs; author of The Power of Crisis",
+    "credibilityLine": "Political scientist; founder and president of Eurasia Group, a leading political risk research firm; founder of GZERO Media; Professor at Columbia University's School of International and Public Affairs; author of The Power of Crisis.",
     "fields": [
       "geopolitics",
       "political risk",
-      "global affairs"
+      "media"
     ],
     "roles": [
       "academic",
       "researcher",
       "author",
-      "practitioner"
+      "practitioner",
+      "public-figure"
     ],
     "credentials": [],
-    "currentRole": "Founder and President, Eurasia Group; Professor, Columbia University School of International and Public Affairs",
+    "currentRole": "Founder and President of Eurasia Group; Professor at Columbia University's School of International and Public Affairs",
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Ian_Bremmer"
+    }
+  },
+  {
+    "id": "robert-pape",
+    "name": "Robert Pape",
+    "portrait": "/portraits/robert-pape.jpg",
+    "portrait2x": "/portraits/robert-pape@2x.jpg",
+    "portraitBrightness": 0.146,
+    "credibilityLine": "Professor of Political Science, University of Chicago; founder and director of the Chicago Project on Security and Threats; advised multiple White Houses on military strategy since 9/11; author of Our Own Worst Enemies: America and the Age of Violent Populism",
+    "fields": [
+      "geopolitics",
+      "security studies",
+      "military strategy"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Political Science, University of Chicago",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Robert_Pape"
+    }
+  },
+  {
+    "id": "steve-keen",
+    "name": "Steve Keen",
+    "portrait": "/portraits/steve-keen.jpg",
+    "portrait2x": "/portraits/steve-keen@2x.jpg",
+    "portraitBrightness": 0.276,
+    "credibilityLine": "Australian economist and author; predicted the 2008 financial crisis; developed proprietary financial modeling software Ravel\u00a9; author of The New Economics: A Manifesto; formerly professor at University of Western Sydney and Kingston University; currently visiting scholar at University of Amsterdam and Honorary Professor at UCL.",
+    "fields": [
+      "economics",
+      "finance",
+      "geopolitics"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Visiting Scholar, University of Amsterdam; Honorary Professor, University College London",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Steve_Keen"
+    }
+  },
+  {
+    "id": "pierre-poilievre",
+    "name": "Pierre Poilievre",
+    "portrait": "/portraits/pierre-poilievre.jpg",
+    "portrait2x": "/portraits/pierre-poilievre@2x.jpg",
+    "portraitBrightness": 0.15,
+    "credibilityLine": "Leader of the Conservative Party of Canada and Leader of the Official Opposition; Member of Parliament for Battle River\u2014Crowfoot since 2025; previously served as Minister of Democratic Reform and Minister of Employment and Social Development under PM Stephen Harper; first elected to Parliament in 2004 at age 25.",
+    "fields": [
+      "politics",
+      "economics",
+      "leadership"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Leader of the Conservative Party of Canada and Leader of the Official Opposition",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Pierre_Poilievre"
+    }
+  },
+  {
+    "id": "rhonda-patrick",
+    "name": "Dr Rhonda Patrick",
+    "portrait": "/portraits/rhonda-patrick.jpg",
+    "portrait2x": "/portraits/rhonda-patrick@2x.jpg",
+    "portraitBrightness": 0.22,
+    "credibilityLine": "Ph.D. biomedical science (University of Tennessee Health Science Center); post-doctoral fellowship in Nutritional Biochemistry; co-founder and CEO of FoundMyFitness; researcher in nutritional health, aging, and longevity",
+    "fields": [
+      "Nutritional Biochemistry",
+      "Biomedical Science",
+      "Longevity Research",
+      "Disease Prevention"
+    ],
+    "roles": [
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of FoundMyFitness; Science Communicator",
+    "links": {
+      "bio": "https://www.aaespeakers.com/keynote-speakers/rhonda-patrick"
+    }
+  },
+  {
+    "id": "karen-hao",
+    "name": "Karen Hao",
+    "portrait": "/portraits/karen-hao.jpg",
+    "portrait2x": "/portraits/karen-hao@2x.jpg",
+    "portraitBrightness": 0.205,
+    "credibilityLine": "Award-winning investigative journalist; former senior AI editor at MIT Technology Review; Wall Street Journal reporter covering US and Chinese tech; author of Empire of AI; co-host of The Interface podcast.",
+    "fields": [
+      "AI",
+      "journalism",
+      "technology ethics"
+    ],
+    "roles": [
+      "author",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Freelance investigative journalist and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Karen_Hao"
+    }
+  },
+  {
+    "id": "chase-hughes",
+    "name": "Chase Hughes",
+    "portrait": "/portraits/chase-hughes.jpg",
+    "portrait2x": "/portraits/chase-hughes@2x.jpg",
+    "portraitBrightness": 0.253,
+    "credibilityLine": "Former US Navy Chief with 20+ years in behavior analysis, interrogation, and Human Intelligence operations; creator of CuePrime interrogation tool and Pre-Violence Indicators Index; board certified in clinical hypnotherapy; consultant to law enforcement, military, and Fortune 500 companies.",
+    "fields": [
+      "behavioral science",
+      "psychology",
+      "interrogation",
+      "human intelligence"
+    ],
+    "roles": [
+      "practitioner",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Behavior Science Expert and Consultant",
+    "links": {
+      "bio": "https://wikitia.com/wiki/Chase_Hughes"
+    }
+  },
+  {
+    "id": "daniel-priestley",
+    "name": "Daniel Priestley",
+    "portrait": "/portraits/daniel-priestley.jpg",
+    "portrait2x": "/portraits/daniel-priestley@2x.jpg",
+    "portraitBrightness": 0.156,
+    "credibilityLine": "Entrepreneur, best-selling author, and business strategist; co-founder of Dent Global and ScoreApp",
+    "fields": [
+      "entrepreneurship",
+      "business strategy",
+      "personal branding"
+    ],
+    "roles": [
+      "entrepreneur",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Entrepreneur and business strategist",
+    "links": {
+      "bio": "https://danielpriestley.com/"
+    }
+  },
+  {
+    "id": "wesley-huff",
+    "name": "Wesley Huff",
+    "portrait": "/portraits/wesley-huff.jpg",
+    "portrait2x": "/portraits/wesley-huff@2x.jpg",
+    "portraitBrightness": 0.222,
+    "credibilityLine": "PhD candidate in theological studies at Wycliffe College, University of Toronto (concentration: New Testament); Vice President of Apologetics Canada; specializes in historical accuracy of ancient biblical texts and Christian apologetics.",
+    "fields": [
+      "theology",
+      "history",
+      "apologetics"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "PhD Candidate in Theological Studies, Wycliffe College, University of Toronto; Vice President of Apologetics Canada",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Wesley_Huff"
+    }
+  },
+  {
+    "id": "andrew-bustamante",
+    "name": "Andrew Bustamante",
+    "portrait": "/portraits/andrew-bustamante.jpg",
+    "portrait2x": "/portraits/andrew-bustamante@2x.jpg",
+    "portraitBrightness": 0.116,
+    "credibilityLine": "Former CIA covert intelligence officer; Air Force Academy graduate; founded EverydaySpy training platform; co-author of Shadow Cell: An Insider Account of America's New Spy War",
+    "fields": [
+      "geopolitics",
+      "intelligence",
+      "security"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder of EverydaySpy; media presenter and consultant",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Andrew_Bustamante"
+    }
+  },
+  {
+    "id": "annie-jacobsen",
+    "name": "Annie Jacobsen",
+    "portrait": "/portraits/annie-jacobsen.jpg",
+    "portrait2x": "/portraits/annie-jacobsen@2x.jpg",
+    "portraitBrightness": 0.116,
+    "credibilityLine": "2016 Pulitzer Prize finalist; author of Nuclear War: A Scenario, Area 51: An Uncensored History of America's Top Secret Military Base, and The Pentagon's Brain; investigative journalist specializing in war, weapons, and security",
+    "fields": [
+      "national security",
+      "geopolitics",
+      "investigative journalism"
+    ],
+    "roles": [
+      "author",
+      "journalist",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Investigative journalist and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Annie_Jacobsen"
+    }
+  },
+  {
+    "id": "benjamin-radd",
+    "name": "Benjamin Radd",
+    "portrait": "/portraits/benjamin-radd.jpg",
+    "portrait2x": "/portraits/benjamin-radd@2x.jpg",
+    "portraitBrightness": 0.116,
+    "credibilityLine": "Political Scientist and Senior Fellow at the UCLA Burkle Center for International Relations; expert on Middle East government, US foreign policy, and comparative law; PhD (UCLA 2015), JD (Stanford 2003)",
+    "fields": [
+      "geopolitics",
+      "Middle East politics",
+      "US foreign policy",
+      "constitutional law",
+      "comparative law"
+    ],
+    "roles": [
+      "researcher",
+      "academic",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Senior Fellow, UCLA Burkle Center for International Relations; Lecturer in Law, UCLA School of Law and USC Gould School of Law",
+    "links": {
+      "bio": "https://benjaminradd.com/"
     }
   }
 ]

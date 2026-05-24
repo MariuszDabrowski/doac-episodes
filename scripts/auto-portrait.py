@@ -75,16 +75,21 @@ def _ear(lm, w, h, indices):
     return vertical / horizontal
 
 
-def host_match_score(img_bgr, face_bbox):
-    """Return (distance, penalty). distance is None if encoding failed."""
+def face_encoding(img_bgr, face_bbox):
+    """Return the 128-dim face encoding for the bbox, or None on failure."""
     x, y, fw, fh = face_bbox
     rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
     # face_recognition expects (top, right, bottom, left)
     location = (y, x + fw, y + fh, x)
-    encodings = face_recognition.face_encodings(rgb, known_face_locations=[location])
-    if not encodings:
+    encs = face_recognition.face_encodings(rgb, known_face_locations=[location])
+    return encs[0] if encs else None
+
+
+def host_match_score(encoding):
+    """Return (distance, penalty). distance is None if encoding is None."""
+    if encoding is None:
         return None, 0.0
-    distance = float(face_recognition.face_distance([HOST_ENCODING], encodings[0])[0])
+    distance = float(face_recognition.face_distance([HOST_ENCODING], encoding)[0])
     if distance < HOST_DISTANCE_DEFINITE:
         penalty = HOST_PENALTY_DEFINITE
     elif distance < HOST_DISTANCE_LIKELY:
@@ -92,6 +97,62 @@ def host_match_score(img_bgr, face_bbox):
     else:
         penalty = 0.0
     return distance, penalty
+
+
+# Face clustering: across the 20 sample frames, the actual guest's face
+# appears in most of them while B-roll/news-clip faces (e.g. Saddam
+# Hussein archive footage in a geopolitics episode) only appear in 1-2
+# frames. By grouping candidate faces by embedding similarity and
+# keeping only the dominant cluster, we filter out one-off B-roll
+# matches without needing a per-episode reference photo.
+CLUSTER_DISTANCE = 0.55  # face_recognition's "definitely same person" threshold
+
+
+def dominant_face_indices(encodings):
+    """Cluster faces by similarity (union-find) and return the indices of
+    the largest cluster — but ONLY if it's significantly larger than the
+    next-largest (≥ 2×). On multi-guest panels both guests' clusters are
+    similarly sized; in that case we return all valid indices (skip
+    filtering) so the existing scoring can pick the right person.
+    Indices for which encoding is None are left out."""
+    n = len(encodings)
+    parent = list(range(n))
+
+    def find(a):
+        while parent[a] != a:
+            parent[a] = parent[parent[a]]
+            a = parent[a]
+        return a
+
+    def union(a, b):
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+
+    valid = [i for i, e in enumerate(encodings) if e is not None]
+    for i_pos, i in enumerate(valid):
+        for j in valid[i_pos + 1 :]:
+            dist = float(face_recognition.face_distance([encodings[i]], encodings[j])[0])
+            if dist < CLUSTER_DISTANCE:
+                union(i, j)
+
+    clusters = {}
+    for i in valid:
+        root = find(i)
+        clusters.setdefault(root, []).append(i)
+    if not clusters:
+        return set(valid)
+
+    sorted_clusters = sorted(clusters.values(), key=len, reverse=True)
+    largest = sorted_clusters[0]
+    if len(sorted_clusters) > 1:
+        next_largest = sorted_clusters[1]
+        # Panel detection: if the second cluster is at least half the size
+        # of the dominant one, there's no clear "main" face — likely a
+        # multi-guest episode. Skip filtering.
+        if len(next_largest) * 2 >= len(largest):
+            return set(valid)
+    return set(largest)
 
 
 def eye_metrics(img_bgr, face_bbox):
@@ -164,7 +225,8 @@ for path in sorted(glob.glob(f"{frames_dir}/*.jpg")):
     center_offset = abs(cx_norm - 0.5) + abs(cy_norm - 0.5)
 
     ear_avg, eye_score = eye_metrics(img, (x, y, fw, fh))
-    host_distance, host_penalty = host_match_score(img, (x, y, fw, fh))
+    encoding = face_encoding(img, (x, y, fw, fh))
+    host_distance, host_penalty = host_match_score(encoding)
 
     score = area_pct - center_offset * 0.5 + eye_score + host_penalty
 
@@ -179,12 +241,33 @@ for path in sorted(glob.glob(f"{frames_dir}/*.jpg")):
             "eye_score": eye_score,
             "host_distance": host_distance,
             "host_penalty": host_penalty,
+            "encoding": encoding,
         }
     )
 
 if not candidates:
     print("No suitable frame found.", file=sys.stderr)
     sys.exit(1)
+
+# Filter to the dominant face cluster — keeps the guest, drops B-roll
+# faces (news clips, sponsor reads, archive footage) that only appear in
+# a handful of frames. Mask out clear-host frames from the clustering
+# pool first: in shows that cut back to the host often, Bartlett's face
+# can form the largest cluster, and we'd "dominantly" pick him.
+encodings_for_cluster = [
+    c["encoding"] if (c["encoding"] is not None and (c["host_distance"] is None or c["host_distance"] >= HOST_DISTANCE_DEFINITE)) else None
+    for c in candidates
+]
+valid_count = sum(1 for e in encodings_for_cluster if e is not None)
+if valid_count >= 3:
+    dominant = dominant_face_indices(encodings_for_cluster)
+    dropped = [c for i, c in enumerate(candidates) if i not in dominant and c["encoding"] is not None]
+    if dropped and len(dominant) < valid_count:
+        print(
+            f"face clustering: kept {len(dominant)}/{valid_count} non-host frames in dominant cluster, "
+            f"dropped {len(dropped)} (host or B-roll): {', '.join(os.path.basename(c['path']) for c in dropped[:5])}{'…' if len(dropped) > 5 else ''}"
+        )
+        candidates = [c for i, c in enumerate(candidates) if i in dominant or c["encoding"] is None]
 
 candidates.sort(key=lambda c: c["score"], reverse=True)
 top = candidates[:top_n]

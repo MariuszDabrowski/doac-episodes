@@ -35,8 +35,12 @@ not current, future sessions lose context.
   setuptools pin keeps `pkg_resources` available for `face_recognition_models`.
 - All raw/regeneratable data goes under `data/_*` (gitignored). Curated data
   at the top level of `data/` is committed
-- Portraits at `public/portraits/{guestId}.{jpg,@2x.jpg}` are committed; the
-  alts (`-2`, `-3`) are also committed so we can swap without re-extracting
+- Portraits at `public/portraits/{guestId}.{jpg,@2x.jpg}` are committed.
+  Only the top auto-picked frame is generated — alts (`-2`, `-3`) used
+  to be saved as swap candidates, but the host blacklist + face
+  recognition make defaults reliable enough that they were never used
+  in practice. If a default is ever wrong, re-run `extract:frames` and
+  `auto-portrait.py` on that videoId.
 - Watch the dev server at `http://localhost:3000`; restart it (`pkill -f
   "nuxt dev" && npm run dev`) only when `nuxt.config.ts` or `package.json`
   changes — most file changes hot-reload

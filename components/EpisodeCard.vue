@@ -48,6 +48,38 @@ const expanded = ref(false);
 const extraGuests = computed(() => props.guests.slice(1));
 const hiddenGuestCount = computed(() => props.guests.length - 1);
 
+// Overflow detection for credibility lines — only show the bottom fade
+// indicator + enable hover-to-expand on bios that actually overflow the
+// 3-line clamp. Uses a single ResizeObserver across all credibility
+// elements in this card. The callback toggles a class directly on the
+// element (no reactive re-render needed for a simple class flip).
+let credibilityObserver = null;
+
+function watchCredibility(el) {
+  if (!el) return;
+  if (!credibilityObserver) {
+    credibilityObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const target = entry.target;
+        // Skip during hover — the element is mid-expansion and would
+        // momentarily report "no overflow" (since clientHeight grew to
+        // match scrollHeight), which would remove .has-overflow, which
+        // kills the hover rule, which collapses, which re-overflows —
+        // a yo-yo loop. Only re-evaluate when the element is in its
+        // resting clamped state.
+        if (target.matches(':hover')) continue;
+        const overflowing = target.scrollHeight > target.clientHeight + 1;
+        target.classList.toggle('has-overflow', overflowing);
+      }
+    });
+  }
+  credibilityObserver.observe(el);
+}
+
+onUnmounted(() => {
+  if (credibilityObserver) credibilityObserver.disconnect();
+});
+
 const guestPromotionGroups = computed(() => {
   const byType = {};
   for (const p of props.episode.promotions || []) {
@@ -96,7 +128,11 @@ const guestPromotionGroups = computed(() => {
             <span class="guest-name">{{ guests[0].name }}</span>
             <span class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
           </div>
-          <div v-if="guests[0].credibilityLine" class="credibility">{{ guests[0].credibilityLine }}</div>
+          <div
+            v-if="guests[0].credibilityLine"
+            :ref="watchCredibility"
+            class="credibility"
+          >{{ guests[0].credibilityLine }}</div>
         </div>
 
         <div
@@ -110,7 +146,11 @@ const guestPromotionGroups = computed(() => {
                 <span class="guest-name">{{ guest.name }}</span>
                 <span class="appearance-pill">{{ ordinal(appearanceCounts[i + 1]) }} appearance</span>
               </div>
-              <div v-if="guest.credibilityLine" class="credibility">{{ guest.credibilityLine }}</div>
+              <div
+                v-if="guest.credibilityLine"
+                :ref="watchCredibility"
+                class="credibility"
+              >{{ guest.credibilityLine }}</div>
             </div>
           </div>
         </div>
@@ -309,6 +349,32 @@ const guestPromotionGroups = computed(() => {
   font-size: 0.8125rem;
   line-height: 1.5;
   color: #a89e8c;
+  position: relative;
+  max-height: 4.5em; /* 3 lines × 1.5 line-height */
+  overflow: hidden;
+  /* Isolates layout/style work to this subtree — when max-height animates
+     the browser doesn't have to re-layout the whole card chain each frame. */
+  contain: layout style;
+}
+
+/* Hover-to-expand. Bios that already fit in 3 lines stay static —
+   no fade, no cursor change, no dead hover. */
+.credibility.has-overflow {
+  cursor: help;
+  /* mask-image fades the TEXT itself; the card background shows through
+     transparently, so we don't need to color-match (which is fragile
+     across the page's radial gradient). */
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              -webkit-mask-image 0.25s ease,
+              mask-image 0.25s ease;
+}
+
+.credibility.has-overflow:hover {
+  max-height: max-content;
+  -webkit-mask-image: linear-gradient(to bottom, #000 100%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 100%, transparent 100%);
 }
 
 .content-shape {

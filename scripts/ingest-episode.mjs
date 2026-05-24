@@ -135,9 +135,12 @@ async function ensurePortrait(videoId) {
   console.log(`[2/6] auto-portrait scoring…`);
   const tmpOut = `data/_portrait-staging/${videoId}.jpg`;
   mkdirSync('data/_portrait-staging', { recursive: true });
+  // Only the top pick — alts were never used in practice (host blacklist
+  // + face_recognition make the default reliable), so we don't generate
+  // -2/-3 candidates anymore.
   const { stdout } = await run(
     '.venv/bin/python',
-    ['scripts/auto-portrait.py', framesDir, tmpOut, '3'],
+    ['scripts/auto-portrait.py', framesDir, tmpOut, '1'],
     { capture: true }
   );
 
@@ -150,10 +153,6 @@ async function ensurePortrait(videoId) {
     brightness,
     portraitPath: tmpOut,
     portrait2xPath: tmpOut.replace('.jpg', '@2x.jpg'),
-    altPaths: [2, 3].flatMap((i) => [
-      tmpOut.replace('.jpg', `-${i}.jpg`),
-      tmpOut.replace('.jpg', `-${i}@2x.jpg`),
-    ]),
   };
 }
 
@@ -379,20 +378,26 @@ async function wikipediaLookup(name) {
       console.log(`    ↳ wikipedia returned "${articleTitle}" — surname mismatch with "${name}", skipping`);
       return null;
     }
+    // First grab the short summary to check identity (its `type` field
+    // catches disambiguations and we re-validate the canonical title
+    // after redirects). Then fetch a richer extract via the MediaWiki
+    // `extracts` API — the REST summary's first 3 sentences miss things
+    // like "Pulitzer winner", which usually sits further into the article.
     const summaryUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(articleTitle.replace(/ /g, '_'))}`;
     const summary = await wikipediaFetch(summaryUrl);
     if (!summary || summary.type === 'disambiguation') return null;
-    // Re-validate against the canonical title after Wikipedia's redirects
-    // (e.g. "Professor Jiang" redirects to "Jiang Xueqin", a different
-    // person's article — opensearch's title looked fine, the redirect
-    // landed somewhere else).
     if (!nameMatchesArticle(name, summary.title)) {
       console.log(`    ↳ wikipedia redirected to "${summary.title}" — surname mismatch, skipping`);
       return null;
     }
+    const extractsUrl = `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exsentences=15&explaintext=1&format=json&titles=${encodeURIComponent(summary.title)}`;
+    const extractsRes = await wikipediaFetch(extractsUrl);
+    const pages = extractsRes?.query?.pages || {};
+    const firstPage = Object.values(pages)[0];
+    const longExtract = firstPage?.extract || summary.extract;
     return {
       title: summary.title,
-      extract: summary.extract,
+      extract: longExtract,
       url: summary.content_urls?.desktop?.page,
       wikidataId: summary.wikibase_item,
     };
@@ -548,17 +553,26 @@ async function refineGuestWithEvidence(name, originalDraft, episodeContext, evid
     evidence.rejectedBooks.length > 0
       ? `\n\nBooks Claude originally claimed that Open Library did NOT confirm — DO NOT include these in the refined line:\n${evidence.rejectedBooks.map((b) => '  - ' + b).join('\n')}`
       : '';
-  const bioText = evidence.bioText
-    ? `\n\nBIO PAGE FETCHED FROM ${evidence.bioUrl}:\n${evidence.bioText}\n\nIMPORTANT: cross-check this bio against the episode context. Common-name guests often get matched to the WRONG professional (e.g. a urologist guest could pull up a different urologist with the same name at a different institution). Verify the bio's stated field/role aligns with the episode's topic. Set bioMatchesGuest accordingly.`
-    : '\n\nNo bio page was fetched. Set bioMatchesGuest=false.';
+  const bioSourcesText = evidence.bioSources?.length
+    ? `\n\nCANDIDATE BIO SOURCES from web search (snippets are usually accurate mini-bios; full page text may contain more detail):\n\n` +
+      evidence.bioSources
+        .map((s, i) => {
+          const parts = [`[${i + 1}] ${s.url}`, `SNIPPET: ${s.snippet}`];
+          if (s.pageText) parts.push(`PAGE TEXT (first ~8KB): ${s.pageText.slice(0, 8000)}`);
+          return parts.join('\n');
+        })
+        .join('\n\n---\n\n')
+    : '\n\nNo bio sources from web search.';
 
   const systemPrompt = `You are refining a guest entry. The original draft was generated from the model's general knowledge and may contain fabricated specifics (especially book attributions). Your job: rewrite the credibilityLine using ONLY claims that the verified evidence below supports.
 
 Rules:
-- Books: only mention books listed in "verified" below. Drop any others.
-- Bio identity check: if a bio was fetched, verify it describes the SAME person from the episode context. If it's a different person with a similar name (different institution, different field, different specialty), DO NOT use the bio — set bioMatchesGuest=false and refine using only the verified books and your most certain general knowledge.
-- Positions/affiliations: only state ones from a verified-match bio. Don't make up new affiliations.
-- If little is verified, the credibilityLine should be short and general (e.g. "Portfolio manager at PWL Capital" if that came from a verified source) rather than full of guesses.`;
+- Books: the ONLY books you may mention by title in credibilityLine are those in the "verified via Open Library" list. If the verified list is empty, do not mention any specific book titles. This applies even if you "remember" the person wrote a book — without Open Library confirmation, do not name it.
+- Bio sources: you have multiple candidate web search results. Look across ALL of them and combine corroborating details. Snippets (from search results) are often accurate mini-bios written about the person — treat them as reliable. Page text may be richer but messier; extract relevant facts.
+- Identity check: at least one source must clearly describe the SAME person from the episode context (matching field, plausible affiliation given the episode topic). If every source looks like a different person with a similar name, set bioMatchesGuest=false and refine using only verified books + your most certain general knowledge.
+- Include notable credentials: degrees, fellowships, professional designations (CFA, board certifications), major awards (Pulitzer, Nobel, etc.), current and former significant positions. Don't leave these out if they're in the evidence.
+- bioSourceUrl: cite the single most authoritative source you used (faculty page > org bio > LinkedIn > YouTube about > Doximity > Substack > etc.).
+- If almost nothing is verified, credibilityLine should be short and general rather than full of guesses.`;
 
   const userPrompt = `Guest: ${name}
 
@@ -572,9 +586,9 @@ ORIGINAL DRAFT (may contain hallucinations):
   currentRole: "${originalDraft.currentRole}"
 
 VERIFIED EVIDENCE:
-${verifiedBooksText}${rejectedBooksText}${bioText}
+${verifiedBooksText}${rejectedBooksText}${bioSourcesText}
 
-Rewrite the entry using only what's supported.`;
+Rewrite the entry using everything supported across the sources.`;
 
   const response = await anthropic.messages.create({
     model: MODEL,
@@ -599,26 +613,37 @@ async function verifyClaudeOnlyGuest(name, draft, episodeContext) {
   if (verifiedBooks.length) console.log(`    ✓ books verified: ${verifiedBooks.join(', ')}`);
   if (rejectedBooks.length) console.log(`    ✗ books NOT in Open Library: ${rejectedBooks.join(', ')}`);
 
-  let bioText = null;
-  let bioUrl = null;
-  if (draft.primaryAffiliation) {
-    const query = `"${name}" ${draft.primaryAffiliation} bio`;
-    const results = await braveSearch(query, 3);
-    if (results === null) {
-      console.log(`    · skipping bio search (no BRAVE_API_KEY)`);
-    } else if (results.length) {
-      const top = results[0];
-      bioText = await fetchBioText(top.url);
-      if (bioText) {
-        bioUrl = top.url;
-        console.log(`    ✓ fetched bio from ${top.url} (Claude will verify identity)`);
-      } else {
-        console.log(`    · bio fetch failed for ${top.url}`);
+  // Collect bio evidence from the top 3 Brave results. Each result has a
+  // snippet (Brave's auto-extract — often already a usable mini-bio); we
+  // also fetch the page text for the top 2. Claude sees everything and
+  // picks the best source (with identity check).
+  //
+  // Always run a search even without primaryAffiliation — otherwise an
+  // entry with no books and no affiliation skips refinement entirely and
+  // the unverified Claude draft (which may hallucinate inline book titles
+  // or credentials) goes to disk.
+  const bioSources = [];
+  const query = draft.primaryAffiliation
+    ? `"${name}" ${draft.primaryAffiliation} biography`
+    : `"${name}" biography profile`;
+  const results = await braveSearch(query, 5);
+  if (results === null) {
+    console.log(`    · skipping bio search (no BRAVE_API_KEY)`);
+  } else {
+    for (let i = 0; i < Math.min(results.length, 3); i++) {
+      const r = results[i];
+      const source = { url: r.url, snippet: r.description || '', pageText: null };
+      if (i < 2) {
+        source.pageText = await fetchBioText(r.url);
       }
+      bioSources.push(source);
+    }
+    if (bioSources.length) {
+      console.log(`    ✓ collected ${bioSources.length} candidate bio source(s) (Claude will pick + verify)`);
     }
   }
 
-  if (!verifiedBooks.length && !rejectedBooks.length && !bioText) {
+  if (!verifiedBooks.length && !rejectedBooks.length && !bioSources.length) {
     // Nothing to refine — keep the original.
     return null;
   }
@@ -626,22 +651,24 @@ async function verifyClaudeOnlyGuest(name, draft, episodeContext) {
   return refineGuestWithEvidence(name, draft, episodeContext, {
     verifiedBooks,
     rejectedBooks,
-    bioText,
-    bioUrl,
+    bioSources,
   });
 }
 
 async function draftGuest(name, wiki, episodeContext) {
   const systemPrompt = `You are drafting a structured guest entry for a podcast catalog. Editorial rules:
-- credibilityLine: concrete facts, semicolon-separated, starting with a capital letter. No opinions. Skip credentials unrelated to the episode's likely topic. Don't include the host or the show. Plain English.
-- currentRole: their primary current role/title.
+- credibilityLine: concrete facts, semicolon-separated, starting with a capital letter. No opinions, plain English.
+  - INCLUDE: degrees, professional designations (CFA, board certifications, fellowships), major awards (Pulitzer, Nobel, MacArthur, etc.), current significant position with institution, notable books/works, founded companies.
+  - Don't drop a major award just because it's not the episode's topic — a Pulitzer-winning historian is a Pulitzer winner regardless of which book we're discussing.
+  - Don't include the host or the show.
+- currentRole: their primary current role/title with institution.
 - fields: short expertise labels (1-3, not more).
 - roles: from the enum — academic (university faculty), researcher (working scientist/researcher), clinician (treating patients), author (published books), practitioner (industry expert without academic role), public-figure (media presence/commentator).
 
 PRIMARY SOURCES IN ORDER OF TRUST:
-1. The YouTube description's bio paragraph — DOAC's producer wrote this, often introduces the guest with their actual credentials (employer, books, channels, Substack, etc.). USE THIS FIRST.
-2. Wikipedia summary (if provided and identity-verified) — for established public figures.
-3. Your own knowledge — only when 1 and 2 don't cover something AND you're confident.
+1. Wikipedia summary (if provided and identity-verified) — for established public figures. Read all of it; awards and notable works are often in later sentences.
+2. The YouTube description's bio paragraph — DOAC's producer wrote this, often introduces the guest with their actual credentials (employer, books, channels, Substack, etc.).
+3. Your own knowledge — when 1 and 2 don't cover something AND you're confident.
 
 WIKIPEDIA VERIFICATION:
 If a Wikipedia summary is provided, FIRST verify it's about the same person who appeared in the episode context. If the summary clearly describes someone in a different field with a similar name, set wikipediaUsable=false and use the YouTube description + your knowledge instead.`;
@@ -807,13 +834,6 @@ const primaryGuestId = guestIdMap[draft.guests[0].name];
 mkdirSync('public/portraits', { recursive: true });
 copyFileSync(portrait.portraitPath, `public/portraits/${primaryGuestId}.jpg`);
 copyFileSync(portrait.portrait2xPath, `public/portraits/${primaryGuestId}@2x.jpg`);
-for (let i = 0; i < portrait.altPaths.length; i += 2) {
-  const altIdx = (i / 2) + 2;
-  if (existsSync(portrait.altPaths[i])) {
-    copyFileSync(portrait.altPaths[i], `public/portraits/${primaryGuestId}-${altIdx}.jpg`);
-    copyFileSync(portrait.altPaths[i + 1], `public/portraits/${primaryGuestId}-${altIdx}@2x.jpg`);
-  }
-}
 
 // --- assemble episode entry -----------------------------------------
 

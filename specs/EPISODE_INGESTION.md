@@ -161,7 +161,7 @@ Write the episode entry in `data/episodes.json`:
 ```
 npm run extract:frames -- {videoId}                          # HTTP-range frame fetch (no video on disk), samples 20 frames
 .venv/bin/python scripts/auto-portrait.py \
-  data/_frames/{videoId} public/portraits/{guestId}.jpg     # face-detect + 16:9 crop, saves 1x + @2x and top-3 alts
+  data/_frames/{videoId} public/portraits/{guestId}.jpg 1   # face-detect + 16:9 crop, saves the top pick (1x + @2x)
 ```
 
 The frame-extraction script uses `yt-dlp -g` to resolve the direct 1080p
@@ -174,12 +174,16 @@ script again.
 
 The script outputs:
 
-- `public/portraits/{guestId}.jpg` + `@2x.jpg` — default (highest-scoring frame)
-- `public/portraits/{guestId}-2.jpg` + `@2x` — second candidate
-- `public/portraits/{guestId}-3.jpg` + `@2x` — third candidate
-- Each line prints `score`, `face` area %, `ear` (eye aspect ratio),
-  `host` distance (face_recognition distance to Bartlett reference), and
-  `brightness` (mean grayscale luminance, used for scrim opacity)
+- `public/portraits/{guestId}.jpg` + `@2x.jpg` — the highest-scoring frame
+- Prints `score`, `face` area %, `ear` (eye aspect ratio), `host` distance
+  (face_recognition distance to Bartlett reference), and `brightness` (mean
+  grayscale luminance, used for scrim opacity)
+
+We used to save `-2` and `-3` alt candidates for quick manual swaps,
+but the host blacklist + face_recognition combination makes the top
+pick reliable enough that alts were never used in practice. Pass a
+larger top-n (e.g. `3`) if you want to inspect alternates locally
+without committing them.
 
 ### Scoring inputs
 
@@ -192,6 +196,18 @@ The script outputs:
   (heavy enough to override any face-size advantage). 0.50–0.60 → -0.10
   penalty. Above 0.60 → no penalty. This eliminates the "host wins" failure
   mode automatically
+- **Face clustering** — across all 20 sample frames, the guest's face
+  appears in most of them while B-roll faces (news clips, archive
+  footage of historical figures, sponsor reads) only appear in 1-3.
+  We group candidate faces by embedding similarity (`< 0.55` distance =
+  same person) and keep only the largest cluster. Clear-host frames
+  (distance < 0.50 from Bartlett) are excluded from the clustering pool
+  first — otherwise on episodes with heavy host cutaways, Bartlett's
+  cluster could itself become the dominant one. Eliminated the "Saddam
+  Hussein from B-roll" failure mode without per-episode reference.
+  **Panel detection**: if the second-largest cluster is at least half
+  the size of the dominant one, clustering is skipped (it looks like a
+  multi-guest panel where both guests' faces appear similarly often)
 
 ### Manual verification (still required)
 
@@ -201,16 +217,15 @@ failure mode is an unflattering shot of the guest winning — looking down,
 mouth open mid-speech, intense glare. **Open the saved `.jpg` and confirm
 the expression reads well editorially.**
 
-If the default is wrong:
+If the default is wrong, re-run with a larger top-n to compare candidates locally:
 
 ```
-cp public/portraits/{guestId}-2.jpg public/portraits/{guestId}.jpg
-cp public/portraits/{guestId}-2@2x.jpg public/portraits/{guestId}@2x.jpg
+.venv/bin/python scripts/auto-portrait.py data/_frames/{videoId} /tmp/{guestId}.jpg 3
+# inspect /tmp/{guestId}.jpg, -2.jpg, -3.jpg → copy the right one to public/portraits/
 ```
 
 For multi-guest panels (e.g., UFO roundtable), the top candidates often
-include both guests. Manually identify each and save under the right name
-using the appropriate alt index.
+include both guests. Inspect them and save under the right name.
 
 ### Update the guest entry
 
@@ -241,8 +256,6 @@ later. Delete only if disk space matters.
 2. Commit:
    - `data/episodes.json`, `data/guests.json` (always)
    - `public/portraits/{guestId}.jpg` + `@2x.jpg` (the chosen portrait)
-   - `public/portraits/{guestId}-2.jpg` etc. if you want alts in version control;
-     otherwise they're gitignored alongside `_*.jpg` patterns
 3. Don't commit:
    - `data/_frames/`, `data/_transcripts/` (all under the `data/_*` gitignore)
    - `.env`
@@ -261,10 +274,16 @@ later. Delete only if disk space matters.
 | Taxonomies | `data/taxonomies.json` | **yes** |
 | Host reference photo | `data/host-bartlett.jpg` | **yes** |
 | Portraits (chosen) | `public/portraits/{guestId}.jpg`, `@2x.jpg` | **yes** |
-| Portrait alternates | `public/portraits/{guestId}-N.jpg`, `@2x.jpg` | **yes** |
 
 ## Known limitations
 
+- **Multi-guest panels need manual portrait verification.** Auto-portrait
+  saves one image per episode, named after the primary guest (`guestIds[0]`),
+  but the scoring picks whichever face on screen has the best framing —
+  not necessarily the primary. For panels (UFO roundtable, geopolitics
+  roundtables, etc.) the picked face may belong to a different guest.
+  Confirm by opening the saved file after ingestion; swap manually if
+  the wrong guest's face won.
 - **Host is filtered automatically, guest identity is not verified
   positively.** We blacklist Bartlett via a face_recognition embedding of
   `data/host-bartlett.jpg`. By elimination, "not host" = "guest". This works
@@ -274,8 +293,8 @@ later. Delete only if disk space matters.
   is still required there.
 - **Face-size still dominates expression quality.** Even with EAR and host
   blacklist, the highest face-area frame wins — which is often an
-  unflattering shot (looking down, mid-speech, glare). Top-3 output gives
-  fallback options without re-extracting.
+  unflattering shot (looking down, mid-speech, glare). Re-run auto-portrait
+  with a larger top-n (e.g. `3`) locally to inspect alternates when needed.
 - **EAR can be fooled by head pose.** A face looking down has spread-apart
   eye corners (high horizontal distance) even when the eyelids are nearly
   closed, inflating the ratio. Future: incorporate head-pose estimation.

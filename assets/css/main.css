@@ -5,6 +5,11 @@
   color: #f5ecd6;
   background: #100e0c;
   color-scheme: dark;
+  /* Enable transition to intrinsic-size keywords (max-content, auto, etc.).
+     Lets height/max-height animations interpolate to the *actual* content
+     size instead of a guessed large value, so the duration matches the
+     visual change regardless of how long the content is. */
+  interpolate-size: allow-keywords;
 }
 
 *,
@@ -27,6 +32,15 @@ body {
 
 a {
   color: inherit;
+}
+
+/* Suppress credibility hover-expand while the user is actively scrolling.
+   pages/index.vue toggles .is-scrolling on <body> with a 150ms debounce
+   off the scroll event. pointer-events: none prevents :hover from firing
+   on cards the cursor passes over during scroll without triggering the
+   expand animation. */
+body.is-scrolling .credibility {
+  pointer-events: none;
 }
 
 @keyframes gradient-shift {
