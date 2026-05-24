@@ -35,14 +35,14 @@ jobs:
     # a backlog of ~20 episodes without an infinite-loop runaway.
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: npm
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -58,7 +58,7 @@ jobs:
       # when the dep list changes.
       - name: Cache Python venv
         id: cache-venv
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .venv
           key: venv-${{ runner.os }}-py3.12-v1
@@ -140,7 +140,7 @@ jobs:
 
       - name: Open PR
         if: steps.detect.outputs.count != '0'
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: 'Auto-ingest: new DOAC episodes'
           title: 'New episodes from DOAC channel'
