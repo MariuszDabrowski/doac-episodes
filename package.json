@@ -7,7 +7,7 @@
     "dev": "concurrently -k -n vite,api -c blue,green \"vite\" \"node server/index.mjs\"",
     "dev:vite": "vite",
     "dev:api": "node server/index.mjs",
-    "build": "vite build",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "fetch:channel": "node scripts/ingest/fetch-channel-videos.mjs",
     "fetch:transcripts": "node scripts/ingest/fetch-transcripts.mjs",

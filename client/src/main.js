@@ -6,7 +6,9 @@ import ReviewPage from './pages/ReviewPage.vue';
 import './assets/css/main.css';
 
 const router = createRouter({
-  history: createWebHistory(),
+  // Use Vite's BASE_URL so the router base matches the build base. In prod
+  // it's '/doac-episodes/'; in dev it's '/'.
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', component: HomePage },
     { path: '/review', component: ReviewPage },

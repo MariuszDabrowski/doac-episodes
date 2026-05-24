@@ -3,6 +3,10 @@ import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
+  // Pages serves this as a project page at /doac-episodes/, so the built
+  // bundle, public/ assets, and router base all need the subpath prefix.
+  // Dev still serves from / since the dev server isn't behind a subpath.
+  base: process.env.NODE_ENV === 'production' ? '/doac-episodes/' : '/',
   // The frontend lives under client/ so it sits alongside server/.
   // Build output still lands at project-root/dist.
   root: 'client',
