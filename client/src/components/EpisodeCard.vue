@@ -36,12 +36,22 @@ function ordinal(n) {
 // Portrait sources: episode-level thumbnail wins (per-episode shot, different
 // for each appearance of a recurring guest). Falls back to the guest's
 // canonical portrait when the episode doesn't have its own yet.
+//
+// Paths in data/*.json are root-absolute (`/portraits/...`) since the data
+// is canonical and base-agnostic. Vite rewrites asset paths inside the
+// bundle but not strings read out of JSON at runtime, so we prepend
+// BASE_URL ourselves so the prod build under /doac-episodes/ resolves
+// correctly (and dev stays at /).
+function withBase(path) {
+  return path ? import.meta.env.BASE_URL + path.replace(/^\//, '') : null;
+}
+
 const portraitSrc = computed(() => {
-  return props.episode.thumbnail || props.guests[0]?.portrait || null;
+  return withBase(props.episode.thumbnail || props.guests[0]?.portrait);
 });
 
 const portrait2xSrc = computed(() => {
-  return props.episode.thumbnail2x || props.guests[0]?.portrait2x || null;
+  return withBase(props.episode.thumbnail2x || props.guests[0]?.portrait2x);
 });
 
 // Data stores the JPG path as canonical; the WebP/AVIF siblings are emitted
