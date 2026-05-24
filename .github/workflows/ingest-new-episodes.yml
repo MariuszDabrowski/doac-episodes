@@ -4,12 +4,15 @@ name: Ingest new episodes
 # pipeline on each, and opens a draft PR with the data + portrait changes.
 # Review the PR (or pull it locally and use `/review` for inline tweaks),
 # then merge. Merging triggers deploy.yml which publishes the new build.
+#
+# DISABLED as of 2026-05: YouTube's anti-bot now downgrades requests from
+# GitHub-runner IPs to a stripped player that returns only storyboards,
+# even with valid signed-in cookies. Local ingestion runs from a residential
+# IP and works fine, see scripts/ingest/auto-ingest.sh for the
+# cron-friendly replacement. Schedule trigger removed; manual dispatch
+# stays in case YouTube ever relaxes and the action becomes viable again.
 
 on:
-  schedule:
-    # Every 6 hours. DOAC publishes ~2 long-form episodes a week, so this
-    # leaves plenty of headroom without burning CI minutes.
-    - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
       max_episodes:
