@@ -9,7 +9,6 @@
     "dev:api": "node server/index.mjs",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "NODE_ENV=production node server/index.mjs",
     "fetch:channel": "node scripts/ingest/fetch-channel-videos.mjs",
     "fetch:transcripts": "node scripts/ingest/fetch-transcripts.mjs",
     "extract:transcripts": "node scripts/ingest/extract-transcripts.mjs",

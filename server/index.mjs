@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// API server for the debug-portraits page. In dev, runs alongside Vite on
-// port 3001; Vite's proxy forwards /api/* here. In prod, the same server
-// can also serve the built static output from dist/ (run with NODE_ENV=production).
+// Local-only API server for the /review page. Runs alongside Vite on
+// port 3001; Vite's proxy forwards /api/* here. Not intended for
+// deployment — the review tool needs filesystem write access to data/
+// and public/. The public site is a static SPA built with `npm run build`.
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
-import { serveStatic } from '@hono/node-server/serve-static';
 import { spawn } from 'node:child_process';
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -34,7 +34,7 @@ async function readReview() {
 
 const app = new Hono();
 
-app.get('/api/debug/episodes', async (c) => {
+app.get('/api/review/episodes', async (c) => {
   const [episodesRaw, guestsRaw] = await Promise.all([
     readFile('data/episodes.json', 'utf8'),
     readFile('data/guests.json', 'utf8'),
@@ -44,22 +44,65 @@ app.get('/api/debug/episodes', async (c) => {
   const guestsById = Object.fromEntries(guests.map((g) => [g.id, g]));
   const review = await readReview();
 
+  // Pre-compute how many episodes each guest appears in so the UI can warn
+  // that editing a bio updates N cards.
+  const appearancesByGuest = {};
+  for (const ep of episodes) {
+    for (const gid of ep.guestIds) {
+      appearancesByGuest[gid] = (appearancesByGuest[gid] || 0) + 1;
+    }
+  }
+
   return c.json(
     episodes
-      .map((ep) => ({
-        id: ep.id,
-        videoId: ep.id.replace(/^doac-/, ''),
-        title: ep.title,
-        date: ep.date,
-        thumbnail: ep.thumbnail,
-        primaryGuest: guestsById[ep.guestIds[0]]?.name || ep.guestIds[0],
-        status: review[ep.id] || 'pending',
-      }))
+      .map((ep) => {
+        const guest = guestsById[ep.guestIds[0]];
+        return {
+          id: ep.id,
+          videoId: ep.id.replace(/^doac-/, ''),
+          title: ep.title,
+          description: ep.description,
+          date: ep.date,
+          thumbnail: ep.thumbnail,
+          primaryGuest: guest
+            ? {
+                id: guest.id,
+                name: guest.name,
+                credibilityLine: guest.credibilityLine || '',
+                appearanceCount: appearancesByGuest[guest.id] || 1,
+              }
+            : null,
+          status: review[ep.id] || 'pending',
+        };
+      })
       .sort((a, b) => b.date.localeCompare(a.date))
   );
 });
 
-app.post('/api/debug/approve', async (c) => {
+app.post('/api/review/edit-episode', async (c) => {
+  const { id, title, description } = await c.req.json();
+  if (!id) return c.json({ error: 'id required' }, 400);
+  const episodes = JSON.parse(await readFile('data/episodes.json', 'utf8'));
+  const ep = episodes.find((e) => e.id === id);
+  if (!ep) return c.json({ error: 'episode not found' }, 404);
+  if (typeof title === 'string') ep.title = title;
+  if (typeof description === 'string') ep.description = description;
+  await writeFile('data/episodes.json', JSON.stringify(episodes, null, 2) + '\n');
+  return c.json({ ok: true });
+});
+
+app.post('/api/review/edit-guest', async (c) => {
+  const { id, credibilityLine } = await c.req.json();
+  if (!id) return c.json({ error: 'id required' }, 400);
+  const guests = JSON.parse(await readFile('data/guests.json', 'utf8'));
+  const guest = guests.find((g) => g.id === id);
+  if (!guest) return c.json({ error: 'guest not found' }, 404);
+  if (typeof credibilityLine === 'string') guest.credibilityLine = credibilityLine;
+  await writeFile('data/guests.json', JSON.stringify(guests, null, 2) + '\n');
+  return c.json({ ok: true });
+});
+
+app.post('/api/review/approve', async (c) => {
   const { id, status } = await c.req.json();
   if (!id || !['good', 'pending'].includes(status)) {
     return c.json({ error: 'invalid id/status' }, 400);
@@ -71,10 +114,10 @@ app.post('/api/debug/approve', async (c) => {
   return c.json({ ok: true, status });
 });
 
-app.post('/api/debug/alts', async (c) => {
+app.post('/api/review/alts', async (c) => {
   const { videoId } = await c.req.json();
   if (!videoId) return c.json({ error: 'videoId required' }, 400);
-  const dir = `public/_debug-picks/${videoId}`;
+  const dir = `public/_review-picks/${videoId}`;
   await mkdir(dir, { recursive: true });
 
   await run('.venv/bin/python', [
@@ -89,13 +132,13 @@ app.post('/api/debug/alts', async (c) => {
   for (let n = 1; n <= 5; n += 1) {
     const file = n === 1 ? 'out.jpg' : `out-${n}.jpg`;
     if (existsSync(`${dir}/${file}`)) {
-      alts.push({ pick: n, url: `/_debug-picks/${videoId}/${file}?t=${stamp}` });
+      alts.push({ pick: n, url: `/_review-picks/${videoId}/${file}?t=${stamp}` });
     }
   }
   return c.json({ ok: true, alts });
 });
 
-app.post('/api/debug/swap', async (c) => {
+app.post('/api/review/swap', async (c) => {
   const { videoId, pick } = await c.req.json();
   if (!videoId || pick == null) {
     return c.json({ error: 'videoId and pick required' }, 400);
@@ -104,28 +147,18 @@ app.post('/api/debug/swap', async (c) => {
     'scripts/portraits/swap-portrait.py',
     videoId,
     String(pick),
-    `public/_debug-picks/${videoId}`,
+    `public/_review-picks/${videoId}`,
   ]);
   return c.json({ ok: true, stamp: Date.now() });
 });
 
-app.post('/api/debug/reextract', async (c) => {
+app.post('/api/review/reextract', async (c) => {
   const { videoId, count = 50 } = await c.req.json();
   if (!videoId) return c.json({ error: 'videoId required' }, 400);
   await rm(`data/_frames/${videoId}`, { recursive: true, force: true });
   await run('node', ['scripts/portraits/extract-portrait-frames.mjs', videoId, String(count)]);
   return c.json({ ok: true, count });
 });
-
-// Production: also serve the Vite-built static output and fall back to
-// index.html for SPA routes. In dev, Vite serves these and proxies /api here.
-if (process.env.NODE_ENV === 'production') {
-  app.use('/*', serveStatic({ root: './dist' }));
-  app.get('*', async (c) => {
-    const html = await readFile('dist/index.html', 'utf8');
-    return c.html(html);
-  });
-}
 
 serve({ fetch: app.fetch, port: PORT }, ({ port }) => {
   // eslint-disable-next-line no-console

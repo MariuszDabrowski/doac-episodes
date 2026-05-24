@@ -2,12 +2,14 @@
 
 ## Spec docs are durable; chat history is not
 
-Two specs live under `specs/`:
+Three specs live under `specs/`:
 
 - `PROJECT_BRIEF.md` — what we're building, the editorial stance, schema, page
   layouts, open questions
 - `EPISODE_INGESTION.md` — the step-by-step process for taking a YouTube video
   ID and producing a committed episode entry
+- `REVIEW_PAGE.md` — what the local `/review` triage tool does, its API, and
+  how its persistence works
 
 **Update the relevant spec in the same commit as any change to the process or
 direction it describes.** Concretely:
@@ -20,19 +22,22 @@ direction it describes.** Concretely:
 - Changing the workflow that produces episodes (new script, different data
   source, automated step that used to be manual, new caveat) → update
   `EPISODE_INGESTION.md`
+- Changing the review page (new editable field, new API route, different
+  persistence) → update `REVIEW_PAGE.md`
 - Resolving an open question → move it out of the Open Questions list with the
   decision recorded in the relevant section
 
-The brief and the ingestion doc are the handoff between sessions. If they're
-not current, future sessions lose context.
+These specs are the handoff between sessions. If they're not current, future
+sessions lose context.
 
 ## Project conventions
 
-- Stack: Vite + Vue 3 + Vue Router on the frontend (`client/`), Hono on the
-  API server (`server/index.mjs`). `npm run dev` runs both concurrently
-  (Vite 3000 → API 3001 via proxy). `npm run build` outputs to `dist/`.
-  `npm start` serves the built output + API from a single Node process in
-  production
+- Stack: Vite + Vue 3 + Vue Router on the frontend (`client/`); the public
+  site is a static SPA. A small Hono dev server (`server/index.mjs`) powers
+  the local-only `/review` triage page. `npm run dev` runs both concurrently
+  (Vite 3000 → API 3001 via proxy). `npm run build` outputs the deployable
+  static site to `dist/`. The API server is NOT deployed — `/review` only
+  works locally because it writes back to data/ and public/
 - Layout: `client/` (Vue app + index.html), `server/` (Hono API), `public/`
   (static assets — portraits, served at the root URL), `data/` (committed
   JSON + gitignored raw `_*` working data), `scripts/ingest/` (Node, the

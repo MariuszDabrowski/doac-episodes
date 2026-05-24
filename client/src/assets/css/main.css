@@ -3,13 +3,29 @@
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #f5ecd6;
-  background: #100e0c;
   color-scheme: dark;
   /* Enable transition to intrinsic-size keywords (max-content, auto, etc.).
      Lets height/max-height animations interpolate to the *actual* content
      size instead of a guessed large value, so the duration matches the
      visual change regardless of how long the content is. */
   interpolate-size: allow-keywords;
+}
+
+/* Global page background — warm radial top glow over a dark vertical
+   fade. Anchored to the viewport so it doesn't stretch as the page grows. */
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 0%, rgba(200, 153, 104, 0.07) 0%, transparent 55%),
+    linear-gradient(180deg, #100e0c 0%, #0a0807 100%);
+  background-attachment: fixed;
+}
+
+/* Every page sits in its own stacking context above the shared atmosphere
+   (rendered globally by AppAtmosphere at z-index 0). */
+main {
+  position: relative;
+  z-index: 1;
 }
 
 *,
