@@ -50,11 +50,38 @@ function run(cmd, args, opts = {}) {
 console.log(`Resolving stream URL for ${videoId}…`);
 const formatSelector =
   'bestvideo[ext=mp4][height<=1080]/bestvideo[height<=1080]/best[height<=1080]/best';
-const streamUrl = (
-  await run('yt-dlp', [...ytArgs, '-g', '-f', formatSelector, '--no-warnings', videoUrl], { capture: true })
-)
-  .trim()
-  .split('\n')[0]; // some formats return video + audio URLs on separate lines, we only need video
+
+let streamUrl;
+try {
+  streamUrl = (
+    await run('yt-dlp', [...ytArgs, '-g', '-f', formatSelector, '--no-warnings', videoUrl], { capture: true })
+  )
+    .trim()
+    .split('\n')[0]; // some formats return video + audio URLs on separate lines, we only need video
+} catch (err) {
+  // Common causes for "Requested format is not available" / "Video unavailable":
+  // geo-restricted to a region the runner IP isn't in, age-gated requiring
+  // additional consent beyond cookies, members-only, removed by uploader.
+  // Dump availability + format count so the next reviewer can tell which.
+  console.error(`\nFailed to resolve a stream for ${videoId}. Diagnostic:`);
+  try {
+    const diag = await run(
+      'yt-dlp',
+      [
+        ...ytArgs,
+        '--no-warnings',
+        '--print',
+        'availability=%(availability)s age_limit=%(age_limit)s formats=%(format_count)s title=%(title).80s',
+        videoUrl,
+      ],
+      { capture: true }
+    );
+    console.error(`  ${diag.trim()}`);
+  } catch (diagErr) {
+    console.error(`  (diagnostic call also failed: ${diagErr.message})`);
+  }
+  throw err;
+}
 
 const durationStr = await run('yt-dlp', [...ytArgs, '--print', 'duration', '--no-warnings', videoUrl], {
   capture: true,
