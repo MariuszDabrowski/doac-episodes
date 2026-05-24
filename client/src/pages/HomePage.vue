@@ -4,6 +4,11 @@ import episodesData from '@data/episodes.json';
 import guestsData from '@data/guests.json';
 import taxonomiesData from '@data/taxonomies.json';
 import EpisodeCard from '@/components/EpisodeCard.vue';
+import BaseModal from '@/components/BaseModal.vue';
+import SiteHeader from '@/components/SiteHeader.vue';
+import FilterBar from '@/components/FilterBar.vue';
+import { useHeaderReveal } from '@/composables/useHeaderReveal.js';
+import { usePagination } from '@/composables/usePagination.js';
 
 const guestsById = Object.fromEntries(guestsData.map((g) => [g.id, g]));
 const rolesById = Object.fromEntries(taxonomiesData.roles.map((r) => [r.id, r]));
@@ -27,56 +32,10 @@ function appearanceCountFor(guestId, episodeId) {
   return guestEpisodes.findIndex((e) => e.id === episodeId) + 1;
 }
 
-const clusterBar = ref(null);
-const clusterButtons = ref([]);
+// Filter state. UI (cluster pills + subtopic transitions) lives in FilterBar;
+// this page owns the canonical values and the derived filtering logic.
 const activeCluster = ref('all');
 const activeSubtopic = ref(null);
-const indicatorStyle = ref({ transform: 'translateX(0)', width: '0px' });
-const indicatorReady = ref(false); // skip transition until first measurement lands
-
-const subtopics = computed(() => {
-  if (activeCluster.value === 'all') return [];
-  return taxonomiesData.topics.filter((t) => t.cluster === activeCluster.value);
-});
-
-function updateIndicator() {
-  const idx = clusters.findIndex((c) => c.id === activeCluster.value);
-  if (idx === -1) return;
-  const btn = clusterButtons.value[idx];
-  if (!btn || !clusterBar.value) return;
-  const barRect = clusterBar.value.getBoundingClientRect();
-  const btnRect = btn.getBoundingClientRect();
-  indicatorStyle.value = {
-    transform: `translateX(${btnRect.left - barRect.left}px)`,
-    width: `${btnRect.width}px`,
-  };
-}
-
-function selectCluster(id) {
-  activeCluster.value = id;
-  activeSubtopic.value = null;
-}
-
-function selectSubtopic(id) {
-  activeSubtopic.value = activeSubtopic.value === id ? null : id;
-}
-
-// Track the previous cluster's subtopic count so we can skip the leave
-// wait entirely when the outgoing bar is empty (e.g., switching from "All").
-// Captured synchronously before the watcher chain triggers the Transition.
-const previousSubtopicCount = ref(0);
-
-watch(activeCluster, (newVal, oldVal) => {
-  previousSubtopicCount.value = oldVal === 'all'
-    ? 0
-    : taxonomiesData.topics.filter((t) => t.cluster === oldVal).length;
-}, { flush: 'sync' });
-
-const subtopicBarDuration = computed(() => ({
-  enter: 800,
-  leave: previousSubtopicCount.value > 0 ? 450 : 0,
-}));
-
 const searchQuery = ref('');
 
 const filteredEpisodes = computed(() => {
@@ -116,28 +75,17 @@ const filterStateKey = computed(() =>
   `${activeCluster.value}|${activeSubtopic.value ?? ''}|${searchQuery.value.trim()}`
 );
 
-// Paginate the result set so we render at most PAGE_SIZE cards at a time.
-// Catalog will eventually hit ~500 episodes — rendering all of them up
-// front means thousands of DOM nodes and per-filter-change Vue diffs.
-// Pagination is both a perf cap and a UX nudge: if the user is hunting,
-// they should be filtering, not scrolling 500 cards.
-const PAGE_SIZE = 50;
-const STAGGER_COUNT = 8;
-const visibleCount = ref(PAGE_SIZE);
-// The index where the most-recent batch begins. Cards [staggerStart,
-// staggerStart + STAGGER_COUNT) get the entry animation: initial mount
-// staggers cards 0-7, and each "load more" then staggers the first 8 of
-// the new batch. Cards outside this window render at full opacity instantly.
-const staggerStartIndex = ref(0);
-
-const displayedEpisodes = computed(() => filteredEpisodes.value.slice(0, visibleCount.value));
-const remainingCount = computed(() => Math.max(0, filteredEpisodes.value.length - visibleCount.value));
-const hasMore = computed(() => remainingCount.value > 0);
-
-function loadMore() {
-  staggerStartIndex.value = visibleCount.value;
-  visibleCount.value += PAGE_SIZE;
-}
+// Paginate the result set. At ~500 episodes, rendering all of them up
+// front would mean thousands of DOM nodes and a Vue diff for every filter
+// change. The page size also acts as a UX nudge: if the user is hunting,
+// they should be filtering, not scrolling.
+const {
+  displayed: displayedEpisodes,
+  remaining: remainingCount,
+  hasMore,
+  staggerStart: staggerStartIndex,
+  loadMore,
+} = usePagination(filteredEpisodes, filterStateKey, 50);
 
 const resultSummary = computed(() => {
   const n = filteredEpisodes.value.length;
@@ -168,50 +116,77 @@ const resultSummary = computed(() => {
   return parts;
 });
 
-watch(activeCluster, () => nextTick(updateIndicator));
-
-// When the result set changes while the user is scrolled deep, the page can
-// suddenly become shorter than their scrollY — the browser then snaps them
-// to the new max scroll, which feels jarring (especially for 0-result
-// searches where the page collapses to viewport height). Pre-empt that by
-// smooth-scrolling back to the top ourselves, so the motion is controlled.
+// When the result set changes while the user is scrolled deep, the page
+// can suddenly become shorter than their scrollY, and the browser snaps
+// them to the new max scroll. That feels jarring (especially for 0-result
+// searches where the page collapses to viewport height). Pre-empt it by
+// smooth-scrolling to the top ourselves, so the motion is controlled.
+// Pagination reset is handled by usePagination's own watcher.
 watch(filterStateKey, () => {
-  // Any new filter resets pagination — otherwise the "X remaining" count
-  // gets stale and we'd potentially be showing page-2 of a result set
-  // that shrunk to fewer than PAGE_SIZE total.
-  visibleCount.value = PAGE_SIZE;
-  staggerStartIndex.value = 0;
   if (typeof window === 'undefined') return;
   if (window.scrollY > 100) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
 
-// About modal state. Escape closes; click outside the panel also closes.
+// Modal state. Focus trap + Escape close live inside BaseModal.
 const aboutOpen = ref(false);
-function openAbout() {
-  aboutOpen.value = true;
-}
-function closeAbout() {
-  aboutOpen.value = false;
-}
-function onAboutEscape(e) {
-  if (e.key === 'Escape' && aboutOpen.value) closeAbout();
-}
+const funFactsOpen = ref(false);
 
-// Fixed mini-header revealed after the results-bar scrolls past the top.
-// Uses IntersectionObserver so we don't run anything on every scroll event.
+// Pre-compute catalog stats once, surfaced in the Fun facts modal.
+const funFactsStats = computed(() => {
+  const appearancesByGuest = {};
+  const topicCounts = {};
+  const clusterEpisodes = {};
+  let totalSeconds = 0;
+
+  for (const ep of episodesData) {
+    totalSeconds += ep.duration || 0;
+    for (const id of ep.guestIds) {
+      appearancesByGuest[id] = (appearancesByGuest[id] || 0) + 1;
+    }
+    const seenClusters = new Set();
+    for (const tid of ep.topics) {
+      topicCounts[tid] = (topicCounts[tid] || 0) + 1;
+      const cluster = topicsById[tid]?.cluster;
+      if (cluster && !seenClusters.has(cluster)) {
+        clusterEpisodes[cluster] = (clusterEpisodes[cluster] || 0) + 1;
+        seenClusters.add(cluster);
+      }
+    }
+  }
+
+  const topGuest = Object.entries(appearancesByGuest)
+    .sort((a, b) => b[1] - a[1])[0];
+  const topTopics = Object.entries(topicCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([id, count]) => ({ label: topicsById[id]?.label || id, count }));
+  const topCluster = Object.entries(clusterEpisodes)
+    .sort((a, b) => b[1] - a[1])[0];
+  const topClusterLabel = topCluster
+    ? clusters.find((c) => c.id === topCluster[0])?.label
+    : null;
+
+  return {
+    totalEpisodes: episodesData.length,
+    totalGuests: Object.keys(appearancesByGuest).length,
+    totalHours: Math.round(totalSeconds / 3600),
+    topGuest: topGuest
+      ? { name: guestsById[topGuest[0]]?.name || topGuest[0], count: topGuest[1] }
+      : null,
+    topTopics,
+    topCluster: topCluster ? { label: topClusterLabel, count: topCluster[1] } : null,
+  };
+});
+
+// Sticky mini-header appears once the results bar has scrolled past.
 const resultsBarEl = ref(null);
-const showHeader = ref(false);
-let headerObserver = null;
-
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+const { showHeader } = useHeaderReveal(resultsBarEl);
 
 // Tag <body> with .is-scrolling for a short window after each scroll.
 // CSS uses this to suppress hover-triggered effects (e.g. credibility
-// expand) while the cursor is passing over cards involuntarily.
+// expand) while the cursor passes over cards involuntarily during scroll.
 let scrollSuppressTimer = null;
 function onScrollSuppress() {
   document.body.classList.add('is-scrolling');
@@ -222,117 +197,40 @@ function onScrollSuppress() {
 }
 
 onMounted(() => {
-  nextTick(() => {
-    updateIndicator();
-    // Re-enable the transition only after the indicator's correct position
-    // has actually painted, so the first appearance isn't an animation.
-    requestAnimationFrame(() => {
-      indicatorReady.value = true;
-    });
-  });
-  window.addEventListener('resize', updateIndicator);
   window.addEventListener('scroll', onScrollSuppress, { passive: true });
-  window.addEventListener('keydown', onAboutEscape);
-
-  if (resultsBarEl.value) {
-    headerObserver = new IntersectionObserver(
-      (entries) => {
-        const e = entries[0];
-        // Show header only when results-bar has scrolled fully above the
-        // viewport (not when it's below, e.g. on a very tall window).
-        showHeader.value = !e.isIntersecting && e.boundingClientRect.bottom < 0;
-      },
-      { threshold: 0 }
-    );
-    headerObserver.observe(resultsBarEl.value);
-  }
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', updateIndicator);
   window.removeEventListener('scroll', onScrollSuppress);
-  window.removeEventListener('keydown', onAboutEscape);
   clearTimeout(scrollSuppressTimer);
-  if (headerObserver) headerObserver.disconnect();
 });
 </script>
 
 <template>
   <main>
-    <header class="site-header" :class="{ 'is-visible': showHeader }">
-      <button
-        type="button"
-        class="header-brand"
-        @click="scrollToTop"
-        aria-label="Back to top"
-      >DOAC</button>
-      <button
-        type="button"
-        class="header-browse-button"
-        @click="scrollToTop"
-      >
-        <span aria-hidden="true">↑</span>
-        Browse categories
-      </button>
-      <button
-        type="button"
-        class="header-top-button"
-        @click="scrollToTop"
-        aria-label="Back to top"
-      >
-        <span aria-hidden="true">↑</span>
-        Top
-      </button>
-    </header>
+    <SiteHeader :visible="showHeader" />
 
-    <button
-      type="button"
-      class="page-about-button"
-      @click="openAbout"
-    >About</button>
+    <div class="page-corner-actions">
+      <button
+        type="button"
+        class="page-corner-button"
+        @click="funFactsOpen = true"
+      >Fun facts</button>
+      <button
+        type="button"
+        class="page-corner-button"
+        @click="aboutOpen = true"
+      >About</button>
+    </div>
 
     <h1 class="site-brand">DOAC</h1>
 
-    <div class="category-section">
-      <div class="cluster-bar-wrapper">
-        <div class="cluster-bar" ref="clusterBar">
-          <div
-            class="cluster-indicator"
-            :class="{ 'no-transition': !indicatorReady }"
-            :style="indicatorStyle"
-          ></div>
-          <button
-            v-for="c in clusters"
-            :key="c.id"
-            ref="clusterButtons"
-            class="cluster-item"
-            :class="{ active: activeCluster === c.id }"
-            @click="selectCluster(c.id)"
-          >
-            {{ c.label }}
-          </button>
-        </div>
-      </div>
-
-      <Transition
-        name="subtopic-bar"
-        mode="out-in"
-        :duration="subtopicBarDuration"
-      >
-        <div :key="activeCluster" class="subtopic-bar">
-          <button
-            v-for="(t, i) in subtopics"
-            :key="t.id"
-            class="subtopic-pill"
-            :class="{ active: activeSubtopic === t.id }"
-            :style="{ '--pill-index': i }"
-            @click="selectSubtopic(t.id)"
-          >
-            {{ t.label }}
-          </button>
-        </div>
-      </Transition>
-    </div>
+    <FilterBar
+      :clusters="taxonomiesData.clusters"
+      :topics="taxonomiesData.topics"
+      v-model:cluster="activeCluster"
+      v-model:subtopic="activeSubtopic"
+    />
 
     <div class="results-bar" ref="resultsBarEl">
       <Transition name="summary-fade" mode="out-in">
@@ -386,51 +284,77 @@ onUnmounted(() => {
       </button>
     </div>
 
-    <Transition name="about-fade">
-      <div
-        v-if="aboutOpen"
-        class="about-backdrop"
-        @click.self="closeAbout"
-      >
-        <div
-          class="about-panel"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="about-title"
-        >
-          <button
-            type="button"
-            class="about-close"
-            @click="closeAbout"
-            aria-label="Close"
-          >×</button>
-          <h2 id="about-title" class="about-title">About this project</h2>
-          <p>
-            A curated, browsable index of every long-form
-            <em>Diary of a CEO</em> episode — rewritten titles, editorial
-            summaries, guest credibility lines, and topic tags. Built as
-            an experiment in what an AI-assisted editorial pipeline can
-            produce when paired with manual review.
-          </p>
-          <p>
-            Built by
-            <a
-              href="https://www.linkedin.com/in/mariuszpdabrowski/"
-              target="_blank"
-              rel="noopener"
-            >Mariusz Dabrowski</a>.
-          </p>
-          <p>
-            <a
-              class="about-link-cta"
-              href="https://github.com/MariuszDabrowski/doac-episodes"
-              target="_blank"
-              rel="noopener"
-            >Source on GitHub →</a>
-          </p>
-        </div>
-      </div>
-    </Transition>
+    <BaseModal
+      :open="aboutOpen"
+      title="About this project"
+      @close="aboutOpen = false"
+    >
+      <p>
+        <em>The Diary of a CEO</em> has hundreds of long-form interviews,
+        but YouTube's algorithm and loud thumbnails make it hard to find
+        the ones that match what you actually want to learn about. This
+        is a quieter way to browse and surface hidden gems from the
+        catalog:
+      </p>
+      <ul>
+        <li>Editorial titles and short summaries instead of clickbait.</li>
+        <li>
+          A credibility line for every guest (credentials, current role,
+          notable books) so you can tell whether they fit the topic
+          before committing ninety minutes.
+        </li>
+        <li>
+          Filter by the topics you care about. Every episode equally
+          visible, sorted only by date.
+        </li>
+      </ul>
+      <p>
+        Built by
+        <a
+          href="https://www.linkedin.com/in/mariuszpdabrowski/"
+          target="_blank"
+          rel="noopener"
+        >Mariusz Dabrowski</a>.
+      </p>
+    </BaseModal>
+
+    <BaseModal
+      :open="funFactsOpen"
+      title="Fun facts"
+      @close="funFactsOpen = false"
+    >
+      <dl class="fun-facts">
+        <dt>Catalog</dt>
+        <dd>
+          {{ funFactsStats.totalEpisodes }} episodes,
+          {{ funFactsStats.totalGuests }} unique guests, roughly
+          {{ funFactsStats.totalHours }} hours of total audio.
+        </dd>
+        <template v-if="funFactsStats.topGuest">
+          <dt>Most frequent guest</dt>
+          <dd>
+            <strong>{{ funFactsStats.topGuest.name }}</strong>
+            ({{ funFactsStats.topGuest.count }}
+            appearance{{ funFactsStats.topGuest.count === 1 ? '' : 's' }}).
+          </dd>
+        </template>
+        <template v-if="funFactsStats.topTopics.length">
+          <dt>Most-tagged topics</dt>
+          <dd>
+            <span v-for="(t, i) in funFactsStats.topTopics" :key="t.label">
+              <strong>{{ t.label }}</strong> ({{ t.count }}){{ i < funFactsStats.topTopics.length - 1 ? ', ' : '.' }}
+            </span>
+          </dd>
+        </template>
+        <template v-if="funFactsStats.topCluster">
+          <dt>Most-discussed area</dt>
+          <dd>
+            <strong>{{ funFactsStats.topCluster.label }}</strong>,
+            on {{ funFactsStats.topCluster.count }} episodes.
+          </dd>
+        </template>
+      </dl>
+    </BaseModal>
 
   </main>
 </template>
@@ -438,114 +362,12 @@ onUnmounted(() => {
 <style scoped>
 main {
   /* Page background, fonts, and the floating-speck atmosphere are global
-     (see assets/css/main.css and components/AppAtmosphere.vue). */
+     (see assets/css/main.css and components/AppAtmosphere.vue). main itself
+     gets z-index: 1 from the global stylesheet so it sits above the
+     atmosphere. Children stack naturally inside main's stacking context;
+     no per-child z-index needed. */
   min-height: 100vh;
   padding: 4.5rem 4rem;
-}
-
-main > :not(.site-header):not(.page-about-button) {
-  position: relative;
-  z-index: 1;
-}
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0.625rem 1.5rem;
-  background: rgba(16, 14, 12, 0.78);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border-bottom: 1px solid rgba(245, 236, 214, 0.06);
-  transform: translateY(-100%);
-  /* Strong ease-out: feels weighted/inertial on the way in without
-     overshooting top:0 (which would briefly create a gap above the bar). */
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events: none;
-}
-
-.site-header.is-visible {
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.header-brand {
-  background: transparent;
-  border: none;
-  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
-  font-size: 1.375rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  color: #f5ecd6;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  transition: color 0.15s ease;
-}
-
-.header-brand:hover {
-  color: #c89968;
-}
-
-.header-browse-button {
-  justify-self: center;
-  background: rgba(245, 236, 214, 0.04);
-  border: 1px solid rgba(245, 236, 214, 0.12);
-  border-radius: 9999px;
-  padding: 0.4rem 1.125rem;
-  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #c4b89f;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
-}
-
-.header-browse-button:hover {
-  border-color: rgba(200, 153, 104, 0.5);
-  background: rgba(245, 236, 214, 0.06);
-  color: #f5ecd6;
-}
-
-.header-browse-button:focus-visible {
-  outline: 2px solid #c89968;
-  outline-offset: 2px;
-}
-
-.header-top-button {
-  background: rgba(245, 236, 214, 0.06);
-  border: none;
-  color: #c4b89f;
-  padding: 0.4rem 0.875rem;
-  border-radius: 9999px;
-  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-
-.header-top-button:hover {
-  background: rgba(245, 236, 214, 0.12);
-  color: #f5ecd6;
-}
-
-.header-top-button:focus-visible {
-  outline: 2px solid #c89968;
-  outline-offset: 2px;
 }
 
 .site-brand {
@@ -564,11 +386,16 @@ main > :not(.site-header):not(.page-about-button) {
   animation: gradient-shift 10s ease-in-out infinite;
 }
 
-.page-about-button {
+.page-corner-actions {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
   z-index: 2;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.page-corner-button {
   background: transparent;
   border: none;
   color: #7a7468;
@@ -583,254 +410,39 @@ main > :not(.site-header):not(.page-about-button) {
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.page-about-button:hover {
+.page-corner-button:hover {
   color: #f5ecd6;
   background: rgba(245, 236, 214, 0.04);
 }
 
-.about-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  background: rgba(8, 7, 6, 0.7);
-  backdrop-filter: blur(8px) saturate(120%);
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
+.page-corner-button:focus-visible {
+  outline: 2px solid #c89968;
+  outline-offset: 2px;
 }
 
-.about-panel {
-  position: relative;
-  max-width: 32rem;
-  width: 100%;
-  padding: 2.25rem 2rem 1.75rem;
-  background: #1c1916;
-  border: 1px solid rgba(245, 236, 214, 0.08);
-  border-radius: 12px;
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
-  color: #c4b89f;
-  font-size: 0.9375rem;
-  line-height: 1.6;
+/* Fun facts <dl> styling — BaseModal handles backdrop/panel/typography. */
+.fun-facts {
+  margin: 0;
+  padding: 0;
 }
 
-.about-panel p {
-  margin: 0 0 1rem;
-}
-
-.about-panel p:last-child {
-  margin-bottom: 0;
-}
-
-.about-panel a {
-  color: #f5ecd6;
-  text-decoration: underline;
-  text-decoration-color: rgba(200, 153, 104, 0.5);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s ease;
-}
-
-.about-panel a:hover {
-  text-decoration-color: #c89968;
-}
-
-.about-title {
-  margin: 0 0 1rem;
+.fun-facts dt {
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #f5ecd6;
-  letter-spacing: 0.02em;
-}
-
-.about-link-cta {
-  display: inline-block;
+  font-size: 0.6875rem;
   font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c89968;
+  margin-bottom: 0.25rem;
 }
 
-.about-close {
-  position: absolute;
-  top: 0.625rem;
-  right: 0.875rem;
-  background: transparent;
-  border: none;
-  color: #a89e8c;
-  font-size: 1.75rem;
-  line-height: 1;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-  border-radius: 9999px;
-  transition: color 0.15s ease, background-color 0.15s ease;
-}
-
-.about-close:hover {
-  color: #f5ecd6;
-  background: rgba(245, 236, 214, 0.06);
-}
-
-.about-close:focus-visible {
-  outline: 2px solid #c89968;
-  outline-offset: 2px;
-}
-
-/* Backdrop fades; the panel scales up subtly for entry. */
-.about-fade-enter-active,
-.about-fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.about-fade-enter-active .about-panel,
-.about-fade-leave-active .about-panel {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
-}
-
-.about-fade-enter-from,
-.about-fade-leave-to {
-  opacity: 0;
-}
-
-.about-fade-enter-from .about-panel,
-.about-fade-leave-to .about-panel {
-  opacity: 0;
-  transform: scale(0.96) translateY(8px);
-}
-
-.page-about-button:focus-visible {
-  outline: 2px solid #c89968;
-  outline-offset: 2px;
-}
-
-.category-section {
-  max-width: 110rem;
-  margin: 0 auto 7rem;
-}
-
-.cluster-bar-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.subtopic-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  min-height: 2.25rem;
-}
-
-.subtopic-pill {
-  background: transparent;
-  border: 1px solid rgba(245, 236, 214, 0.22);
+.fun-facts dd {
+  margin: 0 0 1.25rem;
   color: #c4b89f;
-  padding: 0.4rem 1rem;
-  border-radius: 9999px;
-  font-family: inherit;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  cursor: pointer;
-  white-space: nowrap;
-  /* Pivot rotation from the left edge — same hinged-on-a-nail feel as the
-     result summary text */
-  transform-origin: left center;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
-.subtopic-pill:hover {
-  background: rgba(245, 236, 214, 0.06);
-  border-color: rgba(245, 236, 214, 0.4);
-  color: #f5ecd6;
-}
-
-.subtopic-pill.active {
-  background: #c89968;
-  border-color: #c89968;
-  color: #100e0c;
-}
-
-/* Atomic bar swap on cluster change. mode="out-in" guarantees old bar
-   finishes leaving before new bar mounts, so there's no layout overlap.
-   Stagger animations on pills run via parent enter/leave-active class.  */
-@keyframes pill-stagger-enter {
-  from { opacity: 0; transform: translateY(-28px) rotate(10deg); }
-  to { opacity: 1; transform: translateY(0) rotate(0deg); }
-}
-
-@keyframes pill-stagger-leave {
-  to { opacity: 0; transform: translateY(14px) rotate(-10deg); }
-}
-
-.subtopic-bar-enter-active .subtopic-pill {
-  /* Strong deceleration — the pill flies in then settles, inertia-like */
-  animation: pill-stagger-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
-  animation-delay: calc(var(--pill-index, 0) * 0.05s);
-}
-
-.subtopic-bar-leave-active .subtopic-pill {
-  /* Fast start, gentle decel — pill is pushed out rather than dropping slowly */
-  animation: pill-stagger-leave 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
-  animation-delay: calc(var(--pill-index, 0) * 0.05s);
-  /* Override the default left-edge pivot — leaving pills hinge on the right */
-  transform-origin: right center;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .subtopic-bar-enter-active .subtopic-pill,
-  .subtopic-bar-leave-active .subtopic-pill {
-    animation: none;
-  }
-}
-
-.cluster-bar {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  background: #1c1916;
-  border-radius: 9999px;
-  padding: 0.375rem;
-}
-
-.cluster-indicator {
-  position: absolute;
-  top: 0.375rem;
-  bottom: 0.375rem;
-  left: 0;
-  background: #c89968;
-  border-radius: 9999px;
-  /* Apple "default" curve — smoother glide than Material's standard. */
-  transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1), width 0.5s cubic-bezier(0.32, 0.72, 0, 1);
-  z-index: 0;
-  will-change: transform, width;
-}
-
-.cluster-indicator.no-transition {
-  transition: none;
-}
-
-.cluster-item {
-  position: relative;
-  z-index: 1;
-  background: transparent;
-  border: none;
-  color: #c4b89f;
-  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  padding: 0.5rem 1.25rem;
-  border-radius: 9999px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: color 0.2s ease;
-}
-
-.cluster-item.active {
-  color: #100e0c;
-}
-
-.cluster-item:hover:not(.active) {
-  color: #f5ecd6;
+.fun-facts dd:last-of-type {
+  margin-bottom: 0;
 }
 
 .results-bar {
@@ -920,7 +532,7 @@ main > :not(.site-header):not(.page-about-button) {
   display: grid; /* makes the inner .card stretch to the grid row height */
 }
 
-/* Fade the whole grid as a unit when filters change — out-in mode means
+/* Fade the whole grid as a unit when filters change, out-in mode means
    the old result set finishes leaving before the new one enters, so cards
    never visually overlap. */
 /* Whole-grid leave: slides down + fades out as a unit */
@@ -933,7 +545,7 @@ main > :not(.site-header):not(.page-about-button) {
   transform: translateY(12px);
 }
 
-/* No enter animation on the grid itself — cards stagger in individually
+/* No enter animation on the grid itself, cards stagger in individually
    via the card-stagger-in keyframe below */
 
 @keyframes card-stagger-in {
@@ -947,7 +559,7 @@ main > :not(.site-header):not(.page-about-button) {
   }
 }
 
-/* Stagger only the first 8 cards of each "batch" — the initial mount AND
+/* Stagger only the first 8 cards of each "batch", the initial mount AND
    each load-more reveal. Cards outside the window render at full opacity
    instantly (otherwise `animation-fill-mode: both` would hide the 500th
    card for ~35s, and load-more would do nothing visually). */
@@ -1009,7 +621,7 @@ main > :not(.site-header):not(.page-about-button) {
 
 /* Row divider: subtle 1px line sits in the gap above every slot after
    row 1. Pseudo lives on the slot (no overflow:hidden) rather than the
-   inner .card (which clips). Per-card line breaks at column gaps —
+   inner .card (which clips). Per-card line breaks at column gaps -
    reads as a row separator that respects columns. */
 .card-slot:nth-child(n+2)::before {
   content: '';

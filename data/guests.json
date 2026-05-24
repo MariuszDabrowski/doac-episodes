@@ -3492,5 +3492,857 @@
     "links": {
       "bio": "https://creators.spotify.com/pod/profile/dr-louise-newson-podcast/episodes/275---Testosterone-and-the-hormone-triangle--with-Dr-Mohit-Khera-e34b6fn"
     }
+  },
+  {
+    "id": "ramit-sethi",
+    "name": "Ramit Sethi",
+    "portrait": "/portraits/ramit-sethi.jpg",
+    "portrait2x": "/portraits/ramit-sethi@2x.jpg",
+    "portraitBrightness": 0.338,
+    "credibilityLine": "Stanford graduate (BA in Science, Technology & Society, MA in Sociology); author of New York Times bestseller I Will Teach You to Be Rich; host of Netflix series How to Get Rich; founded PBworks.",
+    "fields": [
+      "investing",
+      "personal finance",
+      "wealth-building"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Host of I Will Teach You To Be Rich podcast and Netflix series",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ramit_Sethi"
+    }
+  },
+  {
+    "id": "bessel-van-der-kolk",
+    "name": "Bessel van der Kolk",
+    "portrait": "/portraits/bessel-van-der-kolk.jpg",
+    "portrait2x": "/portraits/bessel-van-der-kolk@2x.jpg",
+    "portraitBrightness": 0.345,
+    "credibilityLine": "Professor of Psychiatry at Boston University School of Medicine; President of the Trauma Research Foundation; author of The Body Keeps The Score (New York Times bestseller, translated into 43 languages); former president of the International Society for Traumatic Stress Studies; former co-director of the National Child Traumatic Stress Network.",
+    "fields": [
+      "trauma",
+      "psychiatry",
+      "neuroscience"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "clinician",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Psychiatry, Boston University School of Medicine; President, Trauma Research Foundation",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bessel_van_der_Kolk"
+    }
+  },
+  {
+    "id": "martha-beck",
+    "name": "Martha Beck",
+    "portrait": "/portraits/martha-beck.jpg",
+    "portrait2x": "/portraits/martha-beck@2x.jpg",
+    "portraitBrightness": 0.368,
+    "credibilityLine": "Harvard-educated sociologist (B.A., M.A., Ph.D.); bestselling author of Leaving the Saints and multiple books on personal growth and anxiety; known as Oprah's life coach; columnist for Oprah Daily.",
+    "fields": [
+      "psychology",
+      "personal-growth",
+      "trauma-recovery"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Life coach, author, and speaker",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Martha_Beck"
+    }
+  },
+  {
+    "id": "reid-hoffman",
+    "name": "Reid Hoffman",
+    "portrait": "/portraits/reid-hoffman.jpg",
+    "portrait2x": "/portraits/reid-hoffman@2x.jpg",
+    "portraitBrightness": 0.234,
+    "credibilityLine": "Co-founder and former executive chairman of LinkedIn; founding member of PayPal; early investor in Airbnb and Facebook; chairman of Village Global venture capital firm; co-founder of Inflection AI; author of Superagency: What Could Possibly Go Right with Our AI Future.",
+    "fields": [
+      "entrepreneurship",
+      "venture capital",
+      "AI"
+    ],
+    "roles": [
+      "author",
+      "entrepreneur",
+      "investor",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder and former executive chairman, LinkedIn; Chairman, Village Global",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Reid_Hoffman"
+    }
+  },
+  {
+    "id": "john-allen-mrballen",
+    "name": "John Allen (MrBallen)",
+    "portrait": "/portraits/john-allen-mrballen.jpg",
+    "portrait2x": "/portraits/john-allen-mrballen@2x.jpg",
+    "portraitBrightness": 0.37,
+    "credibilityLine": "Former Navy SEAL; author of MrBallen Presents: Strange, Dark & Mysterious: The Graphic Stories; founded Ballen Studios; storyteller and podcast host with millions of YouTube followers.",
+    "fields": [
+      "mental health",
+      "leadership",
+      "storytelling"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Content Creator and Podcast Host, Ballen Studios",
+    "links": {}
+  },
+  {
+    "id": "susan-bratton",
+    "name": "Susan Bratton",
+    "portrait": "/portraits/susan-bratton.jpg",
+    "portrait2x": "/portraits/susan-bratton@2x.jpg",
+    "portraitBrightness": 0.469,
+    "credibilityLine": "CEO and co-founder of Personal Life Media (founded 2006) and The 20 (founded 2019); author of 34 books including Relationship Magic; Silicon Valley \"Woman of Influence\" and AdAge \"Top 10 Internet Pioneer.\"",
+    "fields": [
+      "sexuality",
+      "intimacy",
+      "relationships",
+      "sexual health"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO and co-founder, Personal Life Media, Inc. and The 20, LLC",
+    "links": {
+      "bio": "https://susanbratton.com/about/"
+    }
+  },
+  {
+    "id": "brian-keating",
+    "name": "Brian Keating",
+    "portrait": "/portraits/brian-keating.jpg",
+    "portrait2x": "/portraits/brian-keating@2x.jpg",
+    "portraitBrightness": 0.39,
+    "credibilityLine": "Distinguished Professor of Physics, UC San Diego; leading researcher on cosmic microwave background observations (POLARBEAR2, Simons Array, BICEP experiments); author of Losing The Nobel Prize and Into The Impossible; host of Into The Impossible podcast.",
+    "fields": [
+      "cosmology",
+      "physics",
+      "astrophysics"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Distinguished Professor of Physics, University of California San Diego",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Brian_Keating"
+    }
+  },
+  {
+    "id": "mike-baker",
+    "name": "Mike Baker",
+    "portrait": "/portraits/mike-baker.jpg",
+    "portrait2x": "/portraits/mike-baker@2x.jpg",
+    "portraitBrightness": 0.371,
+    "credibilityLine": "Former CIA covert operations officer (15.5–17 years); CEO, Portman Square Group; host of The President's Daily Brief podcast",
+    "fields": [
+      "geopolitics",
+      "national security",
+      "counterterrorism",
+      "counternarcotics",
+      "counterinsurgency"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO, Portman Square Group",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Mike_Baker_(CIA_officer)"
+    }
+  },
+  {
+    "id": "sarah-hill",
+    "name": "Sarah Hill",
+    "portrait": "/portraits/sarah-hill.jpg",
+    "portrait2x": "/portraits/sarah-hill@2x.jpg",
+    "portraitBrightness": 0.396,
+    "credibilityLine": "Evolutionary psychologist; PhD from University of Texas at Austin; professor of psychology at TCU; researcher specializing in women's sexual psychology, sex hormones, and hormonal contraception",
+    "fields": [
+      "women's sexual psychology",
+      "sex hormones",
+      "hormonal contraception",
+      "evolutionary psychology"
+    ],
+    "roles": [
+      "researcher",
+      "academic",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Psychology, Texas Christian University",
+    "links": {
+      "bio": "https://expertfile.com/experts/sarah.hill/sarah-hill"
+    }
+  },
+  {
+    "id": "yvonne-burkart",
+    "name": "Dr Yvonne Burkart",
+    "portrait": "/portraits/yvonne-burkart.jpg",
+    "portrait2x": "/portraits/yvonne-burkart@2x.jpg",
+    "portraitBrightness": 0.316,
+    "credibilityLine": "PhD Toxicologist with over 15 years of research experience in reproductive and environmental toxicology; former Senior Toxicologist in the flavour and fragrance industry",
+    "fields": [
+      "toxicology",
+      "reproductive health",
+      "environmental health"
+    ],
+    "roles": [
+      "researcher",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "PhD Toxicologist and environmental health advocate",
+    "links": {
+      "bio": "https://www.penguin.co.uk/authors/317564/yvonne-burkart"
+    }
+  },
+  {
+    "id": "eric-schmidt",
+    "name": "Eric Schmidt",
+    "portrait": "/portraits/eric-schmidt.jpg",
+    "portrait2x": "/portraits/eric-schmidt@2x.jpg",
+    "portraitBrightness": 0.263,
+    "credibilityLine": "Former CEO of Google (2001–2011); executive chairman of Alphabet (2015–2017); author of Genesis: Artificial Intelligence, Hope, and the Human Spirit, The Age of AI And Our Human Future, How Google Works, and Trillion Dollar Coach; co-founder of Schmidt Sciences.",
+    "fields": [
+      "artificial intelligence",
+      "technology leadership",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of Relativity Space; technical advisor and investor",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Eric_Schmidt"
+    }
+  },
+  {
+    "id": "victoria-sampson",
+    "name": "Dr Victoria Sampson",
+    "portrait": "/portraits/victoria-sampson.jpg",
+    "portrait2x": "/portraits/victoria-sampson@2x.jpg",
+    "portraitBrightness": 0.225,
+    "credibilityLine": "Award-winning functional dentist; BDS (Barts and the London), MFDS RCS Ed; first dentist to link gum disease with worse COVID complications; founder of The Health Society; specialist in salivary diagnostics and oral microbiome research",
+    "fields": [
+      "dentistry",
+      "oral health",
+      "microbiome",
+      "diagnostics"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Functional dentist and founder of The Health Society",
+    "links": {
+      "bio": "https://www.thehealthsociety.co.uk/victoria-sampson"
+    }
+  },
+  {
+    "id": "luis-elizondo",
+    "name": "Luis Elizondo",
+    "portrait": "/portraits/luis-elizondo.jpg",
+    "portrait2x": "/portraits/luis-elizondo@2x.jpg",
+    "portraitBrightness": 0.4,
+    "credibilityLine": "Former head of Pentagon's Advanced Aerospace Threat Identification Program (AATIP); bestselling author of Imminent: Inside the Pentagon's Hunt for UFOs; served as US Army intelligence officer in Afghanistan, Korea, Kuwait, and Guantanamo Bay",
+    "fields": [
+      "geopolitics",
+      "defense",
+      "UFO/UAP"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "UFO Disclosure Activist and Author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Luis_Elizondo"
+    }
+  },
+  {
+    "id": "rena-d-malik",
+    "name": "Dr Rena D Malik",
+    "portrait": "/portraits/rena-d-malik.jpg",
+    "portrait2x": "/portraits/rena-d-malik@2x.jpg",
+    "portraitBrightness": 0.183,
+    "credibilityLine": "Urologist; sexual health expert; advises on pornography's effects on erectile dysfunction and brain health.",
+    "fields": [
+      "urology",
+      "sexual health",
+      "neuroscience"
+    ],
+    "roles": [
+      "clinician",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Urologist and Sexual Health Expert",
+    "links": {}
+  },
+  {
+    "id": "erika-lust",
+    "name": "Erika Lust",
+    "portrait": "/portraits/erika-lust.jpg",
+    "portrait2x": "/portraits/erika-lust@2x.jpg",
+    "portraitBrightness": 0.183,
+    "credibilityLine": "Swedish erotic film director and producer; founder of Erika Lust Films; author of multiple books on sexuality and filmmaking; described as part of the feminist pornography movement since 2004's The Good Girl.",
+    "fields": [
+      "sexuality",
+      "filmmaking",
+      "adult industry ethics"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Erotic film director, screenwriter, and founder of Erika Lust Films",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Erika_Lust"
+    }
+  },
+  {
+    "id": "trevor-noah",
+    "name": "Trevor Noah",
+    "portrait": "/portraits/trevor-noah.jpg",
+    "portrait2x": "/portraits/trevor-noah@2x.jpg",
+    "portraitBrightness": 0.371,
+    "credibilityLine": "Former host of The Daily Show (2015–2022); author of Born a Crime; two-time Primetime Emmy Award winner; Time 100 most influential people (2018)",
+    "fields": [
+      "comedy",
+      "mental health",
+      "social commentary"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Comedian, podcast host (What Now? with Trevor Noah), and content creator",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Trevor_Noah"
+    }
+  },
+  {
+    "id": "boris-johnson",
+    "name": "Boris Johnson",
+    "portrait": "/portraits/boris-johnson.jpg",
+    "portrait2x": "/portraits/boris-johnson@2x.jpg",
+    "portraitBrightness": 0.249,
+    "credibilityLine": "Former UK Prime Minister (2019-2022); previously Foreign Secretary and Mayor of London; author of Unleashed and multiple other books; MP for Henley and Uxbridge and South Ruislip; editor of The Spectator (1999-2005); Oxford Union president.",
+    "fields": [
+      "politics",
+      "memoir"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and former Prime Minister of the United Kingdom",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Boris_Johnson"
+    }
+  },
+  {
+    "id": "thomas-seyfried",
+    "name": "Dr Thomas Seyfried",
+    "portrait": "/portraits/thomas-seyfried.jpg",
+    "portrait2x": "/portraits/thomas-seyfried@2x.jpg",
+    "portraitBrightness": 0.381,
+    "credibilityLine": "Professor of Biology at Boston College; over 150 peer-reviewed publications on cancer metabolism, ketogenic therapy, and mitochondrial health",
+    "fields": [
+      "cancer metabolism",
+      "ketogenic therapy",
+      "mitochondrial health",
+      "neurodegenerative disease"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Biology, Boston College",
+    "links": {
+      "bio": "https://grokipedia.com/page/Thomas_N._Seyfried"
+    }
+  },
+  {
+    "id": "joseph-allen",
+    "name": "Dr Joseph Allen",
+    "portrait": "/portraits/joseph-allen.jpg",
+    "portrait2x": "/portraits/joseph-allen@2x.jpg",
+    "portraitBrightness": 0.434,
+    "credibilityLine": "Optometrist (OD, FAAO); creator of Doctor Eye Health YouTube channel and social media presence; practices at Pine Cone Vision Center in Minnesota",
+    "fields": [
+      "optometry",
+      "eye health",
+      "vision science"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Optometrist and eye health educator",
+    "links": {
+      "bio": "https://dryeyedirectory.com/listing/dr-joseph-allen/"
+    }
+  },
+  {
+    "id": "gabrielle-lyon",
+    "name": "Gabrielle Lyon",
+    "portrait": "/portraits/gabrielle-lyon.jpg",
+    "portrait2x": "/portraits/gabrielle-lyon@2x.jpg",
+    "portraitBrightness": 0.355,
+    "credibilityLine": "Founder of the Institute for Muscle-Centric Medicine; Wall Street Journal, USA Today, and New York Times bestselling author",
+    "fields": [
+      "medicine",
+      "fitness",
+      "longevity"
+    ],
+    "roles": [
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Institute for Muscle-Centric Medicine",
+    "links": {
+      "bio": "https://drgabriellelyon.com/about/"
+    }
+  },
+  {
+    "id": "john-gottman",
+    "name": "John Gottman",
+    "portrait": "/portraits/john-gottman.jpg",
+    "portrait2x": "/portraits/john-gottman@2x.jpg",
+    "portraitBrightness": 0.315,
+    "credibilityLine": "Professor emeritus of psychology, University of Washington; co-founder of The Gottman Institute; author of Fight Right: How Successful Couples Turn Conflict into Connection; pioneered research on divorce prediction and marital stability through relationship analysis.",
+    "fields": [
+      "psychology",
+      "relationships",
+      "marriage counseling"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Professor Emeritus of Psychology, University of Washington; Co-founder and Director, The Gottman Institute",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/John_Gottman"
+    }
+  },
+  {
+    "id": "julie-gottman",
+    "name": "Julie Gottman",
+    "portrait": "/portraits/julie-gottman.jpg",
+    "portrait2x": "/portraits/julie-gottman@2x.jpg",
+    "portraitBrightness": 0.315,
+    "credibilityLine": "Co-founder and President of The Gottman Institute; clinical psychologist specializing in couples therapy and relationship research",
+    "fields": [
+      "psychology",
+      "couples therapy",
+      "relationship research"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder and President, The Gottman Institute",
+    "links": {
+      "bio": "https://www.gottman.com/about/john-julie-gottman/"
+    }
+  },
+  {
+    "id": "michael-israetel",
+    "name": "Dr Michael Israetel",
+    "portrait": "/portraits/michael-israetel.jpg",
+    "portrait2x": "/portraits/michael-israetel@2x.jpg",
+    "portraitBrightness": 0.462,
+    "credibilityLine": "Co-founder of Renaissance Periodization; sports science and nutrition expert",
+    "fields": [
+      "sports science",
+      "nutrition",
+      "fitness"
+    ],
+    "roles": [
+      "researcher",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder, Renaissance Periodization",
+    "links": {}
+  },
+  {
+    "id": "gad-saad",
+    "name": "Gad Saad",
+    "portrait": "/portraits/gad-saad.jpg",
+    "portrait2x": "/portraits/gad-saad@2x.jpg",
+    "portraitBrightness": 0.335,
+    "credibilityLine": "Professor of Marketing at Concordia University since 1994; author of The Parasitic Mind and The Saad Truth About Happiness; hosts The Saad Truth podcast; applies evolutionary psychology to marketing and consumer behavior.",
+    "fields": [
+      "evolutionary psychology",
+      "marketing",
+      "consumer behavior"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Marketing, Concordia University (John Molson School of Business)",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Gad_Saad"
+    }
+  },
+  {
+    "id": "yuval-noah-harari",
+    "name": "Yuval Noah Harari",
+    "portrait": "/portraits/yuval-noah-harari.jpg",
+    "portrait2x": "/portraits/yuval-noah-harari@2x.jpg",
+    "portraitBrightness": 0.289,
+    "credibilityLine": "Professor of History at Hebrew University of Jerusalem; author of Sapiens: A Brief History of Humankind, Homo Deus: A Brief History of Tomorrow, 21 Lessons for the 21st Century, and Nexus: A Brief History of Information Networks from the Stone Age to AI; founded Sapienship, a social impact company.",
+    "fields": [
+      "history",
+      "artificial intelligence",
+      "future studies"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of History, Hebrew University of Jerusalem",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Yuval_Noah_Harari"
+    }
+  },
+  {
+    "id": "david-epstein",
+    "name": "David Epstein",
+    "portrait": "/portraits/david-epstein.jpg",
+    "portrait2x": "/portraits/david-epstein@2x.jpg",
+    "portraitBrightness": 0.405,
+    "credibilityLine": "American journalist; author of Range: Why Generalists Triumph in a Specialized World and The Sports Gene; former senior writer at Sports Illustrated and investigative reporter at ProPublica",
+    "fields": [
+      "journalism",
+      "science writing",
+      "sports science"
+    ],
+    "roles": [
+      "author",
+      "journalist",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Author and journalist",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/David_Epstein_(journalist)"
+    }
+  },
+  {
+    "id": "orion-taraban",
+    "name": "Dr Orion Taraban",
+    "portrait": "/portraits/orion-taraban.jpg",
+    "portrait2x": "/portraits/orion-taraban@2x.jpg",
+    "portraitBrightness": 0.359,
+    "credibilityLine": "Licensed psychologist since 2017; focuses on men's mental health and healthy masculinity; runs PsycHacks YouTube channel",
+    "fields": [
+      "psychology",
+      "men's mental health",
+      "masculinity"
+    ],
+    "roles": [
+      "psychologist",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Licensed psychologist and content creator",
+    "links": {
+      "bio": "https://www.publicprofile.com/dr-orion-taraban"
+    }
+  },
+  {
+    "id": "michael-franzese",
+    "name": "Michael Franzese",
+    "portrait": "/portraits/michael-franzese.jpg",
+    "portrait2x": "/portraits/michael-franzese@2x.jpg",
+    "portraitBrightness": 0.428,
+    "credibilityLine": "Former caporegime in Colombo crime family; listed by Fortune Magazine as #18 on \"Fifty Most Wealthy and Powerful Mafia Bosses\" (1986); best-selling author of Blood Covenant and I'll Make You an Offer You Can't Refuse: Insider Business Tips from a Former Mob Boss; motivational speaker and commentator.",
+    "fields": [
+      "crime",
+      "business",
+      "psychology"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Motivational speaker, author, and commentator",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Michael_Franzese"
+    }
+  },
+  {
+    "id": "francis-ngannou",
+    "name": "Francis Ngannou",
+    "portrait": "/portraits/francis-ngannou.jpg",
+    "portrait2x": "/portraits/francis-ngannou@2x.jpg",
+    "portraitBrightness": 0.228,
+    "credibilityLine": "Former UFC Heavyweight Champion (2021); Lineal Combat Sports Heavyweight World Champion; professional boxer; author of The 33 Laws Of Business & Life; MMA record of 17 wins and 12 victories by knockout.",
+    "fields": [
+      "martial arts",
+      "psychology",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Professional mixed martial artist and boxer competing in the Heavyweight division",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Francis_Ngannou"
+    }
+  },
+  {
+    "id": "cheri-mah",
+    "name": "Dr Cheri Mah",
+    "portrait": "/portraits/cheri-mah.jpg",
+    "portrait2x": "/portraits/cheri-mah@2x.jpg",
+    "portraitBrightness": 0.188,
+    "credibilityLine": "Sleep scientist and Professor at Stanford Sleep Medicine Centre; specializes in sleep optimization for elite athletes",
+    "fields": [
+      "sleep science",
+      "athletic performance",
+      "sports medicine"
+    ],
+    "roles": [
+      "researcher",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Professor at Stanford Sleep Medicine Centre",
+    "links": {
+      "bio": "https://podcasts.apple.com/au/podcast/the-woman-who-helps-athletes-sleep-stop-having/id1291423644?i=1000664331063"
+    }
+  },
+  {
+    "id": "marc-randolph",
+    "name": "Marc Randolph",
+    "portrait": "/portraits/marc-randolph.jpg",
+    "portrait2x": "/portraits/marc-randolph@2x.jpg",
+    "portraitBrightness": 0.355,
+    "credibilityLine": "Co-founder and first CEO of Netflix; author of That Will Never Work; helped found Macworld magazine and MacWarehouse.",
+    "fields": [
+      "entrepreneurship",
+      "leadership",
+      "product strategy"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Tech entrepreneur and advisor; chairman, National Outdoor Leadership School",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Marc_Randolph"
+    }
+  },
+  {
+    "id": "aseem-malhotra",
+    "name": "Dr Aseem Malhotra",
+    "portrait": "/portraits/aseem-malhotra.jpg",
+    "portrait2x": "/portraits/aseem-malhotra@2x.jpg",
+    "portraitBrightness": 0.347,
+    "credibilityLine": "Award-winning NHS-trained consultant cardiologist; co-chair of BAPIO London; expert in preventive cardiology and lifestyle medicine; founded Action on Sugar; lead author on Choosing Wisely campaign (2015); board member of The King's Fund.",
+    "fields": [
+      "cardiology",
+      "preventive medicine",
+      "nutrition",
+      "public health"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Consultant Cardiologist, HUM2N Clinic, London",
+    "links": {
+      "bio": "https://doctoraseem.com/biography/"
+    }
+  },
+  {
+    "id": "josh-kaufman",
+    "name": "Josh Kaufman",
+    "portrait": "/portraits/josh-kaufman.jpg",
+    "portrait2x": "/portraits/josh-kaufman@2x.jpg",
+    "portraitBrightness": 0.338,
+    "credibilityLine": "Bestselling author of The Personal MBA, The First 20 Hours, and How to Fight a Hydra; former brand manager at Procter & Gamble; business education expert",
+    "fields": [
+      "business",
+      "entrepreneurship",
+      "skill acquisition"
+    ],
+    "roles": [
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Author and business advisor",
+    "links": {
+      "bio": "https://joshkaufman.net/about-josh-kaufman/"
+    }
+  },
+  {
+    "id": "richard-reeves",
+    "name": "Richard Reeves",
+    "portrait": "/portraits/richard-reeves.jpg",
+    "portrait2x": "/portraits/richard-reeves@2x.jpg",
+    "portraitBrightness": 0.342,
+    "credibilityLine": "Senior Fellow at Brookings Institution; co-director of Center on Children and Families; author of Of Boys and Men",
+    "fields": [
+      "economics",
+      "policy",
+      "social mobility",
+      "inequality"
+    ],
+    "roles": [
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Senior Fellow at the Brookings Institution, co-director of Center on Children and Families",
+    "links": {
+      "bio": "https://hceconomics.uchicago.edu/people/richard-v-reeves"
+    }
+  },
+  {
+    "id": "tyna-moore",
+    "name": "Dr. Tyna Moore",
+    "portrait": "/portraits/tyna-moore.jpg",
+    "portrait2x": "/portraits/tyna-moore@2x.jpg",
+    "portraitBrightness": 0.314,
+    "credibilityLine": "Licensed Naturopathic Physician and Doctor of Chiropractic; founder and owner of Core Wellness Clinic in Portland, OR; expert in regenerative medicine, hormone optimization, and metabolic health with nearly 30 years of clinical and teaching experience",
+    "fields": [
+      "regenerative medicine",
+      "naturopathic medicine",
+      "chiropractic medicine",
+      "hormone optimization",
+      "metabolic health",
+      "musculoskeletal health"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Naturopathic Physician and Chiropractor; clinic founder; educator and podcast host",
+    "links": {
+      "bio": "https://www.a4m.com/tyna-moore.html"
+    }
+  },
+  {
+    "id": "guy-leschziner",
+    "name": "Guy Leschziner",
+    "portrait": "/portraits/guy-leschziner.jpg",
+    "portrait2x": "/portraits/guy-leschziner@2x.jpg",
+    "portraitBrightness": 0.363,
+    "credibilityLine": "Professor of Neurology and Sleep Medicine at King's College London; consultant neurologist and former clinical lead of the Sleep Disorders Centre at Guy's Hospital; author of The Nocturnal Brain and Seven Deadly Sins; PhD in genetics of epilepsy; recipient of the 2019 Ellison-Cliffe Medal from the Royal Society of Medicine.",
+    "fields": [
+      "sleep medicine",
+      "neurology",
+      "epilepsy",
+      "parasomnias",
+      "narcolepsy"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "academic",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Consultant Neurologist and Professor of Neurology and Sleep Medicine, Institute of Psychiatry, Psychology and Neuroscience, King's College London; Department of Neurology and Sleep Disorders Centre, Guy's and St Thomas' Hospitals",
+    "links": {
+      "bio": "https://www.guyleschziner.com/about"
+    }
+  },
+  {
+    "id": "mindy-pelz",
+    "name": "Dr Mindy Pelz",
+    "portrait": "/portraits/mindy-pelz.jpg",
+    "portrait2x": "/portraits/mindy-pelz@2x.jpg",
+    "portraitBrightness": 0.266,
+    "credibilityLine": "Chiropractor and health expert specializing in fasting, hormonal health, and women's wellness; founder of family wellness clinics and Reset Academy; podcaster and bestselling author",
+    "fields": [
+      "nutrition",
+      "fasting",
+      "women's health",
+      "hormonal health",
+      "wellness"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Chiropractor, Health Expert, and Wellness Coach",
+    "links": {
+      "bio": "https://wikibio.in/dr-mindy-pelz/"
+    }
   }
 ]

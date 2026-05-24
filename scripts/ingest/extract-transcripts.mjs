@@ -19,7 +19,7 @@ function parseVtt(content) {
     const end = +m[5] * 3600 + +m[6] * 60 + +m[7] + +m[8] / 1000;
 
     const textLines = lines.slice(timingIdx + 1);
-    // Prefer the line that carries inline word-level timing — that's the
+    // Prefer the line that carries inline word-level timing, that's the
     // "active" line where new speech is being transcribed.
     let chosen = textLines.find((l) => /<\d{2}:\d{2}:\d{2}\.\d{3}>/.test(l));
     if (!chosen) chosen = textLines.find((l) => l.trim());
@@ -68,7 +68,7 @@ for (const [id, file] of byId) {
   await writeFile(outPath, JSON.stringify(cues));
   const lastEnd = cues.length ? cues[cues.length - 1].end : 0;
   const mins = Math.floor(lastEnd / 60);
-  console.log(`  ${id}.json — ${cues.length} cues, ~${mins} min`);
+  console.log(`  ${id}.json, ${cues.length} cues, ~${mins} min`);
   total += cues.length;
 }
 

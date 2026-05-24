@@ -7,7 +7,7 @@ sessions.
 
 The frontend is the same Vite SPA that serves `/`, but the page only
 functions when the dev API server is running. The deployed site at `/`
-is static — there is no `/review` in production by design (it needs
+is static, there is no `/review` in production by design (it needs
 filesystem write access to `data/` and `public/`, which a static host
 can't provide).
 
@@ -15,18 +15,18 @@ can't provide).
 
 Per row:
 
-- **Portrait** — current cropped thumbnail. Buttons to generate top-5
+- **Portrait**, current cropped thumbnail. Buttons to generate top-5
   alts (re-runs `scripts/portraits/auto-portrait.py` with `top-n=5`)
   and to swap any of them in as the primary. Re-extract pulls 50 fresh
   frames when the existing 20 are host-dominated.
-- **Title** — episode title. Inline text input, saves on blur to
+- **Title**, episode title. Inline text input, saves on blur to
   `data/episodes.json`.
-- **Description** — 1–2 sentence editorial summary. Inline textarea,
+- **Description**, 1-2 sentence editorial summary. Inline textarea,
   saves on blur to `data/episodes.json`.
-- **Primary guest bio** (`credibilityLine`) — inline textarea, saves
+- **Primary guest bio** (`credibilityLine`), inline textarea, saves
   on blur to `data/guests.json`. A hint underneath shows
   `applies to N appearances` because the bio is keyed on the guest,
-  not the episode — editing it updates every card that guest appears
+  not the episode, editing it updates every card that guest appears
   on. The local state of all matching rows is updated immediately so
   the UI doesn't drift from the server.
 
@@ -41,12 +41,12 @@ All routes under `/api/review/*`, served by `server/index.mjs` on port
 
 | Method | Path | Body | Notes |
 | --- | --- | --- | --- |
-| GET | `/episodes` | — | List with editorial fields + `primaryGuest.appearanceCount` |
+| GET | `/episodes` | (none) | List with editorial fields + `primaryGuest.appearanceCount` |
 | POST | `/edit-episode` | `{ id, title?, description? }` | Patches `data/episodes.json` |
 | POST | `/edit-guest` | `{ id, credibilityLine? }` | Patches `data/guests.json` |
 | POST | `/approve` | `{ id, status: 'good' \| 'pending' }` | Patches `data/_portrait-review.json` |
 | POST | `/alts` | `{ videoId }` | Runs `auto-portrait.py top-n=5` into `public/_review-picks/{vid}/` |
-| POST | `/swap` | `{ videoId, pick }` | Promotes pick 1–5 to the primary portrait |
+| POST | `/swap` | `{ videoId, pick }` | Promotes pick 1-5 to the primary portrait |
 | POST | `/reextract` | `{ videoId, count? }` | Wipes `data/_frames/{vid}/`, re-extracts (default 50) |
 
 ## Persistence
@@ -82,4 +82,4 @@ page in one tab at a time.
   run on a public host is more complexity than the tool is worth.
 - Hosting the staging alt portraits under `public/`. They're served
   from there only because Vite's static serving makes the URLs
-  trivial — a real review server would isolate them.
+  trivial, a real review server would isolate them.

@@ -10,7 +10,7 @@ import { readFileSync, existsSync } from 'node:fs';
 
 const LOG = 'data/_topic-candidates.jsonl';
 if (!existsSync(LOG)) {
-  console.log(`${LOG} not found — no candidates logged yet.`);
+  console.log(`${LOG} not found, no candidates logged yet.`);
   process.exit(0);
 }
 

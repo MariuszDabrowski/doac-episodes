@@ -143,13 +143,15 @@ onMounted(fetchEpisodes);
       </div>
     </header>
 
-    <ul class="ep-list">
-      <li
-        v-for="ep in filtered"
-        :key="ep.id"
-        class="ep-row"
-        :class="`status-${ep.status}`"
-      >
+    <Transition name="list-fade" mode="out-in">
+      <ul :key="filter" class="ep-list">
+        <li
+          v-for="(ep, i) in filtered"
+          :key="ep.id"
+          class="ep-row"
+          :class="[`status-${ep.status}`, { 'is-stagger-target': i < 8 }]"
+          :style="{ '--slot-index': i }"
+        >
         <div class="ep-name">{{ ep.primaryGuest?.name }}</div>
         <div class="ep-left">
           <img
@@ -162,9 +164,9 @@ onMounted(fetchEpisodes);
               type="button"
               class="action-btn good"
               :class="{ active: ep.status === 'good' }"
-              :title="ep.status === 'good' ? 'Click to unmark — return to Pending' : 'Mark this episode as reviewed'"
+              :title="ep.status === 'good' ? 'Click to unmark, return to Pending' : 'Mark this episode as reviewed'"
               @click="markStatus(ep, ep.status === 'good' ? 'pending' : 'good')"
-            >{{ ep.status === 'good' ? '✓ Good' : 'Mark good' }}</button>
+            >{{ ep.status === 'good' ? 'Good' : 'Mark good' }}</button>
             <button
               type="button"
               class="action-btn"
@@ -236,8 +238,9 @@ onMounted(fetchEpisodes);
             <span class="alt-num">{{ alt.pick }}</span>
           </button>
         </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </Transition>
   </main>
 </template>
 
@@ -275,12 +278,27 @@ onMounted(fetchEpisodes);
   font-size: 0.8125rem;
   cursor: pointer;
   text-transform: capitalize;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.filter-btn:hover:not(.active) {
+  background: rgba(245, 236, 214, 0.08);
+  border-color: rgba(245, 236, 214, 0.22);
+  color: #f5ecd6;
 }
 
 .filter-btn.active {
   background: #c89968;
   border-color: #c89968;
   color: #100e0c;
+}
+
+.filter-btn.active:hover {
+  background: #d2a576;
+  border-color: #d2a576;
 }
 
 .ep-list {
@@ -292,12 +310,51 @@ onMounted(fetchEpisodes);
   gap: 0.75rem;
 }
 
+/* The whole list fades out before the new (filtered) one mounts. Cards
+   stagger themselves in via the keyframe below, so no enter transition
+   on the <ul> itself. */
+.list-fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.list-fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes ep-row-stagger-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Only the first 8 rows animate (mirrors the home page). Anything past
+   that pops in instantly so a filter that produces 50+ results doesn't
+   spend three seconds revealing rows the user can't see yet. */
+.ep-row.is-stagger-target {
+  animation: ep-row-stagger-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--slot-index, 0) * 0.06s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ep-row.is-stagger-target {
+    animation: none;
+  }
+  .list-fade-leave-active {
+    transition: opacity 0.15s ease;
+  }
+}
+
 .ep-row {
   display: grid;
   /* Two columns: thumb+buttons on the left, fields on the right. Name
      spans the full width above; alts strip (when shown) spans below.
      Cap the row width so empty space doesn't trail off to the right on
-     wide screens — the fields max out around 38rem anyway. */
+     wide screens, the fields max out around 38rem anyway. */
   grid-template-columns: 200px minmax(0, 1fr);
   column-gap: 1.5rem;
   row-gap: 0.875rem;
@@ -305,7 +362,6 @@ onMounted(fetchEpisodes);
   padding: 0.875rem;
   background: rgba(245, 236, 214, 0.03);
   border-radius: 8px;
-  border-left: 3px solid transparent;
 }
 
 .ep-name {
@@ -321,10 +377,6 @@ onMounted(fetchEpisodes);
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
-}
-
-.ep-row.status-good {
-  border-left-color: #6fa86f;
 }
 
 .ep-thumb {
@@ -353,7 +405,7 @@ onMounted(fetchEpisodes);
   transition: border-color 0.15s ease, background-color 0.15s ease;
   /* Auto-grow textareas to fit their content (Chrome/Edge 123+, Firefox
      137+, Safari 18+). With the rows attribute as a minimum height, this
-     means short bios stay one-line tall and long bios expand fully — no
+     means short bios stay one-line tall and long bios expand fully, no
      internal scrollbars. */
   field-sizing: content;
   resize: none;
@@ -444,10 +496,10 @@ onMounted(fetchEpisodes);
 }
 
 .action-btn {
-  background: rgba(245, 236, 214, 0.1);
+  background: rgba(245, 236, 214, 0.08);
   border: none;
   color: #f5ecd6;
-  padding: 0.45rem 1.125rem;
+  padding: 0.5rem 1.125rem;
   border-radius: 9999px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.8125rem;
@@ -455,11 +507,24 @@ onMounted(fetchEpisodes);
   letter-spacing: 0.02em;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  /* Softer transition with a slight lift on hover, picks up the warmth
+     of the main site's button hovers instead of feeling mechanical. */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.18s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.2s ease;
 }
 
 .action-btn:hover:not(:disabled) {
-  background: rgba(245, 236, 214, 0.18);
+  background: rgba(245, 236, 214, 0.16);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.4);
+}
+
+.action-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px -3px rgba(0, 0, 0, 0.3);
 }
 
 .action-btn:disabled {
@@ -473,7 +538,7 @@ onMounted(fetchEpisodes);
 }
 
 .action-btn.good.active:hover {
-  background: rgba(111, 168, 111, 0.3);
+  background: rgba(111, 168, 111, 0.32);
 }
 
 .alts {

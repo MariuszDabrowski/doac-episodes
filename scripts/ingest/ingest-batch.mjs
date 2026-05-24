@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Run ingest-episode.mjs across the next N un-ingested candidates.
- * Skips any that already exist in episodes.json (defensive — the
+ * Skips any that already exist in episodes.json (defensive, the
  * candidate picker already filters them, but races could occur).
  *
  * Usage: node scripts/ingest-batch.mjs [count=10] [min-minutes=30]

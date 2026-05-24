@@ -4,11 +4,11 @@
 
 Three specs live under `specs/`:
 
-- `PROJECT_BRIEF.md` — what we're building, the editorial stance, schema, page
+- `PROJECT_BRIEF.md`, what we're building, the editorial stance, schema, page
   layouts, open questions
-- `EPISODE_INGESTION.md` — the step-by-step process for taking a YouTube video
+- `EPISODE_INGESTION.md`, the step-by-step process for taking a YouTube video
   ID and producing a committed episode entry
-- `REVIEW_PAGE.md` — what the local `/review` triage tool does, its API, and
+- `REVIEW_PAGE.md`, what the local `/review` triage tool does, its API, and
   how its persistence works
 
 **Update the relevant spec in the same commit as any change to the process or
@@ -36,13 +36,18 @@ sessions lose context.
   site is a static SPA. A small Hono dev server (`server/index.mjs`) powers
   the local-only `/review` triage page. `npm run dev` runs both concurrently
   (Vite 3000 → API 3001 via proxy). `npm run build` outputs the deployable
-  static site to `dist/`. The API server is NOT deployed — `/review` only
+  static site to `dist/`. The API server is NOT deployed, `/review` only
   works locally because it writes back to data/ and public/
 - Layout: `client/` (Vue app + index.html), `server/` (Hono API), `public/`
-  (static assets — portraits, served at the root URL), `data/` (committed
+  (static assets, portraits, served at the root URL), `data/` (committed
   JSON + gitignored raw `_*` working data), `scripts/ingest/` (Node, the
-  episode pipeline), `scripts/portraits/` (Python + Node, the portrait
-  pipeline)
+  episode pipeline; the orchestrator `ingest-episode.mjs` is thin, the
+  bulk lives in `scripts/ingest/lib/{ai,enrichment,portrait,episode-number,utils}.mjs`),
+  `scripts/portraits/` (Python + Node, the portrait pipeline)
+- Client components live in `client/src/components/`. Reusable
+  cross-cutting bits go in `client/src/composables/` (Vue composables).
+  Pages compose them; pages should stay small and focused on layout
+  rather than logic
 - Use `nvm use` (`.nvmrc` pins Node LTS) before running any `npm` script.
   Node 18+ is required
 - Python tooling lives in `.venv` (`./.venv/bin/python ...`); install with
@@ -54,8 +59,8 @@ sessions lose context.
 - Portraits at `public/portraits/{guestId}.{jpg,webp,avif,@2x.jpg,@2x.webp,@2x.avif}`
   are committed. `auto-portrait.py` writes all three formats; `EpisodeCard.vue`
   serves them via `<picture>` (AVIF → WebP → JPG fallback). JPG stays canonical
-  in `data/*.json` — components derive the modern paths by extension swap.
-  Only the top auto-picked frame is generated — alts (`-2`, `-3`) used
+  in `data/*.json`, components derive the modern paths by extension swap.
+  Only the top auto-picked frame is generated, alts (`-2`, `-3`) used
   to be saved as swap candidates, but the host blacklist + face
   recognition make defaults reliable enough that they were never used
   in practice. If a default is ever wrong, re-run `extract:frames` and
@@ -63,7 +68,7 @@ sessions lose context.
   existing JPGs, run `.venv/bin/python scripts/portraits/convert-portraits.py`.
 - Watch the dev server at `http://localhost:3000`; restart it (`pkill -f
   "vite\|server/index.mjs" && npm run dev`) only when `vite.config.js`,
-  `server/index.mjs`, or `package.json` changes — most file changes
+  `server/index.mjs`, or `package.json` changes, most file changes
   hot-reload via Vite
 
 ## Code quality
@@ -72,7 +77,7 @@ The codebase should stay easy to navigate and read. Optimize for the next
 person opening a file cold.
 
 - **Keep files small.** If a single file grows past ~300 lines, consider
-  splitting. Vue components especially — pull out subcomponents, composables,
+  splitting. Vue components especially, pull out subcomponents, composables,
   or move logic into `~/composables/` or `~/utils/`.
 - **One responsibility per file.** Don't pile auth logic into a page
   component; don't put data-fetching helpers in a UI file.
@@ -83,7 +88,7 @@ person opening a file cold.
   (browser quirk, performance, contract), say so in a brief comment. Never
   narrate code that already explains itself.
 - **Magic numbers go to named constants** at the top of the file or in a
-  shared config — especially for animation timings, scoring weights, layout
+  shared config, especially for animation timings, scoring weights, layout
   breakpoints.
 - **Match the existing pattern.** If similar code already exists, use the
   same shape and naming. Don't introduce a second way to do the same thing
@@ -95,8 +100,8 @@ person opening a file cold.
 ## Avoid
 
 - Committing `.env`, anything under `data/_*`, or `node_modules/`
-- Hardcoding "the latest" anything (font, model, color) — link to the
+- Hardcoding "the latest" anything (font, model, color), link to the
   taxonomies/config files instead
 - Skipping the manual portrait verification step in the ingestion workflow.
   Identity is filtered (host blacklist), but face-size still picks
-  unflattering shots — confirm the expression reads well editorially
+  unflattering shots, confirm the expression reads well editorially

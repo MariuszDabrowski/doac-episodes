@@ -26,7 +26,7 @@ const DRY_RUN = process.argv.includes('--dry-run');
 const targetIds = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 
 if (!process.env.ANTHROPIC_API_KEY) {
-  console.error('ANTHROPIC_API_KEY missing — set it in .env');
+  console.error('ANTHROPIC_API_KEY missing, set it in .env');
   process.exit(1);
 }
 
@@ -58,7 +58,7 @@ const TOPIC_TOOL = {
 };
 
 async function pickTopics(ep, raw) {
-  const topicList = taxonomies.topics.map((t) => `${t.id} — ${t.label}`).join('\n');
+  const topicList = taxonomies.topics.map((t) => `${t.id}, ${t.label}`).join('\n');
   const systemPrompt = `You are picking topics for a podcast episode from a controlled taxonomy. Pick 1-3 most representative IDs, most-representative first. If a clearly-better topic is missing, fill suggestedTopicGap.
 
 Available topics:

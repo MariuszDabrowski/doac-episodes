@@ -38,7 +38,7 @@ face_mesh = mp.solutions.face_mesh.FaceMesh(
 # matches gets a penalty heavy enough to override face-size advantage. Since
 # DOAC frames contain exactly one face (filtered upstream) and the host is
 # the only consistent identity across episodes, "not the host" = "the guest"
-# by elimination — no per-guest reference needed.
+# by elimination, no per-guest reference needed.
 HOST_REFERENCE_PATH = "data/host-bartlett.jpg"
 HOST_DISTANCE_DEFINITE = 0.50  # below this → definitely the host
 HOST_DISTANCE_LIKELY = 0.60  # face_recognition's default tolerance
@@ -116,7 +116,7 @@ CLUSTER_DISTANCE = 0.55  # face_recognition's "definitely same person" threshold
 
 def dominant_face_indices(encodings):
     """Cluster faces by similarity (union-find) and return the indices of
-    the largest cluster — but ONLY if it's significantly larger than the
+    the largest cluster, but ONLY if it's significantly larger than the
     next-largest (≥ 2×). On multi-guest panels both guests' clusters are
     similarly sized; in that case we return all valid indices (skip
     filtering) so the existing scoring can pick the right person.
@@ -154,7 +154,7 @@ def dominant_face_indices(encodings):
     if len(sorted_clusters) > 1:
         next_largest = sorted_clusters[1]
         # Panel detection: if the second cluster is at least half the size
-        # of the dominant one, there's no clear "main" face — likely a
+        # of the dominant one, there's no clear "main" face, likely a
         # multi-guest episode. Skip filtering.
         if len(next_largest) * 2 >= len(largest):
             return set(valid)
@@ -255,7 +255,7 @@ if not candidates:
     print("No suitable frame found.", file=sys.stderr)
     sys.exit(1)
 
-# Filter to the dominant face cluster — keeps the guest, drops B-roll
+# Filter to the dominant face cluster, keeps the guest, drops B-roll
 # faces (news clips, sponsor reads, archive footage) that only appear in
 # a handful of frames. Mask out clear-host frames from the clustering
 # pool first: in shows that cut back to the host often, Bartlett's face
@@ -278,7 +278,7 @@ if valid_count >= 3:
 # Strict tiered preference on eye state: never pick a closed-eye frame if any
 # open-eye candidate exists, never pick partial-eye if any open. Within the
 # winning tier, sort by score. EAR bonuses/penalties were too small relative
-# to face-area dominance — a big-face blink kept winning over a smaller open-
+# to face-area dominance, a big-face blink kept winning over a smaller open-
 # eyed alternative. This hard filter eliminates that failure mode.
 open_eyes = [c for c in candidates if c["ear"] is not None and c["ear"] >= EAR_OPEN]
 partial_eyes = [c for c in candidates if c["ear"] is not None and EAR_PARTIAL <= c["ear"] < EAR_OPEN]
@@ -311,7 +311,7 @@ for i, c in enumerate(top):
         pil = Image.fromarray(cv2.cvtColor(crop, cv2.COLOR_BGR2RGB))
         pil.save(out_jpg.replace(ext, ".webp"), "WEBP", quality=WEBP_QUALITY, method=6)
         pil.save(out_jpg.replace(ext, ".avif"), "AVIF", quality=AVIF_QUALITY, speed=4)
-    # Mean grayscale brightness (0-1) — used to compute uniform scrim
+    # Mean grayscale brightness (0-1), used to compute uniform scrim
     gray = cv2.cvtColor(crop_1x, cv2.COLOR_BGR2GRAY)
     brightness = float(np.mean(gray)) / 255.0
     rank = "default" if i == 0 else f"alt {i + 1}"

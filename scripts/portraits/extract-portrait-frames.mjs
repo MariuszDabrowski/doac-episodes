@@ -29,7 +29,7 @@ function run(cmd, args, opts = {}) {
 // Pull the direct 1080p video-only stream URL (and duration) without
 // downloading the file. ffmpeg later seeks into this URL via HTTP byte-range
 // requests, so only the small chunk around each sample point gets fetched.
-// Stream URLs expire in a few hours — plenty of headroom for a single
+// Stream URLs expire in a few hours, plenty of headroom for a single
 // episode's extraction (~1 minute total).
 console.log(`Resolving stream URL for ${videoId}…`);
 const formatSelector =
@@ -38,7 +38,7 @@ const streamUrl = (
   await run('yt-dlp', ['-g', '-f', formatSelector, '--no-warnings', videoUrl], { capture: true })
 )
   .trim()
-  .split('\n')[0]; // some formats return video + audio URLs on separate lines — we only need video
+  .split('\n')[0]; // some formats return video + audio URLs on separate lines, we only need video
 
 const durationStr = await run('yt-dlp', ['--print', 'duration', '--no-warnings', videoUrl], {
   capture: true,
@@ -55,7 +55,7 @@ console.log(
 
 async function grabFrame(seconds, outFile, attempt = 1) {
   try {
-    // `-ss` *before* `-i` is the fast seek — ffmpeg uses HTTP Range requests
+    // `-ss` *before* `-i` is the fast seek, ffmpeg uses HTTP Range requests
     // to skip directly to the nearest keyframe instead of reading from 0.
     await run(
       'ffmpeg',

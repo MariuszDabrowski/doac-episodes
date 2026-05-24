@@ -33,7 +33,7 @@ const hasTranscript = (id) => [...existingFiles].some((f) => f.startsWith(`${id}
 
 const failures = [];
 for (const [i, v] of candidates.entries()) {
-  console.log(`\n[${i + 1}/${candidates.length}] ${v.id} — ${v.title.slice(0, 70)}`);
+  console.log(`\n[${i + 1}/${candidates.length}] ${v.id}, ${v.title.slice(0, 70)}`);
   if (hasTranscript(v.id)) {
     console.log('  (already downloaded, skipping)');
     continue;
@@ -49,5 +49,5 @@ for (const [i, v] of candidates.entries()) {
 console.log(`\nDone. ${candidates.length - failures.length}/${candidates.length} succeeded.`);
 if (failures.length) {
   console.log('Failures:');
-  failures.forEach((f) => console.log(`  ${f.id} — ${f.title.slice(0, 60)} — ${f.error}`));
+  failures.forEach((f) => console.log(`  ${f.id}, ${f.title.slice(0, 60)}, ${f.error}`));
 }

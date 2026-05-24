@@ -11,7 +11,7 @@
   interpolate-size: allow-keywords;
 }
 
-/* Global page background — warm radial top glow over a dark vertical
+/* Global page background, warm radial top glow over a dark vertical
    fade. Anchored to the viewport so it doesn't stretch as the page grows. */
 body {
   min-height: 100vh;

@@ -70,7 +70,7 @@ const expanded = ref(false);
 const extraGuests = computed(() => props.guests.slice(1));
 const hiddenGuestCount = computed(() => props.guests.length - 1);
 
-// Overflow detection for credibility lines — only show the bottom fade
+// Overflow detection for credibility lines, only show the bottom fade
 // indicator + enable hover-to-expand on bios that actually overflow the
 // 3-line clamp. Uses a single ResizeObserver across all credibility
 // elements in this card. The callback toggles a class directly on the
@@ -86,7 +86,7 @@ function watchCredibility(el) {
         // Skip while any part of the card is hovered. The hover trigger
         // for credibility expansion is the whole left "person" zone
         // (portrait + .guest blocks), so checking just the credibility's
-        // own :hover would still let the yo-yo loop fire — element grows
+        // own :hover would still let the yo-yo loop fire, element grows
         // → resize observer fires → measures expanded → removes
         // .has-overflow → CSS rule drops → collapses → grows again.
         // Card-wide check is broad but safe: there's no reason to
@@ -382,12 +382,12 @@ const guestPromotionGroups = computed(() => {
   position: relative;
   max-height: 4.5em; /* 3 lines × 1.5 line-height */
   overflow: hidden;
-  /* Isolates layout/style work to this subtree — when max-height animates
+  /* Isolates layout/style work to this subtree, when max-height animates
      the browser doesn't have to re-layout the whole card chain each frame. */
   contain: layout style;
 }
 
-/* Hover-to-expand. Bios that already fit in 3 lines stay static —
+/* Hover-to-expand. Bios that already fit in 3 lines stay static -
    no fade, no cursor change, no dead hover. */
 .credibility.has-overflow {
   cursor: help;

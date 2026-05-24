@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Local-only API server for the /review page. Runs alongside Vite on
 // port 3001; Vite's proxy forwards /api/* here. Not intended for
-// deployment — the review tool needs filesystem write access to data/
+// deployment, the review tool needs filesystem write access to data/
 // and public/. The public site is a static SPA built with `npm run build`.
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
