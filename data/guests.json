@@ -6,8 +6,16 @@
     "portrait2x": "/portraits/david-sinclair@2x.jpg",
     "portraitBrightness": 0.148,
     "credibilityLine": "Harvard professor of genetics; author of Lifespan; founded multiple longevity biotech companies.",
-    "fields": ["genetics", "longevity"],
-    "roles": ["academic", "researcher", "author", "practitioner"],
+    "fields": [
+      "genetics",
+      "longevity"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "practitioner"
+    ],
     "credentials": [
       {
         "type": "PhD",
@@ -37,8 +45,12 @@
     "portrait2x": "/portraits/whitney-wolfe-herd@2x.jpg",
     "portraitBrightness": 0.357,
     "credibilityLine": "Founder and CEO of Bumble; co-founded Tinder; first self-made female billionaire.",
-    "fields": ["business"],
-    "roles": ["practitioner"],
+    "fields": [
+      "business"
+    ],
+    "roles": [
+      "practitioner"
+    ],
     "credentials": [],
     "currentRole": "Founder and Executive Chair, Bumble",
     "links": {
@@ -53,8 +65,14 @@
     "portrait2x": "/portraits/andrew-huberman@2x.jpg",
     "portraitBrightness": 0.391,
     "credibilityLine": "Stanford neuroscientist; runs the Huberman Lab podcast; researcher in neural circuits and visual neuroscience.",
-    "fields": ["neuroscience"],
-    "roles": ["academic", "researcher", "public-figure"],
+    "fields": [
+      "neuroscience"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "public-figure"
+    ],
     "credentials": [
       {
         "type": "PhD",
@@ -84,8 +102,15 @@
     "portrait2x": "/portraits/mo-gawdat@2x.jpg",
     "portraitBrightness": 0.208,
     "credibilityLine": "Former Chief Business Officer at Google X; author of Solve for Happy, Scary Smart, and Unstressable.",
-    "fields": ["business", "psychology"],
-    "roles": ["practitioner", "author", "public-figure"],
+    "fields": [
+      "business",
+      "psychology"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
     "credentials": [],
     "currentRole": "Founder, One Billion Happy",
     "links": {
@@ -99,8 +124,15 @@
     "portrait2x": "/portraits/jordan-peterson@2x.jpg",
     "portraitBrightness": 0.442,
     "credibilityLine": "Clinical psychologist; former Professor of Psychology at University of Toronto; author of 12 Rules for Life.",
-    "fields": ["psychology"],
-    "roles": ["academic", "clinician", "author", "public-figure"],
+    "fields": [
+      "psychology"
+    ],
+    "roles": [
+      "academic",
+      "clinician",
+      "author",
+      "public-figure"
+    ],
     "credentials": [
       {
         "type": "PhD",
@@ -129,8 +161,14 @@
     "portrait2x": "/portraits/esther-perel@2x.jpg",
     "portraitBrightness": 0.38,
     "credibilityLine": "Practicing psychotherapist; author of Mating in Captivity and The State of Affairs; host of Where Should We Begin.",
-    "fields": ["psychology"],
-    "roles": ["clinician", "author", "public-figure"],
+    "fields": [
+      "psychology"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "public-figure"
+    ],
     "credentials": [
       {
         "type": "Masters",
@@ -153,8 +191,15 @@
     "portrait2x": "/portraits/ivanka-trump@2x.jpg",
     "portraitBrightness": 0.212,
     "credibilityLine": "Former Executive Vice President at Trump Organization; former Senior Advisor in the Trump White House; bestselling author.",
-    "fields": ["business", "politics"],
-    "roles": ["practitioner", "author", "public-figure"],
+    "fields": [
+      "business",
+      "politics"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
     "credentials": [
       {
         "type": "BS",
@@ -176,8 +221,15 @@
     "portrait2x": "/portraits/tony-robbins@2x.jpg",
     "portraitBrightness": 0.223,
     "credibilityLine": "Performance coach to heads of state and Fortune 100 CEOs; bestselling author of Awaken the Giant Within and Unlimited Power.",
-    "fields": ["business", "psychology"],
-    "roles": ["practitioner", "author", "public-figure"],
+    "fields": [
+      "business",
+      "psychology"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
     "credentials": [],
     "currentRole": "Author, coach, and entrepreneur",
     "links": {
@@ -192,8 +244,14 @@
     "portrait2x": "/portraits/hal-puthoff@2x.jpg",
     "portraitBrightness": 0.231,
     "credibilityLine": "Quantum physicist; advised the NSA and CIA on UAP science; former chief science advisor to Bigelow Aerospace.",
-    "fields": ["physics"],
-    "roles": ["academic", "researcher", "practitioner"],
+    "fields": [
+      "physics"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "practitioner"
+    ],
     "credentials": [
       {
         "type": "PhD",
@@ -215,10 +273,232 @@
     "portrait2x": "/portraits/dan-farah@2x.jpg",
     "portraitBrightness": 0.208,
     "credibilityLine": "Filmmaker; director and producer of The Age of Disclosure, a documentary on classified UAP programs.",
-    "fields": ["media"],
-    "roles": ["practitioner", "public-figure"],
+    "fields": [
+      "media"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
     "credentials": [],
     "currentRole": "Filmmaker; Founder, Farah Films & Management",
     "links": {}
+  },
+  {
+    "id": "michio-kaku",
+    "name": "Michio Kaku",
+    "portrait": "/portraits/michio-kaku.jpg",
+    "portrait2x": "/portraits/michio-kaku@2x.jpg",
+    "portraitBrightness": 0.319,
+    "credibilityLine": "Theoretical physicist; co-founder of String Field Theory; Professor at City College of New York; author of Quantum Supremacy and multiple bestselling popular science books",
+    "fields": [
+      "physics",
+      "quantum computing",
+      "cosmology"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Theoretical Physics, City College of New York",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Michio_Kaku"
+    }
+  },
+  {
+    "id": "david-unwin",
+    "name": "Dr. David Unwin",
+    "portrait": "/portraits/david-unwin.jpg",
+    "portrait2x": "/portraits/david-unwin@2x.jpg",
+    "portraitBrightness": 0.299,
+    "credibilityLine": "NHS GP with 40+ years in general practice; NHS Innovator of the Year (2016); co-author of most-read paper in BMJ Open on reversing Type 2 diabetes through low-carbohydrate diet; put 157 patients into drug-free diabetes remission using diet alone.",
+    "fields": [
+      "nutrition",
+      "diabetes",
+      "longevity"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "NHS GP (General Practitioner)",
+    "links": {}
+  },
+  {
+    "id": "anne-applebaum",
+    "name": "Anne Applebaum",
+    "portrait": "/portraits/anne-applebaum.jpg",
+    "portrait2x": "/portraits/anne-applebaum@2x.jpg",
+    "portraitBrightness": 0.42,
+    "credibilityLine": "Staff writer at The Atlantic; senior fellow at SNF Agora Institute at Johns Hopkins University and School of Advanced International Studies; author of Autocracy, Inc. and other books on authoritarianism and democratic collapse",
+    "fields": [
+      "politics",
+      "authoritarianism",
+      "history"
+    ],
+    "roles": [
+      "author",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Staff writer, The Atlantic; Senior Fellow, SNF Agora Institute at Johns Hopkins University",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Anne_Applebaum"
+    }
+  },
+  {
+    "id": "professor-jiang",
+    "name": "Professor Jiang",
+    "portrait": "/portraits/professor-jiang.jpg",
+    "portrait2x": "/portraits/professor-jiang@2x.jpg",
+    "portraitBrightness": 0.299,
+    "credibilityLine": "Host of YouTube channel Predictive History; geopolitical analyst using history, geography, economics, and game theory; writes geopolitical analysis on Substack",
+    "fields": [
+      "geopolitics",
+      "international relations",
+      "history"
+    ],
+    "roles": [
+      "analyst",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Geopolitical analyst, writer, and YouTube content creator",
+    "links": {}
+  },
+  {
+    "id": "scott-galloway",
+    "name": "Scott Galloway",
+    "portrait": "/portraits/scott-galloway.jpg",
+    "portrait2x": "/portraits/scott-galloway@2x.jpg",
+    "portraitBrightness": 0.271,
+    "credibilityLine": "Professor of Marketing at NYU Stern; author of The Four, The Algebra of Happiness, Post Corona, and Notes on Being a Man",
+    "fields": [
+      "marketing",
+      "brand strategy",
+      "digital marketing"
+    ],
+    "roles": [
+      "academic",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Marketing, NYU Stern School of Business",
+    "links": {
+      "bio": "https://www.stern.nyu.edu/faculty/bio/scott-galloway"
+    }
+  },
+  {
+    "id": "ben-felix",
+    "name": "Ben Felix",
+    "portrait": "/portraits/ben-felix.jpg",
+    "portrait2x": "/portraits/ben-felix@2x.jpg",
+    "portraitBrightness": 0.304,
+    "credibilityLine": "Portfolio manager at PWL Capital; evidence-based investing and behavioral finance",
+    "fields": [
+      "investing",
+      "behavioral finance"
+    ],
+    "roles": [
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Portfolio Manager, PWL Capital",
+    "links": {}
+  },
+  {
+    "id": "rena-malik",
+    "name": "Dr Rena Malik",
+    "portrait": "/portraits/rena-malik.jpg",
+    "portrait2x": "/portraits/rena-malik@2x.jpg",
+    "portraitBrightness": 0.184,
+    "credibilityLine": "Urologist and sexual health expert",
+    "fields": [
+      "sexual health",
+      "urology"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Urologist",
+    "links": {}
+  },
+  {
+    "id": "david-eagleman",
+    "name": "David Eagleman",
+    "portrait": "/portraits/david-eagleman.jpg",
+    "portrait2x": "/portraits/david-eagleman@2x.jpg",
+    "portraitBrightness": 0.195,
+    "credibilityLine": "Stanford neuroscientist and technologist; author of Livewired: The Inside Story of the Ever-Changing Brain; cofounder of Neosensory and BrainCheck; director of the Center for Science and Law.",
+    "fields": [
+      "neuroscience",
+      "psychology",
+      "brain plasticity"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Neuroscientist and Technologist, Stanford University",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/David_Eagleman"
+    }
+  },
+  {
+    "id": "alex-tatem",
+    "name": "Dr Alex Tatem",
+    "portrait": "/portraits/alex-tatem.jpg",
+    "portrait2x": "/portraits/alex-tatem@2x.jpg",
+    "portraitBrightness": 0.21,
+    "credibilityLine": "Urologist with 12 years of peptide research; runs men's health clinic; hosts YouTube channel on peptides and men's health",
+    "fields": [
+      "urology",
+      "peptides",
+      "men's health"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Urologist and Men's Health Clinician",
+    "links": {}
+  },
+  {
+    "id": "ian-bremmer",
+    "name": "Ian Bremmer",
+    "portrait": "/portraits/ian-bremmer.jpg",
+    "portrait2x": "/portraits/ian-bremmer@2x.jpg",
+    "portraitBrightness": 0.227,
+    "credibilityLine": "Founder of Eurasia Group and GZERO Media; Professor at Columbia University School of International and Public Affairs; author of The Power of Crisis",
+    "fields": [
+      "geopolitics",
+      "political risk",
+      "global affairs"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and President, Eurasia Group; Professor, Columbia University School of International and Public Affairs",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ian_Bremmer"
+    }
   }
 ]

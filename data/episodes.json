@@ -1,5 +1,1959 @@
 [
   {
+    "id": "doac-opB7_JXL0LA",
+    "episodeNumber": 557,
+    "title": "Physics, consciousness, and the search for everything",
+    "originalTitle": "World-Renowned Physicist: You've Been Lied To About Reality! - Michio Kaku",
+    "slug": "kaku-theory-of-everything",
+    "date": "2026-05-21",
+    "duration": 5952,
+    "guestIds": [
+      "michio-kaku"
+    ],
+    "topics": [
+      "culture",
+      "investing"
+    ],
+    "description": "Kaku explores the theory of everything, extraterrestrial life, black holes, multiverse theory, quantum computing, and the nature of consciousness and immortality.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=opB7_JXL0LA"
+    },
+    "thumbnail": "/portraits/michio-kaku.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Quantum Supremacy: How the Quantum Computer Revolution Will Change Everything",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/Gi4eG6M"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      },
+      {
+        "name": "Stan",
+        "url": "https://coach.stan.store/?ref=stevenbartlett&utm_source=youtube&utm_medium=podcast&utm_campaign=episode7",
+        "topical": false
+      },
+      {
+        "name": "Function Health",
+        "url": "https://Functionhealth.com/DOAC",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 203,
+        "title": "What Is The Theory Of Everything?"
+      },
+      {
+        "start": 258,
+        "title": "What Viewers Really Want To Know About The Universe"
+      },
+      {
+        "start": 314,
+        "title": "Our Biggest Misunderstanding About Reality"
+      },
+      {
+        "start": 356,
+        "title": "Are We Alone In The Universe?"
+      },
+      {
+        "start": 436,
+        "title": "Are UAP Sightings Evidence Of Extraterrestrial Life?"
+      },
+      {
+        "start": 575,
+        "title": "Would Governments Hide Aliens From Us?"
+      },
+      {
+        "start": 624,
+        "title": "Could Life Exist On Planets Close To Earth?"
+      },
+      {
+        "start": 682,
+        "title": "Could Humans Ever Travel Across The Universe?"
+      },
+      {
+        "start": 713,
+        "title": "The Star Mysteriously Losing 20% Of Its Light"
+      },
+      {
+        "start": 844,
+        "title": "What Really Happened During The Big Bang?"
+      },
+      {
+        "start": 939,
+        "title": "What String Theory Could Reveal About Reality"
+      },
+      {
+        "start": 1171,
+        "title": "What Caused The Big Bang?"
+      },
+      {
+        "start": 1310,
+        "title": "Why Planets Orbit The Sun"
+      },
+      {
+        "start": 1401,
+        "title": "Is There Any Evidence For The Multiverse?"
+      },
+      {
+        "start": 1448,
+        "title": "What Black Holes Really Are"
+      },
+      {
+        "start": 1647,
+        "title": "What Could Be Inside A Black Hole?"
+      },
+      {
+        "start": 1737,
+        "title": "Why I Set Out To Finish This Man's Life's Work"
+      },
+      {
+        "start": 1789,
+        "title": "A Physicist's Perspective On God"
+      },
+      {
+        "start": 1859,
+        "title": "Could We Be Living In A Simulation?"
+      },
+      {
+        "start": 2008,
+        "title": "Why Your Reality Is Only A Fraction Of Reality"
+      },
+      {
+        "start": 2224,
+        "title": "Why Life Matters In An Infinite Universe"
+      },
+      {
+        "start": 2330,
+        "title": "How Religion Could Be A Consequence Of Evolution"
+      },
+      {
+        "start": 2450,
+        "title": "What Consciousness Reveals About Being Human"
+      },
+      {
+        "start": 2588,
+        "title": "Why AI Is Not As Smart As You Think"
+      },
+      {
+        "start": 2849,
+        "title": "Could AI Unlock New Scientific Discoveries?"
+      },
+      {
+        "start": 2876,
+        "title": "Should We Be Worried About AI?"
+      },
+      {
+        "start": 2938,
+        "title": "What Humans Can Do That AI Still Can't"
+      },
+      {
+        "start": 2963,
+        "title": "Ads"
+      },
+      {
+        "start": 3091,
+        "title": "Could The Big Bang Be A Bubble Bath?"
+      },
+      {
+        "start": 3148,
+        "title": "Do The Stories In The Bible Hold Up?"
+      },
+      {
+        "start": 3277,
+        "title": "Where Morality Really Comes From"
+      },
+      {
+        "start": 3483,
+        "title": "Is Warfare Built Into Human Nature?"
+      },
+      {
+        "start": 3549,
+        "title": "Are There Infinite Universes?"
+      },
+      {
+        "start": 3655,
+        "title": "Why The Scale Of The Universe Makes Us Feel So Small"
+      },
+      {
+        "start": 3769,
+        "title": "Will Humanity Destroy Itself Before Finding The Answers?"
+      },
+      {
+        "start": 3923,
+        "title": "Will Humans Ever Travel To Other Planets?"
+      },
+      {
+        "start": 3992,
+        "title": "The One Mystery Of The Universe Worth Solving"
+      },
+      {
+        "start": 4071,
+        "title": "The Hidden Patterns Behind Nature"
+      },
+      {
+        "start": 4117,
+        "title": "Is The Brain As Fascinating As The Universe?"
+      },
+      {
+        "start": 4133,
+        "title": "How Life Could Change By The Year 2100"
+      },
+      {
+        "start": 4197,
+        "title": "The Secret To Immortality"
+      },
+      {
+        "start": 4303,
+        "title": "What Quantum Computers Could Change Forever"
+      },
+      {
+        "start": 4425,
+        "title": "Google's Quantum Computer Warning"
+      },
+      {
+        "start": 4574,
+        "title": "How He Built An Atom Smasher In High School"
+      },
+      {
+        "start": 4678,
+        "title": "Ads"
+      },
+      {
+        "start": 4811,
+        "title": "What Made Him More Open Minded About Reality"
+      },
+      {
+        "start": 4879,
+        "title": "Do Ghosts Really Exist?"
+      },
+      {
+        "start": 4940,
+        "title": "Are Energy And Auras Real?"
+      },
+      {
+        "start": 4981,
+        "title": "The Belief He Has Not Proven Yet"
+      },
+      {
+        "start": 5015,
+        "title": "Does Legacy Really Matter?"
+      },
+      {
+        "start": 5075,
+        "title": "Do His Predictions Always Come True?"
+      },
+      {
+        "start": 5132,
+        "title": "What The UFO Files Actually Revealed"
+      },
+      {
+        "start": 5196,
+        "title": "Has Non-Human Life Visited Earth?"
+      },
+      {
+        "start": 5327,
+        "title": "The Best Way To Deal With Failure"
+      },
+      {
+        "start": 5360,
+        "title": "The Advice He Would Give His 8 Year Old Self"
+      },
+      {
+        "start": 5414,
+        "title": "Would Aliens Have Empathy?"
+      },
+      {
+        "start": 5567,
+        "title": "How Humanity Should Treat Alien Life"
+      },
+      {
+        "start": 5700,
+        "title": "What Jobs Will AI Take First?"
+      },
+      {
+        "start": 5796,
+        "title": "How AI Agents Execute A Plan"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-zc8Nh4TMB1s",
+    "episodeNumber": 556,
+    "title": "How hidden sugar destroys metabolic health",
+    "originalTitle": "The Sugar Doctor's WARNING: The \"Healthy\" Foods Quietly Destroying Your Body! - Dr David Unwin",
+    "slug": "unwin-hidden-sugar-metabolic-health",
+    "date": "2026-05-18",
+    "duration": 7885,
+    "guestIds": [
+      "david-unwin"
+    ],
+    "topics": [
+      "nutrition",
+      "longevity",
+      "mental-health"
+    ],
+    "description": "Dr. Unwin on reversing Type 2 diabetes through diet, identifying hidden sugars in food, and the link between carbohydrates and cancer risk.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=zc8Nh4TMB1s"
+    },
+    "thumbnail": "/portraits/david-unwin.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Fork in the Road",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/6OxWpCa"
+      },
+      {
+        "type": "company",
+        "title": "Public Health Collaboration",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/APtcZJH"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Ketone",
+        "url": "https://ketone.com/STEVEN",
+        "topical": true
+      },
+      {
+        "name": "Stan",
+        "url": "https://coach.stan.store/?ref=stevenbartlett&utm_source=youtube&utm_medium=podcast&utm_campaign=episode6",
+        "topical": false
+      },
+      {
+        "name": "Cometeer",
+        "url": "https://cometeer.com/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 140,
+        "title": "Why Your Future Health Depends On This One Question"
+      },
+      {
+        "start": 164,
+        "title": "What It Really Takes To Create The Future You Want"
+      },
+      {
+        "start": 410,
+        "title": "What Actually Happens Inside Your Body With Diabetes"
+      },
+      {
+        "start": 876,
+        "title": "The Hidden Truth About What's Really In Your Food"
+      },
+      {
+        "start": 956,
+        "title": "The Moment That Completely Changed How He Saw Medicine"
+      },
+      {
+        "start": 1029,
+        "title": "The Real Reason Doctors Are Incentivized The Wrong Way"
+      },
+      {
+        "start": 1320,
+        "title": "How Food Becomes Medicine Or Makes You Sicker"
+      },
+      {
+        "start": 1739,
+        "title": "What Happens When You Truly Transform Your Health"
+      },
+      {
+        "start": 1804,
+        "title": "The Everyday Habits Quietly Destroying Your Health"
+      },
+      {
+        "start": 1985,
+        "title": "Why Most People's Idea Of Healthy Is Completely Wrong"
+      },
+      {
+        "start": 2120,
+        "title": "Is Dried Fruit Healthy Or A Sugar Trap In Disguise"
+      },
+      {
+        "start": 2306,
+        "title": "These Healthy Foods Have More Sugar Than You Think"
+      },
+      {
+        "start": 2725,
+        "title": "Is Orange Juice Actually Good For You"
+      },
+      {
+        "start": 2816,
+        "title": "The Truth About White Milk And Dark Chocolate"
+      },
+      {
+        "start": 2968,
+        "title": "Why Smoothies Aren't As Healthy As You Think"
+      },
+      {
+        "start": 3131,
+        "title": "How To Tell If Your Food Is Actually Healthy"
+      },
+      {
+        "start": 3324,
+        "title": "How Your Body Secretly Turns Carbs Into Sugar"
+      },
+      {
+        "start": 3438,
+        "title": "Is Bread Ruining Your Health"
+      },
+      {
+        "start": 3562,
+        "title": "Ads"
+      },
+      {
+        "start": 3685,
+        "title": "What Nutrition Labels Aren't Telling You"
+      },
+      {
+        "start": 3947,
+        "title": "Keto Diet Solution Or Hidden Risk"
+      },
+      {
+        "start": 4225,
+        "title": "How To Set Health Goals That Actually Work"
+      },
+      {
+        "start": 5435,
+        "title": "How To Help Loved Ones Change Before It's Too Late"
+      },
+      {
+        "start": 5481,
+        "title": "The 4 Step Plan To Break Addiction For Good"
+      },
+      {
+        "start": 5690,
+        "title": "Why Addiction Leads To Deception"
+      },
+      {
+        "start": 5750,
+        "title": "Book Giveaway"
+      },
+      {
+        "start": 5847,
+        "title": "Ads"
+      },
+      {
+        "start": 5982,
+        "title": "The Link Between Diet And Cancer What This Means"
+      },
+      {
+        "start": 6309,
+        "title": "Why Our Healthspan Is Quietly Declining"
+      },
+      {
+        "start": 6501,
+        "title": "The Simple String Test That Reveals Your Metabolic Health"
+      },
+      {
+        "start": 6625,
+        "title": "Are Supplements Helping Or Hurting You"
+      },
+      {
+        "start": 6784,
+        "title": "The Magnesium Story That Will Change How You Think"
+      },
+      {
+        "start": 7377,
+        "title": "Guest's Last Question"
+      },
+      {
+        "start": 7796,
+        "title": "A Final Story You Won't Forget"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-V-z0k5xu1hM",
+    "episodeNumber": 555,
+    "title": "Classified UAP research, from the inside",
+    "originalTitle": "UFO Roundtable: CIA Physicist Proves Aliens Exist!",
+    "slug": "ufo-roundtable-puthoff-farah",
+    "date": "2026-05-14",
+    "duration": 5227,
+    "guestIds": [
+      "hal-puthoff",
+      "dan-farah"
+    ],
+    "topics": [
+      "culture",
+      "media"
+    ],
+    "description": "Quantum physicist Hal Puthoff and filmmaker Dan Farah on decades of classified UAP intelligence programs and the documentary built around them.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=V-z0k5xu1hM"
+    },
+    "thumbnail": "/portraits/hal-puthoff.jpg",
+    "promotions": [
+      {
+        "type": "product",
+        "title": "The Age of Disclosure (documentary)",
+        "by": "guest",
+        "link": "https://www.ageofdisclosure.com/"
+      }
+    ],
+    "sponsors": [],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-kwEtOyaFhCA",
+    "episodeNumber": 554,
+    "title": "How democracies collapse and what comes next",
+    "originalTitle": "Pulitzer Prize Historian: You Won't Notice Until It’s Too Late - Anne Applebaum",
+    "slug": "applebaum-democracy-collapse",
+    "date": "2026-05-11",
+    "duration": 6495,
+    "guestIds": [
+      "anne-applebaum"
+    ],
+    "topics": [
+      "politics",
+      "media"
+    ],
+    "description": "Applebaum on warning signs of authoritarianism, how leaders dismantle democracy from within, and why America's allies are preparing for betrayal.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=kwEtOyaFhCA"
+    },
+    "thumbnail": "/portraits/anne-applebaum.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Autocracy, Inc.: The Dictators Who Want to Run the World",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/D07471h"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Stan",
+        "url": "https://coach.stan.store/?ref=stevenbartlett&utm_source=youtube&utm_medium=podcast&utm_campaign=episode5",
+        "topical": false
+      },
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 130,
+        "title": "Why History Keeps Repeating"
+      },
+      {
+        "start": 213,
+        "title": "Democracy's Biggest Warning Sign"
+      },
+      {
+        "start": 312,
+        "title": "Why Democracy Feels So Broken"
+      },
+      {
+        "start": 461,
+        "title": "The Biggest Threats Right Now"
+      },
+      {
+        "start": 532,
+        "title": "Why Democracy Is Rapidly Shifting"
+      },
+      {
+        "start": 618,
+        "title": "Could America Become An Autocracy?"
+      },
+      {
+        "start": 725,
+        "title": "What A Trump Third Term Means"
+      },
+      {
+        "start": 896,
+        "title": "Why Autocracy Appeals To People"
+      },
+      {
+        "start": 1152,
+        "title": "Trump's Wealth Changes Everything"
+      },
+      {
+        "start": 1287,
+        "title": "Why Global Stability Is Collapsing"
+      },
+      {
+        "start": 1586,
+        "title": "Democracy Vs Dictatorship: What Lasts?"
+      },
+      {
+        "start": 1658,
+        "title": "Who's Happier: Democracies Or Autocracies?"
+      },
+      {
+        "start": 1744,
+        "title": "Would Informed People Choose Democracy?"
+      },
+      {
+        "start": 1845,
+        "title": "How Putin Stays In Power"
+      },
+      {
+        "start": 1960,
+        "title": "5 Tactics Autocrats Use"
+      },
+      {
+        "start": 2059,
+        "title": "Are Tech CEOs Enabling This?"
+      },
+      {
+        "start": 2291,
+        "title": "Can America Ever Return To Normal?"
+      },
+      {
+        "start": 2367,
+        "title": "Why Nations Are Turning Inward"
+      },
+      {
+        "start": 2637,
+        "title": "What This Means For Americans"
+      },
+      {
+        "start": 2739,
+        "title": "The Most Dangerous Part Of Dictatorship"
+      },
+      {
+        "start": 2929,
+        "title": "Why Trump's Ratings Are Falling"
+      },
+      {
+        "start": 3048,
+        "title": "Ads"
+      },
+      {
+        "start": 3170,
+        "title": "The 2nd Tactic Autocrats Use"
+      },
+      {
+        "start": 3459,
+        "title": "The 3rd Tactic Autocrats Use"
+      },
+      {
+        "start": 3580,
+        "title": "The 4th Tactic Autocrats Use"
+      },
+      {
+        "start": 3958,
+        "title": "Should Social Media Have Legal Power?"
+      },
+      {
+        "start": 4378,
+        "title": "Can Citizens Really Leave China?"
+      },
+      {
+        "start": 4455,
+        "title": "The 5th Tactic Autocrats Use"
+      },
+      {
+        "start": 4488,
+        "title": "Why ICE Is Breaking Down"
+      },
+      {
+        "start": 4620,
+        "title": "Ads"
+      },
+      {
+        "start": 4652,
+        "title": "Is The American Empire Declining?"
+      },
+      {
+        "start": 4892,
+        "title": "Is Politics Just Human Nature?"
+      },
+      {
+        "start": 5060,
+        "title": "Does Democracy Create Extreme Capitalism?"
+      },
+      {
+        "start": 5187,
+        "title": "How Democracies Defend Themselves"
+      },
+      {
+        "start": 5281,
+        "title": "Is Mainstream Media Politically Biased?"
+      },
+      {
+        "start": 5502,
+        "title": "Why Journalism Matters More Than Ever"
+      },
+      {
+        "start": 5591,
+        "title": "How Algorithms Control Your Reality"
+      },
+      {
+        "start": 5659,
+        "title": "Anne's Personal Political Journey"
+      },
+      {
+        "start": 6048,
+        "title": "What Regime Change Really Feels Like"
+      },
+      {
+        "start": 6258,
+        "title": "Anne's Toughest Setback"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-BTJGr78-zyw",
+    "episodeNumber": 553,
+    "title": "Geopolitical analysis of US-Iran conflict and global power",
+    "originalTitle": "Professor Jiang: World War 3 Is About To Begin, Let Me Explain!",
+    "slug": "jiang-us-iran-world-war-3",
+    "date": "2026-05-07",
+    "duration": 7870,
+    "guestIds": [
+      "professor-jiang"
+    ],
+    "topics": [
+      "politics"
+    ],
+    "description": "Jiang examines US-Iran conflict, Strait of Hormuz vulnerability, Russia and China's competing interests, and whether World War 3 has already begun.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=BTJGr78-zyw"
+    },
+    "thumbnail": "/portraits/professor-jiang.jpg",
+    "promotions": [],
+    "sponsors": [
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      },
+      {
+        "name": "Shopify",
+        "url": "https://shopify.com/bartlett",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 131,
+        "title": "Why The US Had No Choice But To Invade Iran"
+      },
+      {
+        "start": 535,
+        "title": "Why Trump Thought Iran Would Surrender"
+      },
+      {
+        "start": 600,
+        "title": "The Mountain Fortress He Underestimated"
+      },
+      {
+        "start": 810,
+        "title": "The Strait That Could Break The Global Economy"
+      },
+      {
+        "start": 960,
+        "title": "The Document Revealing America's Real Plan"
+      },
+      {
+        "start": 1320,
+        "title": "How The US Plans To Strangle China"
+      },
+      {
+        "start": 1560,
+        "title": "Inside Iran's Hidden War Strategy"
+      },
+      {
+        "start": 1860,
+        "title": "80% Chance This Becomes World War 3"
+      },
+      {
+        "start": 2070,
+        "title": "The Chess Game Between Four Global Powers"
+      },
+      {
+        "start": 2640,
+        "title": "The Russian Tanker Seizures Nobody's Reporting"
+      },
+      {
+        "start": 3000,
+        "title": "What Happens When Russia Joins Iran"
+      },
+      {
+        "start": 3270,
+        "title": "Ads"
+      },
+      {
+        "start": 3390,
+        "title": "Trump's Third Term Is Already Being Planned"
+      },
+      {
+        "start": 3750,
+        "title": "The Secret US-China Deal Coming This Year"
+      },
+      {
+        "start": 3870,
+        "title": "The National Draft Is Already Here"
+      },
+      {
+        "start": 3984,
+        "title": "Ads"
+      },
+      {
+        "start": 4170,
+        "title": "Israel Will Conquer The Middle East"
+      },
+      {
+        "start": 4320,
+        "title": "Russia Will Take Odessa And End The War"
+      },
+      {
+        "start": 4470,
+        "title": "North Korea's Move On Seoul"
+      },
+      {
+        "start": 4800,
+        "title": "What The Average Person Should Do"
+      },
+      {
+        "start": 5130,
+        "title": "Who Really Controls Reality"
+      },
+      {
+        "start": 6120,
+        "title": "Why His Wife Saved His Life"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-NdU6UdUKaYc",
+    "episodeNumber": 552,
+    "title": "AI hype, inequality, and the future of work",
+    "originalTitle": "Scott Galloway: AI Wasn’t Built For You. The Rich Don’t Need You Anymore!",
+    "slug": "galloway-ai-inequality-work",
+    "date": "2026-05-04",
+    "duration": 7091,
+    "guestIds": [
+      "scott-galloway"
+    ],
+    "topics": [
+      "culture",
+      "marketing",
+      "leadership"
+    ],
+    "description": "Galloway on AI marketing hype versus reality, wealth concentration, tech leadership trustworthiness, and what genuine skills matter in an AI-reshaped economy.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=NdU6UdUKaYc"
+    },
+    "thumbnail": "/portraits/scott-galloway.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Notes on Being a Man",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/D2dQqxN"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "LinkedIn Talent Solutions",
+        "url": "http://linkedin.com/DOAC",
+        "topical": false
+      },
+      {
+        "name": "Function Health",
+        "url": "https://Functionhealth.com/DOAC",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 165,
+        "title": "What's Actually True About AI"
+      },
+      {
+        "start": 300,
+        "title": "Are AI CEOs Exaggerating The Future To Raise Billions?"
+      },
+      {
+        "start": 540,
+        "title": "What Would Prove The AI Skeptics Wrong?"
+      },
+      {
+        "start": 665,
+        "title": "Could AI Move Too Fast For Society To Handle?"
+      },
+      {
+        "start": 965,
+        "title": "What Happens When AI Combines With Robots?"
+      },
+      {
+        "start": 1145,
+        "title": "Is Elon Musk Selling Vision or Reality?"
+      },
+      {
+        "start": 1445,
+        "title": "Which Jobs Are First To Disappear In The AI Shift?"
+      },
+      {
+        "start": 1805,
+        "title": "What Skills Will Actually Matter In The Future?"
+      },
+      {
+        "start": 2025,
+        "title": "Are Young People Losing The Ability To Handle Rejection?"
+      },
+      {
+        "start": 2395,
+        "title": "Can You Trust The People Building AI?"
+      },
+      {
+        "start": 2690,
+        "title": "Are Tech Leaders Quietly Preparing For The End?"
+      },
+      {
+        "start": 3120,
+        "title": "Do Some AI Leaders Believe The Risk Is Worth It?"
+      },
+      {
+        "start": 3484,
+        "title": "Ads"
+      },
+      {
+        "start": 3605,
+        "title": "Could AI Make Us More Human?"
+      },
+      {
+        "start": 3900,
+        "title": "What Happens When AI Becomes Your Closest Companion"
+      },
+      {
+        "start": 4200,
+        "title": "The Hidden Trade-Off Between Convenience And Real Relationships"
+      },
+      {
+        "start": 4500,
+        "title": "Why Loneliness Could Explode"
+      },
+      {
+        "start": 4766,
+        "title": "The Real Reason Human Connection Might Become More Valuable"
+      },
+      {
+        "start": 5100,
+        "title": "What This Means For The Next Generation"
+      },
+      {
+        "start": 5400,
+        "title": "How Power, Politics, And AI Are Becoming Intertwined"
+      },
+      {
+        "start": 5700,
+        "title": "The Dangerous Gap Between Technology And Regulation"
+      },
+      {
+        "start": 6000,
+        "title": "What Happens If Governments Can't Keep Up With AI"
+      },
+      {
+        "start": 6300,
+        "title": "The Future Of Work, Power, And Who Really Wins"
+      },
+      {
+        "start": 6600,
+        "title": "Why The Biggest AI Risks Aren't What You've Been Told"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-jLFG_FZKbks",
+    "episodeNumber": 551,
+    "title": "How Psychology Sabotages Your Financial Decisions",
+    "originalTitle": "Stock Expert: Becoming Rich Is Simple, But You Won’t Do It!",
+    "slug": "ben-felix-investing-psychology",
+    "date": "2026-04-30",
+    "duration": 6049,
+    "guestIds": [
+      "ben-felix"
+    ],
+    "topics": [
+      "investing",
+      "psychology"
+    ],
+    "description": "Felix on behavioral obstacles to investing, home ownership myths, and why simple frameworks beat complex financial advice.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=jLFG_FZKbks"
+    },
+    "thumbnail": "/portraits/ben-felix.jpg",
+    "promotions": [
+      {
+        "type": "company",
+        "title": "PWL Capital",
+        "by": "guest",
+        "link": "https://pwlcapital.com/"
+      },
+      {
+        "type": "service",
+        "title": "Ben Felix YouTube (Renting vs Buying)",
+        "by": "guest",
+        "link": "https://www.youtube.com/watch?v=j4H9LL7A-nQ&t=964s"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Stan",
+        "url": "https://coach.stan.store/?ref=stevenbartlett&utm_source=youtube&utm_medium=podcast&utm_campaign=episode4",
+        "topical": false
+      },
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/ceo",
+        "topical": false
+      },
+      {
+        "name": "Fiverr",
+        "url": "https://fiverr.com/diary",
+        "topical": false
+      },
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 174,
+        "title": "Why Most People Overcomplicate Finance"
+      },
+      {
+        "start": 237,
+        "title": "How Your Psychology Secretly Controls Your Investments"
+      },
+      {
+        "start": 326,
+        "title": "The Real Frameworks Behind Financial Freedom"
+      },
+      {
+        "start": 434,
+        "title": "Why You Don't Need Much Money To Start Investing"
+      },
+      {
+        "start": 580,
+        "title": "The 10 Money Mistakes That Quietly Keep You Broke"
+      },
+      {
+        "start": 797,
+        "title": "How Monetizing Your Skills Can 10x Your Income"
+      },
+      {
+        "start": 1206,
+        "title": "Why Most People Never Set Financial Goals"
+      },
+      {
+        "start": 1270,
+        "title": "Are You Spending Money In Ways That Actually Improve Your Life?"
+      },
+      {
+        "start": 1306,
+        "title": "Why Taking Investment Risks Matters More Than You Think"
+      },
+      {
+        "start": 1548,
+        "title": "Is Buying A House Actually A Smart Investment Today?"
+      },
+      {
+        "start": 2007,
+        "title": "Why Young People Are Rethinking Home Ownership"
+      },
+      {
+        "start": 2111,
+        "title": "What Happens If You Delay Buying A House?"
+      },
+      {
+        "start": 2201,
+        "title": "Are Homeowners Really Happier Than Renters?"
+      },
+      {
+        "start": 2255,
+        "title": "Who Should Actually Buy A House"
+      },
+      {
+        "start": 2321,
+        "title": "The Biggest Myths About Home Ownership - Debunked"
+      },
+      {
+        "start": 2341,
+        "title": "What Happiness Data Really Says About Owning Vs Renting"
+      },
+      {
+        "start": 2393,
+        "title": "The Hidden Criteria That Decide If You Should Buy"
+      },
+      {
+        "start": 2468,
+        "title": "Why Common Advice About Home Ownership Falls Apart"
+      },
+      {
+        "start": 2557,
+        "title": "Will House Prices Keep Rising?"
+      },
+      {
+        "start": 2677,
+        "title": "How The Wealthy Legally Pay Less Tax"
+      },
+      {
+        "start": 2729,
+        "title": "The Real Tax Strategies The Rich Don't Talk About"
+      },
+      {
+        "start": 2765,
+        "title": "What Happens Next To Housing Prices?"
+      },
+      {
+        "start": 2855,
+        "title": "Ads"
+      },
+      {
+        "start": 2978,
+        "title": "The Hidden Problems With Financial Advisors"
+      },
+      {
+        "start": 3041,
+        "title": "Why Ignoring Estate Planning Can Cost Your Family Everything"
+      },
+      {
+        "start": 3097,
+        "title": "Do You Really Need A Will?"
+      },
+      {
+        "start": 3122,
+        "title": "How Your Partner Choice Impacts Your Financial Future"
+      },
+      {
+        "start": 3198,
+        "title": "Why Some Financial Advice May Be Working Against You"
+      },
+      {
+        "start": 3267,
+        "title": "Should Everyone Get A Prenup?"
+      },
+      {
+        "start": 3401,
+        "title": "What Your Spending Habits Reveal About Your Future Wealth"
+      },
+      {
+        "start": 3504,
+        "title": "The Real Reason Prenups Matter More Than You Think"
+      },
+      {
+        "start": 3629,
+        "title": "Why People Underestimate Catastrophic Financial Risks"
+      },
+      {
+        "start": 3679,
+        "title": "Stocks Vs Bonds: Which Is Actually Safer Right Now?"
+      },
+      {
+        "start": 4060,
+        "title": "The Financial Products You Should Avoid At All Costs"
+      },
+      {
+        "start": 4183,
+        "title": "Why Cash Loses Value Faster Than You Realize"
+      },
+      {
+        "start": 4258,
+        "title": "Ads"
+      },
+      {
+        "start": 4291,
+        "title": "Your Cash Under The Mattress Will Lose Value Fast"
+      },
+      {
+        "start": 4433,
+        "title": "Do You Really Need A Retirement Plan?"
+      },
+      {
+        "start": 4525,
+        "title": "Investments You Should Avoid!"
+      },
+      {
+        "start": 4624,
+        "title": "Should You Invest In AI?"
+      },
+      {
+        "start": 4796,
+        "title": "Crypto: Opportunity Or Risk?"
+      },
+      {
+        "start": 4905,
+        "title": "How War Changes Investing"
+      },
+      {
+        "start": 5076,
+        "title": "Remortgage Or Invest: Which Move Builds More Wealth?"
+      },
+      {
+        "start": 5152,
+        "title": "Will AI Replace Your Job?"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-PnpHwhTWw0c",
+    "episodeNumber": 550,
+    "title": "Sexual health and the science of desire",
+    "originalTitle": "Sex Expert: What Women Actually Need To Enjoy Sex",
+    "slug": "rena-malik-sexual-health",
+    "date": "2026-04-27",
+    "duration": 7198,
+    "guestIds": [
+      "rena-malik"
+    ],
+    "topics": [
+      "mental-health",
+      "hormones",
+      "psychology"
+    ],
+    "description": "Malik on why bad sex signals declining health, how stress and porn rewire arousal, testosterone's role, and what couples need to discuss.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=PnpHwhTWw0c"
+    },
+    "thumbnail": "/portraits/rena-malik.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "The Hard Truth: Everything Men Need to Know for Good Health, Great Sex, and Long Life",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/FQSv9xe"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      },
+      {
+        "name": "Ketone",
+        "url": "https://ketone.com/STEVEN",
+        "topical": false
+      },
+      {
+        "name": "Fiverr",
+        "url": "https://fiverr.com/diary",
+        "topical": false
+      },
+      {
+        "name": "Cometeer",
+        "url": "https://cometeer.com/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 237,
+        "title": "Why Are People Having Less Sex?"
+      },
+      {
+        "start": 366,
+        "title": "Why Is Rough Sex Increasing?"
+      },
+      {
+        "start": 436,
+        "title": "Is Dopamine Ruining Your Sex Life?"
+      },
+      {
+        "start": 582,
+        "title": "How Do You Find What Turns You On?"
+      },
+      {
+        "start": 710,
+        "title": "Why Does Performance Anxiety Kill Intimacy?"
+      },
+      {
+        "start": 874,
+        "title": "Why Do Couples Stop Having Sex?"
+      },
+      {
+        "start": 1076,
+        "title": "What Is The Best Diet For Erectile Dysfunction?"
+      },
+      {
+        "start": 1258,
+        "title": "What Are The Best Exercises For Sexual Performance?"
+      },
+      {
+        "start": 1709,
+        "title": "What Can Erectile Dysfunction Signal?"
+      },
+      {
+        "start": 1859,
+        "title": "Why Does Porn Work But Real Sex Does Not?"
+      },
+      {
+        "start": 2065,
+        "title": "Why Do Morning Erections Matter?"
+      },
+      {
+        "start": 2150,
+        "title": "What Are The Differences In Male Vs Female Arousal?"
+      },
+      {
+        "start": 2420,
+        "title": "Why Do You Feel Tired After Orgasm?"
+      },
+      {
+        "start": 2484,
+        "title": "How Does Stress Affect Your Sex Life?"
+      },
+      {
+        "start": 2599,
+        "title": "How Does Sleep Affect Testosterone?"
+      },
+      {
+        "start": 2726,
+        "title": "Do Microplastics Affect Hormones?"
+      },
+      {
+        "start": 2877,
+        "title": "How Do Friends Affect Your Sex Life?"
+      },
+      {
+        "start": 3006,
+        "title": "How Does Porn Affect Relationships?"
+      },
+      {
+        "start": 3190,
+        "title": "Ads"
+      },
+      {
+        "start": 3312,
+        "title": "Should Couples Use Sex Toys?"
+      },
+      {
+        "start": 3418,
+        "title": "Can Sex Toys Become Addictive?"
+      },
+      {
+        "start": 3572,
+        "title": "What Are The Best Positions For Female Orgasm?"
+      },
+      {
+        "start": 3650,
+        "title": "What Is Squirting?"
+      },
+      {
+        "start": 3778,
+        "title": "Why Does Sex Cause UTIs?"
+      },
+      {
+        "start": 3868,
+        "title": "Why Do Humans Have Orgasms?"
+      },
+      {
+        "start": 3926,
+        "title": "What Are Non Genital Orgasms?"
+      },
+      {
+        "start": 4137,
+        "title": "Why Is Testosterone Declining?"
+      },
+      {
+        "start": 4265,
+        "title": "Does Testosterone Affect Fertility?"
+      },
+      {
+        "start": 4490,
+        "title": "What Are The Risks Of Anabolic Steroids?"
+      },
+      {
+        "start": 4615,
+        "title": "Does TRT Affect Fertility?"
+      },
+      {
+        "start": 5018,
+        "title": "How Does Body Image Affect Sexual Pressure?"
+      },
+      {
+        "start": 5140,
+        "title": "Ads"
+      },
+      {
+        "start": 5263,
+        "title": "Does Penis Size Matter?"
+      },
+      {
+        "start": 5498,
+        "title": "Do Penis Enlargement Methods Work?"
+      },
+      {
+        "start": 5775,
+        "title": "What Are The Toughest Cases Doctors See?"
+      },
+      {
+        "start": 5902,
+        "title": "How Much Does Vaginal Size Vary?"
+      },
+      {
+        "start": 5973,
+        "title": "Why Does Sex Feel Different With Each Person?"
+      },
+      {
+        "start": 6069,
+        "title": "Can You Predict Penis Size?"
+      },
+      {
+        "start": 6112,
+        "title": "Do GLP 1 Drugs Affect Libido?"
+      },
+      {
+        "start": 6285,
+        "title": "How Do You Talk About Sex With Your Partner?"
+      },
+      {
+        "start": 6679,
+        "title": "What Do Sexual Fantasies Mean?"
+      },
+      {
+        "start": 7004,
+        "title": "What Should You Do If You Have Lost Hope?"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-m-nnyNZ0TQ0",
+    "episodeNumber": 549,
+    "title": "How your brain tricks you",
+    "originalTitle": "Stanford Neuroscientist: Can’t Remember Your Dreams? Your Brain May Be Warning You!",
+    "slug": "eagleman-brain-plasticity",
+    "date": "2026-04-23",
+    "duration": 5599,
+    "guestIds": [
+      "david-eagleman"
+    ],
+    "topics": [
+      "psychology",
+      "focus",
+      "productivity"
+    ],
+    "description": "Eagleman on brain plasticity, why dreams matter, how AI reshapes cognition, and retraining your mind through deliberate struggle.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=m-nnyNZ0TQ0"
+    },
+    "thumbnail": "/portraits/david-eagleman.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Livewired: The Inside Story of the Ever-Changing Brain",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/7d74l5d"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Bon Charge",
+        "url": "https://boncharge.com/DOAC",
+        "topical": false
+      },
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      },
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 152,
+        "title": "Why The Brain Became My Obsession"
+      },
+      {
+        "start": 209,
+        "title": "How To Actually Break Bad Habits (And Why Most People Fail)"
+      },
+      {
+        "start": 456,
+        "title": "What You've Been Getting Wrong About The Brain"
+      },
+      {
+        "start": 692,
+        "title": "Fluid Vs. Crystallized Intelligence"
+      },
+      {
+        "start": 748,
+        "title": "What Really Happens When You Try To Change Yourself"
+      },
+      {
+        "start": 929,
+        "title": "The Surprising Link Between Early Retirement And Death Risk"
+      },
+      {
+        "start": 1089,
+        "title": "Your Brain's Hidden Willpower Engine"
+      },
+      {
+        "start": 1339,
+        "title": "How To Train Your Brain To Crave Difficult Challenges"
+      },
+      {
+        "start": 1440,
+        "title": "Which Exercises Rewire Your Brain The Fastest"
+      },
+      {
+        "start": 1498,
+        "title": "What Social Media Is Quietly Doing To Your Brain"
+      },
+      {
+        "start": 1819,
+        "title": "AI And Your Mind Upgrade Or Hidden Cost?"
+      },
+      {
+        "start": 2047,
+        "title": "The Effort Paradox—Why Struggle Might Be The Point"
+      },
+      {
+        "start": 2301,
+        "title": "How To Use AI Without Making Your Brain Lazy"
+      },
+      {
+        "start": 2500,
+        "title": "Is AI Honest—Or Just Telling You What You Want To Hear?"
+      },
+      {
+        "start": 2624,
+        "title": "Can AI Truly Be Creative—Or Is It Just Mimicking You?"
+      },
+      {
+        "start": 3139,
+        "title": "Why Your Brain Craves The Sweet Spot Between New And Familiar"
+      },
+      {
+        "start": 3345,
+        "title": "Ads"
+      },
+      {
+        "start": 3810,
+        "title": "Why Real-World Experiences Are Making A Comeback"
+      },
+      {
+        "start": 4092,
+        "title": "What Makes Every Brain Subtly Different"
+      },
+      {
+        "start": 4401,
+        "title": "Ads"
+      },
+      {
+        "start": 4531,
+        "title": "Why We Dream And What Your Brain Is Really Doing At Night"
+      },
+      {
+        "start": 4866,
+        "title": "Why Human Connection Is More Critical Than Ever"
+      },
+      {
+        "start": 5123,
+        "title": "What The Next 10 Years Could Mean For Humanity"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-jt5hHb6kzYM",
+    "episodeNumber": 548,
+    "title": "Peptides explained and the FDA ban reversal",
+    "originalTitle": "Peptide Expert: What Do Peptides Actually Do? (EXPLAINED) - Dr Alex Tatem",
+    "slug": "tatem-peptides-fda-ban",
+    "date": "2026-04-20",
+    "duration": 5389,
+    "guestIds": [
+      "alex-tatem"
+    ],
+    "topics": [
+      "longevity",
+      "hormones",
+      "fitness"
+    ],
+    "description": "Tatem on peptide mechanisms, the FDA ban, pharmaceutical threats to peptide development, and erectile dysfunction treatment options.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=jt5hHb6kzYM"
+    },
+    "thumbnail": "/portraits/alex-tatem.jpg",
+    "promotions": [],
+    "sponsors": [
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      },
+      {
+        "name": "LinkedIn Marketing",
+        "url": "https://www.linkedin.com/DIARY",
+        "topical": false
+      },
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 215,
+        "title": "What Exactly Is A Peptide"
+      },
+      {
+        "start": 334,
+        "title": "How Peptides Actually Work In Your Body"
+      },
+      {
+        "start": 534,
+        "title": "Why Peptides Are Suddenly Everywhere"
+      },
+      {
+        "start": 689,
+        "title": "The Real Role Of Compounding Pharmacies"
+      },
+      {
+        "start": 1056,
+        "title": "Are Pharma Companies Prioritizing Profits Over Patients?"
+      },
+      {
+        "start": 1242,
+        "title": "Why Peptides Are Back After Being Banned—What Happened Behind The Scenes"
+      },
+      {
+        "start": 1276,
+        "title": "The Most Shocking Patient Transformation From Peptides"
+      },
+      {
+        "start": 1366,
+        "title": "When You Should (And Shouldn't) Use Peptides In Your Life"
+      },
+      {
+        "start": 1488,
+        "title": "The Latest FDA Update"
+      },
+      {
+        "start": 1585,
+        "title": "How People Are Actually Getting \"Illegal\" Peptides"
+      },
+      {
+        "start": 1681,
+        "title": "How To Take Peptides Safely -What Most People Get Wrong"
+      },
+      {
+        "start": 1798,
+        "title": "Why Big Pharma Feels Threatened By Peptides"
+      },
+      {
+        "start": 2289,
+        "title": "How Peptides Could Transform Your Insulin Levels"
+      },
+      {
+        "start": 2342,
+        "title": "Do Peptides Work As Creams? What You Need To Know"
+      },
+      {
+        "start": 2450,
+        "title": "How Peptides May Unlock Better Cognitive Performance"
+      },
+      {
+        "start": 2598,
+        "title": "The Future Of Muscle Retention On GLP-1s—What's Coming Next"
+      },
+      {
+        "start": 2903,
+        "title": "Ads"
+      },
+      {
+        "start": 2965,
+        "title": "The Hidden Trade-Offs Of Peptides No One Talks About"
+      },
+      {
+        "start": 3149,
+        "title": "The Real Benefits Of Different Peptides—And How They Compare"
+      },
+      {
+        "start": 3470,
+        "title": "The Peptide That Could Change Your Sleep Quality"
+      },
+      {
+        "start": 3738,
+        "title": "What Happens When You Stop Taking GLP-1s?"
+      },
+      {
+        "start": 3960,
+        "title": "Ads"
+      },
+      {
+        "start": 4073,
+        "title": "Is There A \"Super Peptide\" For Anti-Aging?"
+      },
+      {
+        "start": 4484,
+        "title": "The Truth About Peptides And Erectile Dysfunction"
+      },
+      {
+        "start": 4536,
+        "title": "Why Medicine Burned Me Out—And What It Reveals About The System"
+      },
+      {
+        "start": 4757,
+        "title": "The Enhanced Games Explained—And Why They're So Controversial"
+      },
+      {
+        "start": 5186,
+        "title": "How To Improve Erections"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-EVts3Ui_0AI",
+    "episodeNumber": 547,
+    "title": "Global risks in 2026 and AI's economic impact",
+    "originalTitle": "The Global Politics Expert: The Real Global Danger is What Comes Next!",
+    "slug": "bremmer-global-risks-ai",
+    "date": "2026-04-16",
+    "duration": 5982,
+    "guestIds": [
+      "ian-bremmer"
+    ],
+    "topics": [
+      "politics",
+      "investing"
+    ],
+    "description": "Bremmer on 2026's geopolitical threats, US instability, China's strategy, AI economic risks, and the coming jobs crisis.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=EVts3Ui_0AI"
+    },
+    "thumbnail": "/portraits/ian-bremmer.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "The Power of Crisis: How Three Threats - and Our Response - Will Change the World",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/6YBkvoW"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      },
+      {
+        "name": "Ketone",
+        "url": "https://ketone.com/STEVEN",
+        "topical": false
+      },
+      {
+        "name": "Shopify",
+        "url": "https://shopify.com/bartlett",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 124,
+        "title": "The Report Warning of 2026's Biggest Global Threats"
+      },
+      {
+        "start": 424,
+        "title": "Are We Watching International Cooperation Collapse in Real Time?"
+      },
+      {
+        "start": 625,
+        "title": "The Real Motive Behind Trump's Most Controversial Moves"
+      },
+      {
+        "start": 774,
+        "title": "The Hidden Forces Driving the Iran War"
+      },
+      {
+        "start": 1152,
+        "title": "The Critical Mistake That Escalated the Iran Conflict"
+      },
+      {
+        "start": 1238,
+        "title": "Who Really Holds Power Inside Iran?"
+      },
+      {
+        "start": 1362,
+        "title": "Why the U.S. Blocked the Strait of Hormuz—and What It Triggered"
+      },
+      {
+        "start": 1662,
+        "title": "How the Lebanon–Iran War Spiral Began"
+      },
+      {
+        "start": 1776,
+        "title": "What Could Have Prevented This Crisis From Unfolding?"
+      },
+      {
+        "start": 1920,
+        "title": "The Unexpected Shifts in the Middle East"
+      },
+      {
+        "start": 2127,
+        "title": "The Real Impact of Trump's Impulse-Driven Decisions"
+      },
+      {
+        "start": 2461,
+        "title": "The Path That Could Change Everything"
+      },
+      {
+        "start": 2721,
+        "title": "Russia and China's Calculated Response to the Iran War"
+      },
+      {
+        "start": 2899,
+        "title": "What Europe Got Wrong - and Why It Matters Now"
+      },
+      {
+        "start": 3128,
+        "title": "China's Long-Term Strategy: Where Does It Leave America?"
+      },
+      {
+        "start": 3488,
+        "title": "A Brief Break—But What Comes Next Matters More"
+      },
+      {
+        "start": 3614,
+        "title": "I Predicted 2025—Here's What's Coming Next"
+      },
+      {
+        "start": 3871,
+        "title": "Why AI Could Trigger a Global Economic Shock"
+      },
+      {
+        "start": 3988,
+        "title": "The Unseen Workforce Powering AI's Rise"
+      },
+      {
+        "start": 4213,
+        "title": "Rising Public Anger: Why Elites and AI Leaders Are Under Fire"
+      },
+      {
+        "start": 4497,
+        "title": "Is Universal Basic Income Becoming Inevitable?"
+      },
+      {
+        "start": 4582,
+        "title": "The Growing Problems Big Tech Can't Solve"
+      },
+      {
+        "start": 4962,
+        "title": "Can the Tech Oligarchy Actually Be Stopped?"
+      },
+      {
+        "start": 5294,
+        "title": "Is a True \"Utopia\" Possible?"
+      },
+      {
+        "start": 5695,
+        "title": "Why Public Service Matters More Than Ever Today"
+      },
+      {
+        "start": 5887,
+        "title": "At the End of Life: What Will Your Choices Really Mean?"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-7VxeyTfhBM8",
+    "episodeNumber": 545,
+    "title": "From Trump Organization to the White House to walking away",
+    "originalTitle": "Ivanka Trump: Most People Can't Tell Signal From Noise",
+    "slug": "ivanka-trump-business-politics",
+    "date": "2026-04-09",
+    "duration": 5772,
+    "guestIds": [
+      "ivanka-trump"
+    ],
+    "topics": [
+      "founders",
+      "politics"
+    ],
+    "description": "Ivanka Trump on building an $800M business, negotiating real estate young, four years inside the White House, and what made her step back.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=7VxeyTfhBM8"
+    },
+    "thumbnail": "/portraits/ivanka-trump.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Women Who Work",
+        "by": "guest",
+        "link": "https://www.amazon.com/Women-Who-Work-Rewriting-Success/dp/0735211329"
+      }
+    ],
+    "sponsors": [],
+    "episodeNumberSource": "estimate"
+  },
+  {
     "id": "doac-DnvWAP99r3Y",
     "episodeNumber": 540,
     "title": "Reversing biological aging",
@@ -7,8 +1961,13 @@
     "slug": "david-sinclair-aging-reversal",
     "date": "2026-03-23",
     "duration": 8947,
-    "guestIds": ["david-sinclair"],
-    "topics": ["longevity", "nutrition"],
+    "guestIds": [
+      "david-sinclair"
+    ],
+    "topics": [
+      "longevity",
+      "nutrition"
+    ],
     "description": "Sinclair on his lab's gene-therapy trials, his daily supplement stack, and why fasting and 'good stress' extend life.",
     "links": {
       "youtube": "https://www.youtube.com/watch?v=DnvWAP99r3Y"
@@ -29,231 +1988,65 @@
       }
     ],
     "sponsors": [
-      { "name": "Bon Charge", "url": "https://boncharge.com/DOAC", "topical": true },
-      { "name": "Shopify", "url": "https://shopify.com/bartlett", "topical": false },
-      { "name": "Ketone-IQ", "url": "https://ketone.com/STEVEN", "topical": true }
-    ],
-    "chapters": [
-      { "start": 0, "title": "Intro" },
-      { "start": 214, "title": "The children's book that shaped everything" },
-      { "start": 552, "title": "Inside the first human age-reversal trials" },
-      { "start": 4258, "title": "Fasting methods for extending life" },
-      { "start": 5113, "title": "The 5 foods with the biggest lifespan impact" },
-      { "start": 6645, "title": "What a 'perfect' supplement stack looks like" }
-    ]
-  },
-  {
-    "id": "doac-ca5h47tJsdE",
-    "episodeNumber": 195,
-    "title": "Building Bumble after Tinder",
-    "originalTitle": "Fighting Sexism & Winning: The Founder Behind The $1Billion Dollar Tech Company Bumble",
-    "slug": "whitney-wolfe-bumble",
-    "date": "2022-11-14",
-    "duration": 5569,
-    "guestIds": ["whitney-wolfe-herd"],
-    "topics": ["founders", "leadership"],
-    "description": "Wolfe Herd on her departure from Tinder, building Bumble in its wake, dark days along the way, and what vulnerability looks like in leadership.",
-    "links": {
-      "youtube": "https://www.youtube.com/watch?v=ca5h47tJsdE"
-    },
-    "thumbnail": "/portraits/whitney-wolfe-herd.jpg",
-    "promotions": [
       {
-        "type": "company",
-        "title": "Bumble",
-        "by": "guest",
-        "link": "https://bumble.com/"
-      }
-    ],
-    "sponsors": [
-      { "name": "Intel", "url": "https://intel.com/", "topical": false },
-      { "name": "Mercedes-Benz", "url": "https://mercedes-benz.com/", "topical": false },
-      { "name": "Huel", "url": "https://huel.com/", "topical": false },
-      { "name": "American Express", "url": "https://americanexpress.com/", "topical": false }
-    ],
-    "chapters": [
-      { "start": 0, "title": "Intro" },
-      { "start": 140, "title": "Early context" },
-      { "start": 1199, "title": "Early Tinder marketing tactics" },
-      { "start": 2974, "title": "Departure from Tinder" },
-      { "start": 3972, "title": "Bumble's current success" },
-      { "start": 4429, "title": "Why did Bumble win?" }
-    ]
-  },
-  {
-    "id": "doac-jSqCL7Npln0",
-    "episodeNumber": 340,
-    "title": "Dopamine, focus, and the neuroscience of motivation",
-    "originalTitle": "Andrew Huberman: You Must Control Your Dopamine! The Shocking Truth Behind Cold Showers!",
-    "slug": "andrew-huberman-dopamine",
-    "date": "2024-08-29",
-    "duration": 14517,
-    "guestIds": ["andrew-huberman"],
-    "topics": ["focus", "psychology"],
-    "description": "Stanford neuroscientist Huberman on dopamine baseline, neuroplasticity at any age, why pursuit beats reward, and what cold exposure actually does.",
-    "links": {
-      "youtube": "https://www.youtube.com/watch?v=jSqCL7Npln0"
-    },
-    "thumbnail": "/portraits/andrew-huberman.jpg",
-    "promotions": [
-      {
-        "type": "product",
-        "title": "Huberman Lab podcast",
-        "by": "guest",
-        "link": "https://www.hubermanlab.com/"
-      }
-    ],
-    "sponsors": []
-  },
-  {
-    "id": "doac-csA9YhzYvmk",
-    "episodeNumber": 101,
-    "title": "The math of happiness, after a profound loss",
-    "originalTitle": "The Happiness Expert That Made 51 Million People Happier: Mo Gawdat | E101",
-    "slug": "mo-gawdat-solve-for-happy",
-    "date": "2021-10-11",
-    "duration": 7054,
-    "guestIds": ["mo-gawdat"],
-    "topics": ["psychology", "mental-health"],
-    "description": "Ex-Google X exec Gawdat on losing his son, the equation he built to understand happiness, and why gratitude is the only durable input.",
-    "links": {
-      "youtube": "https://www.youtube.com/watch?v=csA9YhzYvmk"
-    },
-    "thumbnail": "/portraits/doac-csA9YhzYvmk.jpg",
-    "thumbnail2x": "/portraits/doac-csA9YhzYvmk@2x.jpg",
-    "thumbnailBrightness": 0.213,
-    "promotions": [
-      {
-        "type": "book",
-        "title": "Solve for Happy",
-        "by": "guest",
-        "link": "https://www.mogawdat.com/solve-for-happy"
-      }
-    ],
-    "sponsors": []
-  },
-  {
-    "id": "doac-IxVNR0Om-lA",
-    "episodeNumber": 375,
-    "title": "Stress as the new addiction",
-    "originalTitle": "Mo Gawdat: A WARNING about Stress & Anxiety! This Is Causing 70% Of Heart Attacks In Young People!",
-    "slug": "mo-gawdat-unstressable",
-    "date": "2024-04-25",
-    "duration": 10426,
-    "guestIds": ["mo-gawdat"],
-    "topics": ["mental-health", "productivity"],
-    "description": "Gawdat on his new book Unstressable, the cardiovascular toll of always-on living, and why most productivity rhetoric is making things worse.",
-    "links": {
-      "youtube": "https://www.youtube.com/watch?v=IxVNR0Om-lA"
-    },
-    "thumbnail": "/portraits/mo-gawdat.jpg",
-    "promotions": [
-      {
-        "type": "book",
-        "title": "Unstressable",
-        "by": "guest",
-        "link": "https://www.mogawdat.com/"
+        "name": "Bon Charge",
+        "url": "https://boncharge.com/DOAC",
+        "topical": true
       },
       {
-        "type": "company",
-        "title": "One Billion Happy",
-        "by": "guest",
-        "link": "https://www.onebillionhappy.org/"
-      }
-    ],
-    "sponsors": []
-  },
-  {
-    "id": "doac-Hik6OY-nk4c",
-    "episodeNumber": 432,
-    "title": "Loneliness, marriage, and individualism",
-    "originalTitle": "Jordan B Peterson: You Need To Listen To Your Wife! We've Built A Lonely & Sexless Society!",
-    "slug": "jordan-peterson-loneliness",
-    "date": "2025-01-13",
-    "duration": 8870,
-    "guestIds": ["jordan-peterson"],
-    "topics": ["psychology", "marriage"],
-    "description": "Peterson on the fracture of community, the modern relationship crisis, his book on wrestling with God, and Peterson Academy.",
-    "links": {
-      "youtube": "https://www.youtube.com/watch?v=Hik6OY-nk4c"
-    },
-    "thumbnail": "/portraits/jordan-peterson.jpg",
-    "promotions": [
-      {
-        "type": "book",
-        "title": "We Who Wrestle With God",
-        "by": "guest",
-        "link": "https://www.jordanbpeterson.com/we-who-wrestle-with-god/"
+        "name": "Shopify",
+        "url": "https://shopify.com/bartlett",
+        "topical": false
       },
       {
-        "type": "course",
-        "title": "Peterson Academy",
-        "by": "guest",
-        "link": "https://petersonacademy.com/"
+        "name": "Ketone-IQ",
+        "url": "https://ketone.com/STEVEN",
+        "topical": true
       }
     ],
-    "sponsors": []
-  },
-  {
-    "id": "doac-nTWXfo7narw",
-    "episodeNumber": 268,
-    "title": "Attachment styles and the patterns that shape relationships",
-    "originalTitle": "Esther Perel: The 3 Attachment Styles & Why You're Struggling With Love!",
-    "slug": "esther-perel-attachment",
-    "date": "2023-12-07",
-    "duration": 7362,
-    "guestIds": ["esther-perel"],
-    "topics": ["dating", "marriage"],
-    "description": "Couples therapist Perel on the three attachment styles, the childhood roots of relationship patterns, and how to revive a stalled partnership.",
-    "links": {
-      "youtube": "https://www.youtube.com/watch?v=nTWXfo7narw"
-    },
-    "thumbnail": "/portraits/esther-perel.jpg",
-    "promotions": [
+    "chapters": [
       {
-        "type": "product",
-        "title": "Where Should We Begin (podcast)",
-        "by": "guest",
-        "link": "https://whereshouldwebegin.estherperel.com/"
-      }
-    ],
-    "sponsors": []
-  },
-  {
-    "id": "doac-7VxeyTfhBM8",
-    "episodeNumber": 547,
-    "title": "From Trump Organization to the White House to walking away",
-    "originalTitle": "Ivanka Trump: Most People Can't Tell Signal From Noise",
-    "slug": "ivanka-trump-business-politics",
-    "date": "2026-04-09",
-    "duration": 5772,
-    "guestIds": ["ivanka-trump"],
-    "topics": ["founders", "politics"],
-    "description": "Ivanka Trump on building an $800M business, negotiating real estate young, four years inside the White House, and what made her step back.",
-    "links": {
-      "youtube": "https://www.youtube.com/watch?v=7VxeyTfhBM8"
-    },
-    "thumbnail": "/portraits/ivanka-trump.jpg",
-    "promotions": [
+        "start": 0,
+        "title": "Intro"
+      },
       {
-        "type": "book",
-        "title": "Women Who Work",
-        "by": "guest",
-        "link": "https://www.amazon.com/Women-Who-Work-Rewriting-Success/dp/0735211329"
+        "start": 214,
+        "title": "The children's book that shaped everything"
+      },
+      {
+        "start": 552,
+        "title": "Inside the first human age-reversal trials"
+      },
+      {
+        "start": 4258,
+        "title": "Fasting methods for extending life"
+      },
+      {
+        "start": 5113,
+        "title": "The 5 foods with the biggest lifespan impact"
+      },
+      {
+        "start": 6645,
+        "title": "What a 'perfect' supplement stack looks like"
       }
     ],
-    "sponsors": []
+    "episodeNumberSource": "estimate"
   },
   {
     "id": "doac-I_w81rptxkc",
-    "episodeNumber": 520,
+    "episodeNumber": 521,
     "title": "Identity, trauma, and the question that defines decisions",
     "originalTitle": "Tony Robbins: No One Is Ready For What's Coming (The truth about AI).",
     "slug": "tony-robbins-ai-identity",
     "date": "2026-01-15",
     "duration": 7240,
-    "guestIds": ["tony-robbins"],
-    "topics": ["productivity", "psychology"],
+    "guestIds": [
+      "tony-robbins"
+    ],
+    "topics": [
+      "productivity",
+      "psychology"
+    ],
     "description": "Robbins on the role of trauma in identity, the framework he uses with world leaders, and his read on AI's coming disruption to work.",
     "links": {
       "youtube": "https://www.youtube.com/watch?v=I_w81rptxkc"
@@ -273,31 +2066,254 @@
         "link": "https://www.tonyrobbins.com/events/"
       }
     ],
-    "sponsors": []
+    "sponsors": [],
+    "episodeNumberSource": "estimate"
   },
   {
-    "id": "doac-V-z0k5xu1hM",
-    "episodeNumber": 554,
-    "title": "Classified UAP research, from the inside",
-    "originalTitle": "UFO Roundtable: CIA Physicist Proves Aliens Exist!",
-    "slug": "ufo-roundtable-puthoff-farah",
-    "date": "2026-05-14",
-    "duration": 5227,
-    "guestIds": ["hal-puthoff", "dan-farah"],
-    "topics": ["culture", "media"],
-    "description": "Quantum physicist Hal Puthoff and filmmaker Dan Farah on decades of classified UAP intelligence programs and the documentary built around them.",
+    "id": "doac-Hik6OY-nk4c",
+    "episodeNumber": 416,
+    "title": "Loneliness, marriage, and individualism",
+    "originalTitle": "Jordan B Peterson: You Need To Listen To Your Wife! We've Built A Lonely & Sexless Society!",
+    "slug": "jordan-peterson-loneliness",
+    "date": "2025-01-13",
+    "duration": 8870,
+    "guestIds": [
+      "jordan-peterson"
+    ],
+    "topics": [
+      "psychology",
+      "marriage"
+    ],
+    "description": "Peterson on the fracture of community, the modern relationship crisis, his book on wrestling with God, and Peterson Academy.",
     "links": {
-      "youtube": "https://www.youtube.com/watch?v=V-z0k5xu1hM"
+      "youtube": "https://www.youtube.com/watch?v=Hik6OY-nk4c"
     },
-    "thumbnail": "/portraits/hal-puthoff.jpg",
+    "thumbnail": "/portraits/jordan-peterson.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "We Who Wrestle With God",
+        "by": "guest",
+        "link": "https://www.jordanbpeterson.com/we-who-wrestle-with-god/"
+      },
+      {
+        "type": "course",
+        "title": "Peterson Academy",
+        "by": "guest",
+        "link": "https://petersonacademy.com/"
+      }
+    ],
+    "sponsors": [],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-jSqCL7Npln0",
+    "episodeNumber": 378,
+    "title": "Dopamine, focus, and the neuroscience of motivation",
+    "originalTitle": "Andrew Huberman: You Must Control Your Dopamine! The Shocking Truth Behind Cold Showers!",
+    "slug": "andrew-huberman-dopamine",
+    "date": "2024-08-29",
+    "duration": 14517,
+    "guestIds": [
+      "andrew-huberman"
+    ],
+    "topics": [
+      "focus",
+      "psychology"
+    ],
+    "description": "Stanford neuroscientist Huberman on dopamine baseline, neuroplasticity at any age, why pursuit beats reward, and what cold exposure actually does.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=jSqCL7Npln0"
+    },
+    "thumbnail": "/portraits/andrew-huberman.jpg",
     "promotions": [
       {
         "type": "product",
-        "title": "The Age of Disclosure (documentary)",
+        "title": "Huberman Lab podcast",
         "by": "guest",
-        "link": "https://www.ageofdisclosure.com/"
+        "link": "https://www.hubermanlab.com/"
       }
     ],
-    "sponsors": []
+    "sponsors": [],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-IxVNR0Om-lA",
+    "episodeNumber": 344,
+    "title": "Stress as the new addiction",
+    "originalTitle": "Mo Gawdat: A WARNING about Stress & Anxiety! This Is Causing 70% Of Heart Attacks In Young People!",
+    "slug": "mo-gawdat-unstressable",
+    "date": "2024-04-25",
+    "duration": 10426,
+    "guestIds": [
+      "mo-gawdat"
+    ],
+    "topics": [
+      "mental-health",
+      "productivity"
+    ],
+    "description": "Gawdat on his new book Unstressable, the cardiovascular toll of always-on living, and why most productivity rhetoric is making things worse.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=IxVNR0Om-lA"
+    },
+    "thumbnail": "/portraits/mo-gawdat.jpg",
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Unstressable",
+        "by": "guest",
+        "link": "https://www.mogawdat.com/"
+      },
+      {
+        "type": "company",
+        "title": "One Billion Happy",
+        "by": "guest",
+        "link": "https://www.onebillionhappy.org/"
+      }
+    ],
+    "sponsors": [],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-nTWXfo7narw",
+    "episodeNumber": 305,
+    "title": "Attachment styles and the patterns that shape relationships",
+    "originalTitle": "Esther Perel: The 3 Attachment Styles & Why You're Struggling With Love!",
+    "slug": "esther-perel-attachment",
+    "date": "2023-12-07",
+    "duration": 7362,
+    "guestIds": [
+      "esther-perel"
+    ],
+    "topics": [
+      "dating",
+      "marriage"
+    ],
+    "description": "Couples therapist Perel on the three attachment styles, the childhood roots of relationship patterns, and how to revive a stalled partnership.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=nTWXfo7narw"
+    },
+    "thumbnail": "/portraits/esther-perel.jpg",
+    "promotions": [
+      {
+        "type": "product",
+        "title": "Where Should We Begin (podcast)",
+        "by": "guest",
+        "link": "https://whereshouldwebegin.estherperel.com/"
+      }
+    ],
+    "sponsors": [],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-ca5h47tJsdE",
+    "episodeNumber": 195,
+    "title": "Building Bumble after Tinder",
+    "originalTitle": "Fighting Sexism & Winning: The Founder Behind The $1Billion Dollar Tech Company Bumble",
+    "slug": "whitney-wolfe-bumble",
+    "date": "2022-11-14",
+    "duration": 5569,
+    "guestIds": [
+      "whitney-wolfe-herd"
+    ],
+    "topics": [
+      "founders",
+      "leadership"
+    ],
+    "description": "Wolfe Herd on her departure from Tinder, building Bumble in its wake, dark days along the way, and what vulnerability looks like in leadership.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=ca5h47tJsdE"
+    },
+    "thumbnail": "/portraits/whitney-wolfe-herd.jpg",
+    "promotions": [
+      {
+        "type": "company",
+        "title": "Bumble",
+        "by": "guest",
+        "link": "https://bumble.com/"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Intel",
+        "url": "https://intel.com/",
+        "topical": false
+      },
+      {
+        "name": "Mercedes-Benz",
+        "url": "https://mercedes-benz.com/",
+        "topical": false
+      },
+      {
+        "name": "Huel",
+        "url": "https://huel.com/",
+        "topical": false
+      },
+      {
+        "name": "American Express",
+        "url": "https://americanexpress.com/",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 140,
+        "title": "Early context"
+      },
+      {
+        "start": 1199,
+        "title": "Early Tinder marketing tactics"
+      },
+      {
+        "start": 2974,
+        "title": "Departure from Tinder"
+      },
+      {
+        "start": 3972,
+        "title": "Bumble's current success"
+      },
+      {
+        "start": 4429,
+        "title": "Why did Bumble win?"
+      }
+    ],
+    "episodeNumberSource": "estimate"
+  },
+  {
+    "id": "doac-csA9YhzYvmk",
+    "episodeNumber": 101,
+    "title": "The math of happiness, after a profound loss",
+    "originalTitle": "The Happiness Expert That Made 51 Million People Happier: Mo Gawdat | E101",
+    "slug": "mo-gawdat-solve-for-happy",
+    "date": "2021-10-11",
+    "duration": 7054,
+    "guestIds": [
+      "mo-gawdat"
+    ],
+    "topics": [
+      "psychology",
+      "mental-health"
+    ],
+    "description": "Ex-Google X exec Gawdat on losing his son, the equation he built to understand happiness, and why gratitude is the only durable input.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=csA9YhzYvmk"
+    },
+    "thumbnail": "/portraits/doac-csA9YhzYvmk.jpg",
+    "thumbnail2x": "/portraits/doac-csA9YhzYvmk@2x.jpg",
+    "thumbnailBrightness": 0.213,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Solve for Happy",
+        "by": "guest",
+        "link": "https://www.mogawdat.com/solve-for-happy"
+      }
+    ],
+    "sponsors": [],
+    "episodeNumberSource": "title-parse"
   }
 ]

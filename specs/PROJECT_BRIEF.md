@@ -244,6 +244,8 @@ Guests and episodes are separate entities joined by ID. Keep all guest data in o
 // episodes.json
 {
   "id": "doac-DnvWAP99r3Y",
+  "episodeNumber": 540,
+  "episodeNumberSource": "estimate",
   "title": "Rewritten topic-explanatory title.",
   "originalTitle": "Exact YouTube title, preserved for record/SEO.",
   "slug": "david-sinclair-aging-reversal",
@@ -280,6 +282,7 @@ Guests and episodes are separate entities joined by ID. Keep all guest data in o
 - **`sourceUrl` on credentials** — keeps the site honest, gives users a way to verify. Typically Wikipedia or the institutional source-of-truth page, whichever is more authoritative for that specific credential.
 - **`year: null` allowed on credentials** for ongoing positions where the start year isn't a strong signal (e.g., current professorship).
 - **Sponsors are separate from promotions.** `promotions[]` carries guest-side activity (Featuring); `sponsors[]` carries host-side paid ads, with `topical` indicating whether the sponsor's product overlaps with episode subject matter.
+- **`episodeNumberSource` tracks provenance** — `'title-parse'` when the number came directly from `| E###` in the YouTube title (canonical, never overwrite), or `'estimate'` when derived via nearest-anchor offset interpolation (safe to overwrite if a better source emerges later). See `EPISODE_INGESTION.md` for the algorithm and the `npm run renumber` command for batch recompute.
 
 ## Build Sequence
 

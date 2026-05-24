@@ -107,9 +107,21 @@ For each guest the episode introduces (or that we don't have in
 Write the episode entry in `data/episodes.json`:
 
 - **`id`** — `doac-{youtubeVideoId}` (namespaced for future shows)
-- **`episodeNumber`** — DOAC's published episode number when visible in the
-  title (older episodes had `| E108` style suffixes); otherwise estimate from
-  chronology
+- **`episodeNumber`** — DOAC's published episode number. Derived
+  automatically by the ingestion script via two paths (see
+  `episodeNumberSource` below):
+  - **`title-parse`** (canonical): parsed from `| E###` in the original
+    YouTube title. Older episodes (~2020–2023) used this format.
+  - **`estimate`** (derived): for episodes where DOAC stopped including
+    the number in the title, the script finds the chronologically-nearest
+    title-parsed anchor and applies its offset (currently ~58) to this
+    episode's chronological position in the long-form catalog. Accurate
+    to within ±2 of DOAC's real number in practice. Re-run
+    `npm run renumber` if the catalog refreshes.
+- **`episodeNumberSource`** — `'title-parse'` or `'estimate'`. Marks
+  provenance so a future authoritative source (Spotify, manual lookup)
+  can selectively overwrite only the `'estimate'` entries without
+  clobbering known-canonical numbers.
 - **`title`** — rewritten, topic-explanatory, 3–7 words. NOT the YouTube title.
   Example: "Reversing biological aging." Not "Can Aging Be Reversed?! 75%
   Younger Cells!"

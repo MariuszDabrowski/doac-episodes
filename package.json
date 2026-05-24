@@ -11,9 +11,14 @@
     "fetch:channel": "node scripts/fetch-channel-videos.mjs",
     "fetch:transcripts": "node scripts/fetch-transcripts.mjs",
     "extract:transcripts": "node scripts/extract-transcripts.mjs",
-    "extract:frames": "node scripts/extract-portrait-frames.mjs"
+    "extract:frames": "node scripts/extract-portrait-frames.mjs",
+    "ingest": "node scripts/ingest-episode.mjs",
+    "ingest:batch": "node scripts/ingest-batch.mjs",
+    "topic-candidates": "node scripts/topic-candidates.mjs",
+    "renumber": "node scripts/renumber-episodes.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.98.0",
     "@nuxt/fonts": "^0.14.0",
     "dotenv": "^16.4.5",
     "nuxt": "^3.14.0",
