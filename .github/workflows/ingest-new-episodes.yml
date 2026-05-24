@@ -78,6 +78,26 @@ jobs:
 
       - run: npm ci
 
+      # YouTube blocks unauthenticated yt-dlp on datacenter IPs with the
+      # "confirm you're not a bot" challenge. If the YT_COOKIES secret is
+      # set (Netscape-format cookies.txt contents, exported via
+      # `yt-dlp --cookies-from-browser firefox --cookies cookies.txt`),
+      # write it to a runner-temp file and expose YT_COOKIES_FILE for the
+      # ingest scripts. Written under $RUNNER_TEMP, not $GITHUB_WORKSPACE,
+      # so peter-evans/create-pull-request can't accidentally include it.
+      - name: Configure yt-dlp cookies
+        env:
+          YT_COOKIES: ${{ secrets.YT_COOKIES }}
+        run: |
+          if [ -n "$YT_COOKIES" ]; then
+            printf '%s' "$YT_COOKIES" > "$RUNNER_TEMP/yt-cookies.txt"
+            chmod 600 "$RUNNER_TEMP/yt-cookies.txt"
+            echo "YT_COOKIES_FILE=$RUNNER_TEMP/yt-cookies.txt" >> "$GITHUB_ENV"
+            echo "Using YT_COOKIES secret for yt-dlp"
+          else
+            echo "YT_COOKIES secret not set; proceeding without cookies"
+          fi
+
       - name: Refresh YouTube catalog
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

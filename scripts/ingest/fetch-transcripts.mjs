@@ -7,9 +7,15 @@ const OUT_DIR = 'data/_transcripts';
 const candidates = JSON.parse(await readFile(CANDIDATES, 'utf8'));
 await mkdir(OUT_DIR, { recursive: true });
 
+// See extract-portrait-frames.mjs for the YT_COOKIES_FILE rationale.
+const cookieArgs = process.env.YT_COOKIES_FILE
+  ? ['--cookies', process.env.YT_COOKIES_FILE]
+  : [];
+
 const runYtDlp = (videoId) =>
   new Promise((resolve, reject) => {
     const args = [
+      ...cookieArgs,
       '--skip-download',
       '--write-auto-subs',
       '--write-subs',

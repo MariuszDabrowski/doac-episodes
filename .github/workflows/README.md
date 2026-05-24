@@ -23,6 +23,22 @@ Add these in `Settings → Secrets and variables → Actions → New repository 
 - `ANTHROPIC_API_KEY`. Used by the Claude calls in `scripts/ingest/lib/ai.mjs`.
 - `BRAVE_API_KEY`. Used by the bio enrichment step for guests without a
   Wikipedia match.
+- `YT_COOKIES` (optional, but effectively required in practice). YouTube
+  blocks unauthenticated `yt-dlp` requests from GitHub's runner IPs with
+  a "confirm you're not a bot" challenge, which causes ingest to fail
+  with `ERROR: [youtube] <id>: Sign in to confirm you're not a bot`.
+  Pass cookies from a signed-in browser session to make the requests
+  look authentic:
+  ```sh
+  # On a machine signed into YouTube in Firefox (or Chrome/Safari)
+  yt-dlp --cookies-from-browser firefox --cookies cookies.txt \
+    --skip-download 'https://www.youtube.com/watch?v=jNQXAC9IVRw'
+  pbcopy < cookies.txt   # paste this into the YT_COOKIES secret
+  ```
+  The workflow writes it to a runner-temp file (outside
+  `$GITHUB_WORKSPACE`, so it can't end up in the PR) and sets
+  `YT_COOKIES_FILE` for the ingest scripts. Cookies expire every few
+  weeks; if ingest starts failing again with the bot challenge, refresh.
 
 ### 2. GitHub Pages
 
