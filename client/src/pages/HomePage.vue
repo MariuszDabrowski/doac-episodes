@@ -276,7 +276,19 @@ main {
      atmosphere. Children stack naturally inside main's stacking context;
      no per-child z-index needed. */
   min-height: 100vh;
-  padding: 4.5rem 4rem;
+  /* Vertical padding scales smoothly with viewport; horizontal padding
+     flips to a tight value at <=1100px (see media query below). */
+  padding: clamp(2.5rem, 5vw, 4.5rem) 4rem;
+}
+
+@media (max-width: 899px) {
+  /* Tighten horizontal padding once we drop below the multi-column /
+     desktop-card breakpoint, so single-stack mobile cards get
+     near-edge breathing room. */
+  main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .site-brand {
@@ -433,14 +445,14 @@ main {
    via the card-stagger-in keyframe below */
 
 @keyframes card-stagger-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* Transform-only (no opacity). Earlier versions used opacity 0 → 1 with
+     animation-fill-mode: both, but the pre-animation `from` state could
+     flicker into view during a layout pass at the breakpoint (the
+     reported "invisible card on resize" bug), since `both` pins the
+     element to the from-state during animation-delay. Keeping cards
+     opaque the whole time and just sliding them in avoids that. */
+  from { transform: translateY(20px); }
+  to { transform: translateY(0); }
 }
 
 /* Stagger only the first 8 cards of each "batch", the initial mount AND
@@ -519,7 +531,7 @@ main {
   transition: opacity 0.4s ease 0.2s; /* small delay so it appears after the card settles */
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -535,6 +547,29 @@ main {
   }
   /* 3-column layout: row 1 is children 1-3, also suppress above child 3 */
   .card-slot:nth-child(3)::before {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  /* About link is taking corner space that mobile can't spare. */
+  .page-corner-actions {
+    display: none;
+  }
+
+  /* The site brand at 5.5rem is also too big on a phone. */
+  .site-brand {
+    font-size: 4rem;
+    margin: 1rem 0 3rem;
+  }
+
+  /* Search bar and result-count text were sharing a row and forcing the
+     count to wrap. On mobile the filters above handle discovery, so the
+     search bar is removed entirely and the count gets the full row. */
+  .results-bar {
+    justify-content: flex-start;
+  }
+  .search-wrapper {
     display: none;
   }
 }

@@ -83,16 +83,15 @@ function watchCredibility(el) {
     credibilityObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
         const target = entry.target;
-        // Skip while any part of the card is hovered. The hover trigger
-        // for credibility expansion is the whole left "person" zone
-        // (portrait + .guest blocks), so checking just the credibility's
-        // own :hover would still let the yo-yo loop fire, element grows
-        // → resize observer fires → measures expanded → removes
-        // .has-overflow → CSS rule drops → collapses → grows again.
-        // Card-wide check is broad but safe: there's no reason to
-        // recalc overflow mid-interaction.
+        // Skip while any part of the card is hovered OR the credibility is
+        // explicitly tap-expanded. Without this, the element grows →
+        // observer measures expanded state → removes .has-overflow → CSS
+        // rule drops → collapses → re-overflows → yo-yo. Card-wide hover
+        // covers the desktop hover trigger; .is-expanded covers the touch
+        // tap-to-expand trigger.
         const card = target.closest('.card');
         if (card?.matches(':hover')) continue;
+        if (target.classList.contains('is-expanded')) continue;
         const overflowing = target.scrollHeight > target.clientHeight + 1;
         target.classList.toggle('has-overflow', overflowing);
       }
@@ -101,9 +100,25 @@ function watchCredibility(el) {
   credibilityObserver.observe(el);
 }
 
+// Click/tap toggle for touch devices (no hover). Also harmless on
+// hover-capable devices: clicking the bio after hovering it just pins
+// it open until the next click.
+function toggleCredibility(e) {
+  const el = e.currentTarget;
+  if (el.classList.contains('has-overflow')) {
+    el.classList.toggle('is-expanded');
+  }
+}
+
 onUnmounted(() => {
   if (credibilityObserver) credibilityObserver.disconnect();
 });
+
+// Display at most two topic pills per card so the actions row never wraps
+// to a second line, which left a loose gap next to the last pill and
+// floated the Watch button onto its own row. The full topic list still
+// drives filtering and search.
+const displayedTopics = computed(() => props.episode.topics.slice(0, 2));
 
 const guestPromotionGroups = computed(() => {
   const byType = {};
@@ -146,6 +161,7 @@ const guestPromotionGroups = computed(() => {
               class="portrait-img"
               loading="lazy"
               decoding="async"
+              @load="$event.target.classList.add('is-loaded')"
             />
           </picture>
           <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>
@@ -162,6 +178,7 @@ const guestPromotionGroups = computed(() => {
             v-if="guests[0].credibilityLine"
             :ref="watchCredibility"
             class="credibility"
+            @click="toggleCredibility"
           >{{ guests[0].credibilityLine }}</div>
         </div>
 
@@ -180,6 +197,7 @@ const guestPromotionGroups = computed(() => {
                 v-if="guest.credibilityLine"
                 :ref="watchCredibility"
                 class="credibility"
+                @click="toggleCredibility"
               >{{ guest.credibilityLine }}</div>
             </div>
           </div>
@@ -208,7 +226,7 @@ const guestPromotionGroups = computed(() => {
         <div class="actions-row">
           <div class="topic-pills">
             <RouterLink
-              v-for="t in episode.topics"
+              v-for="t in displayedTopics"
               :key="t"
               :to="`/?topic=${t}`"
               class="topic-pill"
@@ -277,6 +295,15 @@ const guestPromotionGroups = computed(() => {
   height: 100%;
   object-fit: cover;
   display: block;
+  /* Fade in once the file has loaded and decoded so the image doesn't
+     pop in over the dark placeholder. For cached images, `load` fires
+     immediately on hydration and the fade is essentially instant. */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portrait-img.is-loaded {
+  opacity: 1;
 }
 
 .portrait-placeholder {
@@ -409,6 +436,7 @@ const guestPromotionGroups = computed(() => {
      their own .guest block
    - direct hover on the credibility itself remains supported */
 .credibility.has-overflow:hover,
+.credibility.has-overflow.is-expanded,
 .guest:hover .credibility.has-overflow,
 .left-col:hover .guest-block > .guest:first-child .credibility.has-overflow {
   max-height: max-content;
@@ -509,7 +537,9 @@ const guestPromotionGroups = computed(() => {
 
 .actions-row {
   display: flex;
-  align-items: center;
+  /* Align to flex-end so the Watch button hugs the bottom of the (possibly
+     wrapped) pill block instead of centering against it and floating up. */
+  align-items: flex-end;
   justify-content: space-between;
   gap: 0.75rem;
   padding: 0 1rem 1rem;
@@ -559,4 +589,84 @@ const guestPromotionGroups = computed(() => {
   background: #f0c890;
 }
 
+@media (max-width: 639px) {
+  /* Stack the card vertically with the episode content (title +
+     description + actions) above the guest's name and bio. `display:
+     contents` on .left-col lets us treat its children (.portrait-link
+     and .guest-block) as direct grid items of .card so we can reorder
+     them with grid-template-areas. Above 640px the original side-by-side
+     horizontal tile stays. */
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "portrait"
+      "content"
+      "guest";
+    position: relative; /* anchor for the episode badge over the portrait */
+    /* Tint the card surface to match the content-block color, so the
+       diagonal cut at the portrait's bottom edge reveals the same shade
+       as the section directly below it (instead of the dim transparent
+       default that read as a dark triangular gap). */
+    background: #1c1916;
+  }
+  .left-col { display: contents; }
+  .portrait-link { grid-area: portrait; }
+  .guest-block {
+    grid-area: guest;
+    /* Card surface is tinted #1c1916 for the slant trick above. Restore
+       the page-bg shade here so the bio sits on the same near-black
+       backdrop as on desktop, instead of inheriting the brown tint. */
+    background: #100e0c;
+  }
+  .right-col {
+    grid-area: content;
+    /* Drop the positioned-ancestor status so the .episode-badge inside
+       resolves its absolute positioning against .card, not this column.
+       The badge lands in the card's top-right, i.e. over the portrait. */
+    position: static;
+  }
+
+  /* Portrait gets the angled top-right notch (where the badge sits) and
+     keeps the diagonal bottom slant. With the card background tinted to
+     match the content-block (see .card above), the cut reveals the same
+     color as the section below, so the slant reads as a seam instead of
+     a gap. */
+  .portrait {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 159px) 0,
+      100% 32px,
+      100% calc(100% - 16px),
+      0 100%
+    );
+  }
+  .content-block {
+    clip-path: none;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Topic pills above, Watch button as a full-width tap target below. */
+  .actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.875rem;
+  }
+
+  .watch-button {
+    width: 100%;
+    padding: 0.625rem 1rem;
+  }
+
+  /* No hover on touch, and the tap-to-expand affordance is invisible
+     when you can't see the mask fade. Just show the full bio. */
+  .credibility {
+    max-height: none;
+  }
+  .credibility.has-overflow {
+    cursor: default;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
 </style>

@@ -140,4 +140,19 @@ function scrollToTop() {
   outline: 2px solid #c89968;
   outline-offset: 2px;
 }
+
+@media (max-width: 640px) {
+  /* Browse button is hidden, so collapse the middle 1fr track and let the
+     remaining two children land flush in left/right columns (otherwise the
+     top button would slide into the now-empty 1fr middle column). */
+  .site-header {
+    grid-template-columns: auto 1fr;
+  }
+  .header-browse-button {
+    display: none;
+  }
+  .header-top-button {
+    justify-self: end;
+  }
+}
 </style>

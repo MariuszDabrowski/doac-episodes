@@ -134,6 +134,34 @@ onUnmounted(() => {
         </button>
       </div>
     </Transition>
+
+    <!-- Narrow-viewport replacement: two native selects (cluster, then
+         optional subtopic). Display flips via CSS at <=1100px. Native
+         selects give us free a11y + the right mobile picker on iOS/Android. -->
+    <div class="dropdown-filters">
+      <select
+        class="filter-select"
+        :value="cluster"
+        @change="(e) => selectCluster(e.target.value)"
+        aria-label="Category"
+      >
+        <option v-for="c in allClusters" :key="c.id" :value="c.id">
+          {{ c.label }}
+        </option>
+      </select>
+      <select
+        v-if="subtopics.length"
+        class="filter-select"
+        :value="subtopic || ''"
+        @change="(e) => emit('update:subtopic', e.target.value || null)"
+        aria-label="Subtopic"
+      >
+        <option value="">All subtopics</option>
+        <option v-for="t in subtopics" :key="t.id" :value="t.id">
+          {{ t.label }}
+        </option>
+      </select>
+    </div>
   </div>
 </template>
 
@@ -265,6 +293,72 @@ onUnmounted(() => {
   .subtopic-bar-enter-active .subtopic-pill,
   .subtopic-bar-leave-active .subtopic-pill {
     animation: none;
+  }
+}
+
+/* Dropdown alternative for narrow viewports. Hidden by default; CSS
+   below swaps it in at <=1100px and hides the desktop pill bars. */
+.dropdown-filters {
+  display: none;
+}
+
+.filter-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(245, 236, 214, 0.04);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23c89968' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px 8px;
+  border: 1px solid rgba(245, 236, 214, 0.12);
+  border-radius: 9999px;
+  color: #f5ecd6;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 2.75rem 0.75rem 1.125rem;
+  cursor: pointer;
+  width: 100%;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.filter-select:hover {
+  border-color: rgba(200, 153, 104, 0.5);
+  background-color: rgba(245, 236, 214, 0.06);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: rgba(200, 153, 104, 0.7);
+  background-color: rgba(245, 236, 214, 0.08);
+}
+
+/* Native option list comes from the browser; we can only style its
+   colors. Keep them on-brand for desktop browsers that show the
+   custom-menu (Chrome on macOS, etc.). */
+.filter-select option {
+  background: #1c1916;
+  color: #f5ecd6;
+}
+
+@media (max-width: 899px) {
+  /* Narrow widths: swap the pill bars for two compact selects. */
+  .cluster-bar-wrapper,
+  .subtopic-bar {
+    display: none;
+  }
+
+  .dropdown-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  .category-section {
+    margin-bottom: 3rem;
   }
 }
 </style>

@@ -96,9 +96,8 @@ specs/                    PROJECT_BRIEF, EPISODE_INGESTION, REVIEW_PAGE
 
 A scheduled GitHub Action (every 6 hours) polls the channel for new
 long-form uploads, runs the full pipeline on each, and opens a draft PR
-with the data + portrait changes. Reviewer (you) merges the PR, which
-triggers the deploy workflow that publishes the new build to GitHub
-Pages. Setup (secrets, Pages source, PR permissions) is documented at
+with the data + portrait changes. A merge triggers the deploy workflow,
+which publishes the new build to GitHub Pages. Setup (secrets, Pages source, PR permissions) is documented at
 [.github/workflows/README.md](.github/workflows/README.md).
 
 ## Specs
@@ -116,4 +115,3 @@ Pages. Setup (secrets, Pages source, PR permissions) is documented at
 ## Built by
 
 [Mariusz Dabrowski](https://www.linkedin.com/in/mariuszpdabrowski/).
-Source on [GitHub](https://github.com/MariuszDabrowski/doac-episodes).
