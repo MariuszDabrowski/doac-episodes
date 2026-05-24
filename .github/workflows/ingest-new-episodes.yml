@@ -1,0 +1,156 @@
+name: Ingest new episodes
+
+# Polls the DOAC channel for new long-form uploads, runs the full ingestion
+# pipeline on each, and opens a draft PR with the data + portrait changes.
+# Review the PR (or pull it locally and use `/review` for inline tweaks),
+# then merge. Merging triggers deploy.yml which publishes the new build.
+
+on:
+  schedule:
+    # Every 6 hours. DOAC publishes ~2 long-form episodes a week, so this
+    # leaves plenty of headroom without burning CI minutes.
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      max_episodes:
+        description: 'Max episodes to ingest in one run'
+        required: false
+        default: '10'
+
+# A run pushes a branch and opens a PR — needs both contents:write and
+# pull-requests:write.
+permissions:
+  contents: write
+  pull-requests: write
+
+# Don't stack runs. If one is in flight, skip the next scheduled tick.
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    # Each episode takes ~1-2 min through the pipeline. Cap at 90 to handle
+    # a backlog of ~20 episodes without an infinite-loop runaway.
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install ffmpeg + yt-dlp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install yt-dlp
+
+      # face_recognition compiles dlib from source (~3-5 min). Caching the
+      # whole venv saves that time on repeat runs. Bump the key version
+      # when the dep list changes.
+      - name: Cache Python venv
+        id: cache-venv
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-py3.12-v1
+
+      - name: Build Python venv
+        if: steps.cache-venv.outputs.cache-hit != 'true'
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install --upgrade pip
+          .venv/bin/pip install \
+            opencv-python \
+            "mediapipe==0.10.18" \
+            face_recognition \
+            "setuptools<81" \
+            Pillow \
+            pillow-avif-plugin
+
+      - run: npm ci
+
+      - name: Refresh YouTube catalog
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run fetch:channel
+
+      - name: Detect new episodes
+        id: detect
+        run: |
+          MAX=${{ github.event.inputs.max_episodes || '10' }}
+          NEW_IDS=$(node scripts/ingest/next-candidates.mjs "$MAX" 30 2>/dev/null \
+            | grep -E '^[a-zA-Z0-9_-]{11}' | awk '{print $1}')
+          COUNT=$(echo "$NEW_IDS" | grep -c . || true)
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          {
+            echo "ids<<EOF"
+            echo "$NEW_IDS"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "Found $COUNT new episode(s):"
+          echo "$NEW_IDS"
+
+      - name: Ingest new episodes
+        if: steps.detect.outputs.count != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+        run: |
+          set +e
+          FAILED=()
+          while IFS= read -r id; do
+            [ -z "$id" ] && continue
+            echo "========== $id =========="
+            if ! node scripts/ingest/ingest-episode.mjs "$id"; then
+              FAILED+=("$id")
+            fi
+          done <<< "${{ steps.detect.outputs.ids }}"
+          if [ ${#FAILED[@]} -gt 0 ]; then
+            echo "::warning::Some episodes failed: ${FAILED[*]}"
+          fi
+
+      - name: Build PR body
+        if: steps.detect.outputs.count != '0'
+        id: body
+        run: |
+          {
+            echo "body<<PRBODY"
+            echo "Automatically detected and ingested new long-form episodes from the DOAC channel."
+            echo ""
+            echo "**Review checklist:**"
+            echo "- [ ] Portraits look like the right person and aren't blinking"
+            echo "- [ ] Titles are clean (no clickbait language)"
+            echo "- [ ] Descriptions match what the episode actually covers"
+            echo "- [ ] Guest credibility lines are accurate"
+            echo ""
+            echo "If anything needs fixing, check this branch out locally and use \`npm run dev\` + \`/review\`."
+            echo ""
+            echo "Run: ${{ github.run_id }}"
+            echo "PRBODY"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Open PR
+        if: steps.detect.outputs.count != '0'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'Auto-ingest: new DOAC episodes'
+          title: 'New episodes from DOAC channel'
+          body: ${{ steps.body.outputs.body }}
+          branch: auto-ingest/${{ github.run_id }}
+          delete-branch: true
+          draft: true
+          # Keep generated files like data/_youtube-raw.json out of the PR.
+          # .gitignore already excludes data/_* but be explicit.
+          add-paths: |
+            data/episodes.json
+            data/guests.json
+            public/portraits/**

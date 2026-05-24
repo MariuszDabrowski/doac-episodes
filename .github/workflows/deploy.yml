@@ -1,0 +1,58 @@
+name: Deploy site
+
+# Builds the Vite app and publishes dist/ to GitHub Pages on every push to
+# main, plus manual trigger. The Hono dev server (server/index.mjs) is not
+# deployed by design (it's the local-only /review tool, see CLAUDE.md).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      # Don't waste a deploy when only ingest logs or other gitignored
+      # things changed. (Actually those are gitignored already, so this is
+      # belt + suspenders.)
+      - 'client/**'
+      - 'data/**'
+      - 'public/**'
+      - 'vite.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Cancel any in-progress deploy if a newer one is queued — Pages only
+# serves the latest build anyway.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
