@@ -9,9 +9,14 @@ await mkdir(OUT_DIR, { recursive: true });
 
 // See extract-portrait-frames.mjs for the YT_COOKIES_FILE + player_client
 // rationale (datacenter-IP bot-challenge mitigation).
-const ytArgs = process.env.YT_COOKIES_FILE
+const cookieArgs = process.env.YT_COOKIES_FILE
   ? ['--cookies', process.env.YT_COOKIES_FILE]
-  : ['--extractor-args', 'youtube:player_client=ios'];
+  : [];
+const ytArgs = [
+  ...cookieArgs,
+  '--extractor-args',
+  'youtube:player_client=ios,web_safari,tv_embedded,mweb',
+];
 
 const runYtDlp = (videoId) =>
   new Promise((resolve, reject) => {

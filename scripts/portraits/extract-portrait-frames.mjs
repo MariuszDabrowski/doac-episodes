@@ -14,20 +14,25 @@ const framesDir = `data/_frames/${videoId}`;
 await mkdir(framesDir, { recursive: true });
 
 // YouTube blocks unauthenticated yt-dlp on datacenter IPs (GitHub runners)
-// with a "confirm you're not a bot" challenge. Two mutually-exclusive
-// defenses:
-//   - If YT_COOKIES_FILE is set, pass cookies through so requests look
-//     like a signed-in browser session. The default web client returns
-//     the MP4 progressive streams our format selector targets, so leave
-//     the client alone.
-//   - Otherwise fall back to the iOS InnerTube client. It dodges the bot
-//     challenge more readily than web/android on datacenter IPs, at the
-//     cost of HLS-only streams (which is why we don't use it when
-//     cookies are around: the format selector below wants MP4).
-// Locally on a residential IP neither is strictly required.
-const ytArgs = process.env.YT_COOKIES_FILE
+// with a "confirm you're not a bot" challenge. Even with cookies, the
+// default `web` client gets silently downgraded to `tv_downgraded` which
+// returns only storyboard images, no video streams. The fix is to
+// explicitly request clients we know YouTube still serves real streams
+// to, in priority order, so yt-dlp picks the first that works:
+//   - ios: HLS streams; usually the most resilient on datacenter IPs
+//   - web_safari: also HLS; Safari UA gets less bot-checked
+//   - tv_embedded: legacy embedded player; sometimes works when others don't
+//   - mweb: mobile web; reasonable last resort
+// Cookies still go through when YT_COOKIES_FILE is set, on top of the
+// client override (the two combine, they aren't alternatives).
+const cookieArgs = process.env.YT_COOKIES_FILE
   ? ['--cookies', process.env.YT_COOKIES_FILE]
-  : ['--extractor-args', 'youtube:player_client=ios'];
+  : [];
+const ytArgs = [
+  ...cookieArgs,
+  '--extractor-args',
+  'youtube:player_client=ios,web_safari,tv_embedded,mweb',
+];
 
 function run(cmd, args, opts = {}) {
   return new Promise((resolve, reject) => {
@@ -48,6 +53,10 @@ function run(cmd, args, opts = {}) {
 // Stream URLs expire in a few hours, plenty of headroom for a single
 // episode's extraction (~1 minute total).
 console.log(`Resolving stream URL for ${videoId}…`);
+// MP4 is preferred (cleanest HTTP-range seeks for ffmpeg) but accept any
+// container: the iOS/Safari clients we now request only return HLS
+// streams, which ffmpeg can also seek into via the manifest. Cap at
+// 1080p so we don't pull a 4K stream we'd just downscale anyway.
 const formatSelector =
   'bestvideo[ext=mp4][height<=1080]/bestvideo[height<=1080]/best[height<=1080]/best';
 
