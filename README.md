@@ -110,8 +110,7 @@ while true; do
 done
 ```
 
-Paste into a terminal tab (optionally inside `tmux new -s doac` so a
-closed window doesn't kill it). Closing the tab/laptop stops the loop;
+Paste into a terminal tab. Closing the tab/laptop stops the loop;
 restart with the same paste when you come back. Notifications fire on
 every cycle. Tail `/tmp/doac-auto-ingest.log` if you wired cron instead
 (see the script header for the cron line).
