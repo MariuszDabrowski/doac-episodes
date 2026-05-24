@@ -65,13 +65,17 @@ try {
   // Dump availability + format count so the next reviewer can tell which.
   console.error(`\nFailed to resolve a stream for ${videoId}. Diagnostic:`);
   try {
+    // --ignore-no-formats-error lets --print succeed even when format
+    // selection would fail, so we actually see the metadata that the
+    // extractor pulled before erroring.
     const diag = await run(
       'yt-dlp',
       [
         ...ytArgs,
         '--no-warnings',
+        '--ignore-no-formats-error',
         '--print',
-        'availability=%(availability)s age_limit=%(age_limit)s formats=%(format_count)s title=%(title).80s',
+        'availability=%(availability)s age_limit=%(age_limit)s live=%(live_status)s formats=%(format_count)s title=%(title).80s',
         videoUrl,
       ],
       { capture: true }
@@ -80,6 +84,16 @@ try {
   } catch (diagErr) {
     console.error(`  (diagnostic call also failed: ${diagErr.message})`);
   }
+  // Also dump available formats so we can see what yt-dlp could see.
+  try {
+    const formats = await run(
+      'yt-dlp',
+      [...ytArgs, '--no-warnings', '--ignore-no-formats-error', '--list-formats', videoUrl],
+      { capture: true }
+    );
+    const tail = formats.trim().split('\n').slice(-10).join('\n');
+    console.error(`  formats (last 10 lines):\n${tail}`);
+  } catch {}
   throw err;
 }
 
