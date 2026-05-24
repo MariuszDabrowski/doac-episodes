@@ -45,7 +45,7 @@ const failed = [];
 const start = Date.now();
 for (const id of candidates) {
   console.log(`\n========== ${id} ==========\n`);
-  const code = await run('node', ['scripts/ingest-episode.mjs', id]);
+  const code = await run('node', ['scripts/ingest/ingest-episode.mjs', id]);
   if (code === 0) succeeded += 1;
   else failed.push(id);
 }

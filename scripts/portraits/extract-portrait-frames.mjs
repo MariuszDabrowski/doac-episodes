@@ -102,4 +102,4 @@ for (let i = 0; i < FRAME_COUNT; i++) {
 process.stderr.write('\n');
 
 console.log(`\n${succeeded}/${FRAME_COUNT} frames written to ${framesDir}`);
-console.log(`Next: .venv/bin/python scripts/auto-portrait.py ${framesDir} public/portraits/{guestId}.jpg`);
+console.log(`Next: .venv/bin/python scripts/portraits/auto-portrait.py ${framesDir} public/portraits/{guestId}.jpg`);

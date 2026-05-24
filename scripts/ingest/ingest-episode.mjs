@@ -3,7 +3,7 @@
  * End-to-end episode ingestion: takes a YouTube video ID, produces a
  * complete episodes.json entry + guest entries + portrait files.
  *
- * Usage: node scripts/ingest-episode.mjs <videoId>
+ * Usage: node scripts/ingest/ingest-episode.mjs <videoId>
  *
  * Steps:
  *  1. Read raw metadata from data/_youtube-raw.json
@@ -127,7 +127,7 @@ async function ensurePortrait(videoId) {
   const framesDir = `data/_frames/${videoId}`;
   if (!existsSync(framesDir)) {
     console.log(`[1/6] extracting frames…`);
-    await run('node', ['scripts/extract-portrait-frames.mjs', videoId, '20']);
+    await run('node', ['scripts/portraits/extract-portrait-frames.mjs', videoId, '20']);
   } else {
     console.log(`[1/6] frames already extracted, skipping`);
   }
@@ -140,7 +140,7 @@ async function ensurePortrait(videoId) {
   // -2/-3 candidates anymore.
   const { stdout } = await run(
     '.venv/bin/python',
-    ['scripts/auto-portrait.py', framesDir, tmpOut, '1'],
+    ['scripts/portraits/auto-portrait.py', framesDir, tmpOut, '1'],
     { capture: true }
   );
 

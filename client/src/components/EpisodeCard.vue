@@ -1,4 +1,7 @@
 <script setup>
+import { computed, ref, onUnmounted } from 'vue';
+import { RouterLink } from 'vue-router';
+
 const props = defineProps({
   episode: { type: Object, required: true },
   guests: { type: Array, required: true },
@@ -204,14 +207,14 @@ const guestPromotionGroups = computed(() => {
 
         <div class="actions-row">
           <div class="topic-pills">
-            <NuxtLink
+            <RouterLink
               v-for="t in episode.topics"
               :key="t"
               :to="`/?topic=${t}`"
               class="topic-pill"
             >
               {{ topicsById[t]?.label || t }}
-            </NuxtLink>
+            </RouterLink>
           </div>
           <a
             class="watch-button"

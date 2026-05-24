@@ -1,7 +1,9 @@
 <script setup>
-import episodesData from '~/data/episodes.json';
-import guestsData from '~/data/guests.json';
-import taxonomiesData from '~/data/taxonomies.json';
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
+import episodesData from '@data/episodes.json';
+import guestsData from '@data/guests.json';
+import taxonomiesData from '@data/taxonomies.json';
+import EpisodeCard from '@/components/EpisodeCard.vue';
 
 const guestsById = Object.fromEntries(guestsData.map((g) => [g.id, g]));
 const rolesById = Object.fromEntries(taxonomiesData.roles.map((r) => [r.id, r]));

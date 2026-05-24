@@ -3,13 +3,24 @@
 // shows the current portrait, and lets you mark it Good or generate the
 // top-5 alts to swap one in. Approval state is persisted to
 // data/_portrait-review.json so you can come back to where you left off.
+import { computed, reactive, ref, onMounted } from 'vue';
 
 const episodes = ref([]);
 const filter = ref('pending'); // 'all' | 'pending' | 'good'
 const expanded = reactive({}); // videoId → { alts: [], loading: false }
 
+async function api(path, options = {}) {
+  const res = await fetch(path, {
+    method: options.method || 'GET',
+    headers: options.body ? { 'Content-Type': 'application/json' } : {},
+    body: options.body ? JSON.stringify(options.body) : undefined,
+  });
+  if (!res.ok) throw new Error(`${path} → ${res.status}`);
+  return res.json();
+}
+
 async function fetchEpisodes() {
-  episodes.value = await $fetch('/api/debug/episodes');
+  episodes.value = await api('/api/debug/episodes');
 }
 
 function cacheBustedThumb(ep) {
@@ -33,7 +44,7 @@ const counts = computed(() => {
 });
 
 async function markStatus(ep, status) {
-  await $fetch('/api/debug/approve', { method: 'POST', body: { id: ep.id, status } });
+  await api('/api/debug/approve', { method: 'POST', body: { id: ep.id, status } });
   ep.status = status;
 }
 
@@ -41,7 +52,7 @@ async function loadAlts(ep) {
   if (!expanded[ep.videoId]) expanded[ep.videoId] = { alts: [], loading: false };
   expanded[ep.videoId].loading = true;
   try {
-    const res = await $fetch('/api/debug/alts', { method: 'POST', body: { videoId: ep.videoId } });
+    const res = await api('/api/debug/alts', { method: 'POST', body: { videoId: ep.videoId } });
     expanded[ep.videoId].alts = res.alts;
   } finally {
     expanded[ep.videoId].loading = false;
@@ -51,7 +62,7 @@ async function loadAlts(ep) {
 async function pickAlt(ep, pick) {
   expanded[ep.videoId].loading = true;
   try {
-    const res = await $fetch('/api/debug/swap', { method: 'POST', body: { videoId: ep.videoId, pick } });
+    const res = await api('/api/debug/swap', { method: 'POST', body: { videoId: ep.videoId, pick } });
     expanded[ep.videoId].stamp = res.stamp;
     expanded[ep.videoId].alts = []; // collapse the alts strip after picking
   } finally {
@@ -64,14 +75,14 @@ async function reextract(ep) {
   expanded[ep.videoId] = expanded[ep.videoId] || { alts: [], loading: false };
   expanded[ep.videoId].loading = true;
   try {
-    await $fetch('/api/debug/reextract', { method: 'POST', body: { videoId: ep.videoId } });
+    await api('/api/debug/reextract', { method: 'POST', body: { videoId: ep.videoId } });
     await loadAlts(ep);
   } finally {
     expanded[ep.videoId].loading = false;
   }
 }
 
-await fetchEpisodes();
+onMounted(fetchEpisodes);
 </script>
 
 <template>

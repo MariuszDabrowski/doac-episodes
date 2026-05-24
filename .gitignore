@@ -2,9 +2,7 @@ node_modules/
 .env
 .DS_Store
 
-# Nuxt build output
-.nuxt/
-.output/
+# Vite build output
 dist/
 
 # Python venv for the face-detection script

@@ -28,7 +28,18 @@ not current, future sessions lose context.
 
 ## Project conventions
 
-- Use `nvm use` (`.nvmrc` pins Node LTS) before running any `npm` script
+- Stack: Vite + Vue 3 + Vue Router on the frontend (`client/`), Hono on the
+  API server (`server/index.mjs`). `npm run dev` runs both concurrently
+  (Vite 3000 → API 3001 via proxy). `npm run build` outputs to `dist/`.
+  `npm start` serves the built output + API from a single Node process in
+  production
+- Layout: `client/` (Vue app + index.html), `server/` (Hono API), `public/`
+  (static assets — portraits, served at the root URL), `data/` (committed
+  JSON + gitignored raw `_*` working data), `scripts/ingest/` (Node, the
+  episode pipeline), `scripts/portraits/` (Python + Node, the portrait
+  pipeline)
+- Use `nvm use` (`.nvmrc` pins Node LTS) before running any `npm` script.
+  Node 18+ is required
 - Python tooling lives in `.venv` (`./.venv/bin/python ...`); install with
   `python3 -m venv .venv && .venv/bin/pip install opencv-python mediapipe==0.10.18 face_recognition "setuptools<81"`.
   The mediapipe pin keeps the legacy `mp.solutions.face_mesh` API; the
@@ -44,10 +55,11 @@ not current, future sessions lose context.
   recognition make defaults reliable enough that they were never used
   in practice. If a default is ever wrong, re-run `extract:frames` and
   `auto-portrait.py` on that videoId. To backfill modern formats for
-  existing JPGs, run `.venv/bin/python scripts/convert-portraits.py`.
+  existing JPGs, run `.venv/bin/python scripts/portraits/convert-portraits.py`.
 - Watch the dev server at `http://localhost:3000`; restart it (`pkill -f
-  "nuxt dev" && npm run dev`) only when `nuxt.config.ts` or `package.json`
-  changes — most file changes hot-reload
+  "vite\|server/index.mjs" && npm run dev`) only when `vite.config.js`,
+  `server/index.mjs`, or `package.json` changes — most file changes
+  hot-reload via Vite
 
 ## Code quality
 

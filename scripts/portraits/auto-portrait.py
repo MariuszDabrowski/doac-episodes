@@ -4,7 +4,7 @@
 UI will use); the 2nd and 3rd as <output-base>-2.jpg and <output-base>-3.jpg
 (fallback options if the top pick is wrong).
 
-Usage:  .venv/bin/python scripts/auto-portrait.py <frames-dir> <output-jpg> [top-n=3]
+Usage:  .venv/bin/python scripts/portraits/auto-portrait.py <frames-dir> <output-jpg> [top-n=3]
 """
 
 import cv2

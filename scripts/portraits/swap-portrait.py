@@ -5,12 +5,12 @@ Two-step workflow when the default pick is wrong:
 
   # 1) Generate top-5 candidates into a working dir
   mkdir -p /tmp/_picks/<videoId>
-  .venv/bin/python scripts/auto-portrait.py \
+  .venv/bin/python scripts/portraits/auto-portrait.py \
     data/_frames/<videoId> /tmp/_picks/<videoId>/out.jpg 5
 
   # 2) Visually review /tmp/_picks/<videoId>/out{,-2,-3,-4,-5}.jpg
   #    then swap the chosen pick in as the primary portrait:
-  .venv/bin/python scripts/swap-portrait.py <videoId> <pick-1-5>
+  .venv/bin/python scripts/portraits/swap-portrait.py <videoId> <pick-1-5>
 
 The script copies all six format files (jpg/webp/avif × 1x/@2x) into
 public/portraits/doac-<videoId>.* and updates the episode's

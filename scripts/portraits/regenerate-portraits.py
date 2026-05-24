@@ -33,7 +33,7 @@ for i, ep in enumerate(episodes, 1):
 
     print(f"[{i}/{len(episodes)}] {vid} → {out_path}")
     result = subprocess.run(
-        [".venv/bin/python", "scripts/auto-portrait.py", f"data/_frames/{vid}", out_path, "1"],
+        [".venv/bin/python", "scripts/portraits/auto-portrait.py", f"data/_frames/{vid}", out_path, "1"],
         capture_output=True,
         text=True,
     )

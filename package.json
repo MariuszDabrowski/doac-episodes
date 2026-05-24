@@ -4,25 +4,33 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "fetch:channel": "node scripts/fetch-channel-videos.mjs",
-    "fetch:transcripts": "node scripts/fetch-transcripts.mjs",
-    "extract:transcripts": "node scripts/extract-transcripts.mjs",
-    "extract:frames": "node scripts/extract-portrait-frames.mjs",
-    "ingest": "node scripts/ingest-episode.mjs",
-    "ingest:batch": "node scripts/ingest-batch.mjs",
-    "topic-candidates": "node scripts/topic-candidates.mjs",
-    "renumber": "node scripts/renumber-episodes.mjs",
-    "retag": "node scripts/retag-episodes.mjs"
+    "dev": "concurrently -k -n vite,api -c blue,green \"vite\" \"node server/index.mjs\"",
+    "dev:vite": "vite",
+    "dev:api": "node server/index.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "NODE_ENV=production node server/index.mjs",
+    "fetch:channel": "node scripts/ingest/fetch-channel-videos.mjs",
+    "fetch:transcripts": "node scripts/ingest/fetch-transcripts.mjs",
+    "extract:transcripts": "node scripts/ingest/extract-transcripts.mjs",
+    "extract:frames": "node scripts/portraits/extract-portrait-frames.mjs",
+    "ingest": "node scripts/ingest/ingest-episode.mjs",
+    "ingest:batch": "node scripts/ingest/ingest-batch.mjs",
+    "topic-candidates": "node scripts/ingest/topic-candidates.mjs",
+    "renumber": "node scripts/ingest/renumber-episodes.mjs",
+    "retag": "node scripts/ingest/retag-episodes.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.98.0",
-    "@nuxt/fonts": "^0.14.0",
+    "@hono/node-server": "^1.13.0",
     "dotenv": "^16.4.5",
-    "nuxt": "^3.14.0",
-    "vue": "^3.5.0"
+    "hono": "^4.6.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.0",
+    "concurrently": "^9.0.0",
+    "vite": "^5.4.0"
   }
 }

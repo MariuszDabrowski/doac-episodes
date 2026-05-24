@@ -4,7 +4,7 @@
 For each .jpg in the given folder, detect faces. Score frames with exactly
 one face by face area + how centered it is. Output sorted JSON.
 
-Usage:  .venv/bin/python scripts/detect-faces.py data/_frames/<video-id>
+Usage:  .venv/bin/python scripts/portraits/detect-faces.py data/_frames/<video-id>
 """
 
 import cv2
