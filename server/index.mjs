@@ -6,8 +6,18 @@
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import { spawn } from 'node:child_process';
-import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+
+// Atomic JSON write: stream to a sibling temp file, then rename. Without
+// this, Vite's vite:json watcher catches the file mid-write and throws
+// "invalid JSON syntax at position N". rename is atomic on POSIX so the
+// watcher only ever sees the old or new contents, never partial.
+async function writeJsonAtomic(path, data) {
+  const tmp = `${path}.tmp-${process.pid}-${Date.now()}`;
+  await writeFile(tmp, JSON.stringify(data, null, 2) + '\n');
+  await rename(tmp, path);
+}
 
 const PORT = process.env.API_PORT ? parseInt(process.env.API_PORT, 10) : 3001;
 const REVIEW_PATH = 'data/_portrait-review.json';
@@ -87,7 +97,7 @@ app.post('/api/review/edit-episode', async (c) => {
   if (!ep) return c.json({ error: 'episode not found' }, 404);
   if (typeof title === 'string') ep.title = title;
   if (typeof description === 'string') ep.description = description;
-  await writeFile('data/episodes.json', JSON.stringify(episodes, null, 2) + '\n');
+  await writeJsonAtomic('data/episodes.json', episodes);
   return c.json({ ok: true });
 });
 
@@ -98,7 +108,7 @@ app.post('/api/review/edit-guest', async (c) => {
   const guest = guests.find((g) => g.id === id);
   if (!guest) return c.json({ error: 'guest not found' }, 404);
   if (typeof credibilityLine === 'string') guest.credibilityLine = credibilityLine;
-  await writeFile('data/guests.json', JSON.stringify(guests, null, 2) + '\n');
+  await writeJsonAtomic('data/guests.json', guests);
   return c.json({ ok: true });
 });
 
@@ -110,7 +120,7 @@ app.post('/api/review/approve', async (c) => {
   const review = await readReview();
   if (status === 'pending') delete review[id];
   else review[id] = status;
-  await writeFile(REVIEW_PATH, JSON.stringify(review, null, 2) + '\n');
+  await writeJsonAtomic(REVIEW_PATH, review);
   return c.json({ ok: true, status });
 });
 

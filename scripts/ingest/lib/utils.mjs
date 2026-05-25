@@ -1,6 +1,6 @@
 // Shared utilities for the episode ingestion pipeline.
 import { spawn } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, renameSync, writeFileSync } from 'node:fs';
 
 /**
  * Promise wrapper around child_process.spawn. With `opts.capture`, stdout
@@ -31,7 +31,14 @@ export function loadJson(path) {
 }
 
 export function saveJson(path, data) {
-  writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
+  // Atomic write: stream to a sibling temp file then rename. A plain
+  // writeFileSync leaves a window where the file is half-written, which
+  // Vite's vite:json watcher will read as malformed and explode with
+  // "invalid JSON syntax at position N". rename is atomic on POSIX so
+  // any watcher sees either the old file or the new one, never partial.
+  const tmp = `${path}.tmp-${process.pid}-${Date.now()}`;
+  writeFileSync(tmp, JSON.stringify(data, null, 2) + '\n');
+  renameSync(tmp, path);
 }
 
 export function slugify(s) {

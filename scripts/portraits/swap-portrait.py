@@ -18,11 +18,29 @@ thumbnailBrightness in data/episodes.json based on the new primary.
 """
 
 import json
+import os
 import shutil
 import sys
+import tempfile
 
 import cv2
 import numpy as np
+
+
+def write_json_atomic(path, data):
+    """Write JSON via a temp file + os.replace so Vite's watcher never sees
+    a partial file. Same rationale as the JS-side helpers in
+    scripts/ingest/lib/utils.mjs and server/index.mjs."""
+    dirname = os.path.dirname(os.path.abspath(path)) or "."
+    fd, tmp = tempfile.mkstemp(dir=dirname, prefix=".tmp-", suffix=".json")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        os.replace(tmp, path)
+    except Exception:
+        os.unlink(tmp)
+        raise
 
 if len(sys.argv) < 3 or len(sys.argv) > 4:
     sys.exit("Usage: swap-portrait.py <videoId> <pick-1-5> [src-dir]")
@@ -59,12 +77,6 @@ for ep in eps:
         break
 else:
     sys.exit(f"Episode doac-{vid} not found in episodes.json")
-with open("data/episodes.json", "w", encoding="utf-8") as f:
-    # ensure_ascii=False preserves £, é, etc. as their literal UTF-8 bytes
-    # instead of escaping them to \uXXXX, which keeps the file diff-clean
-    # alongside the Node-written entries (JS JSON.stringify is non-ASCII-
-    # passthrough by default).
-    json.dump(eps, f, indent=2, ensure_ascii=False)
-    f.write("\n")
+write_json_atomic("data/episodes.json", eps)
 
 print(f"Swapped doac-{vid} → pick {pick}, brightness {brightness}")
