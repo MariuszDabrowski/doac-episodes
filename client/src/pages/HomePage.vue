@@ -166,6 +166,10 @@ const fillerCount = computed(() => {
 // Tag <body> with .is-scrolling for a short window after each scroll.
 // CSS uses this to suppress hover-triggered effects (e.g. credibility
 // expand) while the cursor passes over cards involuntarily during scroll.
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 let scrollSuppressTimer = null;
 function onScrollSuppress() {
   document.body.classList.add('is-scrolling');
@@ -269,6 +273,19 @@ onUnmounted(() => {
       >
         Load more
         <span class="load-more-count">{{ remainingCount }} remaining</span>
+      </button>
+    </div>
+    <div
+      v-else-if="displayedEpisodes.length > 0"
+      class="load-more-wrapper"
+    >
+      <button
+        type="button"
+        class="back-to-top-button"
+        @click="scrollToTop"
+      >
+        <span aria-hidden="true">↑</span>
+        Back to top
       </button>
     </div>
 
@@ -586,6 +603,37 @@ main {
 .load-more-button:focus-visible {
   outline: 2px solid #c89968;
   outline-offset: 2px;
+}
+
+/* End-of-list state: when the user has exhausted the list (hasMore is
+   false) the Load more pill is replaced by a filled-gold "Back to top"
+   pill. Mirrors the Watch button's solid treatment so it reads as a
+   different *action* than the translucent Load more — completion, not
+   continuation. */
+.back-to-top-button {
+  background: #c89968;
+  border: none;
+  color: #100e0c;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.back-to-top-button:hover {
+  background: #d4a575;
+}
+
+.back-to-top-button:focus-visible {
+  outline: 2px solid #c89968;
+  outline-offset: 3px;
 }
 
 .load-more-count {

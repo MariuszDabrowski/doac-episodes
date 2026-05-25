@@ -176,7 +176,19 @@ onMounted(fetchEpisodes);
     </header>
 
     <Transition name="list-fade" mode="out-in">
-      <ul :key="filter" class="ep-list">
+      <div v-if="filtered.length === 0" :key="`empty-${filter}`" class="ep-empty">
+        <p class="ep-empty-title">
+          {{ filter === 'pending' ? 'All caught up.' : filter === 'good' ? 'Nothing approved yet.' : 'No episodes match this filter.' }}
+        </p>
+        <p class="ep-empty-sub">
+          {{ filter === 'pending'
+            ? "Every episode has been reviewed. Switch to 'All' to see the catalog."
+            : filter === 'good'
+              ? "Mark episodes good as you finish reviewing them."
+              : 'Try a different filter.' }}
+        </p>
+      </div>
+      <ul v-else :key="filter" class="ep-list">
         <li
           v-for="(ep, i) in filtered"
           :key="ep.id"
@@ -364,7 +376,34 @@ onMounted(fetchEpisodes);
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  /* Bumped from 0.75rem so the row-divider pseudo (top: -1rem) sits
+     centered in the gap, mirroring the home page's 4rem-gap row line. */
+  gap: 2rem;
+  /* Position context for the per-row :nth-child(n+2)::before divider. */
+  position: relative;
+}
+
+/* Friendly empty state when the active filter has no matches. */
+.ep-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #bcb29e;
+}
+
+.ep-empty-title {
+  margin: 0 0 0.5rem;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #f5ecd6;
+}
+
+.ep-empty-sub {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #8c8676;
 }
 
 /* The whole list fades out before the new (filtered) one mounts. Cards
@@ -407,20 +446,35 @@ onMounted(fetchEpisodes);
 }
 
 .ep-row {
+  position: relative;
   display: grid;
   /* Two columns: thumb+buttons on the left, fields on the right. Name
      spans the full width above; alts strip (when shown) spans below.
      Cap the row width so empty space doesn't trail off to the right on
      wide screens, the fields max out around 38rem anyway. Left column
      is 240px to fit the Re-extract button + frame-count dropdown on
-     one line; the thumb stays 200px below it. */
+     one line; the thumb now fills the full column width too. Column
+     gap bumped from 1.5rem → 2.5rem so the inputs aren't crowded
+     against the buttons. */
   grid-template-columns: 240px minmax(0, 1fr);
-  column-gap: 1.5rem;
+  column-gap: 2.5rem;
   row-gap: 0.875rem;
   align-items: start;
   padding: 0.875rem;
   background: rgba(245, 236, 214, 0.06);
   border-radius: 8px;
+}
+
+/* Row divider in the gap above every row after the first, same idea as
+   the home page grid: a thin line that reads as a row separator. */
+.ep-row:nth-child(n+2)::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgba(245, 236, 214, 0.1);
+  pointer-events: none;
 }
 
 .ep-name {
@@ -439,8 +493,10 @@ onMounted(fetchEpisodes);
 }
 
 .ep-thumb {
-  width: 200px;
-  height: 113px;
+  /* Fill the 240px left column so the thumb visually matches the width
+     of the action buttons stacked below it. Aspect ratio kept at 16:9. */
+  width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 4px;
   background: #100e0c;
@@ -652,7 +708,11 @@ onMounted(fetchEpisodes);
   grid-column: 1 / -1;
   display: flex;
   gap: 0.5rem;
-  margin-top: 0.5rem;
+  /* Top border + padding visually marks the alts strip as a sub-section
+     of the row, so it doesn't blend straight into the bio/buttons above. */
+  margin-top: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(245, 236, 214, 0.1);
   flex-wrap: wrap;
 }
 

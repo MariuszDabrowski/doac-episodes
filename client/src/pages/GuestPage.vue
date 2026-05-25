@@ -188,6 +188,10 @@ function fmtDate(d) {
 
 const firstAppearance = computed(() => guestEpisodes.value[0]?.date);
 
+// Total catalog size for the "Browse all episodes" CTA at the bottom of
+// the page. Constant; computed once.
+const totalEpisodeCount = episodesData.length;
+
 // Sticky-header reveal once the user has scrolled past the profile block,
 // same hook the home page uses.
 // SiteHeader stays visible at all times on the guest page so the user
@@ -295,6 +299,14 @@ const fillerCount = computed(() => {
           <div class="filler-card"></div>
         </div>
       </section>
+
+      <div class="back-to-all-wrapper">
+        <RouterLink to="/" class="back-to-all-button">
+          <span aria-hidden="true">←</span>
+          Browse all episodes
+          <span class="back-to-all-count">{{ totalEpisodeCount }} total</span>
+        </RouterLink>
+      </div>
     </template>
   </main>
 </template>
@@ -648,5 +660,48 @@ main {
   .card-slot.is-stagger-target {
     animation: none;
   }
+}
+
+/* "Browse all episodes" CTA below the grid. Mirrors the home page's
+   load-more pill so the two pages share the same end-of-list visual
+   pattern — a quiet pill, gold hover edge, secondary count badge. */
+.back-to-all-wrapper {
+  max-width: 110rem;
+  margin: 4rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.back-to-all-button {
+  background: rgba(245, 236, 214, 0.07);
+  border: 1px solid rgba(245, 236, 214, 0.12);
+  color: #f5ecd6;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.back-to-all-button:hover {
+  border-color: rgba(200, 153, 104, 0.5);
+  background: rgba(245, 236, 214, 0.09);
+}
+
+.back-to-all-button:focus-visible {
+  outline: 2px solid #c89968;
+  outline-offset: 2px;
+}
+
+.back-to-all-count {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #bcb29e;
 }
 </style>

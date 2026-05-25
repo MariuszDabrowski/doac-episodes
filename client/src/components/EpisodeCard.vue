@@ -104,31 +104,18 @@ function watchCredibility(el) {
     credibilityObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
         const target = entry.target;
-        // Skip while any part of the card is hovered OR the credibility is
-        // explicitly tap-expanded. Without this, the element grows →
-        // observer measures expanded state → removes .has-overflow → CSS
-        // rule drops → collapses → re-overflows → yo-yo. Card-wide hover
-        // covers the desktop hover trigger; .is-expanded covers the touch
-        // tap-to-expand trigger.
+        // Skip while any part of the card is hovered: the element grows
+        // mid-measurement, the observer reads the expanded state, removes
+        // .has-overflow, the CSS rule drops, it collapses, and the cycle
+        // repeats (yo-yo). Card-wide hover covers the expansion trigger.
         const card = target.closest('.card');
         if (card?.matches(':hover')) continue;
-        if (target.classList.contains('is-expanded')) continue;
         const overflowing = target.scrollHeight > target.clientHeight + 1;
         target.classList.toggle('has-overflow', overflowing);
       }
     });
   }
   credibilityObserver.observe(el);
-}
-
-// Click/tap toggle for touch devices (no hover). Also harmless on
-// hover-capable devices: clicking the bio after hovering it just pins
-// it open until the next click.
-function toggleCredibility(e) {
-  const el = e.currentTarget;
-  if (el.classList.contains('has-overflow')) {
-    el.classList.toggle('is-expanded');
-  }
 }
 
 onUnmounted(() => {
@@ -185,16 +172,17 @@ const guestPromotionGroups = computed(() => {
 
       <div class="guest-block">
         <div v-if="guests[0]" :key="guests[0].id" class="guest">
-          <div class="guest-name-row">
-            <RouterLink :to="`/guest/${guests[0].id}`" class="guest-name">{{ guests[0].name }}</RouterLink>
-            <span class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
-          </div>
-          <div
-            v-if="guests[0].credibilityLine"
-            :ref="watchCredibility"
-            class="credibility"
-            @click="toggleCredibility"
-          >{{ guests[0].credibilityLine }}</div>
+          <RouterLink :to="`/guest/${guests[0].id}`" class="guest-link">
+            <div class="guest-name-row">
+              <span class="guest-name">{{ guests[0].name }}</span>
+              <span class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
+            </div>
+            <div
+              v-if="guests[0].credibilityLine"
+              :ref="watchCredibility"
+              class="credibility"
+            >{{ guests[0].credibilityLine }}</div>
+          </RouterLink>
         </div>
 
         <div
@@ -204,16 +192,17 @@ const guestPromotionGroups = computed(() => {
         >
           <div class="extra-inner">
             <div v-for="(guest, i) in extraGuests" :key="guest.id" class="guest">
-              <div class="guest-name-row">
-                <RouterLink :to="`/guest/${guest.id}`" class="guest-name">{{ guest.name }}</RouterLink>
-                <span class="appearance-pill">{{ ordinal(appearanceCounts[i + 1]) }} appearance</span>
-              </div>
-              <div
-                v-if="guest.credibilityLine"
-                :ref="watchCredibility"
-                class="credibility"
-                @click="toggleCredibility"
-              >{{ guest.credibilityLine }}</div>
+              <RouterLink :to="`/guest/${guest.id}`" class="guest-link">
+                <div class="guest-name-row">
+                  <span class="guest-name">{{ guest.name }}</span>
+                  <span class="appearance-pill">{{ ordinal(appearanceCounts[i + 1]) }} appearance</span>
+                </div>
+                <div
+                  v-if="guest.credibilityLine"
+                  :ref="watchCredibility"
+                  class="credibility"
+                >{{ guest.credibilityLine }}</div>
+              </RouterLink>
             </div>
           </div>
         </div>
@@ -376,19 +365,26 @@ const guestPromotionGroups = computed(() => {
   flex-wrap: wrap;
 }
 
+/* The whole guest block (name + appearance pill + bio) is now a single
+   link to the guest's appearance page. text-decoration: none + inherited
+   color keep the card visually quiet; the hover gold accent moves to the
+   .guest-name child so only the name highlights, not the entire bio
+   paragraph. */
+.guest-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
 .guest-name {
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #f5ecd6;
-  /* RouterLink renders an <a>; keep it looking like plain text until
-     hover so the card visual stays calm. Gold underline on hover signals
-     it's tappable through to the guest's appearance page. */
-  text-decoration: none;
   transition: color 0.15s ease;
 }
 
-.guest-name:hover {
+.guest-link:hover .guest-name {
   color: #c89968;
 }
 
@@ -439,10 +435,10 @@ const guestPromotionGroups = computed(() => {
   contain: layout style;
 }
 
-/* Hover-to-expand. Bios that already fit in 3 lines stay static -
-   no fade, no cursor change, no dead hover. */
+/* Hover-to-expand. Bios that already fit in 3 lines stay static - no
+   fade, no dead hover. (Cursor stays the parent link's pointer since the
+   whole guest block is now clickable.) */
 .credibility.has-overflow {
-  cursor: help;
   /* mask-image fades the TEXT itself; the card background shows through
      transparently, so we don't need to color-match (which is fragile
      across the page's radial gradient). */
@@ -461,7 +457,6 @@ const guestPromotionGroups = computed(() => {
      their own .guest block
    - direct hover on the credibility itself remains supported */
 .credibility.has-overflow:hover,
-.credibility.has-overflow.is-expanded,
 .guest:hover .credibility.has-overflow,
 .left-col:hover .guest-block > .guest:first-child .credibility.has-overflow {
   max-height: max-content;
@@ -478,10 +473,6 @@ const guestPromotionGroups = computed(() => {
   max-height: max-content;
   -webkit-mask-image: none;
   mask-image: none;
-}
-
-.card:has(.extra-guests.expanded) .credibility.has-overflow {
-  cursor: default;
 }
 
 .content-shape {
@@ -564,7 +555,7 @@ const guestPromotionGroups = computed(() => {
 
 .title {
   margin: 0;
-  padding-right: 30px;
+  padding-right: 40px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 1.3125rem;
   font-weight: 600;
@@ -743,13 +734,11 @@ const guestPromotionGroups = computed(() => {
     padding: 0.625rem 1rem;
   }
 
-  /* No hover on touch, and the tap-to-expand affordance is invisible
-     when you can't see the mask fade. Just show the full bio. */
+  /* No hover on touch — just show the full bio. */
   .credibility {
     max-height: none;
   }
   .credibility.has-overflow {
-    cursor: default;
     -webkit-mask-image: none;
     mask-image: none;
   }
