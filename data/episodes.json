@@ -306,7 +306,7 @@
     "topics": [
       "nutrition",
       "longevity",
-      "addiction"
+      "mental-health"
     ],
     "description": "Unwin on reversing Type 2 diabetes through diet alone, hidden sugars in everyday foods, food addiction, and the diet-cancer link.",
     "links": {
@@ -498,7 +498,7 @@
     "topics": [
       "geopolitics",
       "science",
-      "politics"
+      "media"
     ],
     "description": "Quantum physicist Hal Puthoff and filmmaker Dan Farah on decades of classified UAP intelligence programs and the documentary built around them.",
     "links": {
@@ -532,7 +532,7 @@
     "topics": [
       "politics",
       "geopolitics",
-      "leadership"
+      "media"
     ],
     "description": "Applebaum on how democracies decay, why authoritarian tactics succeed, and America's vulnerability to autocratic drift.",
     "links": {
@@ -742,8 +742,8 @@
     ],
     "topics": [
       "geopolitics",
-      "politics",
-      "science"
+      "economics",
+      "ai"
     ],
     "description": "Jiang analyzes escalating US-Iran conflict, its global implications, and why he believes World War 3 may have already begun.",
     "links": {
@@ -887,7 +887,7 @@
     ],
     "topics": [
       "ai",
-      "investing",
+      "economics",
       "leadership"
     ],
     "description": "Galloway on why AI job-loss fears are marketing hype, how AI widens inequality, the skills that will matter, and the dangers of unregulated technology.",
@@ -1033,9 +1033,9 @@
       "ben-felix"
     ],
     "topics": [
-      "psychology",
       "investing",
-      "mental-health"
+      "psychology",
+      "economics"
     ],
     "description": "Felix on behavioral finance, portfolio psychology, home-buying myths, tax strategies, and why most people fail to build long-term wealth.",
     "links": {
@@ -1639,9 +1639,9 @@
       "alex-tatem"
     ],
     "topics": [
-      "longevity",
       "science",
-      "hormones"
+      "hormones",
+      "longevity"
     ],
     "description": "Tatem on what peptides do, why the FDA banned them, the fertility crisis, and how to use them safely.",
     "links": {
@@ -1798,7 +1798,7 @@
     "topics": [
       "geopolitics",
       "ai",
-      "politics"
+      "economics"
     ],
     "description": "Bremmer on the decade's biggest geopolitical threats: US instability, AI economic shock, China's long-term strategy, and the collapse of global leadership.",
     "links": {
@@ -1957,7 +1957,8 @@
     ],
     "topics": [
       "geopolitics",
-      "politics"
+      "economics",
+      "science"
     ],
     "description": "Pape on military escalation stages in Iran, nuclear proliferation risks, and global power realignment following US-Iran tensions.",
     "links": {
@@ -2144,8 +2145,8 @@
       "steve-keen"
     ],
     "topics": [
-      "investing",
       "geopolitics",
+      "economics",
       "ai"
     ],
     "description": "Keen examines geopolitical tensions with Iran, food price inflation, financial crash warnings, AI job displacement, and scenarios for global instability.",
@@ -2315,8 +2316,8 @@
     ],
     "topics": [
       "politics",
-      "geopolitics",
-      "leadership"
+      "economics",
+      "geopolitics"
     ],
     "description": "Poilievre on housing affordability, government inflation, resource policy, Canada-U.S. tensions, and why conservatives lost.",
     "links": {
@@ -2359,8 +2360,8 @@
     ],
     "topics": [
       "longevity",
-      "nutrition",
-      "hormones"
+      "sleep",
+      "nutrition"
     ],
     "description": "Patrick on visceral fat's health risks, sleep deprivation's metabolic impact, hormone-disrupting chemicals, intermittent fasting, and exercise science.",
     "links": {
@@ -2561,8 +2562,8 @@
     ],
     "topics": [
       "ai",
-      "media",
-      "science"
+      "science",
+      "politics"
     ],
     "description": "Hao on why the US-China AI arms race is misleading, AGI as a marketing scam, and the human cost of AI training.",
     "links": {
@@ -2786,8 +2787,8 @@
     ],
     "topics": [
       "psychology",
-      "leadership",
-      "mental-health"
+      "communication",
+      "leadership"
     ],
     "description": "Chase Hughes on psychological operations, behavioral profiling, persuasion frameworks, and how manipulation shapes decision-making daily.",
     "links": {
@@ -2946,7 +2947,7 @@
     ],
     "topics": [
       "ai",
-      "founders"
+      "economics"
     ],
     "description": "Priestley on AI's impact on employment, personal branding, entrepreneurship, and whether the 2029 financial crash prediction holds water.",
     "links": {
@@ -3117,7 +3118,8 @@
     ],
     "topics": [
       "geopolitics",
-      "politics"
+      "politics",
+      "economics"
     ],
     "description": "Pape on why the US is locked in war with Iran, nuclear risks, China's strategy, and America's loss of regional control.",
     "links": {
@@ -3244,8 +3246,8 @@
     ],
     "topics": [
       "science",
-      "culture",
-      "psychology"
+      "psychology",
+      "culture"
     ],
     "description": "Huff on biblical accuracy, the resurrection, suffering, why atheism left a generation adrift, and Christianity's rising appeal.",
     "links": {
@@ -3380,7 +3382,7 @@
     "topics": [
       "geopolitics",
       "politics",
-      "science"
+      "ai"
     ],
     "description": "Bustamante, Jacobsen, and Radd assess Trump's Iran strikes, nuclear risks, AI warfare, Khamenei's death, and pathways to wider conflict.",
     "links": {
@@ -3540,7 +3542,9 @@
       "gavin-de-becker"
     ],
     "topics": [
-      "politics"
+      "geopolitics",
+      "psychology",
+      "media"
     ],
     "description": "De Becker on mass surveillance, intuition as threat prediction, Epstein as intelligence operation, and institutional trust collapse.",
     "links": {
@@ -3687,7 +3691,6 @@
     ],
     "topics": [
       "nutrition",
-      "longevity",
       "parenting"
     ],
     "description": "Inchauspé on glucose spikes in pregnancy, infant brain development, gestational diabetes prevention, and long-term metabolic disease risk in children.",
@@ -3906,7 +3909,7 @@
     "topics": [
       "ai",
       "leadership",
-      "founders"
+      "economics"
     ],
     "description": "Khosrowshahi on leading Uber's turnaround, AI automation's impact on employment, autonomous vehicles, and building resilient teams.",
     "links": {
@@ -4030,8 +4033,8 @@
     ],
     "topics": [
       "psychology",
-      "mental-health",
-      "focus"
+      "sports",
+      "leadership"
     ],
     "description": "Honnold on free-soloing El Capitan, managing fatal stakes, visualization techniques, and the neuroscience of fearlessness.",
     "links": {
@@ -4164,8 +4167,8 @@
       "aditi-nerurkar"
     ],
     "topics": [
+      "addiction",
       "mental-health",
-      "psychology",
       "focus"
     ],
     "description": "Haidt and Nerurkar on how short-form video rewires the brain, the mechanics of tech addiction, and reclaiming focus in a digital world.",
@@ -4312,7 +4315,7 @@
     "topics": [
       "marriage",
       "psychology",
-      "culture"
+      "communication"
     ],
     "description": "Sexton on relationship failure patterns, AI's impact on intimacy, communication rituals, prenuptial agreements, and how childhood shapes partnership choices.",
     "links": {
@@ -4443,8 +4446,8 @@
     ],
     "topics": [
       "sleep",
-      "science",
-      "mental-health"
+      "mental-health",
+      "science"
     ],
     "description": "Breus covers the four chronotypes, the 3-2-1 wind-down rule, sleep apnea warning signs, melatonin myths, and jet lag recovery strategies.",
     "links": {
@@ -4648,7 +4651,7 @@
     "topics": [
       "longevity",
       "fitness",
-      "sleep"
+      "hormones"
     ],
     "description": "Nicola on early Alzheimer's risk factors, exercise's effect on brain health, menopause and cognitive decline, sleep quality, and supplements for longevity.",
     "links": {
@@ -4834,8 +4837,8 @@
       "paul-rosolie"
     ],
     "topics": [
-      "longevity",
       "culture",
+      "longevity",
       "science"
     ],
     "description": "Rosolie's 20-year journey surviving the Amazon, meeting uncontacted tribes, and the ecological collapse threatening the jungle's survival.",
@@ -5029,8 +5032,8 @@
     ],
     "topics": [
       "investing",
-      "productivity",
-      "founders"
+      "economics",
+      "productivity"
     ],
     "description": "Bach on the first-hour rule, 401k matching, the 70/30 wealth code, why houses underperform stocks, and automating savings without willpower.",
     "links": {
@@ -5193,8 +5196,8 @@
     ],
     "topics": [
       "nutrition",
-      "longevity",
-      "mental-health"
+      "mental-health",
+      "science"
     ],
     "description": "Spector on how gut microbiome health influences dementia, depression, and anxiety risk; the role of diet, oral health, and inflammation in cognitive decline.",
     "links": {
@@ -5399,7 +5402,8 @@
     ],
     "topics": [
       "geopolitics",
-      "politics"
+      "politics",
+      "economics"
     ],
     "description": "Kisin on Iran's turning point, Greenland's geopolitical significance, Europe's decline, and why multipolar world order is collapsing.",
     "links": {
@@ -5545,8 +5549,9 @@
       "john-kiriakou"
     ],
     "topics": [
-      "geopolitics",
-      "media"
+      "politics",
+      "media",
+      "trauma"
     ],
     "description": "Kiriakou discusses CIA surveillance capabilities, recruitment tactics, his torture program whistleblowing, and why exposing intelligence operations sent him to prison.",
     "links": {
@@ -5747,7 +5752,8 @@
     ],
     "topics": [
       "investing",
-      "mental-health"
+      "economics",
+      "productivity"
     ],
     "description": "Collins on why mortgages reduce freedom, index funds outperform active investing, and how small savings compound into financial independence.",
     "links": {
@@ -5958,7 +5964,7 @@
     "topics": [
       "nutrition",
       "hormones",
-      "longevity"
+      "science"
     ],
     "description": "Bikman on insulin's role in fat loss, ketones as brain fuel, why calorie counting fails, GLP-1 side effects, and fasting insulin testing.",
     "links": {
@@ -6121,8 +6127,8 @@
     ],
     "topics": [
       "addiction",
-      "mental-health",
-      "science"
+      "psychology",
+      "mental-health"
     ],
     "description": "Lembke on social media and AI addiction, dopamine crashes, trauma links, and practical reset strategies for regaining control.",
     "links": {
@@ -6321,8 +6327,8 @@
     ],
     "topics": [
       "nutrition",
-      "longevity",
-      "mental-health"
+      "mental-health",
+      "longevity"
     ],
     "description": "Bulsiewicz on inflammation's gut origin, leaky gut mechanics, microbiome-cancer links, and fibre's role in healing the digestive system.",
     "links": {
@@ -6709,8 +6715,9 @@
       "simon-mills"
     ],
     "topics": [
-      "nutrition",
-      "science"
+      "science",
+      "mental-health",
+      "nutrition"
     ],
     "description": "Patrick, Suzuki, Huberman and others on dementia risk, circulation, creatine, nitric oxide, and habits that protect cognition.",
     "links": {
@@ -6840,8 +6847,9 @@
       "jefferson-fisher"
     ],
     "topics": [
+      "communication",
       "psychology",
-      "leadership"
+      "trauma"
     ],
     "description": "Fisher on spotting narcissists, exposing gaslighting tactics, controlling conversations, and building authentic communication skills.",
     "links": {
@@ -7023,7 +7031,7 @@
     "topics": [
       "ai",
       "science",
-      "politics"
+      "geopolitics"
     ],
     "description": "Bengio on killer robots, cyber threats, AI regulation gaps, and why humans risk losing control of artificial general intelligence within two years.",
     "links": {
@@ -7209,8 +7217,8 @@
       "alison-wood-brooks"
     ],
     "topics": [
-      "psychology",
-      "leadership"
+      "communication",
+      "psychology"
     ],
     "description": "Brooks on anxiety reframing, the TALK framework, apology science, and why politeness undermines relationships.",
     "links": {
@@ -7398,7 +7406,8 @@
     ],
     "topics": [
       "productivity",
-      "psychology"
+      "psychology",
+      "science"
     ],
     "description": "Clear on habit formation science, the 2-minute rule, identity-based systems, and why 1% improvements compound into life transformation.",
     "links": {
@@ -7660,8 +7669,7 @@
     ],
     "topics": [
       "founders",
-      "productivity",
-      "investing"
+      "marketing"
     ],
     "description": "Koerner on launching 80+ businesses from scratch, turning $500 into $10k, why passive income myths mislead, and validating ideas with zero capital.",
     "links": {
@@ -7861,8 +7869,7 @@
     ],
     "topics": [
       "ai",
-      "science",
-      "geopolitics"
+      "science"
     ],
     "description": "Russell on why governments won't regulate AI, how AGI could emerge by 2030, and the safety measures needed to prevent catastrophic outcomes.",
     "links": {
@@ -8088,8 +8095,8 @@
       "desmond-oneill"
     ],
     "topics": [
+      "communication",
       "psychology",
-      "leadership",
       "mental-health"
     ],
     "description": "O'Neill, ex-Secret Service interrogator, reveals techniques for handling manipulation, detecting gaslighting, reading body language, and building trust in high-stakes dialogue.",
@@ -8265,8 +8272,8 @@
     ],
     "topics": [
       "ai",
-      "politics",
-      "leadership"
+      "economics",
+      "politics"
     ],
     "description": "Harris on AGI timelines, job displacement by 2030, algorithmic manipulation, and policy gaps threatening democratic governance.",
     "links": {
@@ -8679,7 +8686,7 @@
     "topics": [
       "founders",
       "leadership",
-      "psychology"
+      "productivity"
     ],
     "description": "Hart discusses 13 years of rejection, overcoming self-doubt through discipline, building a business mindset, and lessons from poverty and single parenting.",
     "links": {
@@ -8844,8 +8851,8 @@
     ],
     "topics": [
       "sleep",
-      "mental-health",
-      "science"
+      "science",
+      "mental-health"
     ],
     "description": "Walker on sleep timing and cancer risk, alcohol and caffeine's effects, light exposure, sleep banking, and personalized sleep strategies for different groups.",
     "links": {
@@ -9173,9 +9180,9 @@
       "natalie-dawson"
     ],
     "topics": [
-      "founders",
-      "productivity",
-      "leadership"
+      "investing",
+      "leadership",
+      "communication"
     ],
     "description": "Dawson on the PPF framework, goal-setting habits of the 1%, communication skills that build respect, and the 10-step path to becoming a millionaire.",
     "links": {
@@ -9333,8 +9340,7 @@
       "jill-bolte-taylor"
     ],
     "topics": [
-      "mental-health",
-      "science"
+      "trauma"
     ],
     "description": "Bolte Taylor on stroke recovery, brain architecture, the four personality types, trauma healing, and why emotions last ninety seconds.",
     "links": {
@@ -9646,7 +9652,9 @@
       "kamala-harris"
     ],
     "topics": [
-      "politics"
+      "politics",
+      "leadership",
+      "media"
     ],
     "description": "Harris reflects on losing the 2024 election, Biden's debate decision, regrets about Joe Rogan, and prospects for 2028.",
     "links": {
@@ -10044,8 +10052,8 @@
     ],
     "topics": [
       "psychology",
-      "leadership",
-      "productivity"
+      "communication",
+      "leadership"
     ],
     "description": "Pearlman reveals how to detect lies, build trust, improve memory, and influence others using psychological tricks and body language cues.",
     "links": {
@@ -10200,7 +10208,7 @@
     ],
     "topics": [
       "leadership",
-      "culture"
+      "sports"
     ],
     "description": "Klopp discusses his Manchester United rejection, managing pressure, heavy metal football, Liverpool's transfer strategy under Edwards, and whether he'd return to manage the Reds.",
     "links": {
@@ -10424,7 +10432,7 @@
     "topics": [
       "hormones",
       "mental-health",
-      "longevity"
+      "science"
     ],
     "description": "Haver, Wright, Crawford, and Sims address research disparities in women's health, PCOS, endometriosis, fertility, and perimenopause management.",
     "links": {
@@ -10675,6 +10683,7 @@
     ],
     "topics": [
       "science",
+      "psychology",
       "ai"
     ],
     "description": "Tyson on horoscopes, simulation theory, AI danger, free will, Mars travel, black holes, and whether aliens exist.",
@@ -10849,7 +10858,9 @@
       "louis-tomlinson"
     ],
     "topics": [
-      "mental-health"
+      "trauma",
+      "mental-health",
+      "psychology"
     ],
     "description": "Tomlinson discusses One Direction, the loss of his mother and sister, Liam Payne's death, fatherhood, and finding strength through grief.",
     "links": {
@@ -11063,8 +11074,8 @@
       "morgan-housel"
     ],
     "topics": [
-      "investing",
       "psychology",
+      "investing",
       "mental-health"
     ],
     "description": "Housel on wealth paradoxes, status anxiety, saving addiction, passive income myths, and why money rarely solves unhappiness.",
@@ -11114,9 +11125,9 @@
       "robert-lustig"
     ],
     "topics": [
+      "addiction",
       "nutrition",
-      "mental-health",
-      "addiction"
+      "mental-health"
     ],
     "description": "Lustig explains how ultra-processed foods, sugar, and artificial sweeteners drive obesity, dementia, and addiction through dopamine dysregulation and chronic stress.",
     "links": {
@@ -11295,9 +11306,7 @@
       "dr-k"
     ],
     "topics": [
-      "psychology",
-      "culture",
-      "mental-health"
+      "psychology"
     ],
     "description": "Koukl, O'Connor, and Dr K debate whether belief in God addresses meaninglessness, death anxiety, and the search for purpose in modern life.",
     "links": {
@@ -11448,6 +11457,7 @@
     ],
     "topics": [
       "leadership",
+      "communication",
       "psychology"
     ],
     "description": "Poumpouras, former Secret Service agent, on emotional control, body language, confidence-building, and why pure authenticity can undermine workplace authority.",
@@ -11620,9 +11630,9 @@
       "pradip-jamnadas"
     ],
     "topics": [
-      "longevity",
       "nutrition",
-      "science"
+      "longevity",
+      "hormones"
     ],
     "description": "Dr. Jamnadas explores sugar's metabolic effects, fasting protocols, gut microbiome links to heart health, and alternative approaches to cardiovascular prevention.",
     "links": {
@@ -11955,8 +11965,8 @@
     ],
     "topics": [
       "investing",
-      "productivity",
-      "leadership"
+      "economics",
+      "productivity"
     ],
     "description": "Pal, Singh, and Yang on investing, real estate, debt, pensions, and the financial habits that create lasting wealth.",
     "links": {
@@ -12158,7 +12168,7 @@
       "ray-dalio"
     ],
     "topics": [
-      "investing",
+      "economics",
       "geopolitics",
       "leadership"
     ],
@@ -12318,8 +12328,8 @@
     ],
     "topics": [
       "nutrition",
-      "longevity",
-      "science"
+      "hormones",
+      "mental-health"
     ],
     "description": "Koutnik examines ketogenic diet research, blood glucose control, disease prevention, and how processed foods affect metabolism and brain health.",
     "links": {
@@ -12459,7 +12469,8 @@
     ],
     "topics": [
       "ai",
-      "science"
+      "science",
+      "economics"
     ],
     "description": "Yampolskiy on AI job displacement, existential risk scenarios, superintelligence timelines, and why current AI safety frameworks are inadequate.",
     "links": {
@@ -12840,8 +12851,7 @@
     ],
     "topics": [
       "geopolitics",
-      "leadership",
-      "culture"
+      "media"
     ],
     "description": "Bustamante and Bustamante detail covert CIA missions, spy tradecraft techniques, and why they plan to leave the US by 2030.",
     "links": {
@@ -13067,7 +13077,7 @@
     "topics": [
       "nutrition",
       "fitness",
-      "science"
+      "hormones"
     ],
     "description": "Aragon on protein myths, belly fat loss, menopause weight gain, creatine, PCOS, and diet sustainability backed by research.",
     "links": {
@@ -13291,7 +13301,8 @@
     ],
     "topics": [
       "investing",
-      "productivity"
+      "economics",
+      "founders"
     ],
     "description": "Pabrai on Warren Buffett's investment principles, building passive income, finding low-risk opportunities, and scaling from 9-5 to financial freedom.",
     "links": {
@@ -13458,9 +13469,9 @@
       "terry-sejnowski"
     ],
     "topics": [
-      "science",
+      "ai",
       "mental-health",
-      "ai"
+      "science"
     ],
     "description": "Amen and Sejnowski discuss how ChatGPT affects brain function, memory, creativity, emotional development, and strategies to protect cognitive health in an AI-saturated world.",
     "links": {
@@ -13631,8 +13642,6 @@
       "tara-swart"
     ],
     "topics": [
-      "science",
-      "psychology",
       "mental-health"
     ],
     "description": "Swart on hidden senses, near-death experiences, signs from loved ones, grief healing, and the neuroscience of intuition and synchronicity.",
@@ -13760,7 +13769,8 @@
     ],
     "topics": [
       "nutrition",
-      "science"
+      "science",
+      "longevity"
     ],
     "description": "Mills examines medicinal plants as alternatives to pharmaceuticals, covering gut health, antibiotic resistance, herbal remedies for infections, pain, and chronic disease prevention.",
     "links": {
@@ -13941,8 +13951,8 @@
     ],
     "topics": [
       "founders",
-      "investing",
-      "marketing"
+      "marketing",
+      "investing"
     ],
     "description": "Hormozi, Sanchez, and Priestley reveal offer formulas, pricing psychology, and hiring strategies to scale from $1k to $100k.",
     "links": {
@@ -14091,8 +14101,8 @@
     ],
     "topics": [
       "ai",
-      "leadership",
-      "science"
+      "economics",
+      "leadership"
     ],
     "description": "Gawdat on AI-driven job displacement, societal collapse, universal abundance, and a belief system to save humanity.",
     "links": {
@@ -14225,9 +14235,8 @@
       "donald-hoffman"
     ],
     "topics": [
-      "science",
       "psychology",
-      "longevity"
+      "science"
     ],
     "description": "Hoffman explains why our perception masks true reality, how consciousness structures the universe, and what evolution really conceals from us.",
     "links": {
@@ -14632,7 +14641,7 @@
     "topics": [
       "politics",
       "leadership",
-      "founders"
+      "psychology"
     ],
     "description": "Newsom discusses his 2028 presidential prospects, Trump's election plans, young male disengagement, and his childhood and entrepreneurial roots.",
     "links": {
@@ -14798,7 +14807,9 @@
       "nischa-shah"
     ],
     "topics": [
-      "investing"
+      "investing",
+      "economics",
+      "psychology"
     ],
     "description": "Shah on passive income strategies, the dangers of traditional home-buying advice, compound investing, and creating financial security without relying on employment income.",
     "links": {
@@ -14969,8 +14980,8 @@
     ],
     "topics": [
       "longevity",
-      "sleep",
-      "science"
+      "nutrition",
+      "sleep"
     ],
     "description": "Seheult on sunlight exposure, vitamin D, caffeine, sleep, and how these factors impact dementia, cancer, and brain health.",
     "links": {
@@ -15179,8 +15190,7 @@
     ],
     "topics": [
       "ai",
-      "geopolitics",
-      "science"
+      "geopolitics"
     ],
     "description": "Weinstein on AI dangers, geopolitical collapse, drone warfare, nuclear risk, and why humanity must leave Earth to survive.",
     "links": {
@@ -15306,7 +15316,8 @@
     ],
     "topics": [
       "geopolitics",
-      "ai"
+      "ai",
+      "science"
     ],
     "description": "Jacobsen, Bustamante, and Radd assess nuclear escalation, AI threats, Iran-US tensions, and China-Taiwan conflict risks.",
     "links": {
@@ -15690,7 +15701,7 @@
     "topics": [
       "psychology",
       "parenting",
-      "science"
+      "hormones"
     ],
     "description": "Machin on monogamy myths, how brains fall in love, the role of fathers, and attachment styles shaping relationships.",
     "links": {
@@ -15887,7 +15898,7 @@
     "topics": [
       "investing",
       "founders",
-      "leadership"
+      "marriage"
     ],
     "description": "O'Leary on income growth without harder work, the wealth habits keeping you poor, lessons from Steve Jobs and Elon Musk, and money's role in relationships.",
     "links": {
@@ -16077,8 +16088,9 @@
       "tom-aspinall"
     ],
     "topics": [
-      "psychology",
-      "leadership"
+      "sports",
+      "mental-health",
+      "psychology"
     ],
     "description": "Aspinall discusses overcoming fear in the cage, his path to UFC heavyweight champion, Jon Jones' retirement, and the mental strategies behind elite fighting.",
     "links": {
@@ -16313,7 +16325,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "focus"
     ],
     "description": "Thubten explores Buddhist meditation practice, overcoming self-hate and trauma, Western anxiety, and mindfulness as a path to mental clarity.",
     "links": {
@@ -16530,7 +16543,8 @@
       "erica-komisar"
     ],
     "topics": [
-      "culture",
+      "dating",
+      "parenting",
       "sexuality"
     ],
     "description": "Frances-White, Perry, and Komisar debate the sexual revolution's impact on women, relationships, dating, and modern parenting.",
@@ -16741,7 +16755,8 @@
     ],
     "topics": [
       "ai",
-      "science"
+      "science",
+      "geopolitics"
     ],
     "description": "Hinton on neural networks, his regret over AI creation, extinction risks, cyber threats, autonomous weapons, and AI safety regulation.",
     "links": {
@@ -16929,8 +16944,8 @@
     ],
     "topics": [
       "dating",
-      "psychology",
-      "sexuality"
+      "sexuality",
+      "psychology"
     ],
     "description": "Perel explores the dating crisis, loneliness, declining intimacy, masculinity shifts, and how technology undermines authentic human connection.",
     "links": {
@@ -17110,8 +17125,8 @@
       "scooter-braun"
     ],
     "topics": [
-      "psychology",
       "founders",
+      "psychology",
       "leadership"
     ],
     "description": "Braun on his rise as a music mogul, the toll of managing global stars, why his divorce was transformative, and the cost of chasing success.",
@@ -17289,7 +17304,7 @@
     "topics": [
       "investing",
       "ai",
-      "science"
+      "founders"
     ],
     "description": "Wood discusses Tesla autonomous vehicles, humanoid robots, AI in healthcare, and her Bitcoin projection for 2030, with investment strategy recommendations.",
     "links": {
@@ -17494,8 +17509,8 @@
     ],
     "topics": [
       "longevity",
-      "science",
-      "fitness"
+      "fitness",
+      "mental-health"
     ],
     "description": "Conley explores how foot health underpins longevity, examines the link between movement and dementia prevention, and explains why most shoes sabotage our feet.",
     "links": {
@@ -17640,9 +17655,9 @@
       "simon-sinek"
     ],
     "topics": [
-      "leadership",
       "ai",
-      "mental-health"
+      "mental-health",
+      "leadership"
     ],
     "description": "Sinek on AI's threat to human connection, the erosion of purpose, and the irreplaceable skills empathy and relationship-building demand.",
     "links": {
@@ -18331,8 +18346,8 @@
     ],
     "topics": [
       "fitness",
-      "nutrition",
-      "longevity"
+      "longevity",
+      "nutrition"
     ],
     "description": "Cavaliere on creatine science, losing stubborn belly fat, grip strength, posture, and exercises that preserve muscle while extending healthspan.",
     "links": {
@@ -18578,8 +18593,8 @@
     ],
     "topics": [
       "ai",
-      "leadership",
-      "psychology"
+      "economics",
+      "leadership"
     ],
     "description": "Masad, Weinstein, and Priestley debate AI's threat to employment, emerging skills, and how humans adapt to accelerating technological disruption.",
     "links": {
@@ -18774,7 +18789,8 @@
       "chris-eubank-jr"
     ],
     "topics": [
-      "leadership"
+      "sports",
+      "psychology"
     ],
     "description": "Eubank Jr. recounts his 2025 victory over Connor Benn, his fractured relationship with his father, and the personal struggles behind the fight.",
     "links": {
@@ -19142,9 +19158,8 @@
       "craig-robinson"
     ],
     "topics": [
-      "psychology",
-      "culture",
-      "leadership"
+      "marriage",
+      "psychology"
     ],
     "description": "Michelle Obama and her brother Craig Robinson discuss their upbringing amid racial tension, their parents' influence, marriage to Barack, grief, and life after the White House.",
     "links": {
@@ -19291,8 +19306,9 @@
       "morgan-housel"
     ],
     "topics": [
-      "investing",
-      "psychology"
+      "psychology",
+      "economics",
+      "investing"
     ],
     "description": "Housel on tariff economics, recession risks, financial freedom, and the psychology of money and investing.",
     "links": {
@@ -19688,9 +19704,9 @@
       "joe-navarro"
     ],
     "topics": [
+      "communication",
       "psychology",
-      "leadership",
-      "science"
+      "leadership"
     ],
     "description": "Joe Navarro, former FBI agent, on reading body language, spotting deception, and using nonverbal cues to win negotiations and build influence.",
     "links": {
@@ -19905,8 +19921,8 @@
       "lisa-feldman-barrett"
     ],
     "topics": [
-      "mental-health",
       "science",
+      "mental-health",
       "psychology"
     ],
     "description": "Feldman Barrett on how the predictive brain works, trauma, emotions, depression, and reframing identity through action and meaning.",
@@ -20105,8 +20121,8 @@
     ],
     "topics": [
       "longevity",
-      "science",
-      "nutrition"
+      "nutrition",
+      "hormones"
     ],
     "description": "Bryan on nitric oxide's role in fatigue and disease, oral health's surprising impact on NO production, and dietary strategies to boost vascular function.",
     "links": {
@@ -20313,9 +20329,9 @@
       "vanessa-van-edwards"
     ],
     "topics": [
-      "psychology",
       "dating",
-      "leadership"
+      "communication",
+      "psychology"
     ],
     "description": "Van Edwards explores how first impressions form, the facial expressions that signal warmth, microexpressions of emotion, and personality traits linked to dating success.",
     "links": {
@@ -20676,7 +20692,7 @@
     "topics": [
       "longevity",
       "fitness",
-      "science"
+      "hormones"
     ],
     "description": "Attia on cardiovascular fitness, muscle mass, bone density, visceral fat, sleep, and preparing for healthy aging.",
     "links": {
@@ -20918,7 +20934,7 @@
       "mike-dowd"
     ],
     "topics": [
-      "psychology"
+      "leadership"
     ],
     "description": "Dowd on his crimes as an NYPD officer, working for drug cartels, 12 years in prison, and redemption after release.",
     "links": {
@@ -21180,9 +21196,9 @@
       "logan-ury"
     ],
     "topics": [
-      "mental-health",
-      "dating",
-      "parenting"
+      "psychology",
+      "parenting",
+      "addiction"
     ],
     "description": "Galloway and Ury examine the Lost Boys Report, exploring fatherlessness, education gaps, dating struggles, porn addiction, and male identity in modern society.",
     "links": {
@@ -21343,7 +21359,7 @@
     ],
     "topics": [
       "hormones",
-      "mental-health",
+      "trauma",
       "nutrition"
     ],
     "description": "Dr. Szal on cortisol, testosterone, estrogen, and how trauma, nutrition, and lifestyle affect hormonal balance and weight.",
@@ -21631,7 +21647,7 @@
     "topics": [
       "founders",
       "leadership",
-      "culture"
+      "psychology"
     ],
     "description": "Spiegel discusses building Snapchat, turning down a $3 billion Facebook offer, becoming the world's youngest billionaire, and leadership philosophy at scale.",
     "links": {
@@ -21971,7 +21987,9 @@
       "daniel-priestley"
     ],
     "topics": [
-      "investing"
+      "economics",
+      "investing",
+      "leadership"
     ],
     "description": "Stevenson and Priestley debate economic recovery claims, debt, taxation, wealth inequality, and whether financial collapse is imminent.",
     "links": {
@@ -22146,8 +22164,9 @@
       "jefferson-fisher"
     ],
     "topics": [
-      "leadership",
-      "psychology"
+      "communication",
+      "psychology",
+      "leadership"
     ],
     "description": "Fisher on courtroom-tested communication tactics, building trust, filler words, and why confidence matters in difficult conversations.",
     "links": {
@@ -22353,9 +22372,9 @@
       "joe-dispenza"
     ],
     "topics": [
-      "psychology",
       "mental-health",
-      "science"
+      "psychology",
+      "trauma"
     ],
     "description": "Dispenza on changing limiting beliefs, meditation practices, the role of identity in personal transformation, and healing trauma without dwelling on the past.",
     "links": {
@@ -22521,6 +22540,7 @@
       "vinh-giang"
     ],
     "topics": [
+      "communication",
       "psychology",
       "leadership"
     ],
@@ -23538,7 +23558,7 @@
     ],
     "topics": [
       "psychology",
-      "leadership",
+      "communication",
       "mental-health"
     ],
     "description": "Poumpouras on lie detection, decision-making, body language, self-sabotage, and resilience learned from protecting world leaders.",
@@ -23745,7 +23765,7 @@
     "topics": [
       "founders",
       "leadership",
-      "productivity"
+      "psychology"
     ],
     "description": "MrBeast on extreme ambition, the traits of successful founders, mental health, his businesses, and losing tens of millions on Beast Games.",
     "links": {
@@ -23981,7 +24001,7 @@
     "topics": [
       "psychology",
       "dating",
-      "science"
+      "sexuality"
     ],
     "description": "Von Hippel on what makes us attractive, why high-achieving women struggle dating, population decline, and the evolutionary basis of mental health.",
     "links": {
@@ -24432,7 +24452,8 @@
     ],
     "topics": [
       "mental-health",
-      "parenting"
+      "parenting",
+      "addiction"
     ],
     "description": "Amen covers alcohol's effect on brain aging, trauma visibility on scans, parenting strategies for mental strength, and ADHD prevalence.",
     "links": {
@@ -24694,8 +24715,8 @@
     ],
     "topics": [
       "nutrition",
-      "longevity",
-      "science"
+      "hormones",
+      "longevity"
     ],
     "description": "Bikman on insulin resistance, metabolic disease, gestational diabetes, ketosis, and the limits of drugs like Ozempic for weight loss.",
     "links": {
@@ -24877,6 +24898,7 @@
       "charlie-houpert"
     ],
     "topics": [
+      "communication",
       "psychology",
       "leadership"
     ],
@@ -25115,8 +25137,8 @@
     ],
     "topics": [
       "dating",
-      "psychology",
-      "marriage"
+      "marriage",
+      "psychology"
     ],
     "description": "Brunson on modern dating struggles, lowering expectations, attraction myths, attachment styles, and maintaining long-term relationships.",
     "links": {
@@ -25316,7 +25338,7 @@
     "topics": [
       "nutrition",
       "science",
-      "hormones"
+      "mental-health"
     ],
     "description": "Berry explores food matrix impacts on health, processed foods, eating speed, fiber, cardiovascular disease, menopause and diet myths including dairy and nuts.",
     "links": {
@@ -25514,8 +25536,8 @@
     ],
     "topics": [
       "politics",
-      "leadership",
-      "geopolitics"
+      "economics",
+      "leadership"
     ],
     "description": "Galloway, Priestly, and Kisin debate Trump's inauguration, its economic and social implications, and the UK's competitiveness.",
     "links": {
@@ -25654,7 +25676,7 @@
     "topics": [
       "founders",
       "marketing",
-      "investing"
+      "productivity"
     ],
     "description": "Priestley on building personal brands, testing product demand, capitalizing in AI, and the fundamental business moves for 2025.",
     "links": {
@@ -26099,8 +26121,8 @@
     ],
     "topics": [
       "sexuality",
-      "mental-health",
-      "hormones"
+      "hormones",
+      "mental-health"
     ],
     "description": "Khera on erectile dysfunction, low libido, hormone therapy, pornography's impact, weight loss, and communication for better sex.",
     "links": {
@@ -26543,7 +26565,7 @@
     "topics": [
       "addiction",
       "psychology",
-      "mental-health"
+      "science"
     ],
     "description": "Lembke explores how dopamine shapes behavior, why brains develop addiction, and strategies for recalibrating reward sensitivity and building resilience.",
     "links": {
@@ -26772,7 +26794,8 @@
     ],
     "topics": [
       "investing",
-      "productivity"
+      "economics",
+      "founders"
     ],
     "description": "Sethi, Hormozi, Sanchez, Housel, Galloway, Pal, and Singh on investing, wealth-building, tax optimization, and breaking the paycheck-to-paycheck cycle.",
     "links": {
@@ -26963,9 +26986,9 @@
       "chase-hughes"
     ],
     "topics": [
+      "communication",
       "psychology",
-      "leadership",
-      "focus"
+      "leadership"
     ],
     "description": "Hughes covers body language mastery, building authority and confidence, reading motivations, effective communication techniques, and strategies for strengthening discipline.",
     "links": {
@@ -27111,7 +27134,7 @@
     ],
     "topics": [
       "trauma",
-      "mental-health",
+      "psychology",
       "science"
     ],
     "description": "Van der Kolk explores trauma's neurobiology, EMDR, yoga, breathwork, psychedelics, and somatic approaches to healing and recovery.",
@@ -27436,8 +27459,8 @@
       "martha-beck"
     ],
     "topics": [
-      "mental-health",
       "trauma",
+      "mental-health",
       "psychology"
     ],
     "description": "Beck on anxiety pathways, childhood trauma recovery, finding purpose, and the cost of living inauthentically.",
@@ -27809,9 +27832,9 @@
       "john-allen-mrballen"
     ],
     "topics": [
+      "leadership",
       "mental-health",
-      "psychology",
-      "leadership"
+      "trauma"
     ],
     "description": "MrBallen on hitting rock bottom, SEAL training, PTSD, recovery, and reimagining your life's direction through accountability.",
     "links": {
@@ -27972,9 +27995,9 @@
       "vanessa-van-edwards"
     ],
     "topics": [
+      "communication",
       "psychology",
-      "leadership",
-      "science"
+      "leadership"
     ],
     "description": "Van Edwards on cues, warm competence, hand gestures, liars, dating and friendship through the lens of body language science.",
     "links": {
@@ -28173,8 +28196,8 @@
     ],
     "topics": [
       "sexuality",
-      "psychology",
-      "trauma"
+      "trauma",
+      "communication"
     ],
     "description": "Bratton on sexual trauma recovery, desire and novelty, communication with partners, and reconnecting intimately in relationships.",
     "links": {
@@ -28407,7 +28430,8 @@
       "brian-keating"
     ],
     "topics": [
-      "science"
+      "science",
+      "longevity"
     ],
     "description": "Keating on his $200M cosmology project, reconciling science with God, simulation theory, and the meaning of existence.",
     "links": {
@@ -28555,7 +28579,8 @@
     ],
     "topics": [
       "geopolitics",
-      "ai"
+      "politics",
+      "media"
     ],
     "description": "Baker, former CIA officer, on China's 2049 plan, Taiwan, Russia-Ukraine, Iran's nuclear ambitions, and TikTok's influence operations.",
     "links": {
@@ -28759,7 +28784,7 @@
     "topics": [
       "sexuality",
       "hormones",
-      "psychology"
+      "mental-health"
     ],
     "description": "Hill examines how oral contraceptives shift women's sexual preferences, partner attraction, mental health, and relationship satisfaction.",
     "links": {
@@ -28969,7 +28994,8 @@
     ],
     "topics": [
       "investing",
-      "leadership"
+      "economics",
+      "psychology"
     ],
     "description": "Singh on investing, pensions, housing costs, money mindset, real estate, and wealth-building principles for younger generations.",
     "links": {
@@ -29170,9 +29196,9 @@
       "yvonne-burkart"
     ],
     "topics": [
-      "science",
       "nutrition",
-      "mental-health"
+      "hormones",
+      "science"
     ],
     "description": "Burkart explores endocrine disruptors in household products, their link to infertility and childhood disease, and practical toxin avoidance strategies.",
     "links": {
@@ -29396,7 +29422,7 @@
     "topics": [
       "ai",
       "leadership",
-      "science"
+      "founders"
     ],
     "description": "Schmidt discusses AI's existential risks, Google's founding, scaling principles, innovation in large companies, and his vision for responsible AI development.",
     "links": {
@@ -29642,8 +29668,8 @@
     ],
     "topics": [
       "science",
-      "longevity",
-      "mental-health"
+      "nutrition",
+      "longevity"
     ],
     "description": "Sampson explores how oral microbiome health links to COVID severity, rheumatoid arthritis, heart disease, Alzheimer's, and fertility outcomes.",
     "links": {
@@ -29896,7 +29922,8 @@
     ],
     "topics": [
       "investing",
-      "ai"
+      "ai",
+      "economics"
     ],
     "description": "Pal on how AI will reshape the global economy, blockchain technology, cryptocurrency investment strategy, and Bitcoin price predictions.",
     "links": {
@@ -30115,7 +30142,8 @@
     ],
     "topics": [
       "politics",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Galloway previews the 2024 election outcome, Trump's health risks, shifting male voting patterns, and implications for US policy.",
     "links": {
@@ -30478,7 +30506,8 @@
     ],
     "topics": [
       "marriage",
-      "psychology"
+      "psychology",
+      "communication"
     ],
     "description": "Sexton on what drives divorces, why couples lose intimacy, the role of money and control, and what actually keeps relationships alive.",
     "links": {
@@ -30515,7 +30544,7 @@
     "topics": [
       "sexuality",
       "mental-health",
-      "science"
+      "psychology"
     ],
     "description": "Kanojia, Malik, and Lust examine pornography's effects on the brain, erectile dysfunction, relationships, and the ethics of the adult industry.",
     "links": {
@@ -30736,7 +30765,8 @@
     ],
     "topics": [
       "mental-health",
-      "trauma"
+      "trauma",
+      "psychology"
     ],
     "description": "Noah discusses his childhood in apartheid South Africa, mother's shooting, depression linked to ADHD, and why he left The Daily Show.",
     "links": {
@@ -30932,7 +30962,7 @@
       "ramit-sethi"
     ],
     "topics": [
-      "investing",
+      "economics",
       "dating",
       "marriage"
     ],
@@ -31165,7 +31195,9 @@
       "boris-johnson"
     ],
     "topics": [
-      "politics"
+      "politics",
+      "trauma",
+      "leadership"
     ],
     "description": "Johnson on his childhood trauma, Brexit strategy, the lab-origin virus theory, lockdown decisions, Partygate scandal, and personal regrets.",
     "links": {
@@ -31357,8 +31389,8 @@
       "thomas-seyfried"
     ],
     "topics": [
-      "science",
       "nutrition",
+      "science",
       "longevity"
     ],
     "description": "Seyfried on cancer's metabolic origins, ketogenic therapy, mitochondrial health, and dietary prevention strategies.",
@@ -31563,8 +31595,9 @@
       "joseph-allen"
     ],
     "topics": [
+      "nutrition",
       "science",
-      "nutrition"
+      "mental-health"
     ],
     "description": "Allen discusses blue light myths, floaters, screen time safety, vitamin D's role in vision, and dietary impacts on eye health.",
     "links": {
@@ -31769,7 +31802,7 @@
     "topics": [
       "mental-health",
       "addiction",
-      "psychology"
+      "trauma"
     ],
     "description": "Kanojia on modern stressors, addiction cycles, trauma healing, the loneliness epidemic, and building lasting happiness and purpose.",
     "links": {
@@ -32230,7 +32263,8 @@
     ],
     "topics": [
       "politics",
-      "culture"
+      "culture",
+      "psychology"
     ],
     "description": "Kisin examines wokeness, victim mentality, men's struggles, political division, free speech, and threats to Western dominance.",
     "links": {
@@ -32420,8 +32454,8 @@
     ],
     "topics": [
       "nutrition",
-      "longevity",
-      "hormones"
+      "hormones",
+      "longevity"
     ],
     "description": "Inchauspé explores glucose spikes, blood sugar stability, hormonal effects, aging, and ten dietary hacks for metabolic health.",
     "links": {
@@ -32602,6 +32636,7 @@
     ],
     "topics": [
       "marriage",
+      "communication",
       "psychology"
     ],
     "description": "The Gottmans discuss repairing from affairs, dating app failures, sexual intimacy issues, and why the myth of 'the one' harms relationships.",
@@ -32977,8 +33012,8 @@
     ],
     "topics": [
       "psychology",
-      "science",
-      "dating"
+      "dating",
+      "sexuality"
     ],
     "description": "Saad explores evolutionary roots of infidelity, monogamy, mate selection, and how evolutionary pressures shape modern relationships and behavior.",
     "links": {
@@ -33152,7 +33187,7 @@
     "topics": [
       "ai",
       "politics",
-      "science"
+      "economics"
     ],
     "description": "Harari on AI as humanity's biggest disruption, algorithmic manipulation of politics, job displacement, and the risk of totalitarian control.",
     "links": {
@@ -33776,8 +33811,9 @@
       "michael-franzese"
     ],
     "topics": [
-      "culture",
-      "psychology"
+      "psychology",
+      "leadership",
+      "trauma"
     ],
     "description": "Franzese on his rise in the Colombo crime family, the gas station scam that earned millions, and his path to leaving the mafia.",
     "links": {
@@ -33999,9 +34035,9 @@
       "bret-weinstein"
     ],
     "topics": [
-      "science",
       "ai",
-      "politics"
+      "geopolitics",
+      "science"
     ],
     "description": "Weinstein explores existential threats including solar flares, magnetic pole inversion, AI dangers, COVID origins, and pandemic preparedness in modern society.",
     "links": {
@@ -34184,7 +34220,7 @@
     "topics": [
       "investing",
       "founders",
-      "leadership"
+      "psychology"
     ],
     "description": "Sanchez on making money, acquiring ordinary businesses, attracting wealth, and the psychology of financial success.",
     "links": {
@@ -34381,9 +34417,9 @@
       "francis-ngannou"
     ],
     "topics": [
-      "psychology",
-      "founders",
-      "trauma"
+      "trauma",
+      "leadership",
+      "sports"
     ],
     "description": "Ngannou discusses his childhood in Cameroon, journey across the Sahara and Mediterranean, struggles in the UFC, and loss of his son.",
     "links": {
@@ -34568,8 +34604,8 @@
     ],
     "topics": [
       "sleep",
-      "fitness",
-      "science"
+      "sports",
+      "fitness"
     ],
     "description": "Mah explores how elite athletes optimize sleep for faster reaction times, better decision-making, and injury prevention, covering pre-sleep nutrition, temperature, and recovery.",
     "links": {
@@ -34908,8 +34944,8 @@
       "andrew-bustamante"
     ],
     "topics": [
+      "communication",
       "leadership",
-      "psychology",
       "geopolitics"
     ],
     "description": "Bustamante, a former CIA intelligence officer, explores spy tradecraft for influence, persuasion, leadership, and navigating geopolitical change.",
@@ -35117,9 +35153,9 @@
       "aseem-malhotra"
     ],
     "topics": [
-      "longevity",
       "nutrition",
-      "science"
+      "science",
+      "mental-health"
     ],
     "description": "Malhotra on cardiovascular disease prevention, the role of medication in treatment, and lifestyle factors affecting heart health.",
     "links": {
@@ -35315,9 +35351,9 @@
       "vonda-wright"
     ],
     "topics": [
-      "longevity",
       "fitness",
-      "science"
+      "longevity",
+      "hormones"
     ],
     "description": "Wright on ageing mindset, bone and muscle care in your 30s-40s, strength training, joint pain reversal, and glucose management.",
     "links": {
@@ -35514,8 +35550,8 @@
     ],
     "topics": [
       "founders",
-      "leadership",
-      "marketing"
+      "marketing",
+      "leadership"
     ],
     "description": "Kaufman discusses business fundamentals, marketing strategy, customer service, hiring, and learning frameworks for building profitable companies.",
     "links": {
@@ -35676,8 +35712,8 @@
     ],
     "topics": [
       "investing",
-      "psychology",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Galloway on why hard work alone doesn't build wealth, the role of networks and mentorship, investment strategy, and relationship as financial asset.",
     "links": {
@@ -35839,7 +35875,7 @@
     ],
     "topics": [
       "psychology",
-      "leadership",
+      "communication",
       "culture"
     ],
     "description": "Reeves explores why men feel less needed, rising male suicide rates, declining marriage, and redefining modern masculinity.",
@@ -36009,8 +36045,8 @@
     ],
     "topics": [
       "nutrition",
-      "hormones",
-      "mental-health"
+      "mental-health",
+      "hormones"
     ],
     "description": "Moore explores Ozempic's mechanisms on gut health, weight loss, mental health, and potential cancer benefits, plus microdosing protocols and side effects.",
     "links": {
@@ -36175,7 +36211,8 @@
     ],
     "topics": [
       "sleep",
-      "science"
+      "science",
+      "mental-health"
     ],
     "description": "Leschziner on insomnia, narcolepsy, circadian rhythms, the glymphatic system, and surgical interventions for sleep disorders.",
     "links": {
@@ -36594,9 +36631,9 @@
       "wim-hof"
     ],
     "topics": [
-      "science",
       "mental-health",
-      "longevity"
+      "fitness",
+      "science"
     ],
     "description": "Hof discusses his method for building resilience through cold exposure, breathing exercises, trauma release, and how stress control can strengthen immune function.",
     "links": {
@@ -36764,7 +36801,7 @@
     ],
     "topics": [
       "sexuality",
-      "psychology",
+      "dating",
       "culture"
     ],
     "description": "Perry on casual sex risks for women, biological differences between sexes, porn's impact, and why marriage and commitment matter.",
@@ -36935,9 +36972,9 @@
       "simon-sinek"
     ],
     "topics": [
+      "communication",
       "leadership",
-      "mental-health",
-      "culture"
+      "psychology"
     ],
     "description": "Sinek explores why people struggle to make friends, the decline of role models, and how service and vulnerability create meaningful connection.",
     "links": {
@@ -37086,9 +37123,9 @@
       "lisa-mosconi"
     ],
     "topics": [
-      "science",
       "longevity",
-      "mental-health"
+      "mental-health",
+      "nutrition"
     ],
     "description": "Mosconi on menopause's neurological impact, brain imaging findings, dietary and lifestyle interventions to delay onset and mitigate cognitive decline.",
     "links": {
@@ -37266,9 +37303,9 @@
       "simon-cowell"
     ],
     "topics": [
-      "founders",
+      "music",
       "leadership",
-      "culture"
+      "psychology"
     ],
     "description": "Cowell on his rise in music, creating hit records, his son Eric's birth, his father's death, and his regrets about One Direction.",
     "links": {
@@ -37429,9 +37466,9 @@
       "evy-poumpouras"
     ],
     "topics": [
+      "communication",
       "leadership",
-      "psychology",
-      "mental-health"
+      "psychology"
     ],
     "description": "Poumpouras on her Secret Service career, detecting deception, leadership lessons from four US presidents, and building resilience.",
     "links": {
@@ -37604,9 +37641,7 @@
       "natalie-crawford"
     ],
     "topics": [
-      "longevity",
-      "hormones",
-      "science"
+      "hormones"
     ],
     "description": "Crawford explores declining fertility, sperm count, egg viability, PCOS, endometriosis, IVF, and lifestyle factors affecting conception.",
     "links": {
@@ -38138,9 +38173,9 @@
       "wendy-suzuki"
     ],
     "topics": [
-      "science",
-      "mental-health",
-      "fitness"
+      "fitness",
+      "longevity",
+      "mental-health"
     ],
     "description": "Suzuki explores how exercise affects dementia risk, neuroplasticity, memory techniques, and the brain's response to stress and social connection.",
     "links": {
@@ -38321,8 +38356,8 @@
     ],
     "topics": [
       "marriage",
-      "psychology",
-      "leadership"
+      "dating",
+      "psychology"
     ],
     "description": "Sexton on prenups, infidelity, money conflicts, sex in marriage, and why 86% of divorced people remarry.",
     "links": {
@@ -38507,8 +38542,8 @@
     ],
     "topics": [
       "nutrition",
-      "science",
-      "longevity"
+      "mental-health",
+      "science"
     ],
     "description": "Lustig on sugar's effects on the brain and body, why calories miss the point, and reversing metabolic disease.",
     "links": {
@@ -38685,7 +38720,8 @@
     ],
     "topics": [
       "geopolitics",
-      "science"
+      "science",
+      "leadership"
     ],
     "description": "Jacobsen explores nuclear war timelines, decision-making systems, detection failures, and survival protocols for catastrophic nuclear scenarios.",
     "links": {
@@ -38847,9 +38883,9 @@
       "michael-eisenberg"
     ],
     "topics": [
-      "science",
       "sexuality",
-      "longevity"
+      "nutrition",
+      "hormones"
     ],
     "description": "Eisenberg on declining sperm counts, the role of microplastics and chemicals, obesity's impact on fertility, and lifestyle changes to improve conception odds.",
     "links": {
@@ -39028,7 +39064,8 @@
     ],
     "topics": [
       "trauma",
-      "mental-health"
+      "mental-health",
+      "psychology"
     ],
     "description": "Wilson discusses childhood trauma, family dysfunction, her path to acting, weight loss journey, and how emotional baggage affected her health and relationships.",
     "links": {
@@ -39224,9 +39261,9 @@
       "russ-cook"
     ],
     "topics": [
-      "fitness",
-      "psychology",
-      "culture"
+      "trauma",
+      "mental-health",
+      "fitness"
     ],
     "description": "Cook on his ultra-endurance journey running Africa, childhood trauma, mental health struggles, and raising over £1 million for charity.",
     "links": {
@@ -39407,8 +39444,8 @@
     ],
     "topics": [
       "nutrition",
-      "science",
-      "mental-health"
+      "mental-health",
+      "addiction"
     ],
     "description": "Hari investigates Ozempic's hidden side effects, brain impact, addiction transfer risks, and whether weight loss drugs replace exercise and willpower.",
     "links": {
@@ -39561,7 +39598,7 @@
     "topics": [
       "mental-health",
       "productivity",
-      "hormones"
+      "science"
     ],
     "description": "Gawdat on his new book Unstressable, the cardiovascular toll of always-on living, and why most productivity rhetoric is making things worse.",
     "links": {
@@ -39599,9 +39636,9 @@
       "gary-brecka"
     ],
     "topics": [
+      "nutrition",
       "science",
-      "longevity",
-      "nutrition"
+      "longevity"
     ],
     "description": "Brecka on biomarkers that predict health outcomes, common nutrient deficiencies, genetic links to anxiety, and interventions like grounding and red light therapy.",
     "links": {
@@ -39740,8 +39777,8 @@
     ],
     "topics": [
       "leadership",
-      "mental-health",
-      "psychology"
+      "psychology",
+      "mental-health"
     ],
     "description": "Willink discusses Navy SEAL training, overcoming fear and self-doubt, leadership philosophy, grief, discipline, and building confidence through action.",
     "links": {
@@ -39897,7 +39934,7 @@
     "topics": [
       "mental-health",
       "psychology",
-      "culture"
+      "communication"
     ],
     "description": "Carr discusses men's mental health crisis, finding purpose beyond work, grief, and building confidence through comedy and risk-taking.",
     "links": {
@@ -40076,8 +40113,8 @@
     ],
     "topics": [
       "longevity",
-      "science",
-      "mental-health"
+      "trauma",
+      "nutrition"
     ],
     "description": "Hyman on functional medicine, milk and cancer, Ozempic risks, fasting, blue zones, loneliness, trauma, and lowering biological age.",
     "links": {
@@ -40242,9 +40279,9 @@
       "ronda-rousey"
     ],
     "topics": [
-      "psychology",
       "trauma",
-      "leadership"
+      "psychology",
+      "sports"
     ],
     "description": "Rousey on her Olympic judo medal, UFC championship, WWE career, trauma from her father's suicide, bulimia, concussions, and building resilience.",
     "links": {
@@ -40436,9 +40473,8 @@
       "tim-dillon"
     ],
     "topics": [
-      "mental-health",
-      "psychology",
-      "culture"
+      "addiction",
+      "mental-health"
     ],
     "description": "Dillon on his path to sobriety, early trauma, comedy taboos, generational differences, and processing mental health through storytelling.",
     "links": {
@@ -40613,8 +40649,8 @@
     ],
     "topics": [
       "sexuality",
-      "mental-health",
-      "science"
+      "hormones",
+      "psychology"
     ],
     "description": "Malik discusses sexual health, pelvic floor function, testosterone, masturbation, porn, orgasms, and anatomical myths.",
     "links": {
@@ -40837,8 +40873,8 @@
     ],
     "topics": [
       "marriage",
-      "psychology",
-      "science"
+      "communication",
+      "psychology"
     ],
     "description": "Drs. John and Julie Gottman discuss 40 years of couples research, the four horsemen, sex in marriage, and conflict resolution principles.",
     "links": {
@@ -41243,7 +41279,7 @@
     "topics": [
       "trauma",
       "mental-health",
-      "longevity"
+      "science"
     ],
     "description": "Conti explores how trauma drives illness and aging, its neurological effects, and evidence-based approaches to healing and recovery.",
     "links": {
@@ -41450,8 +41486,8 @@
     ],
     "topics": [
       "psychology",
-      "leadership",
-      "culture"
+      "communication",
+      "leadership"
     ],
     "description": "Greene explores his book on human nature, self-awareness, dark impulses, reading body language, and navigating relationships without manipulation.",
     "links": {
@@ -41600,8 +41636,8 @@
     ],
     "topics": [
       "nutrition",
-      "psychology",
-      "science"
+      "fitness",
+      "psychology"
     ],
     "description": "Norton on calorie metabolism, artificial sweeteners, sugar addiction, supplements, intermittent fasting, Ozempic, and resistance training myths.",
     "links": {
@@ -41944,7 +41980,8 @@
     ],
     "topics": [
       "mental-health",
-      "addiction"
+      "addiction",
+      "psychology"
     ],
     "description": "Dr Kanojia explores male loneliness, addiction, toxic masculinity, and how meditation and positive role models combat mental health decline.",
     "links": {
@@ -42117,9 +42154,9 @@
       "andrew-bustamante"
     ],
     "topics": [
+      "communication",
       "psychology",
-      "leadership",
-      "productivity"
+      "leadership"
     ],
     "description": "Bustamante, former covert CIA officer, on espionage tradecraft, detecting deception, manipulation psychology, and rational decision-making beyond emotional instinct.",
     "links": {
@@ -42364,7 +42401,8 @@
     ],
     "topics": [
       "psychology",
-      "mental-health"
+      "mental-health",
+      "communication"
     ],
     "description": "Durvasula on narcissistic personality traits, how to spot them, why people attract narcissists, and recovery from narcissistic abuse.",
     "links": {
@@ -42547,8 +42585,8 @@
       "andy-galpin"
     ],
     "topics": [
-      "fitness",
       "sleep",
+      "fitness",
       "science"
     ],
     "description": "Galpin on sleep optimization, circadian timing, HRV, muscle gain protocols, VO2 max, and why strength precedes endurance work.",
@@ -42919,8 +42957,8 @@
     ],
     "topics": [
       "sexuality",
-      "psychology",
-      "marriage"
+      "marriage",
+      "communication"
     ],
     "description": "Gurney on desire decline, sexual scripts, communication barriers, parenting impacts, and practical fixes for couples' intimate lives.",
     "links": {
@@ -43112,7 +43150,7 @@
     "topics": [
       "dating",
       "founders",
-      "culture"
+      "psychology"
     ],
     "description": "McLeod on Hinge's founding, how dating apps change attraction and single life, and why transparency matters in the dating economy.",
     "links": {
@@ -43238,8 +43276,8 @@
       "adam-grant"
     ],
     "topics": [
-      "psychology",
       "productivity",
+      "psychology",
       "leadership"
     ],
     "description": "Grant on givers vs takers, originality, risk-taking, and what science reveals about achieving greater potential.",
@@ -43382,7 +43420,7 @@
     ],
     "topics": [
       "fitness",
-      "science",
+      "longevity",
       "mental-health"
     ],
     "description": "Lieberman explores how exercise and lifestyle affect the brain, neuroplasticity, optimal activity timing, and factors linked to cognitive decline and Alzheimer's.",
@@ -43545,9 +43583,9 @@
       "paul-brunson"
     ],
     "topics": [
+      "marriage",
       "psychology",
-      "dating",
-      "marriage"
+      "dating"
     ],
     "description": "Brunson on why marriages fail, how friends predict divorce, the golden mean of attractiveness, and what Gen Z knows about healthy relationships.",
     "links": {
@@ -43703,9 +43741,9 @@
       "daniel-lieberman"
     ],
     "topics": [
-      "science",
+      "longevity",
       "nutrition",
-      "longevity"
+      "fitness"
     ],
     "description": "Lieberman on evolutionary mismatches, ancestral eating patterns, breathing mechanics, cancer risk, and why modern comfort breeds disease.",
     "links": {
@@ -43975,7 +44013,7 @@
     "topics": [
       "nutrition",
       "hormones",
-      "longevity"
+      "fitness"
     ],
     "description": "Fung explores obesity as hormone-driven, examines why exercise doesn't cause weight loss, and discusses reversing type 2 diabetes naturally.",
     "links": {
@@ -44100,8 +44138,9 @@
       "arthur"
     ],
     "topics": [
+      "psychology",
       "mental-health",
-      "psychology"
+      "dating"
     ],
     "description": "Arthur explores the science of happiness, covering purpose, meditation, personality types, love, and why negativity spreads socially.",
     "links": {
@@ -44235,7 +44274,7 @@
     ],
     "topics": [
       "mental-health",
-      "science"
+      "nutrition"
     ],
     "description": "Nerurkar on burnout signs, the 5 resets for stress management, and how phones, food, and loneliness impact mental health.",
     "links": {
@@ -44638,7 +44677,7 @@
     "topics": [
       "sleep",
       "fitness",
-      "science"
+      "nutrition"
     ],
     "description": "Holmes explores sleep timing, circadian rhythms, alcohol's effects on sleep quality, and the relationship between sleep and physical performance.",
     "links": {
@@ -44955,9 +44994,9 @@
       "alain-de-botton"
     ],
     "topics": [
-      "psychology",
+      "marriage",
       "mental-health",
-      "dating"
+      "trauma"
     ],
     "description": "De Botton on romantic love, loneliness, conflict resolution, sexless relationships, and healing from trauma.",
     "links": {
@@ -45168,8 +45207,9 @@
       "michael-buble"
     ],
     "topics": [
-      "culture",
-      "founders"
+      "psychology",
+      "music",
+      "leadership"
     ],
     "description": "Bublé on his musical upbringing, ten years of rejection, his son's cancer diagnosis, and building a lifestyle brand.",
     "links": {
@@ -45298,9 +45338,9 @@
       "mary-claire-haver"
     ],
     "topics": [
-      "mental-health",
+      "hormones",
       "nutrition",
-      "hormones"
+      "mental-health"
     ],
     "description": "Haver discusses menopause symptoms, hormone therapy misconceptions, inflammation, muscle mass, and nutritional strategies for women in midlife transition.",
     "links": {
@@ -45471,8 +45511,9 @@
       "dynamo"
     ],
     "topics": [
+      "trauma",
       "mental-health",
-      "trauma"
+      "psychology"
     ],
     "description": "Dynamo on his father's imprisonment, Crohn's disease diagnosis, self-harm, suicide attempt, recovery, and return to magic.",
     "links": {
@@ -45610,8 +45651,7 @@
     ],
     "topics": [
       "founders",
-      "productivity",
-      "culture"
+      "psychology"
     ],
     "description": "Neistat discusses his early life, becoming a creator, fatherhood at 16, why he quit YouTube, and lessons from failure and persistence.",
     "links": {
@@ -45761,8 +45801,8 @@
     ],
     "topics": [
       "dating",
-      "marriage",
-      "psychology"
+      "psychology",
+      "communication"
     ],
     "description": "Couples therapist Perel on the three attachment styles, the childhood roots of relationship patterns, and how to revive a stalled partnership.",
     "links": {
@@ -45943,8 +45983,8 @@
     ],
     "topics": [
       "founders",
-      "leadership",
-      "psychology"
+      "psychology",
+      "leadership"
     ],
     "description": "Isaacson shares insights from his Elon Musk biography, covering his childhood trauma, first-principles thinking, Mars ambitions, and mental health concerns.",
     "links": {
@@ -46108,8 +46148,9 @@
       "busta-rhymes"
     ],
     "topics": [
+      "addiction",
       "mental-health",
-      "psychology"
+      "trauma"
     ],
     "description": "Busta Rhymes discusses his parents' divorce, addiction, depression, nine-year music hiatus, and rebuilding his life and career.",
     "links": {
@@ -46237,6 +46278,7 @@
     ],
     "topics": [
       "psychology",
+      "trauma",
       "leadership"
     ],
     "description": "Peterson discusses personal change, relationships, trauma recovery, honesty, and the link between responsibility and worth.",
@@ -46344,9 +46386,9 @@
       "james-hoffmann"
     ],
     "topics": [
-      "nutrition",
       "mental-health",
-      "science"
+      "nutrition",
+      "addiction"
     ],
     "description": "Hoffmann on coffee addiction, caffeine's effects on the brain, health benefits, and how to brew better coffee at home.",
     "links": {
@@ -46629,8 +46671,8 @@
     ],
     "topics": [
       "longevity",
-      "science",
-      "fitness"
+      "nutrition",
+      "sleep"
     ],
     "description": "Johnson on his Blueprint protocol for reversing aging, sleep optimization, genetic engineering, and his fitness and longevity achievements.",
     "links": {
@@ -46778,7 +46820,7 @@
     "topics": [
       "investing",
       "psychology",
-      "leadership"
+      "economics"
     ],
     "description": "Housel on financial psychology, investing mistakes, the myth of \"enough,\" and why most people fail at wealth creation.",
     "links": {
@@ -46946,7 +46988,7 @@
     "topics": [
       "addiction",
       "fitness",
-      "longevity"
+      "psychology"
     ],
     "description": "Easter on hunter-gatherer health, addiction design, snacking, exercise, back pain, and how companies exploit human behaviour.",
     "links": {
@@ -47085,8 +47127,8 @@
     ],
     "topics": [
       "mental-health",
-      "science",
-      "focus"
+      "focus",
+      "sleep"
     ],
     "description": "Amen discusses brain scans, ADHD, medication effects, sleep, alcohol, depression, and lifestyle factors that strengthen the brain.",
     "links": {
@@ -47229,7 +47271,7 @@
     "topics": [
       "dating",
       "psychology",
-      "mental-health"
+      "communication"
     ],
     "description": "Ury explores attachment styles, dating tendencies, and science-backed strategies for finding lasting love and avoiding toxic partners.",
     "links": {
@@ -47341,6 +47383,7 @@
     ],
     "topics": [
       "nutrition",
+      "addiction",
       "science"
     ],
     "description": "Van Tulleken examines ultra-processed foods, their role in addiction and obesity, artificial sweeteners, food marketing, and the case for home cooking.",
@@ -47480,8 +47523,8 @@
     ],
     "topics": [
       "mental-health",
-      "science",
-      "ai"
+      "ai",
+      "psychology"
     ],
     "description": "Sadhguru discusses civilisation's brink-of-extinction prediction, mental health pandemics, human expansion, AI ethics, and his soil preservation campaign.",
     "links": {
@@ -47582,8 +47625,8 @@
       "jada-pinkett-smith"
     ],
     "topics": [
-      "psychology",
       "trauma",
+      "psychology",
       "culture"
     ],
     "description": "Pinkett Smith on Baltimore poverty, domestic violence, her relationships with Tupac and Will Smith, psychedelics, and publishing her memoir Worthy.",
@@ -47723,8 +47766,8 @@
     ],
     "topics": [
       "trauma",
-      "psychology",
-      "longevity"
+      "mental-health",
+      "psychology"
     ],
     "description": "Gabor Mate explores the connection between suppressed emotions, childhood trauma, and disease, examining how people-pleasing and repressed anger manifest in autoimmune and chronic illnesses.",
     "links": {
@@ -47871,8 +47914,8 @@
     ],
     "topics": [
       "founders",
-      "leadership",
-      "mental-health"
+      "mental-health",
+      "leadership"
     ],
     "description": "Chesky discusses founding Airbnb, work addiction, loneliness as an entrepreneur, leadership philosophy, surviving the darkest moments, and rebuilding personal connections.",
     "links": {
@@ -48000,7 +48043,7 @@
     "topics": [
       "nutrition",
       "science",
-      "mental-health"
+      "sleep"
     ],
     "description": "Spector debunks protein myths, discusses gut microbes, fermented foods, processed foods, and the science behind weight loss and sleep.",
     "links": {
@@ -48138,9 +48181,9 @@
       "scott-galloway"
     ],
     "topics": [
-      "psychology",
-      "leadership",
-      "ai"
+      "dating",
+      "economics",
+      "psychology"
     ],
     "description": "Galloway on boys' educational disadvantage, male dating struggles, financial literacy, mentorship, and AI's societal impact.",
     "links": {
@@ -48296,7 +48339,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Ek on his unconventional path to founding Spotify, building company culture, navigating competition, and the role of co-founder partnerships in his growth.",
     "links": {
@@ -48411,9 +48455,9 @@
       "tara-swart"
     ],
     "topics": [
-      "science",
       "mental-health",
-      "longevity"
+      "science",
+      "psychology"
     ],
     "description": "Swart on stress contagion, neuroplasticity, belly fat, memory loss, trauma recovery, relationships, intuition, and ADHD diagnosis.",
     "links": {
@@ -48699,9 +48743,9 @@
       "marisa-peer"
     ],
     "topics": [
-      "psychology",
       "sexuality",
-      "mental-health"
+      "psychology",
+      "communication"
     ],
     "description": "Peer on reframing beliefs, managing cravings, overcoming relationship patterns, and using hypnosis for lasting change.",
     "links": {
@@ -48844,8 +48888,8 @@
     ],
     "topics": [
       "trauma",
-      "psychology",
-      "culture"
+      "parenting",
+      "psychology"
     ],
     "description": "Walters on his troubled childhood, absent father, prison, therapy, celebrity mistakes, and the final season of Top Boy.",
     "links": {
@@ -48988,9 +49032,9 @@
       "trinny-woodall"
     ],
     "topics": [
-      "founders",
       "addiction",
-      "mental-health"
+      "founders",
+      "trauma"
     ],
     "description": "Woodall on her drug addiction, husband's suicide, starting a $300m business at 53, and building a skincare empire.",
     "links": {
@@ -49118,8 +49162,7 @@
     ],
     "topics": [
       "science",
-      "longevity",
-      "mental-health"
+      "nutrition"
     ],
     "description": "Nestor on nose vs. mouth breathing, its links to ADHD and disease, breathwork benefits, and practical techniques to optimize respiratory health.",
     "links": {
@@ -49369,8 +49412,9 @@
       "amy-cuddy"
     ],
     "topics": [
+      "communication",
       "psychology",
-      "leadership"
+      "mental-health"
     ],
     "description": "Cuddy on posture's effect on confidence, authentic self-presentation, reading others, and building trust through body language.",
     "links": {
@@ -49483,6 +49527,7 @@
     ],
     "topics": [
       "mental-health",
+      "trauma",
       "psychology"
     ],
     "description": "Wilson discusses childhood trauma in the jungle, depression and anxiety, his father's death, The Office, spiritual practice, and 12-step recovery.",
@@ -49726,8 +49771,9 @@
       "ivan-toney"
     ],
     "topics": [
+      "addiction",
       "mental-health",
-      "psychology"
+      "sports"
     ],
     "description": "Toney discusses his betting ban, mental health struggles, family support, and aspirations for his future in football.",
     "links": {
@@ -49862,7 +49908,9 @@
       "molly-bloom"
     ],
     "topics": [
-      "culture"
+      "trauma",
+      "psychology",
+      "leadership"
     ],
     "description": "Bloom on running exclusive poker games, FBI prosecution, mafia violence, and her path to redemption through memoir and family.",
     "links": {
@@ -50002,9 +50050,7 @@
       "joe-dispenza"
     ],
     "topics": [
-      "psychology",
-      "mental-health",
-      "science"
+      "mental-health"
     ],
     "description": "Dispenza explores programming thoughts, behaviour change, healing, stress, addiction, emotions, and the role of morning meditation in creating your reality.",
     "links": {
@@ -50160,6 +50206,7 @@
     ],
     "topics": [
       "leadership",
+      "trauma",
       "psychology"
     ],
     "description": "Saint John on navigating loss, family crisis, and building a career at Netflix and Uber while managing personal tragedy.",
@@ -50288,7 +50335,7 @@
     "topics": [
       "ai",
       "mental-health",
-      "science"
+      "psychology"
     ],
     "description": "Harris discusses AI as humanity's most pressing problem, AGI timelines, purpose in an age of automation, and how honesty and meditation improve happiness.",
     "links": {
@@ -50392,7 +50439,7 @@
     ],
     "topics": [
       "longevity",
-      "science",
+      "sleep",
       "nutrition"
     ],
     "description": "Johnson discusses his longevity mission, sleep optimization, heart-rate variability, diet, supplementation, and using AI to enhance health outcomes.",
@@ -50553,7 +50600,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "productivity"
     ],
     "description": "Will.i.am on overcoming depression, finding creativity, ADHD symptoms, failure, relationships, and his new FYI messenger app.",
     "links": {
@@ -50658,7 +50706,8 @@
       "lauren-wasser"
     ],
     "topics": [
-      "trauma"
+      "trauma",
+      "mental-health"
     ],
     "description": "Wasser survived toxic shock syndrome from a tampon, lost both legs, and now campaigns for product safety reform and awareness.",
     "links": {
@@ -50774,7 +50823,7 @@
     "topics": [
       "longevity",
       "fitness",
-      "mental-health"
+      "sleep"
     ],
     "description": "Attia discusses Medicine 3.0, trauma's role in longevity, exercise prescription, nutrition, sleep, hormones, and five mechanisms of age-related health deterioration.",
     "links": {
@@ -50892,7 +50941,8 @@
     ],
     "topics": [
       "investing",
-      "productivity"
+      "economics",
+      "communication"
     ],
     "description": "Sethi on building wealth, spending priorities, investing basics, and conversations about money with partners.",
     "links": {
@@ -51026,7 +51076,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "culture"
     ],
     "description": "Ora discusses anxiety, her mother's cancer diagnosis, panic attacks, being signed by Jay-Z at 18, trust, and her new album.",
     "links": {
@@ -51160,7 +51211,8 @@
     ],
     "topics": [
       "leadership",
-      "psychology"
+      "psychology",
+      "sports"
     ],
     "description": "Lampard discusses his Chelsea management stint, leadership philosophy, handling institutional culture, and balancing career and family life.",
     "links": {
@@ -51308,8 +51360,8 @@
     ],
     "topics": [
       "fitness",
-      "science",
-      "longevity"
+      "sleep",
+      "nutrition"
     ],
     "description": "Lieberman on exercise myths, weight training, running, sugar, and why movement and compassion drive behaviour change.",
     "links": {
@@ -51562,7 +51614,8 @@
     ],
     "topics": [
       "psychology",
-      "productivity"
+      "productivity",
+      "leadership"
     ],
     "description": "Alter explores how names, colors, location, and environment shape outcomes, and strategies for breaking through psychological stuckness.",
     "links": {
@@ -51706,6 +51759,7 @@
       "russell-brand"
     ],
     "topics": [
+      "addiction",
       "mental-health",
       "psychology"
     ],
@@ -51842,7 +51896,7 @@
     ],
     "topics": [
       "focus",
-      "productivity",
+      "psychology",
       "science"
     ],
     "description": "Kwik discusses brain optimization, memory improvement techniques, cognitive types, gut-brain connection, speed reading, and focus strategies.",
@@ -52091,9 +52145,9 @@
       "jonathan-van-ness"
     ],
     "topics": [
+      "addiction",
       "trauma",
-      "mental-health",
-      "psychology"
+      "mental-health"
     ],
     "description": "Van Ness on childhood trauma, drug and sex addiction, hitting rock bottom, and finding recovery through therapy and authentic partnership.",
     "links": {
@@ -52220,7 +52274,7 @@
     "topics": [
       "nutrition",
       "hormones",
-      "longevity"
+      "fitness"
     ],
     "description": "Pelz covers six fasting protocols, women's hormone cycles, stress-sex dimorphism, and strategies to optimize nutrition and weight loss without calorie counting.",
     "links": {
@@ -52387,7 +52441,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "addiction"
     ],
     "description": "Perez explores healing practices, meditation techniques, understanding suffering, relationship patterns, and breaking addiction to distraction.",
     "links": {
@@ -52526,7 +52581,7 @@
     ],
     "topics": [
       "addiction",
-      "psychology",
+      "mental-health",
       "fitness"
     ],
     "description": "Roll's path from addiction and legal career to ultra-endurance athlete, rebuilding relationships, and finding meaning through extreme fitness challenges.",
@@ -52921,7 +52976,8 @@
     ],
     "topics": [
       "leadership",
-      "culture"
+      "media",
+      "psychology"
     ],
     "description": "Enninful discusses his path to becoming British Vogue editor-in-chief, racism, imposter syndrome, loyalty, career salvation, and his recipe for happiness.",
     "links": {
@@ -53018,7 +53074,9 @@
       "jack-whitehall"
     ],
     "topics": [
-      "psychology"
+      "psychology",
+      "parenting",
+      "communication"
     ],
     "description": "Whitehall discusses his path to comedy, impostor syndrome, becoming a father, touring, and his relationship with his father.",
     "links": {
@@ -53134,8 +53192,8 @@
     ],
     "topics": [
       "focus",
-      "psychology",
-      "mental-health"
+      "productivity",
+      "psychology"
     ],
     "description": "Eyal explores indistractability, procrastination tactics, discipline, burnout prevention, social media, ADHD trends, and their role in relationships.",
     "links": {
@@ -53240,7 +53298,8 @@
     ],
     "topics": [
       "mental-health",
-      "trauma"
+      "trauma",
+      "psychology"
     ],
     "description": "Khalifa discusses her experience in the adult industry, anxiety, depression, therapy, and building a life beyond it.",
     "links": {
@@ -53359,7 +53418,8 @@
     ],
     "topics": [
       "sexuality",
-      "psychology"
+      "communication",
+      "marriage"
     ],
     "description": "Cox explores sexless relationships, communication about sex, porn's impact, body image, sex drive differences, and how to revive intimacy.",
     "links": {
@@ -53490,9 +53550,8 @@
       "robert-waldinger"
     ],
     "topics": [
-      "longevity",
-      "mental-health",
-      "science"
+      "psychology",
+      "mental-health"
     ],
     "description": "Waldinger on the Harvard Study of Adult Development, what happiness research reveals about relationships, work, and loneliness.",
     "links": {
@@ -53603,7 +53662,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Finkelstein discusses Shopify's origins, failure mindset, company culture, mentorship, and the traits that define great entrepreneurs.",
     "links": {
@@ -53715,7 +53775,7 @@
     ],
     "topics": [
       "addiction",
-      "mental-health",
+      "music",
       "psychology"
     ],
     "description": "Macklemore discusses his battle with addiction, recovery journey, creative impact, and lessons learned through hardship and personal transformation.",
@@ -53810,6 +53870,7 @@
     ],
     "topics": [
       "nutrition",
+      "addiction",
       "science"
     ],
     "description": "Inchauspé on how glucose spikes affect health, the science of sugar addiction, and practical hacks to stabilize blood sugar.",
@@ -53922,7 +53983,9 @@
       "aubrey-marcus"
     ],
     "topics": [
-      "psychology"
+      "dating",
+      "psychology",
+      "sexuality"
     ],
     "description": "Marcus explores the dark side of open relationships, polyamory, self-awareness, and the foundations of making any partnership work.",
     "links": {
@@ -54026,8 +54089,9 @@
       "deepak-chopra"
     ],
     "topics": [
+      "psychology",
       "mental-health",
-      "psychology"
+      "science"
     ],
     "description": "Chopra discusses suffering, self-discovery, daily habits, success, and how yoga and consciousness lead to a better future.",
     "links": {
@@ -54151,9 +54215,9 @@
       "philip-ovadia"
     ],
     "topics": [
-      "longevity",
       "nutrition",
-      "fitness"
+      "fitness",
+      "longevity"
     ],
     "description": "Ovadia, a heart surgeon, discusses preventing heart disease, nutrition myths, why cardio alone doesn't drive weight loss, and how sleep relates to cardiac health.",
     "links": {
@@ -54267,7 +54331,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Amoruso on her unconventional early life, founding NastyGal, its collapse, and entrepreneurial lessons from building a $400m business.",
     "links": {
@@ -54387,8 +54452,9 @@
       "josh-peck"
     ],
     "topics": [
-      "mental-health",
-      "addiction"
+      "addiction",
+      "psychology",
+      "parenting"
     ],
     "description": "Peck discusses his 127lb weight loss, food addiction, sobriety, his absent father, standup comedy, and becoming a father himself.",
     "links": {
@@ -54494,9 +54560,9 @@
       "chris-williamson"
     ],
     "topics": [
-      "psychology",
       "dating",
-      "mental-health"
+      "psychology",
+      "leadership"
     ],
     "description": "Williamson discusses confidence building, dating apps, male identity, motivation, and regret in contemporary relationships.",
     "links": {
@@ -54599,9 +54665,9 @@
       "daniel-amen"
     ],
     "topics": [
-      "science",
       "mental-health",
-      "psychology"
+      "sleep",
+      "hormones"
     ],
     "description": "Amen on brain health, trauma, hormonal changes, sleep disorders, and relationship compatibility through brain typing.",
     "links": {
@@ -54712,8 +54778,8 @@
     ],
     "topics": [
       "founders",
-      "investing",
-      "marketing"
+      "leadership",
+      "psychology"
     ],
     "description": "Hormozi on entrepreneurial mindset, overcoming self-doubt, sales mastery, and the path to building million-dollar businesses.",
     "links": {
@@ -54833,7 +54899,7 @@
     "topics": [
       "founders",
       "media",
-      "leadership"
+      "psychology"
     ],
     "description": "Cooper discusses overcoming bullying and self-doubt, her podcast journey, the Spotify deal, and the cost of success with Call Her Daddy.",
     "links": {
@@ -54942,8 +55008,9 @@
       "tony-hawk"
     ],
     "topics": [
+      "sports",
       "psychology",
-      "founders"
+      "leadership"
     ],
     "description": "Hawk on landing the 900, his video game's $1.4 billion success, burnout, mastery, and advice for younger versions of himself.",
     "links": {
@@ -55042,9 +55109,9 @@
       "robert-greene"
     ],
     "topics": [
-      "psychology",
       "leadership",
-      "culture"
+      "psychology",
+      "communication"
     ],
     "description": "Greene on the rules of power and seduction, mastery, human nature, and using history's lessons to succeed in life.",
     "links": {
@@ -55268,9 +55335,9 @@
       "simon-sinek"
     ],
     "topics": [
-      "psychology",
       "mental-health",
-      "leadership"
+      "psychology",
+      "communication"
     ],
     "description": "Sinek discusses recognizing loneliness, building self-awareness, finding love, understanding heartbreak, and strengthening meaningful connections.",
     "links": {
@@ -55368,9 +55435,9 @@
       "cole-sprouse"
     ],
     "topics": [
+      "mental-health",
       "psychology",
-      "culture",
-      "mental-health"
+      "parenting"
     ],
     "description": "Sprouse reflects on two decades as a child actor, his mother's role in his career, mental health struggles, and romantic relationships.",
     "links": {
@@ -55454,7 +55521,8 @@
     ],
     "topics": [
       "sleep",
-      "science"
+      "science",
+      "nutrition"
     ],
     "description": "Walker explores sleep science, chronotypes, caffeine effects, sleep medication, CBT, dreams, weight loss, and actionable sleep optimization strategies.",
     "links": {
@@ -55585,8 +55653,8 @@
       "seth-rogen"
     ],
     "topics": [
-      "psychology",
-      "mental-health"
+      "mental-health",
+      "psychology"
     ],
     "description": "Rogen discusses childhood comedy origins, self-doubt, ADHD, criticism, mental health, and what sustains creative motivation.",
     "links": {
@@ -55791,8 +55859,9 @@
       "lucy-hale"
     ],
     "topics": [
+      "addiction",
       "mental-health",
-      "addiction"
+      "psychology"
     ],
     "description": "Hale discusses her eating disorder, addiction recovery, acting journey, family dynamics, and life after Pretty Little Liars.",
     "links": {
@@ -55895,8 +55964,8 @@
     ],
     "topics": [
       "nutrition",
-      "science",
-      "mental-health"
+      "mental-health",
+      "sleep"
     ],
     "description": "Lugavere examines how sugar damages cognitive function, discusses optimal nutrition for brain performance, and explores sleep, stress, and relationships.",
     "links": {
@@ -56024,7 +56093,8 @@
     ],
     "topics": [
       "psychology",
-      "nutrition"
+      "nutrition",
+      "mental-health"
     ],
     "description": "Izadi on why diets fail, preparing for relapse, and using kindness instead of willpower to achieve sustainable weight loss and behaviour change.",
     "links": {
@@ -56116,7 +56186,8 @@
     ],
     "topics": [
       "mental-health",
-      "trauma"
+      "trauma",
+      "psychology"
     ],
     "description": "Hammond discusses his 320mph crash aftermath, memory loss, depression, health anxiety, and lessons on living a full life.",
     "links": {
@@ -56207,7 +56278,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "culture"
     ],
     "description": "Ranganathan discusses his childhood, his father's imprisonment, managing depression, and his journey to becoming a successful comedian.",
     "links": {
@@ -56328,8 +56400,9 @@
       "dacher-keltner"
     ],
     "topics": [
-      "science",
-      "mental-health"
+      "psychology",
+      "mental-health",
+      "science"
     ],
     "description": "Keltner discusses awe, gratitude, compassion, touch, and how emotions drive younger-feeling, happier lives.",
     "links": {
@@ -56557,8 +56630,9 @@
       "jay-shetty"
     ],
     "topics": [
-      "psychology",
-      "dating"
+      "dating",
+      "sexuality",
+      "psychology"
     ],
     "description": "Shetty on love and relationships, his monastic training, dealing with partner neglect, and approaches to sex and connection.",
     "links": {
@@ -56662,7 +56736,8 @@
     ],
     "topics": [
       "politics",
-      "leadership"
+      "leadership",
+      "culture"
     ],
     "description": "Khan discusses knife crime, police conduct, his role as London mayor, and his personal struggles with leadership and faith.",
     "links": {
@@ -56777,7 +56852,7 @@
     ],
     "topics": [
       "psychology",
-      "mental-health",
+      "trauma",
       "leadership"
     ],
     "description": "Peters on managing emotions, belief systems, trauma responses, and the mental frameworks that distinguish top performers.",
@@ -56901,7 +56976,7 @@
     ],
     "topics": [
       "mental-health",
-      "culture"
+      "sports"
     ],
     "description": "Lingard discusses Manchester United's decline, his move to Nottingham Forest, his mother's depression, and his own mental health struggles.",
     "links": {
@@ -57000,7 +57075,8 @@
       "david-moyes"
     ],
     "topics": [
-      "leadership"
+      "leadership",
+      "sports"
     ],
     "description": "Moyes discusses his management career at Manchester United and West Ham, winning culture, player recruitment, and the toll of public criticism.",
     "links": {
@@ -57108,7 +57184,8 @@
     ],
     "topics": [
       "psychology",
-      "science"
+      "communication",
+      "culture"
     ],
     "description": "Brown on his early years, coming out, shame, hypnosis, magic, success, goal-setting and happiness.",
     "links": {
@@ -57216,9 +57293,9 @@
       "tali-sharot"
     ],
     "topics": [
-      "science",
       "psychology",
-      "mental-health"
+      "mental-health",
+      "science"
     ],
     "description": "Sharot explores optimism bias, how the brain approaches uncertainty, motivation, and what drives lasting happiness across life stages.",
     "links": {
@@ -57466,7 +57543,7 @@
     "topics": [
       "nutrition",
       "science",
-      "longevity"
+      "mental-health"
     ],
     "description": "Spector challenges conventional nutrition advice: why calories don't determine weight loss, the role of gut microbiome, and his company ZOE's science-backed approach.",
     "links": {
@@ -57600,7 +57677,8 @@
     ],
     "topics": [
       "psychology",
-      "productivity"
+      "productivity",
+      "science"
     ],
     "description": "Explores stress's role in habit formation, identifying cues, replacing rather than quitting habits, motivation, and willpower limitations.",
     "links": {
@@ -57675,9 +57753,9 @@
       "gary-vaynerchuk"
     ],
     "topics": [
+      "founders",
       "psychology",
-      "leadership",
-      "founders"
+      "leadership"
     ],
     "description": "Vaynerchuk discusses early insights, building confidence, public criticism, mindset, discovering strengths, content creation, personal regrets, and family.",
     "links": {
@@ -57765,7 +57843,7 @@
       "jamie-carragher"
     ],
     "topics": [
-      "culture",
+      "sports",
       "leadership",
       "psychology"
     ],
@@ -57870,9 +57948,9 @@
       "neil-degrasse-tyson"
     ],
     "topics": [
-      "science",
       "psychology",
-      "mental-health"
+      "mental-health",
+      "science"
     ],
     "description": "deGrasse Tyson discusses parental influence, social polarization, happiness sources, storytelling, and mental health challenges.",
     "links": {
@@ -57989,7 +58067,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "investing"
     ],
     "description": "Corcoran on her childhood influences, Shark Tank philosophy, building the Corcoran Group, leadership culture, and overcoming dyslexia.",
     "links": {
@@ -58082,7 +58161,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Branson on dyslexia, founding Virgin Records and Virgin Atlantic, breaking focus rules, space ambitions, and building a billion-dollar empire.",
     "links": {
@@ -58214,8 +58294,8 @@
       "billy-mcfarland"
     ],
     "topics": [
-      "culture",
-      "psychology"
+      "psychology",
+      "leadership"
     ],
     "description": "McFarland on creating Fyre Festival, defrauding investors, his 4-year prison sentence, and his relationship with lying today.",
     "links": {
@@ -58368,7 +58448,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "trauma"
     ],
     "description": "Fry discusses his earliest struggles, arrest for credit card fraud, mental health crises, manic depression, and what shapes a meaningful life.",
     "links": {
@@ -58484,9 +58565,9 @@
       "charlie-sloth"
     ],
     "topics": [
-      "founders",
-      "leadership",
-      "culture"
+      "media",
+      "marketing",
+      "founders"
     ],
     "description": "Sloth on his journey from homelessness, creating Fire in the Booth, building an £800 million business, and scaling Apple Music's strategy.",
     "links": {
@@ -58580,9 +58661,9 @@
       "louis-theroux"
     ],
     "topics": [
-      "psychology",
       "mental-health",
-      "media"
+      "communication",
+      "psychology"
     ],
     "description": "Theroux reflects on his documentary career, personal anxieties, the tension between his professional success and personal life, and how he connects authentically with people.",
     "links": {
@@ -58709,6 +58790,7 @@
       "labrinth"
     ],
     "topics": [
+      "music",
       "mental-health",
       "psychology"
     ],
@@ -58826,7 +58908,8 @@
     ],
     "topics": [
       "mental-health",
-      "culture"
+      "sports",
+      "psychology"
     ],
     "description": "Crouch discusses his early years in football, dealing with pressure, turning to drink, managing mental health struggles, and life after retirement.",
     "links": {
@@ -59061,7 +59144,7 @@
     "topics": [
       "trauma",
       "psychology",
-      "culture"
+      "leadership"
     ],
     "description": "Rowe on his wrongful murder conviction, twelve years in maximum security, proving his innocence, and rebuilding his life after release.",
     "links": {
@@ -59352,7 +59435,7 @@
     "topics": [
       "founders",
       "leadership",
-      "culture"
+      "music"
     ],
     "description": "Dame Dash on discovering Jay-Z and Kanye West, founding Roc-A-Fella records, honour, loyalty, and building a hip-hop business empire.",
     "links": {
@@ -59479,9 +59562,9 @@
       "gabby-logan"
     ],
     "topics": [
-      "psychology",
+      "trauma",
       "leadership",
-      "culture"
+      "mental-health"
     ],
     "description": "Logan discusses her brother's death, sexism in sports broadcasting, menopause, her husband's cancer diagnosis, and maintaining relationships through adversity.",
     "links": {
@@ -59602,9 +59685,9 @@
       "scott-galloway"
     ],
     "topics": [
+      "economics",
       "psychology",
-      "leadership",
-      "culture"
+      "leadership"
     ],
     "description": "Galloway on young people's relationship with money, grit, dating apps, misogyny, happiness, and what brands must understand about advertising.",
     "links": {
@@ -59737,7 +59820,7 @@
     "topics": [
       "founders",
       "fitness",
-      "productivity"
+      "leadership"
     ],
     "description": "Ahmed on founding Whoop, competing with Apple, employee wellness practices, and maintaining innovation at scale.",
     "links": {
@@ -59892,6 +59975,7 @@
       "richard-osman"
     ],
     "topics": [
+      "addiction",
       "psychology"
     ],
     "description": "Osman on overcoming addiction in his 20s, the creative process behind Thursday Murder Club, and what drives lasting success and happiness.",
@@ -60031,6 +60115,7 @@
     ],
     "topics": [
       "dating",
+      "communication",
       "psychology"
     ],
     "description": "Brunson explores attachment styles, communication in relationships, compatibility, sex, and the work required to find and maintain love.",
@@ -60155,8 +60240,8 @@
     ],
     "topics": [
       "leadership",
-      "psychology",
-      "culture"
+      "sports",
+      "productivity"
     ],
     "description": "Horner on motivation, team leadership, innovation in Formula 1, handling pressure, and balancing family with high-performance racing.",
     "links": {
@@ -60272,7 +60357,8 @@
     ],
     "topics": [
       "mental-health",
-      "trauma"
+      "trauma",
+      "psychology"
     ],
     "description": "Harewood recounts his psychotic breakdown, racial trauma, sectioning, and path to recovery and authorship of Maybe I Don't Belong Here.",
     "links": {
@@ -60375,7 +60461,7 @@
     "topics": [
       "psychology",
       "leadership",
-      "productivity"
+      "communication"
     ],
     "description": "Forleo explores intuition, overcoming perfectionism, the three stages of figuring things out, and redefining success on your own terms.",
     "links": {
@@ -60513,7 +60599,9 @@
       "black-coffee"
     ],
     "topics": [
-      "leadership"
+      "music",
+      "trauma",
+      "psychology"
     ],
     "description": "Black Coffee on his early years, the accident that changed his life, overcoming adversity to become one of the world's most in-demand DJs, and his path to success.",
     "links": {
@@ -60618,7 +60706,7 @@
     "topics": [
       "trauma",
       "mental-health",
-      "psychology"
+      "sports"
     ],
     "description": "Scott discusses her traumatic childhood, speech impediment, professional football career, depression, therapy, and relationship with her parents.",
     "links": {
@@ -60719,6 +60807,7 @@
       "maisie-williams"
     ],
     "topics": [
+      "trauma",
       "psychology",
       "mental-health"
     ],
@@ -60830,7 +60919,9 @@
       "julian-treasure"
     ],
     "topics": [
-      "leadership"
+      "communication",
+      "focus",
+      "psychology"
     ],
     "description": "Treasure covers vocal techniques, listening skills, and communication strategies for being heard and understood.",
     "links": {
@@ -60868,8 +60959,8 @@
     ],
     "topics": [
       "mental-health",
-      "culture",
-      "psychology"
+      "music",
+      "culture"
     ],
     "description": "Mel C on her childhood, joining the Spice Girls, dealing with pressure, depression, and life after the band's split.",
     "links": {
@@ -60974,7 +61065,9 @@
       "lewis-capaldi"
     ],
     "topics": [
-      "culture"
+      "music",
+      "mental-health",
+      "psychology"
     ],
     "description": "Capaldi on his early years, mental health struggles, songwriting, fame at 22, and building a music career through authentic self-expression.",
     "links": {
@@ -61091,8 +61184,9 @@
       "chris-kamara"
     ],
     "topics": [
-      "culture",
-      "mental-health"
+      "sports",
+      "mental-health",
+      "culture"
     ],
     "description": "Kamara discusses his football career, experiences with racism, his health condition, and the lessons that shaped his path as a Sky Sports pundit.",
     "links": {
@@ -61176,7 +61270,7 @@
     "topics": [
       "leadership",
       "psychology",
-      "culture"
+      "mental-health"
     ],
     "description": "Sinek on finding your why, generational resilience, workplace relationships, and unmet needs in a changing world.",
     "links": {
@@ -61261,9 +61355,9 @@
       "mel-robins"
     ],
     "topics": [
-      "psychology",
+      "communication",
       "mental-health",
-      "leadership"
+      "psychology"
     ],
     "description": "Gawdat on retraining your brain, Brooke on sexless relationships, Grylls on building resilience, and Robins on moving past feeling stuck.",
     "links": {
@@ -61455,7 +61549,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "nutrition"
     ],
     "description": "Metcalfe on founding Pret and Itsu, the role of parental influence and transparency in business, and what made his brands successful.",
     "links": {
@@ -61566,7 +61661,8 @@
     ],
     "topics": [
       "mental-health",
-      "productivity"
+      "leadership",
+      "psychology"
     ],
     "description": "Sugg on his YouTube rise, imposter syndrome, the fall of early creators, balancing fame, and lessons from his new book Grow.",
     "links": {
@@ -61666,7 +61762,8 @@
     ],
     "topics": [
       "nutrition",
-      "culture"
+      "psychology",
+      "leadership"
     ],
     "description": "Liver King discusses his ancestral lifestyle philosophy, raw meat consumption, business ventures, and responds to performance-enhancing drug accusations.",
     "links": {
@@ -61798,7 +61895,8 @@
     ],
     "topics": [
       "leadership",
-      "founders"
+      "sports",
+      "psychology"
     ],
     "description": "Neville on his Manchester United career, Sir Alex Ferguson's leadership, culture-building, business ventures, and lessons from two decades at elite sport.",
     "links": {
@@ -61900,7 +61998,8 @@
     ],
     "topics": [
       "leadership",
-      "mental-health"
+      "mental-health",
+      "founders"
     ],
     "description": "Mendelsohn on her rise at Meta, navigating a blood cancer diagnosis, Zuckerberg's leadership, the metaverse, and female entrepreneurship.",
     "links": {
@@ -62018,8 +62117,8 @@
       "john-eckbert"
     ],
     "topics": [
-      "founders",
       "leadership",
+      "founders",
       "marketing"
     ],
     "description": "Eckbert on Five Guys' European expansion, building culture without ads, hiring excellence, and maintaining standards as a burger chain scales.",
@@ -62133,9 +62232,9 @@
       "will-storr"
     ],
     "topics": [
+      "longevity",
       "psychology",
-      "culture",
-      "science"
+      "leadership"
     ],
     "description": "Storr explores how status shapes success and longevity, the role of storytelling in self-perception, and whether higher status translates to happiness.",
     "links": {
@@ -62257,6 +62356,7 @@
       "james-bay"
     ],
     "topics": [
+      "trauma",
       "mental-health",
       "psychology"
     ],
@@ -62356,7 +62456,8 @@
     ],
     "topics": [
       "marketing",
-      "psychology"
+      "psychology",
+      "culture"
     ],
     "description": "Sutherland on how value perception shapes marketing, signalling, scarcity, personalisation, and why successful brands focus on psychology over product.",
     "links": {
@@ -62453,9 +62554,9 @@
       "krept"
     ],
     "topics": [
-      "founders",
       "mental-health",
-      "leadership"
+      "music",
+      "founders"
     ],
     "description": "Krept discusses his journey from rap to entrepreneurship, mental health struggles, and building his £17.5 million baby brand Nala's Baby.",
     "links": {
@@ -62561,7 +62662,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "marketing"
     ],
     "description": "Jones on founding the $2.8B private members club, overcoming dyslexia, early restaurant ventures, and what hospitality taught him about life and ambition.",
     "links": {
@@ -62667,7 +62769,8 @@
     ],
     "topics": [
       "productivity",
-      "leadership"
+      "psychology",
+      "communication"
     ],
     "description": "Gladwell on why remote work undermines creativity, the role of luck in innovation, and what drives meaningful work and lasting relationships.",
     "links": {
@@ -62781,7 +62884,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "productivity"
     ],
     "description": "Armstrong discusses his path to founding Coinbase, lessons from AirBnB, leadership philosophy, and building a $100 billion company.",
     "links": {
@@ -63004,8 +63108,9 @@
       "chris-eubank-jr"
     ],
     "topics": [
+      "trauma",
       "psychology",
-      "leadership"
+      "sports"
     ],
     "description": "Eubank Jr explores his discipline, emotional struggles, his brother's death, and stepping out of his father's shadow in boxing.",
     "links": {
@@ -63096,8 +63201,9 @@
       "michael-pollan"
     ],
     "topics": [
-      "science",
-      "mental-health"
+      "mental-health",
+      "psychology",
+      "nutrition"
     ],
     "description": "Pollan on psychedelics, mental health, systemic food problems, caffeine, and how to freshen your mind beyond comfort zones.",
     "links": {
@@ -63308,8 +63414,9 @@
       "tony-bellew"
     ],
     "topics": [
+      "trauma",
       "psychology",
-      "leadership"
+      "sports"
     ],
     "description": "Bellew on his childhood trauma, racism, boxing as escape, grief, depression, and why fighters often have no other choice.",
     "links": {
@@ -63402,8 +63509,9 @@
       "bear-grylls"
     ],
     "topics": [
+      "mental-health",
       "psychology",
-      "mental-health"
+      "leadership"
     ],
     "description": "Grylls discusses overcoming failure and imposter syndrome, climbing Everest, coping with fame and anxiety, and his memoir Never Give Up.",
     "links": {
@@ -63518,7 +63626,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "parenting"
     ],
     "description": "Peer on how stories shape us, rewiring negative thought patterns, parenting mistakes, and her triple A process for change.",
     "links": {
@@ -63637,7 +63746,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "addiction"
     ],
     "description": "Harrison on founding Charity: Water, rebuilding after addiction, humanitarian work in Africa, and scaling a nonprofit to 700 million people.",
     "links": {
@@ -63746,7 +63856,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "music"
     ],
     "description": "Example discusses his Aspergers diagnosis, mental health struggles, self-medication, and the dangers of early fame and wealth.",
     "links": {
@@ -63852,9 +63963,9 @@
       "jane-wurwand"
     ],
     "topics": [
-      "founders",
+      "leadership",
       "mental-health",
-      "leadership"
+      "founders"
     ],
     "description": "Wurwand on founding Dermalogica, entrepreneurial success, attention to detail, leadership, therapy, and anxiety management.",
     "links": {
@@ -63966,7 +64077,8 @@
     ],
     "topics": [
       "marketing",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Hoffman, former CMO at Nike, on building brand loyalty through emotional connection, risk-taking culture, and the craft of marketing.",
     "links": {
@@ -64064,9 +64176,9 @@
       "reshma-saujani"
     ],
     "topics": [
-      "founders",
       "leadership",
-      "culture"
+      "psychology",
+      "founders"
     ],
     "description": "Saujani on founding Girls Who Code, her path from Congress runner to nonprofit leader, and fixing systems that hold women back.",
     "links": {
@@ -64174,8 +64286,8 @@
       "michael-horvath"
     ],
     "topics": [
-      "founders",
       "fitness",
+      "founders",
       "leadership"
     ],
     "description": "Horvath discusses Strava's journey, motivation mechanisms, pandemic impact, personal loss, and the hardest challenges of building a fitness platform.",
@@ -64258,8 +64370,9 @@
       "chris-voss"
     ],
     "topics": [
-      "psychology",
-      "leadership"
+      "communication",
+      "leadership",
+      "psychology"
     ],
     "description": "Voss discusses hostage crisis management, negotiation tactics, listening techniques, and how mirroring and labelling build rapport in high-stakes scenarios.",
     "links": {
@@ -64365,8 +64478,8 @@
     ],
     "topics": [
       "founders",
-      "mental-health",
-      "psychology"
+      "psychology",
+      "leadership"
     ],
     "description": "Bilyeu on founding Quest Nutrition, rewiring your brain for success, managing anxiety, and building lasting relationships.",
     "links": {
@@ -64454,7 +64567,8 @@
     ],
     "topics": [
       "leadership",
-      "productivity"
+      "founders",
+      "psychology"
     ],
     "description": "Sinek on drifting from your why, continuous goal-setting, finding purpose, feedback culture, honesty in business, and motivating young teams.",
     "links": {
@@ -64550,7 +64664,8 @@
     ],
     "topics": [
       "psychology",
-      "mental-health"
+      "mental-health",
+      "science"
     ],
     "description": "Gawdat on life phases, illusions holding us back, the economics of love, and how to reshape your brain for lasting happiness.",
     "links": {
@@ -64660,8 +64775,8 @@
     ],
     "topics": [
       "leadership",
-      "psychology",
-      "productivity"
+      "sports",
+      "psychology"
     ],
     "description": "Grover on his work with Jordan and Bryant, attention to detail, sacrifice, consistency, and the mindset required to achieve number-one status.",
     "links": {
@@ -64760,7 +64875,7 @@
     "topics": [
       "psychology",
       "dating",
-      "mental-health"
+      "communication"
     ],
     "description": "Hussey on insecurity, ego, vulnerability, and the personal foundation needed for lasting partnership.",
     "links": {
@@ -64955,7 +65070,8 @@
     ],
     "topics": [
       "leadership",
-      "productivity"
+      "productivity",
+      "psychology"
     ],
     "description": "Buckingham on discovering your strengths, managing underperformers, asking good questions, and aligning work with genuine fulfilment.",
     "links": {
@@ -65057,6 +65173,7 @@
     ],
     "topics": [
       "mental-health",
+      "music",
       "psychology"
     ],
     "description": "Jessie J discusses her childhood health struggles, fertility challenges, grief from multiple losses, and her journey of rediscovering identity beyond record labels.",
@@ -65164,8 +65281,8 @@
     ],
     "topics": [
       "trauma",
-      "mental-health",
-      "psychology"
+      "psychology",
+      "communication"
     ],
     "description": "Crews discusses his abusive father, pornography addiction, infidelity, sexual assault in Hollywood, and the journey toward vulnerability and change.",
     "links": {
@@ -65274,6 +65391,7 @@
       "piers-morgan"
     ],
     "topics": [
+      "psychology",
       "media",
       "leadership"
     ],
@@ -65365,7 +65483,8 @@
     ],
     "topics": [
       "psychology",
-      "leadership"
+      "mental-health",
+      "communication"
     ],
     "description": "Singh discusses her path to becoming a top influencer, her cancelled talk show, and how insecurity shaped her achievements.",
     "links": {
@@ -65483,7 +65602,8 @@
     ],
     "topics": [
       "mental-health",
-      "culture"
+      "music",
+      "psychology"
     ],
     "description": "David on his early music influences, meteoric rise to fame, losing himself, and his mental health journey to recovery.",
     "links": {
@@ -65565,9 +65685,9 @@
       "lewis-howes"
     ],
     "topics": [
-      "psychology",
-      "mental-health",
-      "leadership"
+      "communication",
+      "trauma",
+      "psychology"
     ],
     "description": "Howes on healing childhood trauma, emotional vulnerability, communicating core values, and the habits that damage intimate relationships.",
     "links": {
@@ -65666,7 +65786,8 @@
     ],
     "topics": [
       "leadership",
-      "founders"
+      "founders",
+      "communication"
     ],
     "description": "Brady discusses her path to running a publicly traded company at 23, leadership in football, workplace sexism, relationships, and advice for young women.",
     "links": {
@@ -65786,8 +65907,8 @@
     ],
     "topics": [
       "psychology",
-      "culture",
-      "founders"
+      "leadership",
+      "culture"
     ],
     "description": "Wretch 32 discusses early career, imposter syndrome, staying authentic in rap culture, and building his CBD business.",
     "links": {
@@ -65889,7 +66010,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "sports"
     ],
     "description": "Wilkinson on his World Cup victory, the mental health crisis that followed, and his lifelong search for identity and meaning beyond rugby.",
     "links": {
@@ -65992,7 +66114,7 @@
     "topics": [
       "psychology",
       "productivity",
-      "science"
+      "leadership"
     ],
     "description": "Pink explores the hidden drivers of motivation, the power of regret, and why experimentation and failure matter most.",
     "links": {
@@ -66118,6 +66240,7 @@
     ],
     "topics": [
       "mental-health",
+      "sleep",
       "psychology"
     ],
     "description": "Chatterjee explores the foundations of happiness, self-awareness, sleep, morning routines, and overcoming loneliness through reflection and perspective.",
@@ -66223,9 +66346,9 @@
       "diplo"
     ],
     "topics": [
-      "culture",
+      "music",
       "mental-health",
-      "productivity"
+      "psychology"
     ],
     "description": "Diplo on his path from college dropout to world-class DJ, travel's influence on his sound, anticipating hits, mental health struggles, and balancing relationships on tour.",
     "links": {
@@ -66323,7 +66446,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "productivity"
     ],
     "description": "Jaackmaate discusses his battle with health anxiety and OCD, YouTube career challenges, imposter syndrome, and personal relationships.",
     "links": {
@@ -66414,6 +66538,7 @@
     ],
     "topics": [
       "mental-health",
+      "sports",
       "psychology"
     ],
     "description": "Adesanya discusses his path to UFC middleweight champion, depression, impostor syndrome, fame, social media, and what drives him now.",
@@ -66613,7 +66738,7 @@
     "topics": [
       "founders",
       "leadership",
-      "psychology"
+      "mental-health"
     ],
     "description": "Caudwell on building his three-billion-dollar empire, the personal toll of building a business, resilience, and what actually matters in life.",
     "links": {
@@ -66703,8 +66828,9 @@
       "roman-kemp"
     ],
     "topics": [
+      "communication",
       "mental-health",
-      "media"
+      "psychology"
     ],
     "description": "Kemp discusses his early years, broadcasting career, male suicide documentary, spotlight challenges, and his work with Joe's Buddy Line.",
     "links": {
@@ -66783,7 +66909,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "sleep"
     ],
     "description": "Smith discusses managing anxiety through breathing, building confidence, the role of sleep and emotions, and why relationships matter.",
     "links": {
@@ -66908,7 +67035,8 @@
     ],
     "topics": [
       "politics",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Hancock reflects on his tenure as health secretary, pandemic response decisions, the care home crisis, vaccine rollout, and his personal conduct during covid.",
     "links": {
@@ -67023,9 +67151,9 @@
       "james-smith"
     ],
     "topics": [
+      "mental-health",
       "psychology",
-      "leadership",
-      "productivity"
+      "leadership"
     ],
     "description": "Smith discusses career unhappiness, imposter syndrome, anxiety, mental imprisonment, romantic relationships, and writing a confidence book.",
     "links": {
@@ -67119,8 +67247,8 @@
       "jay-shetty"
     ],
     "topics": [
-      "psychology",
-      "mental-health"
+      "mental-health",
+      "psychology"
     ],
     "description": "Shetty on early conditioning, subconscious patterns, surrounding yourself with values, meditation, fear, and personal impact.",
     "links": {
@@ -67225,9 +67353,9 @@
       "rochelle-humes"
     ],
     "topics": [
-      "psychology",
+      "parenting",
       "leadership",
-      "parenting"
+      "psychology"
     ],
     "description": "Humes on her early years, family, The Saturdays, My Little Coco business, maternity healthcare, relationships, and managing her career.",
     "links": {
@@ -67308,8 +67436,8 @@
     ],
     "topics": [
       "founders",
-      "sleep",
-      "mental-health"
+      "mental-health",
+      "sleep"
     ],
     "description": "Acton Smith on founding Calm, sleep science, meditation misconceptions, and the mental health impact of meditation and psychedelics.",
     "links": {
@@ -67418,8 +67546,9 @@
       "fearne-cotton"
     ],
     "topics": [
+      "mental-health",
       "psychology",
-      "mental-health"
+      "leadership"
     ],
     "description": "Cotton discusses her path to confidence, overcoming imposter syndrome, leaving Radio One, and discovering self-compassion and meaning.",
     "links": {
@@ -67508,7 +67637,8 @@
     ],
     "topics": [
       "leadership",
-      "productivity"
+      "productivity",
+      "psychology"
     ],
     "description": "Brailsford discusses his early years, motivation, first principles, decision-making, marginal gains, and overcoming failure and health challenges.",
     "links": {
@@ -67612,7 +67742,7 @@
     "topics": [
       "focus",
       "productivity",
-      "mental-health"
+      "psychology"
     ],
     "description": "Hari explores attention loss, social media's impact, flow states, sleep deprivation, reading, negativity bias, and diet's role in focus.",
     "links": {
@@ -67872,7 +68002,7 @@
     "topics": [
       "psychology",
       "mental-health",
-      "culture"
+      "leadership"
     ],
     "description": "Manson on his early years, pickup artistry, relationships, finding purpose, personal responsibility, happiness, and building meaningful values.",
     "links": {
@@ -67961,8 +68091,8 @@
       "molly-mae-hague"
     ],
     "topics": [
-      "founders",
       "leadership",
+      "psychology",
       "culture"
     ],
     "description": "Molly Mae on her rise from Love Island to PLT creative director, managing success, impostor syndrome, and navigating life in the spotlight.",
@@ -68081,8 +68211,8 @@
       "russell-howard"
     ],
     "topics": [
-      "psychology",
-      "mental-health"
+      "mental-health",
+      "psychology"
     ],
     "description": "Howard on becoming a comedian, handling reviews, imposter syndrome, mental health, therapy, and his Netflix special.",
     "links": {
@@ -68193,7 +68323,8 @@
     ],
     "topics": [
       "psychology",
-      "mental-health"
+      "mental-health",
+      "productivity"
     ],
     "description": "Robbins explores the 5-second rule, high-five habit, anxiety, manifestation, and the psychological blocks that keep people stuck.",
     "links": {
@@ -68362,7 +68493,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "culture"
     ],
     "description": "Carr discusses his path to comedy, mental health, fatherhood, atheism, and what genuine happiness means to him.",
     "links": {
@@ -68464,8 +68596,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology",
-      "culture"
+      "trauma",
+      "psychology"
     ],
     "description": "Evra discusses childhood abuse, toxic masculinity, his Manchester United career, and how learning to cry transformed his life.",
     "links": {
@@ -68555,8 +68687,8 @@
     ],
     "topics": [
       "psychology",
-      "productivity",
-      "mental-health"
+      "mental-health",
+      "leadership"
     ],
     "description": "Qureshi, Day, Syed, Hemmings, Peters, and Gawdat on consistency, failure, confidence, uncertainty, heartbreak, and happiness.",
     "links": {
@@ -68622,8 +68754,9 @@
       "david-gandy"
     ],
     "topics": [
+      "mental-health",
       "psychology",
-      "mental-health"
+      "leadership"
     ],
     "description": "Gandy discusses rising to the top as a model, imposter syndrome, criticism, insecurities, anxiety, bullying, and mental health struggles.",
     "links": {
@@ -68753,9 +68886,9 @@
       "jacqueline-gold"
     ],
     "topics": [
-      "founders",
+      "leadership",
       "trauma",
-      "leadership"
+      "psychology"
     ],
     "description": "Gold discusses her traumatic childhood, building Ann Summers, breast cancer, losing a child, and leadership amid discrimination.",
     "links": {
@@ -68973,7 +69106,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "economics"
     ],
     "description": "Siemiatkowski on Klarna's founding, scaling challenges, personal losses, and his relationship with wealth as a billionaire.",
     "links": {
@@ -69136,7 +69270,8 @@
     ],
     "topics": [
       "psychology",
-      "mental-health"
+      "mental-health",
+      "focus"
     ],
     "description": "Peters explores the chimp brain theory, emotional regulation, habit formation, and managing stress and fear of failure.",
     "links": {
@@ -69230,7 +69365,8 @@
     ],
     "topics": [
       "founders",
-      "marketing"
+      "leadership",
+      "communication"
     ],
     "description": "Mrwhosetheboss on gaining 10 million subscribers, building confidence, maintaining relationships, and evolving motivations as a creator.",
     "links": {
@@ -69311,8 +69447,8 @@
       "steven-bartlett"
     ],
     "topics": [
-      "founders",
       "marketing",
+      "founders",
       "productivity"
     ],
     "description": "Bartlett reveals his podcast revenue model, consistency practices, audience discovery tactics, quality standards, and financial scaling strategies.",
@@ -69381,7 +69517,8 @@
     ],
     "topics": [
       "productivity",
-      "psychology"
+      "psychology",
+      "mental-health"
     ],
     "description": "Abdaal on building consistent habits, overcoming procrastination, defining productivity, and mental models for a fulfilled life.",
     "links": {
@@ -69567,7 +69704,8 @@
     ],
     "topics": [
       "founders",
-      "marketing"
+      "marketing",
+      "productivity"
     ],
     "description": "Bright on her early years, career transition to content creation, finances, working with her husband, and the principles behind her success.",
     "links": {
@@ -69654,7 +69792,8 @@
     ],
     "topics": [
       "leadership",
-      "psychology"
+      "psychology",
+      "productivity"
     ],
     "description": "Yates discusses breaking free from his environment, failure, leadership, money, authenticity, relationships, and defining his future potential.",
     "links": {
@@ -69753,7 +69892,8 @@
     ],
     "topics": [
       "mental-health",
-      "leadership"
+      "trauma",
+      "psychology"
     ],
     "description": "George on his experiences in A&E, family loss to suicide, and redefining purpose and meaning in his work and life.",
     "links": {
@@ -69786,7 +69926,8 @@
     ],
     "topics": [
       "founders",
-      "leadership"
+      "leadership",
+      "mental-health"
     ],
     "description": "Shu on founding Deliveroo, scaling to unicorn status, mental health challenges, and the IPO journey.",
     "links": {
@@ -69889,7 +70030,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology"
+      "psychology",
+      "fitness"
     ],
     "description": "Brian explores his YouTube rise and fall, anxiety, depression, fitness impact on mental health, and the pressures of chasing goals.",
     "links": {
@@ -70115,8 +70257,9 @@
       "mary-portas"
     ],
     "topics": [
-      "psychology",
-      "leadership"
+      "communication",
+      "leadership",
+      "culture"
     ],
     "description": "Portas on finding authenticity, overcoming painful moments, embracing intuition, and building kinder businesses.",
     "links": {
@@ -70300,6 +70443,7 @@
       "liam-payne"
     ],
     "topics": [
+      "addiction",
       "mental-health",
       "psychology"
     ],
@@ -70416,8 +70560,8 @@
     ],
     "topics": [
       "mental-health",
-      "psychology",
-      "culture"
+      "addiction",
+      "psychology"
     ],
     "description": "Hari explores the failures of modern connection, the Rat Park addiction study, psychedelics, and how social media shapes our search for meaning.",
     "links": {
@@ -70494,8 +70638,9 @@
       "ben-fogle"
     ],
     "topics": [
+      "mental-health",
       "psychology",
-      "mental-health"
+      "culture"
     ],
     "description": "Fogle explores his lifelong battle with self-doubt, overthinking, confidence-building, social media toxicity, and the search for authentic identity.",
     "links": {
@@ -70593,6 +70738,7 @@
       "professor-green"
     ],
     "topics": [
+      "trauma",
       "mental-health",
       "psychology"
     ],
@@ -70673,7 +70819,8 @@
     ],
     "topics": [
       "psychology",
-      "longevity"
+      "longevity",
+      "leadership"
     ],
     "description": "Kane discusses confidence-building, personal responsibility, relationships, biohacking supplements, and navigating cancel culture.",
     "links": {
@@ -70754,8 +70901,9 @@
       "jim-chapman"
     ],
     "topics": [
+      "mental-health",
       "psychology",
-      "mental-health"
+      "dating"
     ],
     "description": "Chapman discusses childhood influence, failure anxiety, therapy breakthroughs, YouTube success, and building healthy relationships.",
     "links": {
@@ -70857,9 +71005,9 @@
       "elizabeth-day"
     ],
     "topics": [
-      "psychology",
       "mental-health",
-      "culture"
+      "psychology",
+      "communication"
     ],
     "description": "Elizabeth Day discusses social expectations, failure, people-pleasing, heartbreak, infertility, and vulnerability in relationships.",
     "links": {
@@ -70949,7 +71097,7 @@
     ],
     "topics": [
       "leadership",
-      "culture",
+      "sports",
       "mental-health"
     ],
     "description": "Ferdinand discusses Old Trafford's training standards, Sir Alex Ferguson's leadership, mental health, and what he wants to be remembered for.",
@@ -71051,9 +71199,9 @@
       "ant-middleton"
     ],
     "topics": [
+      "trauma",
       "psychology",
-      "mental-health",
-      "culture"
+      "leadership"
     ],
     "description": "Middleton explores his personal demons, cancel culture, emotional vulnerability, war trauma, responsibility, and spiritual beliefs.",
     "links": {
@@ -71143,6 +71291,7 @@
     ],
     "topics": [
       "sexuality",
+      "communication",
       "psychology"
     ],
     "description": "Moyle discusses libido, asexuality, sexual motivation, communication, attraction, and the foundations of satisfying intimate relationships.",
@@ -71256,9 +71405,9 @@
       "christian-angermayer"
     ],
     "topics": [
-      "longevity",
       "mental-health",
-      "investing"
+      "longevity",
+      "psychology"
     ],
     "description": "Angermayer on visualisation, psychedelics, longevity strategies, relationships, and technology trends affecting health and wealth.",
     "links": {
@@ -71331,8 +71480,9 @@
       "jack-maynard"
     ],
     "topics": [
+      "trauma",
       "mental-health",
-      "trauma"
+      "psychology"
     ],
     "description": "Maynard discusses being removed from I'm A Celebrity, developing PTSD, seeking mental health support, and rebuilding his life afterward.",
     "links": {
@@ -71493,7 +71643,7 @@
     "topics": [
       "founders",
       "leadership",
-      "productivity"
+      "mental-health"
     ],
     "description": "Beverley discusses building her business empire, mental health as a young entrepreneur, relationships, working culture, and managing competing ideas.",
     "links": {
@@ -71591,9 +71741,9 @@
       "ben-williams"
     ],
     "topics": [
-      "trauma",
-      "leadership",
-      "psychology"
+      "addiction",
+      "mental-health",
+      "leadership"
     ],
     "description": "Williams shares his journey from suicidal addiction through Royal Marines training to working with elite sports teams and building his commando mindset framework.",
     "links": {
@@ -71689,8 +71839,8 @@
       "fran-millar"
     ],
     "topics": [
-      "psychology",
-      "leadership"
+      "leadership",
+      "psychology"
     ],
     "description": "Millar discusses overcoming fear, ambition, winning behaviours, relationships, work balance, and her transition away from cycling.",
     "links": {
@@ -71779,8 +71929,8 @@
     ],
     "topics": [
       "productivity",
-      "leadership",
-      "mental-health"
+      "psychology",
+      "leadership"
     ],
     "description": "Daisley on remote work culture, burnout causes, creativity killers, knowing when to quit, and making work enjoyable.",
     "links": {
@@ -71859,6 +72009,7 @@
     ],
     "topics": [
       "psychology",
+      "sports",
       "mental-health"
     ],
     "description": "Hemmings on winning 11 world kayaking titles, overcoming chronic fatigue, vulnerability, mental discipline, and the power of belief systems.",
@@ -71964,7 +72115,9 @@
       "stephanie-romiszewski"
     ],
     "topics": [
-      "sleep"
+      "sleep",
+      "mental-health",
+      "nutrition"
     ],
     "description": "Romiszewski on sleep deprivation effects, environmental design, caffeine, mental health links, and traits of good versus poor sleepers.",
     "links": {
@@ -72120,8 +72273,9 @@
       "joe-wicks"
     ],
     "topics": [
+      "trauma",
       "mental-health",
-      "trauma"
+      "addiction"
     ],
     "description": "Wicks on childhood trauma, depression, therapy, psychedelics, social media's mental health impact, and life priorities.",
     "links": {
@@ -72368,9 +72522,9 @@
       "krissy-cela"
     ],
     "topics": [
-      "founders",
-      "mental-health",
-      "psychology"
+      "leadership",
+      "psychology",
+      "founders"
     ],
     "description": "Cela discusses building confidence through fitness, entrepreneurship challenges, depression, friendship dynamics, and navigating success as a woman.",
     "links": {
@@ -72470,7 +72624,9 @@
       "dr-aria"
     ],
     "topics": [
-      "psychology"
+      "marriage",
+      "psychology",
+      "sexuality"
     ],
     "description": "Aria discusses his partner's infidelity, processing betrayal, rethinking marriage and monogamy, and finding authenticity in relationships.",
     "links": {
@@ -72536,8 +72692,7 @@
     ],
     "topics": [
       "mental-health",
-      "psychology",
-      "culture"
+      "psychology"
     ],
     "description": "Bartlett on motivation loss, depression and anxiety, understanding desire, opportunity selection, marriage, and the cost of conformity.",
     "links": {
@@ -72600,6 +72755,7 @@
     ],
     "topics": [
       "mental-health",
+      "sleep",
       "psychology"
     ],
     "description": "Murray-Serter on depression, psychedelics, anxiety, burnout, supplements, and finding resilience despite failure and fear.",
@@ -72686,7 +72842,9 @@
       "steven-bartlett"
     ],
     "topics": [
-      "psychology"
+      "psychology",
+      "mental-health",
+      "trauma"
     ],
     "description": "Bartlett reflects on early pandemic insights, brain plasticity, the role of questioning in growth, and how childhood invalidation shapes adult validation-seeking.",
     "links": {

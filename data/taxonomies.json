@@ -22,11 +22,13 @@
     { "id": "addiction", "label": "Addiction", "cluster": "mind" },
     { "id": "trauma", "label": "Trauma", "cluster": "mind" },
     { "id": "science", "label": "Science", "cluster": "mind" },
+    { "id": "communication", "label": "Communication", "cluster": "mind" },
 
     { "id": "founders", "label": "Founders", "cluster": "business" },
     { "id": "leadership", "label": "Leadership", "cluster": "business" },
     { "id": "marketing", "label": "Marketing", "cluster": "business" },
     { "id": "investing", "label": "Investing", "cluster": "business" },
+    { "id": "economics", "label": "Economics", "cluster": "business" },
 
     { "id": "dating", "label": "Dating", "cluster": "relationships" },
     { "id": "marriage", "label": "Marriage", "cluster": "relationships" },
@@ -37,7 +39,9 @@
     { "id": "media", "label": "Media", "cluster": "society" },
     { "id": "culture", "label": "Culture", "cluster": "society" },
     { "id": "geopolitics", "label": "Geopolitics", "cluster": "society" },
-    { "id": "ai", "label": "AI", "cluster": "society" }
+    { "id": "ai", "label": "AI", "cluster": "society" },
+    { "id": "sports", "label": "Sports", "cluster": "society" },
+    { "id": "music", "label": "Music", "cluster": "society" }
   ],
 
   "clusters": [
