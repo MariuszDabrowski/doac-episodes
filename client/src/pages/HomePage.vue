@@ -170,7 +170,10 @@ onUnmounted(() => {
       >About</button>
     </div>
 
-    <h1 class="site-brand">DOAC</h1>
+    <div class="brand-block">
+      <h1 class="site-brand">DOAC</h1>
+      <p class="site-brand-sub">episodes</p>
+    </div>
 
     <FilterBar
       :clusters="taxonomiesData.clusters"
@@ -291,13 +294,21 @@ main {
   }
 }
 
+.brand-block {
+  text-align: center;
+  margin: 1.5rem 0 5.5rem;
+}
+
 .site-brand {
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 5.5rem;
   font-weight: 700;
   letter-spacing: 0.18em;
-  text-align: center;
-  margin: 1.5rem 0 5.5rem;
+  /* letter-spacing adds 0.18em after every letter including the last,
+     which shifts the optical center off when text-align: center sees the
+     widened box. Matching text-indent absorbs the asymmetry. */
+  text-indent: 0.18em;
+  margin: 0;
   background: linear-gradient(135deg, #f5ecd6 0%, #c89968 50%, #f5ecd6 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -305,6 +316,19 @@ main {
   color: transparent;
   line-height: 1;
   animation: gradient-shift 10s ease-in-out infinite;
+}
+
+.site-brand-sub {
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0.42em;
+  /* Tracking pushes the last letter past the optical center; pull it
+     back with a left margin equal to the letter-spacing value. */
+  text-indent: 0.42em;
+  text-transform: lowercase;
+  color: #a89e8c;
+  margin: 0.625rem 0 0;
 }
 
 .page-corner-actions {
@@ -558,9 +582,17 @@ main {
   }
 
   /* The site brand at 5.5rem is also too big on a phone. */
+  .brand-block {
+    margin: 1rem 0 3rem;
+  }
   .site-brand {
     font-size: 4rem;
-    margin: 1rem 0 3rem;
+  }
+  .site-brand-sub {
+    font-size: 0.8125rem;
+    letter-spacing: 0.36em;
+    text-indent: 0.36em;
+    margin-top: 0.5rem;
   }
 
   /* Search bar and result-count text were sharing a row and forcing the

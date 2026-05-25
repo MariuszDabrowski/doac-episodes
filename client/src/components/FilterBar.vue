@@ -66,8 +66,11 @@ const previousSubtopicCount = ref(0);
 watch(
   () => props.cluster,
   (_, oldVal) => {
+    // "all" now renders the hint instead of being truly empty, so treat it
+    // as one element so the bar's leave duration stays non-zero and the
+    // hint has time to fade out.
     previousSubtopicCount.value =
-      oldVal === 'all' ? 0 : props.topics.filter((t) => t.cluster === oldVal).length;
+      oldVal === 'all' ? 1 : props.topics.filter((t) => t.cluster === oldVal).length;
   },
   { flush: 'sync' }
 );
@@ -122,6 +125,33 @@ onUnmounted(() => {
       :duration="subtopicBarDuration"
     >
       <div :key="cluster" class="subtopic-bar">
+        <!-- When "All" is selected there are no subtopic pills to render,
+             so the bar is otherwise empty. Drop in a hand-drawn nudge
+             pointing back up at the category bar instead, since first-time
+             visitors won't know the pills are interactive. -->
+        <div v-if="cluster === 'all'" class="all-hint" aria-hidden="true">
+          <span class="hint-text">pick something you're into</span>
+          <svg class="hint-arrow" viewBox="0 0 70 56" fill="none">
+            <!-- Single graceful curve sweeping from lower-left up to the
+                 arrowhead at top-center. End tangent points upward so the
+                 arrowhead reads as "up", aimed at the cluster bar above. -->
+            <path
+              d="M 4 50 C 22 52, 46 40, 50 7"
+              stroke="#c89968"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+            <!-- Slightly asymmetric chevron so it reads as hand-drawn
+                 rather than a perfectly-mirrored triangle. -->
+            <path
+              d="M 44 13 L 50 7 L 56 14"
+              stroke="#c89968"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
         <button
           v-for="(t, i) in subtopics"
           :key="t.id"
@@ -235,6 +265,49 @@ onUnmounted(() => {
   min-height: 2.25rem;
 }
 
+/* "All" state hint: handwritten caption + curved arrow pointing back up
+   at the cluster bar. Lives in the same slot as the subtopic pills so
+   the FilterBar's bar-swap transition picks it up automatically when
+   the cluster changes. */
+.all-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  /* Pivot from the right so the arrow stays anchored to the text as the
+     subtopic-bar's leave/enter rotation plays out. */
+  transform-origin: right center;
+}
+
+.hint-arrow {
+  width: 3rem;
+  height: 2.5rem;
+  /* Lift the SVG so the arrowhead sits closer to the cluster bar above
+     instead of hanging level with the text baseline. */
+  margin-top: calc(-1rem - 8px);
+  opacity: 0.85;
+}
+
+.hint-text {
+  font-family: 'Caveat', 'Comic Sans MS', cursive;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #c89968;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .hint-arrow {
+    width: 2.5rem;
+    height: 2.25rem;
+    margin-top: -0.875rem;
+  }
+  .hint-text {
+    font-size: 1.125rem;
+  }
+}
+
 .subtopic-pill {
   background: transparent;
   border: 1px solid rgba(245, 236, 214, 0.22);
@@ -244,6 +317,7 @@ onUnmounted(() => {
   font-family: inherit;
   font-size: 0.8125rem;
   font-weight: 500;
+  line-height: 1;
   cursor: pointer;
   white-space: nowrap;
   /* Pivot rotation from the left edge: same hinged-on-a-nail feel as the
@@ -289,9 +363,31 @@ onUnmounted(() => {
   transform-origin: right center;
 }
 
+/* Fade the "all" hint in/out alongside the subtopic-bar transition. The
+   enter delay matches the first pill's stagger delay so the hint feels
+   like a sibling of the pills, not a separate layer popping in early. */
+@keyframes hint-fade-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hint-fade-leave {
+  to { opacity: 0; transform: translateY(4px); }
+}
+
+.subtopic-bar-enter-active .all-hint {
+  animation: hint-fade-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.subtopic-bar-leave-active .all-hint {
+  animation: hint-fade-leave 0.3s ease-out both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .subtopic-bar-enter-active .subtopic-pill,
-  .subtopic-bar-leave-active .subtopic-pill {
+  .subtopic-bar-leave-active .subtopic-pill,
+  .subtopic-bar-enter-active .all-hint,
+  .subtopic-bar-leave-active .all-hint {
     animation: none;
   }
 }

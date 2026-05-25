@@ -250,7 +250,8 @@ const guestPromotionGroups = computed(() => {
             target="_blank"
             rel="noopener"
           >
-            Watch
+            <span class="watch-label">Watch</span>
+            <span class="watch-icon" aria-hidden="true">▶</span>
           </a>
         </div>
         </div>
@@ -592,11 +593,52 @@ const guestPromotionGroups = computed(() => {
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
   flex-shrink: 0;
+  /* Clip the icon's start position (above the button) and the label's
+     end position (below) so the hover swap reads as a roll-down: label
+     falls out the bottom, icon arrives from the top. */
+  position: relative;
+  overflow: hidden;
   transition: background 0.2s ease;
 }
 
 .watch-button:hover {
-  background: #f0c890;
+  background: #d4a575;
+}
+
+/* Strong ease-out (no overshoot): both elements launch fast and decelerate
+   into place. Matches the curve used by the modal panel for consistency. */
+.watch-label {
+  display: inline-block;
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.watch-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Icon parks just above the button until hover. */
+  transform: translateY(-100%);
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Triangle glyph is naturally a bit tall; nudge slightly smaller so it
+     visually matches the label's weight. */
+  font-size: 0.75rem;
+}
+
+.watch-button:hover .watch-label {
+  transform: translateY(150%);
+}
+
+.watch-button:hover .watch-icon {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .watch-label,
+  .watch-icon {
+    transition: none;
+  }
 }
 
 @media (max-width: 639px) {

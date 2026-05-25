@@ -5,8 +5,12 @@
       <stop offset="0.5" stop-color="#c89968"/>
       <stop offset="1" stop-color="#f5ecd6"/>
     </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2a221b"/>
+      <stop offset="1" stop-color="#0a0807"/>
+    </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
   <text
     x="32"
     y="48"
@@ -15,6 +19,6 @@
     font-weight="900"
     font-size="46"
     letter-spacing="0.02em"
-    fill="#100e0c"
+    fill="url(#g)"
   >D</text>
 </svg>

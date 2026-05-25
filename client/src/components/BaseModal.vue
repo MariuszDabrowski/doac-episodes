@@ -104,17 +104,41 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown));
   position: relative;
   max-width: 32rem;
   width: 100%;
-  padding: 2.25rem 2rem 1.75rem;
-  background: #1c1916;
+  padding: 1.75rem 2rem 1.75rem;
+  /* Subtle top-to-bottom warm gradient instead of a flat slab, so the
+     panel reads like part of the same gold-leaning palette as the site
+     brand and not a generic dark dialog. */
+  background: linear-gradient(180deg, #221e1a 0%, #1c1916 70%);
   border: 1px solid rgba(245, 236, 214, 0.08);
   border-radius: 12px;
   box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
   color: #c4b89f;
   font-size: 0.9375rem;
   line-height: 1.6;
+  /* Hide overflow so the top gold accent (::before) clips to the rounded
+     corners instead of poking past them. */
+  overflow: hidden;
   /* tabindex=-1 lets us focus the panel programmatically without a visible
      ring. Focus is then carried by the internal interactive elements. */
   outline: none;
+}
+
+/* Thin gold accent fading out at the edges, runs along the top of the
+   panel. Same gradient family as the .site-brand text in HomePage and
+   the favicon, ties the modal to the brand instead of feeling generic. */
+.modal-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(200, 153, 104, 0.7) 50%,
+    transparent 100%
+  );
 }
 
 .modal-title {
@@ -122,8 +146,12 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown));
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #f5ecd6;
   letter-spacing: 0.02em;
+  /* Brand-matching gradient text, mirrors .site-brand. */
+  background: linear-gradient(135deg, #f5ecd6 0%, #c89968 50%, #f5ecd6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .modal-close {
@@ -196,15 +224,16 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown));
   font-weight: 600;
 }
 
-/* Backdrop fades, panel scales up subtly for entry. */
+/* Backdrop fades; panel rises a touch from below on entry and sinks back
+   down on leave. Translate-only (no scale) keeps the motion subtle. */
 .modal-fade-enter-active,
 .modal-fade-leave-active {
-  transition: opacity 0.2s ease;
+  transition: opacity 0.4s ease;
 }
 
 .modal-fade-enter-active .modal-panel,
 .modal-fade-leave-active .modal-panel {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
 }
 
 .modal-fade-enter-from,
@@ -215,6 +244,6 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown));
 .modal-fade-enter-from .modal-panel,
 .modal-fade-leave-to .modal-panel {
   opacity: 0;
-  transform: scale(0.96) translateY(8px);
+  transform: translateY(20px);
 }
 </style>
