@@ -1442,12 +1442,13 @@
     "portrait": "/portraits/desmond-oneill.jpg",
     "portrait2x": "/portraits/desmond-oneill@2x.jpg",
     "portraitBrightness": 0.289,
-    "credibilityLine": "Unable to verify identity—candidate sources describe a British photographer (1923–2003) and an actor, neither matching the episode context of a former US Secret Service interrogator.",
+    "credibilityLine": "Former US Secret Service Special Agent and Homeland Security Investigations agent; 15 years as a polygraph examiner and instructor for the High-Value Detainee Interrogation Group; lecturer at the Naval Postgraduate School; co-instructor on the Beyond Bulletproof platform; specializes in interrogation, behavior reading, and influence.",
     "fields": [
-      "<UNKNOWN>"
+      "psychology"
     ],
     "roles": [
-      "<UNKNOWN>"
+      "practitioner",
+      "public-figure"
     ],
     "credentials": [],
     "currentRole": "<UNKNOWN>",
@@ -2069,13 +2070,12 @@
     "portrait": "/portraits/jaspreet-singh.jpg",
     "portrait2x": "/portraits/jaspreet-singh@2x.jpg",
     "portraitBrightness": 0.171,
-    "credibilityLine": "Unable to verify identity—multiple different people named Jaspreet Singh appear in search results (novelist/chemist, filmmaker, and others). Episode guest's background and credentials do not match any of these profiles.",
+    "credibilityLine": "American attorney, real estate investor, and personal finance educator; founder of Minority Mindset and Briefs Media; runs a multi-million-subscriber YouTube channel; known for accessible commentary on investing, housing, and money mindset for younger investors.",
     "fields": [
-      "investing",
-      "personal finance",
-      "wealth building"
+      "business"
     ],
     "roles": [
+      "practitioner",
       "public-figure"
     ],
     "credentials": [],
@@ -4922,15 +4922,15 @@
     "portrait": "/portraits/chris-palmer.jpg",
     "portrait2x": "/portraits/chris-palmer@2x.jpg",
     "portraitBrightness": 0.355,
-    "credibilityLine": "Unable to verify identity—the guest appears to be Chris Palmer (psychiatrist, metabolic psychiatry), but all search results returned different Chris Palmers (film producer, actor). No authoritative bio for the psychiatrist was found in available sources.",
+    "credibilityLine": "Harvard Medical School psychiatrist and Director of Postgraduate and Continuing Education at McLean Hospital; author of Brain Energy (2022); pioneer of metabolic psychiatry, using ketogenic and metabolic interventions to treat serious mental illness.",
     "fields": [
-      "psychiatry",
-      "metabolic psychiatry",
-      "mental health"
+      "psychology",
+      "neuroscience"
     ],
     "roles": [
+      "academic",
       "clinician",
-      "researcher"
+      "author"
     ],
     "credentials": [],
     "currentRole": "Psychiatrist",
@@ -4960,18 +4960,20 @@
     }
   },
   {
-    "id": "arthur",
-    "name": "Arthur",
-    "portrait": "/portraits/arthur.jpg",
-    "portrait2x": "/portraits/arthur@2x.jpg",
+    "id": "arthur-brooks",
+    "name": "Arthur C. Brooks",
+    "portrait": "/portraits/arthur-brooks.jpg",
+    "portrait2x": "/portraits/arthur-brooks@2x.jpg",
     "portraitBrightness": 0.356,
-    "credibilityLine": "Unable to verify identity - search results returned King Arthur (legendary figure) and Arthur Conan Doyle (1859–1930, Scottish writer), neither matching a happiness researcher",
+    "credibilityLine": "William Henry Bloomberg Professor at the Harvard Kennedy School and Professor of Management Practice at Harvard Business School; former president of the American Enterprise Institute; The Atlantic columnist on building a meaningful life; bestselling author including From Strength to Strength (2022) and Build the Life You Want (2023, with Oprah Winfrey).",
     "fields": [
       "psychology",
-      "mental-health"
+      "philosophy"
     ],
     "roles": [
-      "researcher"
+      "academic",
+      "author",
+      "public-figure"
     ],
     "credentials": [],
     "currentRole": "<UNKNOWN>",
