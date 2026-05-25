@@ -53,8 +53,12 @@ for ep in eps:
         break
 else:
     sys.exit(f"Episode doac-{vid} not found in episodes.json")
-with open("data/episodes.json", "w") as f:
-    json.dump(eps, f, indent=2)
+with open("data/episodes.json", "w", encoding="utf-8") as f:
+    # ensure_ascii=False preserves £, é, etc. as their literal UTF-8 bytes
+    # instead of escaping them to \uXXXX, which keeps the file diff-clean
+    # alongside the Node-written entries (JS JSON.stringify is non-ASCII-
+    # passthrough by default).
+    json.dump(eps, f, indent=2, ensure_ascii=False)
     f.write("\n")
 
 print(f"Swapped doac-{vid} → pick {pick}, brightness {brightness}")

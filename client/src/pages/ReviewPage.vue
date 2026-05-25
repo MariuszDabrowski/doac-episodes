@@ -9,6 +9,10 @@ import { computed, reactive, ref, onMounted } from 'vue';
 const episodes = ref([]);
 const filter = ref('pending'); // 'all' | 'pending' | 'good'
 const expanded = reactive({}); // videoId → { alts: [], loading: false }
+// Page-load stamp: appended to every thumb URL so a reload after a swap
+// can't serve a stale browser/Vite-cached copy. Post-swap stamps from the
+// API override this per-episode.
+const pageStamp = Date.now();
 
 async function api(path, options = {}) {
   const res = await fetch(path, {
@@ -25,8 +29,10 @@ async function fetchEpisodes() {
 }
 
 function cacheBustedThumb(ep) {
-  const stamp = expanded[ep.videoId]?.stamp || 0;
-  return stamp ? `${ep.thumbnail}?t=${stamp}` : ep.thumbnail;
+  // Always include a stamp so reloads also bust any cached copy.
+  // After a swap, expanded[…].stamp is set from the API response and wins.
+  const stamp = expanded[ep.videoId]?.stamp || pageStamp;
+  return `${ep.thumbnail}?t=${stamp}`;
 }
 
 const filtered = computed(() =>

@@ -62,7 +62,9 @@ if failed:
     for fid in failed:
         print(f"  {fid}")
 
-with open("data/episodes.json", "w") as f:
-    json.dump(episodes, f, indent=2)
+with open("data/episodes.json", "w", encoding="utf-8") as f:
+    # ensure_ascii=False keeps £, é, etc. as literal UTF-8 (matches the
+    # Node-written entries; see swap-portrait.py for context).
+    json.dump(episodes, f, indent=2, ensure_ascii=False)
     f.write("\n")
 print("\nWrote data/episodes.json.")
