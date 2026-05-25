@@ -9548,5 +9548,27 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Will.i.am"
     }
+  },
+  {
+    "id": "bruno-fernandes",
+    "name": "Bruno Fernandes",
+    "portrait": "/portraits/bruno-fernandes.jpg",
+    "portrait2x": "/portraits/bruno-fernandes@2x.jpg",
+    "portraitBrightness": 0.162,
+    "credibilityLine": "Manchester United captain; won Sir Matt Busby Player of the Year award 5 times; scored 108 goals in 328 appearances since 2020; equalled Premier League all-time single-season assist record with 20 assists; FWA Footballer of the Year and Premier League Player of the Season 2026.",
+    "fields": [
+      "football",
+      "leadership",
+      "sports"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Captain, Manchester United",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bruno_Fernandes"
+    }
   }
 ]
