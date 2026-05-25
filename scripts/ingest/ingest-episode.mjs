@@ -87,6 +87,16 @@ for (const c of candidateSuggestions) {
 }
 draft.topics = draft.topics.filter((t) => validTopicIds.has(t));
 
+// Solo-host episodes: when Claude returns no guests (early DOAC monologues,
+// Q&As, anniversary specials, etc.), treat it as a Steven Bartlett solo and
+// inject him as the sole guest. The schema/UI already handles this shape
+// (see existing E55, E70, E94, E208) — we just need to ensure the
+// orchestrator never sees an empty guests array.
+if (draft.guests.length === 0) {
+  console.log('  ↳ no guests in draft, treating as Steven Bartlett solo episode');
+  draft.guests = [{ name: 'Steven Bartlett', slug: 'steven-bartlett' }];
+}
+
 // --- 4. resolve guests ----------------------------------------------
 
 console.log(`[4/6] resolving ${draft.guests.length} guest(s)…`);

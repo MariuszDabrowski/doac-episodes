@@ -9504,5 +9504,49 @@
     "links": {
       "bio": "https://uk.linkedin.com/in/danmurrayserter"
     }
+  },
+  {
+    "id": "michael-buble",
+    "name": "Michael Bublé",
+    "portrait": "/portraits/michael-buble.jpg",
+    "portrait2x": "/portraits/michael-buble@2x.jpg",
+    "portraitBrightness": 0.332,
+    "credibilityLine": "Canadian singer and songwriter; five Grammy Awards and fifteen Juno Awards; over 75 million records sold worldwide; albums include It's Time, Call Me Irresponsible, Crazy Love, and Christmas.",
+    "fields": [
+      "music",
+      "entertainment"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Singer and Songwriter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Michael_Bubl%C3%A9"
+    }
+  },
+  {
+    "id": "will-i-am",
+    "name": "will.i.am",
+    "portrait": "/portraits/will-i-am.jpg",
+    "portrait2x": "/portraits/will-i-am@2x.jpg",
+    "portraitBrightness": 0.241,
+    "credibilityLine": "Frontman of Black Eyed Peas; solo artist with four studio albums including #willpower; prolific record producer and songwriter for Michael Jackson, Rihanna, U2, Kanye West, Lady Gaga, and dozens of others; developed AI-powered messenger app FYI.",
+    "fields": [
+      "music",
+      "technology",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Musician, songwriter, and record producer; founder of FYI app",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Will.i.am"
+    }
   }
 ]
