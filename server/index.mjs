@@ -63,13 +63,31 @@ app.get('/api/review/episodes', async (c) => {
     }
   }
 
+  // For each episode, surface any pre-computed alts that the batch script
+  // (scripts/portraits/generate-all-alts.mjs) has emitted into
+  // public/_review-picks/<videoId>/. Saves the user from clicking "Show
+  // portrait alts" and waiting ~5-13s for auto-portrait.py per episode.
+  function existingAlts(videoId) {
+    const dir = `public/_review-picks/${videoId}`;
+    if (!existsSync(`${dir}/out.jpg`)) return [];
+    const alts = [];
+    for (let n = 1; n <= 5; n += 1) {
+      const file = n === 1 ? 'out.jpg' : `out-${n}.jpg`;
+      if (existsSync(`${dir}/${file}`)) {
+        alts.push({ pick: n, url: `/_review-picks/${videoId}/${file}` });
+      }
+    }
+    return alts;
+  }
+
   return c.json(
     episodes
       .map((ep) => {
         const guest = guestsById[ep.guestIds[0]];
+        const videoId = ep.id.replace(/^doac-/, '');
         return {
           id: ep.id,
-          videoId: ep.id.replace(/^doac-/, ''),
+          videoId,
           title: ep.title,
           description: ep.description,
           date: ep.date,
@@ -83,6 +101,7 @@ app.get('/api/review/episodes', async (c) => {
               }
             : null,
           status: review[ep.id] || 'pending',
+          alts: existingAlts(videoId),
         };
       })
       .sort((a, b) => b.date.localeCompare(a.date))

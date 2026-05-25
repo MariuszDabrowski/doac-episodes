@@ -9,6 +9,11 @@ import { computed, reactive, ref, onMounted } from 'vue';
 const episodes = ref([]);
 const filter = ref('pending'); // 'all' | 'pending' | 'good'
 const expanded = reactive({}); // videoId → { alts: [], loading: false }
+// Per-episode reextract frame count. Higher = more candidates the face
+// detector picks from, useful for episodes where the guest is hard to
+// find (panel framing, behind-desk talking heads). Seeded to 50 for
+// every episode in fetchEpisodes so the dropdown renders pre-selected.
+const reextractCount = reactive({}); // videoId → count
 // Page-load stamp: appended to every thumb URL so a reload after a swap
 // can't serve a stale browser/Vite-cached copy. Post-swap stamps from the
 // API override this per-episode.
@@ -26,6 +31,21 @@ async function api(path, options = {}) {
 
 async function fetchEpisodes() {
   episodes.value = await api('/api/review/episodes');
+  // Surface any pre-computed alts (from scripts/portraits/generate-all-alts.mjs)
+  // so /review renders them inline without making the user click and wait
+  // for auto-portrait.py per episode. Append pageStamp so a reload also
+  // busts any browser-cached copy of the alt thumbnails.
+  // Also seed the per-episode reextract frame count to the default (50)
+  // so the dropdown renders with a selected option on first paint.
+  for (const ep of episodes.value) {
+    if (ep.alts?.length) {
+      expanded[ep.videoId] = {
+        alts: ep.alts.map((a) => ({ ...a, url: `${a.url}?t=${pageStamp}` })),
+        loading: false,
+      };
+    }
+    if (reextractCount[ep.videoId] == null) reextractCount[ep.videoId] = 50;
+  }
 }
 
 function cacheBustedThumb(ep) {
@@ -77,12 +97,18 @@ async function pickAlt(ep, pick) {
   }
 }
 
+function getReextractCount(ep) {
+  return reextractCount[ep.videoId] || 50;
+}
+
 async function reextract(ep) {
-  if (!confirm(`Re-extract 50 frames for ${ep.primaryGuest?.name}? (takes ~1 min)`)) return;
+  const count = getReextractCount(ep);
+  const minutes = Math.max(1, Math.round(count / 50));
+  if (!confirm(`Re-extract ${count} frames for ${ep.primaryGuest?.name}? (takes ~${minutes} min)`)) return;
   expanded[ep.videoId] = expanded[ep.videoId] || { alts: [], loading: false };
   expanded[ep.videoId].loading = true;
   try {
-    await api('/api/review/reextract', { method: 'POST', body: { videoId: ep.videoId } });
+    await api('/api/review/reextract', { method: 'POST', body: { videoId: ep.videoId, count } });
     await loadAlts(ep);
   } finally {
     expanded[ep.videoId].loading = false;
@@ -177,18 +203,41 @@ onMounted(fetchEpisodes);
               type="button"
               class="action-btn"
               :disabled="expanded[ep.videoId]?.loading"
-              title="Run auto-portrait on the existing frames and show the top 5 candidates. Click any to swap it in as the primary portrait."
+              :title="
+                expanded[ep.videoId]?.alts?.length
+                  ? 'Re-run auto-portrait scoring on the current frames and replace the alts shown below.'
+                  : 'Run auto-portrait on the existing frames and show the top 5 candidates. Click any to swap it in as the primary portrait.'
+              "
               @click="loadAlts(ep)"
             >
-              {{ expanded[ep.videoId]?.loading ? 'Working…' : 'Show portrait alts' }}
+              {{
+                expanded[ep.videoId]?.loading
+                  ? 'Working…'
+                  : expanded[ep.videoId]?.alts?.length
+                    ? 'Regenerate alts'
+                    : 'Show portrait alts'
+              }}
             </button>
-            <button
-              type="button"
-              class="action-btn"
-              :disabled="expanded[ep.videoId]?.loading"
-              title="Wipe this video's cached frames and pull 50 fresh ones, then regenerate the top-5 alts. Use when the existing frames don't include any good shots of the guest. ~1 min."
-              @click="reextract(ep)"
-            >Re-extract frames</button>
+            <div class="reextract-row">
+              <button
+                type="button"
+                class="action-btn reextract-btn"
+                :disabled="expanded[ep.videoId]?.loading"
+                :title="`Wipe this video's cached frames and pull ${getReextractCount(ep)} fresh ones, then regenerate the top-5 alts. Use when the existing frames don't include any good shots of the guest.`"
+                @click="reextract(ep)"
+              >Re-extract {{ getReextractCount(ep) }} frames</button>
+              <select
+                v-model.number="reextractCount[ep.videoId]"
+                class="frame-count-select"
+                :disabled="expanded[ep.videoId]?.loading"
+                title="How many frames to pull. Higher = more candidates, slower."
+              >
+                <option :value="50">50</option>
+                <option :value="100">100</option>
+                <option :value="200">200</option>
+                <option :value="400">400</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="ep-meta">
@@ -240,7 +289,7 @@ onMounted(fetchEpisodes);
             :disabled="expanded[ep.videoId].loading"
             @click="pickAlt(ep, alt.pick)"
           >
-            <img :src="alt.url" :alt="`pick ${alt.pick}`" />
+            <img :src="alt.url" :alt="`pick ${alt.pick}`" loading="lazy" />
             <span class="alt-num">{{ alt.pick }}</span>
           </button>
         </div>
@@ -252,10 +301,12 @@ onMounted(fetchEpisodes);
 
 <style scoped>
 .review {
-  /* Sized to the row's natural width (200px thumb + gap + 38rem inputs +
+  /* Sized to the row's natural width (left column + gap + 38rem inputs +
      row padding) so the container hugs the content and centers via
-     margin: 0 auto. Any wider and rows clung to the left edge. */
-  max-width: 57rem;
+     margin: 0 auto. Any wider and rows clung to the left edge. Left
+     column widened to 240px so the Re-extract button + frame-count
+     dropdown fit on one line. */
+  max-width: 62rem;
   margin: 0 auto;
   padding: 2rem 1.5rem;
   color: #f5ecd6;
@@ -360,8 +411,10 @@ onMounted(fetchEpisodes);
   /* Two columns: thumb+buttons on the left, fields on the right. Name
      spans the full width above; alts strip (when shown) spans below.
      Cap the row width so empty space doesn't trail off to the right on
-     wide screens, the fields max out around 38rem anyway. */
-  grid-template-columns: 200px minmax(0, 1fr);
+     wide screens, the fields max out around 38rem anyway. Left column
+     is 240px to fit the Re-extract button + frame-count dropdown on
+     one line; the thumb stays 200px below it. */
+  grid-template-columns: 240px minmax(0, 1fr);
   column-gap: 1.5rem;
   row-gap: 0.875rem;
   align-items: start;
@@ -545,6 +598,54 @@ onMounted(fetchEpisodes);
 
 .action-btn.good.active:hover {
   background: rgba(111, 168, 111, 0.32);
+}
+
+/* Re-extract row: button + frame-count selector side by side. The button
+   grows to fill the available width so the selector can stay compact. */
+.reextract-row {
+  display: flex;
+  gap: 0.375rem;
+  align-items: stretch;
+}
+
+.reextract-btn {
+  flex: 1;
+  /* Cancel the column gap from .ep-actions for this nested element. */
+  margin: 0;
+}
+
+.frame-count-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(245, 236, 214, 0.08);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none' stroke='%23c89968' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 8px 5px;
+  border: none;
+  border-radius: 9999px;
+  color: #f5ecd6;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1.5rem 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.frame-count-select:hover:not(:disabled) {
+  background-color: rgba(245, 236, 214, 0.16);
+}
+
+.frame-count-select:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.frame-count-select option {
+  background: #1c1916;
+  color: #f5ecd6;
 }
 
 .alts {

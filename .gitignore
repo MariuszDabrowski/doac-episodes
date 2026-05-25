@@ -17,3 +17,7 @@ public/_review-picks/
 # Local YouTube cookies exported for yt-dlp testing. Live session tokens,
 # must never be committed. CI uses the YT_COOKIES secret instead.
 cookies*.txt
+
+# Python bytecode cache
+__pycache__/
+*.pyc
