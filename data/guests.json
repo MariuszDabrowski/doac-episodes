@@ -6661,5 +6661,2848 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Davina_McCall"
     }
+  },
+  {
+    "id": "steven-bartlett",
+    "name": "Steven Bartlett",
+    "portrait": "/portraits/steven-bartlett.jpg",
+    "portrait2x": "/portraits/steven-bartlett@2x.jpg",
+    "portraitBrightness": 0.353,
+    "credibilityLine": "British entrepreneur, investor, and podcaster; founder of Social Chain and host of Diary of a CEO podcast",
+    "fields": [
+      "psychology",
+      "productivity",
+      "entrepreneurship",
+      "business"
+    ],
+    "roles": [
+      "public-figure",
+      "entrepreneur"
+    ],
+    "credentials": [],
+    "currentRole": "Host, Diary of a CEO podcast",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Steven_Bartlett_(businessman)"
+    }
+  },
+  {
+    "id": "gary-vaynerchuk",
+    "name": "Gary Vaynerchuk",
+    "portrait": "/portraits/gary-vaynerchuk.jpg",
+    "portrait2x": "/portraits/gary-vaynerchuk@2x.jpg",
+    "portraitBrightness": 0.383,
+    "credibilityLine": "Co-founder of Resy (acquired by American Express, 2019); CEO of VaynerMedia; author; built digital marketing and social media presence as \"Gary Vee\"",
+    "fields": [
+      "business",
+      "digital marketing",
+      "leadership"
+    ],
+    "roles": [
+      "entrepreneur",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Chairman of VaynerX; CEO of VaynerMedia",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Gary_Vaynerchuk"
+    }
+  },
+  {
+    "id": "jamie-carragher",
+    "name": "Jamie Carragher",
+    "portrait": "/portraits/jamie-carragher.jpg",
+    "portrait2x": "/portraits/jamie-carragher@2x.jpg",
+    "portraitBrightness": 0.223,
+    "credibilityLine": "Liverpool vice-captain for 10 years; 737 appearances for Liverpool, second-most in club history; won UEFA Champions League, two FA Cups, three League Cups with Liverpool; 38 England caps including 2006 World Cup and Euro 2004; football analyst and pundit",
+    "fields": [
+      "football",
+      "leadership",
+      "psychology"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Football analyst and pundit; advisor, Marine FC",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jamie_Carragher"
+    }
+  },
+  {
+    "id": "barbara-corcoran",
+    "name": "Barbara Corcoran",
+    "portrait": "/portraits/barbara-corcoran.jpg",
+    "portrait2x": "/portraits/barbara-corcoran@2x.jpg",
+    "portraitBrightness": 0.38,
+    "credibilityLine": "Founded The Corcoran Group real estate brokerage in 1973 with $1,000 and sold to NRT for $66 million in 2001; original Shark investor on ABC's Shark Tank across all 15 seasons with 130+ deals; syndicated columnist; author of multiple books on business and real estate.",
+    "fields": [
+      "real estate",
+      "entrepreneurship",
+      "investing"
+    ],
+    "roles": [
+      "author",
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Shark investor, ABC's Shark Tank; business columnist and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Barbara_Corcoran"
+    }
+  },
+  {
+    "id": "richard-branson",
+    "name": "Richard Branson",
+    "portrait": "/portraits/richard-branson.jpg",
+    "portrait2x": "/portraits/richard-branson@2x.jpg",
+    "portraitBrightness": 0.359,
+    "credibilityLine": "Founder of Virgin Group; knighted for services to entrepreneurship; founded Virgin Records (1970), Virgin Atlantic (1983), Virgin Galactic (2004); net worth over $3 billion.",
+    "fields": [
+      "entrepreneurship",
+      "business",
+      "leadership"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Chairman, Virgin Group",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Richard_Branson"
+    }
+  },
+  {
+    "id": "billy-mcfarland",
+    "name": "Billy McFarland",
+    "portrait": "/portraits/billy-mcfarland.jpg",
+    "portrait2x": "/portraits/billy-mcfarland@2x.jpg",
+    "portraitBrightness": 0.284,
+    "credibilityLine": "Co-founder of Fyre Festival; founder of Magnises; convicted of wire fraud and sentenced to six years in federal prison for defrauding investors of $27.4 million; released March 2022.",
+    "fields": [
+      "entrepreneurship",
+      "fraud",
+      "psychology"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Entrepreneur; public speaker on fraud and business ethics",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Billy_McFarland"
+    }
+  },
+  {
+    "id": "stephen-fry",
+    "name": "Stephen Fry",
+    "portrait": "/portraits/stephen-fry.jpg",
+    "portrait2x": "/portraits/stephen-fry@2x.jpg",
+    "portraitBrightness": 0.267,
+    "credibilityLine": "Host of QI (2003–2016); Golden Globe–nominated for Wilde; six British Academy Television Award nominations; appeared in Chariots of Fire, A Fish Called Wanda, Gosford Park, V for Vendetta, and Sherlock Holmes films; co-starred in Blackadder and A Bit of Fry & Laurie with Hugh Laurie; hosted British Academy Film Awards 12 times between 2001–2017.",
+    "fields": [
+      "comedy",
+      "mental health",
+      "media"
+    ],
+    "roles": [
+      "actor",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Actor, writer, broadcaster, and television presenter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Stephen_Fry"
+    }
+  },
+  {
+    "id": "charlie-sloth",
+    "name": "Charlie Sloth",
+    "portrait": "/portraits/charlie-sloth.jpg",
+    "portrait2x": "/portraits/charlie-sloth@2x.jpg",
+    "portraitBrightness": 0.317,
+    "credibilityLine": "BBC Radio 1 and Radio 1Xtra presenter; creator of Fire in the Booth; radio personality on Apple Music One.",
+    "fields": [
+      "music",
+      "radio",
+      "hip-hop"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Radio presenter, Apple Music One",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Charlie_Sloth"
+    }
+  },
+  {
+    "id": "louis-theroux",
+    "name": "Louis Theroux",
+    "portrait": "/portraits/louis-theroux.jpg",
+    "portrait2x": "/portraits/louis-theroux@2x.jpg",
+    "portraitBrightness": 0.359,
+    "credibilityLine": "British-American journalist and broadcaster; three-time BAFTA award winner; creator of Weird Weekends and When Louis Met...; authored multiple books including Callous Disregard and The Master",
+    "fields": [
+      "documentary journalism",
+      "psychology",
+      "media"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Documentary filmmaker and presenter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Louis_Theroux"
+    }
+  },
+  {
+    "id": "labrinth",
+    "name": "Labrinth",
+    "portrait": "/portraits/labrinth.jpg",
+    "portrait2x": "/portraits/labrinth@2x.jpg",
+    "portraitBrightness": 0.455,
+    "credibilityLine": "British singer-songwriter and composer; scored HBO's Euphoria, winning a Primetime Emmy Award for \"All for Us\"; founding member of supergroup LSD with Sia and Diplo; debut album Electronic Earth peaked at number 2 on UK Albums Chart.",
+    "fields": [
+      "music production",
+      "composition",
+      "songwriting"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Singer, songwriter, producer, and composer",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Labrinth"
+    }
+  },
+  {
+    "id": "peter-crouch",
+    "name": "Peter Crouch",
+    "portrait": "/portraits/peter-crouch.jpg",
+    "portrait2x": "/portraits/peter-crouch@2x.jpg",
+    "portraitBrightness": 0.268,
+    "credibilityLine": "England international footballer capped 42 times; scored 22 goals for England across two FIFA World Cups; one of 35 players to score 100+ Premier League goals; holds record for most headed goals in Premier League history; won FA Cup and FA Community Shield with Liverpool; host of That Peter Crouch Podcast; author.",
+    "fields": [
+      "football",
+      "mental health",
+      "media"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Television personality and football pundit; host of That Peter Crouch Podcast",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Peter_Crouch"
+    }
+  },
+  {
+    "id": "raphael-rowe",
+    "name": "Raphael Rowe",
+    "portrait": "/portraits/raphael-rowe.jpg",
+    "portrait2x": "/portraits/raphael-rowe@2x.jpg",
+    "portraitBrightness": 0.275,
+    "credibilityLine": "Wrongfully convicted of murder in 1990, served nearly twelve years in maximum security before proving innocence and release in 2000; host of Inside The World's Toughest Prisons on Netflix; broadcast journalist",
+    "fields": [
+      "criminal justice",
+      "media",
+      "psychology"
+    ],
+    "roles": [
+      "public-figure",
+      "journalist"
+    ],
+    "credentials": [],
+    "currentRole": "Host, Inside The World's Toughest Prisons (Netflix)",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Raphael_Rowe"
+    }
+  },
+  {
+    "id": "dame-dash",
+    "name": "Dame Dash",
+    "portrait": "/portraits/dame-dash.jpg",
+    "portrait2x": "/portraits/dame-dash@2x.jpg",
+    "portraitBrightness": 0.321,
+    "credibilityLine": "Co-founder of Roc-A-Fella Records with Jay-Z; discovered and signed Kanye West; co-founder of Rocawear fashion retailer; founder of Damon Dash Music Group and BluRoc Records.",
+    "fields": [
+      "hip-hop",
+      "music business",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and CEO, Damon Dash Music Group",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Damon_Dash"
+    }
+  },
+  {
+    "id": "gabby-logan",
+    "name": "Gabby Logan",
+    "portrait": "/portraits/gabby-logan.jpg",
+    "portrait2x": "/portraits/gabby-logan@2x.jpg",
+    "portraitBrightness": 0.291,
+    "credibilityLine": "Welsh television and radio presenter at BBC Sport for 30 years; hosted Final Score and Sports Personality of the Year; presented Olympics, FIFA World Cup, and Rugby World Cup coverage; former rhythmic gymnast representing Great Britain; author and podcast host.",
+    "fields": [
+      "sports broadcasting",
+      "psychology",
+      "leadership"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Television and radio presenter, BBC Sport",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Gabby_Logan"
+    }
+  },
+  {
+    "id": "will-ahmed",
+    "name": "Will Ahmed",
+    "portrait": "/portraits/will-ahmed.jpg",
+    "portrait2x": "/portraits/will-ahmed@2x.jpg",
+    "portraitBrightness": 0.335,
+    "credibilityLine": "Founder and CEO of Whoop, a health wearables company valued at $3.6 billion; Harvard College graduate",
+    "fields": [
+      "fitness",
+      "wearables",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "founder",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and CEO, Whoop",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Will_Ahmed"
+    }
+  },
+  {
+    "id": "richard-osman",
+    "name": "Richard Osman",
+    "portrait": "/portraits/richard-osman.jpg",
+    "portrait2x": "/portraits/richard-osman@2x.jpg",
+    "portraitBrightness": 0.416,
+    "credibilityLine": "Creator and former co-presenter of BBC One's Pointless; creative director of Endemol UK; author of the Thursday Murder Club series, the best-selling mystery novels since Harry Potter",
+    "fields": [
+      "television",
+      "comedy",
+      "literature"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Television presenter and novelist",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Richard_Osman"
+    }
+  },
+  {
+    "id": "christian-horner",
+    "name": "Christian Horner",
+    "portrait": "/portraits/christian-horner.jpg",
+    "portrait2x": "/portraits/christian-horner@2x.jpg",
+    "portraitBrightness": 0.309,
+    "credibilityLine": "Team principal of Red Bull Formula 1 (2005–2025); youngest team principal in F1 history at 31; won six World Constructors' Championships and eight World Drivers' Championships; 124 Grand Prix victories as team principal.",
+    "fields": [
+      "leadership",
+      "motorsport",
+      "high-performance teams"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Former Team Principal and CEO, Red Bull Formula One",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Christian_Horner"
+    }
+  },
+  {
+    "id": "david-harewood",
+    "name": "David Harewood",
+    "portrait": "/portraits/david-harewood.jpg",
+    "portrait2x": "/portraits/david-harewood@2x.jpg",
+    "portraitBrightness": 0.363,
+    "credibilityLine": "Award-winning actor in Homeland and Supergirl; author of Maybe I Don't Belong Here (best-selling 2021); president of the Royal Academy of Dramatic Art since February 2024; OBE",
+    "fields": [
+      "acting",
+      "mental health",
+      "memoir"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "President of the Royal Academy of Dramatic Art; actor and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/David_Harewood"
+    }
+  },
+  {
+    "id": "marie-forleo",
+    "name": "Marie Forleo",
+    "portrait": "/portraits/marie-forleo.jpg",
+    "portrait2x": "/portraits/marie-forleo@2x.jpg",
+    "portraitBrightness": 0.401,
+    "credibilityLine": "New York Times bestselling author; founder of Marie Forleo International; author of Everything is Figureoutable and Make Every Man Want You; creator of B-School online business program and MarieTV YouTube series",
+    "fields": [
+      "leadership",
+      "psychology",
+      "business"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Marie Forleo International",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Marie_Forleo"
+    }
+  },
+  {
+    "id": "black-coffee",
+    "name": "Black Coffee",
+    "portrait": "/portraits/black-coffee.jpg",
+    "portrait2x": "/portraits/black-coffee@2x.jpg",
+    "portraitBrightness": 0.348,
+    "credibilityLine": "South African DJ and producer; pioneer of Afropolitan House blending traditional African percussion with techno",
+    "fields": [
+      "music",
+      "DJ/production",
+      "house music"
+    ],
+    "roles": [
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "DJ and Music Producer",
+    "links": {
+      "bio": "https://www.last.fm/music/Black+Coffee/+wiki"
+    }
+  },
+  {
+    "id": "alex-scott",
+    "name": "Alex Scott",
+    "portrait": "/portraits/alex-scott.jpg",
+    "portrait2x": "/portraits/alex-scott@2x.jpg",
+    "portraitBrightness": 0.372,
+    "credibilityLine": "Former professional footballer with 140 England caps; BBC sports presenter and pundit",
+    "fields": [
+      "sports media",
+      "football/soccer",
+      "mental health awareness"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Sports presenter and pundit",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Alex_Scott_(footballer,_born_1984)"
+    }
+  },
+  {
+    "id": "maisie-williams",
+    "name": "Maisie Williams",
+    "portrait": "/portraits/maisie-williams.jpg",
+    "portrait2x": "/portraits/maisie-williams@2x.jpg",
+    "portraitBrightness": 0.326,
+    "credibilityLine": "Lead actress on HBO's Game of Thrones (2011–2019); Emmy Award nominee; starred in films The Falling, Mary Shelley, Pistol; recurring role in Doctor Who",
+    "fields": [
+      "acting",
+      "mental health"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Actor",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Maisie_Williams"
+    }
+  },
+  {
+    "id": "julian-treasure",
+    "name": "Julian Treasure",
+    "portrait": "/portraits/julian-treasure.jpg",
+    "portrait2x": "/portraits/julian-treasure@2x.jpg",
+    "portraitBrightness": 0.414,
+    "credibilityLine": "Five-time TED speaker with 160 million total views; world's leading authority on conscious communication, listening, and speaking; author of three books on sound and communication; Toastmasters Golden Gavel Award and International Listening Association Special Recognition Award recipient",
+    "fields": [
+      "communication",
+      "listening",
+      "sound design",
+      "public speaking"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Sound and communication expert; author and TED speaker",
+    "links": {
+      "bio": "https://www.juliantreasure.com/about"
+    }
+  },
+  {
+    "id": "mel-c",
+    "name": "Mel C",
+    "portrait": "/portraits/mel-c.jpg",
+    "portrait2x": "/portraits/mel-c@2x.jpg",
+    "portraitBrightness": 0.445,
+    "credibilityLine": "Sporty Spice of the Spice Girls; over 100 million records sold with the group as a member and solo artist",
+    "fields": [
+      "music",
+      "pop culture"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Singer and songwriter",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Melanie_C"
+    }
+  },
+  {
+    "id": "lewis-capaldi",
+    "name": "Lewis Capaldi",
+    "portrait": "/portraits/lewis-capaldi.jpg",
+    "portrait2x": "/portraits/lewis-capaldi@2x.jpg",
+    "portraitBrightness": 0.428,
+    "credibilityLine": "Scottish singer-songwriter; \"Someone You Loved\" won 2020 Brit Award for Song of the Year and was nominated for Grammy Award for Song of the Year; won 2020 Brit Award for Best New Artist; debut album Divinely Uninspired to a Hellish Extent was best-selling album of 2019 and 2020 in UK; second album Broken by Desire to Be Heavenly Sent (2023)",
+    "fields": [
+      "music",
+      "songwriting"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Singer-songwriter and musician",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Lewis_Capaldi"
+    }
+  },
+  {
+    "id": "chris-kamara",
+    "name": "Chris Kamara",
+    "portrait": "/portraits/chris-kamara.jpg",
+    "portrait2x": "/portraits/chris-kamara@2x.jpg",
+    "portraitBrightness": 0.33,
+    "credibilityLine": "Former professional footballer who played for Portsmouth, Swindon Town, Stoke City, Leeds United, and Sheffield United; Sky Sports presenter and football analyst for 30 years",
+    "fields": [
+      "football",
+      "sports analysis",
+      "media"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Former Sky Sports pundit and football analyst",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Chris_Kamara"
+    }
+  },
+  {
+    "id": "africa-brooke",
+    "name": "Africa Brooke",
+    "portrait": "/portraits/africa-brooke.jpg",
+    "portrait2x": "/portraits/africa-brooke@2x.jpg",
+    "portraitBrightness": 0.308,
+    "credibilityLine": "Accredited developmental coach, consultant, speaker, and podcaster; hosts Beyond the Self podcast",
+    "fields": [
+      "mental health",
+      "psychology",
+      "leadership",
+      "relationships",
+      "self-sabotage"
+    ],
+    "roles": [
+      "coach",
+      "consultant",
+      "speaker",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Consultant, Accredited Coach, and Speaker",
+    "links": {
+      "bio": "https://africabrooke.com/"
+    }
+  },
+  {
+    "id": "bear-grylls",
+    "name": "Bear Grylls",
+    "portrait": "/portraits/bear-grylls.jpg",
+    "portrait2x": "/portraits/bear-grylls@2x.jpg",
+    "portraitBrightness": 0.308,
+    "credibilityLine": "Former SAS trooper; Chief Scout of the United Kingdom and Overseas Territories (2009–2024); host of Man vs. Wild, Running Wild with Bear Grylls, and The Island with Bear Grylls; holds multiple world records in hostile environments",
+    "fields": [
+      "survival",
+      "leadership",
+      "resilience"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Television presenter and adventurer; former Chief Scout of the Scout Association",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bear_Grylls"
+    }
+  },
+  {
+    "id": "mel-robins",
+    "name": "Mel Robins",
+    "portrait": "/portraits/mel-robins.jpg",
+    "portrait2x": "/portraits/mel-robins@2x.jpg",
+    "portraitBrightness": 0.308,
+    "credibilityLine": "Motivational speaker, author, and podcast host focused on psychology and behavior change.",
+    "fields": [
+      "psychology",
+      "motivation",
+      "habit change",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Motivational speaker and author",
+    "links": {}
+  },
+  {
+    "id": "james-smith",
+    "name": "James Smith",
+    "portrait": "/portraits/james-smith.jpg",
+    "portrait2x": "/portraits/james-smith@2x.jpg",
+    "portraitBrightness": 0.405,
+    "credibilityLine": "Author of Not a Diet Book, Not a Life Coach, and How to Be Confident; fitness influencer and personal trainer with 1.7M TikTok and 1M Instagram followers.",
+    "fields": [
+      "fitness",
+      "personal development",
+      "psychology"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author, personal trainer, and social media influencer",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/James_Smith_(fitness_influencer)"
+    }
+  },
+  {
+    "id": "julian-metcalfe",
+    "name": "Julian Metcalfe",
+    "portrait": "/portraits/julian-metcalfe.jpg",
+    "portrait2x": "/portraits/julian-metcalfe@2x.jpg",
+    "portraitBrightness": 0.451,
+    "credibilityLine": "Founder of Pret A Manger (1986) and Itsu (1997); his companies are collectively valued over $3 billion; Pret sold for £1.5 billion in 2018",
+    "fields": [
+      "entrepreneurship",
+      "food business",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Pret A Manger and Itsu",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Julian_Metcalfe"
+    }
+  },
+  {
+    "id": "joe-sugg",
+    "name": "Joe Sugg",
+    "portrait": "/portraits/joe-sugg.jpg",
+    "portrait2x": "/portraits/joe-sugg@2x.jpg",
+    "portraitBrightness": 0.267,
+    "credibilityLine": "YouTuber with 8+ million ThatcherJoe subscribers; author of Grow; finalist on Strictly Come Dancing (2018); West End actor in Waitress (2019)",
+    "fields": [
+      "content creation",
+      "mental health",
+      "productivity"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Content creator and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Joe_Sugg"
+    }
+  },
+  {
+    "id": "liver-king",
+    "name": "Liver King",
+    "portrait": "/portraits/liver-king.jpg",
+    "portrait2x": "/portraits/liver-king@2x.jpg",
+    "portraitBrightness": 0.386,
+    "credibilityLine": "Internet personality and fitness influencer known for promoting ancestral lifestyle philosophy; subject of 2025 Netflix documentary Untold: The Liver King",
+    "fields": [
+      "nutrition",
+      "fitness",
+      "business"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Fitness influencer and businessman",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Liver_King"
+    }
+  },
+  {
+    "id": "gary-neville",
+    "name": "Gary Neville",
+    "portrait": "/portraits/gary-neville.jpg",
+    "portrait2x": "/portraits/gary-neville@2x.jpg",
+    "portraitBrightness": 0.31,
+    "credibilityLine": "Manchester United right-back for 20 years, captain for 5 years; winner of 20 trophies including 8 Premier League titles and 2 UEFA Champions League titles; England international (3 European Championships, 2 FIFA World Cups); Premier League Hall of Fame inductee (2025); Sky Sports pundit; serial business founder and owner.",
+    "fields": [
+      "football",
+      "leadership",
+      "business"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Broadcaster and business founder/owner",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Gary_Neville"
+    }
+  },
+  {
+    "id": "nicola-mendelsohn",
+    "name": "Nicola Mendelsohn",
+    "portrait": "/portraits/nicola-mendelsohn.jpg",
+    "portrait2x": "/portraits/nicola-mendelsohn@2x.jpg",
+    "portraitBrightness": 0.346,
+    "credibilityLine": "Global head of advertising for Meta; Baroness Mendelsohn; board member of Diageo; diagnosed with blood cancer in 2016; author of a book on female entrepreneurship.",
+    "fields": [
+      "advertising",
+      "leadership",
+      "business"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Global Head of Advertising, Meta",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Nicola_Mendelsohn"
+    }
+  },
+  {
+    "id": "john-eckbert",
+    "name": "John Eckbert",
+    "portrait": "/portraits/john-eckbert.jpg",
+    "portrait2x": "/portraits/john-eckbert@2x.jpg",
+    "portraitBrightness": 0.357,
+    "credibilityLine": "CEO of Five Guys Joint Venture covering UK, France, Germany, Spain, and Portugal; grew European business with zero advertising",
+    "fields": [
+      "casual dining",
+      "restaurant expansion",
+      "brand building",
+      "operations"
+    ],
+    "roles": [
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of Five Guys Joint Venture (Europe)",
+    "links": {
+      "bio": "https://www.davidson.edu/news/2017/07/31/banking-burgers-john-eckbert-90-has-taste-business"
+    }
+  },
+  {
+    "id": "will-storr",
+    "name": "Will Storr",
+    "portrait": "/portraits/will-storr.jpg",
+    "portrait2x": "/portraits/will-storr@2x.jpg",
+    "portraitBrightness": 0.309,
+    "credibilityLine": "British author of six books including Sunday Times bestsellers; author of The Status Game, Selfie, and The Science of Storytelling; contributing editor at Esquire and GQ Australia.",
+    "fields": [
+      "psychology",
+      "culture",
+      "self-help"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and public speaker",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Will_Storr"
+    }
+  },
+  {
+    "id": "james-bay",
+    "name": "James Bay",
+    "portrait": "/portraits/james-bay.jpg",
+    "portrait2x": "/portraits/james-bay@2x.jpg",
+    "portraitBrightness": 0.36,
+    "credibilityLine": "English singer-songwriter and guitarist; BRIT Award winner (Critics' Choice 2015, Best British Male Solo Artist 2016); Grammy-nominated; debut album Chaos and the Calm reached #1 UK",
+    "fields": [
+      "music",
+      "mental health"
+    ],
+    "roles": [
+      "musician",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Singer-songwriter and guitarist",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/James_Bay_(singer)"
+    }
+  },
+  {
+    "id": "rory-sutherland",
+    "name": "Rory Sutherland",
+    "portrait": "/portraits/rory-sutherland.jpg",
+    "portrait2x": "/portraits/rory-sutherland@2x.jpg",
+    "portraitBrightness": 0.327,
+    "credibilityLine": "Vice Chairman of Ogilvy & Mather; founded behavioral science practice; author of Alchemy; writes fortnightly column in The Spectator",
+    "fields": [
+      "marketing",
+      "advertising",
+      "behavioral science",
+      "psychology"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Vice Chairman, Ogilvy & Mather",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Rory_Sutherland_(advertising_executive)"
+    }
+  },
+  {
+    "id": "krept",
+    "name": "Krept",
+    "portrait": "/portraits/krept.jpg",
+    "portrait2x": "/portraits/krept@2x.jpg",
+    "portraitBrightness": 0.304,
+    "credibilityLine": "British rapper; half of hip hop duo Krept and Konan; founder of Nala's Baby baby brand",
+    "fields": [
+      "music",
+      "entrepreneurship",
+      "mental health"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Rapper and Entrepreneur",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Krept_and_Konan"
+    }
+  },
+  {
+    "id": "nick-jones",
+    "name": "Nick Jones",
+    "portrait": "/portraits/nick-jones.jpg",
+    "portrait2x": "/portraits/nick-jones@2x.jpg",
+    "portraitBrightness": 0.324,
+    "credibilityLine": "Founder of Soho House, the global private members club",
+    "fields": [
+      "hospitality",
+      "private members clubs",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Soho House",
+    "links": {}
+  },
+  {
+    "id": "malcolm-gladwell",
+    "name": "Malcolm Gladwell",
+    "portrait": "/portraits/malcolm-gladwell.jpg",
+    "portrait2x": "/portraits/malcolm-gladwell@2x.jpg",
+    "portraitBrightness": 0.293,
+    "credibilityLine": "Staff writer for The New Yorker since 1996; author of eight bestselling books including Tipping Point, Blink, Outliers, and Bomber Mafia; host of podcast Revisionist History; co-founder of Pushkin Industries; appointed to the Order of Canada in 2011.",
+    "fields": [
+      "journalism",
+      "psychology",
+      "social science",
+      "innovation"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Staff writer, The New Yorker; host of Revisionist History podcast",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Malcolm_Gladwell"
+    }
+  },
+  {
+    "id": "brian-armstrong",
+    "name": "Brian Armstrong",
+    "portrait": "/portraits/brian-armstrong.jpg",
+    "portrait2x": "/portraits/brian-armstrong@2x.jpg",
+    "portraitBrightness": 0.383,
+    "credibilityLine": "Co-founder and CEO of Coinbase; former software engineer at Airbnb; educated at Rice University with degrees in economics and computer science",
+    "fields": [
+      "cryptocurrency",
+      "fintech",
+      "leadership"
+    ],
+    "roles": [
+      "founder",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of Coinbase",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Brian_Armstrong_(businessman)"
+    }
+  },
+  {
+    "id": "michael-pollan",
+    "name": "Michael Pollan",
+    "portrait": "/portraits/michael-pollan.jpg",
+    "portrait2x": "/portraits/michael-pollan@2x.jpg",
+    "portraitBrightness": 0.07,
+    "credibilityLine": "Knight Professor of Science and Environmental Journalism at UC Berkeley; Lewis K. Chan Arts Lecturer at Harvard University; author of The Omnivore's Dilemma and How to Change Your Mind; co-founded UC Berkeley Center for the Science of Psychedelics.",
+    "fields": [
+      "food systems",
+      "psychedelics",
+      "environmental journalism"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "journalist"
+    ],
+    "credentials": [],
+    "currentRole": "Knight Professor of Science and Environmental Journalism, UC Berkeley Graduate School of Journalism",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Michael_Pollan"
+    }
+  },
+  {
+    "id": "james-watt",
+    "name": "James Watt",
+    "portrait": "/portraits/james-watt.jpg",
+    "portrait2x": "/portraits/james-watt@2x.jpg",
+    "portraitBrightness": 0.297,
+    "credibilityLine": "Scottish inventor and engineer (1736–1819); improved the steam engine, fundamental to the Industrial Revolution",
+    "fields": [
+      "mechanical engineering",
+      "industrial innovation"
+    ],
+    "roles": [
+      "researcher",
+      "inventor"
+    ],
+    "credentials": [],
+    "currentRole": "Inventor and Engineer (Historical Figure)",
+    "links": {}
+  },
+  {
+    "id": "tony-bellew",
+    "name": "Tony Bellew",
+    "portrait": "/portraits/tony-bellew.jpg",
+    "portrait2x": "/portraits/tony-bellew@2x.jpg",
+    "portraitBrightness": 0.361,
+    "credibilityLine": "Former WBC cruiserweight champion (2016–2017); British and Commonwealth light-heavyweight champion; actor in Creed and Creed III; author of Everybody Has A Plan Until They Get Punched in the Face.",
+    "fields": [
+      "boxing",
+      "psychology",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Former professional boxer; boxing analyst and commentator",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tony_Bellew"
+    }
+  },
+  {
+    "id": "scott-harrison",
+    "name": "Scott Harrison",
+    "portrait": "/portraits/scott-harrison.jpg",
+    "portrait2x": "/portraits/scott-harrison@2x.jpg",
+    "portraitBrightness": 0.11,
+    "credibilityLine": "Founder and CEO of charity: water; author of Thirst (New York Times bestseller); brought clean water to over 20 million people; 2024 Martin Luther King Jr. Humanitarian Award recipient",
+    "fields": [
+      "humanitarian work",
+      "nonprofit leadership",
+      "clean water access",
+      "social entrepreneurship"
+    ],
+    "roles": [
+      "founder",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and CEO of charity: water",
+    "links": {
+      "bio": "https://www.charitywater.org/about/scott-harrison-story"
+    }
+  },
+  {
+    "id": "example",
+    "name": "Example",
+    "portrait": "/portraits/example.jpg",
+    "portrait2x": "/portraits/example@2x.jpg",
+    "portraitBrightness": 0.276,
+    "credibilityLine": "Music artist and rapper; publicly discussed Aspergers diagnosis and mental health challenges",
+    "fields": [
+      "music",
+      "mental health"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Music artist, producer, and rapper",
+    "links": {}
+  },
+  {
+    "id": "jane-wurwand",
+    "name": "Jane Wurwand",
+    "portrait": "/portraits/jane-wurwand.jpg",
+    "portrait2x": "/portraits/jane-wurwand@2x.jpg",
+    "portraitBrightness": 0.091,
+    "credibilityLine": "Co-founder of Dermalogica (1986), a skincare brand that revolutionized the industry; author of Skin in the Game; licensed skin therapist and instructor.",
+    "fields": [
+      "entrepreneurship",
+      "skincare",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder, Dermalogica",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jane_Wurwand"
+    }
+  },
+  {
+    "id": "greg-hoffman",
+    "name": "Greg Hoffman",
+    "portrait": "/portraits/greg-hoffman.jpg",
+    "portrait2x": "/portraits/greg-hoffman@2x.jpg",
+    "portraitBrightness": 0.09,
+    "credibilityLine": "Former Nike Chief Marketing Officer and Vice President of Global Brand Innovation; author of Emotion by Design; founder of Modern Arena advisory group",
+    "fields": [
+      "marketing",
+      "branding",
+      "brand innovation"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and principal of Modern Arena; branding instructor at University of Oregon",
+    "links": {
+      "bio": "https://www.amazon.com/stores/author/B09BBTYN7L"
+    }
+  },
+  {
+    "id": "reshma-saujani",
+    "name": "Reshma Saujani",
+    "portrait": "/portraits/reshma-saujani.jpg",
+    "portrait2x": "/portraits/reshma-saujani@2x.jpg",
+    "portraitBrightness": 0.127,
+    "credibilityLine": "Founder of Girls Who Code (nonprofit reaching millions of women in tech); author of Pay Up; Yale Law School graduate; Harvard Kennedy School Master's degree; ran for U.S. Congress in 2010.",
+    "fields": [
+      "women in tech",
+      "nonprofit leadership",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Girls Who Code",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Reshma_Saujani"
+    }
+  },
+  {
+    "id": "michael-horvath",
+    "name": "Michael Horvath",
+    "portrait": "/portraits/michael-horvath.jpg",
+    "portrait2x": "/portraits/michael-horvath@2x.jpg",
+    "portraitBrightness": 0.112,
+    "credibilityLine": "Co-founder and former CEO of Strava; former assistant professor of economics at Stanford University and Tuck School of Business at Dartmouth College; PhD in economics from Northwestern University; captain of lightweight rowing crew at Harvard University.",
+    "fields": [
+      "fitness",
+      "entrepreneurship",
+      "leadership"
+    ],
+    "roles": [
+      "founder",
+      "academic",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder of Strava",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Michael_Horvath"
+    }
+  },
+  {
+    "id": "chris-voss",
+    "name": "Chris Voss",
+    "portrait": "/portraits/chris-voss.jpg",
+    "portrait2x": "/portraits/chris-voss@2x.jpg",
+    "portraitBrightness": 0.146,
+    "credibilityLine": "Former lead negotiator for FBI; author of Never Split the Difference, millions of copies sold worldwide; CEO of The Black Swan Group; adjunct professor at Harvard Law School and Georgetown McDonough School of Business; member of NYC Joint Terrorism Task Force 1986–2000; involved in 1993 World Trade Center bombing investigation and 1996 TWA Flight 800 investigation.",
+    "fields": [
+      "negotiation",
+      "psychology",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "academic"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of The Black Swan Group; adjunct professor, Harvard Law School and Georgetown McDonough School of Business",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Christopher_Voss"
+    }
+  },
+  {
+    "id": "tom-bilyeu",
+    "name": "Tom Bilyeu",
+    "portrait": "/portraits/tom-bilyeu.jpg",
+    "portrait2x": "/portraits/tom-bilyeu@2x.jpg",
+    "portraitBrightness": 0.099,
+    "credibilityLine": "Co-founder of Quest Nutrition, a billion-dollar company built in roughly 5 years; CEO and co-founder of Impact Theory media studio; filmmaker and serial entrepreneur.",
+    "fields": [
+      "entrepreneurship",
+      "mindset",
+      "business strategy",
+      "media"
+    ],
+    "roles": [
+      "entrepreneur",
+      "filmmaker",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO and co-founder of Impact Theory media studio",
+    "links": {
+      "bio": "https://premierespeakers.com/speakers/tom-bilyeu"
+    }
+  },
+  {
+    "id": "tim-grover",
+    "name": "Tim Grover",
+    "portrait": "/portraits/tim-grover.jpg",
+    "portrait2x": "/portraits/tim-grover@2x.jpg",
+    "portraitBrightness": 0.156,
+    "credibilityLine": "Trainer to Michael Jordan and Kobe Bryant; author of Winning; founder and owner of Attack Athletics",
+    "fields": [
+      "sports performance",
+      "psychology",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Owner and Performance Expert, Attack Athletics",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tim_Grover"
+    }
+  },
+  {
+    "id": "matthew-hussey",
+    "name": "Matthew Hussey",
+    "portrait": "/portraits/matthew-hussey.jpg",
+    "portrait2x": "/portraits/matthew-hussey@2x.jpg",
+    "portraitBrightness": 0.153,
+    "credibilityLine": "Dating coach and author; wrote Get the Guy (2013) and Love Life: How to Raise Your Standards, Find Your Person, and Live Happily (2024); built large following through online tutorials and seminars; advised celebrities including Eva Longoria and Tyra Banks.",
+    "fields": [
+      "dating",
+      "relationships",
+      "psychology"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Dating coach and relationship expert; YouTuber and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Matthew_Hussey"
+    }
+  },
+  {
+    "id": "payal-kadakia",
+    "name": "Payal Kadakia",
+    "portrait": "/portraits/payal-kadakia.jpg",
+    "portrait2x": "/portraits/payal-kadakia@2x.jpg",
+    "portraitBrightness": 0.117,
+    "credibilityLine": "Founder of ClassPass, a billion-dollar fitness and wellness platform; author of LifePass; trained dancer and MIT graduate",
+    "fields": [
+      "fitness",
+      "wellness",
+      "entrepreneurship",
+      "technology"
+    ],
+    "roles": [
+      "founder",
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Executive Chairman of ClassPass",
+    "links": {
+      "bio": "https://studyinternational.com/news/classpass-founder-payal-kadakia/"
+    }
+  },
+  {
+    "id": "marcus-buckingham",
+    "name": "Marcus Buckingham",
+    "portrait": "/portraits/marcus-buckingham.jpg",
+    "portrait2x": "/portraits/marcus-buckingham@2x.jpg",
+    "portraitBrightness": 0.186,
+    "credibilityLine": "Author of First, Break All The Rules, Nine Lies About Work, and Love + Work; researcher on strengths and leadership at work; leads research at the ADP Research Institute.",
+    "fields": [
+      "leadership",
+      "strengths research",
+      "career development"
+    ],
+    "roles": [
+      "author",
+      "researcher",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Research leader at the ADP Research Institute",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Marcus_Buckingham"
+    }
+  },
+  {
+    "id": "jessie-j",
+    "name": "Jessie J",
+    "portrait": "/portraits/jessie-j.jpg",
+    "portrait2x": "/portraits/jessie-j@2x.jpg",
+    "portraitBrightness": 0.125,
+    "credibilityLine": "Singer and songwriter since age 11; debuted with \"Do It Like A Dude\" (2010); sold over 20 million singles and 3 million albums worldwide; judge on The Voice and The Voice Kids; performed at London Olympics closing ceremony; 2011 Critics' Choice Brit Award winner and BBC Sound of 2011",
+    "fields": [
+      "music",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Singer and songwriter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jessie_J"
+    }
+  },
+  {
+    "id": "terry-crews",
+    "name": "Terry Crews",
+    "portrait": "/portraits/terry-crews.jpg",
+    "portrait2x": "/portraits/terry-crews@2x.jpg",
+    "portraitBrightness": 0.077,
+    "credibilityLine": "NFL player for Los Angeles Rams, San Diego Chargers, and Washington Redskins; starred in Brooklyn Nine-Nine, White Chicks, and Idiocracy; hosted America's Got Talent since 2019; author of Tough: My Journey to True Power; named Time Person of the Year 2017 for MeToo movement.",
+    "fields": [
+      "entertainment",
+      "mental health advocacy"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Actor, television host, and America's Got Talent host",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Terry_Crews"
+    }
+  },
+  {
+    "id": "piers-morgan",
+    "name": "Piers Morgan",
+    "portrait": "/portraits/piers-morgan.jpg",
+    "portrait2x": "/portraits/piers-morgan@2x.jpg",
+    "portraitBrightness": 0.157,
+    "credibilityLine": "Youngest editor of a British national newspaper (News of the World, age 29); edited the Daily Mirror; hosted Piers Morgan Live on CNN; co-hosted Good Morning Britain on ITV; judge on America's Got Talent and Britain's Got Talent; won The Celebrity Apprentice; founder of Piers Morgan Uncensored on YouTube.",
+    "fields": [
+      "media",
+      "journalism",
+      "broadcasting"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Television host and journalist; founder of Piers Morgan Uncensored on YouTube",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Piers_Morgan"
+    }
+  },
+  {
+    "id": "lilly-singh",
+    "name": "Lilly Singh",
+    "portrait": "/portraits/lilly-singh.jpg",
+    "portrait2x": "/portraits/lilly-singh@2x.jpg",
+    "portraitBrightness": 0.177,
+    "credibilityLine": "YouTube creator with 19+ million subscribers under username Superwoman; author of How to Be a Bawse (New York Times bestseller) and Be a Triangle; first person of Indian descent to host an American late-night talk show (NBC's A Little Late with Lilly Singh, 2019–2021); released documentary A Trip to Unicorn Island.",
+    "fields": [
+      "psychology",
+      "leadership",
+      "media"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "YouTuber, actress, and content creator",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Lilly_Singh"
+    }
+  },
+  {
+    "id": "craig-david",
+    "name": "Craig David",
+    "portrait": "/portraits/craig-david.jpg",
+    "portrait2x": "/portraits/craig-david@2x.jpg",
+    "portraitBrightness": 0.385,
+    "credibilityLine": "English singer who rose to fame in 1999 with \"Re-Rewind\"; released debut album Born to Do It (2000); released nine studio albums and collaborated with Sting, Tinchy Stryder, and Tiwa Savage",
+    "fields": [
+      "music",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Singer and recording artist",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Craig_David"
+    }
+  },
+  {
+    "id": "lewis-howes",
+    "name": "Lewis Howes",
+    "portrait": "/portraits/lewis-howes.jpg",
+    "portrait2x": "/portraits/lewis-howes@2x.jpg",
+    "portraitBrightness": 0.301,
+    "credibilityLine": "New York Times bestselling author; host of The School of Greatness podcast (100+ million downloads, 1000+ episodes since 2013); former professional football player and All-American athlete",
+    "fields": [
+      "psychology",
+      "mental-health",
+      "leadership",
+      "personal development"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Podcast host and author",
+    "links": {
+      "bio": "https://lewishowes.com/about/"
+    }
+  },
+  {
+    "id": "karren-brady",
+    "name": "Karren Brady",
+    "portrait": "/portraits/karren-brady.jpg",
+    "portrait2x": "/portraits/karren-brady@2x.jpg",
+    "portraitBrightness": 0.381,
+    "credibilityLine": "Managing director of Birmingham City F.C. at 23, youngest managing director of a UK plc; Vice Chairman of West Ham United; regular panelist on BBC One's The Apprentice; Conservative member of the House of Lords; author of four books; Small Business Ambassador for UK government",
+    "fields": [
+      "business",
+      "leadership",
+      "sports management"
+    ],
+    "roles": [
+      "businesswoman",
+      "practitioner",
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Vice Chairman of West Ham United F.C.",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Karren_Brady"
+    }
+  },
+  {
+    "id": "wretch-32",
+    "name": "Wretch 32",
+    "portrait": "/portraits/wretch-32.jpg",
+    "portrait2x": "/portraits/wretch-32@2x.jpg",
+    "portraitBrightness": 0.351,
+    "credibilityLine": "British rapper from Tottenham; number-one UK single \"Don't Go\"; 2012 BET Award for Best International Act; co-founder of Green Machine CBD company",
+    "fields": [
+      "music",
+      "business",
+      "culture"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "British rapper and co-founder of Green Machine",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Wretch_32"
+    }
+  },
+  {
+    "id": "jonny-wilkinson",
+    "name": "Jonny Wilkinson",
+    "portrait": "/portraits/jonny-wilkinson.jpg",
+    "portrait2x": "/portraits/jonny-wilkinson@2x.jpg",
+    "portraitBrightness": 0.392,
+    "credibilityLine": "Former England rugby union fly-half; scored the winning drop goal in the 2003 Rugby World Cup final; won 91 caps for England; Premiership top point-scorer for Newcastle Falcons; won the Heineken Cup twice and Top 14 championship with Toulon.",
+    "fields": [
+      "rugby",
+      "mental health",
+      "identity"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Former professional rugby player; podcast host (I Am with Jonny Wilkinson)",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jonny_Wilkinson"
+    }
+  },
+  {
+    "id": "daniel-pink",
+    "name": "Daniel Pink",
+    "portrait": "/portraits/daniel-pink.jpg",
+    "portrait2x": "/portraits/daniel-pink@2x.jpg",
+    "portraitBrightness": 0.257,
+    "credibilityLine": "Author of seven New York Times bestsellers including Drive, When, To Sell Is Human, and The Power of Regret; former chief speechwriter for Vice President Al Gore; host of National Geographic's Crowd Control",
+    "fields": [
+      "psychology",
+      "motivation",
+      "productivity"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Bestselling author and keynote speaker",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Daniel_H._Pink"
+    }
+  },
+  {
+    "id": "rangan-chatterjee",
+    "name": "Rangan Chatterjee",
+    "portrait": "/portraits/rangan-chatterjee.jpg",
+    "portrait2x": "/portraits/rangan-chatterjee@2x.jpg",
+    "portraitBrightness": 0.255,
+    "credibilityLine": "British physician and author; host of podcast Feel Better, Live More; resident doctor on BBC Breakfast; authored The 4 Pillar Plan, How to Make Disease Disappear, The Stress Solution, Feel Better in 5, Feel Great Lose Weight, and Happy Mind, Happy Life; television presenter on Doctor in the House.",
+    "fields": [
+      "psychology",
+      "health",
+      "wellness"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Physician, podcast host, and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Rangan_Chatterjee"
+    }
+  },
+  {
+    "id": "diplo",
+    "name": "Diplo",
+    "portrait": "/portraits/diplo.jpg",
+    "portrait2x": "/portraits/diplo@2x.jpg",
+    "portraitBrightness": 0.38,
+    "credibilityLine": "Co-creator and lead member of Major Lazer; member of Silk City with Mark Ronson, Jack Ü with Skrillex, and LSD with Labrinth and Sia; founded record label Mad Decent and nonprofit Heaps Decent; produced for BTS, Blackpink, Britney Spears, Madonna, Beyoncé, and numerous mainstream acts.",
+    "fields": [
+      "electronic music",
+      "music production",
+      "DJ culture"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "DJ and music producer",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Diplo"
+    }
+  },
+  {
+    "id": "jaackmaate",
+    "name": "Jaackmaate",
+    "portrait": "/portraits/jaackmaate.jpg",
+    "portrait2x": "/portraits/jaackmaate@2x.jpg",
+    "portraitBrightness": 0.33,
+    "credibilityLine": "YouTuber and podcast host; host of JaackMaate's Happy Hour Podcast, a top-charted comedy show on Spotify; listed No. 88 in The Sunday Times' 100 most influential UK online creators (2019).",
+    "fields": [
+      "comedy",
+      "mental health",
+      "online media"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Podcast host and content creator; host of JaackMaate's Happy Hour Podcast",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/JaackMaate"
+    }
+  },
+  {
+    "id": "israel-adesanya",
+    "name": "Israel Adesanya",
+    "portrait": "/portraits/israel-adesanya.jpg",
+    "portrait2x": "/portraits/israel-adesanya@2x.jpg",
+    "portraitBrightness": 0.41,
+    "credibilityLine": "Former two-time UFC Middleweight Champion; former Glory Middleweight Championship title challenger in kickboxing; professional mixed martial artist and boxer.",
+    "fields": [
+      "martial arts",
+      "combat sports"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Professional Mixed Martial Artist, UFC Middleweight Division",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Israel_Adesanya"
+    }
+  },
+  {
+    "id": "oliver-burkeman",
+    "name": "Oliver Burkeman",
+    "portrait": "/portraits/oliver-burkeman.jpg",
+    "portrait2x": "/portraits/oliver-burkeman@2x.jpg",
+    "portraitBrightness": 0.284,
+    "credibilityLine": "British author and journalist; wrote weekly psychology column \"This Column Will Change Your Life\" for The Guardian (2006–2020); author of Four Thousand Weeks: Time Management for Mortals; shortlisted for Orwell Prize in 2006.",
+    "fields": [
+      "psychology",
+      "productivity",
+      "philosophy"
+    ],
+    "roles": [
+      "author",
+      "journalist",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and newsletter writer (Imperfectionist)",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Oliver_Burkeman"
+    }
+  },
+  {
+    "id": "john-caudwell",
+    "name": "John Caudwell",
+    "portrait": "/portraits/john-caudwell.jpg",
+    "portrait2x": "/portraits/john-caudwell@2x.jpg",
+    "portraitBrightness": 0.323,
+    "credibilityLine": "Founder of Phones 4u; billionaire businessman with net worth of approximately $2.8 billion; chairs Caudwell Children charity; investor in fashion, property, and other industries",
+    "fields": [
+      "business",
+      "entrepreneurship",
+      "philanthropy"
+    ],
+    "roles": [
+      "founder",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Chairman, Caudwell Group",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/John_Caudwell"
+    }
+  },
+  {
+    "id": "roman-kemp",
+    "name": "Roman Kemp",
+    "portrait": "/portraits/roman-kemp.jpg",
+    "portrait2x": "/portraits/roman-kemp@2x.jpg",
+    "portraitBrightness": 0.216,
+    "credibilityLine": "Capital FM breakfast radio host; television presenter on The One Show, I'm a Celebrity Get Me Out of Here, Celebrity Gogglebox, and Soccer Aid; created and supports Joe's Buddy Line mental health charity",
+    "fields": [
+      "media",
+      "mental-health"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Breakfast Radio Host, Capital FM",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Roman_Kemp"
+    }
+  },
+  {
+    "id": "julie-smith",
+    "name": "Dr Julie Smith",
+    "portrait": "/portraits/julie-smith.jpg",
+    "portrait2x": "/portraits/julie-smith@2x.jpg",
+    "portraitBrightness": 0.386,
+    "credibilityLine": "Clinical Psychologist with NHS experience; mental health educator and content creator",
+    "fields": [
+      "mental health",
+      "psychology",
+      "anxiety",
+      "clinical psychology"
+    ],
+    "roles": [
+      "clinician",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Clinical Psychologist",
+    "links": {
+      "bio": "https://uk.linkedin.com/in/drjuliesmith"
+    }
+  },
+  {
+    "id": "matt-hancock",
+    "name": "Matt Hancock",
+    "portrait": "/portraits/matt-hancock.jpg",
+    "portrait2x": "/portraits/matt-hancock@2x.jpg",
+    "portraitBrightness": 0.252,
+    "credibilityLine": "UK Member of Parliament for West Suffolk (2010–2024); Secretary of State for Health and Social Care (2018–2021) during COVID-19 pandemic response; economist at Bank of England; senior economic adviser to George Osborne.",
+    "fields": [
+      "politics",
+      "health policy",
+      "economics"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Former Secretary of State for Health and Social Care; former MP for West Suffolk",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Matt_Hancock"
+    }
+  },
+  {
+    "id": "rochelle-humes",
+    "name": "Rochelle Humes",
+    "portrait": "/portraits/rochelle-humes.jpg",
+    "portrait2x": "/portraits/rochelle-humes@2x.jpg",
+    "portraitBrightness": 0.354,
+    "credibilityLine": "Singer and television presenter; member of S Club Juniors and The Saturdays; co-presenter of Ninja Warrior UK and The Hit List; founder of My Little Coco",
+    "fields": [
+      "entertainment",
+      "business"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Television presenter and entrepreneur",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Rochelle_Humes"
+    }
+  },
+  {
+    "id": "michael-acton-smith",
+    "name": "Michael Acton Smith",
+    "portrait": "/portraits/michael-acton-smith.jpg",
+    "portrait2x": "/portraits/michael-acton-smith@2x.jpg",
+    "portraitBrightness": 0.44,
+    "credibilityLine": "Co-founder and co-CEO of Calm; founder of Firebox.com; founder and chairman of Mind Candy (creator of Moshi Monsters); OBE recipient",
+    "fields": [
+      "meditation",
+      "mental health",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-CEO and co-founder, Calm",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Michael_Acton_Smith"
+    }
+  },
+  {
+    "id": "fearne-cotton",
+    "name": "Fearne Cotton",
+    "portrait": "/portraits/fearne-cotton.jpg",
+    "portrait2x": "/portraits/fearne-cotton@2x.jpg",
+    "portraitBrightness": 0.264,
+    "credibilityLine": "BBC Radio 1 presenter (2009–2015); BBC Radio 2 presenter (2016–present); creator and host of Happy Place podcast; author of eight self-help books including Speak Your Truth",
+    "fields": [
+      "psychology",
+      "mental-health",
+      "wellbeing"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Podcast host and author, Happy Place",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Fearne_Cotton"
+    }
+  },
+  {
+    "id": "david-brailsford",
+    "name": "David Brailsford",
+    "portrait": "/portraits/david-brailsford.jpg",
+    "portrait2x": "/portraits/david-brailsford@2x.jpg",
+    "portraitBrightness": 0.297,
+    "credibilityLine": "British sports director; performance director of British Cycling 1997–2014; team principal of UCI WorldTeam INEOS Grenadiers; Director of Sport at INEOS with roles at Manchester United and Nice FC.",
+    "fields": [
+      "leadership",
+      "sports management",
+      "performance optimization"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Team Principal, INEOS Grenadiers; Director of Sport, INEOS",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Dave_Brailsford"
+    }
+  },
+  {
+    "id": "ben-francis",
+    "name": "Ben Francis",
+    "portrait": "/portraits/ben-francis.jpg",
+    "portrait2x": "/portraits/ben-francis@2x.jpg",
+    "portraitBrightness": 0.283,
+    "credibilityLine": "Co-founder and CEO of Gymshark, fitness apparel company valued at $1.45 billion; appointed Member of the Order of the British Empire (MBE) in 2023 for services to the business sector",
+    "fields": [
+      "entrepreneurship",
+      "business leadership",
+      "fitness/apparel"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO and Majority Owner, Gymshark",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ben_Francis"
+    }
+  },
+  {
+    "id": "mark-manson",
+    "name": "Mark Manson",
+    "portrait": "/portraits/mark-manson.jpg",
+    "portrait2x": "/portraits/mark-manson@2x.jpg",
+    "portraitBrightness": 0.308,
+    "credibilityLine": "Author of The Subtle Art of Not Giving a F*ck, Everything Is F*cked, and Will (all New York Times bestsellers); founded markmanson.net, a widely-read life and psychology blog",
+    "fields": [
+      "psychology",
+      "self-help",
+      "relationships"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and life coach",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Mark_Manson"
+    }
+  },
+  {
+    "id": "molly-mae-hague",
+    "name": "Molly Mae Hague",
+    "portrait": "/portraits/molly-mae-hague.jpg",
+    "portrait2x": "/portraits/molly-mae-hague@2x.jpg",
+    "portraitBrightness": 0.352,
+    "credibilityLine": "Love Island fifth series runner-up; Creative Director of PrettyLittleThing; launched clothing brand Maebe in 2024; social media influencer with millions of followers.",
+    "fields": [
+      "business",
+      "fashion",
+      "media"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Creative Director, Maebe; formerly Creative Director of PrettyLittleThing",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Molly-Mae_Hague"
+    }
+  },
+  {
+    "id": "russell-howard",
+    "name": "Russell Howard",
+    "portrait": "/portraits/russell-howard.jpg",
+    "portrait2x": "/portraits/russell-howard@2x.jpg",
+    "portraitBrightness": 0.319,
+    "credibilityLine": "English comedian and television presenter; hosted Russell Howard's Good News and The Russell Howard Hour; appeared on Mock the Week; won Best Compère at 2006 Chortle Awards; nominated for Edinburgh Comedy Award 2006",
+    "fields": [
+      "comedy",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Comedian, television and radio presenter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Russell_Howard"
+    }
+  },
+  {
+    "id": "anne-boden",
+    "name": "Anne Boden",
+    "portrait": "/portraits/anne-boden.jpg",
+    "portrait2x": "/portraits/anne-boden@2x.jpg",
+    "portraitBrightness": 0.317,
+    "credibilityLine": "Founder and former CEO of Starling Bank; first woman to found a British bank; received MBE for services to financial technology; author of Banking: How I Disrupted An Industry.",
+    "fields": [
+      "fintech",
+      "banking",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "founder",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Starling Bank",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Anne_Boden"
+    }
+  },
+  {
+    "id": "patrice-evra",
+    "name": "Patrice Evra",
+    "portrait": "/portraits/patrice-evra.jpg",
+    "portrait2x": "/portraits/patrice-evra@2x.jpg",
+    "portraitBrightness": 0.32,
+    "credibilityLine": "Former professional footballer; captain of Manchester United and France national team; named in PFA Team of the Year three times; won five Premier League titles, one UEFA Champions League, and 14 trophies with Manchester United; author of autobiography",
+    "fields": [
+      "sports",
+      "mental health"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Former professional footballer and media personality",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Patrice_Evra"
+    }
+  },
+  {
+    "id": "jamil-qureshi",
+    "name": "Jamil Qureshi",
+    "portrait": "/portraits/jamil-qureshi.jpg",
+    "portrait2x": "/portraits/jamil-qureshi@2x.jpg",
+    "portraitBrightness": 0.27,
+    "credibilityLine": "Performance psychologist and keynote speaker; worked with elite athletes (including 6 world number 1s, 22 top-50 golfers, Premier League and Formula 1 drivers) and Fortune 500 companies; delivered over 1000 talks in 24 countries.",
+    "fields": [
+      "performance psychology",
+      "high-performance coaching",
+      "business leadership",
+      "elite sports psychology"
+    ],
+    "roles": [
+      "practitioner",
+      "speaker",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Performance Psychologist, Speaker, and Coach",
+    "links": {
+      "bio": "https://www.jamilqureshi.com/"
+    }
+  },
+  {
+    "id": "elizabeth-day",
+    "name": "Elizabeth Day",
+    "portrait": "/portraits/elizabeth-day.jpg",
+    "portrait2x": "/portraits/elizabeth-day@2x.jpg",
+    "portraitBrightness": 0.27,
+    "credibilityLine": "Feature writer for The Observer; author of nine books including Eat Up and How to Fail; host of the podcast How to Fail with Elizabeth Day; Fellow of the Royal Society of Literature",
+    "fields": [
+      "psychology",
+      "mental health",
+      "self-improvement"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Podcast host and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Day"
+    }
+  },
+  {
+    "id": "matthew-syed",
+    "name": "Matthew Syed",
+    "portrait": "/portraits/matthew-syed.jpg",
+    "portrait2x": "/portraits/matthew-syed@2x.jpg",
+    "portraitBrightness": 0.27,
+    "credibilityLine": "English writer and journalist at The Times since 1999; three-time Commonwealth Table Tennis Champion; competed for Great Britain in Olympics (Barcelona 1992, Sydney 2000); author of multiple books including Bounce and Black Box Thinking",
+    "fields": [
+      "psychology",
+      "performance",
+      "sports"
+    ],
+    "roles": [
+      "author",
+      "journalist",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Writer and journalist at The Times",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Matthew_Syed"
+    }
+  },
+  {
+    "id": "anna-hemmings",
+    "name": "Anna Hemmings",
+    "portrait": "/portraits/anna-hemmings.jpg",
+    "portrait2x": "/portraits/anna-hemmings@2x.jpg",
+    "portraitBrightness": 0.27,
+    "credibilityLine": "British Olympic kayaker and marathon canoeing champion; six-time world championship gold medalist; MBE appointed 2010; motivational speaker on resilience and overcoming adversity",
+    "fields": [
+      "psychology",
+      "mental-health",
+      "performance"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Motivational speaker and performance consultant",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Anna_Hemmings"
+    }
+  },
+  {
+    "id": "david-gandy",
+    "name": "David Gandy",
+    "portrait": "/portraits/david-gandy.jpg",
+    "portrait2x": "/portraits/david-gandy@2x.jpg",
+    "portraitBrightness": 0.391,
+    "credibilityLine": "Highest-grossing male model in history; lead male model for Dolce & Gabbana for over a decade; only male to feature on Forbes' highest-paid models list multiple times; creative director of his eponymous brand",
+    "fields": [
+      "fashion",
+      "mental health",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Creative Director, David Gandy Well Wear",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/David_Gandy"
+    }
+  },
+  {
+    "id": "jacqueline-gold",
+    "name": "Jacqueline Gold",
+    "portrait": "/portraits/jacqueline-gold.jpg",
+    "portrait2x": "/portraits/jacqueline-gold@2x.jpg",
+    "portraitBrightness": 0.309,
+    "credibilityLine": "Executive chair of Gold Group International, Ann Summers and Knickerbox; CBE recipient; estimated 16th richest woman in Great Britain (£470 million, 2019)",
+    "fields": [
+      "business",
+      "leadership",
+      "retail"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Executive Chair, Gold Group International",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jacqueline_Gold"
+    }
+  },
+  {
+    "id": "marcia-kilgore",
+    "name": "Marcia Kilgore",
+    "portrait": "/portraits/marcia-kilgore.jpg",
+    "portrait2x": "/portraits/marcia-kilgore@2x.jpg",
+    "portraitBrightness": 0.225,
+    "credibilityLine": "Founder of Bliss, Soap and Glory, FitFlop, and Beauty Pie; Canadian entrepreneur in beauty and footwear industries.",
+    "fields": [
+      "entrepreneurship",
+      "beauty",
+      "business"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Entrepreneur and founder",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Marcia_Kilgore"
+    }
+  },
+  {
+    "id": "sebastian-siemiatkowski",
+    "name": "Sebastian Siemiatkowski",
+    "portrait": "/portraits/sebastian-siemiatkowski.jpg",
+    "portrait2x": "/portraits/sebastian-siemiatkowski@2x.jpg",
+    "portraitBrightness": 0.222,
+    "credibilityLine": "Co-founder and CEO of Klarna; Swedish entrepreneur; peak valuation of Klarna at $46 billion.",
+    "fields": [
+      "fintech",
+      "entrepreneurship",
+      "e-commerce"
+    ],
+    "roles": [
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder and Chief Executive Officer, Klarna",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Sebastian_Siemiatkowski"
+    }
+  },
+  {
+    "id": "nick-jenkins",
+    "name": "Nick Jenkins",
+    "portrait": "/portraits/nick-jenkins.jpg",
+    "portrait2x": "/portraits/nick-jenkins@2x.jpg",
+    "portraitBrightness": 0.297,
+    "credibilityLine": "Founded Moonpig in 2000, selling it for an estimated £120 million in 2011; investor in start-up businesses and member of Impact Ventures UK investment committee; appeared as a dragon on BBC Two's Dragons' Den.",
+    "fields": [
+      "entrepreneurship",
+      "business",
+      "e-commerce"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Investor and entrepreneur",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Nick_Jenkins"
+    }
+  },
+  {
+    "id": "arun-maini",
+    "name": "Arun Maini",
+    "portrait": "/portraits/arun-maini.jpg",
+    "portrait2x": "/portraits/arun-maini@2x.jpg",
+    "portraitBrightness": 0.255,
+    "credibilityLine": "British tech YouTuber (Mrwhosetheboss); over 10 million subscribers; economics degree from University of Warwick",
+    "fields": [
+      "technology",
+      "gadgets",
+      "consumer electronics"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "YouTuber and tech content creator",
+    "links": {
+      "bio": "https://wikibio.in/arun-maini/"
+    }
+  },
+  {
+    "id": "ali-abdaal",
+    "name": "Ali Abdaal",
+    "portrait": "/portraits/ali-abdaal.jpg",
+    "portrait2x": "/portraits/ali-abdaal@2x.jpg",
+    "portraitBrightness": 0.32,
+    "credibilityLine": "Doctor turned YouTuber; author of Feel-Good Productivity (New York Times bestseller); 6M+ YouTube subscribers.",
+    "fields": [
+      "productivity",
+      "psychology",
+      "medical education"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Content creator, entrepreneur, and author",
+    "links": {
+      "bio": "https://aliabdaal.com/about/"
+    }
+  },
+  {
+    "id": "holly-tucker",
+    "name": "Holly Tucker",
+    "portrait": "/portraits/holly-tucker.jpg",
+    "portrait2x": "/portraits/holly-tucker@2x.jpg",
+    "portraitBrightness": 0.383,
+    "credibilityLine": "Co-founder of Notonthehighstreet.com; founder of Holly & Co; author of Do What You Love, Love What You Do; appointed MBE in 2013 for services to small businesses; UK Prime Minister's Business Ambassador 2015.",
+    "fields": [
+      "entrepreneurship",
+      "small business",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder of Holly & Co; podcast host and business advocate",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Holly_Tucker"
+    }
+  },
+  {
+    "id": "patricia-bright",
+    "name": "Patricia Bright",
+    "portrait": "/portraits/patricia-bright.jpg",
+    "portrait2x": "/portraits/patricia-bright@2x.jpg",
+    "portraitBrightness": 0.295,
+    "credibilityLine": "Beauty content creator, YouTuber, and entrepreneur with 2.6M+ YouTube subscribers; featured in British Vogue and Glamour; educated in Chemistry, Biology, Psychology, and Finance & Accounting",
+    "fields": [
+      "beauty",
+      "content creation",
+      "entrepreneurship",
+      "digital media"
+    ],
+    "roles": [
+      "content-creator",
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Content Creator and Entrepreneur",
+    "links": {
+      "bio": "https://www.famousbirthdays.com/people/patricia-bright.html"
+    }
+  },
+  {
+    "id": "reggie-yates",
+    "name": "Reggie Yates",
+    "portrait": "/portraits/reggie-yates.jpg",
+    "portrait2x": "/portraits/reggie-yates@2x.jpg",
+    "portraitBrightness": 0.466,
+    "credibilityLine": "British television presenter, actor, writer and director; played Leo Jones in Doctor Who; hosted The Voice UK; created and directed feature film Pirates",
+    "fields": [
+      "leadership",
+      "media",
+      "psychology"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Television presenter, actor, writer and director",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Reggie_Yates"
+    }
+  },
+  {
+    "id": "alex-george",
+    "name": "Dr Alex George",
+    "portrait": "/portraits/alex-george.jpg",
+    "portrait2x": "/portraits/alex-george@2x.jpg",
+    "portraitBrightness": 0.379,
+    "credibilityLine": "Former A&E doctor at University Hospital Lewisham; UK government youth mental health ambassador (2021); author and mental health campaigner",
+    "fields": [
+      "mental health",
+      "healthcare leadership"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and Mental Health Campaigner",
+    "links": {
+      "bio": "https://www.theguardian.com/lifeandstyle/2025/dec/25/dr-alex-george-gp-mental-health-campaigner-looks-back-interview"
+    }
+  },
+  {
+    "id": "will-shu",
+    "name": "Will Shu",
+    "portrait": "/portraits/will-shu.jpg",
+    "portrait2x": "/portraits/will-shu@2x.jpg",
+    "portraitBrightness": 0.35,
+    "credibilityLine": "Co-founder and Chief Executive of Deliveroo; MBA from Wharton School of the University of Pennsylvania; previously analyst at Morgan Stanley and S.A.C. Capital Advisors",
+    "fields": [
+      "business",
+      "entrepreneurship",
+      "leadership"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder and Chief Executive Officer, Deliveroo",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Will_Shu"
+    }
+  },
+  {
+    "id": "true-geordie",
+    "name": "Brian",
+    "portrait": "/portraits/true-geordie.jpg",
+    "portrait2x": "/portraits/true-geordie@2x.jpg",
+    "portraitBrightness": 0.379,
+    "credibilityLine": "Content creator and mental health advocate; founded True Geordie YouTube channel",
+    "fields": [
+      "mental health",
+      "content creation",
+      "personal development"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "YouTuber and podcaster",
+    "links": {}
+  },
+  {
+    "id": "tom-blomfield",
+    "name": "Tom Blomfield",
+    "portrait": "/portraits/tom-blomfield.jpg",
+    "portrait2x": "/portraits/tom-blomfield@2x.jpg",
+    "portraitBrightness": 0.288,
+    "credibilityLine": "Founded Monzo, a mobile-first digital bank; group partner at Y Combinator; previously founded Boso.com; degree in law from University of Oxford",
+    "fields": [
+      "fintech",
+      "entrepreneurship",
+      "digital banking"
+    ],
+    "roles": [
+      "entrepreneur",
+      "founder",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Group Partner, Y Combinator",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tom_Blomfield"
+    }
+  },
+  {
+    "id": "mary-portas",
+    "name": "Mary Portas",
+    "portrait": "/portraits/mary-portas.jpg",
+    "portrait2x": "/portraits/mary-portas@2x.jpg",
+    "portraitBrightness": 0.355,
+    "credibilityLine": "English retail consultant and broadcaster; appointed by Prime Minister David Cameron to lead a review of Britain's high streets; author of Rebuild: How to thrive in the new Kindness Economy",
+    "fields": [
+      "retail",
+      "business",
+      "leadership"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Retail consultant and broadcaster",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Mary_Portas"
+    }
+  },
+  {
+    "id": "liam-payne",
+    "name": "Liam Payne",
+    "portrait": "/portraits/liam-payne.jpg",
+    "portrait2x": "/portraits/liam-payne@2x.jpg",
+    "portraitBrightness": 0.291,
+    "credibilityLine": "Member of One Direction, one of the best-selling boy bands of all time; released debut solo single \"Strip That Down\" (2017, UK #3, US Billboard Hot 100 #10); sold over 18 million singles and 2.4 million albums as solo artist.",
+    "fields": [
+      "music",
+      "entertainment"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Solo singer and songwriter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Liam_Payne"
+    }
+  },
+  {
+    "id": "ben-fogle",
+    "name": "Ben Fogle",
+    "portrait": "/portraits/ben-fogle.jpg",
+    "portrait2x": "/portraits/ben-fogle@2x.jpg",
+    "portraitBrightness": 0.387,
+    "credibilityLine": "English broadcaster and adventurer; presenter on BBC, Channel 5, and ITV; participated in Castaway 2000; author of multiple books including The Accidental Adventurer and Magnetic North; Royal Naval Reserve officer.",
+    "fields": [
+      "media",
+      "psychology",
+      "adventure"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Broadcaster and television presenter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ben_Fogle"
+    }
+  },
+  {
+    "id": "professor-green",
+    "name": "Professor Green",
+    "portrait": "/portraits/professor-green.jpg",
+    "portrait2x": "/portraits/professor-green@2x.jpg",
+    "portraitBrightness": 0.309,
+    "credibilityLine": "Multi-platinum recording artist; autobiography featured on Times bestseller list; former co-host of Lip Sync Battle UK; mental health activist and supporter of CALM suicide prevention charity",
+    "fields": [
+      "mental health",
+      "psychology",
+      "music"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Rapper, singer, songwriter, and mental health activist",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Professor_Green"
+    }
+  },
+  {
+    "id": "russell-kane",
+    "name": "Russell Kane",
+    "portrait": "/portraits/russell-kane.jpg",
+    "portrait2x": "/portraits/russell-kane@2x.jpg",
+    "portraitBrightness": 0.323,
+    "credibilityLine": "English comedian and writer; four-time Edinburgh Comedy Awards nominee, won Best Comedy Show 2010; presented Big Brother's Big Mouth, I'm a Celebrity Get Me Out of Here – Now, and hosted BBC Radio 4 series Evil Genius",
+    "fields": [
+      "comedy",
+      "psychology",
+      "longevity"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Comedian and television presenter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Russell_Kane"
+    }
+  },
+  {
+    "id": "jim-chapman",
+    "name": "Jim Chapman",
+    "portrait": "/portraits/jim-chapman.jpg",
+    "portrait2x": "/portraits/jim-chapman@2x.jpg",
+    "portraitBrightness": 0.247,
+    "credibilityLine": "English YouTuber with 2+ million subscribers; psychology graduate focused on men's fashion, grooming, and lifestyle content",
+    "fields": [
+      "psychology",
+      "fashion",
+      "lifestyle",
+      "personal development"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "YouTuber, model, and writer",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Jim_Chapman_(YouTuber)"
+    }
+  },
+  {
+    "id": "rio-ferdinand",
+    "name": "Rio Ferdinand",
+    "portrait": "/portraits/rio-ferdinand.jpg",
+    "portrait2x": "/portraits/rio-ferdinand@2x.jpg",
+    "portraitBrightness": 0.361,
+    "credibilityLine": "England international footballer with 81 caps; centre-back for Manchester United and Leeds United; one of England's greatest ever defenders; television pundit for TNT Sports",
+    "fields": [
+      "football",
+      "leadership",
+      "mental health"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Television pundit and content creator",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Rio_Ferdinand"
+    }
+  },
+  {
+    "id": "ant-middleton",
+    "name": "Ant Middleton",
+    "portrait": "/portraits/ant-middleton.jpg",
+    "portrait2x": "/portraits/ant-middleton@2x.jpg",
+    "portraitBrightness": 0.427,
+    "credibilityLine": "Former UK Special Forces soldier and Royal Marines Commando; chief instructor on Channel 4's SAS: Who Dares Wins (2015–2021); climbed Mount Everest for television; author and television personality",
+    "fields": [
+      "psychology",
+      "mental health",
+      "military"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Television personality and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ant_Middleton"
+    }
+  },
+  {
+    "id": "kate-moyle",
+    "name": "Kate Moyle",
+    "portrait": "/portraits/kate-moyle.jpg",
+    "portrait2x": "/portraits/kate-moyle@2x.jpg",
+    "portraitBrightness": 0.45,
+    "credibilityLine": "COSRT Accredited and UKCP Registered Psychosexual and Relationship Therapist; EFS & ESSM Certified Psycho-Sexologist; author of The Science of Sex (2023)",
+    "fields": [
+      "sexuality",
+      "psychology",
+      "psychotherapy",
+      "relationship therapy",
+      "sexual health"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Psychosexual and Relationship Therapist",
+    "links": {
+      "bio": "https://www.katemoyle.co.uk/about"
+    }
+  },
+  {
+    "id": "christian-angermayer",
+    "name": "Christian Angermayer",
+    "portrait": "/portraits/christian-angermayer.jpg",
+    "portrait2x": "/portraits/christian-angermayer@2x.jpg",
+    "portraitBrightness": 0.393,
+    "credibilityLine": "Founder of Apeiron Investment Group and atai Life Sciences; estimated net worth $1.2 billion; pioneer in cryptocurrency and biotechnology investing; co-founder of blockchain startup Plasma",
+    "fields": [
+      "investing",
+      "biotechnology",
+      "longevity"
+    ],
+    "roles": [
+      "investor",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Apeiron Investment Group",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Christian_Angermayer"
+    }
+  },
+  {
+    "id": "jack-maynard",
+    "name": "Jack Maynard",
+    "portrait": "/portraits/jack-maynard.jpg",
+    "portrait2x": "/portraits/jack-maynard@2x.jpg",
+    "portraitBrightness": 0.389,
+    "credibilityLine": "YouTuber and content creator; former personal trainer; appeared on I'm A Celebrity Get Me Out Of Here (2017)",
+    "fields": [
+      "mental health",
+      "trauma recovery",
+      "content creation"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Content Creator",
+    "links": {
+      "bio": "https://www.biogs.com/jack-maynard"
+    }
+  },
+  {
+    "id": "grace-beverley",
+    "name": "Grace Beverley",
+    "portrait": "/portraits/grace-beverley.jpg",
+    "portrait2x": "/portraits/grace-beverley@2x.jpg",
+    "portraitBrightness": 0.261,
+    "credibilityLine": "Founder of TALA, Shreddy, and The Productivity Method; graduated from University of Oxford with degree in music; built multi-million pound business empire while at university.",
+    "fields": [
+      "entrepreneurship",
+      "business",
+      "productivity"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and entrepreneur (TALA, Shreddy, The Productivity Method)",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Grace_Beverley"
+    }
+  },
+  {
+    "id": "ben-williams",
+    "name": "Ben Williams",
+    "portrait": "/portraits/ben-williams.jpg",
+    "portrait2x": "/portraits/ben-williams@2x.jpg",
+    "portraitBrightness": 0.282,
+    "credibilityLine": "Author of Commando Mindset; former Royal Marines commando",
+    "fields": [
+      "trauma",
+      "leadership",
+      "psychology",
+      "performance"
+    ],
+    "roles": [
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Mindset coach and performance consultant",
+    "links": {}
+  },
+  {
+    "id": "fran-millar",
+    "name": "Fran Millar",
+    "portrait": "/portraits/fran-millar.jpg",
+    "portrait2x": "/portraits/fran-millar@2x.jpg",
+    "portraitBrightness": 0.225,
+    "credibilityLine": "Former CEO of Team Ineos/Team Sky; Head of Winning Behaviours; now CEO of Belstaff",
+    "fields": [
+      "cycling",
+      "leadership",
+      "business operations"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of Belstaff",
+    "links": {
+      "bio": "http://www.atlanticspeakerbureau.com/fran-millar/speaker"
+    }
+  },
+  {
+    "id": "bruce-daisley",
+    "name": "Bruce Daisley",
+    "portrait": "/portraits/bruce-daisley.jpg",
+    "portrait2x": "/portraits/bruce-daisley@2x.jpg",
+    "portraitBrightness": 0.361,
+    "credibilityLine": "Former VP of Twitter EMEA; bestselling author; thought leader on workplace culture and future of work; podcaster (Eat Sleep Work Repeat).",
+    "fields": [
+      "workplace culture",
+      "future of work",
+      "leadership",
+      "mental health at work"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Author, communicator, and workplace culture expert",
+    "links": {
+      "bio": "https://us.londonspeakerbureau.com/speaker-profile/bruce-daisley/"
+    }
+  },
+  {
+    "id": "stephanie-romiszewski",
+    "name": "Stephanie Romiszewski",
+    "portrait": "/portraits/stephanie-romiszewski.jpg",
+    "portrait2x": "/portraits/stephanie-romiszewski@2x.jpg",
+    "portraitBrightness": 0.361,
+    "credibilityLine": "Sleep Physiologist; founder of Sleepyhead Clinic and CMO of re:sleep; BSc Psychology, MSc Behavioural Sleep Medicine; nearly two decades treating sleep disorders including work with Harvard Medical School and NASA",
+    "fields": [
+      "sleep medicine",
+      "sleep physiology",
+      "behavioral sleep medicine",
+      "insomnia treatment",
+      "circadian rhythm disorders"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Sleepyhead Clinic; CMO, re:sleep",
+    "links": {
+      "bio": "https://www.sleepyheadclinic.co.uk/stephanie-romiszewski-sleep-expert/"
+    }
+  },
+  {
+    "id": "joe-wicks",
+    "name": "Joe Wicks",
+    "portrait": "/portraits/joe-wicks.jpg",
+    "portrait2x": "/portraits/joe-wicks@2x.jpg",
+    "portraitBrightness": 0.341,
+    "credibilityLine": "British fitness coach, television presenter, and author; MBE (2020); founder of The Body Coach brand; known for HIIT training and bestselling Lean in 15 cookbooks",
+    "fields": [
+      "fitness",
+      "health",
+      "nutrition",
+      "mental health advocacy"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Fitness coach, television presenter, and entrepreneur",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Joe_Wicks_(coach)"
+    }
+  },
+  {
+    "id": "jake-humphrey",
+    "name": "Jake Humphrey",
+    "portrait": "/portraits/jake-humphrey.jpg",
+    "portrait2x": "/portraits/jake-humphrey@2x.jpg",
+    "portraitBrightness": 0.297,
+    "credibilityLine": "BBC Sport broadcaster and Formula One presenter; co-founder of television production company Whisper Group; author and entrepreneur",
+    "fields": [
+      "media",
+      "business",
+      "leadership"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Broadcaster and entrepreneur; co-founder, Whisper Group",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jake_Humphrey"
+    }
+  },
+  {
+    "id": "eddie-hearn",
+    "name": "Eddie Hearn",
+    "portrait": "/portraits/eddie-hearn.jpg",
+    "portrait2x": "/portraits/eddie-hearn@2x.jpg",
+    "portraitBrightness": 0.097,
+    "credibilityLine": "Chairman of Matchroom Sport and Professional Darts Corporation; promoted world boxing champions including Anthony Joshua, Canelo Álvarez, Gennady Golovkin, Katie Taylor, and Vasyl Lomachenko; sold Matchroom for $5 billion",
+    "fields": [
+      "sports promotion",
+      "business",
+      "boxing"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Chairman, Matchroom Sport",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Eddie_Hearn"
+    }
+  },
+  {
+    "id": "krissy-cela",
+    "name": "Krissy Cela",
+    "portrait": "/portraits/krissy-cela.jpg",
+    "portrait2x": "/portraits/krissy-cela@2x.jpg",
+    "portraitBrightness": 0.199,
+    "credibilityLine": "Personal trainer, fitness entrepreneur, and co-founder of EvolveYou fitness platform; 3+ million Instagram followers.",
+    "fields": [
+      "fitness",
+      "entrepreneurship",
+      "wellness"
+    ],
+    "roles": [
+      "practitioner",
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder, EvolveYou; fitness entrepreneur and content creator",
+    "links": {
+      "bio": "https://nationaltoday.com/birthday/krissy-cela/"
+    }
+  },
+  {
+    "id": "dr-aria",
+    "name": "Dr. Aria",
+    "portrait": "/portraits/dr-aria.jpg",
+    "portrait2x": "/portraits/dr-aria@2x.jpg",
+    "portraitBrightness": 0.297,
+    "credibilityLine": "Clinical psychologist (DClinPsy, CPsychol); Associate Fellow, British Psychological Society; expert in resilience, mindfulness, and relationships",
+    "fields": [
+      "psychology",
+      "resilience",
+      "mindfulness",
+      "relationships"
+    ],
+    "roles": [
+      "clinician",
+      "researcher",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Clinical psychologist and high-performance coach",
+    "links": {
+      "bio": "https://www.amazon.com/stores/author/B0CLP796QX"
+    }
+  },
+  {
+    "id": "dan-murray-serter",
+    "name": "Dan Murray-Serter",
+    "portrait": "/portraits/dan-murray-serter.jpg",
+    "portrait2x": "/portraits/dan-murray-serter@2x.jpg",
+    "portraitBrightness": 0.257,
+    "credibilityLine": "Co-founder of Heights; serial entrepreneur focused on neuroscience, nutrition, and brain health",
+    "fields": [
+      "mental health",
+      "neuroscience",
+      "nutrition",
+      "brain health",
+      "wellness"
+    ],
+    "roles": [
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder, Heights",
+    "links": {
+      "bio": "https://uk.linkedin.com/in/danmurrayserter"
+    }
   }
 ]
