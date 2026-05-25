@@ -1,5 +1,6 @@
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import episodesData from '@data/episodes.json';
 import guestsData from '@data/guests.json';
 import taxonomiesData from '@data/taxonomies.json';
@@ -9,6 +10,7 @@ import SiteHeader from '@/components/SiteHeader.vue';
 import FilterBar from '@/components/FilterBar.vue';
 import { useHeaderReveal } from '@/composables/useHeaderReveal.js';
 import { usePagination } from '@/composables/usePagination.js';
+import { useGridColumns } from '@/composables/useGridColumns.js';
 
 const guestsById = Object.fromEntries(guestsData.map((g) => [g.id, g]));
 const rolesById = Object.fromEntries(taxonomiesData.roles.map((r) => [r.id, r]));
@@ -37,6 +39,21 @@ function appearanceCountFor(guestId, episodeId) {
 const activeCluster = ref('all');
 const activeSubtopic = ref(null);
 const searchQuery = ref('');
+
+// EpisodeCard's topic pills link here with ?topic=<id>. Apply the filter
+// on mount and on any subsequent query change (in case the user clicks a
+// topic pill while already on the home page).
+const route = useRoute();
+function applyTopicQuery() {
+  const topicId = route.query.topic;
+  if (!topicId) return;
+  const topic = taxonomiesData.topics.find((t) => t.id === topicId);
+  if (!topic) return;
+  activeCluster.value = topic.cluster;
+  activeSubtopic.value = topic.id;
+}
+applyTopicQuery();
+watch(() => route.query.topic, applyTopicQuery);
 
 const filteredEpisodes = computed(() => {
   let list = episodesData;
@@ -136,6 +153,16 @@ const aboutOpen = ref(false);
 const resultsBarEl = ref(null);
 const { showHeader } = useHeaderReveal(resultsBarEl);
 
+// Filler tiles to round out the last row when the displayed-episode count
+// doesn't fit evenly into the current column count (e.g. 5 episodes in a
+// 2-column grid leaves 1 empty slot). Re-computes on breakpoint change.
+const { columns: gridColumns } = useGridColumns();
+const fillerCount = computed(() => {
+  if (gridColumns.value <= 1) return 0;
+  const remainder = displayedEpisodes.value.length % gridColumns.value;
+  return remainder === 0 ? 0 : gridColumns.value - remainder;
+});
+
 // Tag <body> with .is-scrolling for a short window after each scroll.
 // CSS uses this to suppress hover-triggered effects (e.g. credibility
 // expand) while the cursor passes over cards involuntarily during scroll.
@@ -220,6 +247,17 @@ onUnmounted(() => {
             :topics-by-id="topicsById"
           />
         </div>
+        <!-- Round out the last grid row with placeholder tiles when the
+             displayed-episode count doesn't divide evenly into the
+             current column count (only triggers at 2- and 3-col widths). -->
+        <div
+          v-for="n in fillerCount"
+          :key="`filler-${n}`"
+          class="card-slot filler-slot"
+          aria-hidden="true"
+        >
+          <div class="filler-card"></div>
+        </div>
       </section>
     </Transition>
 
@@ -241,13 +279,13 @@ onUnmounted(() => {
     >
       <p>
         <em>The Diary of a CEO</em> has hundreds of long-form interviews,
-        but YouTube's algorithm and loud thumbnails make it hard to find
-        the ones that match what you actually want to learn about. This
-        is a quieter way to browse and surface hidden gems from the
-        catalog:
+        but most fall out of YouTube's feed within weeks of release. The
+        back catalog is full of conversations that hold up years later:
+        they just aren't the ones the algorithm surfaces. This is a
+        calmer way to browse the whole catalog and find them:
       </p>
       <ul>
-        <li>Editorial titles and short summaries instead of clickbait.</li>
+        <li>Editorial titles and short summaries written for browsing, not for the YouTube feed.</li>
         <li>
           A credibility line for every guest (credentials, current role,
           notable books) so you can tell whether they fit the topic
@@ -486,6 +524,35 @@ main {
 .card-slot.is-stagger-target {
   animation: card-stagger-in 0.5s ease both;
   animation-delay: calc(var(--slot-index, 0) * 0.07s);
+}
+
+/* Placeholder filler tile for empty grid slots in the last row (when
+   episode count doesn't divide evenly into the column count). Matches
+   the .card surface color so the row reads as visually complete instead
+   of trailing off, with faint horizontal lines as a "this is intentional
+   empty space" cue. The lines are repeating-linear-gradient so they
+   scale with whatever row height the real cards establish. */
+.filler-slot {
+  /* card-slot already does display:grid for stretching; the filler-card
+     inside will fill the row height. */
+}
+
+.filler-card {
+  height: 100%;
+  min-height: 14rem;
+  border-radius: 8px;
+  background-color: rgba(245, 236, 214, 0.06);
+  /* Thick diagonal stripes so the slot reads as deliberate "no episode
+     here" placeholder rather than a missing card. Stripe + gap are both
+     1.25rem; alpha stays low enough that the pattern is calm against the
+     surrounding cards. */
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(245, 236, 214, 0.02) 0,
+    rgba(245, 236, 214, 0.02) 1.25rem,
+    transparent 1.25rem,
+    transparent 2.5rem
+  );
 }
 
 .load-more-wrapper {

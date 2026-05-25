@@ -6,6 +6,13 @@
     <title>DOAC episodes</title>
     <meta name="description" content="A discovery tool for The Diary of a CEO podcast." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Disable the browser's scroll-restoration *before* the browser
+         starts restoring for this navigation. Setting this later (e.g.
+         inside the deferred module script in main.js) is too late: the
+         flag only governs future navigations, not the current one. -->
+    <script>
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

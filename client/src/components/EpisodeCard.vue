@@ -1,6 +1,6 @@
 <script setup>
-import { computed, ref, onUnmounted } from 'vue';
-import { RouterLink } from 'vue-router';
+import { computed, ref, onUnmounted, watch } from 'vue';
+import { RouterLink, useRoute } from 'vue-router';
 
 const props = defineProps({
   episode: { type: Object, required: true },
@@ -76,6 +76,17 @@ const portraitSrcsetJpg = computed(() => srcset(portraitSrc.value, portrait2xSrc
 const portraitAlt = computed(() => props.guests[0]?.name || '');
 
 const expanded = ref(false);
+
+// Reset the "+N more guests" expand state whenever the route changes.
+// When vue-router reuses the same component instance across param-only
+// transitions (e.g. /guest/scott-galloway → /guest/jay-shetty), the
+// component doesn't unmount, so without this the previous expand state
+// would stick around. The watch is a no-op on full remounts (initial
+// state is already collapsed).
+const route = useRoute();
+watch(() => route.fullPath, () => {
+  expanded.value = false;
+});
 
 const extraGuests = computed(() => props.guests.slice(1));
 const hiddenGuestCount = computed(() => props.guests.length - 1);
@@ -153,13 +164,7 @@ const guestPromotionGroups = computed(() => {
 <template>
   <article class="card">
     <div class="left-col">
-      <a
-        class="portrait-link"
-        :href="episode.links.youtube"
-        target="_blank"
-        rel="noopener"
-        :aria-label="`Watch ${episode.title} on YouTube`"
-      >
+      <div class="portrait-link">
         <div class="portrait">
           <picture v-if="portraitSrc">
             <source type="image/avif" :srcset="portraitSrcsetAvif" />
@@ -176,12 +181,12 @@ const guestPromotionGroups = computed(() => {
           </picture>
           <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>
         </div>
-      </a>
+      </div>
 
       <div class="guest-block">
         <div v-if="guests[0]" :key="guests[0].id" class="guest">
           <div class="guest-name-row">
-            <span class="guest-name">{{ guests[0].name }}</span>
+            <RouterLink :to="`/guest/${guests[0].id}`" class="guest-name">{{ guests[0].name }}</RouterLink>
             <span class="appearance-pill">{{ ordinal(appearanceCounts[0]) }} appearance</span>
           </div>
           <div
@@ -200,7 +205,7 @@ const guestPromotionGroups = computed(() => {
           <div class="extra-inner">
             <div v-for="(guest, i) in extraGuests" :key="guest.id" class="guest">
               <div class="guest-name-row">
-                <span class="guest-name">{{ guest.name }}</span>
+                <RouterLink :to="`/guest/${guest.id}`" class="guest-name">{{ guest.name }}</RouterLink>
                 <span class="appearance-pill">{{ ordinal(appearanceCounts[i + 1]) }} appearance</span>
               </div>
               <div
@@ -376,6 +381,15 @@ const guestPromotionGroups = computed(() => {
   font-size: 1rem;
   font-weight: 600;
   color: #f5ecd6;
+  /* RouterLink renders an <a>; keep it looking like plain text until
+     hover so the card visual stays calm. Gold underline on hover signals
+     it's tappable through to the guest's appearance page. */
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.guest-name:hover {
+  color: #c89968;
 }
 
 .appearance-pill {
@@ -453,6 +467,21 @@ const guestPromotionGroups = computed(() => {
   max-height: max-content;
   -webkit-mask-image: linear-gradient(to bottom, #000 100%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 100%, transparent 100%);
+}
+
+/* When the user has clicked "+N more guests" to reveal secondary guests,
+   unroll every bio in the card at once. The per-bio hover-to-expand
+   behavior gets fiddly with multiple bios visible (hovering one bumps
+   the others), so once the card is in "expanded" mode just show
+   everyone's full text. */
+.card:has(.extra-guests.expanded) .credibility {
+  max-height: max-content;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.card:has(.extra-guests.expanded) .credibility.has-overflow {
+  cursor: default;
 }
 
 .content-shape {

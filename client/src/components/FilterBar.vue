@@ -290,7 +290,7 @@ onUnmounted(() => {
 
 .hint-text {
   font-family: 'Caveat', 'Comic Sans MS', cursive;
-  font-size: 1.25rem;
+  font-size: 22px;
   font-weight: 500;
   color: #c89968;
   letter-spacing: 0.01em;
