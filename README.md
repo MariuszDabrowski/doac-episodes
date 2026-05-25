@@ -95,10 +95,11 @@ specs/                    PROJECT_BRIEF, EPISODE_INGESTION, REVIEW_PAGE
 ## Automation
 
 `scripts/ingest/auto-ingest.sh` is the periodic-poll runner: refresh the
-YouTube catalog, ingest any new long-form episodes, commit + push.
+YouTube catalog and ingest any new long-form episodes. It leaves the
+changes uncommitted so you can review titles, descriptions, and
+portraits with `git diff` (or `/review`) before committing + pushing.
 Pushing fires `deploy.yml`, which builds the site and publishes to
-GitHub Pages. No review step; spot-check the commit's "files changed"
-on GitHub afterward if anything looks off.
+GitHub Pages.
 
 Workflow for "leave it running for a while":
 
@@ -107,7 +108,7 @@ cd ~/Sites/doac-episodes
 while true; do
   ./scripts/ingest/auto-ingest.sh
   echo "--- next check at $(date -v+6H '+%H:%M') ---"
-  sleep 21600   # 6h
+  sleep 21600
 done
 ```
 

@@ -1,8 +1,9 @@
 #!/bin/bash
 # Local replacement for the .github/workflows/ingest-new-episodes.yml
-# pipeline: refresh the YouTube catalog, ingest any new long-form
-# episodes, commit + push. No review step; spot-check after the fact
-# via the commit/"files changed" view on GitHub if you care to.
+# pipeline: refresh the YouTube catalog and ingest any new long-form
+# episodes. Leaves the resulting changes uncommitted so you can review
+# titles, descriptions, and portraits with `git diff` / `git status`
+# (or via /review) before committing + pushing yourself.
 #
 # Runs from a residential IP so it doesn't get the YouTube bot block
 # that kills the GitHub Action. Wire into cron/launchd for a periodic
@@ -46,10 +47,11 @@ while IFS= read -r id; do
 done <<< "$NEW"
 
 if [ "$SUCCESS" -gt 0 ]; then
-  git add data/episodes.json data/guests.json public/portraits/
-  git commit -m "Auto-ingest: $SUCCESS new episode(s)"
-  git push
-  echo "Pushed $SUCCESS new episode(s)."
+  echo ""
+  echo "Ingested $SUCCESS new episode(s). Review with:"
+  echo "  git status"
+  echo "  git diff data/episodes.json data/guests.json"
+  echo "Commit + push when you're satisfied."
 fi
 
 if [ ${#FAILED[@]} -gt 0 ]; then
