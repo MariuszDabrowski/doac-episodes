@@ -3426,28 +3426,6 @@
     }
   },
   {
-    "id": "daniel-priestly",
-    "name": "Daniel Priestly",
-    "portrait": "/portraits/daniel-priestly.jpg",
-    "portrait2x": "/portraits/daniel-priestly@2x.jpg",
-    "portraitBrightness": 0.357,
-    "credibilityLine": "Entrepreneur and business strategist; founder of Entrevo, a global business growth accelerator working with 500+ entrepreneurs annually across the UK, USA, Singapore, and Australia.",
-    "fields": [
-      "business strategy",
-      "entrepreneurship",
-      "business growth acceleration"
-    ],
-    "roles": [
-      "entrepreneur",
-      "practitioner"
-    ],
-    "credentials": [],
-    "currentRole": "Founder and CEO of Entrevo",
-    "links": {
-      "bio": "https://savvydentist.com/daniel-priestley/"
-    }
-  },
-  {
     "id": "georgia-ede",
     "name": "Dr Georgia Ede",
     "portrait": "/portraits/georgia-ede.jpg",
@@ -3795,26 +3773,6 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Luis_Elizondo"
     }
-  },
-  {
-    "id": "rena-d-malik",
-    "name": "Dr Rena D Malik",
-    "portrait": "/portraits/rena-d-malik.jpg",
-    "portrait2x": "/portraits/rena-d-malik@2x.jpg",
-    "portraitBrightness": 0.183,
-    "credibilityLine": "Urologist; sexual health expert; advises on pornography's effects on erectile dysfunction and brain health.",
-    "fields": [
-      "urology",
-      "sexual health",
-      "neuroscience"
-    ],
-    "roles": [
-      "clinician",
-      "researcher"
-    ],
-    "credentials": [],
-    "currentRole": "Urologist and Sexual Health Expert",
-    "links": {}
   },
   {
     "id": "erika-lust",
@@ -7290,27 +7248,6 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Bear_Grylls"
     }
-  },
-  {
-    "id": "mel-robins",
-    "name": "Mel Robins",
-    "portrait": "/portraits/mel-robins.jpg",
-    "portrait2x": "/portraits/mel-robins@2x.jpg",
-    "portraitBrightness": 0.308,
-    "credibilityLine": "Motivational speaker, author, and podcast host focused on psychology and behavior change.",
-    "fields": [
-      "psychology",
-      "motivation",
-      "habit change",
-      "mental health"
-    ],
-    "roles": [
-      "author",
-      "public-figure"
-    ],
-    "credentials": [],
-    "currentRole": "Motivational speaker and author",
-    "links": {}
   },
   {
     "id": "james-smith",
