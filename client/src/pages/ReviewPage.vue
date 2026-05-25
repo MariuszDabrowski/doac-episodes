@@ -326,9 +326,9 @@ onMounted(fetchEpisodes);
 }
 
 .filter-btn {
-  background: rgba(245, 236, 214, 0.04);
+  background: rgba(245, 236, 214, 0.07);
   border: 1px solid rgba(245, 236, 214, 0.12);
-  color: #c4b89f;
+  color: #d4c9ad;
   padding: 0.4rem 0.875rem;
   border-radius: 9999px;
   font-family: inherit;
@@ -342,7 +342,7 @@ onMounted(fetchEpisodes);
 }
 
 .filter-btn:hover:not(.active) {
-  background: rgba(245, 236, 214, 0.08);
+  background: rgba(245, 236, 214, 0.12);
   border-color: rgba(245, 236, 214, 0.22);
   color: #f5ecd6;
 }
@@ -419,7 +419,7 @@ onMounted(fetchEpisodes);
   row-gap: 0.875rem;
   align-items: start;
   padding: 0.875rem;
-  background: rgba(245, 236, 214, 0.03);
+  background: rgba(245, 236, 214, 0.06);
   border-radius: 8px;
 }
 
@@ -452,8 +452,8 @@ onMounted(fetchEpisodes);
      text stretches edge-to-edge and skimming is painful. */
   width: 100%;
   max-width: 38rem;
-  background: rgba(245, 236, 214, 0.04);
-  border: 1px solid rgba(245, 236, 214, 0.08);
+  background: rgba(245, 236, 214, 0.07);
+  border: 1px solid rgba(245, 236, 214, 0.12);
   border-radius: 4px;
   color: #f5ecd6;
   font-family: inherit;
@@ -477,7 +477,7 @@ onMounted(fetchEpisodes);
 .ep-input:focus {
   outline: none;
   border-color: rgba(200, 153, 104, 0.5);
-  background: rgba(245, 236, 214, 0.06);
+  background: rgba(245, 236, 214, 0.09);
 }
 
 .ep-title-input {
@@ -485,7 +485,7 @@ onMounted(fetchEpisodes);
 }
 
 .ep-description-input {
-  color: #c4b89f;
+  color: #d4c9ad;
   line-height: 1.4;
 }
 
@@ -506,14 +506,14 @@ onMounted(fetchEpisodes);
 }
 
 .ep-bio-input {
-  color: #c4b89f;
+  color: #d4c9ad;
   line-height: 1.4;
 }
 
 .ep-bio-hint {
   display: block;
   font-size: 0.6875rem;
-  color: #6e6859;
+  color: #807a6a;
   margin-top: 0.5rem;
   letter-spacing: 0.02em;
 }
@@ -544,7 +544,7 @@ onMounted(fetchEpisodes);
 
 .ep-date {
   font-size: 0.75rem;
-  color: #6e6859;
+  color: #807a6a;
   margin-top: 0.375rem;
 }
 
@@ -555,7 +555,7 @@ onMounted(fetchEpisodes);
 }
 
 .action-btn {
-  background: rgba(245, 236, 214, 0.08);
+  background: rgba(245, 236, 214, 0.12);
   border: none;
   color: #f5ecd6;
   padding: 0.5rem 1.125rem;
@@ -617,7 +617,7 @@ onMounted(fetchEpisodes);
 .frame-count-select {
   appearance: none;
   -webkit-appearance: none;
-  background-color: rgba(245, 236, 214, 0.08);
+  background-color: rgba(245, 236, 214, 0.12);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none' stroke='%23c89968' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
@@ -644,7 +644,7 @@ onMounted(fetchEpisodes);
 }
 
 .frame-count-select option {
-  background: #1c1916;
+  background: #252019;
   color: #f5ecd6;
 }
 

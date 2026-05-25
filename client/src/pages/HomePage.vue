@@ -327,7 +327,7 @@ main {
      back with a left margin equal to the letter-spacing value. */
   text-indent: 0.42em;
   text-transform: lowercase;
-  color: #a89e8c;
+  color: #bcb29e;
   margin: 0.625rem 0 0;
 }
 
@@ -343,7 +343,7 @@ main {
 .page-corner-button {
   background: transparent;
   border: none;
-  color: #7a7468;
+  color: #8c8676;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
@@ -357,7 +357,7 @@ main {
 
 .page-corner-button:hover {
   color: #f5ecd6;
-  background: rgba(245, 236, 214, 0.04);
+  background: rgba(245, 236, 214, 0.07);
 }
 
 .page-corner-button:focus-visible {
@@ -377,7 +377,7 @@ main {
 
 .result-summary {
   font-size: 0.9375rem;
-  color: #a89e8c;
+  color: #bcb29e;
   letter-spacing: 0.01em;
   /* Pivot rotations from the left edge, like the text is nailed on the left */
   transform-origin: left center;
@@ -417,7 +417,7 @@ main {
 }
 
 .search-input {
-  background: rgba(245, 236, 214, 0.04);
+  background: rgba(245, 236, 214, 0.07);
   border: 1px solid rgba(245, 236, 214, 0.12);
   border-radius: 9999px;
   padding: 0.5rem 1rem;
@@ -429,13 +429,13 @@ main {
 }
 
 .search-input::placeholder {
-  color: #6e6859;
+  color: #807a6a;
 }
 
 .search-input:focus {
   outline: none;
   border-color: rgba(200, 153, 104, 0.5);
-  background: rgba(245, 236, 214, 0.06);
+  background: rgba(245, 236, 214, 0.09);
 }
 
 .grid {
@@ -496,7 +496,7 @@ main {
 }
 
 .load-more-button {
-  background: rgba(245, 236, 214, 0.04);
+  background: rgba(245, 236, 214, 0.07);
   border: 1px solid rgba(245, 236, 214, 0.12);
   color: #f5ecd6;
   padding: 0.75rem 2rem;
@@ -513,7 +513,7 @@ main {
 
 .load-more-button:hover {
   border-color: rgba(200, 153, 104, 0.5);
-  background: rgba(245, 236, 214, 0.06);
+  background: rgba(245, 236, 214, 0.09);
 }
 
 .load-more-button:focus-visible {
@@ -524,7 +524,7 @@ main {
 .load-more-count {
   font-size: 0.8125rem;
   font-weight: 400;
-  color: #a89e8c;
+  color: #bcb29e;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -565,7 +565,7 @@ main {
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }

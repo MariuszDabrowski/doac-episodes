@@ -108,11 +108,11 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown));
   /* Subtle top-to-bottom warm gradient instead of a flat slab, so the
      panel reads like part of the same gold-leaning palette as the site
      brand and not a generic dark dialog. */
-  background: linear-gradient(180deg, #221e1a 0%, #1c1916 70%);
-  border: 1px solid rgba(245, 236, 214, 0.08);
+  background: linear-gradient(180deg, #221e1a 0%, #252019 70%);
+  border: 1px solid rgba(245, 236, 214, 0.12);
   border-radius: 12px;
   box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
-  color: #c4b89f;
+  color: #d4c9ad;
   font-size: 0.9375rem;
   line-height: 1.6;
   /* Hide overflow so the top gold accent (::before) clips to the rounded
@@ -160,7 +160,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown));
   right: 0.875rem;
   background: transparent;
   border: none;
-  color: #a89e8c;
+  color: #bcb29e;
   font-size: 1.75rem;
   line-height: 1;
   width: 2rem;
@@ -172,7 +172,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown));
 
 .modal-close:hover {
   color: #f5ecd6;
-  background: rgba(245, 236, 214, 0.06);
+  background: rgba(245, 236, 214, 0.09);
 }
 
 .modal-close:focus-visible {

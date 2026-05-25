@@ -55,7 +55,7 @@ function scrollToTop() {
   background: rgba(16, 14, 12, 0.78);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border-bottom: 1px solid rgba(245, 236, 214, 0.06);
+  border-bottom: 1px solid rgba(245, 236, 214, 0.09);
   transform: translateY(-100%);
   /* Strong ease-out: feels weighted on the way in without overshooting
      top:0 (which would briefly create a gap above the bar). */
@@ -87,7 +87,7 @@ function scrollToTop() {
 
 .header-browse-button {
   justify-self: center;
-  background: rgba(245, 236, 214, 0.04);
+  background: rgba(245, 236, 214, 0.07);
   border: 1px solid rgba(245, 236, 214, 0.12);
   border-radius: 9999px;
   padding: 0.4rem 1.125rem;
@@ -95,7 +95,7 @@ function scrollToTop() {
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #c4b89f;
+  color: #d4c9ad;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -105,7 +105,7 @@ function scrollToTop() {
 
 .header-browse-button:hover {
   border-color: rgba(200, 153, 104, 0.5);
-  background: rgba(245, 236, 214, 0.06);
+  background: rgba(245, 236, 214, 0.09);
   color: #f5ecd6;
 }
 
@@ -115,9 +115,9 @@ function scrollToTop() {
 }
 
 .header-top-button {
-  background: rgba(245, 236, 214, 0.06);
+  background: rgba(245, 236, 214, 0.09);
   border: none;
-  color: #c4b89f;
+  color: #d4c9ad;
   padding: 0.4rem 0.875rem;
   border-radius: 9999px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;

@@ -211,7 +211,7 @@ onUnmounted(() => {
   position: relative;
   display: inline-flex;
   align-items: center;
-  background: #1c1916;
+  background: #252019;
   border-radius: 9999px;
   padding: 0.375rem;
 }
@@ -238,7 +238,7 @@ onUnmounted(() => {
   z-index: 1;
   background: transparent;
   border: none;
-  color: #c4b89f;
+  color: #d4c9ad;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -311,7 +311,7 @@ onUnmounted(() => {
 .subtopic-pill {
   background: transparent;
   border: 1px solid rgba(245, 236, 214, 0.22);
-  color: #c4b89f;
+  color: #d4c9ad;
   padding: 0.4rem 1rem;
   border-radius: 9999px;
   font-family: inherit;
@@ -327,7 +327,7 @@ onUnmounted(() => {
 }
 
 .subtopic-pill:hover {
-  background: rgba(245, 236, 214, 0.06);
+  background: rgba(245, 236, 214, 0.09);
   border-color: rgba(245, 236, 214, 0.4);
   color: #f5ecd6;
 }
@@ -401,7 +401,7 @@ onUnmounted(() => {
 .filter-select {
   appearance: none;
   -webkit-appearance: none;
-  background-color: rgba(245, 236, 214, 0.04);
+  background-color: rgba(245, 236, 214, 0.07);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23c89968' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
@@ -421,20 +421,20 @@ onUnmounted(() => {
 
 .filter-select:hover {
   border-color: rgba(200, 153, 104, 0.5);
-  background-color: rgba(245, 236, 214, 0.06);
+  background-color: rgba(245, 236, 214, 0.09);
 }
 
 .filter-select:focus {
   outline: none;
   border-color: rgba(200, 153, 104, 0.7);
-  background-color: rgba(245, 236, 214, 0.08);
+  background-color: rgba(245, 236, 214, 0.12);
 }
 
 /* Native option list comes from the browser; we can only style its
    colors. Keep them on-brand for desktop browsers that show the
    custom-menu (Chrome on macOS, etc.). */
 .filter-select option {
-  background: #1c1916;
+  background: #252019;
   color: #f5ecd6;
 }
 

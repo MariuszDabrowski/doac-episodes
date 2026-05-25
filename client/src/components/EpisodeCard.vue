@@ -263,7 +263,7 @@ const guestPromotionGroups = computed(() => {
 
 <style scoped>
 .card {
-  background: rgba(245, 236, 214, 0.03);
+  background: rgba(245, 236, 214, 0.06);
   display: grid;
   grid-template-columns: 45% 1fr;
   overflow: hidden;
@@ -379,8 +379,8 @@ const guestPromotionGroups = computed(() => {
 }
 
 .appearance-pill {
-  background: rgba(245, 236, 214, 0.06);
-  color: #a89e8c;
+  background: rgba(245, 236, 214, 0.09);
+  color: #bcb29e;
   padding: 0.125rem 0.5rem;
   border-radius: 9999px;
   font-size: 0.6875rem;
@@ -390,9 +390,9 @@ const guestPromotionGroups = computed(() => {
 
 .more-guests-pill {
   align-self: flex-start;
-  background: rgba(245, 236, 214, 0.06);
+  background: rgba(245, 236, 214, 0.09);
   border: none;
-  color: #c4b89f;
+  color: #d4c9ad;
   padding: 0.3rem 0.75rem;
   border-radius: 9999px;
   font-family: inherit;
@@ -416,7 +416,7 @@ const guestPromotionGroups = computed(() => {
   margin-top: 0.25rem;
   font-size: 0.8125rem;
   line-height: 1.5;
-  color: #a89e8c;
+  color: #bcb29e;
   position: relative;
   max-height: 4.5em; /* 3 lines × 1.5 line-height */
   overflow: hidden;
@@ -464,13 +464,17 @@ const guestPromotionGroups = computed(() => {
   margin-bottom: 20px;
   border-bottom-left-radius: 8px;
   overflow: hidden;
+  /* No bg here so the .content-block's clip-path (the diagonal cut in
+     the top-right corner) reveals the .card surface beneath, keeping
+     the beveled corner in the same translucent-cream tone as the rest
+     of the card. */
 }
 
 .content-block {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #1c1916;
+  background: #2d2820;
   clip-path: polygon(0 0, calc(100% - 159px) 0, 100% 32px, 100% 100%, 0 100%);
 }
 
@@ -483,7 +487,7 @@ const guestPromotionGroups = computed(() => {
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
-  color: #a89e8c;
+  color: #bcb29e;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   z-index: 2;
@@ -543,7 +547,7 @@ const guestPromotionGroups = computed(() => {
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.5;
-  color: #a89e8c;
+  color: #bcb29e;
 }
 
 .actions-row {
@@ -565,7 +569,7 @@ const guestPromotionGroups = computed(() => {
 .topic-pill {
   background: transparent;
   border: 1px solid rgba(245, 236, 214, 0.22);
-  color: #c4b89f;
+  color: #d4c9ad;
   padding: 0.2rem 0.625rem;
   border-radius: 9999px;
   font-size: 0.75rem;
@@ -659,13 +663,13 @@ const guestPromotionGroups = computed(() => {
        diagonal cut at the portrait's bottom edge reveals the same shade
        as the section directly below it (instead of the dim transparent
        default that read as a dark triangular gap). */
-    background: #1c1916;
+    background: #2d2820;
   }
   .left-col { display: contents; }
   .portrait-link { grid-area: portrait; }
   .guest-block {
     grid-area: guest;
-    /* Card surface is tinted #1c1916 for the slant trick above. Restore
+    /* Card surface is tinted #2d2820 for the slant trick above. Restore
        the page-bg shade here so the bio sits on the same near-black
        backdrop as on desktop, instead of inheriting the brown tint. */
     background: #100e0c;
