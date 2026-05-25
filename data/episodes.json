@@ -19,7 +19,7 @@
     "links": {
       "youtube": "https://www.youtube.com/watch?v=qel8Fyt78fk"
     },
-    "thumbnail": "/portraits/bruno-fernandes.jpg",
+    "thumbnail": "/portraits/doac-qel8Fyt78fk.jpg",
     "promotions": [],
     "sponsors": [
       {
@@ -151,7 +151,9 @@
         "start": 5502,
         "title": "Bruno's Definition of Success Five Years From Now"
       }
-    ]
+    ],
+    "thumbnailBrightness": 0.159,
+    "thumbnail2x": "/portraits/doac-qel8Fyt78fk@2x.jpg"
   },
   {
     "id": "doac-opB7_JXL0LA",

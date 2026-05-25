@@ -23,7 +23,7 @@
  * them every time.
  */
 
-import { copyFileSync, mkdirSync, appendFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, appendFileSync } from 'node:fs';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -177,16 +177,34 @@ for (const g of draft.guests) {
   console.log(`    + ${guestId} (${wikiStatus})`);
 }
 
-// --- 5. portrait files under the primary guest's id -----------------
+// --- 5. portrait files: per-episode primary + canonical guest fallback
 
 console.log(`[5/6] saving portrait files…`);
 const primaryGuestId = guestIdMap[draft.guests[0].name];
 mkdirSync('public/portraits', { recursive: true });
 // auto-portrait.py emits jpg, webp, and avif alongside each other in staging.
 // Copy all three so the <picture> element's modern-format sources resolve.
+//
+// Two destinations:
+//   - Per-episode (`doac-<videoId>.<ext>`): always overwritten, this is
+//     the source of truth for THIS appearance's portrait. Also what
+//     /review's swap-portrait.py writes back to, so the JSON and the
+//     file stay in sync no matter who touches it.
+//   - Canonical (`<guestId>.<ext>`): seeded once on the guest's first
+//     appearance and never overwritten by later ingests. Acts as the
+//     fallback when an episode has no per-episode thumbnail and respects
+//     any manual swaps to the canonical portrait.
 for (const ext of ['.jpg', '.webp', '.avif']) {
-  copyFileSync(portrait.portraitPath.replace('.jpg', ext), `public/portraits/${primaryGuestId}${ext}`);
-  copyFileSync(portrait.portrait2xPath.replace('.jpg', ext), `public/portraits/${primaryGuestId}@2x${ext}`);
+  copyFileSync(portrait.portraitPath.replace('.jpg', ext), `public/portraits/doac-${VIDEO_ID}${ext}`);
+  copyFileSync(portrait.portrait2xPath.replace('.jpg', ext), `public/portraits/doac-${VIDEO_ID}@2x${ext}`);
+  const canonical1x = `public/portraits/${primaryGuestId}${ext}`;
+  const canonical2x = `public/portraits/${primaryGuestId}@2x${ext}`;
+  if (!existsSync(canonical1x)) {
+    copyFileSync(portrait.portraitPath.replace('.jpg', ext), canonical1x);
+  }
+  if (!existsSync(canonical2x)) {
+    copyFileSync(portrait.portrait2xPath.replace('.jpg', ext), canonical2x);
+  }
 }
 
 // --- 6. assemble + write --------------------------------------------
@@ -207,7 +225,9 @@ const episodeEntry = {
   topics: draft.topics,
   description: draft.description,
   links: { youtube: `https://www.youtube.com/watch?v=${VIDEO_ID}` },
-  thumbnail: `/portraits/${primaryGuestId}.jpg`,
+  thumbnail: `/portraits/doac-${VIDEO_ID}.jpg`,
+  thumbnail2x: `/portraits/doac-${VIDEO_ID}@2x.jpg`,
+  thumbnailBrightness: portrait.brightness,
   promotions: draft.promotions,
   sponsors: draft.sponsors,
   chapters: draft.chapters,

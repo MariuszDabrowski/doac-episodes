@@ -49,6 +49,12 @@ with open("data/episodes.json") as f:
     eps = json.load(f)
 for ep in eps:
     if ep["id"] == f"doac-{vid}":
+        # Always point the episode at the per-episode file we just wrote.
+        # Older entries may still have a canonical /portraits/<guestId>.jpg
+        # in their thumbnail field; without this update the JSON points at
+        # an unchanged file and the swap appears to do nothing on the site.
+        ep["thumbnail"] = f"/portraits/doac-{vid}.jpg"
+        ep["thumbnail2x"] = f"/portraits/doac-{vid}@2x.jpg"
         ep["thumbnailBrightness"] = brightness
         break
 else:
