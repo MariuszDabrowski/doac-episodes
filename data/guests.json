@@ -5067,5 +5067,1599 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Giles_Yeo"
     }
+  },
+  {
+    "id": "dynamo",
+    "name": "Dynamo",
+    "portrait": "/portraits/dynamo.jpg",
+    "portrait2x": "/portraits/dynamo@2x.jpg",
+    "portraitBrightness": 0.215,
+    "credibilityLine": "British illusionist; stage name Dynamo; television show Dynamo: Magician Impossible (2011–2014) won Broadcast Awards for Best Entertainment Programme in 2012 and 2013",
+    "fields": [
+      "magic",
+      "illusion",
+      "television entertainment"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Illusionist and magician",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Steven_Frayne"
+    }
+  },
+  {
+    "id": "casey-neistat",
+    "name": "Casey Neistat",
+    "portrait": "/portraits/casey-neistat.jpg",
+    "portrait2x": "/portraits/casey-neistat@2x.jpg",
+    "portraitBrightness": 0.354,
+    "credibilityLine": "YouTube creator with 12+ million subscribers; co-founded Beme (acquired by CNN); founded 368, a creative studio for creators; filmmaker and vlogger known for daily vlogs and digital storytelling",
+    "fields": [
+      "content creation",
+      "entrepreneurship",
+      "filmmaking"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder of 368; YouTube creator and filmmaker",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Casey_Neistat"
+    }
+  },
+  {
+    "id": "mel-robbins",
+    "name": "Mel Robbins",
+    "portrait": "/portraits/mel-robbins.jpg",
+    "portrait2x": "/portraits/mel-robbins@2x.jpg",
+    "portraitBrightness": 0.363,
+    "credibilityLine": "Author of The 5 Second Rule and The High 5 Habit; TEDx speaker (\"How to Stop Screwing Yourself Over\"); hosts The Mel Robbins Podcast; J.D. from Boston College Law School; former CNN legal analyst",
+    "fields": [
+      "psychology",
+      "mental-health",
+      "self-improvement"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Podcast host and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Mel_Robbins"
+    }
+  },
+  {
+    "id": "walter-isaacson",
+    "name": "Walter Isaacson",
+    "portrait": "/portraits/walter-isaacson.jpg",
+    "portrait2x": "/portraits/walter-isaacson@2x.jpg",
+    "portraitBrightness": 0.314,
+    "credibilityLine": "Tulane University professor; biographer of Steve Jobs, Leonardo da Vinci, Albert Einstein, and Elon Musk; former president and CEO of the Aspen Institute; former chair and CEO of CNN; former editor of Time magazine; Rhodes Scholar.",
+    "fields": [
+      "biography",
+      "journalism",
+      "leadership"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Professor at Tulane University; interviewer for PBS/CNN's Amanpour & Company",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Walter_Isaacson"
+    }
+  },
+  {
+    "id": "busta-rhymes",
+    "name": "Busta Rhymes",
+    "portrait": "/portraits/busta-rhymes.jpg",
+    "portrait2x": "/portraits/busta-rhymes@2x.jpg",
+    "portraitBrightness": 0.161,
+    "credibilityLine": "12-time Grammy nominee; Billboard and Vibe ranked among 50 Greatest Rappers of All Time; member of Leaders of the New School; released 11 solo albums including The Coming (1996) and Blockbusta (2023).",
+    "fields": [
+      "hip-hop",
+      "music"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Rapper and Recording Artist",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Busta_Rhymes"
+    }
+  },
+  {
+    "id": "james-hoffmann",
+    "name": "James Hoffmann",
+    "portrait": "/portraits/james-hoffmann.jpg",
+    "portrait2x": "/portraits/james-hoffmann@2x.jpg",
+    "portraitBrightness": 0.289,
+    "credibilityLine": "World Barista Champion 2007; author of The World Atlas of Coffee and How to Make The Best Coffee at Home; founder of Square Mile Coffee Roasters; YouTube personality with significant following in specialty coffee education",
+    "fields": [
+      "coffee",
+      "nutrition",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Coffee consultant, YouTuber, and entrepreneur",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/James_Hoffmann"
+    }
+  },
+  {
+    "id": "tali-sharot",
+    "name": "Dr. Tali Sharot",
+    "portrait": "/portraits/tali-sharot.jpg",
+    "portrait2x": "/portraits/tali-sharot@2x.jpg",
+    "portraitBrightness": 0.309,
+    "credibilityLine": "Associate Professor of Cognitive Neuroscience at University College London; visiting professor at MIT; directs the Affective Brain Lab; research on decision-making, emotion, and optimism bias.",
+    "fields": [
+      "neuroscience",
+      "psychology",
+      "behavioral economics",
+      "decision-making",
+      "emotion regulation"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Associate Professor of Cognitive Neuroscience, University College London",
+    "links": {
+      "bio": "https://londonspeakerbureau.com/speaker-profile/tali-sharot/"
+    }
+  },
+  {
+    "id": "bryan-johnson",
+    "name": "Bryan Johnson",
+    "portrait": "/portraits/bryan-johnson.jpg",
+    "portrait2x": "/portraits/bryan-johnson@2x.jpg",
+    "portraitBrightness": 0.425,
+    "credibilityLine": "Founder of Braintree (acquired by PayPal for $800 million); founder of Kernel and OS Fund venture capital firm; creator of Project Blueprint anti-aging protocol",
+    "fields": [
+      "longevity",
+      "entrepreneurship",
+      "neurotechnology"
+    ],
+    "roles": [
+      "entrepreneur",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Lead, Project Blueprint",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bryan_Johnson"
+    }
+  },
+  {
+    "id": "michael-easter",
+    "name": "Michael Easter",
+    "portrait": "/portraits/michael-easter.jpg",
+    "portrait2x": "/portraits/michael-easter@2x.jpg",
+    "portraitBrightness": 0.365,
+    "credibilityLine": "New York Times bestselling author; professor at University of Nevada, Las Vegas; health and wellness researcher",
+    "fields": [
+      "health",
+      "wellness",
+      "behavior",
+      "longevity"
+    ],
+    "roles": [
+      "author",
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Author and professor",
+    "links": {
+      "bio": "https://www.amazon.com/stores/author/B08HPKFFHX"
+    }
+  },
+  {
+    "id": "chris-van-tulleken",
+    "name": "Chris Van Tulleken",
+    "portrait": "/portraits/chris-van-tulleken.jpg",
+    "portrait2x": "/portraits/chris-van-tulleken@2x.jpg",
+    "portraitBrightness": 0.216,
+    "credibilityLine": "British physician and academic; author of Ultra-Processed People; television presenter on health and medicine documentaries including The Doctor Who Gave Up Drugs and Operation Ouch!; studied tropical medicine at London School of Hygiene & Tropical Medicine",
+    "fields": [
+      "nutrition",
+      "public health",
+      "medicine"
+    ],
+    "roles": [
+      "academic",
+      "clinician",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Physician, academic, and writer specializing in nutrition and public health",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Chris_van_Tulleken"
+    }
+  },
+  {
+    "id": "sadhguru",
+    "name": "Sadhguru",
+    "portrait": "/portraits/sadhguru.jpg",
+    "portrait2x": "/portraits/sadhguru@2x.jpg",
+    "portraitBrightness": 0.379,
+    "credibilityLine": "Founder of Isha Foundation (established 1992); author of New York Times bestsellers Inner Engineering and Karma; recipient of Padma Vibhushan (2017), India's second-highest civilian award; leads environmental initiatives including Save Soil campaign.",
+    "fields": [
+      "spirituality",
+      "well-being",
+      "environmentalism"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and spiritual leader, Isha Foundation",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Sadhguru"
+    }
+  },
+  {
+    "id": "jada-pinkett-smith",
+    "name": "Jada Pinkett Smith",
+    "portrait": "/portraits/jada-pinkett-smith.jpg",
+    "portrait2x": "/portraits/jada-pinkett-smith@2x.jpg",
+    "portraitBrightness": 0.499,
+    "credibilityLine": "Actress in A Different World, Set It Off, Scream 2, and The Matrix films; co-host of Red Table Talk Emmy Award winner; named one of Time's 100 most influential people in 2021; author of memoir Worthy; founded Westbrook production company with Will Smith.",
+    "fields": [
+      "psychology",
+      "culture",
+      "entertainment"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Co-host, Red Table Talk; actress and businesswoman",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jada_Pinkett_Smith"
+    }
+  },
+  {
+    "id": "gabor-mate",
+    "name": "Gabor Mate",
+    "portrait": "/portraits/gabor-mate.jpg",
+    "portrait2x": "/portraits/gabor-mate@2x.jpg",
+    "portraitBrightness": 0.346,
+    "credibilityLine": "Physician and bestselling author specializing in trauma, addiction, and the mind-body connection; born in Budapest, Hungary during the Holocaust",
+    "fields": [
+      "trauma",
+      "addiction",
+      "psychology",
+      "mind-body medicine"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Retired physician and author",
+    "links": {
+      "bio": "https://www.theguardian.com/lifeandstyle/2023/apr/12/the-trauma-doctor-gabor-mate-on-happiness-hope-and-how-to-heal-our-deepest-wounds"
+    }
+  },
+  {
+    "id": "brian-chesky",
+    "name": "Brian Chesky",
+    "portrait": "/portraits/brian-chesky.jpg",
+    "portrait2x": "/portraits/brian-chesky@2x.jpg",
+    "portraitBrightness": 0.317,
+    "credibilityLine": "Co-founder and CEO of Airbnb; industrial designer; among Forbes 500 richest people globally with $9.2 billion net worth",
+    "fields": [
+      "business",
+      "design",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "founder",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Co-founder and CEO, Airbnb",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Brian_Chesky"
+    }
+  },
+  {
+    "id": "daniel-ek",
+    "name": "Daniel Ek",
+    "portrait": "/portraits/daniel-ek.jpg",
+    "portrait2x": "/portraits/daniel-ek@2x.jpg",
+    "portraitBrightness": 0.426,
+    "credibilityLine": "Founder and executive chairman of Spotify; estimated net worth $8.7 billion; previously CTO of Stardoll and CEO of µTorrent",
+    "fields": [
+      "business",
+      "technology",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "founder",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Executive Chairman, Spotify",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Daniel_Ek"
+    }
+  },
+  {
+    "id": "nick-cannon",
+    "name": "Nick Cannon",
+    "portrait": "/portraits/nick-cannon.jpg",
+    "portrait2x": "/portraits/nick-cannon@2x.jpg",
+    "portraitBrightness": 0.477,
+    "credibilityLine": "Host of Wild 'N Out, America's Got Talent, The Masked Singer, and Lip Sync Battle Shorties; founder of Incredible Entertainment (generated over $100 million in revenue); rapper and actor; released albums including White People Party Music",
+    "fields": [
+      "entertainment",
+      "business",
+      "music"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Host and Entrepreneur; founder of Incredible Entertainment",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Nick_Cannon"
+    }
+  },
+  {
+    "id": "marisa-peer",
+    "name": "Marisa Peer",
+    "portrait": "/portraits/marisa-peer.jpg",
+    "portrait2x": "/portraits/marisa-peer@2x.jpg",
+    "portraitBrightness": 0.308,
+    "credibilityLine": "British therapist and founder of Rapid Transformational Therapy (RTT®); over 30 years treating high-profile clients including celebrities, CEOs, athletes, and royalty",
+    "fields": [
+      "psychology",
+      "hypnotherapy",
+      "psychotherapy",
+      "behavioral change",
+      "sexuality"
+    ],
+    "roles": [
+      "therapist",
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Therapist and founder of Rapid Transformational Therapy (RTT®)",
+    "links": {
+      "bio": "https://wikitia.com/wiki/Marisa_Peer"
+    }
+  },
+  {
+    "id": "ashley-walters",
+    "name": "Ashley Walters",
+    "portrait": "/portraits/ashley-walters.jpg",
+    "portrait2x": "/portraits/ashley-walters@2x.jpg",
+    "portraitBrightness": 0.295,
+    "credibilityLine": "British actor and rapper; member of So Solid Crew with 2001 UK #1 single \"21 Seconds\"; portrays Dushane in Top Boy (2011–2023); directed A Thousand Blows (2025, Primetime Emmy nomination, Golden Globe nomination)",
+    "fields": [
+      "acting",
+      "music",
+      "directing"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Actor and rapper; director",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ashley_Walters"
+    }
+  },
+  {
+    "id": "trinny-woodall",
+    "name": "Trinny Woodall",
+    "portrait": "/portraits/trinny-woodall.jpg",
+    "portrait2x": "/portraits/trinny-woodall@2x.jpg",
+    "portraitBrightness": 0.267,
+    "credibilityLine": "Co-host of BBC's What Not to Wear; fashion and beauty television presenter; author of multiple fashion and lifestyle books; founder and CEO of Trinny London cosmetics brand valued at $300m",
+    "fields": [
+      "beauty",
+      "fashion",
+      "business"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "CEO and Founder, Trinny London",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Trinny_Woodall"
+    }
+  },
+  {
+    "id": "james-nestor",
+    "name": "James Nestor",
+    "portrait": "/portraits/james-nestor.jpg",
+    "portrait2x": "/portraits/james-nestor@2x.jpg",
+    "portraitBrightness": 0.321,
+    "credibilityLine": "Award-winning author and science journalist; wrote for The New York Times, Scientific American, NPR, The Atlantic; author of Breath: The New Science of a Lost Art (2020 international bestseller, Best General Nonfiction Book of 2020 by American Society of Journalists and Authors, finalist for Royal Society Science Book Prize).",
+    "fields": [
+      "respiratory health",
+      "science journalism",
+      "longevity"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and Science Journalist",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/James_Nestor"
+    }
+  },
+  {
+    "id": "mustafa-suleyman",
+    "name": "Mustafa Suleyman",
+    "portrait": "/portraits/mustafa-suleyman.jpg",
+    "portrait2x": "/portraits/mustafa-suleyman@2x.jpg",
+    "portraitBrightness": 0.404,
+    "credibilityLine": "CEO of Microsoft AI; co-founder of Inflection AI; head of applied AI at DeepMind (Google-acquired); author of The Coming Wave: Technology, Power, and the Twenty-First Century's Greatest Dilemma.",
+    "fields": [
+      "artificial intelligence",
+      "technology",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of Microsoft AI",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Mustafa_Suleyman"
+    }
+  },
+  {
+    "id": "amy-cuddy",
+    "name": "Amy Cuddy",
+    "portrait": "/portraits/amy-cuddy.jpg",
+    "portrait2x": "/portraits/amy-cuddy@2x.jpg",
+    "portraitBrightness": 0.502,
+    "credibilityLine": "Social psychologist; Harvard Business School faculty member; author of Presence: Bringing Your Boldest Self to Your Biggest Challenges; developer of the stereotype content model.",
+    "fields": [
+      "psychology",
+      "leadership",
+      "body language"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Social Psychologist and Speaker",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Amy_Cuddy"
+    }
+  },
+  {
+    "id": "rainn-wilson",
+    "name": "Rainn Wilson",
+    "portrait": "/portraits/rainn-wilson.jpg",
+    "portrait2x": "/portraits/rainn-wilson@2x.jpg",
+    "portraitBrightness": 0.352,
+    "credibilityLine": "Actor best known for starring as Dwight Schrute on NBC's The Office (2005–2013); three-time Emmy nominee for Outstanding Supporting Actor in a Comedy Series; author of Soul Boom: Why We Need a Spiritual Revolution",
+    "fields": [
+      "mental-health",
+      "spirituality",
+      "entertainment"
+    ],
+    "roles": [
+      "actor",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Actor and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Rainn_Wilson"
+    }
+  },
+  {
+    "id": "ryan-holiday",
+    "name": "Ryan Holiday",
+    "portrait": "/portraits/ryan-holiday.jpg",
+    "portrait2x": "/portraits/ryan-holiday@2x.jpg",
+    "portraitBrightness": 0.386,
+    "credibilityLine": "Author of Trust Me, I'm Lying, The Obstacle Is the Way, Ego Is the Enemy, and The Daily Dad; former director of marketing at American Apparel; prominent popularizer of Stoic philosophy for modern audiences.",
+    "fields": [
+      "philosophy",
+      "psychology",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Author and Stoicism lifestyle advocate",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ryan_Holiday"
+    }
+  },
+  {
+    "id": "ivan-toney",
+    "name": "Ivan Toney",
+    "portrait": "/portraits/ivan-toney.jpg",
+    "portrait2x": "/portraits/ivan-toney@2x.jpg",
+    "portraitBrightness": 0.348,
+    "credibilityLine": "English professional footballer for Al-Ahli (Saudi Pro League) and England national team; scored 31 goals for Brentford in 2020–21 season (record-setting); received eight-month betting ban in 2023.",
+    "fields": [
+      "football",
+      "mental health",
+      "sports psychology"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Striker, Al-Ahli (Saudi Pro League) and England National Team",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Toney"
+    }
+  },
+  {
+    "id": "molly-bloom",
+    "name": "Molly Bloom",
+    "portrait": "/portraits/molly-bloom.jpg",
+    "portrait2x": "/portraits/molly-bloom@2x.jpg",
+    "portraitBrightness": 0.41,
+    "credibilityLine": "Entrepreneur and author of Molly's Game; ran high-stakes poker games in Los Angeles and New York; prosecuted for illegal gambling, sentenced to probation and fined; memoir adapted into 2017 film starring Jessica Chastain",
+    "fields": [
+      "entrepreneurship",
+      "memoir",
+      "poker",
+      "crime justice"
+    ],
+    "roles": [
+      "author",
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Entrepreneur, author, and public speaker",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Molly_Bloom_(author)"
+    }
+  },
+  {
+    "id": "bozoma-saint-john",
+    "name": "Bozoma Saint John",
+    "portrait": "/portraits/bozoma-saint-john.jpg",
+    "portrait2x": "/portraits/bozoma-saint-john@2x.jpg",
+    "portraitBrightness": 0.375,
+    "credibilityLine": "Former CMO of Netflix (2020-2022); Chief Brand Officer of Uber (2017-2018); marketing executive at Apple Music, Endeavor, and PepsiCo; author of Bozoma; named Top 50 Most Influential Female Leaders in Africa by Leading Ladies Africa (2021)",
+    "fields": [
+      "marketing",
+      "leadership",
+      "business"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Businessperson and marketing executive",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bozoma_Saint_John"
+    }
+  },
+  {
+    "id": "sam-harris",
+    "name": "Sam Harris",
+    "portrait": "/portraits/sam-harris.jpg",
+    "portrait2x": "/portraits/sam-harris@2x.jpg",
+    "portraitBrightness": 0.4,
+    "credibilityLine": "Neuroscientist and philosopher; author of The End of Faith (PEN/Martha Albrand Award winner, 33 weeks on New York Times Best Seller list), Waking Up, and six other books; host of Making Sense podcast since 2013; created Waking Up meditation app.",
+    "fields": [
+      "neuroscience",
+      "philosophy",
+      "artificial intelligence"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Neuroscientist, philosopher, and podcast host",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Sam_Harris"
+    }
+  },
+  {
+    "id": "lauren-wasser",
+    "name": "Lauren Wasser",
+    "portrait": "/portraits/lauren-wasser.jpg",
+    "portrait2x": "/portraits/lauren-wasser@2x.jpg",
+    "portraitBrightness": 0.337,
+    "credibilityLine": "Toxic shock syndrome survivor and amputee who returned to runway modeling with prosthetics and advocates for menstrual product safety legislation.",
+    "fields": [
+      "fashion",
+      "health advocacy",
+      "disability representation"
+    ],
+    "roles": [
+      "public-figure",
+      "model",
+      "activist"
+    ],
+    "credentials": [],
+    "currentRole": "Model and toxic shock syndrome activist",
+    "links": {
+      "bio": "https://biohighlight.com/lauren-wasser-wikipedia/"
+    }
+  },
+  {
+    "id": "rita-ora",
+    "name": "Rita Ora",
+    "portrait": "/portraits/rita-ora.jpg",
+    "portrait2x": "/portraits/rita-ora@2x.jpg",
+    "portraitBrightness": 0.241,
+    "credibilityLine": "British-Albanian singer and songwriter; signed to Jay-Z's Roc Nation at 18; featured on DJ Fresh's \"Hot Right Now\" which topped UK charts; released four studio albums including Ora (2012) and You & I (2023); judge on The X Factor UK, The Masked Singer UK and US; actress in Fifty Shades film series.",
+    "fields": [
+      "music",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Singer, songwriter, television personality, and actress",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Rita_Ora"
+    }
+  },
+  {
+    "id": "frank-lampard",
+    "name": "Frank Lampard",
+    "portrait": "/portraits/frank-lampard.jpg",
+    "portrait2x": "/portraits/frank-lampard@2x.jpg",
+    "portraitBrightness": 0.317,
+    "credibilityLine": "One of Chelsea FC's greatest ever players; held record for most Premier League goals by a midfielder (177); won three Premier League titles, UEFA Champions League, UEFA Europa League, four FA Cups, two League Cups at Chelsea; named FWA Footballer of the Year (2005); OBE; current manager of Coventry City EFL Championship club.",
+    "fields": [
+      "football",
+      "leadership",
+      "psychology"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Manager, Coventry City FC",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Frank_Lampard"
+    }
+  },
+  {
+    "id": "steve-o",
+    "name": "Steve-O",
+    "portrait": "/portraits/steve-o.jpg",
+    "portrait2x": "/portraits/steve-o@2x.jpg",
+    "portraitBrightness": 0.251,
+    "credibilityLine": "Star of MTV's Jackass; author of Professional Idiot; podcast host of Steve-O's Wild Ride!; 15+ years sober following 2008 intervention",
+    "fields": [
+      "comedy",
+      "mental health recovery",
+      "stunts"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Stunt performer, comedian, and podcaster",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Steve-O"
+    }
+  },
+  {
+    "id": "adam-alter",
+    "name": "Adam Alter",
+    "portrait": "/portraits/adam-alter.jpg",
+    "portrait2x": "/portraits/adam-alter@2x.jpg",
+    "portraitBrightness": 0.369,
+    "credibilityLine": "Professor of Marketing, New York University Stern School of Business; Ph.D. from Princeton University; author of Irresistible and Drunk Tank Pink",
+    "fields": [
+      "psychology",
+      "marketing",
+      "behavioral science"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Marketing, New York University Stern School of Business",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Adam_Alter"
+    }
+  },
+  {
+    "id": "russell-brand",
+    "name": "Russell Brand",
+    "portrait": "/portraits/russell-brand.jpg",
+    "portrait2x": "/portraits/russell-brand@2x.jpg",
+    "portraitBrightness": 0.265,
+    "credibilityLine": "British stand-up comedian and actor; starred in Forgetting Sarah Marshall, Get Him to the Greek, Arthur, and Rock of Ages; hosts podcasts Stay Free with Russell Brand and Under the Skin with Russell Brand; received three British Comedy Awards and BAFTA nomination; author of Revolution.",
+    "fields": [
+      "comedy",
+      "mental-health",
+      "activism"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Comedian, actor, podcaster, and media personality",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Russell_Brand"
+    }
+  },
+  {
+    "id": "jim-kwik",
+    "name": "Jim Kwik",
+    "portrait": "/portraits/jim-kwik.jpg",
+    "portrait2x": "/portraits/jim-kwik@2x.jpg",
+    "portraitBrightness": 0.275,
+    "credibilityLine": "Founder of Kwik Learning; author of Limitless; brain coach who has worked with Nike and Google; recovered from childhood traumatic brain injury and developed speed reading and memory techniques.",
+    "fields": [
+      "memory",
+      "learning",
+      "neuroscience",
+      "productivity"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and Brain Coach, Kwik Learning",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jim_Kwik"
+    }
+  },
+  {
+    "id": "jonathan-van-ness",
+    "name": "Jonathan Van Ness",
+    "portrait": "/portraits/jonathan-van-ness.jpg",
+    "portrait2x": "/portraits/jonathan-van-ness@2x.jpg",
+    "portraitBrightness": 0.217,
+    "credibilityLine": "Grooming expert on Netflix's Queer Eye; host of Getting Curious with Jonathan Van Ness podcast; creator of Gay of Thrones web series; founder of JVN hair care line.",
+    "fields": [
+      "mental health",
+      "media",
+      "LGBTQ+ advocacy"
+    ],
+    "roles": [
+      "public-figure",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Hairstylist, podcast host, and television personality",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jonathan_Van_Ness"
+    }
+  },
+  {
+    "id": "yung-pueblo",
+    "name": "Yung Pueblo",
+    "portrait": "/portraits/yung-pueblo.jpg",
+    "portrait2x": "/portraits/yung-pueblo@2x.jpg",
+    "portraitBrightness": 0.219,
+    "credibilityLine": "#1 New York Times bestselling author; vipassana meditation practitioner; Time100 Creator (2025); founder of Ready app and Wisdom Ventures investment fund",
+    "fields": [
+      "mental health",
+      "healing",
+      "meditation",
+      "relationships"
+    ],
+    "roles": [
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Author and Founder\"",
+    "links": {
+      "bio": "https://yungpueblo.com/about"
+    }
+  },
+  {
+    "id": "rich-roll",
+    "name": "Rich Roll",
+    "portrait": "/portraits/rich-roll.jpg",
+    "portrait2x": "/portraits/rich-roll@2x.jpg",
+    "portraitBrightness": 0.329,
+    "credibilityLine": "Stanford-educated ultra-endurance athlete and vegan athlete; founder and host of the Rich Roll Podcast; former entertainment attorney who overcame addiction and rebuilt through extreme fitness",
+    "fields": [
+      "fitness",
+      "endurance athletics",
+      "wellness",
+      "plant-based nutrition"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Ultra-endurance athlete, podcaster, and wellness advocate",
+    "links": {
+      "bio": "https://richroll.com/bio/"
+    }
+  },
+  {
+    "id": "nicola-kilner",
+    "name": "Nicola Kilner",
+    "portrait": "/portraits/nicola-kilner.jpg",
+    "portrait2x": "/portraits/nicola-kilner@2x.jpg",
+    "portraitBrightness": 0.329,
+    "credibilityLine": "Co-founder and CEO of DECIEM Inc. and The Ordinary; led company through leadership transition after co-founder Brandon Truaxe's removal in 2018",
+    "fields": [
+      "beauty",
+      "skincare",
+      "business leadership",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "founder",
+      "clinician"
+    ],
+    "credentials": [],
+    "currentRole": "Co-Founder and CEO of DECIEM Inc.",
+    "links": {
+      "bio": "https://newsdipper.co.uk/nicola-kilner-ceo-deciem-biography"
+    }
+  },
+  {
+    "id": "edward-enninful",
+    "name": "Edward Enninful",
+    "portrait": "/portraits/edward-enninful.jpg",
+    "portrait2x": "/portraits/edward-enninful@2x.jpg",
+    "portraitBrightness": 0.267,
+    "credibilityLine": "Editor-in-chief of British Vogue 2017–2023; global advisor to international Vogues; fashion director of i-D for over two decades; author of A Visible Man; appointed OBE; founder and head of EE72 entertainment and media company",
+    "fields": [
+      "fashion",
+      "media",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Founder and head of EE72; global advisor to international Vogues",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Edward_Enninful"
+    }
+  },
+  {
+    "id": "jack-whitehall",
+    "name": "Jack Whitehall",
+    "portrait": "/portraits/jack-whitehall.jpg",
+    "portrait2x": "/portraits/jack-whitehall@2x.jpg",
+    "portraitBrightness": 0.203,
+    "credibilityLine": "English comedian and actor; starred in Channel 4's Fresh Meat and BBC Three's Bad Education; performed five stand-up comedy tours; hosted the BRIT Awards 2018–2021 and 2025–2026; appeared in Netflix's Jack Whitehall: Travels with My Father.",
+    "fields": [
+      "comedy",
+      "television",
+      "entertainment"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Comedian and Television Personality",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jack_Whitehall"
+    }
+  },
+  {
+    "id": "nir-eyal",
+    "name": "Nir Eyal",
+    "portrait": "/portraits/nir-eyal.jpg",
+    "portrait2x": "/portraits/nir-eyal@2x.jpg",
+    "portraitBrightness": 0.292,
+    "credibilityLine": "Author of Hooked and Indistractable; behavioral design expert and consultant; taught product design at Stanford University School of Engineering; founded multiple technology companies",
+    "fields": [
+      "psychology",
+      "behavioral design",
+      "habit formation"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Behavioral design expert and author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Nir_Eyal"
+    }
+  },
+  {
+    "id": "mia-khalifa",
+    "name": "Mia Khalifa",
+    "portrait": "/portraits/mia-khalifa.jpg",
+    "portrait2x": "/portraits/mia-khalifa@2x.jpg",
+    "portraitBrightness": 0.293,
+    "credibilityLine": "Lebanese-American media personality; former adult film actress; sports commentator; jewelry entrepreneur (Sheytan brand, launched 2023); advocate for sex workers' rights",
+    "fields": [
+      "media",
+      "entrepreneurship",
+      "mental health advocacy"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Media personality and entrepreneur",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Mia_Khalifa"
+    }
+  },
+  {
+    "id": "tracey-cox",
+    "name": "Tracey Cox",
+    "portrait": "/portraits/tracey-cox.jpg",
+    "portrait2x": "/portraits/tracey-cox@2x.jpg",
+    "portraitBrightness": 0.328,
+    "credibilityLine": "British sex and relationship expert; author of Great Sex Starts at 50 and Hot Relationships; columnist for Closer magazine and Mail Online; former editor of Cosmopolitan Australia; television presenter on The Sex Inspectors (Channel 4) and Would Like To Meet (BBC2)",
+    "fields": [
+      "sexuality",
+      "relationships",
+      "psychology"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Sex and relationship expert; author",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tracey_Cox"
+    }
+  },
+  {
+    "id": "robert-waldinger",
+    "name": "Robert Waldinger",
+    "portrait": "/portraits/robert-waldinger.jpg",
+    "portrait2x": "/portraits/robert-waldinger@2x.jpg",
+    "portraitBrightness": 0.244,
+    "credibilityLine": "Psychiatrist and psychoanalyst at Harvard Medical School; directs the Harvard Study of Adult Development, one of the longest-running studies of adult life; founding director of the Lifespan Research Foundation",
+    "fields": [
+      "psychiatry",
+      "longevity",
+      "happiness research"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "clinician",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Part-time Professor of Psychiatry, Harvard Medical School; Director, Harvard Study of Adult Development",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Robert_J._Waldinger"
+    }
+  },
+  {
+    "id": "harley-finkelstein",
+    "name": "Harley Finkelstein",
+    "portrait": "/portraits/harley-finkelstein.jpg",
+    "portrait2x": "/portraits/harley-finkelstein@2x.jpg",
+    "portraitBrightness": 0.26,
+    "credibilityLine": "President of Shopify; JD and MBA from University of Ottawa; Dragon on CBC Dragons' Den; board member of CBC.",
+    "fields": [
+      "entrepreneurship",
+      "business leadership",
+      "e-commerce"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "President, Shopify",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Harley_Finkelstein"
+    }
+  },
+  {
+    "id": "macklemore",
+    "name": "Macklemore",
+    "portrait": "/portraits/macklemore.jpg",
+    "portrait2x": "/portraits/macklemore@2x.jpg",
+    "portraitBrightness": 0.317,
+    "credibilityLine": "American rapper and songwriter; won Grammy Award for Best New Artist and Best Rap Album (The Heist) at 56th Annual Grammy Awards; \"Thrift Shop\" first self-released song to peak Billboard Hot 100 in 11 years; released albums including The Heist (2012), This Unruly Mess I've Made (2016), and Ben",
+    "fields": [
+      "music",
+      "hip-hop",
+      "addiction recovery"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Rapper and songwriter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Macklemore"
+    }
+  },
+  {
+    "id": "aubrey-marcus",
+    "name": "Aubrey Marcus",
+    "portrait": "/portraits/aubrey-marcus.jpg",
+    "portrait2x": "/portraits/aubrey-marcus@2x.jpg",
+    "portraitBrightness": 0.378,
+    "credibilityLine": "Founder of Onnit supplements company; author of Own the Day, Own Your Life (New York Times bestseller); host of Aubrey Marcus Podcast; founder of Fit For Service transformational fellowship program.",
+    "fields": [
+      "psychology",
+      "wellness",
+      "relationships",
+      "personal development"
+    ],
+    "roles": [
+      "author",
+      "entrepreneur",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder of Onnit and Fit For Service; host of Aubrey Marcus Podcast",
+    "links": {
+      "bio": "https://www.aubreymarcus.com/"
+    }
+  },
+  {
+    "id": "deepak-chopra",
+    "name": "Deepak Chopra",
+    "portrait": "/portraits/deepak-chopra.jpg",
+    "portrait2x": "/portraits/deepak-chopra@2x.jpg",
+    "portraitBrightness": 0.318,
+    "credibilityLine": "Physician trained in internal medicine and endocrinology; author of over 90 books including The Wisdom of Insecurity and Living in the Light; named one of Time magazine's 100 most influential people; founded the Chopra Center for Wellbeing.",
+    "fields": [
+      "mind-body medicine",
+      "wellness",
+      "meditation"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Chopra Center for Wellbeing; author and wellness expert",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Deepak_Chopra"
+    }
+  },
+  {
+    "id": "philip-ovadia",
+    "name": "Philip Ovadia",
+    "portrait": "/portraits/philip-ovadia.jpg",
+    "portrait2x": "/portraits/philip-ovadia@2x.jpg",
+    "portraitBrightness": 0.375,
+    "credibilityLine": "Board-certified Cardiac Surgeon; founder of Ovadia Heart Health; author of Stay Off My Operating Table",
+    "fields": [
+      "cardiology",
+      "cardiac surgery",
+      "metabolic health",
+      "nutrition"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Cardiac Surgeon; Founder, Ovadia Heart Health",
+    "links": {
+      "bio": "https://www.amazon.com/stores/author/B09GVLF94G/about"
+    }
+  },
+  {
+    "id": "sophia-amoruso",
+    "name": "Sophia Amoruso",
+    "portrait": "/portraits/sophia-amoruso.jpg",
+    "portrait2x": "/portraits/sophia-amoruso@2x.jpg",
+    "portraitBrightness": 0.294,
+    "credibilityLine": "Founder of Nasty Gal, a women's fast fashion retailer named one of Inc. Magazine's fastest growing companies; New York Times best-selling author of #GIRLBOSS, adapted as Netflix series; founded Girlboss Media; named one of the world's richest self-made women by Forbes in 2016.",
+    "fields": [
+      "entrepreneurship",
+      "business",
+      "fashion"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Founder, Girlboss Media",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Sophia_Amoruso"
+    }
+  },
+  {
+    "id": "josh-peck",
+    "name": "Josh Peck",
+    "portrait": "/portraits/josh-peck.jpg",
+    "portrait2x": "/portraits/josh-peck@2x.jpg",
+    "portraitBrightness": 0.317,
+    "credibilityLine": "Actor and comedian on Drake & Josh; author of Happy People Are Annoying; currently starring on Hulu's How I Met Your Father; runs comedic lifestyle YouTube channel Shua Vlogs.",
+    "fields": [
+      "comedy",
+      "mental-health",
+      "addiction-recovery"
+    ],
+    "roles": [
+      "actor",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Actor and comedian, appearing on Hulu's How I Met Your Father",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Josh_Peck"
+    }
+  },
+  {
+    "id": "alex-cooper",
+    "name": "Alex Cooper",
+    "portrait": "/portraits/alex-cooper.jpg",
+    "portrait2x": "/portraits/alex-cooper@2x.jpg",
+    "portraitBrightness": 0.284,
+    "credibilityLine": "Host and co-creator of Call Her Daddy podcast; signed $60M Spotify deal in 2021; built $125M media empire including Unwell Network",
+    "fields": [
+      "media",
+      "podcasting",
+      "entrepreneurship"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Host and co-creator, Call Her Daddy; CEO, Unwell Network",
+    "links": {
+      "bio": "https://www.britannica.com/biography/Alex-Cooper"
+    }
+  },
+  {
+    "id": "tony-hawk",
+    "name": "Tony Hawk",
+    "portrait": "/portraits/tony-hawk.jpg",
+    "portrait2x": "/portraits/tony-hawk@2x.jpg",
+    "portraitBrightness": 0.295,
+    "credibilityLine": "American professional skateboarder; first to complete the 900 trick (1999); licensed skateboarding video game series that generated $1.4 billion; owner of Birdhouse skateboard company; founder of the Skatepark Project.",
+    "fields": [
+      "skateboarding",
+      "entrepreneurship",
+      "psychology"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Professional skateboarder and entrepreneur",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Tony_Hawk"
+    }
+  },
+  {
+    "id": "will-cole",
+    "name": "Dr Will Cole",
+    "portrait": "/portraits/will-cole.jpg",
+    "portrait2x": "/portraits/will-cole@2x.jpg",
+    "portraitBrightness": 0.256,
+    "credibilityLine": "Functional medicine practitioner with DC in chiropractic; certified by Institute for Functional Medicine; author of Ketotarian, The Inflammation Spectrum, Intuitive Fasting, and Gut Feelings; hosts The Art of Being Well podcast.",
+    "fields": [
+      "functional medicine",
+      "nutrition",
+      "gut health",
+      "wellness"
+    ],
+    "roles": [
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Functional Medicine Practitioner",
+    "links": {
+      "bio": "https://wikibio.in/dr-will-cole/"
+    }
+  },
+  {
+    "id": "cole-sprouse",
+    "name": "Cole Sprouse",
+    "portrait": "/portraits/cole-sprouse.jpg",
+    "portrait2x": "/portraits/cole-sprouse@2x.jpg",
+    "portraitBrightness": 0.329,
+    "credibilityLine": "Actor known for The Suite Life of Zack & Cody and Riverdale; photographer",
+    "fields": [
+      "acting",
+      "film/television"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Actor",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Cole_Sprouse"
+    }
+  },
+  {
+    "id": "seth-rogen",
+    "name": "Seth Rogen",
+    "portrait": "/portraits/seth-rogen.jpg",
+    "portrait2x": "/portraits/seth-rogen@2x.jpg",
+    "portraitBrightness": 0.309,
+    "credibilityLine": "Canadian actor, comedian, and filmmaker; four Primetime Emmy Awards; Golden Globe Award; starred in and produced films grossing $2.8 billion at box office including The 40-Year-Old Virgin, Knocked Up, Superbad, and Pineapple Express; co-developed AMC's Preacher and executive produced The Boys and Invincible; author of Yearbook.",
+    "fields": [
+      "comedy",
+      "mental health",
+      "creative process"
+    ],
+    "roles": [
+      "actor",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Actor, comedian, filmmaker, and producer",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Seth_Rogen"
+    }
+  },
+  {
+    "id": "lucy-hale",
+    "name": "Lucy Hale",
+    "portrait": "/portraits/lucy-hale.jpg",
+    "portrait2x": "/portraits/lucy-hale@2x.jpg",
+    "portraitBrightness": 0.295,
+    "credibilityLine": "American actress and singer; breakthrough role as Aria Montgomery in Pretty Little Liars (2010–2017); won seven Teen Choice Awards; released debut album Road Between; hosted Dick Clark's New Year's Rockin' Eve (2016–2021)",
+    "fields": [
+      "acting",
+      "music",
+      "mental health"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Actor and Singer",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Lucy_Hale"
+    }
+  },
+  {
+    "id": "max-lugavere",
+    "name": "Max Lugavere",
+    "portrait": "/portraits/max-lugavere.jpg",
+    "portrait2x": "/portraits/max-lugavere@2x.jpg",
+    "portraitBrightness": 0.227,
+    "credibilityLine": "New York Times and Wall Street Journal best-selling author; authored Genius Foods, Genius Life, and Genius Kitchen; filmmaker and former TV presenter on Current TV",
+    "fields": [
+      "nutrition",
+      "neuroscience",
+      "health"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Author and brain health expert",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Max_Lugavere"
+    }
+  },
+  {
+    "id": "shahroo-izadi",
+    "name": "Shahroo Izadi",
+    "portrait": "/portraits/shahroo-izadi.jpg",
+    "portrait2x": "/portraits/shahroo-izadi@2x.jpg",
+    "portraitBrightness": 0.168,
+    "credibilityLine": "Behavioural Change Specialist; worked in addiction treatment across clinical, community and prison settings; author of The Kindness Method and The Last Diet",
+    "fields": [
+      "psychology",
+      "nutrition",
+      "behaviour change",
+      "addiction"
+    ],
+    "roles": [
+      "practitioner",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Behavioural Change Specialist in private practice",
+    "links": {
+      "bio": "https://www.panmacmillan.com/authors/shahroo-izadi/25754"
+    }
+  },
+  {
+    "id": "richard-hammond",
+    "name": "Richard Hammond",
+    "portrait": "/portraits/richard-hammond.jpg",
+    "portrait2x": "/portraits/richard-hammond@2x.jpg",
+    "portraitBrightness": 0.355,
+    "credibilityLine": "Television presenter on Top Gear and The Grand Tour; co-founder of DriveTribe; survived 320mph crash in 2006",
+    "fields": [
+      "television",
+      "automotive",
+      "media"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "CEO of DriveTribe; host of Richard Hammond's Workshop",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Richard_Hammond"
+    }
+  },
+  {
+    "id": "romesh-ranganathan",
+    "name": "Romesh Ranganathan",
+    "portrait": "/portraits/romesh-ranganathan.jpg",
+    "portrait2x": "/portraits/romesh-ranganathan@2x.jpg",
+    "portraitBrightness": 0.232,
+    "credibilityLine": "British comedian and actor; BAFTA winner (Best Features 2020, Best Entertainment Performance 2021); author of Straight Outta Crawley; starred in The Misadventures of Romesh Ranganathan and hosted The Weakest Link revival.",
+    "fields": [
+      "comedy",
+      "mental health",
+      "entertainment"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Comedian, actor, and presenter",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Romesh_Ranganathan"
+    }
+  },
+  {
+    "id": "dacher-keltner",
+    "name": "Dacher Keltner",
+    "portrait": "/portraits/dacher-keltner.jpg",
+    "portrait2x": "/portraits/dacher-keltner@2x.jpg",
+    "portraitBrightness": 0.339,
+    "credibilityLine": "Professor of psychology, UC Berkeley; director of the Berkeley Social Interaction Lab; author of Born to Be Good, The Power Paradox, and Awe; founder of the Greater Good Science Center; Ph.D. from Stanford; published over 230 scientific articles.",
+    "fields": [
+      "psychology",
+      "emotions",
+      "social science"
+    ],
+    "roles": [
+      "academic",
+      "researcher",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Psychology, UC Berkeley",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Dacher_Keltner"
+    }
+  },
+  {
+    "id": "jay-shetty",
+    "name": "Jay Shetty",
+    "portrait": "/portraits/jay-shetty.jpg",
+    "portrait2x": "/portraits/jay-shetty@2x.jpg",
+    "portraitBrightness": 0.265,
+    "credibilityLine": "British author and life coach; trained as a monk for 3 years; founder and host of the On Purpose podcast with over 300 million downloads; author of multiple books on purpose and relationships.",
+    "fields": [
+      "psychology",
+      "self-help",
+      "relationships"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Podcaster and life coach; host of On Purpose podcast",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jay_Shetty"
+    }
+  },
+  {
+    "id": "sadiq-khan",
+    "name": "Sadiq Khan",
+    "portrait": "/portraits/sadiq-khan.jpg",
+    "portrait2x": "/portraits/sadiq-khan@2x.jpg",
+    "portraitBrightness": 0.311,
+    "credibilityLine": "Mayor of London since 2016; Labour MP for Tooting 2005–2016; named one of Time magazine's most influential people in 2018; solicitor specialising in human rights; chaired Liberty advocacy group.",
+    "fields": [
+      "politics",
+      "leadership",
+      "public policy"
+    ],
+    "roles": [
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Mayor of London",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Sadiq_Khan"
+    }
+  },
+  {
+    "id": "steve-peters",
+    "name": "Steve Peters",
+    "portrait": "/portraits/steve-peters.jpg",
+    "portrait2x": "/portraits/steve-peters@2x.jpg",
+    "portraitBrightness": 0.248,
+    "credibilityLine": "British psychiatrist; worked with elite athletes including British Cycling and Olympic teams; author of The Chimp Paradox",
+    "fields": [
+      "psychiatry",
+      "performance psychology",
+      "mental health",
+      "sports psychology"
+    ],
+    "roles": [
+      "clinician",
+      "author",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Psychiatrist and performance psychology consultant",
+    "links": {
+      "bio": "https://snapjournal.co.uk/steve-peters/"
+    }
+  },
+  {
+    "id": "jesse-lingard",
+    "name": "Jesse Lingard",
+    "portrait": "/portraits/jesse-lingard.jpg",
+    "portrait2x": "/portraits/jesse-lingard@2x.jpg",
+    "portraitBrightness": 0.35,
+    "credibilityLine": "English footballer who played for Manchester United, West Ham United, and Nottingham Forest; won UEFA Europa League, FA Cup, EFL Cup, and FA Community Shield; represented England at 2018 FIFA World Cup",
+    "fields": [
+      "sports",
+      "mental health"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Professional footballer, Corinthians",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jesse_Lingard"
+    }
+  },
+  {
+    "id": "david-moyes",
+    "name": "David Moyes",
+    "portrait": "/portraits/david-moyes.jpg",
+    "portrait2x": "/portraits/david-moyes@2x.jpg",
+    "portraitBrightness": 0.289,
+    "credibilityLine": "Scottish football manager; managed Preston, Everton, Manchester United, Real Sociedad, Sunderland, and West Ham; three-time LMA Manager of the Year (2003, 2005, 2009); over 540 league appearances as centre-back; won UEFA Europa Conference League with West Ham (2023)",
+    "fields": [
+      "football management",
+      "sports leadership"
+    ],
+    "roles": [
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Manager, Everton",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/David_Moyes"
+    }
+  },
+  {
+    "id": "derren-brown",
+    "name": "Derren Brown",
+    "portrait": "/portraits/derren-brown.jpg",
+    "portrait2x": "/portraits/derren-brown@2x.jpg",
+    "portraitBrightness": 0.299,
+    "credibilityLine": "English mentalist and illusionist; two-time Laurence Olivier Award winner for Best Entertainment (Something Wicked This Way Comes, Svengali); BAFTA Award winner for Best Entertainment Programme (The Experiments); author of Happy and A Book Of Secrets",
+    "fields": [
+      "psychology",
+      "magic",
+      "mentalism"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Mentalist and illusionist; stage and television performer",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Derren_Brown"
+    }
+  },
+  {
+    "id": "davina-mccall",
+    "name": "Davina McCall",
+    "portrait": "/portraits/davina-mccall.jpg",
+    "portrait2x": "/portraits/davina-mccall@2x.jpg",
+    "portraitBrightness": 0.282,
+    "credibilityLine": "Television presenter for 30 years; host of Big Brother (2000–2010) and Celebrity Big Brother (2001–2010); author of Menopausing; appointed Member of the Order of the British Empire (MBE) in 2023 for services to broadcasting; Special Recognition award, National Television Awards 2024.",
+    "fields": [
+      "television",
+      "mental health",
+      "health"
+    ],
+    "roles": [
+      "public-figure",
+      "author"
+    ],
+    "credentials": [],
+    "currentRole": "Television presenter and judge on The Masked Singer UK",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Davina_McCall"
+    }
   }
 ]
