@@ -95,9 +95,10 @@ specs/                    PROJECT_BRIEF, EPISODE_INGESTION, REVIEW_PAGE
 ## Automation
 
 `scripts/ingest/auto-ingest.sh` is the periodic-poll runner: refresh the
-YouTube catalog, ingest any new long-form episodes, commit + push,
-notify on macOS with the count. Pushing fires `deploy.yml`, which builds
-the site and publishes to GitHub Pages.
+YouTube catalog, ingest any new long-form episodes, commit + push.
+Pushing fires `deploy.yml`, which builds the site and publishes to
+GitHub Pages. No review step; spot-check the commit's "files changed"
+on GitHub afterward if anything looks off.
 
 Workflow for "leave it running for a while":
 
@@ -111,9 +112,9 @@ done
 ```
 
 Paste into a terminal tab. Closing the tab/laptop stops the loop;
-restart with the same paste when you come back. Notifications fire on
-every cycle. Tail `/tmp/doac-auto-ingest.log` if you wired cron instead
-(see the script header for the cron line).
+restart with the same paste when you come back. Tail
+`/tmp/doac-auto-ingest.log` if you wired cron instead (see the script
+header for the cron line).
 
 The companion GitHub Action at
 [.github/workflows/ingest-new-episodes.yml](.github/workflows/ingest-new-episodes.yml)

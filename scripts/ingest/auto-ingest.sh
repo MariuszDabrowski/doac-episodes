@@ -1,7 +1,8 @@
 #!/bin/bash
 # Local replacement for the .github/workflows/ingest-new-episodes.yml
 # pipeline: refresh the YouTube catalog, ingest any new long-form
-# episodes, commit + push, fire a macOS notification with the count.
+# episodes, commit + push. No review step; spot-check after the fact
+# via the commit/"files changed" view on GitHub if you care to.
 #
 # Runs from a residential IP so it doesn't get the YouTube bot block
 # that kills the GitHub Action. Wire into cron/launchd for a periodic
@@ -18,10 +19,6 @@ cd "$(dirname "$0")/../.."
 export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 source ~/.nvm/nvm.sh
 nvm use > /dev/null
-
-notify() {
-  osascript -e "display notification \"$2\" with title \"DOAC episodes\" subtitle \"$1\""
-}
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Refreshing YouTube catalog…"
 npm run fetch:channel > /dev/null
@@ -52,9 +49,7 @@ if [ "$SUCCESS" -gt 0 ]; then
   git add data/episodes.json data/guests.json public/portraits/
   git commit -m "Auto-ingest: $SUCCESS new episode(s)"
   git push
-  notify "Ingest complete" "$SUCCESS new episode(s) ingested and pushed."
-else
-  notify "Ingest failed" "0 of $COUNT episodes ingested."
+  echo "Pushed $SUCCESS new episode(s)."
 fi
 
 if [ ${#FAILED[@]} -gt 0 ]; then
