@@ -70,9 +70,9 @@ Internal scripts called by the pipeline or for one-offs:
 ```
 client/                   Vue app
   src/
-    pages/                HomePage.vue, ReviewPage.vue
+    pages/                HomePage.vue, GuestPage.vue, ReviewPage.vue
     components/           BaseModal, SiteHeader, FilterBar, EpisodeCard, AppAtmosphere
-    composables/          useHeaderReveal, usePagination
+    composables/          useHeaderReveal, usePagination, useGridColumns
     assets/css/main.css
 server/index.mjs          Hono review API (local-only)
 scripts/

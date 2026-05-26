@@ -116,25 +116,44 @@ Episodes have up to 3 topic tags. Topics are the primary browse axis, see Browse
 
 ## Browse page
 
-The main entry point. A pill cloud of topic tags acts as the primary filter, with each pill showing the count of episodes it contains.
+The main entry point. A two-level pill bar acts as the primary filter:
 
-**Single-select topic.** The user picks one topic at a time. Combining topics adds UI weight for marginal benefit, a single well-chosen topic already narrows the catalog substantially; further refinement comes from the secondary filters below.
+- **Cluster bar** (top): `All`, `Health & Body`, `Mind`, `Business`,
+  `Relationships`, `Society`. Picking one narrows the catalog to episodes
+  whose topics belong to that cluster. A sliding gold indicator tracks the
+  active pill.
+- **Subtopic bar** (below, appears when a non-All cluster is active): one
+  pill per topic in that cluster (e.g. under `Mind`: Psychology, Productivity,
+  Focus, Addiction, Trauma, Science, Communication). Picking one filters
+  further; picking the same again clears it. Animates in with a staggered
+  drop-in keyed off the cluster change.
 
-**Secondary toggle filters** layer on top of the selected topic. They map to the same signals shown on the card, so users can refine along the same dimensions they're reading:
+**Single subtopic at a time.** A single well-chosen topic already narrows
+the catalog substantially; combining adds UI weight for marginal benefit.
+The brief originally called for secondary toggle filters
+(credibility/promotion/appearance) layered on top of the selected topic;
+those were deferred since the cluster+subtopic combination on top of
+~500 episodes already filters meaningfully (typical result set: 5-40).
 
-- **Credibility**, e.g., "credentialed only", or filter by specific role (Academic, Researcher, Clinician, ...)
-- **Promotion**, e.g., "hide promotional episodes"
-- **Appearance**, e.g., "first appearances only" or "recurring guests only"
+**Search input** sits alongside the bar for direct guest/episode lookup.
+Plain substring match across `guest.name`, `episode.title`, `episode.description`,
+and `episode.originalTitle`. Fuzzy search (Fuse.js) was considered but
+the bundle weight didn't pay off at this catalog size.
 
-**Pill counts stay stable.** Topic counts in the cloud always reflect the full catalog, secondary filters do not re-compute them. Instead, a plain-language summary above the result list communicates the active query and result count, e.g.:
+**Result summary** above the grid: plain-language description of the active
+filter and result count, e.g. *"62 episodes in Mind tagged Communication"*,
+with the count and label tokens bolded.
 
-> *Showing 62 episodes on Sleep with a credentialed guest.*
+**Default sort.** Reverse-chronological by release date, most recent first.
+No other sort options for v1.
 
-The Sleep pill still reads 68; the summary tells the user why they're seeing 62. This keeps the cloud visually stable as the user toggles filters on and off.
+**Pagination.** The grid renders 50 episodes at a time with a "Load more"
+button at the bottom; once exhausted, it swaps to a gold "↑ Back to top"
+pill so the user always has an action.
 
-**Default sort.** Reverse-chronological by release date, most recent first. No other sort options for v1.
-
-Fuzzy search (Fuse.js) sits alongside the cloud for direct guest/episode lookup, but the cloud is the primary entry.
+**Topic deep-link.** Each episode card's topic pills link to
+`/?topic=<id>`; clicking sets the cluster + subtopic via the route's query
+param. Used by guest-page topic clouds too.
 
 ### Card anatomy
 
@@ -177,13 +196,40 @@ Card links directly to YouTube/Spotify. No episode detail page.
 
 ## Guest page
 
-A lean profile reused as the canonical entry for any guest. Two zones:
+`/guest/<slug>` — a lean profile reused as the canonical entry for any
+guest. Sections, top to bottom:
 
-**Header**, the same identity fields as the card (name, role label, role indicators), plus the full credentials list from `guests.json`: degree, field, institution, year, source URL. This is the one place that detail is exposed. Keep it terse, a credentials table with links, not a bio.
+**Profile**, left-aligned to match the grid's left column below. Back-pill
+("← All episodes"), guest name, `credibilityLine` as bio, stats line
+(*"N appearances · first one DD MMM YYYY"*), and a top-5 topic cloud
+(per-guest topic frequency, each pill links to `/?topic=<id>`). No
+portrait — the per-episode photos in the grid below already give plenty
+of faces; deduplicating one big circle at the top kept the page tighter.
 
-**Appearances**, a chronological list of every episode the guest has been on, rendered with the same episode card component used on Browse. Same density, same signals, same click behavior.
+**Similar guests**, a strip of up to 5 circular guest portraits ranked
+by **TF-IDF weighted cosine similarity** over each guest's topic vector.
+Rare topics (e.g. `communication`, `economics`) outweigh common ones
+(e.g. `psychology`, `leadership`); cosine normalizes for total
+appearance count so prolific guests don't automatically rank above
+focused specialists. Each portrait links to that guest's page. Guests
+whose canonical portrait was seeded from a multi-guest episode (no solo
+appearance) fall back to an initials disk, since auto-portrait can't
+verify identity in those cases.
 
-No long-form bio. No "Notable positions" (still in Open Questions). Credentials are the bio.
+**Appearance grid**, every episode the guest is in, sorted newest-first,
+rendered with the same `EpisodeCard` component used on Browse. Same
+density, same signals, same click behavior. Includes filler tiles at
+the end of the last row when the count doesn't divide evenly into the
+current column count, so the row reads visually complete.
+
+**Browse-all CTA** at the bottom: a "Browse all episodes (N total)" pill
+linking back to `/`, mirroring the home grid's "Load more" pill so the
+end-of-page action is consistent across both pages.
+
+The original brief called for a credentials table (degree, field, year,
+source URL) here. In practice the AI-generated `credibilityLine` carries
+the same facts in one readable sentence, so the structured table never
+shipped; the data fields stay in `guests.json` for future use.
 
 ## Shareable lists
 
@@ -205,14 +251,25 @@ A user assembles a small set of episodes ("here are the three you should start w
 
 ## Stack
 
-- **Framework:** Nuxt 3 (static site generation via `nuxt generate`)
+- **Framework:** Vite + Vue 3 + Vue Router (static SPA, builds to `dist/`).
+  Initially scoped to Nuxt 3 SSG; migrated after persistent `spawn EBADF`
+  failures in Nuxt's fork pool. Vite ships the same client-side filterable
+  catalog with simpler tooling, at the cost of true static-per-route HTML
+  (the SPA's `404.html` fallback covers direct deep links to `/guest/...`
+  and `/review` on GitHub Pages).
 - **Data:** JSON files in repo (`episodes.json`, `guests.json`, `taxonomies.json`)
-- **Search/filter:** client-side, Fuse.js for fuzzy search
-- **Styling:** Tailwind
-- **Hosting:** GitHub Pages with custom domain
-- **Automation:** GitHub Actions for new episode detection + LLM enrichment
-
-Static generation chosen for SEO (guest pages need to be indexable) and link previews (every shared episode link should have a proper card).
+- **Search/filter:** client-side, plain substring match across guest /
+  title / description fields. Fast enough at ~500 episodes that Fuse.js
+  isn't worth the bundle weight.
+- **Styling:** Vue single-file-component scoped CSS, no Tailwind.
+- **Hosting:** GitHub Pages, deployed at
+  `https://mariuszdabrowski.github.io/doac-episodes/`.
+- **Review server:** Hono (Node), local-only, powers `/review`. Not
+  deployed; the production site is fully static.
+- **Automation:** scheduled-cron GitHub Action was the plan but YouTube
+  bot-blocks datacenter IPs (returns storyboard-only streams even with
+  cookies), so the workflow is parked manual-dispatch-only and the
+  ingest pipeline runs locally via `scripts/ingest/auto-ingest.sh`.
 
 ## Data Model
 
@@ -313,11 +370,15 @@ Resist building automation before the manual version exists. Order:
 **Review:** Action opens a PR with draft additions. Human reviews diff, picks portrait from candidates, merges. Merge triggers redeploy.
 
 **Models:**
-- Sonnet for bulk extraction (transcripts, topic tagging, promotion detection)
-- Opus for judgment-heavy tasks (guest bios, QA flagging)
-- All API keys in GitHub Actions secrets, never in code
+- Claude Haiku 4.5 (`claude-haiku-4-5-20251001`) for everything: title +
+  description drafting, topic tagging, promotion detection, guest bio
+  drafting. Haiku is sharp enough at this kind of structured extraction
+  and the per-episode cost stays in the noise.
+- All API keys live in `.env` locally; the disabled GitHub Action would
+  pull from Actions secrets if it were ever re-enabled.
 
-**Cost:** ~$0.05-0.15 per episode enriched. Backfill of full catalog under $50.
+**Cost:** ~$0.005-0.015 per episode (Haiku, well under the original
+Sonnet/Opus budget). Full catalog of 500 episodes ingested for under $5.
 
 ## Things Deliberately Left Out
 
@@ -327,7 +388,6 @@ Resist building automation before the manual version exists. Order:
 - User reviews / comments (moderation burden, not the project)
 - "Trending" / popularity (reinforces clickbait, undermines editorial point)
 - Recommendations / "you might also like" (attention trap)
-- AI-generated episode summaries (lazy; your one-liners do it better)
 - Newsletter signup, social-platform share buttons, social embeds (shareable lists are a separate mechanism, see above)
 - Cross-show coverage (scope creep, DOAC only for v1)
 
@@ -335,11 +395,21 @@ Resist building automation before the manual version exists. Order:
 
 Things still to decide as the build progresses:
 
-- Final product name and domain (working repo name is fine for now)
-- Exact portrait crop dimensions and styling
 - Whether to expose timestamps in the UI as a feature (deep links to specific moments), v2 territory. Cue-level timing is already preserved in the cached transcripts, so the feature is unblocked at the data layer.
-- How aggressively to surface promotion patterns on guest pages
+- How aggressively to surface promotion patterns on guest pages (the bio + topic cloud is the current treatment; the per-episode promotion list lives in `episodes[].promotions` but isn't rendered on guest pages yet)
 - Whether the "Notable positions/claims" feature on guest pages is worth the controversy it invites
+- Shareable lists, the curation/share-link feature in the brief. Deferred past v1; the rest of the catalog has enough discovery value on its own to ship without.
+
+Resolved during build:
+
+- **Product name / domain**: shipped as "DOAC episodes" at
+  `mariuszdabrowski.github.io/doac-episodes/`. Subdomain-on-personal-GH
+  works fine; custom domain is a separate decision.
+- **Portrait crop**: 16:9 from the source video, face-centered via
+  auto-portrait scoring; one `<picture>` element serves AVIF → WebP → JPG
+  at 1x and @2x.
+- **Multi-select vs single-select topics**: shipped as cluster + single
+  subtopic instead of multi-select (see Browse page).
 
 ## Notes
 

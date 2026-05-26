@@ -15,10 +15,19 @@ can't provide).
 
 Per row:
 
-- **Portrait**, current cropped thumbnail. Buttons to generate top-5
-  alts (re-runs `scripts/portraits/auto-portrait.py` with `top-n=5`)
-  and to swap any of them in as the primary. Re-extract pulls 50 fresh
-  frames when the existing 20 are host-dominated.
+- **Portrait**, current cropped thumbnail. Below it, action buttons:
+  - **Mark good** toggles the row's approval status.
+  - **Show portrait alts** / **Regenerate alts**: runs
+    `scripts/portraits/auto-portrait.py top-n=5` into the staging dir.
+    Pre-computed alts from `generate-all-alts.mjs` are surfaced inline
+    by `/api/review/episodes` so the strip usually renders without a
+    click; the button becomes "Regenerate alts" when alts are already
+    present.
+  - **Re-extract N frames** + a count dropdown (50 / 100 / 200 / 400).
+    Wipes `data/_frames/{vid}/`, pulls N fresh frames via yt-dlp,
+    then runs the alts pass. The dropdown lets you bump the frame
+    pool when the default 20 don't contain a clean guest shot
+    (panel framing, behind-desk talking heads).
 - **Title**, episode title. Inline text input, saves on blur to
   `data/episodes.json`.
 - **Description**, 1-2 sentence editorial summary. Inline textarea,
@@ -41,7 +50,7 @@ All routes under `/api/review/*`, served by `server/index.mjs` on port
 
 | Method | Path | Body | Notes |
 | --- | --- | --- | --- |
-| GET | `/episodes` | (none) | List with editorial fields + `primaryGuest.appearanceCount` |
+| GET | `/episodes` | (none) | List with editorial fields + `primaryGuest.appearanceCount` + any pre-computed alts inlined as `alts[]` |
 | POST | `/edit-episode` | `{ id, title?, description? }` | Patches `data/episodes.json` |
 | POST | `/edit-guest` | `{ id, credibilityLine? }` | Patches `data/guests.json` |
 | POST | `/approve` | `{ id, status: 'good' \| 'pending' }` | Patches `data/_portrait-review.json` |
@@ -59,8 +68,15 @@ All routes under `/api/review/*`, served by `server/index.mjs` on port
 | `public/_review-picks/{vid}/` | Alt portrait candidates | No (gitignored) |
 | `public/portraits/doac-{vid}.{jpg,webp,avif}` | Promoted portrait files | Yes |
 
-Edits are non-atomic (read → mutate → write the whole file). Open the
-page in one tab at a time.
+Writes are atomic: each editor route reads the file, mutates the
+target entry, writes to a sibling temp file, then `rename()`s it onto
+the original. Before this, Vite's `vite:json` watcher would
+occasionally catch a half-written file mid-edit and the page would
+explode with "invalid JSON syntax". rename is atomic on POSIX so the
+watcher only ever sees the previous-complete or next-complete file.
+
+Concurrent multi-tab editing is still risky (last-write-wins on whole
+files), but the watcher-crash failure mode is gone.
 
 ## Known gaps / future ideas
 

@@ -53,9 +53,11 @@ sessions lose context.
 - Use `nvm use` (`.nvmrc` pins Node LTS) before running any `npm` script.
   Node 18+ is required
 - Python tooling lives in `.venv` (`./.venv/bin/python ...`); install with
-  `python3 -m venv .venv && .venv/bin/pip install opencv-python mediapipe==0.10.18 face_recognition "setuptools<81"`.
+  `python3 -m venv .venv && .venv/bin/pip install opencv-python mediapipe==0.10.18 face_recognition "setuptools<81" Pillow pillow-avif-plugin`.
   The mediapipe pin keeps the legacy `mp.solutions.face_mesh` API; the
-  setuptools pin keeps `pkg_resources` available for `face_recognition_models`.
+  setuptools pin keeps `pkg_resources` available for `face_recognition_models`;
+  Pillow + the AVIF plugin let the portrait pipeline write all three formats
+  in one pass.
 - All raw/regeneratable data goes under `data/_*` (gitignored). Curated data
   at the top level of `data/` is committed
 - Portraits at `public/portraits/{guestId}.{jpg,webp,avif,@2x.jpg,@2x.webp,@2x.avif}`
