@@ -2,9 +2,15 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue';
 import HomePage from './pages/HomePage.vue';
-import GuestPage from './pages/GuestPage.vue';
-import ReviewPage from './pages/ReviewPage.vue';
 import './assets/css/main.css';
+
+// HomePage is the entry route, so eager-import it. /guest/:slug and
+// /review are only reached after the user navigates; lazy-import them
+// so they don't bloat the initial bundle (especially /review, which is
+// dev-only and never loaded in prod). Vite/Rollup splits each dynamic
+// import into its own chunk.
+const GuestPage = () => import('./pages/GuestPage.vue');
+const ReviewPage = () => import('./pages/ReviewPage.vue');
 
 // Belt-and-suspenders: index.html sets history.scrollRestoration =
 // 'manual' before navigation starts so the browser doesn't try to

@@ -223,7 +223,7 @@ const guestPromotionGroups = computed(() => {
       <div class="content-shape">
         <div class="content-block">
           <div class="episode-block">
-          <h3 class="title">{{ episode.title }}</h3>
+          <h2 class="title">{{ episode.title }}</h2>
           <p class="description">{{ episode.description }}</p>
         </div>
 
