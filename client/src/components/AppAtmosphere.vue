@@ -122,4 +122,14 @@ const specks = Array.from({ length: 42 }, (_, i) => {
     opacity: var(--peak, 0.18);
   }
 }
+
+/* Cut the speck count on mobile: the filter: blur() / brightness() pulse
+   animation is GPU-expensive, and 42 of them compositing under a scroll
+   makes phones drop frames. Keeping 12 (4 per depth layer, since layer
+   = i % 3) preserves the atmosphere without the cost. */
+@media (max-width: 899px) {
+  .speck:nth-child(n + 13) {
+    display: none;
+  }
+}
 </style>

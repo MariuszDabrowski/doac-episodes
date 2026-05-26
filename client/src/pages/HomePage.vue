@@ -125,13 +125,18 @@ const filterStateKey = computed(() =>
 // front would mean thousands of DOM nodes and a Vue diff for every filter
 // change. The page size also acts as a UX nudge: if the user is hunting,
 // they should be filtering, not scrolling.
+// Smaller initial batch on single-column viewports: 50 cards is a lot of
+// portraits to keep scrolling past on a phone, and the long DOM list makes
+// scroll feel jittery. Detected once at setup time (no reactivity needed,
+// the count grows via loadMore() from there).
+const initialPageSize = typeof window !== 'undefined' && window.innerWidth < 900 ? 20 : 50;
 const {
   displayed: displayedEpisodes,
   remaining: remainingCount,
   hasMore,
   staggerStart: staggerStartIndex,
   loadMore,
-} = usePagination(filteredEpisodes, filterStateKey, 50);
+} = usePagination(filteredEpisodes, filterStateKey, initialPageSize);
 
 const resultSummary = computed(() => {
   const n = filteredEpisodes.value.length;
