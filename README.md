@@ -140,3 +140,11 @@ Setup notes for the deploy workflow + Pages source are at
 ## Built by
 
 [Mariusz Dabrowski](https://www.linkedin.com/in/mariuszpdabrowski/).
+
+## License
+
+Code is [MIT](LICENSE). Episode metadata, guest bios, and portraits
+derive from publicly available Diary of a CEO YouTube content and are
+used here for editorial cataloging. Reuse of those derivative assets is
+at your own discretion, the underlying show and its frames are not
+mine to relicense.
