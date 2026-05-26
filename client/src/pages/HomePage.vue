@@ -320,6 +320,12 @@ onUnmounted(() => {
           target="_blank"
           rel="noopener"
         >Mariusz Dabrowski</a>.
+        Source on
+        <a
+          href="https://github.com/MariuszDabrowski/doac-episodes"
+          target="_blank"
+          rel="noopener"
+        >GitHub</a>.
       </p>
     </BaseModal>
 
