@@ -1,6 +1,6 @@
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import episodesData from '@data/episodes.json';
 import guestsData from '@data/guests.json';
 import taxonomiesData from '@data/taxonomies.json';
@@ -40,20 +40,49 @@ const activeCluster = ref('all');
 const activeSubtopic = ref(null);
 const searchQuery = ref('');
 
-// EpisodeCard's topic pills link here with ?topic=<id>. Apply the filter
-// on mount and on any subsequent query change (in case the user clicks a
-// topic pill while already on the home page).
+// URL <-> filter state, two-way. EpisodeCard's topic pills link here with
+// ?topic=<id>; cluster pills emit ?cluster=<id>. A topic implies its cluster,
+// so they're mutually exclusive on the URL.
 const route = useRoute();
-function applyTopicQuery() {
-  const topicId = route.query.topic;
-  if (!topicId) return;
-  const topic = taxonomiesData.topics.find((t) => t.id === topicId);
-  if (!topic) return;
-  activeCluster.value = topic.cluster;
-  activeSubtopic.value = topic.id;
+const router = useRouter();
+
+function applyQueryToState() {
+  const { topic, cluster } = route.query;
+  if (topic) {
+    const t = taxonomiesData.topics.find((x) => x.id === topic);
+    if (t) {
+      activeCluster.value = t.cluster;
+      activeSubtopic.value = t.id;
+      return;
+    }
+  }
+  if (cluster) {
+    activeCluster.value = cluster;
+    activeSubtopic.value = null;
+    return;
+  }
+  activeCluster.value = 'all';
+  activeSubtopic.value = null;
 }
-applyTopicQuery();
-watch(() => route.query.topic, applyTopicQuery);
+applyQueryToState();
+watch(() => [route.query.topic, route.query.cluster], applyQueryToState);
+
+watch([activeCluster, activeSubtopic], () => {
+  const desiredTopic = activeSubtopic.value || '';
+  const desiredCluster = !activeSubtopic.value && activeCluster.value !== 'all'
+    ? activeCluster.value
+    : '';
+  const currentTopic = route.query.topic || '';
+  const currentCluster = route.query.cluster || '';
+  if (desiredTopic === currentTopic && desiredCluster === currentCluster) return;
+  const next = { ...route.query };
+  delete next.topic;
+  delete next.cluster;
+  if (desiredTopic) next.topic = desiredTopic;
+  else if (desiredCluster) next.cluster = desiredCluster;
+  // replace, not push: filter changes shouldn't pile up browser history.
+  router.replace({ query: next });
+});
 
 const filteredEpisodes = computed(() => {
   let list = episodesData;
