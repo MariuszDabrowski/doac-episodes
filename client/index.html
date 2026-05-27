@@ -39,26 +39,10 @@
     <!-- Tells the browser to color the mobile browser chrome bar to
          match the page background — small but Lighthouse expects it. -->
     <meta name="theme-color" content="#18140f" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Load Google Fonts CSS as a non-render-blocking preload, then
-         swap the rel to "stylesheet" once it lands. Same network cost
-         as a regular <link rel="stylesheet"> but doesn't gate first
-         paint on the font fetch. The <noscript> fallback ensures the
-         CSS still loads for crawlers / users without JS. -->
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Caveat:wght@500&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Caveat:wght@500&display=swap"
-      />
-    </noscript>
+    <!-- Fonts are self-hosted now: @font-face declarations live in
+         client/src/assets/css/main.css and reference woff2 files under
+         client/src/assets/fonts/. No third-party request, no FOIT/FOUT
+         swap delay on first paint. -->
   </head>
   <body>
     <div id="app"></div>

@@ -90,6 +90,16 @@ onMounted(() => {
     });
   });
   window.addEventListener('resize', updateIndicator);
+  // Google Fonts loads Barlow with display=swap, so the page first
+  // renders with a wider fallback font. nextTick measures the cluster
+  // pill BEFORE the font swap, leaving the indicator sized to the
+  // fallback width (visible as the gold pill stretching past the
+  // active cluster, especially on reload with a non-"All" cluster).
+  // Re-measure once fonts are ready so the indicator snaps to the
+  // real pill bounds.
+  if (typeof document !== 'undefined' && document.fonts?.ready) {
+    document.fonts.ready.then(() => updateIndicator());
+  }
 });
 
 onUnmounted(() => {

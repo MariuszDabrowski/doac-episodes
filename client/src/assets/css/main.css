@@ -1,3 +1,76 @@
+/* Self-hosted fonts (latin subset only). Fetched once from Google Fonts
+   v13 / v16 / v23 and committed under ../fonts/ so the page no longer
+   needs a third-party request on every load. Vite hashes + emits these
+   alongside the CSS, so paths stay correct across dev/prod BASE_URLs.
+
+   font-display: swap matches Google's default - fallback text renders
+   first, the bundled font swaps in once decoded. With local woff2 files
+   the load happens in the same request burst as the CSS, so the swap
+   is usually invisible on first paint. */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/barlow-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/barlow-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/barlow-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/barlow-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/barlow-semi-condensed-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/barlow-semi-condensed-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/barlow-semi-condensed-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/barlow-semi-condensed-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/caveat-500.woff2') format('woff2');
+}
+
 :root {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
