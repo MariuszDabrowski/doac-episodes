@@ -6,7 +6,9 @@
 // "Browse categories" button hides (it scrolls to the cluster bar, which
 // only exists on the home page).
 import { computed } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
+import { useAboutModal } from '@/composables/useAboutModal.js';
+import { useFilterContext } from '@/composables/useFilterContext.js';
 
 defineProps({
   visible: { type: Boolean, default: false },
@@ -16,11 +18,24 @@ const route = useRoute();
 const router = useRouter();
 const isHome = computed(() => route.path === '/');
 
+const { openAbout } = useAboutModal();
+
+// Carry the last-seen cluster/topic filter across Home/Guests links so
+// a user's filter context follows them across all pages (not just the
+// two that have URL state for it). Source-of-truth is the filter-context
+// composable, updated by HomePage + GuestsIndex when their filter
+// changes.
+const { carryFilterQuery } = useFilterContext();
+const homeLink = computed(() => ({ path: '/', query: carryFilterQuery() }));
+const guestsLink = computed(() => ({ path: '/guests', query: carryFilterQuery() }));
+
 function brandClick() {
   if (isHome.value) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
-    router.push('/');
+    // Carry the filter context so clicking the brand from a subpage
+    // returns the user home with their cluster/topic still applied.
+    router.push({ path: '/', query: carryFilterQuery() });
   }
 }
 
@@ -47,16 +62,15 @@ function scrollToTop() {
         <span aria-hidden="true">↑</span>
         Browse categories
       </button>
-      <button
-        v-if="isHome"
-        type="button"
-        class="header-top-button"
-        @click="scrollToTop"
-        aria-label="Back to top"
-      >
-        <span aria-hidden="true">↑</span>
-        Top
-      </button>
+      <div class="header-right">
+        <RouterLink v-if="!isHome" :to="homeLink" class="header-link">Home</RouterLink>
+        <RouterLink :to="guestsLink" class="header-link">Guests</RouterLink>
+        <button
+          type="button"
+          class="header-link header-about-button"
+          @click="openAbout"
+        >About</button>
+      </div>
     </div>
   </header>
 </template>
@@ -106,7 +120,13 @@ function scrollToTop() {
 
 .header-brand { grid-column: 1; justify-self: start; }
 .header-browse-button { grid-column: 2; justify-self: center; }
-.header-top-button { grid-column: 3; justify-self: end; }
+.header-right {
+  grid-column: 3;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .site-header.is-visible {
   transform: translateY(0);
@@ -163,29 +183,42 @@ function scrollToTop() {
   outline-offset: 2px;
 }
 
-.header-top-button {
-  background: rgba(245, 236, 214, 0.09);
-  border: none;
+.header-link {
+  /* Match the outlined .header-browse-button look so Guests/About read
+     as siblings of Browse, not a different visual family. */
+  background: rgba(245, 236, 214, 0.07);
+  border: 1px solid rgba(245, 236, 214, 0.12);
   color: #d4c9ad;
-  padding: 0.4rem 0.875rem;
+  text-decoration: none;
+  /* Asymmetric vertical padding (less top, more bottom) compensates for
+     Barlow Semi Condensed's metrics, which leave the optical center of
+     uppercase letters sitting ~1px below the line box center under
+     line-height: 1. */
+  padding: 0.35rem 0.875rem 0.45rem;
   border-radius: 9999px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  line-height: 1;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
 }
 
-.header-top-button:hover {
-  background: rgba(245, 236, 214, 0.12);
+.header-link:hover {
+  border-color: rgba(200, 153, 104, 0.5);
+  background: rgba(245, 236, 214, 0.09);
   color: #f5ecd6;
 }
 
-.header-top-button:focus-visible {
+.header-link.router-link-active {
+  background: #c89968;
+  color: #100e0c;
+}
+
+.header-link:focus-visible {
   outline: 2px solid #c89968;
   outline-offset: 2px;
 }

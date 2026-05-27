@@ -180,7 +180,7 @@ The YouTube original title (`originalTitle`) stays in the data for SEO / record 
 - **`credibilityLine`**, concrete facts about the guest, plain English.
 - **"Promoting …" line**, type-level summary with hover detail. E.g., "Promoting a book and a company" where *a book* and *a company* have dotted underlines; hovering reveals the specific titles as clickable links. Keeps the surface tidy; specifics (and outbound links) on demand.
 
-**Multi-guest collapse.** Roundtables/panels show only the first guest by default with a "+N more guests" pill that expands the rest in place via a grid-template-rows slide (no `height` animation, the sibling card in the row follows along naturally). Keeps card heights uniform for the common single-guest case; the extra guests are one click away when needed. Appearance count renders per-guest (each guest gets their own ordinal pill once expanded).
+**Multi-guest collapse.** Roundtables/panels show only the first guest by default with a "+N more guests" pill that expands the rest in place via a grid-template-rows slide (no `height` animation, the sibling card in the row follows along naturally). Keeps card heights uniform for the common single-guest case; the extra guests are one click away when needed. Appearance count renders per-guest (each guest gets their own ordinal pill once expanded). A flush top-left **"Roundtable"** badge on the portrait (gold caps on a dark plate, with the panel size in a small pill beside it) telegraphs that the episode is a panel before the user notices the +N pill below. The keyword *roundtable* is also a search shortcut on the home page (any 4+ character prefix returns every multi-guest episode).
 
 **Row dividers.** Between rows in the grid: a faint 1px dotted line (~12% ivory) sits in the gap. Per-card, so it visually respects the column gap. Marks rhythm without adding ink.
 
@@ -230,6 +230,56 @@ The original brief called for a credentials table (degree, field, year,
 source URL) here. In practice the AI-generated `credibilityLine` carries
 the same facts in one readable sentence, so the structured table never
 shipped; the data fields stay in `guests.json` for future use.
+
+## Guests index page
+
+`/guests` — a directory of everyone in the catalog so users can browse
+by person, not just by topic. Reachable from the header on every page
+and from a "See all guests" pill at the end of the Similar guests strip
+on each guest detail page.
+
+**Tile grid**, 3 columns at desktop (2 at mid-width, 1 on mobile), each
+tile a horizontal panel: square portrait edge-to-edge on the left with
+a shallow diagonal cut into the info area on the right (guest name +
+appearance count). Filler tiles fill the last row only when the user
+has exhausted the list (`hasMore` is false); during pagination the
+grid stops cleanly at the loaded count.
+
+**Filter section**, sandwiched between two thin dividers:
+- The same `FilterBar` component the home page uses (cluster bar with
+  sliding indicator + per-cluster subtopic row), so the filtering
+  vocabulary is consistent across pages.
+- Sort pills below: *Appearance count*, *First name*, *Last name*, each
+  with a direction toggle (clicking the active mode flips asc ↔ desc).
+- Search input on the right, name-substring match; typing into search
+  clears the cluster/topic filter so search runs against the full set.
+
+**Result summary** updates with the active filter ("42 of 415 people in
+Mind tagged Psychology"), keyed to fade in/out when the description
+actually changes (sort-only flips don't trigger a needless flash).
+
+**Pagination** at 30 guests per page (divisible by 3 and 2, so the grid
+stays balanced through pagination). Load more pill at the bottom; once
+exhausted, swaps for a Back to top pill.
+
+**Portrait resolution.** A guest's tile shows the per-episode thumbnail
+of their first episode as primary (`guestIds[0]`), not the canonical
+`/portraits/<id>.jpg`. Auto-portrait targets the primary in extraction,
+so the thumbnail is usually their face even on multi-guest panels; it's
+also fresher than the canonical, which may have been seeded by an
+earlier buggier extraction. Panel-only guests (never primary anywhere)
+fall back to an initials disk. The same lookup is shared with the
+Similar guests strip on guest pages via `composables/useGuestPortrait.js`.
+
+**Filter persistence across pages.** Filter state lives in
+`composables/useFilterContext.js`, a module-scope singleton updated by
+HomePage and GuestsIndex whenever their `activeCluster`/`activeSubtopic`
+changes. Every cross-page link (Home, Guests, brand, "← All episodes"
+back-pills) reads from it to build its `:to` with the cluster/topic
+carried as a query string. So a user filtering on the home page and
+clicking Guests lands on `/guests?cluster=X` with the filter still
+active; clicking a guest from there and then Home returns them to
+`/?cluster=X`. Resets on full page reload.
 
 ## Shareable lists
 

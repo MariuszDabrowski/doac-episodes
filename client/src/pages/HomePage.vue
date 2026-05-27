@@ -1,16 +1,17 @@
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
 import episodesData from '@data/episodes.json';
 import guestsData from '@data/guests.json';
 import taxonomiesData from '@data/taxonomies.json';
 import EpisodeCard from '@/components/EpisodeCard.vue';
-import BaseModal from '@/components/BaseModal.vue';
 import SiteHeader from '@/components/SiteHeader.vue';
 import FilterBar from '@/components/FilterBar.vue';
 import { useHeaderReveal } from '@/composables/useHeaderReveal.js';
 import { usePagination } from '@/composables/usePagination.js';
 import { useGridColumns } from '@/composables/useGridColumns.js';
+import { useAboutModal } from '@/composables/useAboutModal.js';
+import { useFilterContext } from '@/composables/useFilterContext.js';
 
 const guestsById = Object.fromEntries(guestsData.map((g) => [g.id, g]));
 const rolesById = Object.fromEntries(taxonomiesData.roles.map((r) => [r.id, r]));
@@ -36,9 +37,47 @@ function appearanceCountFor(guestId, episodeId) {
 
 // Filter state. UI (cluster pills + subtopic transitions) lives in FilterBar;
 // this page owns the canonical values and the derived filtering logic.
+// "active" refs are the user-facing values (FilterBar pills update them
+// immediately so clicks have instant visual feedback). "applied" refs
+// are what the filter computed reads from, and they lag by one smooth
+// scroll-to-top so the grid doesn't change mid-scroll.
 const activeCluster = ref('all');
 const activeSubtopic = ref(null);
 const searchQuery = ref('');
+const appliedCluster = ref('all');
+const appliedSubtopic = ref(null);
+
+// Scroll smoothly to the top, then commit the active filter to applied.
+// If the user is already at the top, commit immediately. The timeout
+// (380ms) covers a typical smooth-scroll duration; the grid Transition
+// kicks in once applied changes, so users see: scroll up, then tiles
+// fade in/out at the top. Search is excluded - typing already keeps
+// the user at the search input row, no scroll needed.
+let commitTimer = null;
+function scheduleCommit() {
+  clearTimeout(commitTimer);
+  if (window.scrollY <= 1) {
+    commitFilters();
+    return;
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  commitTimer = setTimeout(commitFilters, 380);
+}
+function commitFilters() {
+  appliedCluster.value = activeCluster.value;
+  appliedSubtopic.value = activeSubtopic.value;
+}
+
+// Search "wins" against the filter pills: typing into search means the
+// user wants to scan everyone, not the current cluster. Auto-clear the
+// cluster + subtopic the moment search becomes non-empty so the result
+// set isn't sneakily narrowed by a stale filter the user forgot about.
+watch(searchQuery, (val) => {
+  if (val.trim() && (activeCluster.value !== 'all' || activeSubtopic.value)) {
+    activeCluster.value = 'all';
+    activeSubtopic.value = null;
+  }
+});
 
 // URL <-> filter state, two-way. EpisodeCard's topic pills link here with
 // ?topic=<id>; cluster pills emit ?cluster=<id>. A topic implies its cluster,
@@ -65,6 +104,10 @@ function applyQueryToState() {
   activeSubtopic.value = null;
 }
 applyQueryToState();
+// Sync applied to active on initial mount: the (active) filter watch
+// below only fires on subsequent changes, so without this the page
+// would render with applied='all' even when URL has ?cluster=mind.
+commitFilters();
 watch(() => [route.query.topic, route.query.cluster], applyQueryToState);
 
 watch([activeCluster, activeSubtopic], () => {
@@ -74,31 +117,41 @@ watch([activeCluster, activeSubtopic], () => {
     : '';
   const currentTopic = route.query.topic || '';
   const currentCluster = route.query.cluster || '';
-  if (desiredTopic === currentTopic && desiredCluster === currentCluster) return;
-  const next = { ...route.query };
-  delete next.topic;
-  delete next.cluster;
-  if (desiredTopic) next.topic = desiredTopic;
-  else if (desiredCluster) next.cluster = desiredCluster;
-  // replace, not push: filter changes shouldn't pile up browser history.
-  router.replace({ query: next });
+  if (desiredTopic !== currentTopic || desiredCluster !== currentCluster) {
+    const next = { ...route.query };
+    delete next.topic;
+    delete next.cluster;
+    if (desiredTopic) next.topic = desiredTopic;
+    else if (desiredCluster) next.cluster = desiredCluster;
+    // replace, not push: filter changes shouldn't pile up browser history.
+    router.replace({ query: next });
+  }
+  // Smooth-scroll to top, then commit the new filter so the grid swap
+  // doesn't visibly happen while the user is still scrolling.
+  scheduleCommit();
 });
 
 const filteredEpisodes = computed(() => {
   let list = episodesData;
 
-  if (activeCluster.value !== 'all') {
-    const allowed = topicsByCluster[activeCluster.value] || [];
+  if (appliedCluster.value !== 'all') {
+    const allowed = topicsByCluster[appliedCluster.value] || [];
     list = list.filter((ep) => ep.topics.some((t) => allowed.includes(t)));
   }
 
-  if (activeSubtopic.value) {
-    list = list.filter((ep) => ep.topics.includes(activeSubtopic.value));
+  if (appliedSubtopic.value) {
+    list = list.filter((ep) => ep.topics.includes(appliedSubtopic.value));
   }
 
   const q = searchQuery.value.trim().toLowerCase();
   if (q) {
+    // "roundtable" as a virtual searchable keyword: a >=4-char prefix
+    // of "roundtable" returns every multi-guest episode (matching the
+    // Roundtable badge in the cards). Shorter prefixes like "r"/"ro"
+    // would match too broadly, so we require enough specificity.
+    const isRoundtableQuery = q.length >= 4 && 'roundtable'.startsWith(q);
     list = list.filter((ep) => {
+      if (isRoundtableQuery && ep.guestIds.length > 1) return true;
       if (ep.title.toLowerCase().includes(q)) return true;
       if (ep.description?.toLowerCase().includes(q)) return true;
       if (ep.originalTitle?.toLowerCase().includes(q)) return true;
@@ -115,10 +168,12 @@ const filteredEpisodes = computed(() => {
   return [...list].sort((a, b) => b.date.localeCompare(a.date));
 });
 
-// Key for the whole grid: changes whenever the filter changes, so Vue's
-// Transition (mode="out-in") fades the old grid out and the new one in.
+// Key for the whole grid: changes whenever the APPLIED filter changes
+// (lags one smooth-scroll behind the active filter), so Vue's
+// Transition (mode="out-in") fades the old grid out and the new one
+// in only after the page has finished scrolling to the top.
 const filterStateKey = computed(() =>
-  `${activeCluster.value}|${activeSubtopic.value ?? ''}|${searchQuery.value.trim()}`
+  `${appliedCluster.value}|${appliedSubtopic.value ?? ''}|${searchQuery.value.trim()}`
 );
 
 // Paginate the result set. At ~500 episodes, rendering all of them up
@@ -145,15 +200,15 @@ const resultSummary = computed(() => {
     { text: String(n), bold: true },
     { text: ` ${word}`, bold: false },
   ];
-  if (activeCluster.value !== 'all') {
-    const c = clusters.find((c) => c.id === activeCluster.value);
+  if (appliedCluster.value !== 'all') {
+    const c = clusters.find((c) => c.id === appliedCluster.value);
     if (c) {
       parts.push({ text: ' in ', bold: false });
       parts.push({ text: c.label, bold: true });
     }
   }
-  if (activeSubtopic.value) {
-    const t = taxonomiesData.topics.find((t) => t.id === activeSubtopic.value);
+  if (appliedSubtopic.value) {
+    const t = taxonomiesData.topics.find((t) => t.id === appliedSubtopic.value);
     if (t) {
       parts.push({ text: ' tagged ', bold: false });
       parts.push({ text: t.label, bold: true });
@@ -180,8 +235,20 @@ watch(filterStateKey, () => {
   }
 });
 
-// Modal state. Focus trap + Escape close live inside BaseModal.
-const aboutOpen = ref(false);
+// About modal lives at App.vue so it's reachable from the header on every
+// route. This page's hero corner button just opens the shared singleton.
+const { openAbout } = useAboutModal();
+
+// Filter context is shared across all pages via the composable so the
+// Home/Guests links in the header (and the corner Guests link here)
+// carry the user's filter even after navigating to detail pages that
+// don't have their own filter URL state.
+const { setFilter: setFilterContext, carryFilterQuery } = useFilterContext();
+const guestsLink = computed(() => ({ path: '/guests', query: carryFilterQuery() }));
+
+watch([activeCluster, activeSubtopic], () => {
+  setFilterContext(activeCluster.value, activeSubtopic.value);
+}, { immediate: true });
 
 // Sticky mini-header appears once the results bar has scrolled past.
 const resultsBarEl = ref(null);
@@ -228,10 +295,11 @@ onUnmounted(() => {
     <SiteHeader :visible="showHeader" />
 
     <div class="page-corner-actions">
+      <RouterLink :to="guestsLink" class="page-corner-button">Guests</RouterLink>
       <button
         type="button"
         class="page-corner-button"
-        @click="aboutOpen = true"
+        @click="openAbout"
       >About</button>
     </div>
 
@@ -310,7 +378,7 @@ onUnmounted(() => {
       </button>
     </div>
     <div
-      v-else-if="displayedEpisodes.length > 0"
+      v-else-if="displayedEpisodes.length > 6"
       class="load-more-wrapper"
     >
       <button
@@ -322,46 +390,6 @@ onUnmounted(() => {
         Back to top
       </button>
     </div>
-
-    <BaseModal
-      :open="aboutOpen"
-      title="About this project"
-      @close="aboutOpen = false"
-    >
-      <p>
-        <em>The Diary of a CEO</em> has hundreds of long-form interviews,
-        but most fall out of YouTube's feed within weeks of release. The
-        back catalog is full of conversations that hold up years later:
-        they just aren't the ones the algorithm surfaces. This is a
-        calmer way to browse the whole catalog and find them:
-      </p>
-      <ul>
-        <li>Editorial titles and short summaries written for browsing, not for the YouTube feed.</li>
-        <li>
-          A credibility line for every guest (credentials, current role,
-          notable books) so you can tell whether they fit the topic
-          before committing ninety minutes.
-        </li>
-        <li>
-          Filter by the topics you care about. Every episode equally
-          visible, sorted only by date.
-        </li>
-      </ul>
-      <p>
-        Built by
-        <a
-          href="https://www.linkedin.com/in/mariuszpdabrowski/"
-          target="_blank"
-          rel="noopener"
-        >Mariusz Dabrowski</a>.
-        Source on
-        <a
-          href="https://github.com/MariuszDabrowski/doac-episodes"
-          target="_blank"
-          rel="noopener"
-        >GitHub</a>.
-      </p>
-    </BaseModal>
 
   </main>
 </template>
@@ -429,7 +457,12 @@ main {
 .page-corner-actions {
   position: absolute;
   top: 1.5rem;
-  right: 1.5rem;
+  /* Align the corner actions with the body content's right edge on
+     wide screens. The grid + filter bar are clamped to max-width 110rem
+     and centered, so on viewports past that the content sits inside an
+     empty margin. max() falls back to 1.5rem on narrow screens where
+     (50% - 55rem + 1.5rem) is negative. */
+  right: max(1.5rem, calc(50% - 55rem + 1.5rem));
   z-index: 2;
   display: flex;
   gap: 0.25rem;
@@ -439,13 +472,15 @@ main {
   background: transparent;
   border: none;
   color: #8c8676;
+  text-decoration: none;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
+  line-height: 1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.4rem 0.875rem;
+  padding: 0.5rem 0.875rem;
   border-radius: 9999px;
   transition: color 0.15s ease, background-color 0.15s ease;
 }
@@ -623,11 +658,12 @@ main {
   background: rgba(245, 236, 214, 0.07);
   border: 1px solid rgba(245, 236, 214, 0.12);
   color: #f5ecd6;
-  padding: 0.75rem 2rem;
+  padding: 0.875rem 2rem;
   border-radius: 9999px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
+  line-height: 1;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -654,11 +690,12 @@ main {
   background: #c89968;
   border: none;
   color: #100e0c;
-  padding: 0.75rem 2rem;
+  padding: 0.875rem 2rem;
   border-radius: 9999px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
+  line-height: 1;
   letter-spacing: 0.02em;
   cursor: pointer;
   display: inline-flex;
@@ -720,15 +757,9 @@ main {
   }
 }
 
-@media (min-width: 1921px) {
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  /* 3-column layout: row 1 is children 1-3, also suppress above child 3 */
-  .card-slot:nth-child(3)::before {
-    display: none;
-  }
-}
+/* No 3-column tier: episode cards carry enough info (title, description,
+   bio, topics, actions) that a third column made each tile too narrow
+   to read comfortably even on ultrawide screens. Cap at 2 columns. */
 
 @media (max-width: 640px) {
   /* About link is taking corner space that mobile can't spare. */

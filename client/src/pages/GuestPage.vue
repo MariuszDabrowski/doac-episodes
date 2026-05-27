@@ -7,9 +7,17 @@ import taxonomiesData from '@data/taxonomies.json';
 import EpisodeCard from '@/components/EpisodeCard.vue';
 import SiteHeader from '@/components/SiteHeader.vue';
 import { useGridColumns } from '@/composables/useGridColumns.js';
+import { useFilterContext } from '@/composables/useFilterContext.js';
+import { useGuestPortrait } from '@/composables/useGuestPortrait.js';
 
 const route = useRoute();
 const slug = computed(() => route.params.slug);
+
+// "Back to all episodes" links carry the last-seen cluster/topic filter
+// from the shared composable so the user returns to the home/guests
+// page with their filter context intact.
+const { carryFilterQuery } = useFilterContext();
+const homeLink = computed(() => ({ path: '/', query: carryFilterQuery() }));
 
 const guestsById = Object.fromEntries(guestsData.map((g) => [g.id, g]));
 const rolesById = Object.fromEntries(taxonomiesData.roles.map((r) => [r.id, r]));
@@ -62,19 +70,10 @@ function buildGuestVectors() {
 }
 const guestVectors = buildGuestVectors();
 
-// Guests whose canonical /portraits/<id>.jpg is trustworthy: they have
-// at least one SOLO episode (single guest). Auto-portrait can't misfire
-// in a solo episode, since there's only one person on screen. In any
-// multi-guest video auto-portrait may have picked the wrong face,
-// regardless of who's listed as primary, so a guest who only appears
-// alongside others has an unverified canonical.
-const guestsWithReliablePortrait = (() => {
-  const ok = new Set();
-  for (const ep of episodesData) {
-    if (ep.guestIds.length === 1) ok.add(ep.guestIds[0]);
-  }
-  return ok;
-})();
+// Shared portrait resolution: primary-in-any-episode determines whether
+// a guest has a showable portrait, and we use that episode's per-episode
+// thumbnail in place of the canonical guest portrait.
+const { guestsWithReliablePortrait, portraitOf, portrait2xOf } = useGuestPortrait();
 
 function cosineSimilarity(a, b) {
   if (a.mag === 0 || b.mag === 0) return 0;
@@ -156,8 +155,8 @@ function withBase(path) {
   return path ? import.meta.env.BASE_URL + path.replace(/^\//, '') : null;
 }
 function relatedSrcsetJpg(g) {
-  const oneX = withBase(g.portrait);
-  const twoX = withBase(g.portrait2x);
+  const oneX = withBase(portraitOf(g));
+  const twoX = withBase(portrait2xOf(g));
   if (!oneX) return undefined;
   return twoX ? `${oneX} 1x, ${twoX} 2x` : oneX;
 }
@@ -222,7 +221,7 @@ const fillerCount = computed(() => {
     <template v-else>
       <section class="profile">
         <div class="profile-col">
-          <RouterLink to="/" class="back-pill">← All episodes</RouterLink>
+          <RouterLink :to="homeLink" class="back-pill">← All episodes</RouterLink>
           <h1 class="profile-name">{{ guest.name }}</h1>
           <p v-if="guest.credibilityLine" class="profile-bio">
             {{ guest.credibilityLine }}
@@ -251,8 +250,8 @@ const fillerCount = computed(() => {
           <li v-for="r in similarGuests" :key="r.guest.id" class="related-item">
             <RouterLink :to="`/guest/${r.guest.id}`" class="related-link">
               <img
-                v-if="r.guest.portrait && guestsWithReliablePortrait.has(r.guest.id) && !portraitErrors[r.guest.id]"
-                :src="withBase(r.guest.portrait)"
+                v-if="guestsWithReliablePortrait.has(r.guest.id) && !portraitErrors[r.guest.id]"
+                :src="withBase(portraitOf(r.guest))"
                 :srcset="relatedSrcsetJpg(r.guest)"
                 :alt="r.guest.name"
                 class="related-portrait"
@@ -264,6 +263,14 @@ const fillerCount = computed(() => {
                 {{ initialsOf(r.guest.name) }}
               </div>
               <span class="related-name">{{ r.guest.name }}</span>
+            </RouterLink>
+          </li>
+          <!-- "See all guests" sits at the end of the similar-guests
+               strip like another guest, so the lateral motion stays
+               aligned with the rest of the row. -->
+          <li class="related-item related-item-all">
+            <RouterLink to="/guests" class="related-all-pill">
+              See all guests <span aria-hidden="true">→</span>
             </RouterLink>
           </li>
         </ul>
@@ -301,7 +308,7 @@ const fillerCount = computed(() => {
       </section>
 
       <div class="back-to-all-wrapper">
-        <RouterLink to="/" class="back-to-all-button">
+        <RouterLink :to="homeLink" class="back-to-all-button">
           <span aria-hidden="true">←</span>
           Browse all episodes
           <span class="back-to-all-count">{{ totalEpisodeCount }} total</span>
@@ -385,11 +392,12 @@ main {
   background: transparent;
   border: 1px solid rgba(245, 236, 214, 0.22);
   color: #d4c9ad;
-  padding: 0.35rem 0.875rem;
+  padding: 0.45rem 0.875rem;
   border-radius: 9999px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
+  line-height: 1;
   letter-spacing: 0.02em;
   text-decoration: none;
   margin-bottom: 1.5rem;
@@ -459,10 +467,11 @@ main {
   background: transparent;
   border: 1px solid rgba(245, 236, 214, 0.22);
   color: #d4c9ad;
-  padding: 0.2rem 0.625rem;
+  padding: 0.35rem 0.625rem;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
+  line-height: 1;
   letter-spacing: 0.01em;
   display: inline-flex;
   align-items: center;
@@ -505,6 +514,42 @@ main {
   text-transform: uppercase;
   color: #8c8676;
   margin: 0 0 1.25rem;
+}
+
+/* "See all guests" pill sits inline at the end of the similar-list
+   strip. Centered against the portrait row (72px tall) rather than the
+   full guest column (portrait + name), so it visually pairs with the
+   round photos beside it. */
+.related-item-all {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  align-self: flex-start;
+}
+
+.related-all-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.125rem;
+  background: rgba(245, 236, 214, 0.07);
+  border: 1px solid rgba(245, 236, 214, 0.12);
+  border-radius: 9999px;
+  color: #d4c9ad;
+  text-decoration: none;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.related-all-pill:hover {
+  border-color: rgba(200, 153, 104, 0.5);
+  background: rgba(245, 236, 214, 0.09);
+  color: #f5ecd6;
 }
 
 .related-list {
@@ -676,11 +721,12 @@ main {
   background: rgba(245, 236, 214, 0.07);
   border: 1px solid rgba(245, 236, 214, 0.12);
   color: #f5ecd6;
-  padding: 0.75rem 2rem;
+  padding: 0.875rem 2rem;
   border-radius: 9999px;
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
+  line-height: 1;
   letter-spacing: 0.02em;
   text-decoration: none;
   display: inline-flex;

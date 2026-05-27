@@ -242,7 +242,8 @@ onUnmounted(() => {
   font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
-  padding: 0.5rem 1.25rem;
+  line-height: 1;
+  padding: 0.625rem 1.25rem;
   border-radius: 9999px;
   cursor: pointer;
   white-space: nowrap;
@@ -449,8 +450,6 @@ onUnmounted(() => {
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
-    max-width: 30rem;
-    margin: 0 auto;
   }
 
   .category-section {

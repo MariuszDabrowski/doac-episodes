@@ -10,6 +10,7 @@ import './assets/css/main.css';
 // dev-only and never loaded in prod). Vite/Rollup splits each dynamic
 // import into its own chunk.
 const GuestPage = () => import('./pages/GuestPage.vue');
+const GuestsIndex = () => import('./pages/GuestsIndex.vue');
 const ReviewPage = () => import('./pages/ReviewPage.vue');
 
 // Belt-and-suspenders: index.html sets history.scrollRestoration =
@@ -25,12 +26,22 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', component: HomePage },
+    { path: '/guests', component: GuestsIndex },
     { path: '/guest/:slug', component: GuestPage },
     { path: '/review', component: ReviewPage },
   ],
-  // Jump to top on navigation, restore on back/forward.
-  scrollBehavior(_to, _from, saved) {
-    return saved || { top: 0 };
+  // Defer scroll-to-top until after the page-fade leave transition has
+  // finished. Without the delay, the user sees the current page jump to
+  // the top WHILE it's fading out, which reads as a glitch. Same-route
+  // navigations (cluster/topic query updates from FilterBar clicks) skip
+  // scrolling entirely - the user is already in the right spot and a
+  // jump would feel broken.
+  scrollBehavior(to, from, saved) {
+    if (saved) return saved;
+    if (to.path === from.path) return false;
+    return new Promise((resolve) => {
+      setTimeout(() => resolve({ top: 0 }), 420);
+    });
   },
 });
 

@@ -1,6 +1,6 @@
 <script setup>
-import { computed, ref, onUnmounted, watch } from 'vue';
-import { RouterLink, useRoute } from 'vue-router';
+import { computed, ref, onUnmounted } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const props = defineProps({
   episode: { type: Object, required: true },
@@ -77,16 +77,12 @@ const portraitAlt = computed(() => props.guests[0]?.name || '');
 
 const expanded = ref(false);
 
-// Reset the "+N more guests" expand state whenever the route changes.
-// When vue-router reuses the same component instance across param-only
-// transitions (e.g. /guest/scott-galloway → /guest/jay-shetty), the
-// component doesn't unmount, so without this the previous expand state
-// would stick around. The watch is a no-op on full remounts (initial
-// state is already collapsed).
-const route = useRoute();
-watch(() => route.fullPath, () => {
-  expanded.value = false;
-});
+// No route watch here: collapsing the +N panel during a navigation runs
+// its grid-template-rows animation simultaneously with the page-fade
+// (cross-page) or scroll-to-top (within /guest/:slug), which read as
+// competing animations. In practice the displayedEpisodes v-for re-keys
+// by episode id, so cards unmount and remount with fresh expand state
+// across guest-to-guest navigations anyway.
 
 const extraGuests = computed(() => props.guests.slice(1));
 const hiddenGuestCount = computed(() => props.guests.length - 1);
@@ -151,7 +147,13 @@ const guestPromotionGroups = computed(() => {
 <template>
   <article class="card">
     <div class="left-col">
-      <div class="portrait-link">
+      <a
+        class="portrait-link"
+        :href="episode.links.youtube"
+        target="_blank"
+        rel="noopener"
+        :aria-label="`Watch ${episode.title} on YouTube`"
+      >
         <div class="portrait">
           <picture v-if="portraitSrc">
             <source type="image/avif" :srcset="portraitSrcsetAvif" />
@@ -161,14 +163,21 @@ const guestPromotionGroups = computed(() => {
               :srcset="portraitSrcsetJpg"
               :alt="portraitAlt"
               class="portrait-img"
-              loading="lazy"
               decoding="async"
               @load="$event.target.classList.add('is-loaded')"
             />
           </picture>
           <span v-else class="portrait-placeholder" aria-hidden="true">portrait</span>
+          <!-- Multi-guest episodes get a flush top-left tag so the card
+               telegraphs "this is a panel" before the user notices the
+               extra guests below. Guest count is inline so the size of
+               the panel is visible at a glance. -->
+          <span v-if="guests.length > 1" class="roundtable-tag">
+            Roundtable
+            <span class="roundtable-count">{{ guests.length }}</span>
+          </span>
         </div>
-      </div>
+      </a>
 
       <div class="guest-block">
         <div v-if="guests[0]" :key="guests[0].id" class="guest">
@@ -274,6 +283,24 @@ const guestPromotionGroups = computed(() => {
   position: relative;
 }
 
+/* Darker wedge behind the episode badge. The content-block's clip-path
+   removes its top-right corner (159px x 32px triangle), revealing the
+   .card surface beneath. Without a backdrop, that surface (translucent
+   cream) reads as bright against the page's warm top glow. A light
+   shade layered behind the badge keeps "EP 515" legible without
+   making the wedge feel like a separate panel. */
+.right-col::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 159px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.22);
+  pointer-events: none;
+  z-index: 0;
+}
+
 .portrait-link {
   display: block;
   text-decoration: none;
@@ -322,6 +349,50 @@ const guestPromotionGroups = computed(() => {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0.55;
+}
+
+/* Multi-guest "Roundtable" tag, top-left flush with the portrait corner.
+   Gold text on a dark plate so it reads as a category marker without
+   competing with the gold Watch button. No margins or radius so the
+   corner stays hard-edged against the portrait's clip. */
+.roundtable-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.625rem;
+  background: rgba(16, 14, 12, 0.75);
+  /* Top/left flush with the portrait corner; bottom-right rounded so
+     the tag reads as a deliberate plate, not a clipped rectangle. */
+  border-bottom-right-radius: 8px;
+  color: #c89968;
+  font-family: 'Barlow Semi Condensed', -apple-system, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.roundtable-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Explicit dimensions + line-height: 1 so the digit sits dead-center
+     in the pill instead of riding low against the baseline. */
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #100e0c;
+  background: #c89968;
+  border-radius: 9999px;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .guest-block {
@@ -391,10 +462,11 @@ const guestPromotionGroups = computed(() => {
 .appearance-pill {
   background: rgba(245, 236, 214, 0.09);
   color: #bcb29e;
-  padding: 0.125rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 9999px;
   font-size: 0.6875rem;
   font-weight: 500;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -403,11 +475,12 @@ const guestPromotionGroups = computed(() => {
   background: rgba(245, 236, 214, 0.09);
   border: none;
   color: #d4c9ad;
-  padding: 0.3rem 0.75rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 9999px;
   font-family: inherit;
   font-size: 0.75rem;
   font-weight: 500;
+  line-height: 1;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
@@ -590,10 +663,11 @@ const guestPromotionGroups = computed(() => {
   background: transparent;
   border: 1px solid rgba(245, 236, 214, 0.22);
   color: #d4c9ad;
-  padding: 0.2rem 0.625rem;
+  padding: 0.3rem 0.625rem;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
+  line-height: 1;
   text-decoration: none;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
@@ -607,7 +681,7 @@ const guestPromotionGroups = computed(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   background: #c89968;
   color: #100e0c;
   border: none;
@@ -616,6 +690,7 @@ const guestPromotionGroups = computed(() => {
   font-weight: 600;
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
+  line-height: 1;
   flex-shrink: 0;
   /* Clip the icon's start position (above the button) and the label's
      end position (below) so the hover swap reads as a roll-down: label

@@ -9,7 +9,6 @@ import { onMounted, onUnmounted, ref } from 'vue';
 // breakpoint actually crosses, not on every pixel of scroll-bar reflow.
 
 const BREAKPOINTS = [
-  { minWidth: 1921, columns: 3 },
   { minWidth: 1200, columns: 2 },
   { minWidth: 0, columns: 1 },
 ];
