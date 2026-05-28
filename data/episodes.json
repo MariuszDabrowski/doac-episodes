@@ -1,5 +1,126 @@
 [
   {
+    "id": "doac-H-8NrKFQKhU",
+    "episodeNumber": 559,
+    "episodeNumberSource": "estimate",
+    "title": "AI, Iran conflict, and 2028 election stakes",
+    "originalTitle": "EMERGENCY DEBATE: They Are Lying To Us About AI, The Iran War & What Happens Next!",
+    "slug": "oleary-uygur-ai-iran-election",
+    "date": "2026-05-28",
+    "duration": 6212,
+    "guestIds": [
+      "kevin-oleary",
+      "cenk-uygur"
+    ],
+    "topics": [
+      "ai",
+      "politics",
+      "economics"
+    ],
+    "description": "O'Leary and Uygur debate AI's economic impact, geopolitical tensions with Iran, and the upcoming presidential election.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=H-8NrKFQKhU"
+    },
+    "thumbnail": "/portraits/doac-H-8NrKFQKhU.jpg",
+    "thumbnail2x": "/portraits/doac-H-8NrKFQKhU@2x.jpg",
+    "thumbnailBrightness": 0.37,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Cold Hard Truth: On Family, Kids and Money",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/23ZO5Ki"
+      },
+      {
+        "type": "book",
+        "title": "Justice Is Coming: How Progressives Are Going to Take Over the Country and America Is Going to Love It",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/BJHknnM"
+      },
+      {
+        "type": "company",
+        "title": "The Young Turks",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/3nx7gGY"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Stan",
+        "url": "https://coach.stan.store/?ref=stevenbartlett&utm_source=youtube&utm_medium=podcast&utm_campaign=episode8",
+        "topical": false
+      },
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      },
+      {
+        "name": "Cometeer",
+        "url": "https://cometeer.com/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 155,
+        "title": "Why 7 Out Of 10 Americans Now Oppose AI Data Centers"
+      },
+      {
+        "start": 444,
+        "title": "Why AI Could Trigger A Collapse And UBI Crisis"
+      },
+      {
+        "start": 930,
+        "title": "Are AI Founders Hiding The Real Risks From The Public?"
+      },
+      {
+        "start": 1435,
+        "title": "Can AI Ever Be Built Responsibly Or Is That Impossible?"
+      },
+      {
+        "start": 1931,
+        "title": "How AI Is Quietly Destroying Jobs"
+      },
+      {
+        "start": 2255,
+        "title": "Why Massive Unemployment Could Arrive Faster Than Expected"
+      },
+      {
+        "start": 2792,
+        "title": "Ads"
+      },
+      {
+        "start": 2920,
+        "title": "What's Really Happening Between Israel, Iran, And The Middle East"
+      },
+      {
+        "start": 4319,
+        "title": "Did Trump Miscalculate How Long This Conflict Would Last?"
+      },
+      {
+        "start": 4547,
+        "title": "Ads"
+      },
+      {
+        "start": 4688,
+        "title": "Why America Is Rapidly Losing Its Patience"
+      },
+      {
+        "start": 5348,
+        "title": "Are We Watching The Rise Of Socialism In Real Time?"
+      },
+      {
+        "start": 5646,
+        "title": "Who Actually Has The Edge In The Next Presidential Election?"
+      }
+    ]
+  },
+  {
     "id": "doac-qel8Fyt78fk",
     "episodeNumber": 558,
     "episodeNumberSource": "estimate",

@@ -9509,5 +9509,28 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Bruno_Fernandes"
     }
+  },
+  {
+    "id": "cenk-uygur",
+    "name": "Cenk Uygur",
+    "portrait": "/portraits/cenk-uygur.jpg",
+    "portrait2x": "/portraits/cenk-uygur@2x.jpg",
+    "portraitBrightness": 0.333,
+    "credibilityLine": "Co-founder of The Young Turks, the longest-running daily online stream in internet history; bestselling author of Justice Is Coming; political activist and attorney.",
+    "fields": [
+      "politics",
+      "media commentary",
+      "economics"
+    ],
+    "roles": [
+      "author",
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Political commentator and co-founder of The Young Turks",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Cenk_Uygur"
+    }
   }
 ]
