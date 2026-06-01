@@ -1,5 +1,209 @@
 [
   {
+    "id": "doac-RwlgFC6S-OE",
+    "episodeNumber": 560,
+    "episodeNumberSource": "estimate",
+    "title": "AGI's arrival and AI workforce disruption",
+    "originalTitle": "Tech Whistleblower: You Only Have 3 Years Left Before It Hits! - Mo Gawdat",
+    "slug": "gawdat-agi-workforce-disruption",
+    "date": "2026-06-01",
+    "duration": 7320,
+    "guestIds": [
+      "mo-gawdat"
+    ],
+    "topics": [
+      "ai",
+      "economics",
+      "leadership"
+    ],
+    "description": "Gawdat on AGI's arrival, 30% job losses by 2027, why capitalism breaks under AI replacement, and ethical governance of superintelligence.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=RwlgFC6S-OE"
+    },
+    "thumbnail": "/portraits/doac-RwlgFC6S-OE.jpg",
+    "thumbnail2x": "/portraits/doac-RwlgFC6S-OE@2x.jpg",
+    "thumbnailBrightness": 0.293,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Alive: A Human's Guide to Living in the World of AI",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/BvCLbtT"
+      },
+      {
+        "type": "company",
+        "title": "Emma.Love",
+        "by": "guest",
+        "link": "https://emma.love/"
+      },
+      {
+        "type": "service",
+        "title": "Chasing Utopia Film",
+        "by": "guest",
+        "link": "https://chasingutopiafilm.org/"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Shopify",
+        "url": "https://shopify.com/bartlett",
+        "topical": false
+      },
+      {
+        "name": "Function Health",
+        "url": "https://functionhealth.com/DOAC",
+        "topical": false
+      },
+      {
+        "name": "Ketone",
+        "url": "https://ketone.com/STEVEN",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 149,
+        "title": "Why Mo Warned About AI Before Anyone Else"
+      },
+      {
+        "start": 326,
+        "title": "Can AI Be a Net Positive for Humanity?"
+      },
+      {
+        "start": 536,
+        "title": "Massive Job Disruption Worldwide"
+      },
+      {
+        "start": 928,
+        "title": "Will AI Cost Savings Create New Jobs?"
+      },
+      {
+        "start": 998,
+        "title": "What Happens to Blue Collar Jobs?"
+      },
+      {
+        "start": 1340,
+        "title": "How 10–15% Job Loss Reshapes Society"
+      },
+      {
+        "start": 1483,
+        "title": "How Civil Unrest Could Unfold"
+      },
+      {
+        "start": 1587,
+        "title": "Sam Altman's Flip-Flopping on AI"
+      },
+      {
+        "start": 1958,
+        "title": "Is Sam Altman Pro-Humanity?"
+      },
+      {
+        "start": 2054,
+        "title": "Imagining a Future Where Humanity Is Fine"
+      },
+      {
+        "start": 2544,
+        "title": "Will One Superintelligence Rule the World?"
+      },
+      {
+        "start": 2775,
+        "title": "If AGI Is Already Here, What Now?"
+      },
+      {
+        "start": 2922,
+        "title": "Why Human Lived Experience Still Matters"
+      },
+      {
+        "start": 3176,
+        "title": "Why Not Just Hire AGI Instead of People?"
+      },
+      {
+        "start": 3323,
+        "title": "Can We Control AI Smarter Than Us?"
+      },
+      {
+        "start": 3545,
+        "title": "Could AI Decide to Leave the Server?"
+      },
+      {
+        "start": 3579,
+        "title": "The Risk of Models Even Creators Don't Understand"
+      },
+      {
+        "start": 3893,
+        "title": "AI Isn't Evil But We Need a Plan"
+      },
+      {
+        "start": 4151,
+        "title": "Ads"
+      },
+      {
+        "start": 4473,
+        "title": "The Symptoms of AGI by 2030"
+      },
+      {
+        "start": 4462,
+        "title": "If the US Stops, Will We Become China's Lapdog?"
+      },
+      {
+        "start": 4605,
+        "title": "Should Governments Invest More in AI?"
+      },
+      {
+        "start": 4659,
+        "title": "Can an Economy of Entrepreneurs Work?"
+      },
+      {
+        "start": 4859,
+        "title": "Do We Need to Join the AI Arms Race?"
+      },
+      {
+        "start": 5034,
+        "title": "Will Global Competition Build Better AI?"
+      },
+      {
+        "start": 5566,
+        "title": "Ads"
+      },
+      {
+        "start": 5697,
+        "title": "Who Will Prioritize Ethical AI?"
+      },
+      {
+        "start": 6324,
+        "title": "Whose Economy Works for the Middle Class?"
+      },
+      {
+        "start": 6540,
+        "title": "Can Ethical AI Still Be Engaging?"
+      },
+      {
+        "start": 6822,
+        "title": "Has This Ever Happened Without Government?"
+      },
+      {
+        "start": 7367,
+        "title": "What Absolute Dystopia Looks Like"
+      },
+      {
+        "start": 7558,
+        "title": "Are You Optimistic About AI?"
+      },
+      {
+        "start": 7651,
+        "title": "Does Happiness Matter More in the AI Age?"
+      },
+      {
+        "start": 7240,
+        "title": "The Legacy Mo Gawdat Wants to Leave"
+      }
+    ]
+  },
+  {
     "id": "doac-H-8NrKFQKhU",
     "episodeNumber": 559,
     "episodeNumberSource": "estimate",
