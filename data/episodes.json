@@ -1,5 +1,170 @@
 [
   {
+    "id": "doac-dLrvJeSugkM",
+    "episodeNumber": 561,
+    "episodeNumberSource": "estimate",
+    "title": "God, AI, and human consciousness",
+    "originalTitle": "No.1 Christianity Expert: If You DON'T Believe In a God You NEED to Hear This!",
+    "slug": "lennox-god-ai-consciousness",
+    "date": "2026-06-04",
+    "duration": 5175,
+    "guestIds": [
+      "john-lennox"
+    ],
+    "topics": [
+      "science",
+      "ai"
+    ],
+    "description": "Lennox explores why AI can't replicate consciousness, the parallels between AI and God, and what makes humans irreplaceable in an AI age.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=dLrvJeSugkM"
+    },
+    "thumbnail": "/portraits/doac-dLrvJeSugkM.jpg",
+    "thumbnail2x": "/portraits/doac-dLrvJeSugkM@2x.jpg",
+    "thumbnailBrightness": 0.32,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "God, AI and the End of History: Understanding the Book of Revelation in an Age of Intelligent Machines",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/5eIJfK0"
+      },
+      {
+        "type": "book",
+        "title": "My Story: A spiritual and intellectual autobiography",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/FTujQEA"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "LinkedIn Talent Solutions",
+        "url": "http://linkedin.com/DOAC",
+        "topical": false
+      },
+      {
+        "name": "Anker",
+        "url": "https://linkly.link/2k4Ny",
+        "topical": false
+      },
+      {
+        "name": "Cometeer",
+        "url": "https://cometeer.com/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 147,
+        "title": "Is Mathematics Evidence Of God?"
+      },
+      {
+        "start": 269,
+        "title": "The Biggest Concern About AI"
+      },
+      {
+        "start": 609,
+        "title": "What Is The Difference Between Narrow AI And AGI?"
+      },
+      {
+        "start": 753,
+        "title": "Where Does Humanity Exist In A World Of AI?"
+      },
+      {
+        "start": 1081,
+        "title": "Surprising Parallels Between AI And God"
+      },
+      {
+        "start": 1187,
+        "title": "Is Our Society Becoming More Narrow Minded?"
+      },
+      {
+        "start": 1308,
+        "title": "The Real Problem With Atheism"
+      },
+      {
+        "start": 1557,
+        "title": "Convince Me To Become A Believer"
+      },
+      {
+        "start": 2190,
+        "title": "How Do I Know If The Christian Faith Is True?"
+      },
+      {
+        "start": 2315,
+        "title": "Could You Be Wrong About Your Beliefs?"
+      },
+      {
+        "start": 2458,
+        "title": "Ads"
+      },
+      {
+        "start": 2594,
+        "title": "Do People Just Stay In The Religion They Are Brought Up With?"
+      },
+      {
+        "start": 2779,
+        "title": "Why Can't God Fix Pain?"
+      },
+      {
+        "start": 3028,
+        "title": "Why Do People Suffer If God Exists?"
+      },
+      {
+        "start": 3374,
+        "title": "What About The Humans Before Jesus?"
+      },
+      {
+        "start": 3436,
+        "title": "If I Am A Good Person, Is It Necessary To Believe In God?"
+      },
+      {
+        "start": 3533,
+        "title": "Do All Religions Provide Meaning And Psychological Comfort?"
+      },
+      {
+        "start": 3753,
+        "title": "Ads"
+      },
+      {
+        "start": 3888,
+        "title": "If I Do Not Believe Am I Going To Hell?"
+      },
+      {
+        "start": 4046,
+        "title": "If A Serial Killer Repented Would They Be Forgiven?"
+      },
+      {
+        "start": 4271,
+        "title": "How Do We Survive Job Loss From AI?"
+      },
+      {
+        "start": 4474,
+        "title": "Will AI Restore Humanity Or Destroy It?"
+      },
+      {
+        "start": 4616,
+        "title": "Is AI Conscious?"
+      },
+      {
+        "start": 4656,
+        "title": "Can AI Be Truly Creative?"
+      },
+      {
+        "start": 4856,
+        "title": "What Makes Humans Special In An Age Of AI"
+      },
+      {
+        "start": 4977,
+        "title": "What Can We Do To Restore Hope?"
+      }
+    ]
+  },
+  {
     "id": "doac-RwlgFC6S-OE",
     "episodeNumber": 560,
     "episodeNumberSource": "estimate",

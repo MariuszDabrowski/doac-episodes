@@ -9532,5 +9532,28 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Cenk_Uygur"
     }
+  },
+  {
+    "id": "john-lennox",
+    "name": "John Lennox",
+    "portrait": "/portraits/john-lennox.jpg",
+    "portrait2x": "/portraits/john-lennox@2x.jpg",
+    "portraitBrightness": 0.315,
+    "credibilityLine": "Emeritus Professor of Mathematics at Oxford University; doctorate in mathematics from Cambridge; author of God, AI and the End of History and Has Science Buried God; debated Richard Dawkins and Christopher Hitchens on faith and science.",
+    "fields": [
+      "mathematics",
+      "theology",
+      "philosophy of science"
+    ],
+    "roles": [
+      "academic",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Emeritus Professor of Mathematics, Oxford University; President of Oxford Centre for Christian Apologetics",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/John_Lennox"
+    }
   }
 ]
