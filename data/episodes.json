@@ -1,5 +1,231 @@
 [
   {
+    "id": "doac-uLBsHXNEwAU",
+    "episodeNumber": 562,
+    "episodeNumberSource": "estimate",
+    "title": "Hanauer and Priestley debate middle-class collapse",
+    "originalTitle": "EMERGENCY DEBATE: The Death Of The Middle Class! The Pitch Forks Are Coming!",
+    "slug": "hanauer-priestley-middle-class-economics",
+    "date": "2026-06-08",
+    "duration": 9146,
+    "guestIds": [
+      "nick-hanauer",
+      "daniel-priestley"
+    ],
+    "topics": [
+      "economics",
+      "ai"
+    ],
+    "description": "Hanauer and Priestley debate the wealth divide, AI job displacement, why wages lag, and whether policy or entrepreneurship fixes inequality.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=uLBsHXNEwAU"
+    },
+    "thumbnail": "/portraits/doac-uLBsHXNEwAU.jpg",
+    "thumbnail2x": "/portraits/doac-uLBsHXNEwAU@2x.jpg",
+    "thumbnailBrightness": 0.302,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Lifestyle Business Playbook: How to Have Fun, Freedom and Fulfilment With Your Own Business",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/GpE0H2H"
+      },
+      {
+        "type": "book",
+        "title": "Corporate Bullsh*t: Exposing the Lies and Half-Truths That Protect Profit, Power, and Wealth in America",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/Eif7Ics"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "LinkedIn Marketing",
+        "url": "https://www.linkedin.com/DIARY",
+        "topical": false
+      },
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      },
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 147,
+        "title": "Why Nick Hanauer's Economic Views Matter"
+      },
+      {
+        "start": 387,
+        "title": "Daniel Priestley's Different Take On Wealth"
+      },
+      {
+        "start": 512,
+        "title": "Is Taxing The Rich The Answer?"
+      },
+      {
+        "start": 704,
+        "title": "Do The Wealthy Already Pay Enough Tax?"
+      },
+      {
+        "start": 907,
+        "title": "Entrepreneurship Vs Policy: What Works Best?"
+      },
+      {
+        "start": 1205,
+        "title": "The Policy Fix For Inequality"
+      },
+      {
+        "start": 1493,
+        "title": "US Vs UK: Which Economy Wins?"
+      },
+      {
+        "start": 1617,
+        "title": "Do Higher Wages Hurt Small Business?"
+      },
+      {
+        "start": 1718,
+        "title": "Why Small Businesses Can't Match MegaCorp Pay"
+      },
+      {
+        "start": 1982,
+        "title": "What Workers Need Right Now"
+      },
+      {
+        "start": 2159,
+        "title": "Ownership Models That Build Wealth"
+      },
+      {
+        "start": 2428,
+        "title": "The Real Impact Of Worker Rights"
+      },
+      {
+        "start": 2490,
+        "title": "What Brexit Really Changed"
+      },
+      {
+        "start": 2701,
+        "title": "The Hidden Lessons Of K-Shaped Economies"
+      },
+      {
+        "start": 2848,
+        "title": "Will Companies Leave If Taxes Rise?"
+      },
+      {
+        "start": 3118,
+        "title": "Should Global Corporations Pay More Tax?"
+      },
+      {
+        "start": 3240,
+        "title": "How MegaCorps Block Entire Markets"
+      },
+      {
+        "start": 3298,
+        "title": "Solutions To Economic Inequality"
+      },
+      {
+        "start": 3411,
+        "title": "Ads"
+      },
+      {
+        "start": 3539,
+        "title": "How Many Jobs Will AI Replace?"
+      },
+      {
+        "start": 3698,
+        "title": "AI Agents Are Replacing Entry-Level Work"
+      },
+      {
+        "start": 3925,
+        "title": "Will AI Reduce Hiring?"
+      },
+      {
+        "start": 4119,
+        "title": "Is Universal Basic Income The Answer?"
+      },
+      {
+        "start": 4409,
+        "title": "Why Governments Struggle To Deliver"
+      },
+      {
+        "start": 4488,
+        "title": "The Best Fix For AI Job Loss"
+      },
+      {
+        "start": 4670,
+        "title": "Are We Heading Towards An AI Utopia?"
+      },
+      {
+        "start": 4925,
+        "title": "Would Higher AI Taxes Drive Companies Away?"
+      },
+      {
+        "start": 5048,
+        "title": "Does Government Improve Lives?"
+      },
+      {
+        "start": 5432,
+        "title": "Where They Fundamentally Disagree"
+      },
+      {
+        "start": 5589,
+        "title": "Is Socialism The Answer?"
+      },
+      {
+        "start": 5848,
+        "title": "How Policy Builds A Strong Middle Class"
+      },
+      {
+        "start": 6185,
+        "title": "Ads"
+      },
+      {
+        "start": 6316,
+        "title": "Which Economies Are Thriving Today?"
+      },
+      {
+        "start": 6518,
+        "title": "What If You're Not Entrepreneurial?"
+      },
+      {
+        "start": 6706,
+        "title": "Why Not Everyone Should Be An Entrepreneur"
+      },
+      {
+        "start": 6826,
+        "title": "How To Help Small Businesses Thrive"
+      },
+      {
+        "start": 6976,
+        "title": "Can Regulation Help Small Business Win?"
+      },
+      {
+        "start": 7061,
+        "title": "Ending Taxes For Lower-Income Earners"
+      },
+      {
+        "start": 7300,
+        "title": "The Global Economy's Biggest Problem"
+      },
+      {
+        "start": 7780,
+        "title": "Radical Solutions To Inequality"
+      },
+      {
+        "start": 8131,
+        "title": "How Do We Restore Hope?"
+      }
+    ]
+  },
+  {
     "id": "doac-dLrvJeSugkM",
     "episodeNumber": 561,
     "episodeNumberSource": "estimate",

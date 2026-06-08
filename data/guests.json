@@ -9555,5 +9555,28 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/John_Lennox"
     }
+  },
+  {
+    "id": "nick-hanauer",
+    "name": "Nick Hanauer",
+    "portrait": "/portraits/nick-hanauer.jpg",
+    "portrait2x": "/portraits/nick-hanauer@2x.jpg",
+    "portraitBrightness": 0.263,
+    "credibilityLine": "First non-family investor in Amazon; founder/financed 30+ companies including gear.com, Avenue A Media (sold to Microsoft for $6.4B), Insitu Group (sold to Boeing for $400M); venture capitalist, Second Avenue Partners; host of Pitchfork Economics podcast; author of The True Patriot; co-founder, True Patriot Network progressive think tank.",
+    "fields": [
+      "economics",
+      "entrepreneurship",
+      "venture capital"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Venture capitalist and entrepreneur; host of Pitchfork Economics podcast",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Nick_Hanauer"
+    }
   }
 ]
