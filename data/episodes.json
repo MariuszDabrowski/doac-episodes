@@ -1,5 +1,227 @@
 [
   {
+    "id": "doac-Xs94KBeIiAo",
+    "episodeNumber": 563,
+    "episodeNumberSource": "estimate",
+    "title": "Ancient Civilizations and Lost Human History",
+    "originalTitle": "Archaeology WARNING: They Secretly Found Antarctica 300 Years Before Us! - Graham Hancock",
+    "slug": "hancock-ancient-civilizations",
+    "date": "2026-06-11",
+    "duration": 7000,
+    "guestIds": [
+      "graham-hancock"
+    ],
+    "topics": [
+      "science",
+      "culture"
+    ],
+    "description": "Hancock on lost civilizations, the Great Pyramid's secrets, ancient maps of Antarctica, and what ayahuasca taught him about human consciousness and history.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=Xs94KBeIiAo"
+    },
+    "thumbnail": "/portraits/doac-Xs94KBeIiAo.jpg",
+    "thumbnail2x": "/portraits/doac-Xs94KBeIiAo@2x.jpg",
+    "thumbnailBrightness": 0.374,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Visionary: The Mysterious Origins of Human Consciousness",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/3m3QlBS"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Cometeer",
+        "url": "https://cometeer.com/doac",
+        "topical": false
+      },
+      {
+        "name": "Shopify",
+        "url": "https://shopify.com/bartlett",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 158,
+        "title": "Do Humans Have A Hidden Past?"
+      },
+      {
+        "start": 398,
+        "title": "Did A Global Cataclysm Reset Humanity?"
+      },
+      {
+        "start": 689,
+        "title": "Why Have This Conversation Now?"
+      },
+      {
+        "start": 757,
+        "title": "Why Is Your Work So Controversial?"
+      },
+      {
+        "start": 895,
+        "title": "How Old Is Humanity Really?"
+      },
+      {
+        "start": 1139,
+        "title": "The Evidence Behind The Lost Comet Theory"
+      },
+      {
+        "start": 1216,
+        "title": "What Truly Defines A Civilization?"
+      },
+      {
+        "start": 1399,
+        "title": "Did Humans Survive The Ice Age?"
+      },
+      {
+        "start": 1478,
+        "title": "What Were Early Humans Really Like?"
+      },
+      {
+        "start": 1704,
+        "title": "The Missing Chapter In Human History"
+      },
+      {
+        "start": 1798,
+        "title": "Could We Become The Next Lost Civilization?"
+      },
+      {
+        "start": 2113,
+        "title": "How Do We Know These Stories Are True?"
+      },
+      {
+        "start": 2277,
+        "title": "The Unsolved Mystery Of The Great Pyramid"
+      },
+      {
+        "start": 2540,
+        "title": "The Real Meaning Of The Age Of Aquarius"
+      },
+      {
+        "start": 2845,
+        "title": "Did The Ancients Know The Size Of Earth?"
+      },
+      {
+        "start": 3005,
+        "title": "Were Ancient Secrets Passed Down Through Time?"
+      },
+      {
+        "start": 3140,
+        "title": "Where Did Humanity's Lost Knowledge Go?"
+      },
+      {
+        "start": 3266,
+        "title": "Do The Pyramids Point To A Lost Civilization?"
+      },
+      {
+        "start": 3341,
+        "title": "Is Something Hidden Beneath The Great Pyramid?"
+      },
+      {
+        "start": 3458,
+        "title": "Why Mainstream Science Pushes Back"
+      },
+      {
+        "start": 3539,
+        "title": "Alone Inside The Great Pyramid"
+      },
+      {
+        "start": 3642,
+        "title": "Ads"
+      },
+      {
+        "start": 3764,
+        "title": "What A Lost Civilization Means Today"
+      },
+      {
+        "start": 3820,
+        "title": "Should We Rethink Astrology And Telepathy?"
+      },
+      {
+        "start": 3946,
+        "title": "New Discoveries Beneath The Amazon"
+      },
+      {
+        "start": 4149,
+        "title": "What Shamanism Gets Right"
+      },
+      {
+        "start": 4196,
+        "title": "A Journey With Ayahuasca"
+      },
+      {
+        "start": 4384,
+        "title": "Strange Experiences From Childhood"
+      },
+      {
+        "start": 4557,
+        "title": "Did You Have Nightmares?"
+      },
+      {
+        "start": 4633,
+        "title": "Why Being An Outsider Matters"
+      },
+      {
+        "start": 4709,
+        "title": "Don't Let Life Pass You By"
+      },
+      {
+        "start": 4830,
+        "title": "Are Religion And Spirituality The Same?"
+      },
+      {
+        "start": 4958,
+        "title": "Why Do People Experience The Same Psychedelic Visions?"
+      },
+      {
+        "start": 5140,
+        "title": "Why Humanity Must Look Inward First"
+      },
+      {
+        "start": 5365,
+        "title": "Ads"
+      },
+      {
+        "start": 5426,
+        "title": "What Consciousness Really Is"
+      },
+      {
+        "start": 5595,
+        "title": "How Illness Changed My Perspective"
+      },
+      {
+        "start": 5649,
+        "title": "Why Love Matters Most"
+      },
+      {
+        "start": 6014,
+        "title": "What Ancient Civilizations Teach Us Today"
+      },
+      {
+        "start": 6293,
+        "title": "The Power Of Independent Thinking"
+      },
+      {
+        "start": 6432,
+        "title": "What Will Matter On Your Last Day?"
+      },
+      {
+        "start": 6472,
+        "title": "Living Without Judging Others"
+      },
+      {
+        "start": 6614,
+        "title": "Will We One Day Worship AI?"
+      }
+    ]
+  },
+  {
     "id": "doac-uLBsHXNEwAU",
     "episodeNumber": 562,
     "episodeNumberSource": "estimate",

@@ -9578,5 +9578,27 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Nick_Hanauer"
     }
+  },
+  {
+    "id": "graham-hancock",
+    "name": "Graham Hancock",
+    "portrait": "/portraits/graham-hancock.jpg",
+    "portrait2x": "/portraits/graham-hancock@2x.jpg",
+    "portraitBrightness": 0.374,
+    "credibilityLine": "British author; studied sociology at Durham University; journalist for major British newspapers and magazines; author of Fingerprints of the Gods, Magicians of the Gods, and The Sign and the Seal; presenter of Netflix documentary series Ancient Apocalypse",
+    "fields": [
+      "archaeology",
+      "prehistory",
+      "ancient history"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Independent writer and journalist",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Graham_Hancock"
+    }
   }
 ]
