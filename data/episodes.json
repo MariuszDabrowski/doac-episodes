@@ -1,5 +1,218 @@
 [
   {
+    "id": "doac-Jk7RAkFN4vk",
+    "episodeNumber": 564,
+    "episodeNumberSource": "estimate",
+    "title": "Creatine's effects on muscle, brain, and aging",
+    "originalTitle": "Anti-Aging Expert: Creatine Is The Fat Loss Secret Doctors Don’t Tell You - Dr. Darren Candow",
+    "slug": "candow-creatine-aging",
+    "date": "2026-06-15",
+    "duration": 4533,
+    "guestIds": [
+      "darren-candow"
+    ],
+    "topics": [
+      "science",
+      "longevity",
+      "nutrition"
+    ],
+    "description": "Candow on creatine myths, dosing for muscle and bone health, brain protection, and why muscle loss accelerates after 40.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=Jk7RAkFN4vk"
+    },
+    "thumbnail": "/portraits/doac-Jk7RAkFN4vk.jpg",
+    "thumbnail2x": "/portraits/doac-Jk7RAkFN4vk@2x.jpg",
+    "thumbnailBrightness": 0.33,
+    "promotions": [],
+    "sponsors": [
+      {
+        "name": "Flightcast",
+        "url": "https://www.flightcast.com/DOAC1",
+        "topical": false
+      },
+      {
+        "name": "Stan",
+        "url": "https://coach.stan.store/?ref=stevenbartlett&utm_source=youtube&utm_medium=podcast&utm_campaign=episode9",
+        "topical": false
+      },
+      {
+        "name": "BonCharge",
+        "url": "https://boncharge.com/DOAC",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 146,
+        "title": "What is the mission that you're on?"
+      },
+      {
+        "start": 254,
+        "title": "Why has creatine exploded?"
+      },
+      {
+        "start": 390,
+        "title": "Are we deficient in creatine?"
+      },
+      {
+        "start": 494,
+        "title": "Does creatine damage your kidneys?"
+      },
+      {
+        "start": 632,
+        "title": "If I have creatine in my muscle, am I more likely to gain muscle?"
+      },
+      {
+        "start": 710,
+        "title": "Should women take creatine?"
+      },
+      {
+        "start": 751,
+        "title": "Will creatine cause hair loss?"
+      },
+      {
+        "start": 816,
+        "title": "Creatine causes muscle cramps?"
+      },
+      {
+        "start": 988,
+        "title": "How effective is creatine in gaining muscle mass?"
+      },
+      {
+        "start": 1088,
+        "title": "Is the loading phase unnecessary?"
+      },
+      {
+        "start": 1146,
+        "title": "Is there anyone that shouldn't take creatine?"
+      },
+      {
+        "start": 1181,
+        "title": "What's the best type of creatine to take?"
+      },
+      {
+        "start": 1291,
+        "title": "The Dosing Dilemma - How much to take for each benefit?"
+      },
+      {
+        "start": 1363,
+        "title": "Does creatine cause dizziness?"
+      },
+      {
+        "start": 1489,
+        "title": "Taste test"
+      },
+      {
+        "start": 1538,
+        "title": "The best dosage for bone health"
+      },
+      {
+        "start": 2060,
+        "title": "What are the brain benefits of creatine?"
+      },
+      {
+        "start": 2211,
+        "title": "Anything else to know about creatine's impact on the brain?"
+      },
+      {
+        "start": 2286,
+        "title": "Ads"
+      },
+      {
+        "start": 2413,
+        "title": "Does creatine help with inflammation?"
+      },
+      {
+        "start": 2488,
+        "title": "Using creatine for Alzheimer's"
+      },
+      {
+        "start": 2565,
+        "title": "Does creatine have an impact on our mental health?"
+      },
+      {
+        "start": 2679,
+        "title": "What are foods I can eat that would supply creatine?"
+      },
+      {
+        "start": 2703,
+        "title": "Study that showed creatine improved young athletes' sleep"
+      },
+      {
+        "start": 2863,
+        "title": "The importance of weight training"
+      },
+      {
+        "start": 2892,
+        "title": "What are the misconceptions about weight training?"
+      },
+      {
+        "start": 3058,
+        "title": "Why is exercise more important as we get older?"
+      },
+      {
+        "start": 3166,
+        "title": "Combining protein and creatine"
+      },
+      {
+        "start": 3235,
+        "title": "Ads"
+      },
+      {
+        "start": 3296,
+        "title": "How creatine helps menopausal and post-menopausal women"
+      },
+      {
+        "start": 3360,
+        "title": "Is creatine safe for kids and people in general?"
+      },
+      {
+        "start": 3429,
+        "title": "What's the best time to take creatine?"
+      },
+      {
+        "start": 3495,
+        "title": "What do you think of creatine gummies?"
+      },
+      {
+        "start": 3644,
+        "title": "What supplements do you take other than creatine?"
+      },
+      {
+        "start": 3772,
+        "title": "Are there any direct weight benefits to creatine?"
+      },
+      {
+        "start": 3858,
+        "title": "What differences will I notice when taking creatine?"
+      },
+      {
+        "start": 4002,
+        "title": "What's your health routine?"
+      },
+      {
+        "start": 4111,
+        "title": "Do different people need to dose differently?"
+      },
+      {
+        "start": 4245,
+        "title": "How do you define ageing?"
+      },
+      {
+        "start": 4324,
+        "title": "What is your goal?"
+      },
+      {
+        "start": 4385,
+        "title": "Fear of death"
+      }
+    ]
+  },
+  {
     "id": "doac-Xs94KBeIiAo",
     "episodeNumber": 563,
     "episodeNumberSource": "estimate",

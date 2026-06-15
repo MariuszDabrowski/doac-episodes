@@ -9600,5 +9600,29 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Graham_Hancock"
     }
+  },
+  {
+    "id": "darren-candow",
+    "name": "Dr. Darren Candow",
+    "portrait": "/portraits/darren-candow.jpg",
+    "portrait2x": "/portraits/darren-candow@2x.jpg",
+    "portraitBrightness": 0.33,
+    "credibilityLine": "Associate Professor in Kinesiology & Health Studies at University of Regina; Director of the Aging Muscle and Bone Health Laboratory; researcher in exercise physiology, sport nutrition, and musculoskeletal health in aging",
+    "fields": [
+      "exercise physiology",
+      "sport nutrition",
+      "musculoskeletal health",
+      "aging",
+      "creatine supplementation"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Associate Professor, Faculty of Kinesiology & Health Studies, University of Regina; Director, Aging Muscle and Bone Health Laboratory",
+    "links": {
+      "bio": "https://biography.omicsonline.org/canada/university-of-regina/darren-candow-689726"
+    }
   }
 ]
