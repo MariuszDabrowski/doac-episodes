@@ -9624,5 +9624,26 @@
     "links": {
       "bio": "https://biography.omicsonline.org/canada/university-of-regina/darren-candow-689726"
     }
+  },
+  {
+    "id": "jd-vance",
+    "name": "JD Vance",
+    "portrait": "/portraits/jd-vance.jpg",
+    "portrait2x": "/portraits/jd-vance@2x.jpg",
+    "portraitBrightness": 0.229,
+    "credibilityLine": "50th Vice President of the United States; Yale Law School graduate; US Senator for Ohio 2023–2025; author of Hillbilly Elegy and Communion: Finding My Way Back to Faith; former US Marine Corps officer",
+    "fields": [
+      "politics",
+      "leadership"
+    ],
+    "roles": [
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Vice President of the United States",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/JD_Vance"
+    }
   }
 ]

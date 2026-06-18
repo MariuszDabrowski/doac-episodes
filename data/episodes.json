@@ -1,5 +1,224 @@
 [
   {
+    "id": "doac-5cKDs7bIGPE",
+    "episodeNumber": 565,
+    "episodeNumberSource": "estimate",
+    "title": "JD Vance on faith, immigration, and Trump",
+    "originalTitle": "EXCLUSIVE - Vice President JD Vance: They Tricked Me About Donald Trump, But Everything Changed!",
+    "slug": "jd-vance-trump-faith-politics",
+    "date": "2026-06-18",
+    "duration": 6465,
+    "guestIds": [
+      "jd-vance"
+    ],
+    "topics": [
+      "politics",
+      "leadership"
+    ],
+    "description": "Vice President Vance on his mother's addiction, why he changed his views on Trump, Iran diplomacy, and AI's impact on wealth inequality.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=5cKDs7bIGPE"
+    },
+    "thumbnail": "/portraits/doac-5cKDs7bIGPE.jpg",
+    "thumbnail2x": "/portraits/doac-5cKDs7bIGPE@2x.jpg",
+    "thumbnailBrightness": 0.219,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Communion: Finding My Way Back to Faith",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/4LtlJPz"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Flightcast",
+        "url": "https://www.flightcast.com/DOAC3",
+        "topical": false
+      },
+      {
+        "name": "Ketone",
+        "url": "https://ketone.com/steven",
+        "topical": false
+      },
+      {
+        "name": "HeyGen",
+        "url": "https://heygen.com/DOAC",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 178,
+        "title": "How Childhood Shaped Who You Became"
+      },
+      {
+        "start": 354,
+        "title": "You Were Put Up For Adoption"
+      },
+      {
+        "start": 420,
+        "title": "Watching Your Mother's Relationships Up Close"
+      },
+      {
+        "start": 482,
+        "title": "How Childhood Trauma Shapes Adults"
+      },
+      {
+        "start": 633,
+        "title": "How Addiction Tore The Family Apart"
+      },
+      {
+        "start": 978,
+        "title": "Why Empathy Is Missing In Politics"
+      },
+      {
+        "start": 1087,
+        "title": "Why Politics Turns Opponents Into Villains"
+      },
+      {
+        "start": 1175,
+        "title": "Trump's Immigration Rhetoric Explained"
+      },
+      {
+        "start": 1384,
+        "title": "Can You Discuss Immigration Without Division?"
+      },
+      {
+        "start": 1515,
+        "title": "Moving Into An All-White Neighborhood"
+      },
+      {
+        "start": 1716,
+        "title": "How Political Messaging Creates Division"
+      },
+      {
+        "start": 1856,
+        "title": "Would You Cross A Border For Your Family?"
+      },
+      {
+        "start": 2047,
+        "title": "Why You Joined The Marine Corps"
+      },
+      {
+        "start": 2226,
+        "title": "Why George W. Bush Frustrated You"
+      },
+      {
+        "start": 2378,
+        "title": "Ads"
+      },
+      {
+        "start": 2502,
+        "title": "The War With Iran"
+      },
+      {
+        "start": 2934,
+        "title": "Iran's Most Powerful Weapon"
+      },
+      {
+        "start": 3103,
+        "title": "Could Iran Wait Out Trump?"
+      },
+      {
+        "start": 3158,
+        "title": "The Real Deal With Iran"
+      },
+      {
+        "start": 3226,
+        "title": "What's Inside The Iran Term Sheet?"
+      },
+      {
+        "start": 3379,
+        "title": "What Happens To Iran's Nuclear Material?"
+      },
+      {
+        "start": 3426,
+        "title": "Can Inspectors Stop Secret Nuclear Programs?"
+      },
+      {
+        "start": 3491,
+        "title": "Trump's Message To Netanyahu"
+      },
+      {
+        "start": 3558,
+        "title": "Do You Trust Israel?"
+      },
+      {
+        "start": 3613,
+        "title": "Why The US And Israel Are So Closely Linked"
+      },
+      {
+        "start": 3765,
+        "title": "What Does Netanyahu Really Want?"
+      },
+      {
+        "start": 3831,
+        "title": "Why Your Views On Trump Changed"
+      },
+      {
+        "start": 4040,
+        "title": "What You Learned Behind Closed Doors"
+      },
+      {
+        "start": 4180,
+        "title": "The Call To Become Vice President"
+      },
+      {
+        "start": 4521,
+        "title": "Ads"
+      },
+      {
+        "start": 4381,
+        "title": "Did You Know What You Were Signing Up For?"
+      },
+      {
+        "start": 4530,
+        "title": "How Becoming VP Changed Your Family"
+      },
+      {
+        "start": 4792,
+        "title": "What Surprised Your Wife Most"
+      },
+      {
+        "start": 4854,
+        "title": "Does The Secret Service Control Your Life?"
+      },
+      {
+        "start": 4938,
+        "title": "Why Faith Came Back Into Your Life"
+      },
+      {
+        "start": 5059,
+        "title": "When You Realized Faith Matters"
+      },
+      {
+        "start": 5291,
+        "title": "What AI Means For America's Future"
+      },
+      {
+        "start": 5337,
+        "title": "Are You Worried About AI Job Loss?"
+      },
+      {
+        "start": 6265,
+        "title": "Should America Own The Biggest AI Companies?"
+      },
+      {
+        "start": 6361,
+        "title": "What Mamaw Would Think Today"
+      },
+      {
+        "start": 6989,
+        "title": "Are Aliens Real?"
+      }
+    ]
+  },
+  {
     "id": "doac-Jk7RAkFN4vk",
     "episodeNumber": 564,
     "episodeNumberSource": "estimate",
