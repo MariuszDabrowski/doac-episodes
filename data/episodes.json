@@ -1,5 +1,250 @@
 [
   {
+    "id": "doac-MM-Qhlxf1pM",
+    "episodeNumber": 566,
+    "episodeNumberSource": "estimate",
+    "title": "Sexual health, hormones and better intimacy",
+    "originalTitle": "Intimacy Expert: The Masterclass On Better Sex, Orgasms & Pleasure | Dr Rachel Rubin",
+    "slug": "rachel-rubin-sexual-health",
+    "date": "2026-06-22",
+    "duration": 6479,
+    "guestIds": [
+      "rachel-rubin"
+    ],
+    "topics": [
+      "sexuality",
+      "hormones",
+      "communication"
+    ],
+    "description": "Rubin on women's sexual health, hormone replacement therapy, pelvic floor dysfunction, orgasm barriers, and improving intimacy in relationships.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=MM-Qhlxf1pM"
+    },
+    "thumbnail": "/portraits/doac-MM-Qhlxf1pM.jpg",
+    "thumbnail2x": "/portraits/doac-MM-Qhlxf1pM@2x.jpg",
+    "thumbnailBrightness": 0.217,
+    "promotions": [],
+    "sponsors": [
+      {
+        "name": "HeyGen",
+        "url": "https://heygen.com/DOAC",
+        "topical": false
+      },
+      {
+        "name": "Flightcast",
+        "url": "https://www.flightcast.com/DOAC5",
+        "topical": false
+      },
+      {
+        "name": "Ketone",
+        "url": "https://ketone.com/steven",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Why Women's Healthcare Is Still Neglected"
+      },
+      {
+        "start": 279,
+        "title": "If Men Had These Symptoms, Would Medicine Be Better?"
+      },
+      {
+        "start": 444,
+        "title": "Why Even Gynaecologists Misunderstand The Clitoris"
+      },
+      {
+        "start": 505,
+        "title": "What You'll Learn From This Conversation"
+      },
+      {
+        "start": 689,
+        "title": "The Question Women Ask Most"
+      },
+      {
+        "start": 714,
+        "title": "Why Testosterone Matters For Women"
+      },
+      {
+        "start": 843,
+        "title": "How Birth Control Can Kill Libido"
+      },
+      {
+        "start": 1007,
+        "title": "How GLP-1s And Antidepressants Affect Sex Drive"
+      },
+      {
+        "start": 1128,
+        "title": "Should Women Take Testosterone?"
+      },
+      {
+        "start": 1192,
+        "title": "Understanding The Menstrual Cycle"
+      },
+      {
+        "start": 1413,
+        "title": "Why Perimenopause Starts Earlier Than You Think"
+      },
+      {
+        "start": 1541,
+        "title": "What Is HRT And How Does It Work?"
+      },
+      {
+        "start": 1583,
+        "title": "Does Estrogen Increase Cancer Risk?"
+      },
+      {
+        "start": 1669,
+        "title": "Why HRT Got A Bad Reputation"
+      },
+      {
+        "start": 1786,
+        "title": "The 4 Types Of HRT Explained"
+      },
+      {
+        "start": 1901,
+        "title": "What Really Causes UTIs?"
+      },
+      {
+        "start": 2024,
+        "title": "Vaginal Hormones Explained"
+      },
+      {
+        "start": 2261,
+        "title": "Does Cranberry Juice Actually Help UTIs?"
+      },
+      {
+        "start": 2231,
+        "title": "When Should You Start HRT?"
+      },
+      {
+        "start": 2476,
+        "title": "A HRT Success Story"
+      },
+      {
+        "start": 2723,
+        "title": "Ads"
+      },
+      {
+        "start": 2847,
+        "title": "Is Pain During Sex Normal?"
+      },
+      {
+        "start": 3008,
+        "title": "How To Have Better Sex"
+      },
+      {
+        "start": 3154,
+        "title": "What Your Pelvic Floor Actually Does"
+      },
+      {
+        "start": 3268,
+        "title": "Signs You Have Pelvic Floor Problems"
+      },
+      {
+        "start": 3364,
+        "title": "Is It Normal Not To Orgasm?"
+      },
+      {
+        "start": 3490,
+        "title": "What Is A Clitoral Adhesion?"
+      },
+      {
+        "start": 3575,
+        "title": "How Sex Toys Can Improve Intimacy"
+      },
+      {
+        "start": 3647,
+        "title": "What Men Get Wrong About Arousal"
+      },
+      {
+        "start": 3757,
+        "title": "What Happens To Women After Orgasm?"
+      },
+      {
+        "start": 3815,
+        "title": "Do Women Get Anything From Penetrative Sex?"
+      },
+      {
+        "start": 3920,
+        "title": "How Porn Changed Our Expectations"
+      },
+      {
+        "start": 4058,
+        "title": "What Healthy Porn Looks Like"
+      },
+      {
+        "start": 4132,
+        "title": "How Porn Can Damage Relationships"
+      },
+      {
+        "start": 4252,
+        "title": "Ads"
+      },
+      {
+        "start": 4381,
+        "title": "Why You Should Change Up Your Sex Life"
+      },
+      {
+        "start": 4455,
+        "title": "Why We Hide Our Sexual Struggles"
+      },
+      {
+        "start": 4676,
+        "title": "Responsive Vs Spontaneous Desire Explained"
+      },
+      {
+        "start": 4838,
+        "title": "The Question Every Couple Should Ask"
+      },
+      {
+        "start": 4891,
+        "title": "What If You Want Different Things In Bed?"
+      },
+      {
+        "start": 5030,
+        "title": "How To Tell Your Partner About Kinks"
+      },
+      {
+        "start": 5107,
+        "title": "The Secrets People Hide From Their Partners"
+      },
+      {
+        "start": 5181,
+        "title": "How To Tell If She's Faking Orgasms"
+      },
+      {
+        "start": 5306,
+        "title": "How Stress And Dopamine Influence Libido"
+      },
+      {
+        "start": 5412,
+        "title": "Should Sex Be Scheduled Or Spontaneous?"
+      },
+      {
+        "start": 5524,
+        "title": "How Self-Esteem Affects Sex"
+      },
+      {
+        "start": 5623,
+        "title": "The Most Important Thing We Missed"
+      },
+      {
+        "start": 5746,
+        "title": "Better Communication, Better Sex"
+      },
+      {
+        "start": 6210,
+        "title": "Why This Work Matters So Much"
+      },
+      {
+        "start": 6277,
+        "title": "What Needs To Change In Your Own Life?"
+      }
+    ]
+  },
+  {
     "id": "doac-5cKDs7bIGPE",
     "episodeNumber": 565,
     "episodeNumberSource": "estimate",

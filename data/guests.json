@@ -9645,5 +9645,28 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/JD_Vance"
     }
+  },
+  {
+    "id": "rachel-rubin",
+    "name": "Dr Rachel Rubin",
+    "portrait": "/portraits/rachel-rubin.jpg",
+    "portrait2x": "/portraits/rachel-rubin@2x.jpg",
+    "portraitBrightness": 0.222,
+    "credibilityLine": "Board-certified urologist and sexual medicine specialist; Assistant Clinical Professor of Urology at Georgetown University; practices in Washington DC",
+    "fields": [
+      "urology",
+      "sexual medicine",
+      "women's sexual health",
+      "hormone therapy"
+    ],
+    "roles": [
+      "clinician",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Urologic surgeon; private practice owner in Washington DC",
+    "links": {
+      "bio": "https://www.medscape.com/index/list_15674_0"
+    }
   }
 ]
