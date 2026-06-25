@@ -1,5 +1,221 @@
 [
   {
+    "id": "doac-32u5T6lO8qk",
+    "episodeNumber": 567,
+    "episodeNumberSource": "estimate",
+    "title": "AI bubble, market crash, and fertility crisis",
+    "originalTitle": "Billionaire's WARNING: I'm SELLING Everything. The Crash Is Already Here!",
+    "slug": "grantham-ai-bubble-crash",
+    "date": "2026-06-25",
+    "duration": 6352,
+    "guestIds": [
+      "jeremy-grantham"
+    ],
+    "topics": [
+      "investing",
+      "ai",
+      "economics"
+    ],
+    "description": "Grantham on why AI is the biggest bubble in US history, portfolio protection strategies, and how chemicals are damaging fertility.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=32u5T6lO8qk"
+    },
+    "thumbnail": "/portraits/doac-32u5T6lO8qk.jpg",
+    "thumbnail2x": "/portraits/doac-32u5T6lO8qk@2x.jpg",
+    "thumbnailBrightness": 0.276,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "The Making of a Permabear: The Perils of Long-term Investing in a Short-term World",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/8zyh6RB"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Stan",
+        "url": "https://coach.stan.store/?ref=stevenbartlett&utm_source=youtube&utm_medium=podcast&utm_campaign=episode11",
+        "topical": false
+      },
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      },
+      {
+        "name": "HeyGen",
+        "url": "https://heygen.com/doac",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Who Is Jeremy Grantham?"
+      },
+      {
+        "start": 174,
+        "title": "Will AI Become The Next Financial Bubble?"
+      },
+      {
+        "start": 417,
+        "title": "How Jeremy Grantham Built An Investing Empire"
+      },
+      {
+        "start": 484,
+        "title": "The Most Money He's Ever Managed"
+      },
+      {
+        "start": 509,
+        "title": "Are You A Billionaire?"
+      },
+      {
+        "start": 558,
+        "title": "What Happens When The AI Bubble Bursts?"
+      },
+      {
+        "start": 695,
+        "title": "How AI Will Change Everyday Life"
+      },
+      {
+        "start": 773,
+        "title": "The Investing Strategy For Right Now"
+      },
+      {
+        "start": 1092,
+        "title": "Why You Should Avoid US Stocks"
+      },
+      {
+        "start": 1213,
+        "title": "Why Investment Advisors Mislead Clients"
+      },
+      {
+        "start": 1569,
+        "title": "Advice For Entrepreneurs Right Now"
+      },
+      {
+        "start": 1739,
+        "title": "The Real Risks Of AI"
+      },
+      {
+        "start": 1798,
+        "title": "Should AI Have A Maternal Instinct?"
+      },
+      {
+        "start": 2084,
+        "title": "What Happens If AI Lacks Benevolence?"
+      },
+      {
+        "start": 2181,
+        "title": "The Battle Between The Magnificent 7"
+      },
+      {
+        "start": 2388,
+        "title": "Ads"
+      },
+      {
+        "start": 2517,
+        "title": "Which Jobs AI Will Replace First"
+      },
+      {
+        "start": 2658,
+        "title": "Will SpaceX Eventually Fail?"
+      },
+      {
+        "start": 3030,
+        "title": "Should You Invest In SpaceX?"
+      },
+      {
+        "start": 3040,
+        "title": "The Most Valuable Skill For The Future"
+      },
+      {
+        "start": 3101,
+        "title": "Is Society Declining And What Comes Next?"
+      },
+      {
+        "start": 3242,
+        "title": "What History Says About Wealth Inequality"
+      },
+      {
+        "start": 3396,
+        "title": "Should The Rich Pay More Tax?"
+      },
+      {
+        "start": 3479,
+        "title": "How To Build Wealth In Your 30s Today"
+      },
+      {
+        "start": 3608,
+        "title": "How To Invest Your Salary Wisely"
+      },
+      {
+        "start": 3778,
+        "title": "Should You Own Crypto?"
+      },
+      {
+        "start": 3831,
+        "title": "Will Bitcoin Eventually Go To Zero?"
+      },
+      {
+        "start": 3845,
+        "title": "Is Property Still A Good Investment?"
+      },
+      {
+        "start": 3915,
+        "title": "Ads"
+      },
+      {
+        "start": 4047,
+        "title": "What's Really Causing The Baby Bust?"
+      },
+      {
+        "start": 4288,
+        "title": "When Could Sperm Counts Reach Zero?"
+      },
+      {
+        "start": 4464,
+        "title": "How Microplastics Affect Fertility"
+      },
+      {
+        "start": 4602,
+        "title": "How Pesticides Impact Fertility"
+      },
+      {
+        "start": 4903,
+        "title": "How To Reduce Toxic Chemical Exposure"
+      },
+      {
+        "start": 4974,
+        "title": "Why US Products Are More Toxic"
+      },
+      {
+        "start": 5250,
+        "title": "How To Stay Healthy In A Toxic World"
+      },
+      {
+        "start": 6034,
+        "title": "The Most Important Thing We Missed"
+      },
+      {
+        "start": 6134,
+        "title": "Should You Move Countries Right Now?"
+      },
+      {
+        "start": 6155,
+        "title": "The Flaw That Destroys Societies"
+      },
+      {
+        "start": 6562,
+        "title": "The Best Places To Live Today"
+      },
+      {
+        "start": 6640,
+        "title": "What Would You Do If Failure Was Impossible?"
+      }
+    ]
+  },
+  {
     "id": "doac-MM-Qhlxf1pM",
     "episodeNumber": 566,
     "episodeNumberSource": "estimate",

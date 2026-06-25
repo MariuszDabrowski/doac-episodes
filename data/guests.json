@@ -9668,5 +9668,28 @@
     "links": {
       "bio": "https://www.medscape.com/index/list_15674_0"
     }
+  },
+  {
+    "id": "jeremy-grantham",
+    "name": "Jeremy Grantham",
+    "portrait": "/portraits/jeremy-grantham.jpg",
+    "portrait2x": "/portraits/jeremy-grantham@2x.jpg",
+    "portraitBrightness": 0.287,
+    "credibilityLine": "Co-founder and chief investment strategist of GMO LLC, Boston-based asset management firm managing over $100 billion; predicted the dot-com crash and 2007 housing collapse; founder of one of the world's first index funds; author of The Making of a Permabear; chairman of the Grantham Foundation For the Preservation of the Environment.",
+    "fields": [
+      "investing",
+      "economics",
+      "asset management"
+    ],
+    "roles": [
+      "author",
+      "practitioner",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Chief Investment Strategist, GMO LLC",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Jeremy_Grantham"
+    }
   }
 ]
