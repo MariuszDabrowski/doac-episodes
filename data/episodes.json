@@ -1,5 +1,287 @@
 [
   {
+    "id": "doac-HwVn3WMv5oI",
+    "episodeNumber": 568,
+    "episodeNumberSource": "estimate",
+    "title": "Women's fitness myths and strength training",
+    "originalTitle": "Women’s Fitness Expert: What You NEED To Know About Dieting & Exercise | Dr. Stephanie Estima",
+    "slug": "estima-womens-fitness",
+    "date": "2026-06-29",
+    "duration": 5708,
+    "guestIds": [
+      "stephanie-estima"
+    ],
+    "topics": [
+      "fitness",
+      "hormones"
+    ],
+    "description": "Estima debunks fitness myths affecting women, covers hormones and lifting benefits, explains why muscle-building matters more than being skinny.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=HwVn3WMv5oI"
+    },
+    "thumbnail": "/portraits/doac-HwVn3WMv5oI.jpg",
+    "thumbnail2x": "/portraits/doac-HwVn3WMv5oI@2x.jpg",
+    "thumbnailBrightness": 0.22,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Nothing to Lose: A Clinicians Guide to What Comes After Skinny: Building Strength, Shape, and a Body You Can Trust",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/Bsldjir"
+      },
+      {
+        "type": "course",
+        "title": "Get LIFT: The training program for women in midlife",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/fCH9zk"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Fiverr",
+        "url": "https://fiverr.com/diary",
+        "topical": false
+      },
+      {
+        "name": "Cometeer",
+        "url": "https://cometeer.com/DOAC",
+        "topical": false
+      },
+      {
+        "name": "Eight Sleep",
+        "url": "http://eightsleep.com/steven",
+        "topical": false
+      },
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 170,
+        "title": "Why Women Are Still Given Bad Health Advice"
+      },
+      {
+        "start": 286,
+        "title": "Is Being Skinny Actually Healthy?"
+      },
+      {
+        "start": 362,
+        "title": "How Stephanie's Experience Changed Her Approach"
+      },
+      {
+        "start": 422,
+        "title": "Stephanie's Personal Battle With Body Image"
+      },
+      {
+        "start": 579,
+        "title": "What You'll Take Away From This Conversation"
+      },
+      {
+        "start": 641,
+        "title": "The 4 Female Health Archetypes Explained"
+      },
+      {
+        "start": 671,
+        "title": "Are You Overwhelmed Olivia?"
+      },
+      {
+        "start": 773,
+        "title": "Are You Skinny Fat Sophie?"
+      },
+      {
+        "start": 857,
+        "title": "How To Reduce Belly Fat Effectively"
+      },
+      {
+        "start": 988,
+        "title": "Are You Exorcist Emily?"
+      },
+      {
+        "start": 1071,
+        "title": "Are You Dialled-In Diana?"
+      },
+      {
+        "start": 1207,
+        "title": "Are Carbs Really Bad? And Is Keto Worth It?"
+      },
+      {
+        "start": 1345,
+        "title": "Signs Your Thyroid May Not Be Working Properly"
+      },
+      {
+        "start": 1487,
+        "title": "Will Lifting Weights Make You Bulky?"
+      },
+      {
+        "start": 1609,
+        "title": "Is Fasting Safe For Women?"
+      },
+      {
+        "start": 1757,
+        "title": "What If You're Scared To Lift Heavy Weights?"
+      },
+      {
+        "start": 1841,
+        "title": "Does Post-Workout Meal Timing Really Matter?"
+      },
+      {
+        "start": 1884,
+        "title": "Should You Eat Before A Workout?"
+      },
+      {
+        "start": 1928,
+        "title": "Can Ketones Improve Your Workout?"
+      },
+      {
+        "start": 1990,
+        "title": "Which Muscles Should Women Prioritise?"
+      },
+      {
+        "start": 2165,
+        "title": "How To Train For An Hourglass Figure"
+      },
+      {
+        "start": 2272,
+        "title": "The Key Differences Between Male And Female Anatomy"
+      },
+      {
+        "start": 2536,
+        "title": "Why Women Should Squat Differently Than Men"
+      },
+      {
+        "start": 2701,
+        "title": "How Strength Training Can Help Prevent Falls"
+      },
+      {
+        "start": 2822,
+        "title": "Ads"
+      },
+      {
+        "start": 2941,
+        "title": "Which Supplements Are Actually Worth Taking?"
+      },
+      {
+        "start": 3128,
+        "title": "Should Women Take Creatine?"
+      },
+      {
+        "start": 3166,
+        "title": "A Creatine Hack For Perimenopause"
+      },
+      {
+        "start": 3231,
+        "title": "Does Collagen Actually Work?"
+      },
+      {
+        "start": 3383,
+        "title": "Are Protein Shakes Worth It?"
+      },
+      {
+        "start": 3397,
+        "title": "Where Cardio Fits Into A Strength Plan"
+      },
+      {
+        "start": 3446,
+        "title": "Are Cortisol Spikes Really A Problem?"
+      },
+      {
+        "start": 3541,
+        "title": "Is Cardio Helpful For Women With PCOS?"
+      },
+      {
+        "start": 3640,
+        "title": "Don't Stop Doing These Exercises As You Age"
+      },
+      {
+        "start": 3658,
+        "title": "Why Sprinting Is So Good For Women"
+      },
+      {
+        "start": 3875,
+        "title": "Is Running Bad For Your Knees?"
+      },
+      {
+        "start": 3926,
+        "title": "Why Jump Training Matters"
+      },
+      {
+        "start": 3943,
+        "title": "The Benefits Of Isometric Holds"
+      },
+      {
+        "start": 4019,
+        "title": "Why Deceleration Is Essential For Mobility"
+      },
+      {
+        "start": 4077,
+        "title": "The Most Underrated No-Equipment Exercise"
+      },
+      {
+        "start": 4375,
+        "title": "The Best Bodyweight Exercises To Add To Your Routine"
+      },
+      {
+        "start": 4403,
+        "title": "Ads"
+      },
+      {
+        "start": 4531,
+        "title": "The Biggest Fitness Challenges Mothers Face"
+      },
+      {
+        "start": 4571,
+        "title": "What Every Woman Should Know About The Pelvic Floor"
+      },
+      {
+        "start": 4770,
+        "title": "What Women Aren't Saying Out Loud About Sex"
+      },
+      {
+        "start": 4902,
+        "title": "GLP-1s And HRT: What Women Should Know"
+      },
+      {
+        "start": 4982,
+        "title": "The Recovery Habits Women Should Prioritise"
+      },
+      {
+        "start": 5064,
+        "title": "The Missing Piece Of Fitness Most Women Overlook"
+      },
+      {
+        "start": 5152,
+        "title": "Is Pilates Alone Enough?"
+      },
+      {
+        "start": 5249,
+        "title": "Stephanie's Skincare Routine"
+      },
+      {
+        "start": 5282,
+        "title": "Nearly 50 And Feeling Better Than Ever"
+      },
+      {
+        "start": 5352,
+        "title": "Do You Believe In God?"
+      },
+      {
+        "start": 5385,
+        "title": "What Does A Successful Life Look Like?"
+      },
+      {
+        "start": 5657,
+        "title": "Where To Find Stephanie"
+      }
+    ]
+  },
+  {
     "id": "doac-32u5T6lO8qk",
     "episodeNumber": 567,
     "episodeNumberSource": "estimate",

@@ -9691,5 +9691,30 @@
     "links": {
       "wikipedia": "https://en.wikipedia.org/wiki/Jeremy_Grantham"
     }
+  },
+  {
+    "id": "stephanie-estima",
+    "name": "Dr. Stephanie Estima",
+    "portrait": "/portraits/stephanie-estima.jpg",
+    "portrait2x": "/portraits/stephanie-estima@2x.jpg",
+    "portraitBrightness": 0.22,
+    "credibilityLine": "Doctor of Chiropractic with special interest in metabolism and female physiology; podcast host (Better! with 6+ million downloads); author of The Betty Body",
+    "fields": [
+      "women's health",
+      "female physiology",
+      "hormones",
+      "fitness",
+      "metabolism"
+    ],
+    "roles": [
+      "practitioner",
+      "author",
+      "public-figure"
+    ],
+    "credentials": [],
+    "currentRole": "Health expert and podcast host",
+    "links": {
+      "bio": "https://drstephanieestima.com/about/"
+    }
   }
 ]
