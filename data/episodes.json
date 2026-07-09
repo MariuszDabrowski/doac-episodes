@@ -1,5 +1,619 @@
 [
   {
+    "id": "doac-PHpsdIHpLUE",
+    "episodeNumber": 571,
+    "episodeNumberSource": "estimate",
+    "title": "Neil deGrasse Tyson on aliens and the cosmos",
+    "originalTitle": "Neil deGrasse Tyson: The Whistleblowers Are Telling The Truth About Aliens!",
+    "slug": "tyson-aliens-and-the-cosmos",
+    "date": "2026-07-09",
+    "duration": 6530,
+    "guestIds": [
+      "neil-degrasse-tyson"
+    ],
+    "topics": [
+      "science"
+    ],
+    "description": "Tyson discusses government whistleblowers' alien claims, why intelligent extraterrestrial life likely exists, Mars's limitations, and science's compatibility with God.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=PHpsdIHpLUE"
+    },
+    "thumbnail": "/portraits/doac-PHpsdIHpLUE.jpg",
+    "thumbnail2x": "/portraits/doac-PHpsdIHpLUE@2x.jpg",
+    "thumbnailBrightness": 0.266,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Take Me To Your Leader: A hilarious guide to your first alien encounter",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/FJDB5ED"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Pipedrive",
+        "url": "https://pipedrive.com/CEO",
+        "topical": false
+      },
+      {
+        "name": "Ekster",
+        "url": "https://link.thediaryofaceo.com/GSNEWnm",
+        "topical": false
+      },
+      {
+        "name": "HeyGen",
+        "url": "https://heygen.com/doac",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 159,
+        "title": "Why Are Humans So Fascinated by the Universe?"
+      },
+      {
+        "start": 470,
+        "title": "How Small Are We in the Universe?"
+      },
+      {
+        "start": 999,
+        "title": "How Understanding the Universe Can Change Your View of Religion"
+      },
+      {
+        "start": 1273,
+        "title": "How Did the Big Bang Actually Happen?"
+      },
+      {
+        "start": 1438,
+        "title": "What Existed Before the Big Bang?"
+      },
+      {
+        "start": 1499,
+        "title": "The Craziest Theories About How the Universe Began"
+      },
+      {
+        "start": 1629,
+        "title": "Did Obama Reveal Something About Aliens?"
+      },
+      {
+        "start": 1763,
+        "title": "Why Intelligent Alien Life Could Exist"
+      },
+      {
+        "start": 2021,
+        "title": "What Might We Never Know About the Universe?"
+      },
+      {
+        "start": 2139,
+        "title": "Is Infinity Actually Possible?"
+      },
+      {
+        "start": 2243,
+        "title": "How Do Black Holes Actually Work?"
+      },
+      {
+        "start": 2780,
+        "title": "Ads"
+      },
+      {
+        "start": 2919,
+        "title": "Why Aliens Might Communicate With Other Earth Creatures First"
+      },
+      {
+        "start": 3147,
+        "title": "How Far Could Humans Travel Across the Universe?"
+      },
+      {
+        "start": 3254,
+        "title": "What Happens as Nations Add More Satellites to Orbit?"
+      },
+      {
+        "start": 3618,
+        "title": "Who Makes the Laws in Space?"
+      },
+      {
+        "start": 3651,
+        "title": "Why Is Everyone Racing Back to the Moon?"
+      },
+      {
+        "start": 3794,
+        "title": "What Happens If China Gets to the Moon First?"
+      },
+      {
+        "start": 3827,
+        "title": "What Valuable Resources Are Hidden on the Moon?"
+      },
+      {
+        "start": 3904,
+        "title": "Could the Moon Become a Tourist Destination?"
+      },
+      {
+        "start": 3935,
+        "title": "Ads"
+      },
+      {
+        "start": 3997,
+        "title": "Is Any of the UFO Footage Actually Compelling?"
+      },
+      {
+        "start": 4106,
+        "title": "Would Humanity Be Ready to Meet Actual Aliens?"
+      },
+      {
+        "start": 4249,
+        "title": "Why Do Alien Sightings Follow the Same Archetypes?"
+      },
+      {
+        "start": 4354,
+        "title": "Why Do People on DMT See Aliens?"
+      },
+      {
+        "start": 4859,
+        "title": "Are We Living in a Simulation?"
+      }
+    ]
+  },
+  {
+    "id": "doac-DM2jRSgjy1o",
+    "episodeNumber": 570,
+    "episodeNumberSource": "estimate",
+    "title": "Dustin Poirier on life after fighting",
+    "originalTitle": "WORLD EXCLUSIVE: Dustin Poirier: \"I Deleted Social Media After The Incident",
+    "slug": "dustin-poirier-life-after-fighting",
+    "date": "2026-07-06",
+    "duration": 5603,
+    "guestIds": [
+      "dustin-poirier"
+    ],
+    "topics": [
+      "mental-health",
+      "sports",
+      "addiction"
+    ],
+    "description": "Poirier discusses his arrest, battle with alcohol, therapy journey, and rebuilding identity after UFC retirement.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=DM2jRSgjy1o"
+    },
+    "thumbnail": "/portraits/doac-DM2jRSgjy1o.jpg",
+    "thumbnail2x": "/portraits/doac-DM2jRSgjy1o@2x.jpg",
+    "thumbnailBrightness": 0.059,
+    "promotions": [
+      {
+        "type": "company",
+        "title": "The Good Fight Foundation",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/AbsZdY5"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      },
+      {
+        "name": "Function Health",
+        "url": "https://Functionhealth.com/DOAC",
+        "topical": false
+      },
+      {
+        "name": "Ketone",
+        "url": "https://ketone.com/STEVEN",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 193,
+        "title": "How Dustin Poirier's Early Life Shaped Everything That Followed"
+      },
+      {
+        "start": 259,
+        "title": "The Childhood Experiences That Defined Dustin's Mindset"
+      },
+      {
+        "start": 361,
+        "title": "How Dustin's Relationship With His Parents Changed His Life"
+      },
+      {
+        "start": 419,
+        "title": "Why Dustin Believes His Upbringing Made Him Who He Is"
+      },
+      {
+        "start": 501,
+        "title": "From School Fights to Juvenile Detention: What Went Wrong?"
+      },
+      {
+        "start": 576,
+        "title": "How Alcohol Entered Dustin's Life at a Young Age"
+      },
+      {
+        "start": 636,
+        "title": "The Airport Incident: What Really Happened?"
+      },
+      {
+        "start": 761,
+        "title": "Living With an Alcoholic Father"
+      },
+      {
+        "start": 944,
+        "title": "Dustin's Battle With Depression"
+      },
+      {
+        "start": 1114,
+        "title": "What Therapy Taught Dustin About Himself"
+      },
+      {
+        "start": 1368,
+        "title": "Was Fighting an Escape From Emotional Pain?"
+      },
+      {
+        "start": 1428,
+        "title": "Why So Many Retired Athletes End Up in Trouble"
+      },
+      {
+        "start": 1611,
+        "title": "Why Dustin Chose to Get Sober"
+      },
+      {
+        "start": 1708,
+        "title": "What Dustin Was Doing Before the Airport Incident"
+      },
+      {
+        "start": 1871,
+        "title": "Dustin Reacts After Watching the Airport Video"
+      },
+      {
+        "start": 2062,
+        "title": "What Charges Did Dustin Face?"
+      },
+      {
+        "start": 2145,
+        "title": "The Difficult Conversation Dustin Had With His Wife"
+      },
+      {
+        "start": 2329,
+        "title": "Ads"
+      },
+      {
+        "start": 2591,
+        "title": "Why Viral Clips Rarely Tell the Full Story"
+      },
+      {
+        "start": 2795,
+        "title": "Dustin Responds to Jon Jones' Viral Post"
+      },
+      {
+        "start": 2909,
+        "title": "Why Dustin Says His Mental Health Still Fluctuates"
+      },
+      {
+        "start": 3136,
+        "title": "The Hidden Cost of Bottling Up Your Emotions"
+      },
+      {
+        "start": 3239,
+        "title": "How Dustin Is Finding Purpose Beyond Fighting"
+      },
+      {
+        "start": 3307,
+        "title": "Can Anything Replace the Feeling of Fighting?"
+      },
+      {
+        "start": 3404,
+        "title": "What Other Fighters Say About Life After Retirement"
+      },
+      {
+        "start": 3485,
+        "title": "How the Airport Incident Changed Dustin's Career Plans"
+      },
+      {
+        "start": 3524,
+        "title": "Does Dustin Still Have Sponsors?"
+      },
+      {
+        "start": 3579,
+        "title": "What's Next for Dustin Professionally?"
+      },
+      {
+        "start": 3771,
+        "title": "Ads"
+      },
+      {
+        "start": 3880,
+        "title": "Is Dustin Poirier Financially Set for Life?"
+      },
+      {
+        "start": 4008,
+        "title": "Why Dustin's Farewell Fight Means So Much"
+      },
+      {
+        "start": 4478,
+        "title": "Was Dustin's Family Ready for Him to Retire?"
+      },
+      {
+        "start": 4503,
+        "title": "Dustin's Biggest Fear About Brain Damage"
+      },
+      {
+        "start": 4722,
+        "title": "Does Dustin Feel Different After Everything He's Been Through?"
+      },
+      {
+        "start": 4795,
+        "title": "Could Dustin Ever Return to the UFC?"
+      },
+      {
+        "start": 4839,
+        "title": "The Latest Update on Dustin's Father"
+      },
+      {
+        "start": 5039,
+        "title": "Does Dustin Fear Getting That Phone Call About His Father?"
+      },
+      {
+        "start": 5069,
+        "title": "How Dustin's Mother Copes With His Father's Struggles"
+      },
+      {
+        "start": 5096,
+        "title": "What's Next for Dustin Poirier?"
+      },
+      {
+        "start": 5192,
+        "title": "How He's Trying to Make the World Better"
+      }
+    ]
+  },
+  {
+    "id": "doac-6xlmaorRY0w",
+    "episodeNumber": 569,
+    "episodeNumberSource": "estimate",
+    "title": "Mitochondria, stress, and cellular aging",
+    "originalTitle": "The Mitochondria Doctor: This Reverses Gray Hair, Makes You Feel Young Again & Fixes Disease!",
+    "slug": "martin-picard-mitochondria-aging",
+    "date": "2026-07-02",
+    "duration": 9518,
+    "guestIds": [
+      "martin-picard"
+    ],
+    "topics": [
+      "longevity",
+      "science",
+      "mental-health"
+    ],
+    "description": "Picard on how stress drains cellular energy, reversing gray hair, and why mitochondria—not genes—determine aging speed.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=6xlmaorRY0w"
+    },
+    "thumbnail": "/portraits/doac-6xlmaorRY0w.jpg",
+    "thumbnail2x": "/portraits/doac-6xlmaorRY0w@2x.jpg",
+    "thumbnailBrightness": 0.355,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Energy",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/5jW5yUA"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "KetoneIQ",
+        "url": "https://ketone.com/STEVEN",
+        "topical": true
+      },
+      {
+        "name": "Cometeer",
+        "url": "https://cometeer.com/DOAC",
+        "topical": false
+      },
+      {
+        "name": "Bon Charge",
+        "url": "https://boncharge.com/DOAC",
+        "topical": true
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 216,
+        "title": "Why Everyone Is Talking About Energy Right Now"
+      },
+      {
+        "start": 275,
+        "title": "Why I Dedicated My Life to Studying Mitochondria"
+      },
+      {
+        "start": 351,
+        "title": "The Fascination With Mitochondria—and What a PhD in Them Really Means"
+      },
+      {
+        "start": 526,
+        "title": "How Understanding Energy Can Help You Feel Better Every Day"
+      },
+      {
+        "start": 603,
+        "title": "Where You Should Start If You Want More Energy"
+      },
+      {
+        "start": 866,
+        "title": "Why Mitochondria Are the Foundation of Your Health"
+      },
+      {
+        "start": 1002,
+        "title": "How Mitochondria Made Complex Human Life Possible"
+      },
+      {
+        "start": 1144,
+        "title": "What Insulin Resistance Reveals About Your Body's Energy System"
+      },
+      {
+        "start": 1236,
+        "title": "How Mitochondria Influence Cancer Risk"
+      },
+      {
+        "start": 1397,
+        "title": "What Really Causes the Warburg Effect?"
+      },
+      {
+        "start": 1483,
+        "title": "Why Diabetes Raises Your Risk of Cancer"
+      },
+      {
+        "start": 1570,
+        "title": "The Real Reason Smoking Causes Cancer"
+      },
+      {
+        "start": 1864,
+        "title": "Why Hair Turns Gray—and Whether It Can Be Reversed"
+      },
+      {
+        "start": 2397,
+        "title": "What Cortisol Is Really Doing to Your Cells"
+      },
+      {
+        "start": 2567,
+        "title": "Does a More Resilient Mind Save Cellular Energy?"
+      },
+      {
+        "start": 2720,
+        "title": "Acute vs. Chronic Stress: Why the Difference Matters"
+      },
+      {
+        "start": 2754,
+        "title": "Understanding Resistance—and Why It Drains Your Energy"
+      },
+      {
+        "start": 2898,
+        "title": "What Happens Inside Your Body When the First Gray Hair Appears?"
+      },
+      {
+        "start": 3103,
+        "title": "The Real Secret to Healthy Aging"
+      },
+      {
+        "start": 3217,
+        "title": "How to Make Your Body More Energy Efficient"
+      },
+      {
+        "start": 3334,
+        "title": "How Food Changes the Way Your Cells Produce Energy"
+      },
+      {
+        "start": 3662,
+        "title": "What the Energy Crisis in Your Cells Means for Alzheimer's Disease"
+      },
+      {
+        "start": 3932,
+        "title": "Is Dementia Really \"Type 3 Diabetes\"?"
+      },
+      {
+        "start": 4327,
+        "title": "Why Some Communities Avoid Dementia—and What This Means for Alzheimer's Risk"
+      },
+      {
+        "start": 4434,
+        "title": "Ads"
+      },
+      {
+        "start": 4556,
+        "title": "How to Eat for Optimal Energy and Health"
+      },
+      {
+        "start": 4647,
+        "title": "Why We Overeat Even When We're Not Hungry"
+      },
+      {
+        "start": 4846,
+        "title": "Is Breakfast Really the Most Important Meal of the Day?"
+      },
+      {
+        "start": 4963,
+        "title": "How to Stop Scattered Energy From Running Your Life"
+      },
+      {
+        "start": 5458,
+        "title": "How High Performers Filter Signal From Noise"
+      },
+      {
+        "start": 6392,
+        "title": "How Energy Resistance Shows Up in Parenting"
+      },
+      {
+        "start": 6514,
+        "title": "Why Meaningful Goals Become Magnets for Your Energy"
+      },
+      {
+        "start": 6555,
+        "title": "Does Having a Purpose Improve Mitochondrial Function?"
+      },
+      {
+        "start": 6782,
+        "title": "What Being Judged Does to Your Body's Energy System"
+      },
+      {
+        "start": 7267,
+        "title": "Why Stress Causes Visceral Fat Gain"
+      },
+      {
+        "start": 7290,
+        "title": "What Happens When Chronic Stress Turns Into Disease?"
+      },
+      {
+        "start": 7383,
+        "title": "How to Reduce GDF-15—and Why It Matters"
+      },
+      {
+        "start": 7588,
+        "title": "Can Supplements Actually Improve Mitochondrial Health?"
+      },
+      {
+        "start": 7823,
+        "title": "How to Trust the Wisdom of Your Body"
+      },
+      {
+        "start": 7942,
+        "title": "Ads"
+      },
+      {
+        "start": 8006,
+        "title": "Can Red Light Therapy Really Support Your Mitochondria?"
+      },
+      {
+        "start": 8112,
+        "title": "What You Need to Know Before Trying Red Light Therapy"
+      },
+      {
+        "start": 8433,
+        "title": "How to Listen to What Your Energy Is Telling You"
+      },
+      {
+        "start": 8831,
+        "title": "The Best Exercise Routine for Healthier Mitochondria"
+      },
+      {
+        "start": 8891,
+        "title": "Which Blood Tests Can Reveal Your Mitochondrial Health?"
+      },
+      {
+        "start": 9014,
+        "title": "The Personal Loss That Changed Everything"
+      }
+    ]
+  },
+  {
     "id": "doac-HwVn3WMv5oI",
     "episodeNumber": 568,
     "episodeNumberSource": "estimate",

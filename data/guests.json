@@ -9716,5 +9716,50 @@
     "links": {
       "bio": "https://drstephanieestima.com/about/"
     }
+  },
+  {
+    "id": "dustin-poirier",
+    "name": "Dustin Poirier",
+    "portrait": "/portraits/dustin-poirier.jpg",
+    "portrait2x": "/portraits/dustin-poirier@2x.jpg",
+    "portraitBrightness": 0.059,
+    "credibilityLine": "Retired UFC lightweight fighter with 30-10 record; only fighter to knock out Conor McGregor in MMA; former interim UFC Lightweight Champion; founded The Good Fight Foundation with wife Jolie in 2018; current UFC desk analyst",
+    "fields": [
+      "sports",
+      "mental health",
+      "addiction recovery"
+    ],
+    "roles": [
+      "public-figure",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "UFC Desk Analyst; Founder, The Good Fight Foundation",
+    "links": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Dustin_Poirier"
+    }
+  },
+  {
+    "id": "martin-picard",
+    "name": "Dr Martin Picard",
+    "portrait": "/portraits/martin-picard.jpg",
+    "portrait2x": "/portraits/martin-picard@2x.jpg",
+    "portraitBrightness": 0.335,
+    "credibilityLine": "Professor of Behavioral Medicine at Columbia University; studies how stress and emotions affect mitochondrial function and cellular energy",
+    "fields": [
+      "mitochondrial biology",
+      "cellular energy",
+      "stress physiology",
+      "behavioral medicine"
+    ],
+    "roles": [
+      "academic",
+      "researcher"
+    ],
+    "credentials": [],
+    "currentRole": "Professor of Behavioral Medicine, Columbia University",
+    "links": {
+      "bio": "https://x.com/StevenBartlett/status/2072576002727817682"
+    }
   }
 ]
