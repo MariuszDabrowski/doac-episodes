@@ -9761,5 +9761,29 @@
     "links": {
       "bio": "https://x.com/StevenBartlett/status/2072576002727817682"
     }
+  },
+  {
+    "id": "daniel-kokotajlo",
+    "name": "Daniel Kokotajlo",
+    "portrait": "/portraits/daniel-kokotajlo.jpg",
+    "portrait2x": "/portraits/daniel-kokotajlo@2x.jpg",
+    "portraitBrightness": 0.257,
+    "credibilityLine": "Former OpenAI governance researcher; founder and Executive Director of AI Futures Project; AI forecaster and alignment researcher with MA in philosophy",
+    "fields": [
+      "AI",
+      "AI safety",
+      "AI alignment",
+      "AI governance",
+      "forecasting"
+    ],
+    "roles": [
+      "researcher",
+      "practitioner"
+    ],
+    "credentials": [],
+    "currentRole": "Executive Director, AI Futures Project; AI researcher and forecaster",
+    "links": {
+      "bio": "https://en.wikipedia.org/wiki/Daniel_Kokotajlo_(researcher)"
+    }
   }
 ]

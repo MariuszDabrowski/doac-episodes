@@ -1,5 +1,350 @@
 [
   {
+    "id": "doac-kBm8Ho-_RXM",
+    "episodeNumber": 573,
+    "episodeNumberSource": "estimate",
+    "title": "Cancer as a mitochondrial metabolic disease",
+    "originalTitle": "Cancer Scientist: This Common Daily Diet May Be Feeding Cancer!",
+    "slug": "seyfried-cancer-metabolic-disease",
+    "date": "2026-07-16",
+    "duration": 6337,
+    "guestIds": [
+      "thomas-seyfried"
+    ],
+    "topics": [
+      "science",
+      "nutrition",
+      "longevity"
+    ],
+    "description": "Seyfried on cancer's metabolic origins, the glucose ketone index, ketogenic diet as adjunct therapy, and environmental mitochondrial damage.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=kBm8Ho-_RXM"
+    },
+    "thumbnail": "/portraits/doac-kBm8Ho-_RXM.jpg",
+    "thumbnail2x": "/portraits/doac-kBm8Ho-_RXM@2x.jpg",
+    "thumbnailBrightness": 0.26,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "Cancer as a Metabolic Disease: On the Origin, Management, and Prevention of Cancer",
+        "by": "guest",
+        "link": "<UNKNOWN>"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Wispr",
+        "url": "https://wisprflow.ai/steven",
+        "topical": false
+      },
+      {
+        "name": "Eight Sleep",
+        "url": "http://eightsleep.com/steven",
+        "topical": false
+      },
+      {
+        "name": "Ekster",
+        "url": "https://link.thediaryofaceo.com/GSNEWnm",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 162,
+        "title": "The New Discovery About Cancer"
+      },
+      {
+        "start": 223,
+        "title": "What Role Do Mitochondria Play in Cancer?"
+      },
+      {
+        "start": 382,
+        "title": "How Damaged Mitochondria Cause Cancer"
+      },
+      {
+        "start": 492,
+        "title": "ATP & Fermentation: How Your Cells Make Energy"
+      },
+      {
+        "start": 900,
+        "title": "The Oncogenic Paradox Finally Explained"
+      },
+      {
+        "start": 1219,
+        "title": "Ghost Mitochondria: Cancer Under the Microscope"
+      },
+      {
+        "start": 1519,
+        "title": "Glucose & Glutamine: The Fuels That Feed Cancer"
+      },
+      {
+        "start": 1592,
+        "title": "Why Do Children & Babies Get Cancer?"
+      },
+      {
+        "start": 1765,
+        "title": "Why Wealthy Countries Have More Cancer"
+      },
+      {
+        "start": 1975,
+        "title": "Is Cancer Genetic?"
+      },
+      {
+        "start": 2278,
+        "title": "Where To Start? The Glucose Ketone Index"
+      },
+      {
+        "start": 2423,
+        "title": "How Stress & Poor Sleep Fuel Cancer"
+      },
+      {
+        "start": 2694,
+        "title": "What's Inside the Confidential Envelope?"
+      },
+      {
+        "start": 2758,
+        "title": "The Patient Who Inspired the Discovery"
+      },
+      {
+        "start": 3025,
+        "title": "Measuring Your Glucose Ketone Index Live"
+      },
+      {
+        "start": 3181,
+        "title": "The 'Red Zone' Could Cause Cancer"
+      },
+      {
+        "start": 3482,
+        "title": "The Man Who Survived Glioblastoma for 10 Years"
+      },
+      {
+        "start": 3535,
+        "title": "Using the Keto Diet to Supercharge Chemo"
+      },
+      {
+        "start": 3852,
+        "title": "The Experiment That Could Prove Cancer Isn't Genetic"
+      },
+      {
+        "start": 3910,
+        "title": "1,700 Cancer Deaths a Day: Seyfried's Warning"
+      },
+      {
+        "start": 4021,
+        "title": "Seyfried's Plan to End the Cancer Epidemic"
+      },
+      {
+        "start": 4185,
+        "title": "What Foods You Should Actually Eat"
+      },
+      {
+        "start": 4318,
+        "title": "Fasting Protocols & Hitting 'The Wall'"
+      },
+      {
+        "start": 4608,
+        "title": "Hyperbaric Oxygen Therapy & Cancer"
+      },
+      {
+        "start": 4710,
+        "title": "Microplastics & 'Forever Chemicals'"
+      },
+      {
+        "start": 4847,
+        "title": "How Cancer Spreads: Metastasis Explained"
+      },
+      {
+        "start": 5847,
+        "title": "The #1 Actionable Takeaway"
+      },
+      {
+        "start": 5985,
+        "title": "Energy, Hope & Final Words"
+      }
+    ]
+  },
+  {
+    "id": "doac-_g4l7YkDQwA",
+    "episodeNumber": 572,
+    "episodeNumberSource": "estimate",
+    "title": "AI extinction risk and the path to superintelligence",
+    "originalTitle": "He Risked Everything To Warn You: No One Is Ready For What's Coming, And The AI Companies Know It!",
+    "slug": "kokotajlo-ai-extinction-risk",
+    "date": "2026-07-13",
+    "duration": 7250,
+    "guestIds": [
+      "daniel-kokotajlo"
+    ],
+    "topics": [
+      "ai",
+      "science"
+    ],
+    "description": "Kokotajlo on OpenAI's internal warnings, 70% extinction odds, AGI by decade's end, job automation, and a survival plan for superintelligence.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=_g4l7YkDQwA"
+    },
+    "thumbnail": "/portraits/doac-_g4l7YkDQwA.jpg",
+    "thumbnail2x": "/portraits/doac-_g4l7YkDQwA@2x.jpg",
+    "thumbnailBrightness": 0.387,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "AI 2027",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/7W2L8di"
+      },
+      {
+        "type": "book",
+        "title": "AI 2040: Plan A",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/EFjbRzP"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Ketone",
+        "url": "https://ketone.com/STEVEN",
+        "topical": false
+      },
+      {
+        "name": "Stan",
+        "url": "https://coach.stan.store/?ref=stevenbartlett&utm_source=youtube&utm_medium=podcast&utm_campaign=episode11",
+        "topical": false
+      },
+      {
+        "name": "HeyGen",
+        "url": "https://heygen.com/doac",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 154,
+        "title": "Why This AI Mission Could Affect Everyone"
+      },
+      {
+        "start": 261,
+        "title": "Why the Average Person Should Care About AI"
+      },
+      {
+        "start": 509,
+        "title": "Are AI Experts Overreacting or Sounding the Alarm?"
+      },
+      {
+        "start": 606,
+        "title": "Why He Joined OpenAI—and What He Saw Inside"
+      },
+      {
+        "start": 804,
+        "title": "Why He Left OpenAI"
+      },
+      {
+        "start": 953,
+        "title": "What It Was Like Inside OpenAI During ChatGPT's Launch"
+      },
+      {
+        "start": 1036,
+        "title": "The $2 Million NDA Controversy Explained"
+      },
+      {
+        "start": 1170,
+        "title": "Is Full AI Automation Coming Faster Than We Think?"
+      },
+      {
+        "start": 1459,
+        "title": "The AI 2027 Forecast That Changed the Conversation"
+      },
+      {
+        "start": 1593,
+        "title": "AGI vs. Superintelligence: The Difference That Matters"
+      },
+      {
+        "start": 1637,
+        "title": "How Robots Could Soon Become Part of Everyday Life"
+      },
+      {
+        "start": 1823,
+        "title": "Why AI Works More Like the Human Brain Than You Think"
+      },
+      {
+        "start": 2174,
+        "title": "Can AI Ever Be Truly Creative?"
+      },
+      {
+        "start": 2475,
+        "title": "What Are the Real Odds of Human Extinction From AI?"
+      },
+      {
+        "start": 2878,
+        "title": "What AI Will Do to Jobs"
+      },
+      {
+        "start": 3285,
+        "title": "The Skills That Will Still Matter in an AI World"
+      },
+      {
+        "start": 3621,
+        "title": "AI 2040: What the Future Could Look Like"
+      },
+      {
+        "start": 3876,
+        "title": "The Different Futures AI Could Create"
+      },
+      {
+        "start": 4173,
+        "title": "Will AI Become Earth's Apex Species?"
+      },
+      {
+        "start": 4398,
+        "title": "How AI CEOs Really Make Decisions"
+      },
+      {
+        "start": 4537,
+        "title": "Will AI Decide the 2028 Election?"
+      },
+      {
+        "start": 4738,
+        "title": "Is There a Safe Path to Accelerating AI?"
+      },
+      {
+        "start": 4931,
+        "title": "By 2031, AI Could Do 20% of Cognitive Work"
+      },
+      {
+        "start": 5115,
+        "title": "Should Everyone Receive AI Dividends?"
+      },
+      {
+        "start": 5561,
+        "title": "What It Will Feel Like to Live Through the AI Revolution"
+      },
+      {
+        "start": 5651,
+        "title": "How People Find Purpose After AI Replaces Jobs"
+      },
+      {
+        "start": 6372,
+        "title": "Would He Shut Down AI Forever If He Could?"
+      },
+      {
+        "start": 6596,
+        "title": "What Can We Actually Do About AI?"
+      },
+      {
+        "start": 7045,
+        "title": "Is It Already Too Late to Change Course?"
+      }
+    ]
+  },
+  {
     "id": "doac-PHpsdIHpLUE",
     "episodeNumber": 571,
     "episodeNumberSource": "estimate",
