@@ -1,5 +1,236 @@
 [
   {
+    "id": "doac-HwmwyBgzj8c",
+    "episodeNumber": 574,
+    "episodeNumberSource": "estimate",
+    "title": "Hormozi on AI, reputation, and practical business",
+    "originalTitle": "Alex Hormozi’s Warning: Stop Chasing AI, Build This Instead!",
+    "slug": "hormozi-ai-reputation-practical-business",
+    "date": "2026-07-20",
+    "duration": 8558,
+    "guestIds": [
+      "alex-hormozi"
+    ],
+    "topics": [
+      "founders",
+      "ai"
+    ],
+    "description": "Hormozi on why most AI companies fail, why reputation and reality are the only moats left, and why practical businesses matter more than hype.",
+    "links": {
+      "youtube": "https://www.youtube.com/watch?v=HwmwyBgzj8c"
+    },
+    "thumbnail": "/portraits/doac-HwmwyBgzj8c.jpg",
+    "thumbnail2x": "/portraits/doac-HwmwyBgzj8c@2x.jpg",
+    "thumbnailBrightness": 0.267,
+    "promotions": [
+      {
+        "type": "book",
+        "title": "$100M Money Models",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/4ExripR"
+      },
+      {
+        "type": "company",
+        "title": "Acquisition.com",
+        "by": "guest",
+        "link": "https://www.acquisition.com/"
+      },
+      {
+        "type": "service",
+        "title": "The Game podcast",
+        "by": "guest",
+        "link": "https://link.thediaryofaceo.com/9X40GGc"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "Flightcast",
+        "url": "https://www.flightcast.com/DOAC7",
+        "topical": false
+      },
+      {
+        "name": "LinkedIn Marketing",
+        "url": "https://www.linkedin.com/DIARY",
+        "topical": false
+      },
+      {
+        "name": "Fiverr",
+        "url": "https://fiverr.com/diary",
+        "topical": false
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Intro"
+      },
+      {
+        "start": 153,
+        "title": "How To Use AI As An Entrepreneur"
+      },
+      {
+        "start": 300,
+        "title": "Where Will Value Come From In An AI World?"
+      },
+      {
+        "start": 432,
+        "title": "How To Generate Great Ideas In The Age Of AI"
+      },
+      {
+        "start": 516,
+        "title": "Why Long-Term Thinking Wins In Business"
+      },
+      {
+        "start": 818,
+        "title": "Why Most Businesses Never Reach $10 Million"
+      },
+      {
+        "start": 1110,
+        "title": "How To Price Your Product Or Service"
+      },
+      {
+        "start": 1187,
+        "title": "The Biggest Hiring Mistakes Founders Make"
+      },
+      {
+        "start": 1402,
+        "title": "Why Starting Feels So Hard"
+      },
+      {
+        "start": 1552,
+        "title": "What Alex Would Do Differently Starting Again"
+      },
+      {
+        "start": 1849,
+        "title": "What To Do When You Feel Uncertain In Business"
+      },
+      {
+        "start": 2033,
+        "title": "Why Alex Delayed Starting His Business"
+      },
+      {
+        "start": 2198,
+        "title": "The Lessons Alex Learned From His Father"
+      },
+      {
+        "start": 2395,
+        "title": "How To Know If Entrepreneurship Is Right For You"
+      },
+      {
+        "start": 2500,
+        "title": "How To Beat Decision Fatigue"
+      },
+      {
+        "start": 2588,
+        "title": "Is It Easier To Start A Business Today?"
+      },
+      {
+        "start": 2687,
+        "title": "Ads"
+      },
+      {
+        "start": 2806,
+        "title": "Is Doing Hard Things Always Worth It?"
+      },
+      {
+        "start": 2851,
+        "title": "How To Succeed As A Content Creator"
+      },
+      {
+        "start": 2998,
+        "title": "How Alex Is Adapting His Content For The Future"
+      },
+      {
+        "start": 3183,
+        "title": "Why Credibility Is Your Biggest Competitive Advantage"
+      },
+      {
+        "start": 3381,
+        "title": "The Value Equation Explained"
+      },
+      {
+        "start": 3716,
+        "title": "Why Delayed Gratification Pays Off"
+      },
+      {
+        "start": 3867,
+        "title": "How To Know You're On The Right Path"
+      },
+      {
+        "start": 3914,
+        "title": "Does Your Business Need To Be Scalable?"
+      },
+      {
+        "start": 4188,
+        "title": "Why Unscalable Businesses Can Be Great Opportunities"
+      },
+      {
+        "start": 4279,
+        "title": "How To Know When It's Time To Quit"
+      },
+      {
+        "start": 4334,
+        "title": "Ads"
+      },
+      {
+        "start": 4394,
+        "title": "Why Self-Awareness Is A Business Superpower"
+      },
+      {
+        "start": 4663,
+        "title": "Stop Planning And Start Doing"
+      },
+      {
+        "start": 4834,
+        "title": "How To Incentivise People And Find The Right Audience"
+      },
+      {
+        "start": 5019,
+        "title": "Business Ideas You Could Start Today"
+      },
+      {
+        "start": 5202,
+        "title": "Why You Should Sell To People With More Money"
+      },
+      {
+        "start": 5571,
+        "title": "Why Employees And Customers Deserve The Same Treatment"
+      },
+      {
+        "start": 6022,
+        "title": "Why Hiring Is Everything"
+      },
+      {
+        "start": 6070,
+        "title": "How To Choose The Right Romantic Partner"
+      },
+      {
+        "start": 6297,
+        "title": "What If Your Partner Doesn't Support Your Business?"
+      },
+      {
+        "start": 6458,
+        "title": "How To Figure Out What You Really Want In Life"
+      },
+      {
+        "start": 6647,
+        "title": "Becoming A Dad: How Alex Feels About Fatherhood"
+      },
+      {
+        "start": 7067,
+        "title": "How Alex Thinks About Death"
+      },
+      {
+        "start": 8380,
+        "title": "Are You Actually Happy?"
+      },
+      {
+        "start": 8339,
+        "title": "What Happens If Superintelligence Arrives In Just A Few Years?"
+      }
+    ]
+  },
+  {
     "id": "doac-kBm8Ho-_RXM",
     "episodeNumber": 573,
     "episodeNumberSource": "estimate",
